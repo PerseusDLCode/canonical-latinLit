@@ -1,8 +1,3 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
 <TEI.2>
   <teiHeader>
     <fileDesc>
@@ -104,7 +99,7 @@
 
 
 
-<lb n="3"/>quercus arida rustica &dagger;formitata securi,
+<lb n="3"/>quercus arida rustica †formitata securi,
 <lb n="4"/>nutrior, magis ut magis sit beata quotannis.
 <lb n="5"/>huius nam domini colunt me deumque salutant 
 <lb n="6"/>pauperis tuguri pater filiusque adulescens,
@@ -116,9 +111,9 @@
 <lb n="12"/>luteae uiolae mihi lacteumque papauer,
 <lb n="13"/>pallentesque cucurbitae et suaue olentia mala,
 <lb n="14"/>uua pampinea rubens educata sub umbra.
-<lb n="15"/>sanguine hanc etiam mihi&mdash;sed tacebitis&mdash;aram 
+<lb n="15"/>sanguine hanc etiam mihi—sed tacebitis—aram 
 <lb n="16"/>barbatus linit hirculus cornipesque capella.
-<lb n="17"/>pro quis omnia honoribus &dagger;hoc necesse Priapo est
+<lb n="17"/>pro quis omnia honoribus †hoc necesse Priapo est
 
 
 
