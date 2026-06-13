@@ -1,65 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI.2>
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-	<title>Rape of Proserpine</title>
-        <author>Claudian</author>
-        <editor role="translator">Maurice Platnauer</editor>
-        <sponsor>Perseus Project, Tufts University</sponsor>
-        <principal>Gregory Crane</principal>
-        <respStmt>
-          <resp>Prepared under the supervision of</resp>
-          <name>Bridget Almas</name>
-          <name>Lisa Cerrato</name>
-          <name>Rashmi Singhal</name>
-        </respStmt>
-        <funder n="org:Mellon">The Mellon Foundation</funder>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Trustees of Tufts University</publisher>
-        <pubPlace>Medford, MA</pubPlace>
-        <authority>Perseus Project</authority>
-        <date type="release">2011-09-12</date>
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title>Claudian</title>
-            <author>Claudius Claudianus</author>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Rape of Proserpine</title>
+            <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
-            <imprint>
-              <publisher>Harvard University Press</publisher>
-              <pubPlace>Cambridge, MA</pubPlace>
-              <pubPlace>London, England</pubPlace>
-              <date>1922</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://archive.org/details/claudian02clau#page/292/mode/2up">Internet Archive</ref>
-        </biblStruct>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <editorialDecl><p>Keyboarding</p></editorialDecl>
-      <refsDecl doctype="TEI.2">
-        <state unit="book" delim="."/>
-        <state unit="poem"/>
-      </refsDecl>
-    </encodingDesc>
-
-    <profileDesc>
-      <langUsage>
-	<language id="la">Latin</language>
-	<language id="greek">Greek</language>
-      </langUsage>
-    </profileDesc>
-  </teiHeader>
-
-  <text id="stoa0089.stoa005.perseus-eng1"><body>
-<pb id="v.2.p.293"/>
-    <div1 type="book" n="1" org="uniform" sample="complete" part="N">
-      <div2 type="poem" id="poem.32" n="praef" org="uniform" sample="complete" part="N">
-<head>PREFACE</head><p>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-09-12</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Claudian</title>
+                  <author>Claudius Claudianus</author>
+                  <editor role="translator">Maurice Platnauer</editor>
+                  <imprint>
+                     <publisher>Harvard University Press</publisher>
+                     <pubPlace>Cambridge, MA</pubPlace>
+                     <pubPlace>London, England</pubPlace>
+                     <date>1922</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://archive.org/details/claudian02clau#page/292/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="book" delim="."/>
+            <state unit="poem"/>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language id="la">Latin</language>
+            <language id="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text id="stoa0089.stoa005.perseus-eng1">
+      <body>
+         <pb id="v.2.p.293"/>
+         <div1 type="book" n="1" org="uniform" sample="complete" part="N">
+            <div2 type="poem"
+                  id="poem.32"
+                  n="praef"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <head>PREFACE</head>
+               <p>
 
 He who first made a ship and clave therewith
 the deep, troubling the waters with roughly hewn
@@ -77,8 +85,9 @@ heaven to guide him, passed triumphant through
 the storms of the Aegean and the Ionian main.
 
 </p>
-</div2>
-<div2 type="poem" n="2" id="poem.33"><p>
+            </div2>
+            <div2 type="poem" n="2" id="poem.33">
+               <p>
 
 My full heart bids me boldly sing the horses
 of the ravisher from the underworld and the stars
@@ -189,7 +198,7 @@ triple head, and Cocytus sinks back repressing his
 fount of tears ; Acheron is dumb with silent wave,
 and the banks of Phlegethon cease their murmuring.
 <pb id="v.2.p.301"/>
-<q> Grandchild of Atlas, Arcadian-born, deity that
+                  <q> Grandchild of Atlas, Arcadian-born, deity that
 sharest hell and heaven, thou who alone hast the
 right to cross either threshold, and art the intermediary
 between the two worlds, go swiftly, cleave
@@ -223,7 +232,7 @@ break Saturn's old chains, and shroud the sun in
 darkness. The framework of the world shall be
 loosened and the shining heavens mingle with
 Avernus' shades.'</q>
-<pb id="v.2.p.303"/>
+                  <pb id="v.2.p.303"/>
 Scarce had he spoken when his messenger trod
 the stars. The Father heard the message and,
 communing with himself, debated long who would
@@ -442,10 +451,17 @@ champed the bit all eager for the morrow's enjoyment
 of their destined booty.
 
 </p>
-    </div2></div1>
-    <div1 type="book" n="2" org="uniform" sample="complete" part="N">
-      <div2 type="poem" n="praef" id="poem.34" org="uniform" sample="complete" part="N">
-<head>PREFACE</head><p>
+            </div2>
+         </div1>
+         <div1 type="book" n="2" org="uniform" sample="complete" part="N">
+            <div2 type="poem"
+                  n="praef"
+                  id="poem.34"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <head>PREFACE</head>
+               <p>
 
 When Orpheus sought repose and, lulling his song
 to sleep, had long laid aside his neglected task,
@@ -511,9 +527,15 @@ quill to stir, 'tis thou disturbest the Muses' cavern
 long plunged in sleep and leadest their gentle bands
 in the dance.
 
-</p></div2>
-      <div2 type="poem" id="poem.35" org="uniform" sample="complete" part="N" n="1">
-<p>
+</p>
+            </div2>
+            <div2 type="poem"
+                  id="poem.35"
+                  org="uniform"
+                  sample="complete"
+                  part="N"
+                  n="1">
+               <p>
 
 Not yet had bright day with herald beams struck
 the waves of the Ionian main ; the light of dawn
@@ -775,7 +797,7 @@ stands all befouled with clotted blood and shakes his
 tangled mane and scorns the shepherds' feeble rage.
 <q>Lord of the strengthless dead,</q> cries Pallas,
 <pb id="v.2.p.335"/>
-<q>wickedest of thy brothers, what Furies have stirred
+                  <q>wickedest of thy brothers, what Furies have stirred
 thee with their goads and accursed torches ? Why
 hast thou left thy seat and how darest thou pollute
 the upper world with thy hellish team ? Thou hast
@@ -974,11 +996,16 @@ arms. Happy offspring shall be yours ;
 joyous Nature awaits gods yet to be born. Give
 the world a new divinity and Ceres the grandchildren
 she longs for.</q>
-
-</p></div2>
-    </div1>
-<div1 type="book" n="3" id="poem.36" org="uniform" sample="complete" part="N">
-<p>
+               </p>
+            </div2>
+         </div1>
+         <div1 type="book"
+               n="3"
+               id="poem.36"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <p>
 
 Meanwhile Jove bids cloud-girt Iris go gather
 the gods from the whole universe. She, outstripping
@@ -1001,7 +1028,8 @@ earthly assembly. Dripping water-nymphs lean
 on their moist sires and Fauns in silence marvel
 at the stars.
 Then the grave Father from his seat on high
-Olympus thus began : <q><p>Once more the affairs of
+Olympus thus began : <q>
+                  <p>Once more the affairs of
 men have won care from me, affairs long neglected
 since I looked upon the repose of Saturn's
 reign and knew the torpor of that stagnant age,
@@ -1019,7 +1047,8 @@ necessity, invention's mother, provoke their sluggish
 spirits and little by little search out the hidden
 tracks of things ; bade industry give birth to civilization
 and practice nourish it.
-</p><p>Nature now with ceaseless complaint bids me
+</p>
+                  <p>Nature now with ceaseless complaint bids me
 <pb id="v.2.p.349"/>
 succour the race of man, calls me cruel and implacable
 tyrant, calls to mind the centuries of my sire's
@@ -1060,8 +1089,10 @@ over to my son-in-law, Pluto himself, for punishment
 in those regions he had fain betray. There he shall
 learn whether Hell is true to her own monarch's
 cause. Such is my will ; thus let the unchangeable
-fates fulfil my decree.</p></q> 
-</p><p>He spake and shook the
+fates fulfil my decree.</p>
+               </q>
+            </p>
+            <p>He spake and shook the
 stars with his dread nod.
 But, far from Sicily, no uncertain suspicions of the
 loss she had suffered alarmed Ceres, where long
@@ -1145,7 +1176,7 @@ Would I blow up the flute, funereal is the note ; do I
 shake the cymbals, the cymbals echo a sound of mourning.
 Alas ! I fear there is some trouble in these
 portents. This long sojourn has wrought me woe.</q>
-<q> May the wind carry far away thy vain words,</q> replies
+               <q> May the wind carry far away thy vain words,</q> replies
 Cybele ; <q> not such the Thunderer's want of care
 that he would not hurl his bolt in his daughter's defence.
 Yet go and return, dismayed by no evil hap.</q>
@@ -1223,14 +1254,16 @@ shame ; fain would she have died could she so escape
 the gaze of that unhappy mother, and long stayed
 she motionless, hesitating to disclose the suspected
 criminal and the all too certain death. Scarce could
-she thus speak : <q><p>Would that the raging band of
+she thus speak : <q>
+                  <p>Would that the raging band of
 Giants had wrought this ruin ! Easier to bear is
 a common lot. 'Tis the goddesses, and, though
 thou wilt scarce credit it, her own sisters, who have
 conspired to our undoing. Thou seest the devices
 of gods and wounds inflicted by sisters' jealousy.
 Heaven is a more cruel enemy than Hell.
-</p><p>All quiet was the house, the maiden dared not
+</p>
+                  <p>All quiet was the house, the maiden dared not
 <pb id="v.2.p.361"/>
 o'erstep the threshold nor visit the grassy pastures,
 close bound by thy commands. The loom gave her
@@ -1254,7 +1287,8 @@ aims and dress and tries her bow with her soft
 fingers. Now crowned with horse-hair plumes she
 puts on the helmet, Minerva commending her, and
 strives to carry her huge shield.
-</p><p>Venus was the first with guileful suggestion to
+</p>
+                  <p>Venus was the first with guileful suggestion to
 mention fields and the vale of Henna. Cunningly
 she harps upon the nearness of the flowery mead,
 and as though she knew it not, asks what merits
@@ -1270,7 +1304,8 @@ What tears did I not shed to no purpose, what vain
 entreaties did my lips not utter ! Away she flew,
 trusting to the sisters' protection ; the scattered
 company of attendant nymphs followed after her.
-</p><p>They went to the hills clothed with undying
+</p>
+                  <p>They went to the hills clothed with undying
 grass and gather flowers 'neath the twilight of dawn,
 when the quiet meads are white with dew and violets
 drink the scattered moisture. But when the sun
@@ -1306,8 +1341,10 @@ at this crime now turned their lyres to man's destruction,
 tuneful now for ill. Their sweet voices
 stay ships, but once that song is heard the oars can
 move no more. I alone am left in the house to
-drag out an old age of mourning.</p></q>
-</p><p>
+drag out an old age of mourning.</p>
+               </q>
+            </p>
+            <p>
 Ceres is still a prey to anxiety ; half distraught
 she fears everything as though all were not yet
 accomplished. Anon she turns her head and eyes
@@ -1321,7 +1358,10 @@ from her stripes, but just as she is about to engulf
 the terrified hunter in her capacious maw, she is
 checked by the mirrored image of her own form 2 :
 so the motlier of Proserpine rages over all Olympus
-crying :</p><p><q><p>Give her back ; no wandering stream gave
+crying :</p>
+            <p>
+               <q>
+                  <p>Give her back ; no wandering stream gave
 me birth ; I spring not from the Dryad rabble.
 Towered Cybele bare me also to Saturn. Where
 are the ordinances of the gods, where the laws of
@@ -1350,7 +1390,10 @@ you with talk ? Break rudely upon your dances ?
 Nay, that she might be no burden to you, she dwelt
 far away in the solitudes of Sicily. What good hath
 her retirement done her ? No peace can still the
-madness of bitter jealousy.</p></q></p><p>
+madness of bitter jealousy.</p>
+               </q>
+            </p>
+            <p>
 Thus she upbraids them all. But they, obedient
 to the Father's word, keep silence or say they know
 nothing, and make tears their answer to the mother's
@@ -1490,7 +1533,8 @@ Moon her bulls.
 Silent night had now in her turn visited upon the
 world her gift of sleep. Ceres, with her wounded
 breast, starts on her long journey and, as she sets
-out, speaks as follows : <q><p>Little thought I, Proserpine,
+out, speaks as follows : <q>
+                  <p>Little thought I, Proserpine,
 to carry for thee such torches as these. I had hoped
 what every mother hopes ; marriage and festal torches
 and a wedding-song to be sung in heaven — such was
@@ -1517,7 +1561,8 @@ carried off. Yet see the punishment visited upon
 me. My face is seared with wounds and long gashes
 furrow my bloody breast. My womb, forgetful that
 it gave thee birth, is beaten with continual blows.
-</p><p>Where under heaven shall I find thee ? Beneath
+</p>
+                  <p>Where under heaven shall I find thee ? Beneath
 what quarter of the sky ? Who shall point the way,
 what path shall lead me ? What chariot was it ? Who
 was that cruel ravisher ? A denizen of earth or sea ?
@@ -1525,12 +1570,16 @@ What traces of his wingèd wheels can I discover ?
 Whithersoever my steps lead me or chance direct,
 thither will I go. Even so may Dione be deserted
 and seek for Venus !
-</p><p>Will my labours be successful ? Shall I ever again
+</p>
+                  <p>Will my labours be successful ? Shall I ever again
 be blest with thine embrace, my daughter ? Art
 thou still fair ; still glows the brightness of thy
 cheeks ? Or shall I perchance see thee as thou
 cam'st in my nightly vision ; as I saw thee in my
-dreams ?</p></q></p><p>
+dreams ?</p>
+               </q>
+            </p>
+            <p>
 So spake she and from Etna first she drags her
 steps, and, cursing its guilty flowers and the spot
 whence Proserpine was ravaged, she follows the
@@ -1545,4 +1594,8 @@ Syrtes gleam with kindled wave. The light reaches
 the distant cave of Scylla. of whose dogs some shrink
 back and are still in dumb amaze, others, not yet
 horrified into silence, continue to bark. 1
-</p></div1></body></text></TEI.2>
+</p>
+         </div1>
+      </body>
+   </text>
+</TEI.2>

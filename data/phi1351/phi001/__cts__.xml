@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1351.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1351">
             <ti:title xml:lang="lat">Agricola</ti:title>
             
@@ -16,5 +17,4 @@
     <ti:description xml:lang="eng">The Lives of the Roman Emperors and Their Associates in Five Volumes. Vol. II. Reed, J. Eugene, editor; Murphy, Arthur, translator. Philadelphia, Gebbie and Co. 1883.</ti:description>
   </ti:translation>
   
-          </ti:work>
-        
+          <ti:genre confidence="high">prose-chapter-section</ti:genre></ti:work>

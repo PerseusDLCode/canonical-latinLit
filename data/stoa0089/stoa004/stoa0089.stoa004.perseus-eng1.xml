@@ -22,32 +22,34 @@
             <authority>Perseus Project</authority>
             <date type="release">2011-09-12</date>
          </publicationStmt>
-               <sourceDesc>
-                  <biblStruct>
-                     <monogr>
-                        <title>Claudian</title>
-                        <author>Claudius Claudianus</author>
-                        <editor role="translator">Maurice Platnauer</editor>
-                        <imprint>
-                           <publisher>Harvard University Press</publisher>
-                           <pubPlace>Cambridge, MA</pubPlace>
-                           <pubPlace>London, England</pubPlace>
-                           <date>1922</date>
-                        </imprint>
-                        <biblScope unit="volume">1-2</biblScope>
-                     </monogr>
-                     <ref target="http://www.archive.org/stream/claudian01clau#page/364/mode/2up">Internet Archive</ref>
-                     <ref target="http://www.archive.org/stream/claudian02clau#page/2/mode/2up">Internet Archive</ref>
-                  </biblStruct>
-               </sourceDesc>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Claudian</title>
+                  <author>Claudius Claudianus</author>
+                  <editor role="translator">Maurice Platnauer</editor>
+                  <imprint>
+                     <publisher>Harvard University Press</publisher>
+                     <pubPlace>Cambridge, MA</pubPlace>
+                     <pubPlace>London, England</pubPlace>
+                     <date>1922</date>
+                  </imprint>
+                  <biblScope unit="volume">1-2</biblScope>
+               </monogr>
+               <ref target="http://www.archive.org/stream/claudian01clau#page/364/mode/2up">Internet Archive</ref>
+               <ref target="http://www.archive.org/stream/claudian02clau#page/2/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">            
-                              <state unit="book" delim="."/>
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="book" delim="."/>
+            <state unit="poem"/>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -58,8 +60,8 @@
    <text id="stoa0089.stoa004.perseus-eng1">
       <body>
          <pb id="v.1.p.365" TEIform="pb"/>
-               <div1 type="book" n="1" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book" n="1" org="uniform" sample="complete" part="N">
+            <p>
 
 Ceaseless are the blessings the gods shower with
 full bounty upon Rome, crowning success with new
@@ -67,25 +69,25 @@ successes. Scarce had the happy songs of marriage
 ceased to echo in the palace when the defeat of
 Gildo brought material for a hymn of triumph.
 </p>
-         <p>Hard upon the garlands of passionate love followed
+            <p>Hard upon the garlands of passionate love followed
 the crown of laurel, so that the emperor won alike
 the name of husband and the fame of conqueror.
 </p>
-         <p>After the war in Africa eastern sedition waned;
+            <p>After the war in Africa eastern sedition waned;
 the Orient once more was laid low and, guarded
 by the consul Stilicho, the axes rose in triumph.
 </p>
-         <p>In due order are vows fulfilled. Should I hope to
+            <p>In due order are vows fulfilled. Should I hope to
 roll into one poem all my lofty themes, more easily
 should I pile Pelion on frozen Ossa. Were I silent
 anent a part, what I leave unsung will prove the
 greater. Am I to recall his deeds of old and earliest
 manhood? His present deeds lure away my mind.
 </p>
-         <p>Am I to tell of his justice? His military glory
+            <p>Am I to tell of his justice? His military glory
 outshines it. Shall I mention his prowess in war?
 </p>
-         <p>He has done more in peace. Shall I relate how
+            <p>He has done more in peace. Shall I relate how
 Latium flourishes, how Africa has returned to her
 allegiance and service, how Spain knows no more
 <pb id="v.1.p.367"/>
@@ -97,7 +99,7 @@ is the expanse that opens before me and even
 on the slopes of Helicon this weight of praise
 retards my muse's chariot.
 </p>
-         <p>For truly since man inhabited this globe never
+            <p>For truly since man inhabited this globe never
 has one mortal been granted all earth's blessings
 without alloy. This man's face is fair but his character
 is evil; another has a beauteous soul but an
@@ -112,7 +114,7 @@ blessings come scattered, to thee they flow commingled,
 and gifts that separately make happy are
 all together thine.
 </p>
-         <p>I will not unfold the tale of thy sire's 1 warlike
+            <p>I will not unfold the tale of thy sire's 1 warlike
 deeds. Had he done nothing of note, had he in
 loyalty to Valens never led to battle those yellow-
 haired companies, yet to be the father of Stilicho
@@ -120,7 +122,7 @@ would have spread abroad his fame. Ever from thy
 cradle did thy soul aspire, and in the tender years
 of childhood shone forth the signs of loftier estate.
 </p>
-         <p>Lofty in spirit and eager, nothing paltry didst thou
+            <p>Lofty in spirit and eager, nothing paltry didst thou
 essay; never didst thou haunt any rich man's
 doorstep; thy speech was such as to befit thy future
 dignities. A mark wert thou even then for all
@@ -130,13 +132,13 @@ brightness of thy noble countenance, the very mould
 of thy limbs, greater even than poets feign of
 demi-gods, marked thee out for a leader of men.
 </p>
-         <p>Whithersoever thy proud form went in the city
+            <p>Whithersoever thy proud form went in the city
 thou didst see men rise and give place to thee;
 yet thou wast then but a soldier. The silent suffrage
 of the people had already offered thee all the honours
 the court was soon to owe.
 </p>
-         <p>Scarce hadst thou reached man's estate when thou
+            <p>Scarce hadst thou reached man's estate when thou
 wast sent to negotiate peace with Assyria 1; to
 make a treaty with so great a people was the charge
 entrusted to thy youth. Crossing the Tigris and
@@ -150,7 +152,7 @@ incense and the harvests of Saba. Fire is brought
 forth from the innermost sanctuary and the Magi
 sacrifice heifers according to the Chaldean ritual.
 </p>
-         <p>The king himself dips the jewelled bowl of sacrifice
+            <p>The king himself dips the jewelled bowl of sacrifice
 and swears by the mysteries of Bel and by Mithras
 who guides the errant stars of heaven. Whenever
 they made thee sharer of their hunting, whose
@@ -160,7 +162,7 @@ afar before thine? When thou didst guide the easy
 rein the Mede gave way to thee, and the Parthian
 marvelled at the bow thou didst discharge in flight.
 </p>
-         <p>Meanwhile a maiden of years full ripe for marriage
+            <p>Meanwhile a maiden of years full ripe for marriage
 troubled a father's heart, and the emperor doubted
 whom to select as her husband and as future ruler
 of the world; right anxiously did he search east
@@ -186,7 +188,7 @@ forth from the earth. Bosporus decked his banks
 with vernal flowers, and Europe, entwined with rosy
 garlands, uplifted the torches in rivalry with Asia.
 </p>
-         <p>Happy our emperor in his choice; he judges
+            <p>Happy our emperor in his choice; he judges
 and the world agrees; he is the first to value what
 we all see. Ay, for he has allied to his children
 and to his palace one who never preferred ease to
@@ -205,7 +207,7 @@ corpse; thou slayest at thy friend's tomb whole
 squadrons of horse, companies of foot, and hordes of
 enemies. To his ghost a whole nation is offered up.
 </p>
-         <p>Neither Vulcan's fabulous shield nor such armour as
+            <p>Neither Vulcan's fabulous shield nor such armour as
 that of which poets sing the forging assisted thine
 efforts. Single-handed thou didst succeed in penning
 within the narrow confines of a single valley the vast
@@ -220,7 +222,7 @@ ear and caused him to withhold his hand; hence the
 sheathing of the sword, the raising of the siege, and
 the granting of a treaty to the prisoners.
 </p>
-         <p>He was always with the army, seldom in Rome,
+            <p>He was always with the army, seldom in Rome,
 and then only when the young emperor's anxious
 love summoned him thither. Scarce had he greeted
 the gods of his home, scarce seen his wife when,
@@ -249,7 +251,7 @@ share shattered neath the soil, how oft have not
 your mattocks rung against the giant bones of
 slaughtered kings.
 </p>
-         <p>Fain would I embrace each separate one; but
+            <p>Fain would I embrace each separate one; but
 thine exploits press on in too close array, and I am
 overwhelmed by the pursuing flood of glorious
 deeds. When Theodosius had warred against, and
@@ -264,7 +266,7 @@ stars, and old Atlas, relieved for a moment of the
 eternal load, was confounded as he gazed upon his
 own burden.
 </p>
-         <p>Barbary was quiet, no revolution troubled the
+            <p>Barbary was quiet, no revolution troubled the
 empire's peace and though so great a prince was dead
 the world knew not that the reins had passed into
 another's hands. No company in the two armies 2
@@ -272,7 +274,7 @@ dared aught as though set loose from control. Yet
 surely never had such diversities of language and
 arms met together to form one united people.
 </p>
-         <p>Theodosius had unified the whole East beneath his
+            <p>Theodosius had unified the whole East beneath his
 rule. Here were mingled Colchian and Iberian,
 mitred Arab, beautifully coifed Armenian; here the
 Sacian had pitched his painted tent, the Mede his
@@ -292,7 +294,7 @@ to law. Of a truth their leaders' pattern passes to
 the crowd, and the soldier follows not only the
 standards but also the example of his general.
 </p>
-         <p>Whithersoever thou didst lead thy victorious eagles
+            <p>Whithersoever thou didst lead thy victorious eagles
 there rivers grew dry, drunk up by so many thousands
 of men. Didst thou march towards Illyria, plain and
 mountain were hidden; didst thou give the signal
@@ -307,7 +309,7 @@ the south, to search out the sources of the Nile,
 their sails would penetrate into Ethiopia's midmost
 heat.
 </p>
-         <p>Thee mindful Eurotas, thee Lycaeus' rustic muse,
+            <p>Thee mindful Eurotas, thee Lycaeus' rustic muse,
 thee Maenalus celebrates in pastoral song, and therewith
 the woods of Parthenius, where, thanks to thy
 victorious arms, weary Greece has raised once more
@@ -322,7 +324,7 @@ name? We did not declare war on the Franks;
 yet they were overthrown. We did not crush in
 battle the Suebi on whom we now impose our laws.
 </p>
-         <p>Who could believe it? Fierce Germany was our
+            <p>Who could believe it? Fierce Germany was our
 slave or ever the trumpets rang out. Where are
 now thy wars, Drusus, or thine, Trajan? All that
 your hands wrought after doubtful conflict that
@@ -336,7 +338,7 @@ lightning way. The speed of the general outstripped
 the river's swift course, and Peace, starting with him
 from Rhine's source, grew as grew Rhine's waters.
 </p>
-         <p>Chieftains whose names were once so well known,
+            <p>Chieftains whose names were once so well known,
 flaxen-haired warrior-kings whom neither gifts nor
 prayers could win over to obedience to Rome's
 emperors, hasten at his command and fear to offend
@@ -359,7 +361,7 @@ at the approach of one man. Boreas was brought
 into servitude without a blow; the Great Bear was
 disarmed.
 </p>
-         <p>In so short a time didst thou win so many battles
+            <p>In so short a time didst thou win so many battles
 without loss of blood, and, setting out with the moon
 yet new, thou didst return or ever it was full; so
 didst thou compel the threatening Rhine to learn
@@ -376,7 +378,7 @@ old-established superstition has rendered awful our
 axes fell the trees the barbarian once worshipped
 and nought is said.
 </p>
-         <p>Nay more, devoted to their conqueror this people
+            <p>Nay more, devoted to their conqueror this people
 offers its arms in his defence. How oft has Germany
 begged to add her troops to thine and to join her
 forces with those of Rome! Nor yet was she angered
@@ -395,7 +397,7 @@ beneath the swords of his own soldiers. Both were
 eager to arouse rebellion, both hated peace — true
 brothers in character and in a common love of crime.
 </p>
-         <p>After the conquest of the north arose a fresh storm
+            <p>After the conquest of the north arose a fresh storm
 in another quarter. The trumpets of war rang out
 in the south that there might be no part of the world
 untouched by thy victories. Gildo stirred up all
@@ -417,7 +419,7 @@ mounted, guide their horses with sticks, others are
 clad in tawny lion-skins and pelts of the nameless
 animals that range the vast deserts of Meroe.
 </p>
-         <p>Severed heads of serpents with gaping jaws serve
+            <p>Severed heads of serpents with gaping jaws serve
 them for helmets, the bright scaly skin of the viper
 fashions their quivers. Simois trembled not so
 violently when swart Memnon led his dusky troops
@@ -428,7 +430,7 @@ and surrounded with his far-shooting Indian soldiery.
 Yet Porus was defeated by Alexander, Memnon by
 Achilles, and Gildo by thee.
 </p>
-         <p>It was not, however, only the South that fierce
+            <p>It was not, however, only the South that fierce
 Mars aroused but also the East. Though loyalty
 cried out against it Gildo had transferred the nominal
 rule of Libya to the Eastern empire, cloaking his
@@ -441,10 +443,10 @@ Byzantium came edicts to subvert the loyalty of
 governors; from Africa that refused her crops black
 famine pressed and had beleaguered trembling Rome.
 </p>
-         <p>Libya openly meditated our destruction; over the
+            <p>Libya openly meditated our destruction; over the
 civic strife shame had laid her veil of silence.
 </p>
-         <p>Though such storms raged on either hand, though
+            <p>Though such storms raged on either hand, though
 the twofold tempest buffeted the torn empire
 on this side and on that, no whit did our consul's
 courage yield to weariness, but ever watchful
@@ -456,13 +458,13 @@ least turn of the tiller, skilfully guiding his vessel
 now on straight, now on slanting course, and struggles
 successfully against the conjoint fury of sea and sky.
 </p>
-         <p>At what, Stilicho, shall I first marvel? At the
+            <p>At what, Stilicho, shall I first marvel? At the
 providence that resisted all intrigues, whereby no
 treacherous missive, no bribe-fraught hand escaped
 thy notice? Or because that amid the general
 terror thou spakest no word unworthy of Latium?
 </p>
-         <p>Or because thou didst ever give haughty
+            <p>Or because thou didst ever give haughty
 answer to the East and later made that answer
 <pb id="v.1.p.387"/>
 good? They held thy goods, thy lands, thy houses,
@@ -487,11 +489,11 @@ or to pierce so far? Fame tells how Argus girt
 with a hundred eyes could guard but one heifer with
 his body's watch.
 </p>
-         <p>Whence comes this mass of com? What forest
+            <p>Whence comes this mass of com? What forest
 fashioned all those vessels? Whence has sprung
 this untutored army with all its young recruits?
 </p>
-         <p>Whence has Gaul, its age once more at the spring,
+            <p>Whence has Gaul, its age once more at the spring,
 won back the strength that Alpine blows twice
 shattered 1? Methinks 'tis no levy but the plough-
 share of the Phoenician Cadmus that has raised up
@@ -504,7 +506,7 @@ womb, with their springing helms and a harvest of
 <pb id="v.1.p.389"/>
 young soldiery burgeoned along the armèd furrows.
 </p>
-         <p>This too must not be passed over without full meed
+            <p>This too must not be passed over without full meed
 of praise, that the avenging expedition did not
 embark until the senate had, in accordance with
 antique usage, declared war. Stilicho re-established
@@ -515,7 +517,7 @@ pass auspiciously among the legions. We acknowledge
 that the laws of Romulus have now returned
 when we see arms obedient to our ministers.
 </p>
-         <p>Thou couldst have filled the Tyrrhene sea with
+            <p>Thou couldst have filled the Tyrrhene sea with
 all thy standards, the Syrtes with thy fleet and Libya
 with thy battalions, but wrath was stayed o'ercome
 by prudent fear lest Gildo, terrified at the thought
@@ -533,7 +535,7 @@ husbandmen, fields he might have laid waste in his
 flight. Deluded by a vain hope he spared what
 was ours without escaping chastisement for himself.
 </p>
-         <p>Madman, to measure Rome by the numbers instead
+            <p>Madman, to measure Rome by the numbers instead
 of the valour of her soldiers! He advanced as
 though he would ride them all down by means
 of his fleet cavalry and, as he often boasted, would
@@ -555,14 +557,14 @@ thine enemies. There he was destined to undergo
 the insults of the overjoyed populace and to bow
 his guilty head before a lowly judgement-seat.
 </p>
-         <p>Let not Fortune claim aught for herself. Let
+            <p>Let not Fortune claim aught for herself. Let
 her be ever favourable; but we trusted not the issue
 to a single fight, nor was the hazard set with all our
 force to be lost at a single throw. Had hard chance
 at all prevailed, a second fleet pressed on behind, a
 greater leader was yet to come.
 </p>
-         <p>Never was a more famous victory nor one that
+            <p>Never was a more famous victory nor one that
 was the object of more heart-felt prayers. Will
 anyone compare with this the defeat of Tigranes,
 of the king of Pontus, the flight of Pyrrhus or
@@ -584,10 +586,15 @@ trampling on an enslaved Carthage? This victory,
 Rome, has revived the laurels of thy heroes of old;
 Stilicho has restored to thee all thy triumphs.
          </p>
-               </div1>
+         </div1>
          <pb id="v.2.p.3" TEIform="pb"/>
-         <div1 type="book" n="2" id="poem.22" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book"
+               n="2"
+               id="poem.22"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <p>
 
 Thus far the warrior's praise ! Now let my gentler
 Muse relax the strings and tell by what virtues he
@@ -942,7 +949,7 @@ trembled at the glitter of her aegis and her
 helmet plumes brushed the pannelled ceiling.
 Then as he stood astonished she first addressed him
 with flattering reproaches : <q direct="unspecified">
-               <p>I acknowledge, revered
+                  <p>I acknowledge, revered
 Stilicho, that thou hast saved but not yet brought
 honour to the curule chair. Of what avail to have
 rid the year of the brand of slavery ? Dost thou
@@ -960,7 +967,7 @@ emperors think themselves honoured, that office by
 means of which I have caused conquered peoples
 and captive kings to pass beneath the yoke ?
 </p>
-               <p>If nature by her portents foreshadow coming ills
+                  <p>If nature by her portents foreshadow coming ills
 I am not besmirched therewith. Nay, that thou
 <pb id="v.2.p.25"/>
 countest ill omen was for the East. Yet no facts
@@ -987,7 +994,7 @@ I applaud the downfall of one of whose elevation
 I never heard nor knew ? 'Tis for the guilty to
 repent ; we have never even believed.
 </p>
-               <p>Yet had the guilt of all been one and this
+                  <p>Yet had the guilt of all been one and this
 pollution stained our axes, all the more shouldst
 thou have taken the high office thou dost shun lest
 that ancient dignity — ever the goal of all dignities—should
@@ -1012,7 +1019,7 @@ grant so tardy an acceptance of our prayers ? Why
 does the accustomed flush o'erspread thy brow ?
 World-conqueror, conquer now thine own diffidence.
 </p>
-               <p>Full well I know that no gift can seduce thee, yet
+                  <p>Full well I know that no gift can seduce thee, yet
 be pleased to admire and receive this cloak, woven
 for thee on no mortal loom by Minerva and myself.
 Twice together have we dipped the thread that goes
@@ -1023,9 +1030,9 @@ thy rule. See here I have prefigured thy destined
 progeny, those thy children for whom the world
 prays ; soon shalt thou confess me a true prophet
 and coming fate prove that my embroidery is true.</p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 She spake and drew from her bosom the gift, a
 consul's cloak, stiff and heavy with gold. The
 glorious woof breathes Minerva's skill. Here is
@@ -1055,7 +1062,7 @@ brother's joy. This house now seeks the crown in the
 person of either sex, it gives birth to queens and the
 husbands of queens.
 </p>
-         <p>
+            <p>
 Such are the gifts wherewith the goddess sought
 to win Stilicho, handing to him at the same time the
 ivory staff.^ She shook the urn to obtain the
@@ -1079,7 +1086,7 @@ Panic, her robe up-girt, walks by the yoke-horses,
 brandishing a mighty battle-axe.
 When Rome saw herself possessed of the consul for
 whom she had prayed, <q direct="unspecified"> Now,</q> she said, <q direct="unspecified">
-               <p>fain
+                  <p>fain
 would I hasten to the fields and woods of Elysium to
 bear the news of this wondrous answer to our universal
 prayer to the Curii and Fabricii who have
@@ -1105,7 +1112,7 @@ are at my service and now the rainy south-wind
 and now the north wafts grain to my shores and my
 granaries are full whatever breeze may blow.
 </p>
-               <p>What thousands will then throng the Flaminian
+                  <p>What thousands will then throng the Flaminian
 Way ! How often will the deceptive dust disappoint
 the loving expectation of those who trust to see thee
 arrive every minute ! Anxiously our mothers watch
@@ -1118,9 +1125,9 @@ often will the Murcian valley raise to heaven thy name
 re-echoed by Aventine and Palatine ! Leave the
 camp and let me behold thee now, soon to see thee,
 consul for a second time, along with thy son-in-law.</p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 While Rome so spake, Fame, on wings of rumour,
 flies over the sea and with her thousand tongues bids
 the chiefs speed to the capital. Not one can age
@@ -1206,13 +1213,18 @@ the consul's name, smiles upon his chariot, and
 the stars, recommencing their courses, inscribe the
 name of Stilicho in the annals of the sky.
 <pb id="v.2.p.39"/>
-         </p>
-            </div1>
+            </p>
+         </div1>
          <pb id="v.2.p.40" TEIform="pb"/>
          <div1 type="book" n="3" org="uniform" sample="complete" part="N">
-            <div2 type="poem" n="praef" id="poem.23" org="uniform" sample="complete" part="N">
-         <head>PREFACE</head>
-         <p>
+            <div2 type="poem"
+                  n="praef"
+                  id="poem.23"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <head>PREFACE</head>
+               <p>
 
 The elder Scipio, who single-handed turned the
 Punic wars back from Italy's coasts to their own
@@ -1243,9 +1255,14 @@ second Hannibal more terrible than the first, — thee
 after five long years Rome has given back to me and
 bidden me celebrate the completion of her vows.
 <pb id="v.2.p.43"/>
-         </p>
-               </div2>
-               <div2 type="poem" id="poem.24" org="uniform" sample="complete" part="N" n="1">
+               </p>
+            </div2>
+            <div2 type="poem"
+                  id="poem.24"
+                  org="uniform"
+                  sample="complete"
+                  part="N"
+                  n="1">
                <p>
 Behold, O Rome, the hero whose presence the
 cries of thy people and the voice of thy nobles has
@@ -1710,8 +1727,8 @@ along the sheets that drip with wine, and unaccustomed
 tigers stare in amaze at the canvas.
 <pb id="v.2.p.71"/>
                </p>
-                  </div2>
-            </div1>
+            </div2>
+         </div1>
       </body>
    </text>
 </TEI.2>

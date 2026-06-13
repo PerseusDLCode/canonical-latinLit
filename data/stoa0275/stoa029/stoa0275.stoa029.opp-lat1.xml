@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Virginibus Velandis</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Virginibus Velandis</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=913%3Bownerid=13510798896211526-967">HathiTrust</ref>                                                                                                                        
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa029.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.883"/>
-<head>DE VIRGINIBUS VELANDIS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Proprium iam negotium passus meae opinionis Latine quoque 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa029.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=913%3Bownerid=13510798896211526-967">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa029.opp-lat1">
+         <pb xml:id="v.1.p.883"/>
+         <head>DE VIRGINIBUS VELANDIS.</head>
+         <div n="1" type="chapter">
+            <p>Proprium iam negotium passus meae opinionis Latine quoque 
 ostendam virgines nostras velari oportere ex quo transitum
 aetatis suae fecerint: hoc exigere veritatem, cui nemo praescribere
 potest, non spatium temporum, non patrocinia personarum, non
@@ -112,10 +115,9 @@ Christo. Hic solus antecessor, quia solus post Christum. Hunc
 
 qui receperunt, veritatem consuetudini anteponunt. Hunc qui audierunt
 usque, non olim, prophetantem, virgines contegunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Sed nolo interim hunc morem veritati deputare. Consuetudo 
+         </div>
+         <div n="2" type="chapter">
+            <p>Sed nolo interim hunc morem veritati deputare. Consuetudo 
 sit tantisper, ut consuetudini etiam consuetudinem opponam. Per
 Graeciam et quasdam barbarias eius plures ecclesiae virgines suas
 abscondunt. Est et sub hoc caelo institutum istud alicubi, ne qui
@@ -146,10 +148,9 @@ quales habet virgo quae videri volet. Invicem se eadem oculorum
 genera desiderant. Eiusdem libidinis est videri et videre. Tam
 sancti viri est subfundi, si virginem viderit, quam sanctae virginis,
 si a viro visa sit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Sed nec inter consuetudines dispicere voluerunt illi sanctissimi
+         </div>
+         <div n="3" type="chapter">
+            <p> Sed nec inter consuetudines dispicere voluerunt illi sanctissimi
 antecessores. Tamen tolerabilius apud nos ad usque proxime
 utrique consuetudini communicabatur. Arbitrio permissa res erat,
 ut quaeque voluisset aut tegi aut prostitui, sicut et nubere, quod
@@ -189,10 +190,9 @@ Nullam volo consuetudinem defendas; nam iam et illa, sub qua te
 fruebaris, expugnatur. Te esse demonstra quae virgines tegit.
 Ipsa scripturas tuas interpretare, quas consuetudo non novit. Si
 enim nosset, nunquam esset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Quatenus autem et de scripturis adversus veritatem argumentari <bibl n="I Cor. XI, 5sqq"/>
+         </div>
+         <div n="4" type="chapter">
+            <p>Quatenus autem et de scripturis adversus veritatem argumentari <bibl n="I Cor. XI, 5sqq"/>
 consuetudo est, statim opponitur nobis nullam mentionem
 virginum ab apostolo factam ubi de velamine praefinit, sed tantum
 mulieres nominatas, cum, si voluisset et virgines tegi, de virginibus
@@ -243,10 +243,9 @@ in eo, sol et luna et sidera et astra et terra et freta et ominis
 census elementorum. Omnia dixeris, cum id dixeris quod ex
 omnibus constat. Sic et mulierem nominando quicquid est mulieris
 nominavit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Sed quoniam ita mulieris nomen usurpant, ut non putent competere 
+         </div>
+         <div n="5" type="chapter">
+            <p>Sed quoniam ita mulieris nomen usurpant, ut non putent competere 
 illud nisi ei soli quae virum passa sit, probari a nobis
 oportet proprietatem eius vocabuli ad sexum ipsum, non ad gradum
 sexus pertinere, quo communiter etiam virgines censeantur.
@@ -257,7 +256,7 @@ Habes itaque nomen, non dico iam virgini commune, sed proprium,
 quod a principio virgo sortita est. Sed ingeniose quidam de futuro
 volunt dictum, Vocabitur mulier, quasi quae hoc futura esset, cum
 virginitatem resignasset, quoniam et adiecit, Propterea relinquet <bibl n="Gen. II, 24."/>
-<pb xml:id="v.1.p.890"/>
+               <pb xml:id="v.1.p.890"/>
 
 homo patrem et matrem, et conglutinabitur mulieri suae, et erunt
 duo in una carne. Ostendant igitur primo, ubi sit subtilitas ista,
@@ -314,10 +313,9 @@ erit vocabulum nupturae; ex nupta enim mater. Ita hic quoque
 ostenditur non de futuro mulierem tunc nominatam, quae postmodum
 acceptura erat futurae condicionis suae nomen. Responsum
 satis est ad hanc partem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Videamus nunc, si et apostolus formam vocabuli istius secundum 
+         </div>
+         <div n="6" type="chapter">
+            <p>Videamus nunc, si et apostolus formam vocabuli istius secundum 
 Genesim observat, sexui deputans illud, sic mulierem vocans
 virginem Mariam quemadmodum et Genesis Evam. Scribens enim
 ad Galatas, Misit, inquit, deus filium suum factum ex muliere, <bibl n="Gal. IV, 4."/>
@@ -347,10 +345,9 @@ mulierem nominare, de qua Christus nasci non habebat,
 id est virum passam, sed illa, quae erat praesens, quae erat virgo
 et mulier vocabatur post vocabuli huius proprietatem, secundum
 primordii formam virgini et ita universo mulierum generi defensam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Convertamur ad ipsas iam rationes recensendas per quas
+         </div>
+         <div n="7" type="chapter">
+            <p> Convertamur ad ipsas iam rationes recensendas per quas
 apostolus docet velari feminam oportere, an eaodem etiam virginibus
 competant, ut ex hoc quoque vocabuli communio inter virgines
 et non virgines constet, dum eaedem velaminis causae in
@@ -397,10 +394,10 @@ angeli deliquisse potuissent. Si autem et naturae praeiudicium adicit
 coma pro operimento est, utique hoc maxime virgini insigne est,
 quarum et ornatus ipse proprie sic est, ut concumulata in
 verticem ipsam capitis arcem ambitu crinium contegat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p><bibl n="Cor. XI, 4. 7."/> Horum certe omnium contraria efficiunt, ne vir caput velet,
+         </div>
+         <div n="8" type="chapter">
+            <p>
+               <bibl n="Cor. XI, 4. 7."/> Horum certe omnium contraria efficiunt, ne vir caput velet,
 scilicet quia non sit naturaliter consecutus ambitionem capillorum,
 quia radi sive tonderi non sit turpe illi, quia non propter illum.
 angeli exorbitarint, quia gloria et imago dei sit, quia caput eius
@@ -442,10 +439,9 @@ nominans, ut ostenderet dubitandum de velanda non esse,
 et omnem nominans mulierem, cum nominasset virginem. Sic et
 ipsi Corinthii intellexerunt. Hodie denique virgines suas Corinthii
 velant. Quid docuerint apostoli qui didicerunt approbant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Videamus nunc, an sicut naturae et causae argumenta virgini 
+         </div>
+         <div n="9" type="chapter">
+            <p>Videamus nunc, an sicut naturae et causae argumenta virgini 
 quoque competere monstravimus, ita etiam disciplinae ecclesiasticae
 praescripta de muliere in virginem spectant. Non permittitur <bibl n="I Cor. XIV, 34. I Tim. II, 12."/>
 mulieri in ecclesia loqui, sed nec docere, nec tinguere, nec offerre,
@@ -476,10 +472,9 @@ omnium affectuum structae et facile norint ceteras et
 consilio et solatio iuvare, et ut nihilominus ea decucurrerint per
 quae femina probari potest. Adeo nihil virgini ad honorem de
 loco permissum est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Sic nec de aliquibus insignibus. Ceterum satis inhumanum, 
+         </div>
+         <div n="10" type="chapter">
+            <p>Sic nec de aliquibus insignibus. Ceterum satis inhumanum, 
 si feminae quidem per omnia viris subditae honorigeram notam
 virginitatis suae praeferant, qua suspiciantur et circumspiciantur
 et magnificentur a fratribus, viri autem tot virgines, tot spadones
@@ -505,10 +500,9 @@ non habens, concupiscentiam fructus. Quomodo ergo non
 magis viris aliquid tale deus in honorem subscripsisset. vel quia
 familiariori scilicet imagini suae, vel quia plus laboranti? Si
 autem nihil masculo, multo magis feminae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Sed quod supra intermisimus ex parte subsecutae disputationis,
+         </div>
+         <div n="11" type="chapter">
+            <p> Sed quod supra intermisimus ex parte subsecutae disputationis,
 ne cohaerentiam eius dispergeremus, nunc responso expungemus.
 <bibl n="I Cor. XI, 5."/> Ubi enim gradum fiximus de apostoli absoluta definitione,
 omnem mulierem etiam omnis aetatis intellegendam, responderi
@@ -565,10 +559,9 @@ duobus amplius ad negotia mittunt, pubertatem in annis, non sponsalibus
 aut nuptiis decernentes. Mater familiae vocatur, licet virgo,
 et pater familiae, licet investis. A nobis nec naturalia observantur,
 quasi alius sit deus naturae quam noster.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Agnosce et mulierem, agnosce et nuptam de testimoniis et 
+         </div>
+         <div n="12" type="chapter">
+            <p>Agnosce et mulierem, agnosce et nuptam de testimoniis et 
 corporis et spiritus, quae patitur et in conscientia et in carne.
 Hae sunt tabellae priores naturalium sponsalium et nuptiarum. Impone
 velamen extrinsecus habenti tegumen intrinsecus. Tegantur
@@ -590,10 +583,9 @@ calceum stipant multiformem, plus instrumenti ad balneas deferunt.
 Quid singula persequar? Solae autem manifestae paraturae
 totam circumferunt mulieritatem, sed virginari volunt sola
 capitis nuditate, uno habitu negantes quod toto suggestu profitentur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Si propter homines habitu abutuntur, impleant illum etiam in
+         </div>
+         <div n="13" type="chapter">
+            <p> Si propter homines habitu abutuntur, impleant illum etiam in
 hoc, et ut apud ethnicos caput velant, certe in ecclesia virginitatem
 suam abscondant, quam extra ecclesiam celant. Timent
 extraneos, revereantur et fratres: aut constanter audeant et in vicis
@@ -621,10 +613,9 @@ quid gloriaris quasi non acceperis? Si vero non accepisti, quid
 habes quod datum tibi non est? Hoc ipso autem constat a deo
 datam tibi non esse, quod illam non soli deo praestas. Videamus
 ergo quod humanum est, an firmum sit et verum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Referunt aliquando dictum a quodam, cum primum quaestio 
+         </div>
+         <div n="14" type="chapter">
+            <p>Referunt aliquando dictum a quodam, cum primum quaestio 
 ista temptata est, Et quomodo ceteras sollicitabimus ad huiusmodi
 opus? Scilicet felices nos facient, si plures erunt, et non dei
 gratia vel merita cuiusque. Virgines ecclesiam, an ecclesia virgines
@@ -668,10 +659,9 @@ multis, dum digitis demonstrantium titillatur, dum nimium amatur,
 dum inter amplexus et oscula assidua concalescit. Sic frons
 duratur, sic pudor teritur, sic solvitur, sic discitur aliter iam
 placere desiderare.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Sed enim vera et tota et pura virginitas nihil magis timet
+         </div>
+         <div n="15" type="chapter">
+            <p> Sed enim vera et tota et pura virginitas nihil magis timet
 quam semetipsam. Etiam feminarum oculos pati non vult. Alios
 ipsa oculos habet. Confugit ad velamen capitis quasi ad galeam,
 quasi ad clypeum, qui bonum suum protegat adversus ictus temptationum,
@@ -691,10 +681,9 @@ Quis enim audebit oculis suis premere faciem clausam, faciem
 non sentientem, faciem, ut dixerim, tristem? Quicunque malus
 cogitatus ipsa severitate frangetur. Iam se etiam mulierem negat
 quae virginem celat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>In his consistit defensio nostrae opinionis secundum scripturam, 
+         </div>
+         <div n="16" type="chapter">
+            <p>In his consistit defensio nostrae opinionis secundum scripturam, 
 secundum naturam, secundum disciplinam. Scriptura legem
 condit, natura contestatur, disciplina exigit. Cui ex his consuetudo
 opinionis prodest, vel qui diversae sententiae color est? Dei est
@@ -718,12 +707,10 @@ Quamquam non mentiris nuptam. Nupsisti enim Christo, illi tradidisti
 carnem tuam, illi sponsasti maturitatem tuam. Incede secundum
 sponsi tui voluntatem. Christus est qui et alienas sponsas
 et maritatas velari iubet, utique multo magis suas.</p>
-<pb xml:id="v.1.p.908"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Sed et vos admonemus, alterius pudicitiae mulieres, quae in
+            <pb xml:id="v.1.p.908"/>
+         </div>
+         <div n="17" type="chapter">
+            <p> Sed et vos admonemus, alterius pudicitiae mulieres, quae in
 nuptias incidistis, ne sic a disciplina velaminis exolescatis, ne
 quidem in momento horae, ut, quia reicere illam non potestis, alio
 modo destruatis, neque tectae neque nudae incedentes. Mitris enim
@@ -770,13 +757,11 @@ legis incedere, paratas et instructas ad omnem dei mentionem, qui
 si fuerit in pectore, cognoscetur et in capite feminarum. Haec
 cum bona pace legentibus, utilitatem consuetudini praeponentibus,
 pax et gratia a domino nostro Iesu redundet, cum Septimio
-Tertulliano, cuius hoc opusculum est.</p></div>
-<pb xml:id="v.1.p.911"/>
-
-<pb xml:id="v.1.p.912"/>
-
-<pb xml:id="v.1.p.913"/>
-</div></body></text>
-
-
+Tertulliano, cuius hoc opusculum est.</p>
+         </div>
+         <pb xml:id="v.1.p.911"/>
+         <pb xml:id="v.1.p.912"/>
+         <pb xml:id="v.1.p.913"/>
+      </body>
+   </text>
 </TEI>

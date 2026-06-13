@@ -1,73 +1,82 @@
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader xml:lang="eng">
-		<fileDesc>
-			<titleStmt>
-				<title xml:lang="lat">Titus</title>
-				<author>Suetonius</author>
-				<editor role="translator">Alexander Thomson</editor>
-				<sponsor>Perseus Project, Tufts University</sponsor>
-				<principal>Gregory Crane</principal>
-				<respStmt>
-					<resp>Prepared under the supervision of</resp>
-					<name>Bridget Almas</name>
-					<name>Lisa Cerrato</name>
-					<name>William Merrill</name>
-					<name>David Smith</name>
-				</respStmt>
-				<funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Trustees of Tufts University</publisher>
-				<pubPlace>Medford, MA</pubPlace>
-				<authority>Perseus Project</authority>
-				<date type="release" cert="unknown">2000-08-01</date>
-			</publicationStmt>
-
-			<sourceDesc>
-				<biblStruct>
-					<monogr>
-						<title>The Lives of the Twelve Caesars</title>
-						<author xml:lang="lat">C. Suetonius Tranquillus</author>
-						<editor>J. Eugene Reed</editor>
-						<editor role="translator">Alexander Thomson</editor>
-						<imprint>
-							<pubPlace>Philadelphia</pubPlace>
-							<publisher>Gebbie and Co.</publisher>
-							<date>1883</date>
-						</imprint>
-					</monogr>
-					<ref target="https://archive.org/details/livesoftwelvecsa00suet/page/n541/mode/2up">Internet Archive</ref>
-				</biblStruct>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Titus</title>
+            <author>Suetonius</author>
+            <editor role="translator">Alexander Thomson</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" cert="unknown">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi1348.abo021.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>The Lives of the Twelve Caesars</title>
+                  <author xml:lang="lat">C. Suetonius Tranquillus</author>
+                  <editor>J. Eugene Reed</editor>
+                  <editor role="translator">Alexander Thomson</editor>
+                  <imprint>
+                     <pubPlace>Philadelphia</pubPlace>
+                     <publisher>Gebbie and Co.</publisher>
+                     <date>1883</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/livesoftwelvecsa00suet/page/n541/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
 				<!--<refState delim=" " unit="life"/>-->
-				<refState unit="chapter"/>
-			</refsDecl>
-			<editorialDecl>
-				<correction method="silent" status="low"><p>Perseus OCR</p></correction>
-			</editorialDecl>
-			
-		</encodingDesc>
-
-		<profileDesc>
-			<langUsage>
-				<language ident="eng">English </language>
-				<language ident="lat">Latin </language>
-				<language ident="grc">Greek </language>
-				<language ident="fre">French </language>
-			</langUsage>
-		</profileDesc>
-		<revisionDesc>
-			<change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
-		</revisionDesc>
-	</teiHeader>
-	<text xml:lang="eng">
-		<body><div xml:lang="eng" type="translation" n="urn:cts:latinLit:phi1348.abo021.perseus-eng2">
-			<div type="textpart" n="1" subtype="chapter">
-				<p>TITUS, who had the same cognomen with his father, was the darling and the delight
+            <refState unit="chapter"/>
+         </refsDecl>
+         <editorialDecl>
+            <correction method="silent" status="low">
+               <p>Perseus OCR</p>
+            </correction>
+         </editorialDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English </language>
+            <language ident="lat">Latin </language>
+            <language ident="grc">Greek </language>
+            <language ident="fre">French </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1348.abo021.perseus-eng2">
+         <div n="1" type="chapter">
+            <p>TITUS, who had the same cognomen with his father, was the darling and the delight
 					of mankind; so much did the natural genius, address, or good fortune he
 					possessed tend to conciliate the favour of all. This was, indeed, extremely
 					difficult, after he became emperor, as before that time, and even during the
@@ -81,9 +90,9 @@
 						It does not appear whether the Septizonium here mentioned as existing in the
 						time of Titus, stood on the same spot. </note> in a mean house, and a very
 					small and dark room, which still exists, and is shown to the curious.</p>
-			</div>
-			<div type="textpart" n="2" subtype="chapter">
-				<p>He was educated in the palace with Britannicus, and instructed in the same
+         </div>
+         <div n="2" type="chapter">
+            <p>He was educated in the palace with Britannicus, and instructed in the same
 					branches of learning, and under the same masters. During this time, they say,
 					that a physiognomist being introduced by Narcissus, the freedman of Claudius, to
 					examine the features of Britannicus,<note anchored="true">Britannicus, the son
@@ -95,9 +104,9 @@
 					circumstances, he afterwards erected a golden statue of him in the Palatium, and
 					dedicated to him an equestrian statue of ivory; attending it in the Circensian
 					procession, in which it is still carried to this day.</p>
-			</div>
-			<div type="textpart" n="3" subtype="chapter">
-				<p>While yet a boy, he was remarkable for his noble endowments both of body and
+         </div>
+         <div n="3" type="chapter">
+            <p>While yet a boy, he was remarkable for his noble endowments both of body and
 					mind; and as he advanced in years, they became still more conspicuous. He had a
 					fine person, combining an equal mixture of majesty and grace; was very strong,
 					though not tall, and somewhat corpulent. Gifted with an excellent memory, and a
@@ -110,9 +119,9 @@
 					merriment and jest engage with his secretaries in the imitation of any
 					hand-writing he saw, and often say, " that he was admirably qualified for
 					forgery."</p>
-			</div>
-			<div type="textpart" n="4" subtype="chapter">
-				<p>He filled with distinction the rank of a military tribune both in Germany and
+         </div>
+         <div n="4" type="chapter">
+            <p>He filled with distinction the rank of a military tribune both in Germany and
 					Britain, in which he conducted himself with the utmost activity, and no less
 					modesty and reputation; as appears evident from the great number of statues,
 					with honourable inscriptions, erected to him in various parts of both those
@@ -126,9 +135,9 @@
 					strong cities of Tarichaea and Gamala, in Judaea; and having his horse killed
 					under him in a battle, he mounted another, whose rider he had encountered and
 					slain.</p>
-			</div>
-			<div type="textpart" n="5" subtype="chapter">
-				<p>Soon afterwards, when Galba came to be emperor, he was sent to congratulate him,
+         </div>
+         <div n="5" type="chapter">
+            <p>Soon afterwards, when Galba came to be emperor, he was sent to congratulate him,
 					and turned the eyes of all people upon himself, wherever he came: it being the
 					general opinion amongst them, that the emperor had sent for him with a design to
 					adopt him for his son. But finding all things again in confusion, he turned back
@@ -159,9 +168,9 @@
 					to Rome with all possible expedition. Presenting himself unexpectedly to his
 					father, he said, by way of contradicting the strange reports raised concerning
 					him, "I am come, father, I am come."</p>
-			</div>
-			<div type="textpart" n="6" subtype="chapter">
-				<p>From that time he constantly acted as colleague with his father, and, indeed, as
+         </div>
+         <div n="6" type="chapter">
+            <p>From that time he constantly acted as colleague with his father, and, indeed, as
 					regent of the empire. He triumphed<note anchored="true">The joint triumph of
 						Vespasian and Titus, which was celebrated A. U. C. 824, is fully described
 						by Josephus, De Bell. Jud. vii. 24. It is commemorated by the triumphal
@@ -207,9 +216,9 @@
 					these acts, though he provided for his future security, yet for the present he
 					so much incurred the hatred of the people, that scarcely ever any one came to
 					the empire with a more odious character, or more universally disliked.</p>
-			</div>
-			<div type="textpart" n="7" subtype="chapter">
-				<p>Besides his cruelty, he lay under the suspicion of giving way to habits of
+         </div>
+         <div n="7" type="chapter">
+            <p>Besides his cruelty, he lay under the suspicion of giving way to habits of
 					luxury, as he often prolonged his revels till midnight with the most riotous of
 					his acquaintance. Nor was he unsuspected of lewdness, and his well-known
 					attachment to queen Berenice,<note anchored="true">Berenice, whose name is
@@ -291,10 +300,11 @@
 						instance, the game consisted principally of beasts of chase; and, on one
 						occasion, one thousand stags, as many of the ibex, wild sheep (moufflons
 						from Sardinia?), and other grazing animals, besides one thousand wild boars,
-						and as many ostriches, were turned loose by the emperor Gordian.</note></p>
-			</div>
-			<div type="textpart" n="8" subtype="chapter">
-				<p>He was by nature extremely benevolent; for whereas all the emperors after
+						and as many ostriches, were turned loose by the emperor Gordian.</note>
+            </p>
+         </div>
+         <div n="8" type="chapter">
+            <p>He was by nature extremely benevolent; for whereas all the emperors after
 					Tiberius, according to the example he had set them, would not admit the grants
 					made by former princes to be valid, unless they received their own sanction, he
 					confirmed them all by one general edict, without waiting for any applications
@@ -303,7 +313,8 @@
 					could perform, he replied, " No one ought to go away downcast from an audience
 					with his prince." Once at supper, reflecting that he had done nothing for any
 					that day, he broke out into that memorable and justly-admired saying, "My
-					friends, I have lost a day."<note anchored="true"><foreign xml:lang="lat">"Diem
+					friends, I have lost a day."<note anchored="true">
+                  <foreign xml:lang="lat">"Diem
 							perdidi."</foreign> This memorable speech is recorded by several other
 						historians, and praised by Eusebius in his Chronicles. </note> More
 					particularly, he treated the people on all occasions with so much courtesy,
@@ -348,9 +359,9 @@
 					the future, amongst other things, he prohibited actions to be successively
 					brought under different laws for the same cause, or the state of affairs of
 					deceased persons to be inquired into after a certain number of years.</p>
-			</div>
-			<div type="textpart" n="9" subtype="chapter">
-				<p>Having declared that he accepted the office of Pontifex Maximus for the purpose
+         </div>
+         <div n="9" type="chapter">
+            <p>Having declared that he accepted the office of Pontifex Maximus for the purpose
 					of preserving his hands undefiled, he faithfully adhered to his promise. For
 					after that time he was neither directly nor indirectly concerned in the death of
 					any person, though he sometimes was justly irritated. He swore "that he would
@@ -372,9 +383,9 @@
 					declared him his partner in it, and that he should be his successor; begging of
 					him sometimes in private, with tears in his eyes, "to return the affection he
 					had for him."</p>
-			</div>
-			<div type="textpart" n="10" subtype="chapter">
-				<p>Amidst all these favourable circumstances, he was cut off by an untimely death,
+         </div>
+         <div n="10" type="chapter">
+            <p>Amidst all these favourable circumstances, he was cut off by an untimely death,
 					more to the loss of mankind than himself. At the close of the public spectacles,
 					he wept bitterly in the presence of the people, and then retired into the Sabine
 					country, <note anchored="true">See VESPASIAN cc. i. and xxiv. The love of this
@@ -393,9 +404,9 @@
 					wife. But Domitia solemnly denied it on oath; which she would never have done,
 					had there been any truth in the report; nay, she would certainly have gloried in
 					it, as she was forward enough to boast of all her scandalous intrigues.</p>
-			</div>
-			<div type="textpart" n="11" subtype="chapter">
-				<p>He died in the same villa where his father had died before him, upon the Ides of
+         </div>
+         <div n="11" type="chapter">
+            <p>He died in the same villa where his father had died before him, upon the Ides of
 					September [the 13th of September]; two years, two months, and twenty days after
 					he had succeeded his father; and in the one-and-fortieth year of his age. <note anchored="true">A. U. C. 834, <date when="0082">A. D. 82</date>. </note> As
 					soon as the news of his death was published, all people mourned for him, as for
@@ -404,10 +415,10 @@
 					afterwards opening them, they gave him such thanks, and heaped upon him such
 					praises, now he was dead, as they never had done whilst he was alive and present
 					amongst them.</p>
-			</div>
-			<div type="textpart" n="note" subtype="chapter">
-				<head>Remarks on Titus</head>
-				<p>TITUS FLAVIUS VESPASIAN, the younger, was the first prince who succeeded to the
+         </div>
+         <div n="note" type="chapter">
+            <head>Remarks on Titus</head>
+            <p>TITUS FLAVIUS VESPASIAN, the younger, was the first prince who succeeded to the
 					empire by hereditary right; and having constantly acted, after his return from
 					Judaea, as colleague with his father in the administration, he seemed to be as
 					well qualified by experience as he was by abilities, for conducting the affairs
@@ -424,13 +435,13 @@
 					so sudden and great a change was never known in the character of mortal; and he
 					had the peculiar glory to receive the appellation of " the darling and delight
 					of mankind."</p>
-				<p>Under a prince of such a disposition, the government of the empire could not but
+            <p>Under a prince of such a disposition, the government of the empire could not but
 					be conducted with the strictest regard to the public welfare. The reform, which
 					was begun in the late reign, he prosecuted with the most ardent application;
 					and, had he lived for a longer time, it is probable that his authority and
 					example would have produced the most beneficial effects upon the manners of the
 					Romans.</p>
-				<p>During the reign of this emperor, in the seventy-ninth year of the Christian era,
+            <p>During the reign of this emperor, in the seventy-ninth year of the Christian era,
 					happened the first eruption of Mount Vesuvius, which has ever since been
 					celebrated for its volcano. Before this time, Vesuvius is spoken of, by ancient
 					writers, as being covered with orchards and vineyards, and of which the middle
@@ -442,7 +453,7 @@
 					Syria. Amongst those to whom this dreadful eruption proved fatal, was Pliny, the
 					celebrated naturalist, whose curiosity to examine the phenomenon led him so far
 					within the verge of danger, that he could not afterwards escape. </p>
-			</div>
-		</div></body>
-	</text>
+         </div>
+      </body>
+   </text>
 </TEI>

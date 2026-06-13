@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Pallio</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Pallio</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>                                                                                
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa022.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.914"/>
-<head>DE PALLIO.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Principes semper Africae, viri Carthaginienses, vetustate nobiles, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa022.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa022.opp-lat1">
+         <pb xml:id="v.1.p.914"/>
+         <head>DE PALLIO.</head>
+         <div n="1" type="chapter">
+            <p>Principes semper Africae, viri Carthaginienses, vetustate nobiles, 
 novitate felices, gaudeo vos tam prosperos temporum, cum
 
 ita vacat ac iuvat, habitus denotare. Pacis haec et annonae otia.
@@ -109,12 +111,11 @@ penduli impetus, commentata vim tormenti de bile pecoris
 caput vindicantis. Cum tamen ultimant tempora patriae et
 aries iam Romanus in muros quodam suos audet, stupuere illico
 Carthaginienses ut novum extraneum ingenium:</p>
-<p>Tantum aevi longinqua valet mutare vetustas!
+            <p>Tantum aevi longinqua valet mutare vetustas!
 Sic denique nec pallium agnoscitur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Sit nunc aliunde res, ne Poenicum inter Romanos aut erubescat 
+         </div>
+         <div n="2" type="chapter">
+            <p>Sit nunc aliunde res, ne Poenicum inter Romanos aut erubescat 
 aut doleat. Certe habitum vertere naturae totius sollemne
 munus est. Fungitur et ipse mundus interim iste quem
 incumbimus. Viderit Anaximander, si plures putat, viderit, si
@@ -204,10 +205,9 @@ est, eradicato omni aconito hostilitatis et cacto et rubo subdolae
 familiaritatis convulso, et amoenus super Alcinoi pometum
 et Midae rosetum. Laudans igitur orbem mutantem, quid denotas
 hominem?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Mutant et bestiae pro veste formam; quamquam et pavo pluma 
+         </div>
+         <div n="3" type="chapter">
+            <p>Mutant et bestiae pro veste formam; quamquam et pavo pluma 
 vestis, et quidem de cataclistis, immo omni conchylio pressior
 <pb xml:id="v.1.p.926"/>
 
@@ -223,7 +223,7 @@ cum squamis et anni recusantur. Hyaena, si observes, sexus
 annalis est, marem et feminam alternat. Taceo cervum, quod
 et ipse, aetatis suae arbiter, serpente pastus veneno languescit in
 iuventutem. Est et</p>
-<p>Quadrupes tardigrada, agrestis, humilis, aspera.
+            <p>Quadrupes tardigrada, agrestis, humilis, aspera.
 Testudinem Pacuvianam putas? Non est. Capit et alia bestiola
 versiculum, de mediocribus oppido, sed nomen grande. Chamaeleontem
 qui audieris haud ante gnarus, iam timebis aliquid
@@ -285,12 +285,10 @@ iam penes Latium est. Cum voce vestis intravit. Atque adeo ipse
 qui Graecos praeter urbem censebat, litteras eorum vocemque
 senex iam eruditus, idem Cato iuridicinae suae in tempore humerum
 exertus, haud minus palliato habitu Graecis favit.</p>
-<pb xml:id="v.1.p.932"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Quid nunc, si est Romanitas omni salus, nec honestis
+            <pb xml:id="v.1.p.932"/>
+         </div>
+         <div n="4" type="chapter">
+            <p> Quid nunc, si est Romanitas omni salus, nec honestis
 tamen admodum Graeci estis? Aut, ni ita est, unde gentium
 in provinciis melius exercitis, quas natura agro potius eluctando
 commodavit, studia palaestrae, male senescentia et cassum laborantia,
@@ -435,12 +433,10 @@ renuit, tunc certissime pallium super omnes exuvias et peplos
 augusta vestis, superque omnes apices et tutulos sacerdos suggestus.
 Deduc oculos, suadeo, reverere habitum, unius. interim
 erroris tui renuntiatorem.</p>
-<pb xml:id="v.1.p.945"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Tamen, inquis, ita a toga ad pallium? Quid enim, si a diademate 
+            <pb xml:id="v.1.p.945"/>
+         </div>
+         <div n="5" type="chapter">
+            <p>Tamen, inquis, ita a toga ad pallium? Quid enim, si a diademate 
 et a sceptro? An aliter mutavit Anacharsis, cum regno
 Scythiae philosophiam praevertit? Nulla in melius transgressi
 sint signa, est habitus iste quod faciat. Prius etiam ad simplicem
@@ -480,9 +476,8 @@ facile sese regit, facile reficit; etiam cum exponitur, nulli cruci
 in crastinum demandatur. Si quid interulae subter est, vacat
 zonae tormentum; si quid calceatus inducitur, mundissimum opus
 est, aut pedes nudi magis, certe viriles magis quam in calceis.</p>
-<pb xml:id="v.1.p.950"/>
-
-<p>Haec pro pallio interim, quantum nomine comitiasti. Iam vere
+            <pb xml:id="v.1.p.950"/>
+            <p>Haec pro pallio interim, quantum nomine comitiasti. Iam vere
 et de negotio provocat. Ego, inquit, nihil fore, nihil campo.
 nihil curiae debeo, nihil officio advigilo, nulla rostra praeoccupo,
 nulla praetoria observo, canales non odoro, cancellos non
@@ -534,10 +529,9 @@ et Rufos. Dabo catharticum impuritati Scauri et aleae Curii et
 vinolentiae Antonii, Et memento istos interim ex multis togatos
 fuisse; quales apud pallium haud facile. Has purulentias civitatis
 quis eliciet et exsuppurabit, ni sermo palliatus?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Sermone, inquit, me suasisti medicamine sapientissimo. Verum
+         </div>
+         <div n="6" type="chapter">
+            <p> Sermone, inquit, me suasisti medicamine sapientissimo. Verum
 etsi eloquium quiescat, aut infantia subductum aut verecundia
 retentum (nam et elingua philosophia vita contenta est), ipse
 habitus sonat. Sic denique auditur philosophus, dum videntur. De
@@ -561,10 +555,8 @@ ista pallium loquitur. At ego iam illi etiam divinae sectae ac
 disciplinae commercium confero. Gaude pallium et exsulta! Melior
 iam te philosophia dignata est ex quo Christianum vestire
 coepisti.</p>
-<pb xml:id="v.1.p.957"/>
-</div>
-
-</div></body></text>
-
-
+            <pb xml:id="v.1.p.957"/>
+         </div>
+      </body>
+   </text>
 </TEI>

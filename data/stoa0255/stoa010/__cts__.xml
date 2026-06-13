@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <cts:work xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:stoa0255.stoa010" groupUrn="urn:cts:latinLit:stoa0255" xml:lang="lat">
   <cts:title xml:lang="lat">De Ira</cts:title>
   <cts:edition urn="urn:cts:latinLit:stoa0255.stoa010.perseus-lat2" workUrn="urn:cts:latinLit:stoa0255.stoa010">
@@ -5,4 +6,4 @@
     <cts:description xml:lang="eng">Seneca, Lucius Annaeus. Moral Essays, Volume 1. Basore, John William, editor. 
       London: William Heinemann Ltd; New York: G.P. Putnam's Son, 1928.</cts:description>
   </cts:edition>
-</cts:work>
+<cts:genre confidence="high">prose-section</cts:genre></cts:work>

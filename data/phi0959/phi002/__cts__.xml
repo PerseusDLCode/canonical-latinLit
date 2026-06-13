@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0959" projid="latinLit:phi002" urn="urn:cts:latinLit:phi0959.phi002" xml:lang="lat">
   <ti:title xml:lang="lat">Epistulae</ti:title>
   <ti:edition projid="latinLit:perseus-lat2" urn="urn:cts:latinLit:phi0959.phi002.perseus-lat2" workUrn="urn:cts:latinLit:phi0959.phi002" xml:lang="lat">
@@ -10,4 +11,4 @@
     <ti:label xml:lang="eng">Epistles</ti:label>
     <ti:description xml:lang="mul">Ovid. The Epistles of Ovid. London: J. Nunn, 1813.</ti:description>
   </ti:translation>
-</ti:work>
+<ti:genre confidence="high">verse-poem-line</ti:genre></ti:work>

@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Against Rufinus</title>
+            <title>Against Rufinus</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,12 +41,14 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="book" delim="."/>                             
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="book" delim="."/>
+            <state unit="poem"/>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -57,9 +59,13 @@
    <text id="stoa0089.stoa009.perseus-eng1">
       <body>
          <pb id="v.1.p.25" TEIform="pb"/>
-               <div1 type="book" n="1" org="uniform" sample="complete" part="N">
-                        <div2 type="poem" n="praef" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book" n="1" org="uniform" sample="complete" part="N">
+            <div2 type="poem"
+                  n="praef"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <p>
 When Python had fallen, laid low by the arrow of
 Phoebus, his dying limbs outspread o'er Cirrha's
 heights — Python, whose coils covered whole mountains,
@@ -77,19 +83,22 @@ fuller wind shakes the tripod, and the gods, hearing
 the Muses' sweet song from afar off, gather in the
 dread caverns of Themis.
 </p>
-         <p>A blessed band comes together to hear my song,
+               <p>A blessed band comes together to hear my song,
 now that a second Python has been slain by the
 weapons of that master of ours who made the rule
 of the brother Emperors hold the world steady,
 observing justice in peace and showing vigour
 in war.
 <pb id="v.1.p."/>
-         </p>
-                        
-         <pb id="v.1.p.27" TEIform="pb"/>
-         </div2>  
-         <div2 type="poem" id="poem.3" org="uniform" sample="complete" part="N">
-         <p>
+               </p>
+               <pb id="v.1.p.27" TEIform="pb"/>
+            </div2>
+            <div2 type="poem"
+                  id="poem.3"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <p>
 
 My mind has often wavered between two opinions:
 have the gods a care for the world or is there no
@@ -124,13 +133,13 @@ that he may be hurled down in more headlong
 ruin. Muses, unfold to your poet whence sprang
 this grievous pest.
 </p>
-         <p>Dire Allecto once kindled with jealous wrath on
+               <p>Dire Allecto once kindled with jealous wrath on
 seeing widespread peace among the cities of men.
 </p>
-         <p>Straightway she summons the hideous council of
+               <p>Straightway she summons the hideous council of
 the nether-world sisters to her foul palace gates.
 </p>
-         <p>Hell's numberless monsters are gathered together,
+               <p>Hell's numberless monsters are gathered together,
 Night's children of ill-omened birth . Discord, mother
 of war, imperious Hunger, Age, near neighbour to
 Death; Disease, whose life is a burden to himself;
@@ -172,8 +181,8 @@ Stygian darkness, smirch the light of day with our
 breath, unbridle the ocean deeps, hurl rivers against
 their shattered banks, and break the bonds of the
 universe.</q>
-         </p>
-         <p>So spake she with cruel roar and uproused every
+               </p>
+               <p>So spake she with cruel roar and uproused every
 gaping serpent mouth as she shook her snaky locks
 and scattered their baneful poison. Of two minds
 was the band of her sisters. The greater number
@@ -185,7 +194,7 @@ when, for all the wind be dropped, the swelling tide
 yet flows, and the last weary winds of the departing
 storm play o'er the tossing waves.
 </p>
-         <p>Thereupon cruel Megaera rose from her funereal
+               <p>Thereupon cruel Megaera rose from her funereal
 seat, mistress she of madness' howlings and impious
 ill and wrath bathed in fury's foam. No blood her
 drink but that flowing from kindred slaughter and
@@ -233,11 +242,11 @@ plan commend itself to you, to the kingly palace of
 the emperor of the world. Be he wiser than Numa,
 be he Minos' self, needs must he yield and succumb
 to the treachery of my foster child.</q>
-         </p>
-         <p>A shout followed her words: all stretched forth
+               </p>
+               <p>A shout followed her words: all stretched forth
 their impious hands and applauded the awful plot.
 </p>
-         <p>When Megaera had gathered together her dress
+               <p>When Megaera had gathered together her dress
 with the black serpent that girdled her, and bound
 her hair with combs of steel, she approached the
 sounding stream of Phlegethon, and seizing a tall
@@ -245,7 +254,7 @@ pine-tree from the scorched summit of the flaming
 bank kindled it in the pitchy flood, then plied her
 swift wings o'er sluggish Tartarus.
 </p>
-         <p>There is a place where Gaul stretches her furthermost
+               <p>There is a place where Gaul stretches her furthermost
 shore spread out before the waves of Ocean:
 'tis there that Ulysses is said to have called up the
 silent ghosts with a libation of blood. There is
@@ -296,7 +305,7 @@ house.</q> At these words the white pillars, to his
 amazement, began to turn into gold and the beams
 of a sudden to shine with metal.
 </p>
-         <p>His senses are captured by the bait, and, thrilled
+               <p>His senses are captured by the bait, and, thrilled
 beyond measure, he feasts his greedy eyes on the
 sight. So Midas, king of Lydia, swelled at first
 <pb id="v.1.p.39"/>
@@ -314,12 +323,12 @@ the voyage of the Argo, ship of Thessaly, till he came
 to where, beneath its high-walled town, the gleaming
 Bosporus separates Asia from the Thracian coast.
 </p>
-         <p>When he had completed this long journey and,
+               <p>When he had completed this long journey and,
 led by the evil thread of the fates, had won his
 way into the far-famed palace, then did ambition
 straightway come to birth and right was no more.
 </p>
-         <p>Everything had its price. He betrayed secrets,
+               <p>Everything had its price. He betrayed secrets,
 deceived dependents, and sold honours that had
 been wheedled from the emperor. He followed up
 one crime with another, heaping fuel on the inflamed
@@ -340,12 +349,12 @@ homes, expels them from the lands their sires had
 left them, either wresting them from the living
 owners or fastening upon them as an inheritor.
 </p>
-         <p>Massed riches are piled up and a single house
+               <p>Massed riches are piled up and a single house
 receives the plunder of a world; whole peoples
 are forced into slavery, and thronging cities bow
 beneath the tyranny of a private man.
 </p>
-         <p>Madman, what shall be the end? Though thou
+               <p>Madman, what shall be the end? Though thou
 possess either Ocean, though Lydia pour forth for
 thee her golden waters, though thou join Croesus'
 throne to Cyrus' crown, yet shalt thou never be rich
@@ -355,10 +364,10 @@ poverty, despised the gifts of monarchs; the
 consul Serranus sweated at his heavy plough and a
 small cottage gave shelter to the warlike Curii.
 </p>
-         <p>To my mind such poverty as this is richer than
+               <p>To my mind such poverty as this is richer than
 thy wealth, such a home greater than thy palaces.
 </p>
-         <p>There pernicious luxury seeks for the food that
+               <p>There pernicious luxury seeks for the food that
 satisfieth not; here the earth provides a banquet
 for which is nought to pay. With thee wool absorbs
 the dyes of Tyre; thy patterned clothes are stained
@@ -420,18 +429,18 @@ of Corinth e'er wrought such wickedness with his
 pine-tree, or Sciron with his precipitous rock, or
 Phalaris with his brazen bull, or Sulla with his prison?
 </p>
-         <p>O gentle horses of Diomede! O pitiful altars of
+               <p>O gentle horses of Diomede! O pitiful altars of
 Busiris! Henceforth, compared with Rufinus thou,
 Cinna, shalt ' be loving, and thou, Spartacus, a
 sluggard.
 </p>
-         <p>All were a prey to terror, for men knew not where
+               <p>All were a prey to terror, for men knew not where
 next his hidden hatred would break forth, they
 sob in silence for the tears they dare not shed and
 fear to show their indignation. Yet is not the spirit
 of great-hearted Stilicho broken by this same fear.
 </p>
-         <p>Alone amid the general calamity he took arms
+               <p>Alone amid the general calamity he took arms
 against this monster of greed and his devouring
 maw, though not borne on the swift course of any
 wingèd steed nor aided by Pegasus' reins. In him
@@ -441,7 +450,7 @@ the fierce foe, the exile's sanctuary, standard confronting
 the madness of Rufinus, fortress for the
 protection of the good.
 </p>
-         <p>Thus far Rufinus advanced his threats and stayed;
+               <p>Thus far Rufinus advanced his threats and stayed;
 then fell back in coward flight: even as a torrent
 swollen with winter rains rolls down great stones
 in its course, overwhelms woods, tears away bridges,
@@ -449,7 +458,7 @@ yet is broken by a jutting rock, and, seeking a
 way through, foams and thunders about the cliff
 with shattered waves.
 </p>
-         <p>How can I praise thee worthily, thou who sus-
+               <p>How can I praise thee worthily, thou who sus-
 <pb id="v.1.p.47"/>
 tainedst with thy shoulders the tottering world in
 its threatened fall? The gods gave thee to us
@@ -471,7 +480,7 @@ tusks laid waste a single Arcadian vale, and thou,
 rebel Antaeus, holding thy mother earth in thine
 embrace, didst no hurt beyond the borders of Africa.
 </p>
-         <p>Crete alone re-echoed to the bellowings of the fire-
+               <p>Crete alone re-echoed to the bellowings of the fire-
 breathing bull, and the green hydra beleaguered no
 more than Lerna's lake. But this monster Rufinus
 terrified not one lake nor one island: whatsoever
@@ -481,10 +490,10 @@ triple Geryon nor Hell's fierce janitor can vie with
 him nor could the conjoined terrors of powerful
 Hydra, ravenous Scylla, and fiery Chimaera.
 </p>
-         <p>Long hung the contest in suspense, but the struggle
+               <p>Long hung the contest in suspense, but the struggle
 betwixt vice and virtue was ill-matched in character.
 </p>
-         <p>Rufinus threatens slaughter, thou stayest his hand;
+               <p>Rufinus threatens slaughter, thou stayest his hand;
 he robs the rich, thou givest back to the poor; he
 overthrows, thou restorest; he sets wars afoot, thou
 winnest them. As a pestilence, growing from day
@@ -497,7 +506,7 @@ so the ambitious rebel marks down no private prey,
 but hurls his eager threats at kings, and seeks to
 destroy Rome's army and overthrow her might.
 </p>
-         <p>Now he stirs up the Getae1 and the tribes on
+               <p>Now he stirs up the Getae1 and the tribes on
 Danube's banks, allies himself with Scythia and
 exposes what few his cruelties have spared to the
 sword of the enemy. There march against us a
@@ -520,21 +529,21 @@ These Huns are a tribe who live on the extreme
 eastern borders of Scythia, beyond frozen Tanais;
 most infamous of all the children of the north.
 </p>
-         <p>Hideous to look upon are their faces and loathsome
+               <p>Hideous to look upon are their faces and loathsome
 their bodies, but indefatigable is their spirit. The
 chase supplies their food; bread they will not eat.
 </p>
-         <p>They love to slash their faces and hold it a
+               <p>They love to slash their faces and hold it a
 <pb id="v.1.p.51"/>
 righteous act to swear by their murdered parents.
 </p>
-         <p>Their double nature fitted not better the twi-formed
+               <p>Their double nature fitted not better the twi-formed
 Centaurs to the horses that were parts of them.
 </p>
-         <p>Disorderly, but of incredible swiftness, they often
+               <p>Disorderly, but of incredible swiftness, they often
 return to the fight when little expected.
 </p>
-         <p>Fearless, however, against such forces, thou,
+               <p>Fearless, however, against such forces, thou,
 Stilicho, approachest the waters of foaming Hebrus
 and thus prayest ere the trumpets sound and
 the fight begins: <q direct="unspecified"> Mars, whether thou reclinest
@@ -544,8 +553,8 @@ the Persian fleet, or Pangaeus, gloomy with dark
 holm-oaks, gird thyself at my side and defend
 thine own land of Thrace. If victory smile on us,
 thy meed shall be an oak stump adorned with spoils.</q>
-         </p>
-         <p>The Father heard his prayer and rose from the
+               </p>
+               <p>The Father heard his prayer and rose from the
 snowy peaks of Haemus shouting commands to his
 speedy servants: <q direct="unspecified"> Bellona, bring my helmet; fasten
 me. Panic, the wheels upon my chariot; harness
@@ -563,7 +572,7 @@ helmets of either tower with bristling crests, their
 breastplates flash as they speed along and their
 spears take their fill of widely dealt wounds.
 </p>
-         <p>Meanwhile Megaera, more eager now she has
+               <p>Meanwhile Megaera, more eager now she has
 got her way, and revelling in this widespread
 <pb id="v.1.p.53"/>
 calamity, comes upon Justice sad at heart in her
@@ -583,8 +592,8 @@ south. The space next to the summer constellation
 of the Lion, the neighbourhood of the winter
 Balance has long been empty. And would I could
 now follow thee through the dome of heaven.</q>
-         </p>
-         <p>The goddess made answer: <q direct="unspecified">Thou shalt rage no
+               </p>
+               <p>The goddess made answer: <q direct="unspecified">Thou shalt rage no
 further, mad that thou art. Now shall thy creature
 receive his due, the destined avenger hangs over
 him, and he who now wearies land and the very
@@ -611,14 +620,19 @@ asked for fleeces dyed scarlet, but of themselves
 shall the flocks grow red to the astonishment of the
 shepherd, and in every sea the green seaweed will
 laugh with flashing jewels.</q>
-            <pb id="v.1.p.57"/>
-         </p>
-                  </div2>
-               </div1>
+                  <pb id="v.1.p.57"/>
+               </p>
+            </div2>
+         </div1>
          <pb id="v.1.p.3" TEIform="pb"/>
-               <div1 type="book" n="2" org="uniform" sample="complete" part="N">
-                        <div2 type="poem" n="praef" id="poem.4" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book" n="2" org="uniform" sample="complete" part="N">
+            <div2 type="poem"
+                  n="praef"
+                  id="poem.4"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <p>
 
 Return, ye Muses, and throw open rescued
 Helicon; now again may your company gather
@@ -627,7 +641,7 @@ forbid song with its viler bray. Do thou too, Delian
 Apollo, now that Delphi is safe and fear has been
 dispelled, wreath thy avenger's head with flowers.
 </p>
-         <p>No savage foe sets profane lips to Castalia's spring
+               <p>No savage foe sets profane lips to Castalia's spring
 or those prophetic streams. Alpheus'1 flood ran
 all his length red with slaughter and the waves
 bore the bloody marks of war across the Sicilian
@@ -635,7 +649,7 @@ sea; whereby Arethusa, though herself not present,
 recognized the triumphs freshly won and knew of
 the slaughter of the Getae, to which that blood bore witness.
 </p>
-         <p>Let peace, Stilicho, succeed these age-long labours
+               <p>Let peace, Stilicho, succeed these age-long labours
 and ease thine heart by graciously listening to my
 song. Think it no shame to interrupt thy long toil
 and to consecrate a few moments to the Muses. Even
@@ -645,11 +659,15 @@ the battle was ended, and, unmindful of his wonted
 fierceness, to have laid aside his spear in gentler
 mood, soothing his ear with the Muses' melody.
 <pb id="v.1.p.."/>
-         </p>
-                        </div2>
-                        <div2 type="poem" id="poem.5" org="uniform" sample="complete" part="N">
-         <pb id="v.1.p.59" TEIform="pb"/>
-         <p>
+               </p>
+            </div2>
+            <div2 type="poem"
+                  id="poem.5"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <pb id="v.1.p.59" TEIform="pb"/>
+               <p>
 
 After the subjugation of the Alpine tribes and
 the salvation of the kingdoms of Italy the heavens
@@ -678,8 +696,8 @@ does too; general destruction shall console me for
 mine own death, nor will I die (for I am no coward)
 till I have accomplished this. I will not lay down
 my power before my life.</q>
-         </p>
-         <p>So spake he, and as if Aeolus unchained the winds
+               </p>
+               <p>So spake he, and as if Aeolus unchained the winds
 so he, breaking their bonds, let loose the nations,
 clearing the way for war; and, that no land should
 be free therefrom, apportioned ruin throughout
@@ -706,7 +724,7 @@ grow kindlier through human tillage. Thessaly
 is afire; Pelion silent, his shepherds put to flight;
 flames bring destruction on Macedonia's crops.
 </p>
-         <p>For Pannonia's plain, the Thracians' helpless cities,
+               <p>For Pannonia's plain, the Thracians' helpless cities,
 the fields of Mysia were ruined but now none wept;
 year by year came the invader, unsheltered was the
 countryside from havoc and custom had robbed
@@ -718,7 +736,7 @@ the toils of countless leaders, knit together through
 so many years by Roman hands, one coward traitor
 overthrew in the twinkling of an eye.
 </p>
-         <p>That city,1 too, called of men the rival of great
+               <p>That city,1 too, called of men the rival of great
 Rome, that looks across to Chalcedon's strand, is
 stricken now with terror at no neighbouring war;
 nearer home it observes the flash of torches, the
@@ -750,7 +768,7 @@ thronged him round and an armed band of depen-
 <pb id="v.1.p.65"/>
 dents danced attendance on a civilian's standards.
 </p>
-         <p>Rufinus himself in their midst drapes tawny skins of
+               <p>Rufinus himself in their midst drapes tawny skins of
 beasts about his breast (thorough in his barbarity),
 and uses harness and huge quivers and twanging bows
 like those of the Getae — his dress openly showing the
@@ -760,7 +778,7 @@ adopt the manners and dress of barbarians; Roman
 law, obliged to change her noble garment, mourns
 her slavery to a skin-clad judge.
 </p>
-         <p>What looks then on men's faces! What furtive
+               <p>What looks then on men's faces! What furtive
 murmurs! For, poor wretches, they could not even
 weep nor, without risk, ease their grief in converse.
 <q direct="unspecified"> How long shall we bear this deadly yoke? What
@@ -778,8 +796,8 @@ with the torches of happy wedlock. Nay,
 come even though alone, thou for whom we long;
 wars will perish at thy sight and the ravening
 monster's rage subside.</q>
-         </p>
-         <p>Such were the tempests that vexed the turbulent
+               </p>
+               <p>Such were the tempests that vexed the turbulent
 East. But so soon as ever winter had given place
 to the winds of spring and the hills began to lose
 their covering of snow, Stilicho, leaving the fields of
@@ -788,7 +806,7 @@ and hastened to the lands of the sunrise, combining
 <pb id="v.1.p.67"/>
 the so different squadrons of Gaul and of the East.
 </p>
-         <p>Never before did there meet together under one command
+               <p>Never before did there meet together under one command
 such numerous bands, never in one army such a
 babel of tongues. Here were curly-haired Armenian
 cavalry, their green cloaks fastened with a loose knot,
@@ -811,7 +829,7 @@ their courses, obscured the sun with the rain of their
 arrows, passed through mountains on board ship,
 and walked the bridged sea with contemptuous foot.
 </p>
-         <p>Scarce had Stilicho crossed the Alps when the
+               <p>Scarce had Stilicho crossed the Alps when the
 barbarian hordes began to restrict their forays and
 for fear of his approach gathered together in the
 plain and enclosed their pasture lands within a
@@ -820,7 +838,7 @@ fortification with a double moat, planted stakes two
 deep at intervals along its summit and set wagons
 rigged with ox-hide all round like a wall.
 </p>
-         <p>Panic fear seized upon Rufinus as he saw this from
+               <p>Panic fear seized upon Rufinus as he saw this from
 afar, and his cheeks grew pale. He stood with ice-
 cold face, not knowing whether to fly, to own himself
 <pb id="v.1.p.69"/>
@@ -867,12 +885,12 @@ not fall alone — by the dead and the stars I swear it.
 The blood of another shall be mingled with mine.
 I will not go unaccompanied to the waters of Styx nor
 shall the victor be free to exult in my death.</q>
-         </p>
-         <p>So saying he dictates a treasonable letter and
+               </p>
+               <p>So saying he dictates a treasonable letter and
 sends therewith an emissary to bear the message
 extorted from the emperor's unwilling lips.
 </p>
-         <p>Meanwhile Stilicho, exulting in the thought of
+               <p>Meanwhile Stilicho, exulting in the thought of
 advancing upon the foe and of the narrow stretch
 of country that separated him from the fortifications,
 inflames with his words the hearts of his troops
@@ -892,7 +910,7 @@ with a courage that is lavish of life. Neither precipice
 nor deep river could check their advance: their headlong
 speed would have overthrown all barriers.
 </p>
-         <p>If the two armies had then joined battle in this
+               <p>If the two armies had then joined battle in this
 temper ruined Greece would not have witnessed such
 disaster as she did, the cities of the Peloponnese would
 still have been flourishing untouched by the hand
@@ -904,11 +922,11 @@ cruel chains have led in captivity the matrons of
 Athens. That day might have set an end to our
 disasters and destroyed the seeds of future calamities.
 </p>
-         <p>For shame, envious Fortune, of what a triumph didst
+               <p>For shame, envious Fortune, of what a triumph didst
 thou rob us! The kingly mandate came to Stilicho
 in arms amid the cavalry and the trumpets' din.
 </p>
-         <p>He stood amazed; anger and great grief o'erwhelm
+               <p>He stood amazed; anger and great grief o'erwhelm
 the hero and he wonders that such power for ill is
 allowed a coward. His wavering mind ponders the
 uncertain issue: shall he continue his advance or fail
@@ -917,7 +935,7 @@ ruin but fears to disobey orders. Loyalty annuls the
 prickings-on of valour. The public good urges him
 one way, fear of the emperor's displeasure another.
 </p>
-         <p>At length in his distress he raises his hands to
+               <p>At length in his distress he raises his hands to
 heaven and speaks from deep within his heart: <q direct="unspecified"> Ye
 gods not yet glutted with Rome's destruction, if
 ye will that our empire be utterly uprooted, if ye
@@ -937,13 +955,13 @@ your homes, soldiers of the east. Needs must we obey.
 <pb id="v.1.p.75"/>
 Silence, ye clarions; men, forbear to shoot. The
 foe is at hand, spare him; 'tis Rufinus' command.</q>
-         </p>
-         <p>At these words an unanimous roar went up from
+               </p>
+               <p>At these words an unanimous roar went up from
 all the companies. With less din are the cliffs of
 Ceraunia buffeted by the Italian sea or the thunders
 evoked from the western winds' wet storm-clouds.
 </p>
-         <p>They will not separate, and demand the battle of which
+               <p>They will not separate, and demand the battle of which
 they have been defrauded. East and west claim the
 leadership of that illustrious chief. It is a contest
 of affection; insubordination that none can blame
@@ -972,8 +990,8 @@ stripling Nile, I would leave behind me the world
 <pb id="v.1.p.77"/>
 I know. Wheresoever Stilicho plants his tent there
 is my fatherland.</q>
-         </p>
-         <p>But Stilicho said them nay: <q direct="unspecified">Cease, I beg you,</q>
+               </p>
+               <p>But Stilicho said them nay: <q direct="unspecified">Cease, I beg you,</q>
 he cried, <q direct="unspecified">stay your eager hands. Suffer to disperse
 the mountain of hatred that towers over me. I hold
 not victory so dear that I would fain seem to win it
@@ -986,7 +1004,7 @@ him back and he droops his mane and closes his
 downcast eyes and with a disappointed roar pushes
 his way through the trembling forest.
 </p>
-         <p>When the armies saw that they had been parted
+               <p>When the armies saw that they had been parted
 and left, they groaned deeply and bedewed their
 helmets with a stream of tears. The sighs that
 refused egress to their smothered words shook the
@@ -1011,8 +1029,8 @@ ever our general, and though we be not together
 thou shalt still know our loyalty. Long has a victim
 been owed thee; he shall be sacrificed and thou
 placated by an immolation promised of old.</q>
-         </p>
-         <p>Sad at heart the army left Thessaly, reached the
+               </p>
+               <p>Sad at heart the army left Thessaly, reached the
 borders of Macedon, and arrived before the walls
 of Thessalonica. Indignation deep hid in their
 hearts prepares the silent wrath of revenge. They
@@ -1062,8 +1080,8 @@ and bid a portion of his empire to be given to
 me. Mine alone be the happy fortune to rise above
 a private estate and yet escape the charge of
 tyranny.</q>
-         </p>
-         <p>To such words they shout acclaim — that vile
+               </p>
+               <p>To such words they shout acclaim — that vile
 band of traitors, waxed fat on plunder, whom one
 principle makes fellows with Rufinus, the holding
 nothing unlawful, and whose bond of friendship is
@@ -1072,7 +1090,7 @@ promise themselves foreign wives and all to no
 purpose forecast the booty they will win and the
 cities they will sack.
 </p>
-         <p>Night had begun to soothe human toils in her
+               <p>Night had begun to soothe human toils in her
 deep bosom and sleep had spread his black wings
 when Rufinus, whose mind had long been a prey to
 anxiety, sank into a troubled slumber. Scarce had
@@ -1089,7 +1107,7 @@ the ambiguous prophecy of the ghost, but Rufinus
 observed not the hidden omen and saw not it foretold
 the elevation of his severed head upon a spear.
 </p>
-         <p>Now Lucifer touched the peak of Haemus with
+               <p>Now Lucifer touched the peak of Haemus with
 his rays and Titan urged his hastening wheel quicker
 than his wont, so soon to see at last the death of
 Rufinus. Rufinus himself leapt from his bed and
@@ -1103,10 +1121,10 @@ he wore a woman's raiment about his neck; as
 though the purple already clothed his limbs and the
 jewelled crown blazed upon his brow.
 </p>
-         <p>Hard by a crowded quarter of the city of Constantinople,
+               <p>Hard by a crowded quarter of the city of Constantinople,
 towards the south, there lies a plain.
 </p>
-         <p>The rest is surrounded by the sea which here allows
+               <p>The rest is surrounded by the sea which here allows
 itself to be parted by a narrow way. Here the
 avenging army, bright with the panoply of the war
 god, disposes its squadrons. On the left stands the
@@ -1127,7 +1145,7 @@ plates protecting them from wounds; each stands
 alone, a pleasure yet a dread to behold, beautiful,
 yet terrible, and as the wind drops the particoloured dragons I sink with relaxing coils into repose.
 </p>
-         <p>The emperor first salutes the hallowed standards;
+               <p>The emperor first salutes the hallowed standards;
 Rufinus follows him, speaking with that crafty voice
 wherewith he deceived all, praising their devoted
 arms and addressing each by name. He tells those
@@ -1144,7 +1162,7 @@ of the ocean drives to land the frightened fish,
 narrowing the circuit of his nets and closing up all
 possible ways of egress. All others they exclude.
 </p>
-         <p>In his eagerness he notes not yet that he is being
+               <p>In his eagerness he notes not yet that he is being
 surrounded and, strongly seizing his robe, chides
 the hesitating emperor: let him mount the lofty
 platform and declare him sharer in his sceptre,
@@ -1159,8 +1177,8 @@ laws to others and restored the reign of liberty?
 Two civil wars have I quenched, twice forced the
 barrier of the Alps. These many battles have taught
 me to serve no tyrant.</q>
-         </p>
-         <p>Rufinus stood rooted to earth. There is no hope
+               </p>
+               <p>Rufinus stood rooted to earth. There is no hope
 of escape, for a forest of flashing spears hems
 him in. Shut in on the right hand and on the left
 he stood and gazed in wonder on the drawn blades
@@ -1174,7 +1192,7 @@ at the noise, gazes with head erect upon the rows
 of seats in the amphitheatre and hears with amazement
 the murmuring of the crowd.
 </p>
-         <p>Then one more daring than the rest drew his
+               <p>Then one more daring than the rest drew his
 sword and leapt forward from the crowd and with
 fierce words and flashing eye rushed upon Rufinus
 crying: <q direct="unspecified">It is the hand of Stilicho whom thou
@@ -1183,10 +1201,10 @@ his sword, which thou thoughtest far away, that
 pierces thy heart.</q> So spake he and transfixed
 Rufinus' side with a well-deserved thrust.
 </p>
-         <p>Happy the hand that first spilt such vile blood
+               <p>Happy the hand that first spilt such vile blood
 and poured out vengeance for a world made weary.
 </p>
-         <p>Straightway all pierce him with their spears and
+               <p>Straightway all pierce him with their spears and
 tear quivering limb from limb; one single body
 warms all these weapons with its blood; shame
 to him whose sword returns unstained therewith.
@@ -1216,7 +1234,7 @@ have as her due his body. What shall be given
 the rest? Give but a limb apiece, there are not
 enough for the peoples he has ruined.
 </p>
-         <p>The citizens leave the town and hasten exulting
+               <p>The citizens leave the town and hasten exulting
 to the spot from every quarter, old men and girls
 among them whom nor age nor sex could keep at
 home. Widows whose husbands he had killed,
@@ -1229,16 +1247,16 @@ from the summit of the spear that transfixed it as it
 <pb id="v.1.p.91"/>
 was carried back in merited splendour to the city.
 </p>
-         <p>Nay his hand too, made over to their mockery, goes
+               <p>Nay his hand too, made over to their mockery, goes
 a-begging for alms, and with its awful gains pays
 the penalty for his greedy soul, while forced, in
 mimicry of its living clutch, to draw up the fingers
 by their sinews.
 </p>
-         <p>Put not now your trust in prosperity; learn that
+               <p>Put not now your trust in prosperity; learn that
 the gods are inconstant and heaven untrustworthy.
 </p>
-         <p>That hand which sought to wield a sceptre, which a
+               <p>That hand which sought to wield a sceptre, which a
 humbled nobility stooped so often to kiss, now torn
 from its wretched trunk and left long unburied
 begs after death a baneful alms. Let him gaze
@@ -1247,17 +1265,17 @@ see trodden under foot at the cross-roads
 him who built pyramids for himself and a tomb,
 large as a temple, to the glory of his own ghost.
 </p>
-         <p>He who trusted to be clothed in Tyrian purple is
+               <p>He who trusted to be clothed in Tyrian purple is
 now a naked corpse and food for birds. See, he
 who owns the world lies denied six foot of earth,
 half covered with a sprinkling of dust, given no
 grave yet given so many.
 </p>
-         <p>Heaven knew of his death and earth is freed of
+               <p>Heaven knew of his death and earth is freed of
 her hated burden, now that the stars can breathe
 again. His shade oppresses the rivers of Hell.
 </p>
-         <p>Old Aeacus shudders and Cerberus bays to stop,
+               <p>Old Aeacus shudders and Cerberus bays to stop,
 in this case, the entry of a ghost. Then those shades
 which he had sent to death beneath his cruel laws
 flock round him and hale him away with horrid
@@ -1271,7 +1289,7 @@ of their little rock, and seek to defend the
 crevices of their home, their beloved pumice-stone
 cave, swarming over the honeycombs therein.
 </p>
-         <p>There is a place where the unhallowed rivers of
+               <p>There is a place where the unhallowed rivers of
 Cocytus and Phlegethon mingle their dread streams
 of tears and fire. Between the rivers yet nearer to
 that of Phlegethon there juts a tower stiff with
@@ -1346,10 +1364,10 @@ Tartarus and Chaos' own realm, where He the
 foundations of thickest midnight; deep hidden there
 let him live while ever the vault of heaven carries
 round the stars and the winds beat upon the land.</q>
-            <pb id="v.1.p.99"/>
-         </p>
-                                 </div2>
-                        </div1>
+                  <pb id="v.1.p.99"/>
+               </p>
+            </div2>
+         </div1>
       </body>
    </text>
 </TEI.2>

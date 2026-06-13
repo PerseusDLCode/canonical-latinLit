@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0119.phi015" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0119">
             <ti:title xml:lang="lat">Poenulus</ti:title>
             <ti:translation xml:lang="eng" urn="urn:cts:latinLit:phi0119.phi015.perseus-eng2" workUrn="urn:cts:latinLit:phi0119.phi015">
@@ -8,4 +9,4 @@
               <ti:label xml:lang="lat">Poenulus</ti:label>
             <ti:description xml:lang="mul">Plautus. Plauti Comoediae, Volume 2. Leo, Friedrich, editor. Berlin: Weidmann, 1896.</ti:description>
           </ti:edition>
-          </ti:work>
+          <ti:genre confidence="high">drama-line</ti:genre></ti:work>

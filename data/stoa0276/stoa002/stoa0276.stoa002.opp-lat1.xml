@@ -1,76 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Ad Uxorem</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Ad Uxorem</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-            </imprint>
-            <biblScope unit="volume">1</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=699%3Bownerid=13510798896211526-723">HathiTrust</ref>          
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-   <encodingDesc>
-     <refsDecl n="CTS">
-       <cRefPattern n="chapter"
-         matchPattern="(\w+).(\w+)"
-         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-         <p>This pointer pattern extracts Book and Chapter</p>
-       </cRefPattern>
-       <cRefPattern n="book"
-         matchPattern="(\w+)"
-         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-         <p>This pointer pattern extracts Book</p>
-       </cRefPattern>
-     </refsDecl>
-     <refsDecl>
-       <refState unit="book" delim="."/>
-       <refState unit="chapter" delim="."/>
-     </refsDecl>
-     
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text>
-<body>
-<div type="edition" n="urn:cts:latinLit:stoa0276.stoa002.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.669"/>
-<div type="textpart" subtype="book" n="1">
-<head>AD UXOREM LIBER PRIMVS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Dignum duxi, dilectissima mihi in domino conserva, quid 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0276.stoa002.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                  </imprint>
+                  <biblScope unit="volume">1</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=699%3Bownerid=13510798896211526-723">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="book" delim="."/>
+            <refState unit="chapter" delim="."/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-book-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0276.stoa002.opp-lat1">
+         <pb xml:id="v.1.p.669"/>
+         <div n="1" type="book">
+            <head>AD UXOREM LIBER PRIMVS.</head>
+            <div n="1" type="chapter">
+               <p>Dignum duxi, dilectissima mihi in domino conserva, quid 
 tibi sectandum sit post discessum de saeculo meum, si prior te
 fuero vocatus, iam hine providere, ut provisum observes, mandare
 fidei tuae. Nam saecularibus satis agentes sumus, et utrique nostrum
@@ -98,12 +91,10 @@ viduitatis. Nihil tunc inter nos dedecoris voluptuosi resumetur.
 Non enim tam frivola, tam spurca deus suis pollicetur. Sed
 an tibi vel cuicumque alii feminae ad deum pertinenti proficiet
 quod suademus licet pertractare.</p>
-<pb xml:id="v.1.p.671"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Non quidem abnuimus coniunctionem viri et feminae benedictam 
+               <pb xml:id="v.1.p.671"/>
+            </div>
+            <div n="2" type="chapter">
+               <p>Non quidem abnuimus coniunctionem viri et feminae benedictam 
 dictam a deo ut seminarium generis humani, et replendo orbi et
 instruendo saeculo excogitatam atque exinde permissam, unam tamen.
 Nam et Adam unus Evae maritus, et Eva una uxor illius,
@@ -119,10 +110,9 @@ licentiam tunc passivam materiae subsequentium emendationum
 praeministrabantur, quas dominus evangelio suo, dehinc apostolus
 in extremitatibus saeculi aut excidit redundantes aut composuit
 inconditas.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Sed non ideo praemiserim de libertate vetustatis et posteritatis 
+            </div>
+            <div n="3" type="chapter">
+               <p>Sed non ideo praemiserim de libertate vetustatis et posteritatis 
 castigatione, ut praestruam Christum separandis matrimoniis, abolendis
 coniunctionibus advenisse, quasi iam hinc finem nubendi
 praescribam. Viderint qui inter cetera perversitatum suarum
@@ -166,10 +156,9 @@ et spiritu sancta sit: nupta vero sollicita est quomodo coniugi
 suo placeat. Ceterum nusquam ita nuptias permittit, ut non potius
 ad suum exemplum nos eniti malit. Felicem illum, qui Pauli
 similis extiterit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Sed carnem legimus infirmam, et hinc nobis adulamur in 
+            </div>
+            <div n="4" type="chapter">
+               <p>Sed carnem legimus infirmam, et hinc nobis adulamur in 
 quibusdam. Legimus tamen et spiritum firmum. Nam in uno
 <pb xml:id="v.1.p.674"/>
 
@@ -216,12 +205,10 @@ te, nihil tibi opus esse, si domino appareas, immo omnia habere,
 si habeas dominum, cuius omnia. Caelestia recogita, et terrena
 despicies. Nihil viduitati apud deum subsignatae necessarium est
 quam perseverare.</p>
-<pb xml:id="v.1.p.676"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Adiciunt quidem sibi homines causas nuptiarum de sollicitudine
+               <pb xml:id="v.1.p.676"/>
+            </div>
+            <div n="5" type="chapter">
+               <p> Adiciunt quidem sibi homines causas nuptiarum de sollicitudine
 posteritatis et liberorum amarissima voluptate. Nobis otiosum
 est. Nam quid gestiamus liberos gerere, quos cum habemus,
 praemittere optamus, respectu scilicet imminentium angustiarum,
@@ -253,10 +240,9 @@ finibus saeculi habebatur. Quid ergo fiet, si quae olim detestabilia
 sunt penes deum, ab iis nos nunc arceat? Tempus, inquit, in <bibl n="I Cor. VII, 29."/>
 collecto est. Superest ut qui matrimonia habent tamquam non
 habentes agant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Quod si hi qui habent obliterare debent quod habent, quanto 
+            </div>
+            <div n="6" type="chapter">
+               <p>Quod si hi qui habent obliterare debent quod habent, quanto 
 magis non habentes prohibentur repetere quod non habent, ut cuius
 maritus de rebus abiit, exinde requiem sexui suo nubendi abstinentia
 iniungat, quam pleraeque gentilium feminarum memoriae
@@ -288,10 +274,9 @@ suorum, quasi ex aequo. Continent etiam gehennae sacerdotes.
 Nam invenit quomodo homines etiam in bonis sectationibus
 perderet, et nihil apud eum refert alios luxuria, alios continentia
 occidere.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Nobis continentia ad instrumentum aeternitatis demonstrata 
+            </div>
+            <div n="7" type="chapter">
+               <p>Nobis continentia ad instrumentum aeternitatis demonstrata 
 est a domino salutis, ad testimonium fidei, ad commendationem
 carnis istius exhibendae superventuro indumento incorruptibilitatis,
 ad sustinendam novissime voluntatem dei. Super haec enim recogites,
@@ -320,12 +305,10 @@ Pontificem Maximum, rursus nubere nefas est. Quantum
 deo sanctitas placet, cum illam etiam inimicus affectat? non
 utique ut alicuius boni affinis, sed ut dei domini placita cum
 contumelia affectans.</p>
-<pb xml:id="v.1.p.681"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Nam de viduitatis honoribus apud deum uno dicto eius per 
+               <pb xml:id="v.1.p.681"/>
+            </div>
+            <div n="8" type="chapter">
+               <p>Nam de viduitatis honoribus apud deum uno dicto eius per 
 prophetam expeditum est: Iuste facito viduae et pupillo, et venite <bibl n="Ies. I, 17. 18."/>
 nite disputemus, dicit dominus. Duo ista nomina, in quantum
 destituta auxilio humano, in tantum divinae misericordiae exposita,
@@ -356,14 +339,14 @@ aemulationem libidinis convehunt. Nulla huiusmodi feminarum de
 venter est, ita et quae ventri propinqua. Haec tibi iam hinc commendo,
 conserva carissima, post apostolum quidem ex abundanti
 pertractata, sed tibi etiam solatio futura, quod meam memoriam,
-si ita evenerit, in illis frequentabis.</p></div></div>
-
-<pb xml:id="v.1.p.683"/>
-
-<div type="textpart" subtype="book" n="2">
-<head>LIBER SECVNDVS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Proxime tibi, dilectissima in domino conserva, quid feminae 
+si ita evenerit, in illis frequentabis.</p>
+            </div>
+         </div>
+         <pb xml:id="v.1.p.683"/>
+         <div n="2" type="book">
+            <head>LIBER SECVNDVS.</head>
+            <div n="1" type="chapter">
+               <p>Proxime tibi, dilectissima in domino conserva, quid feminae 
 sanctae matrimonio quacumque sorte adempto sectandum sit, ut
 potui prosecutus sum. Nunc ad secunda consilia convertamur,
 respectu humanae infirmitatis, quarundam exemplis admonentibus,
@@ -394,10 +377,9 @@ impune quis neglegat quam iussum, quod illud de consilio veniat
 et voluntati proponatur, hoc autem de potestate descendat et
 necessitati obligetur, illic libertas, hic contumacia delinquere
 videatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Igitur cum quaedam istis diebus nuptias suas de ecclesia tolleret
+            </div>
+            <div n="2" type="chapter">
+               <p> Igitur cum quaedam istis diebus nuptias suas de ecclesia tolleret
 ac gentili coniungeretur, idque ab aliis retro factum re-
 
 <pb xml:id="v.1.p.685"/>
@@ -471,10 +453,9 @@ non sunt deprehensi. Dei autem gratia illud sanctificat quod invenit.
 Ita quod sanctificari non potuit, immundum est: quod
 immundum est, cum sancto non habet partem, nisi ut de suo inquinet
 et occidat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Haec si ita sunt, fideles gentilium matrimonia subeuntes stupri 
+            </div>
+            <div n="3" type="chapter">
+               <p>Haec si ita sunt, fideles gentilium matrimonia subeuntes stupri 
 reos constat esse et arcendos ab omni communicatione fraternitatis,
 ex litteris apostoli dicentis cum eiusmodi ne cibum quidem <note n="I Cor. V, II."/>
 sumendum. Aut numquid tabulas nuptiales de illo apud tribunal
@@ -504,10 +485,9 @@ exstructionem, munditias saeculares, blanditias turpiores,
 ipsa etiam matrimonii secreta maculosa, non ut penes sanctos
 officia sexus cum honore ipsius necessitatis, tanquam sub oculis
 dei modeste et moderate transigantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Sed viderit, qualiter viro officia pendat. Domino certe non
+            </div>
+            <div n="4" type="chapter">
+               <p> Sed viderit, qualiter viro officia pendat. Domino certe non
 potest pro disciplina satisfacere, habens in latere diaboli servum,
 procuratorem domini sui ad impedienda fidelium studia et officia,
 ut, si statio facienda est, maritus de die condicat ad balneas,
@@ -528,10 +508,9 @@ fratrum ad osculum convenire? aquam sanctorum pedibus offerre?
 de cibo, de poculo invadere, desiderare, in mente habere? Si
 pereger frater adveniat, quod in aliena domo hospitium? si cui
 largiendum erit, horreum, proma praeclusa sunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Sed aliquis sustinet nostra nec obstrepit. Hoc est igitur delictum, 
+            </div>
+            <div n="5" type="chapter">
+               <p>Sed aliquis sustinet nostra nec obstrepit. Hoc est igitur delictum, 
 quod gentiles nostra noverunt, quod sub conscientia iniustorum
 sumus, quod beneficium eorum est, si quid operamur.
 Non potest nescire qui sustinet, aut si celatur quia non sustinet,
@@ -564,10 +543,9 @@ quarum dotes obiectione nominis mercedem silentii faciant, scilicet
 apud arbitrum speculatorem litigaturi. Quod pleraeque non
 providentes aut re excruciata aut fide perdita recognoscere
 consueverunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Moratur dei ancilla cum laboribus alienis, et inter illos om- 
+            </div>
+            <div n="6" type="chapter">
+               <p>Moratur dei ancilla cum laboribus alienis, et inter illos om- 
 
 <pb xml:id="v.1.p.692"/>
 
@@ -586,10 +564,9 @@ Ubi fomenta fidei de scripturarum interiectione? Ubi
 spiritus? Ubi refrigerium? Ubi divina benedictio? Omnia extranea,
 omnia inimica, omnia damnata, atterendae saluti a
 malo immissa.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Haec si illis quoque evenire possunt quae in matrimonio
+            </div>
+            <div n="7" type="chapter">
+               <p> Haec si illis quoque evenire possunt quae in matrimonio
 gentili fidem adeptae morantur, tamen excusantur, ut in ipsis
 deprehensae a deo, et iubentur perseverare et sanctificantur et
 
@@ -617,10 +594,9 @@ exhorreant ut exterminent, ut abrapiant, ut a fide excludant.
 Habes causam, qua non dubites nullum huiusmodi matrimonium
 prospere decurri, dum a malo conciliatur, a domino vero
 damnatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Ad. hoc quaeramus, an iure, quasi revera dispectores divinarum
+            </div>
+            <div n="8" type="chapter">
+               <p> Ad. hoc quaeramus, an iure, quasi revera dispectores divinarum
 sententiarum. Nonne etiam penes nationes severissimi
 quique domini et disciplinae tenacissimi servis suis foras nubere
 interdicunt? scilicet ne in lasciviam excedant, officia deserant,
@@ -653,9 +629,7 @@ quibus nullum impedimentum libertatis suae timeant. Christianam
 fidelem fideli re minori nubere piget, Iocupletatiorem futuram
 
 <pb xml:id="v.1.p.696"/>
-
-
-<note n="Matth. V, 3."/> in viro paupere? Nam si pauperum sunt regna caelorum, divitium
+                  <note n="Matth. V, 3."/> in viro paupere? Nam si pauperum sunt regna caelorum, divitium
 non sunt, plus dives in paupere inveniet. Maiore dote dotabitur
 de bonis eius qui in deo dives est. Sit illa ex aequo in
 terris, quae in caelis forsitan non erit. Dubitandum et inquirendum
@@ -687,17 +661,11 @@ sunt quae apostoli vox illa sub brevitate intellegenda nobis relinquit.
 Haec tibi suggere, si opus fuerit. His te ab exemplis
 quarundam reflecte. Non licet aliter fidelibus nubere, non expedit.
 </p>
- </div></div>
-
-
-<pb xml:id="v.1.p.698"/>
-
-<pb xml:id="v.1.p.699"/>
-
-<pb xml:id="v.1.p.700"/>
-</div>
-</body>
-</text>
-
-  
+            </div>
+         </div>
+         <pb xml:id="v.1.p.698"/>
+         <pb xml:id="v.1.p.699"/>
+         <pb xml:id="v.1.p.700"/>
+      </body>
+   </text>
 </TEI>

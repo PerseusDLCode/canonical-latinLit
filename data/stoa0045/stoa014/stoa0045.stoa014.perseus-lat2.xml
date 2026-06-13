@@ -1,86 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-    schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="lat">Ausonii Burdigalensis Vasatis Gratiarum Actio Ad Grati Angratianum
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Ausonii Burdigalensis Vasatis Gratiarum Actio Ad Grati Angratianum
                     Imperatorem Pro Consulatu</title>
-                <author>Ausonius, Decimus Magnus</author>
-                <editor>Hugh G. Evelyn-White</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>Rashmi Singhal</name>
-                </respStmt>
-                <funder n="org:Mellon">The Mellon Foundation</funder>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">2011-07-09</date>
-            </publicationStmt>
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <title>Ausonius</title>
-                        <author>Ausonius, Decimus Magnus</author>
-                        <editor>Hugh G. Evelyn-White</editor>
-                        <imprint>
-                            <publisher>William Heinemann Ltd.; Harvard University Press</publisher>
-                            <pubPlace>London; Cambridge, Massachusetts</pubPlace>
-                            <date>1921</date>
-                        </imprint>
-                        <biblScope unit="volume">2</biblScope>
-                    </monogr>
-                    <series>
-                        <title>Loeb Classical Library</title>
-                    </series>
-                    <ref target="https://archive.org/stream/ausonius02evelgoog#page/n80/mode/2up">Internet Archive</ref>                    
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-
-        <encodingDesc>
-            <refsDecl n="CTS">
-                <cRefPattern n="section"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <p>This pointer pattern extracts section</p>
-                </cRefPattern>
-            </refsDecl>
-            <refsDecl n="TEI.2">
-                <refState unit="card"/>
-            </refsDecl>
-        </encodingDesc>
-
-        <profileDesc>
-            <langUsage>
-                <language ident="lat">Latin</language>
-                <language ident="grc">Greek</language>
-            </langUsage>
-        </profileDesc>
+            <author>Ausonius, Decimus Magnus</author>
+            <editor>Hugh G. Evelyn-White</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-07-09</date>
+            <idno type="CTS">urn:cts:latinLit:stoa0045.stoa014.perseus-lat2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Ausonius</title>
+                  <author>Ausonius, Decimus Magnus</author>
+                  <editor>Hugh G. Evelyn-White</editor>
+                  <imprint>
+                     <publisher>William Heinemann Ltd.; Harvard University Press</publisher>
+                     <pubPlace>London; Cambridge, Massachusetts</pubPlace>
+                     <date>1921</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <series>
+                  <title>Loeb Classical Library</title>
+               </series>
+               <ref target="https://archive.org/stream/ausonius02evelgoog#page/n80/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="TEI.2">
+            <refState unit="card"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-section"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
       <revisionDesc>
          <change when="2015-12-07" who="Thibault Clérice">Epidoc and CTS. URN updated accordingly</change>
       </revisionDesc>
    </teiHeader>
-
-    <text>
-        <body>
-            <div n="urn:cts:latinLit:stoa0045.stoa014.perseus-lat2"
-              xml:lang="lat"
-              type="edition">
-
-
-                <div type="textpart" n="1" subtype="section">
-                    <p>Ago tibi gratias, imperator Augusto; si possem, etiam referrem. sed neque tua
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0045.stoa014.perseus-lat2">
+         <div n="1" type="section">
+            <p>Ago tibi gratias, imperator Augusto; si possem, etiam referrem. sed neque tua
                         fortuna desiderat remunerandi vicem neque nostra suggerit restituendi
                         facultatem, privatorum ista copia est inter se esse munificos: tua beneficia
                         ut maiestate praecedunt, ita mutuum non reposcunt. quod solum igitur nostrae
@@ -110,10 +101,9 @@
                         quaeque animi nostri celeritas divinum instar adfectat, beneficiis
                         praceuntibus anteceditur. praestare tibi est, quam nobis optare, velocius.
                     </p>
-                </div>
-
-                <div type="textpart" n="2" subtype="section">
-                    <p>Ago igitur gratias, optime imperator, ac si quis hunc sermonem meum isdem
+         </div>
+         <div n="2" type="section">
+            <p>Ago igitur gratias, optime imperator, ac si quis hunc sermonem meum isdem
                         verbis tam saepe repetitum inopiae loquentis adsignat, experiatur hoc idem
                         persequi, et nihil poterit proferre facundius. aguntur enim gratiae non
                         propter maiestatis ambitum nec sine argumentis imperatori fortissimo: testis
@@ -138,10 +128,9 @@
                         patre principibus quaestura communis et tui tantum praefectura beneficii,
                         quae et ipsa non vult vice simplici gratulari, liberalius divisa quam
                         iuncta: cum teneamus duo integrum, neuter desiderat separatum. </p>
-                </div>
-
-                <div type="textpart" n="3" subtype="section">
-                    <p>Sed illa, ut paulo ante promisi, habebunt sui numeris peculiare secretum,
+         </div>
+         <div n="3" type="section">
+            <p>Sed illa, ut paulo ante promisi, habebunt sui numeris peculiare secretum,
                         consulatus hic meus <pb n="v.1.p.226"/> orat atque obsecrat, ut obnoxiam
                         tibi uni sinas fieri eius dignitatem, quem omnibus praetulisti. quot quidem
                         et ipse sibi invenit gradus! eum clarissimo viro collega meo honore
@@ -162,10 +151,9 @@
                         nec possum continentiam iactare: non habui. unum praestare temptavi, et hoc
                         ipsum quasi meum vindicare non possum: in tua enim positum est opinione, si
                         merui. </p>
-                </div>
-
-                <div type="textpart" n="4" subtype="section">
-                    <p>Fecisti autem et facies alios quoque consules, piissime Gratiane, sed non et
+         </div>
+         <div n="4" type="section">
+            <p>Fecisti autem et facies alios quoque consules, piissime Gratiane, sed non et
                         causa pari. viros gloriae militaris: habent enim tecum, ut .semper laboris,
                         ita dignitatis plerumque consortium, virtutis quam honoris antiquiore
                         collegio; viros nobilitatis antiquae: dantur enim multa nominibus et est
@@ -190,10 +178,9 @@
                         humani generis rector hoc tribuat, ut praelatus antiquis, quos etiam
                         elegantia sententiae istius antecessisti, vineas propria singulorum: in
                         Menelao regiam dignationem, in Ulixe prudentiam, in Nestore senectutem. </p>
-                </div>
-
-                <div type="textpart" n="5" subtype="section">
-                    <p>Subiciet aliquis: ista quidem adeptus es, sed effare, quo merito? quid me
+         </div>
+         <div n="5" type="section">
+            <p>Subiciet aliquis: ista quidem adeptus es, sed effare, quo merito? quid me
                         oneras, sciscitator? rationem felicitatis nemo reddit, deus et qui deo
                         proximus tacito munera dispertit arbitrio et beneficiorum suorum indignatus
                         per homines stare iudicium. <pb n="v.1.p.232"/> mavult de subditis dedisse
@@ -213,10 +200,9 @@
                         iam aetate succinctum per omnes honorum gradus festinata bonitate
                         proveheres; timere ut videreris, ne in me vita deficeret, dum tibi adhuc
                         aliquid, quod deberes praestare, superesset. </p>
-                </div>
-
-                <div type="textpart" n="6" subtype="section">
-                    <p>Negat Cicero consularis ultra se habere, quod <pb n="v.1.p.234"/> cupiat, ego
+         </div>
+         <div n="6" type="section">
+            <p>Negat Cicero consularis ultra se habere, quod <pb n="v.1.p.234"/> cupiat, ego
                         autem iam consul et senex adhuc aviditatem meam fatebor, te videre saepius
                         in hoc magistratu, Gratiane, desidero, ut et sex Val. Corvini et septem C.
                         Marii et cognominis tui Augusti tredecim consulatus unus aequiperes. plures
@@ -236,10 +222,9 @@
                         intellexero omnes, sic nubis ordinem ipse fecisti, <pb n="v.1.p.236"/> sic
                         amicus deo es, ut a te iam impetratum sit, quod optatur, a quo et quod
                         nondum optamus, adipiscimur. </p>
-                </div>
-
-                <div type="textpart" n="7" subtype="section">
-                    <p>Et rursum aliquis adiciet aut sermone libere aut cogitatione liberius: nonne
+         </div>
+         <div n="7" type="section">
+            <p>Et rursum aliquis adiciet aut sermone libere aut cogitatione liberius: nonne
                         olim et apud veteres multi eiusdem modi doctores fuerunt? an tu solus
                         praeceptor Augusti? immo ego cum multis coniunctus officio, sed cum
                         paucissimis secretus exemplo, nolo Constantini temporum taxare collegas:
@@ -264,11 +249,10 @@
                         unus in ore omnium Gratianus, potestate imperator, virtute victor, Augustus
                         sanctitate, pontifex religione, indulgentia pater, aetate filius, pietate
                         utrumque. </p>
-                </div>
-
-                <div type="textpart" n="8" subtype="section">
-                    <p>
-                        <q>Non possum fidei causa ostendere imagines maiorum meorum,</q> ut ait apud
+         </div>
+         <div n="8" type="section">
+            <p>
+               <q>Non possum fidei causa ostendere imagines maiorum meorum,</q> ut ait apud
                         Sallustium Marius, nec deductum ab heroibus genus vel deorum stemma
                         replicare, nec ignotas opes et patrimonia sparsa sub regnis: sed ea, quae
                         nota sunt, dicere potius, quam praedicare: patriam non obscuram, familiam
@@ -294,10 +278,9 @@
                         omnium Galliarum, quarum praefecto hanc honorificentiam detulisti. ultra
                         progredior, et hoc quia debere te dicis: agat, quae optime agere potest, vox
                         ista, quam docui. </p>
-                </div>
-
-                <div type="textpart" n="9" subtype="section">
-                    <p>Iamdudum autem quam grati animi, tam sermonis exigui, ut supra dictum est,
+         </div>
+         <div n="9" type="section">
+            <p>Iamdudum autem quam grati animi, tam sermonis exigui, ut supra dictum est,
                         succumbo materiae, neque adhuc illa perstrinxi, quae ne infantissimus
                         quidem, nisi idem impiissimus, eminentia per famam et omnium gaudiis testata
                         supprimeret; quae supra vires dicendi meas posita cunctor attingere, aut
@@ -319,10 +302,9 @@
                         urbanarum tribuum praerogativae et centuriae iure vocatae. quae comitia
                         pleniora umquam fuerunt quam quibus praestitit deus consilium, imperator
                         obsequium? </p>
-                </div>
-
-                <div type="textpart" n="10" subtype="section">
-                    <p>Et nunc ego, piissime imperator, ne fastigium anditorii sacri, dictorum
+         </div>
+         <div n="10" type="section">
+            <p>Et nunc ego, piissime imperator, ne fastigium anditorii sacri, dictorum
                         tuorum timidus interpres, offendam, divinitatis tuae pro! levi cum piaculo
                         verba transcurro. cum de consulibus, inquis, in annum creandis: erudita vox
                         et cura sollemnis! mecum <pb n="v.1.p.246"/> volutarem: o profundi altitudo
@@ -340,10 +322,9 @@
                         matura cunctatio, has ego litteras tuas si in omnibus pilis atque
                         porticibus, unde de plano legi possint, instar edicti pendere mandavero,
                         nonne tot statuis honorabor, quot fuerint paginae libellorum? </p>
-                </div>
-
-                <div type="textpart" n="11" subtype="section">
-                    <p>Sed ad blandiora festino, ab hac enim litterarum ad me datarum parte
+         </div>
+         <div n="11" type="section">
+            <p>Sed ad blandiora festino, ab hac enim litterarum ad me datarum parte
                         digressus, eo quoque descendisti, ut quaereres, qualis ad me trabea
                         mitteretur, omne largitionum tuarum ministerium sollicitudine fatigasti. non
                         ergo supra consulatum mihi <pb n="v.1.p.248"/> est adhibita per te cura tam
@@ -361,10 +342,9 @@
                         ornatu, quae per te instructus intellego, geminum quippe in uno habitu
                         radiat nomen Augusti. Constantius in argumento vestis intexitur, Gratianus
                         in muneris honore sentitur. </p>
-                </div>
-
-                <div type="textpart" n="12" subtype="section">
-                    <p>Accessit tam inpenso beneficio tuo pondus quorundam sciscitatione cumulatum,
+         </div>
+         <div n="12" type="section">
+            <p>Accessit tam inpenso beneficio tuo pondus quorundam sciscitatione cumulatum,
                         interrogatus, quem priorem decerneres consulem, ner dubitandum <pb n="v.1.p.250"/> esse dixisti tu, et qui tecum boni sunt, dubitare non
                         poterant, sed tamen ad hoc dictum erexerant animos, qui libenter clarissimum
                         virum collegam meum, quem praesentem habebat occasio, praelatum
@@ -394,10 +374,9 @@
                         verecundia gravaretur posterior de duobus? est enim in hoc numero arduae
                         plena dignationis electio. eum universis mortalibus duo, qui fiant consules,
                         praeferuntur, qui alteri praeponitur, non uni, sed omnibus antefertur. </p>
-                </div>
-
-                <div type="textpart" n="13" subtype="section">
-                    <p>Expectare nunc aures praesentium scio et eminere in omnium vultu intellego,
+         </div>
+         <div n="13" type="section">
+            <p>Expectare nunc aures praesentium scio et eminere in omnium vultu intellego,
                         quod desiderio concipiatur animorum, existimant enim, cum ea. quae ad grates
                         agendas pertinebant, summatim et tenuiore filo, sicut dicitur, deducta
                         libaverim, aliqua me etiam de maiestatis tuae laudibus debere perstringere.
@@ -408,10 +387,9 @@
                         universi ut intellegant eorum, quae inter <add>familiaria</add> praedicanda
                         sunt, a me poscendam esse notitiam, ab aliis dignitatem, nec excellentia,
                         sed cotidiana tractabo. </p>
-                </div>
-
-                <div type="textpart" n="14" subtype="section">
-                    <p>Nullum tu umquam diem ab adnleseentia tua nisi adorato dei numine et reus
+         </div>
+         <div n="14" type="section">
+            <p>Nullum tu umquam diem ab adnleseentia tua nisi adorato dei numine et reus
                         voti et illico absolutus egisti, lautis manibus, mente pura, inmaculabili
                         conscientia et, quod in paucis est, cogitatione sincera. cuius autem umquam
                         egressus auspicatior fuit aut incessus modestior aut habitudo cohibitior aut
@@ -434,10 +412,9 @@
                         loquimur, consistorii, ut ego sentio, sacrari i tui, nullus umquam
                         superiorum aut dicenda pensius cogitavit aut consultis cogitata disposuit
                         aut disposita maturius expedivit. </p>
-                </div>
-
-                <div type="textpart" n="15" subtype="section">
-                    <p>Et aliqua de oratoriis virtutibus tuis dicerem, nisi vererer mihi
+         </div>
+         <div n="15" type="section">
+            <p>Et aliqua de oratoriis virtutibus tuis dicerem, nisi vererer mihi
                         gratificari. non enim Sulpicius acrior in contionibus nec maioris Gracchi
                         commendabilior modestia fuit nec patris tui gravior auctoritas, qui tenor
                         vocis, cum incitata pronuntias; quae inflexio, cum remissa; quae temperatio,
@@ -463,10 +440,9 @@
                         interpellantibus praebere aditus nec de occupatione causari: tu confirmas
                         adire cunetantes; et iam querimoniis explicatis, ne quid adhuc sileatur.
                         interrogas. </p>
-                </div>
-
-                <div type="textpart" n="16" subtype="section">
-                    <p>Celebre fuit Titi Caesaris dictum, perdidisse se diem, quo nihil boni
+         </div>
+         <div n="16" type="section">
+            <p>Celebre fuit Titi Caesaris dictum, perdidisse se diem, quo nihil boni
                         fecerat; sed celebre fuit, quia Vespasiani successor dixerat, cuius nimia
                         parsimonia et austeritas vix ferenda miram fecerat filii lenitatem, tu
                         Valentiniano genitus, cuius alta bonitas, praesens comitas, temperata
@@ -495,10 +471,9 @@
                         praecedere abundant in te ea bonitatis et virtutis exempla, quae sequi
                         cupiat ventura posteritas et, si rerum natura pateretur, adscribi sibi
                         voluisset antiquitas. </p>
-                </div>
-
-                <div type="textpart" n="17" subtype="section">
-                    <p>Necesse est tamen aliquid comparari, ut possit intellegi, bona nostra quo
+         </div>
+         <div n="17" type="section">
+            <p>Necesse est tamen aliquid comparari, ut possit intellegi, bona nostra quo
                         praestent. <pb n="v.1.p.264"/> Aegrotantes amicos Traianus visere solebat:
                         hactenus in eo comitas praedicanda est. tu et visere solitus et mederi
                         praebes ministros, instruis cibos, fomenta dispensas, sumptum adicis
@@ -547,8 +522,7 @@
                         consulem tuum et, quod adhuc cunctis meis nominibus anteponis. praeceptorem
                         tuum, quem pia voce declaraveras, iusta ratione praetuleras, liberali
                         largitate ditaveras, Augustae dignationis officiis consecrares.</p>
-                </div>
-            </div>
-        </body>
-    </text>
+         </div>
+      </body>
+   </text>
 </TEI>

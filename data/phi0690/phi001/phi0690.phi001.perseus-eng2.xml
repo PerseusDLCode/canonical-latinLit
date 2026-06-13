@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-    schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -11,14 +8,14 @@
             <author>P. Vergilius Maro</author>
             <editor role="translator">James Rhoades</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
-         	<principal>Gregory Crane</principal>
-         	<respStmt>
-         		<resp>Prepared under the supervision of</resp>
-         	   <name>Bridget Almas</name>
-         		<name>Lisa Cerrato</name>
-         		<name>William Merrill</name>
-         		<name>David Smith</name>
-         	</respStmt>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
             <respStmt>
                <persName>Zehava Robbins</persName>
                <orgName>Tufts University</orgName>
@@ -27,12 +24,13 @@
             <funder n="org:NEH">The National Endowment for the Humanities</funder>
          </titleStmt>
          <extent/>
-      	<publicationStmt>
-      		<publisher>Trustees of Tufts University</publisher>
-      		<pubPlace>Medford, MA</pubPlace>
-      		<authority>Perseus Project</authority>
-      	   <date type="release">1997-10-28</date>
-      	</publicationStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0690.phi001.perseus-eng2</idno>
+         </publicationStmt>
          <sourceDesc>
             <biblStruct>
                <monogr>
@@ -40,8 +38,8 @@
                   <title>The Poems of Vergil</title>
                   <editor role="translator">James Rhoades</editor>
                   <imprint>
-	                    <pubPlace>London</pubPlace>
-	                    <publisher>Oxford University Press</publisher>
+                     <pubPlace>London</pubPlace>
+                     <publisher>Oxford University Press</publisher>
                      <date>1921</date>
                   </imprint>
                </monogr>
@@ -49,51 +47,49 @@
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-      	<refsDecl n="CTS">
-      		<cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
-      			<p>This pointer pattern extracts poem and line</p>
-      		</cRefPattern>
-      		<cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-      			<p>This pointer pattern extracts poem</p>
-      		</cRefPattern>
-      	</refsDecl>
          <refsDecl n="TEI">
             <refState unit="poem"/>
             <refState unit="line"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n">
+                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
-
       <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#verse-poem-line"/>
+         </textClass>
          <langUsage>
             <language ident="eng">English</language>
          </langUsage>
       </profileDesc>
-
       <revisionDesc>
          <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
-      	<change when="2010-07-01" who="student">fixed place tags - zr</change>
-      	<change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
-      	<change when="2006-02-10" who="packel">places/dates now actually tagged</change>
-      	<change when="2005-08-01" who="packel">removed stray item tags</change>
-      	<change when="2005-07-25" who="packel">Converted to XML</change>
-      	<change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
-      	<change when="2003-02-05" who="amahoney">don't EVER put angle brackets in comments: it fouls up the whole file</change>
-      	<change when="2003-02-04" who="gcrane">systematic error—we have lots of places where closing L tags were missing a bracket</change>
-      	<change when="2000-12-04" who="amahoney">fix misspelling of title</change>
-      	<change when="2000-03-06" who="amahoney">remove headers so poem numbers get into short toc</change>
-      	<change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-      	<change when="1999-08-12" who="dasmith">Changed line tags to handle verse translation.</change>
-      	<change when="1999-08-04" who="textgod">Changed header.</change>
-      	<change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
-      	<change when="1997-03-01" who="KW">converted mdashes, quotes; added speaker, LG, div2 tags, designated capital letters at line beginnings to keep with an *.</change>
+         <change when="2010-07-01" who="student">fixed place tags - zr</change>
+         <change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
+         <change when="2006-02-10" who="packel">places/dates now actually tagged</change>
+         <change when="2005-08-01" who="packel">removed stray item tags</change>
+         <change when="2005-07-25" who="packel">Converted to XML</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2003-02-05" who="amahoney">don't EVER put angle brackets in comments: it fouls up the whole file</change>
+         <change when="2003-02-04" who="gcrane">systematic error—we have lots of places where closing L tags were missing a bracket</change>
+         <change when="2000-12-04" who="amahoney">fix misspelling of title</change>
+         <change when="2000-03-06" who="amahoney">remove headers so poem numbers get into short toc</change>
+         <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+         <change when="1999-08-12" who="dasmith">Changed line tags to handle verse translation.</change>
+         <change when="1999-08-04" who="textgod">Changed header.</change>
+         <change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
+         <change when="1997-03-01" who="KW">converted mdashes, quotes; added speaker, LG, div2 tags, designated capital letters at line beginnings to keep with an *.</change>
       </revisionDesc>
    </teiHeader>
    <text>
-      <body>
-         <div type="translation" xml:lang="eng" n="urn:cts:latinLit:phi0690.phi001.perseus-eng2">
-         <div type="textpart" subtype="poem" n="1">
+      <body xml:base="urn:cts:latinLit:phi0690.phi001.perseus-eng2">
+         <div n="1" type="poem">
             <head>MELIBOEUS TITYRUS</head>
             <sp>
                <speaker>MELIBOEUS</speaker>
@@ -233,7 +229,7 @@
                <l n="101">and from the hills the shadows lengthening fall!</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="2">
+         <div n="2" type="poem">
             <head>ALEXIS</head>
             <l n="1">the shepherd Corydon with love was fired</l>
             <l n="2">for fair Alexis, his own master's joy:</l>
@@ -325,7 +321,7 @@
             <l n="88">of pliant rush or osier? Scorned by this,</l>
             <l n="89">elsewhere some new Alexis you will find.”</l>
          </div>
-         <div type="textpart" subtype="poem" n="3">
+         <div n="3" type="poem">
             <head>MENALCAS   DAMOETAS   PALAEMON</head>
             <sp>
                <speaker>MENALCAS</speaker>
@@ -595,7 +591,7 @@
                <l n="147">the sluices, for the fields have drunk their fill.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="4">
+         <div n="4" type="poem">
             <head>POLLIO</head>
             <lg type="stanza">
                <l n="1">muses of <placeName key="tgn,7003122">Sicily</placeName>, essay we now</l>
@@ -683,7 +679,7 @@
                </lg>
             </lg>
          </div>
-         <div type="textpart" subtype="poem" n="5">
+         <div n="5" type="poem">
             <head>MENALCAS   MOPSUS</head>
             <sp>
                <speaker>MENALCAS</speaker>
@@ -844,7 +840,7 @@
                <l n="116">and equal knots, Menalcas, fashioned fair!</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="6">
+         <div n="6" type="poem">
             <head>TO VARUS</head>
             <l n="1">first my Thalia stooped in sportive mood</l>
             <l n="2">to Syracusan strains, nor blushed within</l>
@@ -958,7 +954,7 @@
                <l n="109">their tale of sheep, and pen them in the fold.</l>
             </lg>
          </div>
-         <div type="textpart" subtype="poem" n="7">
+         <div n="7" type="poem">
             <head>MELIBOEUS   CORYDON   THYRSIS</head>
             <l n="1">daphnis beneath a rustling ilex-tree</l>
             <l n="2">had sat him down; Thyrsis and Corydon</l>
@@ -1090,7 +1086,7 @@
                <l n="90">is Corydon still Corydon with us.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="8">
+         <div n="8" type="poem">
             <head>TO POLLIO.   DAMON   ALPHESIBOEUS</head>
             <l n="1">of Damon and Alphesiboeus now,</l>
             <l n="2">those shepherd-singers at whose rival strains</l>
@@ -1289,7 +1285,7 @@
                </lg>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="9">
+         <div n="9" type="poem">
             <head>LYCIDAS   MOERIS</head>
             <sp>
                <speaker>LYCIDAS</speaker>
@@ -1417,7 +1413,7 @@
                <l n="86">we shall sing better when himself is come.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="10">
+         <div n="10" type="poem">
             <head>GALLUS</head>
             <l n="1">This now, the very latest of my toils,</l>
             <l n="2">vouchsafe me, Arethusa! needs must I</l>
@@ -1519,7 +1515,6 @@
                <l n="97">eve's star is rising—go, my she-goats, go.</l>
             </lg>
          </div>
-      </div>
       </body>
    </text>
 </TEI>

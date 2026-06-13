@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>Respecting the Answers of the Soothsayers </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>Respecting the Answers of the Soothsayers </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi021.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,17 +159,17 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <front>
-            <pb n="68"/>
-            <head>THE SPEECH OF M. T. CICERO RESPECTING THE ANSWERS OF THE SOOTHSAYERS. ADDRESSED TO
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <front>
+         <pb n="68"/>
+         <head>THE SPEECH OF M. T. CICERO RESPECTING THE ANSWERS OF THE SOOTHSAYERS. ADDRESSED TO
                 THE SENATE.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>This speech was spoken towards the close of the year after the last speech, but
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>This speech was spoken towards the close of the year after the last speech, but
                     it follows it in nearly all editions, as it relates in some degree to the same
                     subject. In the early part of the summer many prodigies were reported to have
                     happened in the neighborhood of <placeName key="tgn,7013962">Rome</placeName>.
@@ -167,10 +182,16 @@ Added to repository.
                     gods, lest the Romans should bring evil on themselves and on their country by
                     continuing their disorderly conduct and dissensions. That therefore the evils
                     must be amended, or removed as far as possible, and supplications made to
-                            <persName><surname>Jupiter</surname></persName>,
-                            <persName><surname>Saturn</surname></persName>,
-                            <persName><surname>Neptune</surname></persName>, and the other gods. </p>
-                <p>After this answer had been received, Clodius, who was now aedile, called the
+                            <persName>
+                  <surname>Jupiter</surname>
+               </persName>,
+                            <persName>
+                  <surname>Saturn</surname>
+               </persName>,
+                            <persName>
+                  <surname>Neptune</surname>
+               </persName>, and the other gods. </p>
+            <p>After this answer had been received, Clodius, who was now aedile, called the
                     people together, and made them a speech to prove that the evils which had
                     especially offended the gods were the tyrannical conduct of Cicero, and the
                     restoration of his house, after it had been consecrated to the service of
@@ -181,12 +202,12 @@ Added to repository.
                     guilty, he exhorted all citizens of all classes to lay aside their mutual
                     animosities, as the only way of regaining the favour of the gods and their
                     former prosperity.</p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>Yesterday, O conscript fathers, when I was greatly moved by the thoughts of your
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi021.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>Yesterday, O conscript fathers, when I was greatly moved by the thoughts of your
                 dignity, and of the great attendance of the Roman knights to whom a senate was
                 given, I thought myself bound to check the shameless impudence of Publius Clodius,
                 when he was hindering the cause of the publicans from being proceeded with by the
@@ -196,11 +217,13 @@ Added to repository.
                 and exultation, the very moment that I gave him a hint of the danger of a public
                 trial; and by two half-uttered words I bridled all the violence and ferocity of that
                 gladiator. <milestone n="2" unit="section"/>
-            </p>
-            <p>But he, ignorant what sort of men the consuls were, pale and fuming with me burst on
+         </p>
+         <p>But he, ignorant what sort of men the consuls were, pale and fuming with me burst on
                 a sudden out of the senate house, with some broken and empty threats and with those
                 denunciations with which he used to terrify us in the time of
-                        <persName><surname>Piso</surname></persName> and Gabinius. And when I began
+                        <persName>
+               <surname>Piso</surname>
+            </persName> and Gabinius. And when I began
                 to press upon him, as he was departing, I received the greatest reward of my
                 exertions by all of you rising up at the same time with me, and by all the publicans
                 thronging round me to escort me. But that senseless man stopped on a sudden out of
@@ -210,15 +233,18 @@ Added to repository.
                     the former consul was Publius Cornelius Lentulus Spinther.</note> the consul, he
                 fell down almost on the threshold of the senate house from the recollection, I
                 imagine, of his dear friend Gabinius and from regret for
-                        <persName><surname>Piso</surname></persName>. And why need I speak at all of
+                        <persName>
+               <surname>Piso</surname>
+            </persName>. And why need I speak at all of
                 his unbridled and headlong fury? He cannot be wounded by me with more severe
                 language than he was on the instant being crushed and overwhelmed at the very moment
                 of his acting in that manner by Publius Servilius. And even if I were able to equal
                 the extraordinary and almost divine energy and dignity of that man, still I cannot
                 doubt that those weapons which out enemy hurled at him would appear less powerful
-                and less sharp than those which the colleague of his father aimed at him. <milestone
-                    n="2" unit="chapter"/><milestone n="3" unit="section"/></p>
-            <p>But still I wish to explain the principles of my conduct to those men who thought
+                and less sharp than those which the colleague of his father aimed at him. <milestone n="2" unit="chapter"/>
+            <milestone n="3" unit="section"/>
+         </p>
+         <p>But still I wish to explain the principles of my conduct to those men who thought
                 that I was carried away yesterday by my indignation, and that, out of passion, I
                 made a wider digression than the deliberate calmness of a philosopher allowed. I did
                 nothing in anger nothing from not being able to restrain my temper nothing which I
@@ -234,15 +260,15 @@ Added to repository.
                 neither able to defend the walls of our allies from chastisement, nor to inflict
                 chastisement on the cities of the enemy; but who bore along into all my houses and
                 lands, razing, and conflagration, and destruction, and depopulation, and
-                devastation, to the great enriching of themselves with my plunder. <milestone n="4"
-                    unit="section"/>
-            </p>
-            <p>Against these furies and firebrands, with these destructive monsters and pests, which
+                devastation, to the great enriching of themselves with my plunder. <milestone n="4" unit="section"/>
+         </p>
+         <p>Against these furies and firebrands, with these destructive monsters and pests, which
                 have been (I may almost say) desolating this empire, I do say that I have undertaken
                 inexpiable war; and yet, even that is not as great as my sufferings and those of my
                 relations require, though it may be enough to satisfy your indignation and that of
-                all virtuous men. <milestone n="3" unit="chapter"/></p>
-            <p>But my hatred towards Clodius is not greater this day than it was then, when I knew
+                all virtuous men. <milestone n="3" unit="chapter"/>
+         </p>
+         <p>But my hatred towards Clodius is not greater this day than it was then, when I knew
                 that he was scorched, as it were, by those most holy fires, and that he had escaped
                 in female attire from the house of the Pontifex Maximus, after attempting an act of
                 most atrocious licentiousness. Then, I say, then I perceived, and foresaw long
@@ -255,10 +281,8 @@ Added to repository.
                     <milestone n="5" unit="section"/> For he has not done anything against me out of
                 hatred to me, but out of hatred to strictness, out of hatred to dignity, out of
                 hatred to the republic. He has not insulted me more than he has the senate, or the
-                Roman knights, or all good men, or the whole of <placeName key="tgn,1000080"
-                    >Italy</placeName>. Lastly, he has not behaved more wickedly towards me than he
-                has towards the immortal gods. In truth, he has polluted those gods with his <pb
-                    n="71"/> impiety whom no one before ever did. Towards me his disposition has
+                Roman knights, or all good men, or the whole of <placeName key="tgn,1000080">Italy</placeName>. Lastly, he has not behaved more wickedly towards me than he
+                has towards the immortal gods. In truth, he has polluted those gods with his <pb n="71"/> impiety whom no one before ever did. Towards me his disposition has
                 been the same as that of his dear friend Catiline would have been, if he had been
                 victorious. Therefore, I never thought it necessary for me to prosecute him, any
                 more than that blockhead, whose very nation we should be ignorant of if he did not
@@ -267,13 +291,15 @@ Added to repository.
                 sense to know to what wickedness he has bound himself, would be, I doubt not, most
                 wretched; but if he is not aware of it there is some danger lest he may save himself
                 by the excuse of stupidity. </p>
-            <p><milestone n="6" unit="section"/> There is also this consideration which weighs with
+         <p>
+            <milestone n="6" unit="section"/> There is also this consideration which weighs with
                 me that, according to universal expectation, that man seems devoted and marked out
                 as the victim of that most gallant and most illustrious man Titus Annius; from whom
                 it would be a scandalous thing for me to snatch the credit which is destined for,
                 and already openly promised to him, when it is owing to his exertions that I myself
-                have recovered my own dignity and safety. <milestone n="4" unit="chapter"/></p>
-            <p>In truth, as that great man, Publius Scipio, appears to me to have been born for the
+                have recovered my own dignity and safety. <milestone n="4" unit="chapter"/>
+         </p>
+         <p>In truth, as that great man, Publius Scipio, appears to me to have been born for the
                 overthrow and destruction of <placeName key="tgn,7016143">Carthage</placeName>, he
                 being the only man who, at last, as it were, by a special decree of destiny, did
                 overthrow it after it had been besieged, attacked, undermined, and almost taken by
@@ -288,11 +314,12 @@ Added to repository.
                 good a man as one who has deserved so well of me and of his country, that criminal
                 of all men in the world, whose enmity be has not only encountered, but has even
                 sought for out of a regard for my safety. But if, even now that he is entangled in
-                all the dangers of the laws, surrounded by the hatred of all virtuous men, and <pb
-                    n="72"/> hemmed in on all sides by the expectation or punishment which cannot be
+                all the dangers of the laws, surrounded by the hatred of all virtuous men, and <pb n="72"/> hemmed in on all sides by the expectation or punishment which cannot be
                 long delayed, still, hesitating and hampered as he is, he persists in rushing on,
                 and making attacks upon me, I will resist him, and gaining the consent, or, perhaps,
-                the assistance of <persName><surname>Milo</surname></persName>, I will frustrate his
+                the assistance of <persName>
+               <surname>Milo</surname>
+            </persName>, I will frustrate his
                 endeavours; as I did yesterday, when, while he was threatening me in dumb show, as I
                 was standing near him, I just said one word about the beginning of legal proceedings
                 and a trial. He sat down. He did not say a word. Suppose he had brought a charge
@@ -300,15 +327,19 @@ Added to repository.
                 summoned to appear before the praetor in three days. And let him restrain himself
                 with the idea that if he is content with those acts of wickedness which he has
                 already committed, he is already dedicated to
-                    <persName><surname>Milo</surname></persName>; but if he aims any dart against
+                    <persName>
+               <surname>Milo</surname>
+            </persName>; but if he aims any dart against
                 me, that then I shall immediately employ all the weapons of the courts of justice
                 and of the laws. </p>
-            <p><milestone n="8" unit="section"/> And a little time ago, O conscript fathers, he held
+         <p>
+            <milestone n="8" unit="section"/> And a little time ago, O conscript fathers, he held
                 an assembly, and made a speech which was directed wholly against me. And I will tell
                 you the argument and sentiment which ran through the whole of his speech. And when
                 you have been sufficiently amused at the fellow's impudence, I will give you the
-                details of everything that then took place. <milestone n="5" unit="chapter"/></p>
-            <p>Publius Clodius, O conscript fathers, made a long speech about religious observances,
+                details of everything that then took place. <milestone n="5" unit="chapter"/>
+         </p>
+         <p>Publius Clodius, O conscript fathers, made a long speech about religious observances,
                 and sacrifices, and ceremonies. Publius Clodius, I say, complained that the
                 sacrifices and religious rites were neglected, profaned, and polluted. It is no
                 wonder if this seems to you an absurdity. Indeed the very assembly which he himself
@@ -334,7 +365,9 @@ Added to repository.
                 important one that has for many years been reported to this body. For you find that
                 by every part of this prodigy and of this answer, we have been warned, I may almost
                 say by the voice of the all-good and all-powerful
-                        <persName><surname>Jupiter</surname></persName> himself, of the wickedness
+                        <persName>
+               <surname>Jupiter</surname>
+            </persName> himself, of the wickedness
                 and frenzy of that man, and of the immense dangers which are impending over the
                 state. <milestone n="11" unit="section"/> But first of all I will clear up the
                 objections made on the score of religion in the case of my own house, if I am able
@@ -342,8 +375,9 @@ Added to repository.
                 very slightest scruple on the subject exists in any one's mind, I will obey the
                 prodigies sent by the immortal gods, and comply with what is required by the
                 reverence due to them not only with a patient but even with a willing mind.
-                    <milestone n="6" unit="chapter"/></p>
-            <p>But what house is there in the whole city so clear and free from all suspicion of
+                    <milestone n="6" unit="chapter"/>
+         </p>
+         <p>But what house is there in the whole city so clear and free from all suspicion of
                 being a consecrated building as this? Although your houses, O conscript fathers, and
                 those of all the other citizens, are, for much the greater part of them, free from
                 all religious obligation, yet my house is the only one in the whole city which has
@@ -361,7 +395,8 @@ Added to repository.
                 supreme in all matters in the <foreign xml:lang="la">comitia centuriata</foreign>,
                 and by the suffrage of every age and every rank of men, ordered it to remain in the
                 same condition in which it had previously been. </p>
-            <p><milestone n="12" unit="section"/> Afterwards, O conscript fathers, not because the
+         <p>
+            <milestone n="12" unit="section"/> Afterwards, O conscript fathers, not because the
                 matter was doubtful, but in order to cut off every argument from this furious man,
                 if he chose to remain any longer in this city which he was anxious to destroy, you
                 passed a decree that a reference should be made to the college of pontiffs as to the
@@ -381,11 +416,10 @@ Added to repository.
                 Mars, and Publius Galba, and Quintus Metellus Scipio, and Caius Fannius, and Marcus
                 Lepidus, and Lucius Claudius, the king of the sacrifices, and Marcus Scaurus, and
                 Marcus Crassus, and Caius Curio, and Sextus Caesar, the priest of
-                        <persName><surname>Jupiter</surname></persName>, and Quintus Cornelius, and
-                Publius Albinovanus, and Quintus Terentius, the lesser<note anchored="true"
-                    >Originally the number of pontiffs was four, or, including the <foreign
-                        xml:lang="la">Pontifex Maximus</foreign>, five. In the year B.C. <date
-                        when="-0300">300</date> the Ogulnian law raised the number from four to
+                        <persName>
+               <surname>Jupiter</surname>
+            </persName>, and Quintus Cornelius, and
+                Publius Albinovanus, and Quintus Terentius, the lesser<note anchored="true">Originally the number of pontiffs was four, or, including the <foreign xml:lang="la">Pontifex Maximus</foreign>, five. In the year B.C. <date when="-0300">300</date> the Ogulnian law raised the number from four to
                     eight; in the year B.C. <date when="-0081">81</date> Sulla increased the number
                     to fifteen, including the Pontifex Maximus; and after him Julius Caesar
                     increased the number to sixteen. Besides these there were other pontiffs
@@ -394,13 +428,13 @@ Added to repository.
                     appears probable that it was a name of late introduction, and applied to the
                     secretaries of the pontiffs when the real pontiffs had begun to neglect their
                     duties, and to leave the greater part of them to be performed by their
-                    secretaries. <foreign xml:lang="la">Vide</foreign> Smith, Dict Ant. v. <foreign
-                        xml:lang="la">Pontifex</foreign>.</note> pontiffs, having investigated <pb
-                    n="75"/> the case after it had been argued before them on two separate
+                    secretaries. <foreign xml:lang="la">Vide</foreign> Smith, Dict Ant. v. <foreign xml:lang="la">Pontifex</foreign>.</note> pontiffs, having investigated <pb n="75"/> the case after it had been argued before them on two separate
                 occasions, in the presence of a great number of the noblest and wisest of the
                 citizens, all unanimously pronounced my house free from all religious obligation.
-                    <milestone n="7" unit="chapter"/><milestone n="13" unit="section"/></p>
-            <p>I say that so numerous a meeting of the college has never decided on any subject, not
+                    <milestone n="7" unit="chapter"/>
+            <milestone n="13" unit="section"/>
+         </p>
+         <p>I say that so numerous a meeting of the college has never decided on any subject, not
                 even concerning the rights or life of a vestal virgin, ever since the establishment
                 of sacred ceremonies, though their antiquity is the same as that of the city itself;
                 although when an investigation into any crime is taking place it is of consequence
@@ -418,13 +452,12 @@ Added to repository.
                 which had been conferred on them by the Roman people, had made many speeches
                 concerning the decision of the college, and when all of them had assisted in drawing
                 up the decree,—the senate, I say, voted that my house appeared, according to the
-                decision of the pontiffs, to be free from all religious liability.<milestone n="14"
-                    unit="section"/> Is this then the place which of all others the soothsayers
+                decision of the pontiffs, to be free from all religious liability.<milestone n="14" unit="section"/> Is this then the place which of all others the soothsayers
                 appear to intend to speak of as sacred, which is the only one of all private
                 buildings in the whole city which has this argument to advance in support of its
                 rights, that it has been adjudged not to be sacred by those very men who preside
                 over all sacred things?</p>
-            <p>However, refer the matter to them, as you are bound to do <pb n="76"/> according to
+         <p>However, refer the matter to them, as you are bound to do <pb n="76"/> according to
                 the resolution of the senate. Either the investigation will be allotted to you who
                 were the first to pronounce an opinion respecting this house, and who have
                 pronounced it free from all religious liability; or the senate itself will decide,
@@ -441,9 +474,9 @@ Added to repository.
                 highest authority, both human and divine. <milestone n="15" unit="section"/> For in
                 the first place it was built by the authority of the senate, with the public money;
                 and in the second place it has been fenced round and fortified against the impious
-                violence of this gladiator by numerous resolutions of the senate. <milestone n="8"
-                    unit="chapter"/></p>
-            <p>At first a commission was given to those same magistrates in the preceding year, to
+                violence of this gladiator by numerous resolutions of the senate. <milestone n="8" unit="chapter"/>
+         </p>
+         <p>At first a commission was given to those same magistrates in the preceding year, to
                 whom at times of the greatest peril the whole republic is usually recommended, to
                 take care that I was to be allowed to proceed in building without any hindrance from
                 violence. Afterwards, when that fellow had brought devastation on my estate with
@@ -460,8 +493,7 @@ Added to repository.
                 magistrates, and put under the protection of the judges who were to punish all who
                 injured it. On account of his immense services to the republic, a house at
                     <placeName key="perseus,Velia">Velia</placeName> was given by a public vote to
-                Publius Valerius. But my house was restored to me on the <placeName
-                    key="tgn,3000935">Palatine Hill</placeName>. He had a spot of ground given him.
+                Publius Valerius. But my house was restored to me on the <placeName key="tgn,3000935">Palatine Hill</placeName>. He had a spot of ground given him.
                 I had walls also and a roof. He had a house given to him which he was to defend by
                 his rights as a private citizen; but I had one which all the magistrates were
                 ordered to protect with the public force of the city. And if I had all this owing to
@@ -471,10 +503,9 @@ Added to repository.
                 tongue of that man by whose hand they were formerly overthrown, when you restored
                 them with your own hands to me and to my children, I am not speaking of my own
                 actions but of yours; nor am I afraid lest this public mention of all your kindness
-                to me should appear to be not so much grateful as arrogant. <milestone n="17"
-                    unit="section"/>
-            </p>
-            <p>Although, if indeed a certain indignation which I cannot help feeling were to lead me
+                to me should appear to be not so much grateful as arrogant. <milestone n="17" unit="section"/>
+         </p>
+         <p>Although, if indeed a certain indignation which I cannot help feeling were to lead me
                 who have exerted myself so much in the cause of the public safety at times to
                 speaking some what boastfully when refuting the aspersions of wicked men who would
                 not excuse me for so doing? For I did see yesterday someone murmuring: and people
@@ -489,8 +520,10 @@ Added to repository.
                 enemy without some praise of himself? But no doubt he himself, when he is attacked,
                 not only answers as well as he can, but is even glad to be prompted by his friends
                 and to have an answer suggested to him. <pb n="78"/>
-                <milestone n="9" unit="chapter"/><milestone n="18" unit="section"/></p>
-            <p>But since I have now said enough respecting my own case, let us see now what it is
+            <milestone n="9" unit="chapter"/>
+            <milestone n="18" unit="section"/>
+         </p>
+         <p>But since I have now said enough respecting my own case, let us see now what it is
                 that the soothsayers say. For I confess that I have been greatly moved both by the
                 magnitude of the prodigies, and by the solemnity of the answer, and by the unanimous
                 and consistent language of the soothsayers. Nor am I a man who,—though I may perhaps
@@ -520,8 +553,7 @@ Added to repository.
                 not to feel that there are gods, or to think that those things are done by chance
                 which are done with such wisdom, that scarcely any one by any amount of skill can
                 comprehend their order and necessary dependence on each other? or, when he has
-                arrived at the knowledge that there are gods, not to understand that all this <pb
-                    n="79"/> mighty empire has been originated, and increased, and preserved by
+                arrived at the knowledge that there are gods, not to understand that all this <pb n="79"/> mighty empire has been originated, and increased, and preserved by
                 their divine authority? Let us, O conscript fathers, think as highly of ourselves as
                 we please; and yet it is not in numbers that we are superior to the Spaniards, nor
                 in personal strength to the Gauls, nor in cunning to the Carthaginians, nor in arts
@@ -529,9 +561,10 @@ Added to repository.
                 people of this land and country, to the Italian and Latin tribes; but it is in and
                 by means of piety and religion, and this especial wisdom of perceiving that all
                 things are governed and managed by the divine power of the immortal gods, that we
-                have been and are superior to all other countries and nations. <milestone n="10"
-                    unit="chapter"/><milestone n="20" unit="section"/></p>
-            <p>Wherefore, not to say any more about a doubtful matter, give, I pray you, your
+                have been and are superior to all other countries and nations. <milestone n="10" unit="chapter"/>
+            <milestone n="20" unit="section"/>
+         </p>
+         <p>Wherefore, not to say any more about a doubtful matter, give, I pray you, your
                 thoughts and attention, and do not lend your ears alone to the language of the
                 soothsayers: “Because a noise and roaring has been heard in the Latin district.” I
                 say nothing of the soothsayers, I say nothing of that ancient system, given, as men
@@ -542,7 +575,9 @@ Added to repository.
                 impious as not to confess that by this novel and mighty commotion the gods are
                 foreshowing and predicting something important to the Roman people? Concerning that
                 matter it is written down that entreaties are to be addressed to
-                        <persName><surname>Jupiter</surname></persName>, Saturn, Neptune, Tellus,
+                        <persName>
+               <surname>Jupiter</surname>
+            </persName>, Saturn, Neptune, Tellus,
                 and the gods of heaven.<milestone n="21" unit="section"/> Well, I hear what gods
                 have been offended and to whom atonement is due; but I want to know on account of
                 what offences committed by men they have been offended. “On account of the games
@@ -550,7 +585,9 @@ Added to repository.
                 Lentulus; for the sacred cars and chariots, the singing, the sports, the libations,
                 and feasts of the public games belong to your priesthood; and I appeal to you, O
                 pontiffs, to whom those who prepare the banquet for the all-good and all-powerful
-                        <persName><surname>Jupiter</surname></persName> report it if anything has
+                        <persName>
+               <surname>Jupiter</surname>
+            </persName> report it if anything has
                 been neglected or done improperly, and if you give sentence that it shall be so,
                 those ceremonies are celebrated anew and repeated over again. What games are they
                 which have been exhibited without due diligence? By what wickedness, by what sort of
@@ -559,9 +596,10 @@ Added to repository.
                 things have been treated contemptuously through the carelessness of anyone, or
                 polluted by any wickedness, but that all the solemnities and practices of the games
                 have been attended to with a proper observance of all necessary things, and with the
-                strictest performance of all the usual ceremonies. <milestone n="11" unit="chapter"
-                    /><milestone n="22" unit="section"/></p>
-            <p>What games, then, are they which the soothsayers say have not been performed with due
+                strictest performance of all the usual ceremonies. <milestone n="11" unit="chapter"/>
+            <milestone n="22" unit="section"/>
+         </p>
+         <p>What games, then, are they which the soothsayers say have not been performed with due
                 diligence, and have been polluted? Those of which the immortal gods themselves and
                 the blessed mother Cybele chose you—you, O Cnaeus Lentulus, by the hands of whose
                 ancestor she was originally received—to be a spectator. And unless you had chosen to
@@ -573,11 +611,11 @@ Added to repository.
                 crisis shown to be equal to that formerly displayed by your ancestor as a private
                 individual. The senate standing up, and the Roman knights and all virtuous men,
                 followed you, and your name and your command, and your voice, aspect, and authority,
-                when he had handed over the senate and people of <placeName key="perseus,Rome"
-                    >Rome</placeName>, hampered by the dense body in which they were sitting,
+                when he had handed over the senate and people of <placeName key="perseus,Rome">Rome</placeName>, hampered by the dense body in which they were sitting,
                 chained as it were to the spectacle, and hindered by the crowd and narrow space, to
                 a multitude of slaves and buffoons. </p>
-            <p><milestone n="23" unit="section"/> Shall we say that, if a sacred dancer stops, or a
+         <p>
+            <milestone n="23" unit="section"/> Shall we say that, if a sacred dancer stops, or a
                 flute-player has on a sudden ceased to play, or if a boy<note anchored="true">It is
                     inferred from this passage that the boys assisting at these games might not be
                     orphans.</note> with both father and mother alive has ceased to touch the
@@ -593,18 +631,16 @@ Added to repository.
                 things which have been handed down to us traditionally about each of the gods, we
                 have heard that this mighty Mother; whose games were thus violated and polluted, and
                 turned almost to a massacre and to the destruction of the city, does roam over the
-                fields and through the groves with a certain degree of noise and roaring. <milestone
-                    n="12" unit="chapter"/></p>
-            <p>She, then, she it is, who has displayed to the Roman people these tokens of
+                fields and through the groves with a certain degree of noise and roaring. <milestone n="12" unit="chapter"/>
+         </p>
+         <p>She, then, she it is, who has displayed to the Roman people these tokens of
                 wickedness, and revealed to them these indications of danger. For why should I speak
                 of those games which our ancestors ordered to be performed and celebrated on the
                     <placeName key="tgn,3000935">Palatine Hill</placeName>, in front of the temple,
-                in the very sight of the mighty Mother, on the day of the Megalesia?<note
-                    anchored="true">The Megalesia were the great festivals in honour of Cybele,
+                in the very sight of the mighty Mother, on the day of the Megalesia?<note anchored="true">The Megalesia were the great festivals in honour of Cybele,
                     celebrated in April, on the anniversary of the day when her statue was brought
                     from Pessenus. They lasted six days, and were among the most important of all
-                    the festivities of the sort which were held at <placeName key="perseus,Rome"
-                        >Rome</placeName>. <foreign xml:lang="la">Vide</foreign> Smith, Dict. Ant.
+                    the festivities of the sort which were held at <placeName key="perseus,Rome">Rome</placeName>. <foreign xml:lang="la">Vide</foreign> Smith, Dict. Ant.
                     v. <foreign xml:lang="la">Megalesia</foreign>.</note> which are in their
                 institution and in the manner in which they are celebrated, above all other games
                 chaste, solemn, and holy; in which games that great man Publius Africanus the elder,
@@ -642,17 +678,14 @@ Added to repository.
                 ordered all the slaves to depart from the theatre. But you turned slaves into one,
                 and turned free men out of the other. Therefore they, who formerly used to be
                 separated from free men by the voice of the herald, now, at your games, separated
-                free men from themselves not by their voice, but by force. <milestone n="13"
-                    unit="chapter"/></p>
-            <p>Did not even this occur to you, being a priest so well acquainted with the Sibylline
+                free men from themselves not by their voice, but by force. <milestone n="13" unit="chapter"/>
+         </p>
+         <p>Did not even this occur to you, being a priest so well acquainted with the Sibylline
                 oracles, that our ancestors derived these games from the Sibylline books? if those
                 books are yours, which you consult with imperious intentions, and read with profane
                 eyes, and handle with polluted hands. <milestone n="27" unit="section"/> Formerly,
-                then, by the advice of this prophetess, when <placeName key="tgn,1000080"
-                    >Italy</placeName> was wearied by the Punic war and harassed by Hannibal, our
-                ancestors imported that sacred image and those sacred rites from <placeName
-                    key="tgn,7002613">Phrygia</placeName>, and established them at <placeName
-                    key="perseus,Rome">Rome</placeName>, where they were received by that man who
+                then, by the advice of this prophetess, when <placeName key="tgn,1000080">Italy</placeName> was wearied by the Punic war and harassed by Hannibal, our
+                ancestors imported that sacred image and those sacred rites from <placeName key="tgn,7002613">Phrygia</placeName>, and established them at <placeName key="perseus,Rome">Rome</placeName>, where they were received by that man who
                 was adjudged to be the most virtuous of all the Roman people, Publius Scipio Nasica,
                 and <pb n="83"/> by the woman who was considered the chastest of the matrons, Quinta
                 Claudia; the old-fashioned strictness of whose sacrifice on that occasion your
@@ -661,13 +694,10 @@ Added to repository.
                 priesthood itself, by which all these religious observances were established, nor
                 the curule aedileship, which above all things is accustomed to uphold this worship,
                 influence you to abstain from polluting those most holy games with every sort of
-                crime, and polluting them with infamy, and involving them in guilt? <milestone
-                    n="28" unit="section"/>
-            </p>
-            <p>But why do I wonder? when, having taken a bribe, you ravaged <placeName
-                    key="tgn,6004655">Pessinus</placeName> itself, the habitation and home of the
-                mother of the gods, and sold to Brogitarus—a fellow half <placeName
-                    key="tgn,1000070">Gaul</placeName>, half Greek, a profligate and impious man,
+                crime, and polluting them with infamy, and involving them in guilt? <milestone n="28" unit="section"/>
+         </p>
+         <p>But why do I wonder? when, having taken a bribe, you ravaged <placeName key="tgn,6004655">Pessinus</placeName> itself, the habitation and home of the
+                mother of the gods, and sold to Brogitarus—a fellow half <placeName key="tgn,1000070">Gaul</placeName>, half Greek, a profligate and impious man,
                 whose agents, while you were tribune, used to pay you the money for your share of
                 the work in the temple of Castor—the whole of that place and the temple; when you
                 dragged the priest from the very altar and cushion of the goddess; when you
@@ -677,10 +707,10 @@ Added to repository.
                 greatest piety; which, last of all; our own ancestors considered so sacred, that
                 though we had the city and all <placeName key="tgn,1000080">Italy</placeName>
                 crowded with temples, still our generals in our most important and most perilous
-                wars used to offer their vows to this goddess, and to pay them in <placeName
-                    key="tgn,6004655">Pessinus</placeName> itself, at that identical principal altar
+                wars used to offer their vows to this goddess, and to pay them in <placeName key="tgn,6004655">Pessinus</placeName> itself, at that identical principal altar
                 and on that spot and in that temple. </p>
-            <p><milestone n="29" unit="section"/> And when Deiotarus was protecting this temple in
+         <p>
+            <milestone n="29" unit="section"/> And when Deiotarus was protecting this temple in
                 the most holy manner with the deepest feelings of religion—Deiotarus, of all allies
                 the most faithful to this empire and the most devoted to our name—you gave it to
                 Brogitarus as I have said before, having sold it to him for a sum of money. And yet
@@ -700,11 +730,12 @@ Added to repository.
                 Brogitarus; and that he prefers to let his son-in-law be deprived of your
                 liberality, rather than to allow that temple to lose the ancient reverence due to
                 its religious character. </p>
-            <p>But to return to these answers of the soothsayers, the first of which is that
+         <p>But to return to these answers of the soothsayers, the first of which is that
                 respecting these games; who is there who does not confess that the whole of that
-                answer and prophecy was delivered with reference to that fellow's games? <milestone
-                    n="14" unit="chapter"/><milestone n="30" unit="section"/></p>
-            <p>The answer about sacred and holy places comes next. Oh, the marvellous impudence of
+                answer and prophecy was delivered with reference to that fellow's games? <milestone n="14" unit="chapter"/>
+            <milestone n="30" unit="section"/>
+         </p>
+         <p>The answer about sacred and holy places comes next. Oh, the marvellous impudence of
                 the man! do you dare to make mention of my house? Entrust your own to the consuls,
                 or the senate, or the college of pontiffs; and mine, as I have said before, has been
                 declared by all these three decisions to be free from all religions liability. But
@@ -731,8 +762,9 @@ Added to repository.
                 we are speaking of old stones; although, if this is not laid down in the civil law,
                 still by the law of nature and the common rights of nations the principle has been
                 established, that mortals cannot acquire a prescriptive right to anything as against
-                the immortal gods. <milestone n="15" unit="chapter"/></p>
-            <p>But we will pass over all things of old date. Shall we also pass over those things
+                the immortal gods. <milestone n="15" unit="chapter"/>
+         </p>
+         <p>But we will pass over all things of old date. Shall we also pass over those things
                 which are done at the present time; which we see ourselves? Who knows not that
                 Lucius Piso at this very time has been removing a great and most holy chapel of
                 Diana on the Coeliculan hill? Men who live close to that spot are in court. There
@@ -753,11 +785,12 @@ Added to repository.
                 unintentionally to look into your house I will raise the roof higher not in order
                 that I may look down upon you, but that you may not be able to see that city which
                 you were desirous to destroy. <pb n="86"/>
-                <milestone n="16" unit="chapter"/><milestone n="34" unit="section"/></p>
-            <p>But let us now examine the rest of the clauses of the answers of the
+            <milestone n="16" unit="chapter"/>
+            <milestone n="34" unit="section"/>
+         </p>
+         <p>But let us now examine the rest of the clauses of the answers of the
                 soothsayers.—“That ambassadors have been slain contrary to all divine and human
-                law.” What is this? I see here a mention of the deputies from <placeName
-                    key="perseus,Alexandria">Alexandria</placeName>; and I cannot refute it. For my
+                law.” What is this? I see here a mention of the deputies from <placeName key="perseus,Alexandria">Alexandria</placeName>; and I cannot refute it. For my
                 feelings are, that the privileges of ambassadors are not only fenced round by human
                 protection, but are also guarded by divine laws. But I ask of that man, who, as
                 tribune, filled the forum with judges whom he took out of the prisons,—by whose will
@@ -766,14 +799,12 @@ Added to repository.
                 he is at all aware that one most active adversary of Hermarchus, of the name of
                 Theodosius, having been sent as ambassador to the senate from a free city, was
                 assassinated with a dagger? and I know to a certainty that that cannot have appeared
-                less scandalous to the immortal gods than the case of the Alexandrians. <milestone
-                    n="35" unit="section"/> Nor am I now attributing every action of this sort to
+                less scandalous to the immortal gods than the case of the Alexandrians. <milestone n="35" unit="section"/> Nor am I now attributing every action of this sort to
                 you alone. There would be greater hope of safety if there were no other wicked man
                 but you; but there are more, and on this account you feel more confidence, and we
                 almost distrust the protection of the law. Who is there who is not aware that Plato,
                 a man of high character and high rank in his own country, came from Orestis, which
-                is a free part of <placeName key="tgn,7006667">Macedonia</placeName>, to <placeName
-                    key="tgn,7011182">Thessalonica</placeName>, as an ambassador to our general, as
+                is a free part of <placeName key="tgn,7006667">Macedonia</placeName>, to <placeName key="tgn,7011182">Thessalonica</placeName>, as an ambassador to our general, as
                 he called himself? and this great general of ours, being angry at not being able to
                 extort money from him, threw him into prison, and sent his own physician to him, who
                 in a most infamous and barbarous manner cut the veins of an ambassador, an ally, a
@@ -781,9 +812,10 @@ Added to repository.
                 but he polluted the name of the Roman people with such guilt that it cannot be
                 expiated by any means but his own punishment. What sort of executioner must we think
                 that this man has in his train, when he uses even his physicians not to procure
-                health but to inflict death? <milestone n="17" unit="chapter"/><milestone n="36"
-                    unit="section"/></p>
-            <p>But let us read what follows. “That good faith and oaths have been disregarded.” What
+                health but to inflict death? <milestone n="17" unit="chapter"/>
+            <milestone n="36" unit="section"/>
+         </p>
+         <p>But let us read what follows. “That good faith and oaths have been disregarded.” What
                 this means by itself, I cannot easily explain; but from that which follows, I
                 suspect that it refers to the manifest perjury of your judges, from whom, some time
                 ago, the money which they had received would have been taken away, if they had not
@@ -792,8 +824,8 @@ Added to repository.
                 that is the most remarkable and notorious perjury ever committed in this city and
                 yet that you yourself are not threatened with the punishment of perjury by those men
                 with whom you conspired. <milestone n="37" unit="section"/>
-            </p>
-            <p>And I see that in the answers of the soothsayers this is added: “But the ancient and
+         </p>
+         <p>And I see that in the answers of the soothsayers this is added: “But the ancient and
                 secret sacrifices have been performed with less than due diligence and have been
                 polluted.” Are they the soothsayers who say this or the gods of our country and our
                 household gods? I suppose there are many persons to whom a suspicion of this guilt
@@ -812,18 +844,16 @@ Added to repository.
                 performed on behalf of the Roman people; it is performed in the house of a supreme
                 magistrate; it is performed with incredible solemnity; it is performed to that
                 goddess whose very name it is not lawful for men to know, and whom that fellow calls
-                Good, because she has pardoned him such enormous wickedness <milestone n="18"
-                    unit="chapter"/></p>
-            <p>She has not pardoned you, believe me. No; unless, perchance, you think yourself
+                Good, because she has pardoned him such enormous wickedness <milestone n="18" unit="chapter"/>
+         </p>
+         <p>She has not pardoned you, believe me. No; unless, perchance, you think yourself
                 pardoned because the judges dismissed you after they had squeezed and drained
                 everything out of you, acquitted by their decision, condemned by all the rest of the
                 citizens; or because you have not been deprived of your eyes, as is, according to
-                the common belief the consequence of such impiety. <milestone n="38" unit="section"
-                /> For what man ever intentionally <pb n="88"/> beheld those sacred rites before
+                the common belief the consequence of such impiety. <milestone n="38" unit="section"/> For what man ever intentionally <pb n="88"/> beheld those sacred rites before
                 you, so as to enable any one to know what punishment followed that guilt? Could the
                 blindness of your eyes be a greater injury to you than that blindness of your lust?
-                Do not even you feel that those winking eyes of your ancestor<note anchored="true"
-                    >Appius Claudius, surnamed Caecus, or the Blind.</note> were more desirable for
+                Do not even you feel that those winking eyes of your ancestor<note anchored="true">Appius Claudius, surnamed Caecus, or the Blind.</note> were more desirable for
                 you than these glowing eyes of your sister? But, if you observe carefully, you will
                 see that though you have as yet escaped the punishment of men, you have not escaped
                 that of the gods. Men have defended you in a most shameful affair; men have praised
@@ -852,9 +882,10 @@ Added to repository.
                 destroyed by some very trivial cause; and <pb n="89"/> the darts of the gods are
                 fixed in the minds of impious men. Wherefore you are more miserable while you are
                 hurried into every sort of wickedness by your eyes, than you would be if you had no
-                eyes at all. <milestone n="19" unit="chapter"/><milestone n="40" unit="section"
-                /></p>
-            <p>But since enough has been said of all these offences which the soothsayers say have
+                eyes at all. <milestone n="19" unit="chapter"/>
+            <milestone n="40" unit="section"/>
+         </p>
+         <p>But since enough has been said of all these offences which the soothsayers say have
                 been committed, let us see now what these same soothsayers say that we are being
                 warned of at this time by the immortal gods. They warn us “to take care that
                 bloodshed and danger be not brought upon the senators and chief men of the state,
@@ -868,7 +899,8 @@ Added to repository.
                 makes the present distress of the republic the more shameful, that even by him it is
                 not afflicted in such a way that it may seem to fall like a brave man in battle,
                 having received honourable wounds in front from a gallant foe. </p>
-            <p><milestone n="41" unit="section"/> Tiberius Gracchus overturned the constitution of
+         <p>
+            <milestone n="41" unit="section"/> Tiberius Gracchus overturned the constitution of
                 the state, a man of such great force of character, and eloquence, and dignity, that
                 he fell short in no respect of the surpassing and eminent virtue of his father, and
                 of his grandfather, Africanus, except in the fact of his revolting from the senate.
@@ -883,9 +915,10 @@ Added to repository.
                 battling with these men, and to be duly struggling with them <pb n="90"/> for the
                 safety of the country, was a very annoying thing to those men who were at that time
                 the governors of the republic, but still that annoyance had a certain sort of
-                dignity in it. <milestone n="20" unit="chapter"/><milestone n="42" unit="section"
-                /></p>
-            <p>But as for this man, about whom I am now saying so much, O ye immortal gods! what is
+                dignity in it. <milestone n="20" unit="chapter"/>
+            <milestone n="42" unit="section"/>
+         </p>
+         <p>But as for this man, about whom I am now saying so much, O ye immortal gods! what is
                 he? what is his influence? what is there about him to give so great a city, if it
                 does fall, (may the gods avert the omen!) the comfort of at least seeming to have
                 been overthrown by a man? a fellow who, from the moment of his father's death, made
@@ -894,16 +927,13 @@ Added to repository.
                 then, when he had become a man, he devoted himself to the concerns of a province,
                 and to military affairs, and suffered insults from the pirates; he satisfied the
                 lusts even of Cilicians and barbarians: afterwards, having in a most wicked manner
-                tampered with the army of Lucius Lucullus, he fled from thence, and at <placeName
-                    key="perseus,Rome">Rome</placeName>, the moment of his arrival there, he began
+                tampered with the army of Lucius Lucullus, he fled from thence, and at <placeName key="perseus,Rome">Rome</placeName>, the moment of his arrival there, he began
                 to compound with his own relations not to prosecute them, and received money from
                 Catiline to prevaricate in the most shameless manner. From thence he went into
                     <placeName key="tgn,1000070">Gaul</placeName> with Murena; in which province he
                 forged wills of dead people, murdered wards, and made bargains and partnerships or
-                wickedness with many. When he returned from <placeName key="tgn,1000070"
-                    >Gaul</placeName>, he appropriated to himself all that most fruitful and
-                abundant source of gain which is derived from the <placeName key="tgn,7006964"
-                    >Campus Martius</placeName>, in such a manner that he (a man wholly devoted to
+                wickedness with many. When he returned from <placeName key="tgn,1000070">Gaul</placeName>, he appropriated to himself all that most fruitful and
+                abundant source of gain which is derived from the <placeName key="tgn,7006964">Campus Martius</placeName>, in such a manner that he (a man wholly devoted to
                 the people!) cheated the people in a most scandalous manner, and also (merciful man
                 that he is!) put the canvassers of the different tribes to death at his own house in
                 the most cruel manner. Then came his quaestorship, so fatal to the republic, to our
@@ -928,9 +958,10 @@ Added to repository.
                 virtue of his office, and appointed Marcus Scaurus to manage that business. And it
                 was the breeze of popularity which carried Sulpicius further than he intended, after
                 he had set out in a good cause, and had resisted Caius Julius when seeking to obtain
-                the consulship contrary to the laws. <milestone n="21" unit="chapter"/><milestone
-                    n="44" unit="section"/></p>
-            <p>All these men had a reason,—not an adequate one, indeed, (for no one can have an
+                the consulship contrary to the laws. <milestone n="21" unit="chapter"/>
+            <milestone n="44" unit="section"/>
+         </p>
+         <p>All these men had a reason,—not an adequate one, indeed, (for no one can have an
                 adequate reason for proving a bad citizen to the republic,) but still they had a
                 serious reason, and one connected with some indignation of mind not unbecoming to a
                 man. Publius Clodius came out as a popular character from saffron gowns and turbans,
@@ -960,12 +991,12 @@ Added to repository.
                 the principal investigator of these matters. I bore the brunt of the attack, and I
                 alone suffered on behalf of my country; but still I bore it so that you, while you
                 were surrounded by the same flames, saw me wounded first and burning, as it were, in
-                your defence. <milestone n="22" unit="chapter"/><milestone n="46" unit="section"
-                /></p>
-            <p>The dissensions were not appeased; but the unpopularity of those men, by whom we
+                your defence. <milestone n="22" unit="chapter"/>
+            <milestone n="46" unit="section"/>
+         </p>
+         <p>The dissensions were not appeased; but the unpopularity of those men, by whom we
                 thought that our cause was espoused, even increased. So, after a time, the very same
-                men being the movers, and Pompeius the chief man, who roused <placeName
-                    key="tgn,1000080">Italy</placeName> willing to be roused, and the Roman people
+                men being the movers, and Pompeius the chief man, who roused <placeName key="tgn,1000080">Italy</placeName> willing to be roused, and the Roman people
                 which regretted me, and you who demanded me back, to take measures for my safety,
                 employing not only his authority but even his prayers, I was restored. Let there be
                 an end of discord, let us at last find rest from our long dissensions. No, that pest
@@ -981,8 +1012,7 @@ Added to repository.
                 were so,) that the real glory and dignity of any one can be impaired by the abuse of
                 an abandoned and worthless man; and lastly, that they do not see, what however, they
                 do seem to me to have some suspicion of, that those frantic and desultory attacks of
-                his may some day or other be turned against themselves. <milestone n="47"
-                    unit="section"/> And it is owing to this undue alienation of some persons from
+                his may some day or other be turned against themselves. <milestone n="47" unit="section"/> And it is owing to this undue alienation of some persons from
                 others that those arrows now stick in the republic which, as long as they stuck in
                 me alone, I bore,—with pain, indeed, but still not as thinking them of any great
                 importance. Could that fellow, if he had not first given himself up to those men
@@ -994,9 +1024,10 @@ Added to repository.
                 what he was by the assistance of Cnaeus Pompeius, and at the instigation of Marcus
                 Crassus,—if he had not declared (the only word of truth that he spoke) that the
                 consuls had united their cause with him;—could he, I say, ever have been so cruel an
-                enemy to me or so wicked a disturber of the republic? <milestone n="23"
-                    unit="chapter"/><milestone n="48" unit="section"/></p>
-            <p>After that, when he saw you recovering your breath after your fear of bloodshed, when
+                enemy to me or so wicked a disturber of the republic? <milestone n="23" unit="chapter"/>
+            <milestone n="48" unit="section"/>
+         </p>
+         <p>After that, when he saw you recovering your breath after your fear of bloodshed, when
                 he saw your authority rising again above the waves of that slavery, and the
                 recollection of, and regret for me, getting more vivid, then he began on a sudden to
                 sell himself to you, though with the most treacherous design. Then he began to say,
@@ -1027,19 +1058,19 @@ Added to repository.
                 have ever been born, not to be able to go abroad in the sight of men, and to be
                 secluded from all public places, as long as that fellow was tribune of the people,
                 and to put up with his threats, when he said in the public assembly that he wished
-                to build a second piazza in Carinae,<note anchored="true"><foreign xml:lang="la"
-                        >Carinae</foreign> was the name of one of the finest streets in <placeName
-                        key="perseus,Rome">Rome</placeName>. It is mentioned as such by Virgil,
-                        (<bibl n="Verg. A. 8.361"><title>Aen.</title> viii. 361</bibl>): <quote
-                        xml:lang="la">
-                        <l>Passimque armenta videbant </l>
-                        <l>Romanoque foro, et lautis mugire Carinis.</l>
-                    </quote> And in that street was Pompey's house.</note> to correspond to the one
+                to build a second piazza in Carinae,<note anchored="true">
+               <foreign xml:lang="la">Carinae</foreign> was the name of one of the finest streets in <placeName key="perseus,Rome">Rome</placeName>. It is mentioned as such by Virgil,
+                        (<bibl n="Verg. A. 8.361">
+                  <title>Aen.</title> viii. 361</bibl>): <quote xml:lang="la">
+                  <l>Passimque armenta videbant </l>
+                  <l>Romanoque foro, et lautis mugire Carinis.</l>
+               </quote> And in that street was Pompey's house.</note> to correspond to the one
                 on the <placeName key="tgn,3000935">Palatine Hill</placeName>; certainly, for me to
                 leave my house was grievous as far as my own private grief was concerned, but
-                glorious if you look only at the interests of the republic. <milestone n="24"
-                    unit="chapter"/><milestone n="50" unit="section"/></p>
-            <p>You see, then, that this fellow, when, as far as his own efforts went, he had been
+                glorious if you look only at the interests of the republic. <milestone n="24" unit="chapter"/>
+            <milestone n="50" unit="section"/>
+         </p>
+         <p>You see, then, that this fellow, when, as far as his own efforts went, he had been
                 long since overthrown and crushed, was aroused again by the mischievous discords of
                 the nobles; and the first beginnings of his fury were upheld by those who at that
                 time appeared alienated from you. It is by these detractors and enemies that the
@@ -1075,8 +1106,10 @@ Added to repository.
                 inveighing against those men to whom he previously sold himself. What do you suppose
                 he will do if a door to reconciliation with him should become really open to him,
                 when he is so eager to spread a belief in such a reconciliation? <pb n="96"/>
-                <milestone n="25" unit="chapter"/><milestone n="53" unit="section"/></p>
-            <p>What other dissensions among the nobles can I suppose are pointed out by the immortal
+            <milestone n="25" unit="chapter"/>
+            <milestone n="53" unit="section"/>
+         </p>
+         <p>What other dissensions among the nobles can I suppose are pointed out by the immortal
                 gods? For by this expression Publius Clodius is surely not meant nor any one of his
                 gang or of his counselors. The Etruscan books have certain names which may fit some
                 of that class of citizens. “Worthless men, rejected candidates,” as you shall
@@ -1110,8 +1143,9 @@ Added to repository.
                 designs and opinions of its enemies. Let this discord be which are foreshown by
                 these prodigies will be banished from the state. In a moment that serpent which is
                 at present lurking about here will emerge and be brought to light, and will be
-                strangled, and crushed, and die. <milestone n="26" unit="chapter"/></p>
-            <p>For the soothsayers warn us to take care that the republic is not injured by secret
+                strangled, and crushed, and die. <milestone n="26" unit="chapter"/>
+         </p>
+         <p>For the soothsayers warn us to take care that the republic is not injured by secret
                 designs. What designs are more secret than those of that man who dared to say in the
                 public assembly that a suspension of the courts of justice ought to be proclaimed;
                 that the jurisdiction of the judges ought to be interrupted, and the treasury shut
@@ -1123,8 +1157,8 @@ Added to repository.
                 justice was planned and concocted. Remember, O conscript fathers, that your ears
                 were being experimented on by that expression, and that a most mischievous road was
                 being made to them by accustoming you to hear it. <milestone n="56" unit="section"/>
-            </p>
-            <p>These words follow: “That more honour must not he given to worthless citizens and
+         </p>
+         <p>These words follow: “That more honour must not he given to worthless citizens and
                 rejected candidates.” Let us see who are the rejected candidates; for I will show
                 you afterwards who are the worthless citizens. But still all men must allow that
                 this expression suits that man above all other who is beyond all question the most
@@ -1145,9 +1179,9 @@ Added to repository.
                 were to wish to bring on the stage one most worthless man, deformed with all sorts
                 of imaginary vices collected from all quarters, he would not, I pledge myself, be
                 able to discover one disgraceful quality which did not exist in this man, and he
-                would pass over many which are deeply implanted and firmly rooted in him. <milestone
-                    n="27" unit="chapter"/></p>
-            <p>In the first place nature attaches us to our parents, and to the immortal gods, and
+                would pass over many which are deeply implanted and firmly rooted in him. <milestone n="27" unit="chapter"/>
+         </p>
+         <p>In the first place nature attaches us to our parents, and to the immortal gods, and
                 to our country. For at one and the same time we are brought forth to the light, and
                 we are strengthened so as to grow by the breath of heaven which we feel around us,
                 and we are established in a certain abode as citizens and free men. That fellow has
@@ -1159,8 +1193,8 @@ Added to repository.
                 even unheard-of by them; and besides all this he has set fire to the temple of those
                 goddesses by whose aid people come to bring assistance in the case of other fires.
                     <milestone n="58" unit="section"/>
-            </p>
-            <p>Why should I mention his country? when in the first place by violence and arms, and
+         </p>
+         <p>Why should I mention his country? when in the first place by violence and arms, and
                 dread of personal danger, he drove away from the city and from all the protection
                 afforded him by his country that citizen whom you had decided over and over again to
                 have been the saviour of his country. In the second place, having overthrown the
@@ -1187,15 +1221,15 @@ Added to repository.
                 the poets ever describe or ever imagine, capable of swallowing down such whirlpools
                 as the plunder of the Byzantines and Brogitari which that fellow has sucked down? or
                 what Scylla with such conspicuous and hungry hounds as the Gellii, and Clodii, and
-                Titii with which you see that fellow devouring the rostrum itself? <milestone n="60"
-                    unit="section"/>
-            </p>
-            <p>Wherefore, and that is the last sentence in the answers of the soothsayers, “Beware
+                Titii with which you see that fellow devouring the rostrum itself? <milestone n="60" unit="section"/>
+         </p>
+         <p>Wherefore, and that is the last sentence in the answers of the soothsayers, “Beware
                 that the constitution of the republic be not changed.” In truth it is only with
                 difficulty, even if we prop it up on all sides, that the constitution, already
                 undermined and resting on all our shoulders, will be able to be kept together.
-                    <milestone n="28" unit="chapter"/></p>
-            <p>This state was once so firm and so vigorous that it could withstand the indifference
+                    <milestone n="28" unit="chapter"/>
+         </p>
+         <p>This state was once so firm and so vigorous that it could withstand the indifference
                 of the senate, or even the assaults of the citizens. Now it cannot. There is no
                 treasury. Those who have contracted for the revenues do not enjoy them; the
                 authority of the chief men has fallen; the agreement between the different orders of
@@ -1210,7 +1244,7 @@ Added to repository.
                 are, there is but one step slower, that of death or slavery. And the immortal gods
                 themselves warn us against allowing ourselves to be thrust down into that abyss,
                 since all human counsels have long since failed. </p>
-            <p>And I, O conscript fathers, should not have undertaken this speech, so melancholy and
+         <p>And I, O conscript fathers, should not have undertaken this speech, so melancholy and
                 so serious; not but that owing to the honours conferred on me by the Roman people,
                 and to the numberless distinctions which you have heaped upon me, I am both bound
                 and able to support this character and to play this part; but still, when every one
@@ -1219,8 +1253,9 @@ Added to repository.
                 religion. My words have, perhaps, been too many, but the whole sentiment has
                 proceeded from the soothsayers. And either you ought never to have referred the
                 prodigies which have been reported to you to them at all, or else you must be
-                influenced by their answers. <milestone n="62" unit="section"/></p>
-            <p>But if other more ordinary and more trifling occurrences have often influenced us,
+                influenced by their answers. <milestone n="62" unit="section"/>
+         </p>
+         <p>But if other more ordinary and more trifling occurrences have often influenced us,
                 shall not the express voice of the immortal gods influence every one's mind? Do not
                 think that really possible, which you often see in plays, that some god descending
                 from heaven can approach the assemblies of men, and abide on earth, and converse
@@ -1236,6 +1271,6 @@ Added to repository.
                 appoint atonements and prayers as we are ordered; but it is easy to address prayers
                 to those beings who of their own accord point out to us the path of safety. Our own
                 internal quarrels and dissensions must be terminated by ourselves. </p>
-        </body>
-    </text>
+      </body>
+   </text>
 </TEI>

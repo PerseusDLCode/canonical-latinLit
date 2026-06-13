@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi002" urn="urn:cts:latinLit:phi0474.phi002">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi002" urn="urn:cts:latinLit:phi0474.phi002">
     <ti:title xml:lang="lat">Pro S. Roscio Amerino</ti:title>
     
             <ti:edition urn="urn:cts:latinLit:phi0474.phi002.perseus-lat2" workUrn="urn:cts:latinLit:phi0474.phi002" xml:lang="lat">
@@ -13,5 +13,4 @@
                  London: Bell, 1903.</ti:description>
          </ti:translation>
         
-        </ti:work>
-        
+        <ti:genre confidence="high">prose-section</ti:genre></ti:work>

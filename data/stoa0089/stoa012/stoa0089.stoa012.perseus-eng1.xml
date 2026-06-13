@@ -41,7 +41,9 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
          <refsDecl doctype="TEI.2">
             <state unit="poem"/>
          </refsDecl>
@@ -56,9 +58,13 @@
    <text id="stoa0089.stoa012.perseus-eng1">
       <body>
          <pb id="v.2.p.71" TEIform="pb"/>
-         <div1 n="praef" type="poem" org="uniform" sample="complete" part="N">
-         <head>PREFACE</head>
-         <p>
+         <div1 n="praef"
+               type="poem"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>PREFACE</head>
+            <p>
 
 
 All things that with waking sense desire ponders
@@ -95,12 +101,17 @@ Nought greater could dreams have fancied ; this
 noble assembly offers the poet an audience like to
 that of heaven.
 <pb id="v.2.p.75"/>
-         </p>
-            </div1>
+            </p>
+         </div1>
          <pb id="v.2.p.3" TEIform="pb"/>
-         <div1 type="poem" n="1" id="poem.28" org="uniform" sample="complete" part="N">
-         <head>THE PANEGYRIC</head>
-         <p>
+         <div1 type="poem"
+               n="1"
+               id="poem.28"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>THE PANEGYRIC</head>
+            <p>
 
 If our ancestors vowed temples to <q direct="unspecified">Homebringing
 Fortune</q> in honour of the return of their
@@ -449,7 +460,7 @@ mock of precipices ; now deserted and in despair
 he offered a just spectacle to the mountains he
 had so scornfully crossed. Then looking up at
 the sky of Italy he said : <q direct="unspecified">
-               <p>Land of death for the
+                  <p>Land of death for the
 Getae, trod by me with such omens of disaster, let
 thy wrath be now appeased by the sacrifice of so
 many of the guilty ; let my sufferings at last excite
@@ -482,7 +493,7 @@ children captive, my wives, my wealth — yet, freed
 from such hindrances, my advance had been the
 more rapid.
 </p>
-               <p>With what cunning, with what skill, did Stilicho,
+                  <p>With what cunning, with what skill, did Stilicho,
 that ever fatal enemy, ensnare me ! His pretended
 mercy did but blunt my warlike spirit, and availed
 him to shift the war backwards across the Po. A
@@ -496,7 +507,7 @@ into the snare I had laid for others. I am weary of
 it all ; where shall I find comfort or counsel ? I
 fear my friends more than my foes.
 </p>
-               <p>Would God I had lost them all on that field. He
+                  <p>Would God I had lost them all on that field. He
 is ever mine that has fallen in hard conflict. Better
 all had perished by the sword ; less bitter had been
 my grief for losses inflicted by a victorious foe than
@@ -508,9 +519,9 @@ the remnants of my shipwrecked fortunes ? To
 what land shall I flee where the names of Stihcho
 and all too powerful Italy shall not sound for ever
 in mine ears ? </p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 So spake he, and with Stilicho pressing hard
 upon him fled in terror before our eagles. With
 him goes Pallor, black Hunger, Despair with bloodless,
@@ -566,9 +577,9 @@ prayer, came forth from the depths of her sanctuary
 and, openly displaying her radiant face, urged the
 hesitating emperor with complaints of her own.
 </p>
-         <p>
-            <q direct="unspecified">
-               <p>Too long, my emperor, have I, thy mother, borne in
+            <p>
+               <q direct="unspecified">
+                  <p>Too long, my emperor, have I, thy mother, borne in
 silence the hurt thy refusal to return hath done me.
 How long shall favoured Liguria possess that for
 which I desire ? How long shall the Rubicon,
@@ -603,7 +614,7 @@ Gildo fallen a captive to the arms of Rome, not to
 the treachery of a Bocchus and a Sulla. 1 
 
 </p>
-               <p>But I pass over what has been. Can the present 
+                  <p>But I pass over what has been. Can the present 
 triumph, too, of the Getic war escape me ? Does 
 any spot give ampler room to so great renown ? The 
 very blessings thou hast bestowed beg thee not to 
@@ -637,7 +648,7 @@ fame won from the enemy, and make good guilty
 triumphs by the lawful spoils of foreign madness. 
 
 </p>
-               <p>How long shall our emperor's rule be a stranger to 
+                  <p>How long shall our emperor's rule be a stranger to 
 its true home and his governance stray from its 
 rightful seat ? Why does my palace which has given 
 its name to all palaces mourn in neglected decay ? 
@@ -660,13 +671,13 @@ ance we beheld long since, that Father Tiber,
 remembering the glory that was, may with thy 
 father-in-law welcome thee as a man whom as a 
 boy he saw leave my city at his father's side.</p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 
 While yet she entreated the emperor reassured 
 her with these words : <q direct="unspecified">
-               <p>Never shalt thou complain 
+                  <p>Never shalt thou complain 
 that I have been deaf to thine entreaties ; I could 
 not thwart thee, goddess, who art the mother of our 
 laws. Bring no railing accusation against thy sons. 
@@ -686,7 +697,7 @@ it is as yet unknown to thee, a deed of which I was
 the spectator or the cause. 
 
 </p>
-               <p>Alaric had laid waste Greece and the coasts of 
+                  <p>Alaric had laid waste Greece and the coasts of 
 Thrace and in the mad pride of his many victories 
 and the arrogance inspired by his crossing of the 
 Alps had laid siege to the trembling cities of Liguria 
@@ -722,7 +733,7 @@ through the enemy's midst and, sword in hand,
 cutting down all who sought to bar his passage, he 
 passed like lightning through the barbarians' camp. 
 </p>
-               <p>Now let poets' songs praise me the son of Tydeus 
+                  <p>Now let poets' songs praise me the son of Tydeus 
 because, relying on Odysseus' help when the way 
 was opened by Dolon's wiles and all was sunk in 
 feasting and slumber, he broke into the Thracian 
@@ -750,14 +761,14 @@ father breasted ; but, as he swam the flood, Horatius
 turned his back upon the Etruscans, Stilicho faced 
 the barbarian foe. 
 <pb id="v.2.p.111"/>
-               </p>
-               <p>Now, O Rome, lead forth the chorus that shall 
+                  </p>
+                  <p>Now, O Rome, lead forth the chorus that shall 
 hymn a contest of such high renown and let thy best 
 genius with all its eloquence voice the well-merited 
 praises of my foster parent.</p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 
 So spake he and, issuing from the walls of old 
 Ravenna, advanced his standards. He crossed the 
@@ -858,7 +869,7 @@ When she sees the mail-clad knights and brazen-
 armoured horses she would fain know whence that
 iron race of men is sprung and what land it is gives
 birth to steeds of bronze. <q direct="unspecified"> Has the god of Lemnos,</q>
-            <pb id="v.2.p.117"/>
+               <pb id="v.2.p.117"/>
 she would ask, <q direct="unspecified"> bestowed on metal the power to
 neigh, and forged living statues for the fight?</q>
 Joy and fear fill her mind ; she points with her finger
@@ -976,8 +987,8 @@ yet is this thy sixth to be magnified above all thy
 consulships, excelling all that are past and model of
 all that are to come.
 <pb id="v.2.p.125"/>
-         </p>
-            </div1>
+            </p>
+         </div1>
       </body>
    </text>
 </TEI.2>

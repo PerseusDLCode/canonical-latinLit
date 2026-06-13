@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0474" urn="urn:cts:latinLit:phi0474.phi009" projid="latinLit:phi009">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0474" urn="urn:cts:latinLit:phi0474.phi009" projid="latinLit:phi009">
     
     <ti:title xml:lang="lat">De Imperio Cn. Pompei Ad Quirites</ti:title>
 
@@ -19,4 +19,4 @@
     </ti:translation>
     
     
-</ti:work>
+<ti:genre confidence="high">prose-section</ti:genre></ti:work>

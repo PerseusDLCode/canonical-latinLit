@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Patientia</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Patientia</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>                                                                                          
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa023.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.587"/>
-<head>DE PATIENTIA</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Confiteor ad dominum deum satis temere me, si non etiam 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa023.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa023.opp-lat1">
+         <pb xml:id="v.1.p.587"/>
+         <head>DE PATIENTIA</head>
+         <div n="1" type="chapter">
+            <p>Confiteor ad dominum deum satis temere me, si non etiam 
 impudenter, de patientia componere ausum, cui praestandae idoneus
 omnino non sum, ut homo nullius boni, quando oporteat demonstrationem
 et commendationem alicuius rei adortos ipsos prius
@@ -97,10 +99,9 @@ et gloriam promovet. Aut numquid potius iniuria, cum divina
 
 res in saecularibus artibus volutatur? Sed viderint illi quos
 mox sapientiae suae cum saeculo destructae ac dedecoratae pudebit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Nobis exercendae patientiae auctoritatem non adfectatio humana 
+         </div>
+         <div n="2" type="chapter">
+            <p>Nobis exercendae patientiae auctoritatem non adfectatio humana 
 caninae acquanimitatis stupore formata, sed vivae ac caelestis
 disciplinae divina dispositio delegat, deum ipsum ostendens
 patientiae exemplum iam primum, qui florem lucis huius super
@@ -112,12 +113,10 @@ persequentes, luxuriam, avaritiam, iniquitatem, malignitatem quotidie
 insolescentem, ut sua sibi patientia detrahat. Plures
 enim dominum idcirco non credunt, quia saeculo iratum tamdiu
 nesciunt.</p>
-<pb xml:id="v.1.p.590"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Et haec quidem divinae patientiae species, quasi de l(??)nginquo,
+            <pb xml:id="v.1.p.590"/>
+         </div>
+         <div n="3" type="chapter">
+            <p> Et haec quidem divinae patientiae species, quasi de l(??)nginquo,
 fors ut de supernis aestimetur. Quid illa autem, quae inter
 homines palam in terris quodammodo manu apprehensa eat? Nasci
 se deus in utero patitur matris et exspectat, et natus adolescere
@@ -162,10 +161,9 @@ ratio et structio, satis aperte non sermonibus modo in praecipiendo,
 sed etiam passionibus domini in sustinendo probant his
 quibus credere datum est, patientiam dei esse naturam, effectum
 et praestantiam ingenitae cuiusdam proprietatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Igitur si probos quosque servos et bonae mentis pro ingenio 
+         </div>
+         <div n="4" type="chapter">
+            <p>Igitur si probos quosque servos et bonae mentis pro ingenio 
 dominico conversari videmus (siquidem artificium promerendi obsequium
 est, obsequii vero disciplina morigera subiectio est),
 quanto magis nos secundum dominum moratos inveniri oportet,
@@ -195,10 +193,9 @@ Cui item dubium sit omne bonum, quia ad deum pertineat, pertinentibus
 ad deum tota mente sectandum? Per quae in expedito
 et quasi in praescriptionis compendio et commendatio et exhortatio
 de patientia constituta est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Veruntamen procedere disputationem de necessariis fidei non
+         </div>
+         <div n="5" type="chapter">
+            <p> Veruntamen procedere disputationem de necessariis fidei non
 est otiosum, quia nec infructuosum. Loquacitas in aedificatione
 nulla turpis, si quando turpis. Itaque si de aliquo bono sermo
 est, res postulat contrarium quoque boni recensere. Quid enim
@@ -289,10 +286,9 @@ singula pervagemur, nunquam non per impatientiam delinquendo
 perierunt. Quomodo autem manus prophetis intulerunt, nisi
 per impatientiam audiendi? domino autem ipsi, per impatientiam
 etiam videndi. Quodsi patientiam inissent, liberarentur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Ipsa adeo est quae fidem et subsequitur et antecedit. Denique
+         </div>
+         <div n="6" type="chapter">
+            <p> Ipsa adeo est quae fidem et subsequitur et antecedit. Denique
 Abraham deo credidit et iustitiae deputatus ab illo est; sed fidem
 <pb xml:id="v.1.p.599"/>
 
@@ -321,10 +317,9 @@ ut filii sitis patris vestri caelestis. Vides quem nobis patrem patientia
 acquirat? Hoc principali praecepto universa patientiae
 disciplina succincta est, quando ne digne quidem malefacere concessum
 est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Iam vero percurrentibus nobis causas impatientiae cetera quoque
+         </div>
+         <div n="7" type="chapter">
+            <p> Iam vero percurrentibus nobis causas impatientiae cetera quoque
 praecepta suis locis respondebunt. Si detrimento rei familiaris
 animus concitatur, omni paene in loco contemnendo saeculo scripturis
 dominicis commonetur; nec maior ad pecuniae contemptum
@@ -369,12 +364,10 @@ bestiarum latrocinantur. Nos vero secundum diversitatem,
 qua cum illis sumus, non animam pro pecunia, sed pecuniam pro
 anima deponere convenit, seu sponte in largiendo seu patienter
 in amittendo.</p>
-<pb xml:id="v.1.p.602"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Ipsam animam ipsum qui corpus in saeculo isto expositum
+            <pb xml:id="v.1.p.602"/>
+         </div>
+         <div n="8" type="chapter">
+            <p> Ipsam animam ipsum qui corpus in saeculo isto expositum
 omnium ad iniuriam gerimus eiusque iniuriae patientiam subimus
 minorum delibatione laedemur? Absit a servo Christi tale inquinamentum,
 ut patientia maioribus temptationibus praeparata in frivolis
@@ -409,10 +402,9 @@ est amissione fructus sui. Tunc tu non modo illaesus abis,
 quod etiam solum tibi sufficit, sed insuper adversarii tui et frustratione
 oblectatus et dolore defensus. Haec est patientiae utilitas
 et voluptas.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Ne illa quidem impatientiae species excusatur in amissione 
+         </div>
+         <div n="9" type="chapter">
+            <p>Ne illa quidem impatientiae species excusatur in amissione 
 nostrorum, ubi aliqua doloris patrocinatur assertio. Praeponendus
 est enim respectus denuntiationis apostoli, qui ait: Ne <bibl n="I Thes. IV, 13."/>
 contristemini dormitione cuiusquam, sicut nationes, quae spe
@@ -432,10 +424,9 @@ cum evocatos quosque ab illo quasi miserandos non aequanimiter
 <bibl n="Phil. I, 23."/> accipimus. Cupio, inquit apostolus, recipi iam et esse
 cum Christo. Quanto melius ostendit votum? Christianorum
 ergo votum si alios consecutos impatienter dolemus, ipsi consequi nolumus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Est et alius summus impatientiae stimulus, ultionis libido,
+         </div>
+         <div n="10" type="chapter">
+            <p> Est et alius summus impatientiae stimulus, ultionis libido,
 negotium curans aut gloriae aut malitiae. Sed et gloria ubique
 vana et malitia nunquam non domino odiosa, hoc quidem loco
 maxime, cum alterius malitia provocata superiorem se in exsequenda
@@ -477,10 +468,9 @@ praeceps abiit. Iam si levius defendaris, insanies, si uberius,
 oneraberis. Quid mihi cum ultione, cuius modum regere non
 possum per impatientiam doloris? Quodsi patientiae incubabe,
 non dolebo, si non dolebo, ulcisci non desiderabo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Post has principales impatientiae materias ut potuimus regestas
+         </div>
+         <div n="11" type="chapter">
+            <p> Post has principales impatientiae materias ut potuimus regestas
 quid inter ceteras evagemur, quae domi, quae foris? Lata
 atque diffusa est operatio Mali, multiplicia spiritus incitamenta
 iaculantis, et modo parvula, modo maxima. Sed parvula de sua
@@ -515,10 +505,9 @@ maledicent et persequentur, merces enim vestra plurima in caelo,
 id utique non exultationis impatientiae pollicetur, quia nemo in
 adversis exultabit, nisi ante ea contempserit. Nemo contemnet,
 nisi patientiam gesserit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Quod pacis gratissimae deo attinet disciplinam, quis omnino 
+         </div>
+         <div n="12" type="chapter">
+            <p>Quod pacis gratissimae deo attinet disciplinam, quis omnino 
 impatientiae natus vel semel ignoscet fratri suo, non dicam septies,
 sed septuagies septies? Quis iudicium adversario suo
 <pb xml:id="v.1.p.608"/>
@@ -562,10 +551,9 @@ Exhauriuntur linguae, scientiae, prophetiae: permanent fides,
 
 spes, dilectio: fides, quam Christi patientia induxit, spes, quam
 hominis patientia expectat, dilectio, quam deo magistro patientia comitatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Usque huc de patientia tandem simplici et uniformi et tantum
+         </div>
+         <div n="13" type="chapter">
+            <p> Usque huc de patientia tandem simplici et uniformi et tantum
 in animo constituta, cum eandem etiam in corpore demerendo
 domino multipliciter adlaborem, utpote quae ab ipso domino in
 corporis quoque virtute edita est, siquidem rector animus facile
@@ -598,10 +586,9 @@ firmandae opus sit, ostendit, patientia scilicet adversus omnem sub
 vertendae fidei vel puniendae paraturam, ut verbera, ut ignem,
 ut crucem, bestias, gladium constantissime toleret, quae prophetae,
 quae apostoli sustinendo vicerunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>His patientiae viribus secatur Esaias et de domino non tacet, 
+         </div>
+         <div n="14" type="chapter">
+            <p>His patientiae viribus secatur Esaias et de domino non tacet, 
 lapidatur Stephanus et veniam hostibus suis postulat. O felicissimum
 illum quoque, qui omnem patientiae speciem adversus omnem
 diaboli vim expunxit! quem non abacti greges, non illae in
@@ -631,10 +618,9 @@ si filios quoque restitui voluisset, pater iterum vocaretur. Sed
 maluit in illo die reddi sibi. Tantum gaudii, securus sic de domino,
 distulit, Sustinuit iam voluntariam orbitatem, ne sine
 aliqua patientia viveret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Adeo satis idoneus patientiae sequester deus. Si iniuriam 
+         </div>
+         <div n="15" type="chapter">
+            <p>Adeo satis idoneus patientiae sequester deus. Si iniuriam 
 deposueris penes eum, ultor est: si damnum, restitutor est: si
 dolorem, medicus est: si mortem, resuscitator est. Quantum patientiae
 licet, ut deum habeat debitorem? Nec immerito. Omnia
@@ -666,10 +652,9 @@ nobis morabitur semper? Immo nescio an diutius perseveret.
 Sine sua comite ac ministra omni loco ac tempore angatur necesse
 est. Quodcunque inimicus eius inflixerit, solus sustinere non
 poterit, carens instrumento sustinendi.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Haec patientiae ratio, haec disciplina, haec opera caelestis
+         </div>
+         <div n="16" type="chapter">
+            <p> Haec patientiae ratio, haec disciplina, haec opera caelestis
 et verae, scilicet Christianae, non ut illa patientia gentium terrae,
 falsa, probrosa. Nam ut in isto quoque domino diabolus
 aemularetur, quasi plane ex pari (nisi quod ipsa diversitas mali et
@@ -687,12 +672,11 @@ sua et sui prasesidis patientia, quam subter ignis expectat. Ceterum
 nos amemus patientiam dei, patientiam Christi: rependamus
 illi quam pro nobis ipse dependit. Offeramus patientiam spiritus,
 patientiam carnis, qui in resurrectionem carnis et spiritus
-credimus.</p></div>
-<pb xml:id="v.1.p.616"/>
-
-<pb xml:id="v.1.p.617"/>
-
-<pb xml:id="v.1.p.618"/>
-</div></body></text>
-
+credimus.</p>
+         </div>
+         <pb xml:id="v.1.p.616"/>
+         <pb xml:id="v.1.p.617"/>
+         <pb xml:id="v.1.p.618"/>
+      </body>
+   </text>
 </TEI>

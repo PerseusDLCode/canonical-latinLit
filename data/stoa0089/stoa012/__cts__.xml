@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:stoa0089.stoa012" xml:lang="lat" groupUrn="urn:cts:latinLit:stoa0089">
             <ti:title xml:lang="lat">Panegyricus de sexto consulatu Honorii Augusti</ti:title>
            
@@ -10,5 +11,4 @@
     <ti:label xml:lang="eng">Panegyric on the Sixth Consulship of Honorius</ti:label>
     <ti:description xml:lang="eng">Claudian, Volume 2. Platnauer, Maurice, translator. Harvard University Press: Cambridge, MA; London, England, 1922.</ti:description>     </ti:translation>
   
-          </ti:work>
-        
+          <ti:genre confidence="high">verse-stichic</ti:genre></ti:work>

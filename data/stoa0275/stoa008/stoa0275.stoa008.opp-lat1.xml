@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Adversus Valentinianos</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Adversus Valentinianos</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=386%3Bownerid=13510798896211811-404">HathiTrust</ref>              
-          
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa008.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.381"/>
-<head>ADVERSUS VALENTINIANOS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Valentiniani, frequentissimum plane collegium inter haereticos, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa008.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=386%3Bownerid=13510798896211811-404">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa008.opp-lat1">
+         <pb xml:id="v.2.p.381"/>
+         <head>ADVERSUS VALENTINIANOS.</head>
+         <div n="1" type="chapter">
+            <p>Valentiniani, frequentissimum plane collegium inter haereticos, 
 quia plurimum ex apostatis veritatis et ad fabulas facile est et
 disciplina non terretur, nihil magis curant quam occultare quod
 praedicant; si tamen praedicant qui occultant. Custodiae officium
@@ -91,10 +93,9 @@ certes, tuam simplicitatem sua caede dispergunt. Ne discipulis
 quidem propriis ante committunt quam suos fecerint. Habent
 artificium quo prius persuadeant quam edoceant. Veritas autem
 docendo persuadet, non suadendo docet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Ideoque simplices notamur apud illos, ut hoc tantum, non 
+         </div>
+         <div n="2" type="chapter">
+            <p>Ideoque simplices notamur apud illos, ut hoc tantum, non 
 etiam sapientes; quasi statim deficere cogatur a simplicitate sapientia,
 domino utramque iungente: Estote prudentes ut serpentes, <bibl n="Matth. X, 16."/>
 et simplices ut columbae. Aut si nos propterea insipientes quia
@@ -116,10 +117,9 @@ temptare. Illa et a primordio divinae pacis praeco; ille a primordio
 divinae imaginis praedo. Ita facilius simplicitas sola deum et
 agnoscere poterit et ostendere, prudentia sola concutere potius et
 prodere.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Abscondat itaque se serpens quantum potest, totamque prudentiam
+         </div>
+         <div n="3" type="chapter">
+            <p> Abscondat itaque se serpens quantum potest, totamque prudentiam
 in latebrarum ambagibus torqueat; alte habitet, in caeca
 detrudatur, per anfractus seriem suam evolvat, tortuose procedat,
 nec semel totus, lucifuga bestia. Nostrae columbae etiam domus
@@ -150,10 +150,9 @@ cuneum congressionis armavimus, detectorem et designatorem
 totius conscientiae illorum, primamque hanc victoriam auspicamur,
 quia quod tanto impendio absconditur, etiam solummodo demonstrare
 destruere est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Novimus, inquam, optime originem quoque ipsorum, et scimus 
+         </div>
+         <div n="4" type="chapter">
+            <p>Novimus, inquam, optime originem quoque ipsorum, et scimus 
 cur Valentinianos appellemus, licet non esse videantur. Abscesserunt
 enim a conditore, sed minime origo deletur, et si forte mutatur,
 testatio est ipsa mutatio. Speraverat episcopatum Valentinus,
@@ -184,10 +183,9 @@ sua plerosque dividi, de quibusdam articulis etiam
 bona fide dicturos, Hoc ita non est, et, Hoc aliter accipio, et,
 Hoc non agnosco. Varietate enim innovatur regularum facies.
 Habet etiam colores ignorantiarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Mihi autem cum archetypis erit limes principalium magistrorum, 
+         </div>
+         <div n="5" type="chapter">
+            <p>Mihi autem cum archetypis erit limes principalium magistrorum, 
 non cum adfectatis ducibus passivorum discipulorum. Nec
 undique dicemur ipsi nobis finxisse materias, quas tot iam viri
 sanctitate et praestantia insignes, nec solum nostri antecessores,
@@ -197,16 +195,14 @@ martyr, ut Miltiades, ecclesiarum sophista, ut Irenaeus, omnium
 doctrinarum curiosissimus explorator, ut Proculus noster, virginis
 senectae et Christianae eloquentiae dignitas, quos in omni
 <pb xml:id="v.2.p.388"/>
-
-<bibl n="I Cor. XI,19."/> opere fidei, quemadmodum in isto, optaverim assequi. Aut s(??)in
+               <bibl n="I Cor. XI,19."/> opere fidei, quemadmodum in isto, optaverim assequi. Aut s(??)in
 totum haereses non sunt, ut qui eas pellunt finxisse credantur,
 mentietur apostolus praedicator illarum. Porro si sunt, non aliae
 erunt quam quae retractantur. Nemo tam otiosus fertur stilo ut
 materia habens fingat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Igitur hoc libello, quo demonstrationem solum promittimus
+         </div>
+         <div n="6" type="chapter">
+            <p> Igitur hoc libello, quo demonstrationem solum promittimus
 illius arcani, ne quem ex nominibus tam peregrinis et coactis et
 compactis et ambiguis caligo suffundat, quomodo eis usuri simus
 prius demandabo. Quorundam enim de Graeco interpretatio non
@@ -226,12 +222,10 @@ Vanitati proprie festivitas cedit. Congruit et veritati ridere, quia
 laetans, de aemulis suis ludere, quia secura est. Curandum plane
 ne risus eius rideatur si fuerit indignus; ceterum ubicunque dignus
 risus, officium est. Denique hoc modo incipiam.</p>
-<pb xml:id="v.2.p.389"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Primus omnium Ennius, poeta Romanus, Coenacula maxima 
+            <pb xml:id="v.2.p.389"/>
+         </div>
+         <div n="7" type="chapter">
+            <p>Primus omnium Ennius, poeta Romanus, Coenacula maxima 
 caeli, simpliciter pronuntiavit, elati situs nomine, vel quia Iovem
 illic epulantem legerat apud Homerum. Sed haeretici quantas supernitates
 supernitatum, et quantas sublimitates sublimitatum in
@@ -280,10 +274,9 @@ feminarum, cellas, ut ita dixerim, primordialium Aeonum, fraterna
 connubia Valentinianorum deorum, census omnes sanctitatis et maiestatis
 haereticae, nescio criminum an numinum turbam, certe
 fontem reliquae fecunditatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Ecce enim secunda Tetras, Sermo et Vita, Homo et Ecclesia, 
+         </div>
+         <div n="8" type="chapter">
+            <p>Ecce enim secunda Tetras, Sermo et Vita, Homo et Ecclesia, 
 quod in patris gloriam fruticasset, huic numero gestientes et ipsi
 tale quid patri de suo offerre, alios ebulliunt fetus, proinde coniugales,
 per copulam utriusque naturae. Hac Sermo et Vita decuriam
@@ -312,10 +305,9 @@ Quasi non et numerorum tanta adhuc coagula superessent, et
 nulla alia de paedagogio nomina. Quare enim non et quinquaginta
 et centum procreantur? quare non et hetaeri et syntrophi
 noinantur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Sed et hoc exceptio personarum est, quod solus ille Nus ex
+         </div>
+         <div n="9" type="chapter">
+            <p> Sed et hoc exceptio personarum est, quod solus ille Nus ex
 omnibus immensi patris fruitur notione, gaudens et exultans, illis
 utique maerentibus. Plane Nus, quantum in ipso fuit, et voluerat
 et temptaverat ceteris quoque communicare quae norat, quantus et
@@ -345,10 +337,9 @@ custos, quem et Crucem appellant et Lytroten et Carpisten.
 Ita Sophia periculo exempta et tarde persussa, declinata
 investigatione patris, conquievit, et totam animationem, Enthymesin,
 cum passione, quae insuper acciderat, exposuit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Sed quidam exitum Sophiae et restitutionem aliter somniaverunt.
+         </div>
+         <div n="10" type="chapter">
+            <p> Sed quidam exitum Sophiae et restitutionem aliter somniaverunt.
 Post irritos conatus et spei deiectionem deformatam eam
 pallore, credo, et macie et incuria formae, uti quae patrem non
 minus denegatum dolebat quam amissum. Dehinc in illo maerore
@@ -379,10 +370,9 @@ eum factam (Malum, quod aiunt, foras!), spiritalem tamen substantiam
 illam, ut naturalem quendam impetum Aeonis, sed informem
 et inspeciatam, quatenus nihil adprehendisset, ideoque fructum
 infirmum et feminam pronuntiatam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Igitur post Enthymesin extorrem et matrem eius Sopbiam 
+         </div>
+         <div n="11" type="chapter">
+            <p>Igitur post Enthymesin extorrem et matrem eius Sopbiam 
 coniugi reducem ille iterum Monogenes, ille Nus, otiosus plane
 de patris cura atque prospectu, solidandis rebus et Pleromati muniendo
 iamque figendo, ne qua eiusmodi rursus concussio incuteret,
@@ -412,10 +402,9 @@ constituunt adprehensibilem patris. Quomodo tamen adprehendatur
 tum prolatus Christus edocuit. Spiritus vero Sancti propria,
 ut de doctrinae studio omnes peraequati gratiarum actionem prosequi
 nossent, et veram inducerentur quietem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Itaque omnes forma et scientia peraequantur, facti omnes 
+         </div>
+         <div n="12" type="chapter">
+            <p>Itaque omnes forma et scientia peraequantur, facti omnes 
 quod unusquisque; nemo aliud, quia alteri omnes. Refunduntur
 in Nus omnes, in Homines, in Theletos, aeque feminae, in Sigas,
 in Zoas, in Ecclesias, in Fortunatas, ut Ovidius Metamorphoses
@@ -449,10 +438,9 @@ sigillarium extrinsecus quoque inornassent, satellites ei angelos
 proferunt, par genus; si inter se, potest fieri, si vero Soteri consubstantivos
 (ambigue enim positum inveni), quae erit eminentia
 eius inter satellites coaequales?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Continet hic igitur ordo primam processionem pariter et 
+         </div>
+         <div n="13" type="chapter">
+            <p>Continet hic igitur ordo primam processionem pariter et 
 nascentium et nubentium et generantium Aeonum: Sophiae ex desiderio
 patris periculosissimum casum, Hori oportunissimum auxilium,
 Enthymeseos et coniunctae Passionis expiatum, Christi et
@@ -464,9 +452,9 @@ Pleromatis decucurrisse dicuntur, prima tragoediae scena. Alia
 autem trans siparium cothurnatio est, extra Pleroma dico. Et tamen
 si talis sub sinu patris intra ambitum Hori custodis, qualis
 extra iam in libero, ubi deus non erat?</p>
-<pb xml:id="v.2.p.400"/>
-
-<bibl n="Cap. XIV."/><p>Namque Enthymesis, sive iam Achamoth, quod abhinc scriptum
+            <pb xml:id="v.2.p.400"/>
+            <bibl n="Cap. XIV."/>
+            <p>Namque Enthymesis, sive iam Achamoth, quod abhinc scriptum
 hoc solo ininterpretabili nomine, ut cum vitio individuae
 Passionis explosa est in loca luminis aliena, quod Pleromatis res
 est, in vacuum atque inane illud Epicuri, miserabilis etiam de loco
@@ -498,12 +486,10 @@ orbaretur, consternatione, tum ignorantia. Nec ut mater eius.
 Illa enim Aeon. At haec pro condicione deterius, insurgente adhuc
 et alio fluctu, conversionis scilicet in Christum, a quo vivificata
 fuerat, et in hanc ipsam conversionem temperata.</p>
-<pb xml:id="v.2.p.402"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Age nunc, discant Pythagorici, agnoscant Stoici, Plato ipse,
+            <pb xml:id="v.2.p.402"/>
+         </div>
+         <div n="15" type="chapter">
+            <p> Age nunc, discant Pythagorici, agnoscant Stoici, Plato ipse,
 unde materia, quam innatam volunt, et originem et substantiam
 traxerit in omnem hanc struem mundi; quod nec Mercurius ille
 Trismegistus, magister omnium physicorum recogitavit. Audisti
@@ -532,10 +518,9 @@ saeculo. O risum illuminatorem! o fletum rigatorem! Et
 tamen poterat remedio iam agere cum illius loci horrore - omnem
 enim obscuritatem eius discussisset quotiens ridere voluisset, -
 vel ne cogeretur desertores suos supplicare.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Convertitur enim ad preces et ipsa more materno. Sed Christus, 
+         </div>
+         <div n="16" type="chapter">
+            <p>Convertitur enim ad preces et ipsa more materno. Sed Christus, 
 quem iam pigebat extra Pleroma proficisci, vicarium praeficit
 Paracletum. Soterem (hic erit Iesus, largito ei patre universorum
 Aeonum summam potestatem, subiciendis eis omnibus, uti <bibl n="Col. (??), 16."/>
@@ -558,10 +543,9 @@ aequiparantias corpulentiarum, ut duplex substantiarum condicio
 ordinaretur, de vitiis pessima, de conversione passionalis. Haec
 erit materia, quae nos commisit cum Hermogene ceterisque qui
 deum ex materia, non ex nihilo, operatum cuncta praesumunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Abhinc Achamoth expedita tandem de malis omnibus ecce iam
+         </div>
+         <div n="17" type="chapter">
+            <p> Abhinc Achamoth expedita tandem de malis omnibus ecce iam
 proficit et in opera maiora frugescit. Prae gaudio enim tanti ex
 infelicitate successus concalefacta simulque contemplatione ipsa
 angelicorum luminum, ut ita dixerim, subfermentata (pudet, sed
@@ -572,12 +556,10 @@ sibi intimarat. Peperit denique, et facta est exinde trinitas generum
 ex trinitate causarum, unum materiale, quod ex passione,
 aliud animale, quod ex conversione, tertium spiritale, quod ex
 imaginatione.</p>
-<pb xml:id="v.2.p.405"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>Hac auctoritate triam scilicet liberorum agendis rebus exercitior 
+            <pb xml:id="v.2.p.405"/>
+         </div>
+         <div n="18" type="chapter">
+            <p>Hac auctoritate triam scilicet liberorum agendis rebus exercitior 
 facta formare singula genera constituit. Sed spiritale quidem
 non ita potuit attingere, ut et ipsa spiritalis. Fare enim paria
 et consubstantiva in alterutrum valere societas naturae negavit. Eo
@@ -594,10 +576,9 @@ secundum status et situs operum, ut animalium quidem substantiarum,
 quas ad dexteram commendant, Patrem nuncupent, materiarum
 vero, quas ad laevam delegant, Demiurgum nominent, Regem
 autem communiter in universitatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Sed nec nominum proprietas competit proprietati operum, de 
+         </div>
+         <div n="19" type="chapter">
+            <p>Sed nec nominum proprietas competit proprietati operum, de 
 quibus nomina omnia, cum deberet illa haec omnia vocitari, a
 qua res agebantur, nisi quod iam nec ab illa. Cum enim dicant
 Achamoth in honorem Aeonum imagines commentatam, rursus hoc
@@ -613,10 +594,9 @@ feminam Achamoth, imaginem patris? et ignarum matris Demiurgum,
 multo magis patris? imaginem Nu ignorantis patrem et Angelos
 famulos, simulacra dominorum? Hoc est mulum de asino
 pingere, et Ptolemaeum describere de Valentino.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Igitur Demiurgus extra Pleromatis limites constitutus in ignominiosa
+         </div>
+         <div n="20" type="chapter">
+            <p> Igitur Demiurgus extra Pleromatis limites constitutus in ignominiosa
 aeterni exsilii vastitate novam provinciam condidit, hunc
 mundum, repurgata confusione et distincta diversitate duplicis substantiae
 illius disclusae, animalium et materiarum. Ex incorporalibus
@@ -639,10 +619,9 @@ quae illum et patrem et deum et regem ante Valentinianorum ingenia
 
 testantur, cur sibi quoque ista noluit esse nota, postea
 quaeram.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Interim tenendum Sophiam cognominari et Terram et Matrem, 
+         </div>
+         <div n="21" type="chapter">
+            <p>Interim tenendum Sophiam cognominari et Terram et Matrem, 
 qussi Matrem Terram, et quod magis rideas, etiam Spiritum Sanctum.
 Ita omnem illi honorem contulerunt feminae, puto et barbam,
 ne dixerim cetera. Alioquin Demiurgus adeo rerum non erat
@@ -652,20 +631,18 @@ non est. Certe tamen non fuisse se retro sciebat. Ergo et factum
 intellegebat et factitatorem facti esse quemcunque. Quomodo ergo
 solus sibi videbatur, etsi non certus, saltim suspectus de aliquo
 factitatore?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p>Tolerabilior infamia est apud illos in diabolum, vel quia origo 
+         </div>
+         <div n="22" type="chapter">
+            <p>Tolerabilior infamia est apud illos in diabolum, vel quia origo 
 sordidior capit. Ex nequitia enim maeroris illius deputatur, ex
 qua angelorum et daemonum et omnium spiritalium malitiarum
 genituras notant. Et tamen diabolum quoque opus Demiurgi affirmant,
 et Munditenentem appellant et superiorum magis gnarum <bibl n="Eph. VI, 12."/>
 defendunt, ut spiritalem natura, quam Demiurgum, ut animalem.
 Meretur ab illis praelationem cui omnes haereses procurantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Singularium autem potestatum arces his finibus collocant. In 
+         </div>
+         <div n="23" type="chapter">
+            <p>Singularium autem potestatum arces his finibus collocant. In 
 summis summitatibus praesidet tricenarius Pleroma, Horo signante
 lineam extremam. Inferius illum metatur medietatem Achamoth,
 filium calcans. Subest enim Demiurgus in Hebdomade sua, magis
@@ -681,10 +658,9 @@ elementis atque corporibus ignis inflabellatus est. Cuius originalem
 Sophiae passionem quia nondum ediderunt, ego interim argumentabor
 motiunculis eius excussum. Credas enim illam in tantis
 vexationibus etiam febricitasse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Cum talia de deo vel de diis, qualia de homine figmenta?
+         </div>
+         <div n="24" type="chapter">
+            <p> Cum talia de deo vel de diis, qualia de homine figmenta?
 Molitus enim mundum Demiurgus ad hominem manus confert, et
 substantiam ei capit non ex ista, inquiunt, arida, quam nos unicam
 novimus, terra (quasi non, etsi arida postmodum, adhuc
@@ -701,10 +677,9 @@ ex materia Demiurgus, similitudo autem animalis, hoc enim et
 Demiurgus. Habes duos. Interim carnalem superficiem postea
 aiunt choico supertextam, et hanc esse pelliceam tunicam obnoxiam
 sensui.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p> Inerat autem in Achamoth ex substantia Sophiae matris peculium
+         </div>
+         <div n="25" type="chapter">
+            <p> Inerat autem in Achamoth ex substantia Sophiae matris peculium
 <pb xml:id="v.2.p.409"/>
 
 quoddam seminis spiritalis, sicut et ipsa Achamoth in filio
@@ -722,10 +697,9 @@ dicunt, Ecclesiae supernae speculum et hominis censum,
 proinde eum ab Achamoth deputantes quemadmodum animalem a
 Demiurgo, choicum substantia á¼&#x80;Ï&#x81;Ï&#x87;á¿&#x86;Ï&#x82;, carnem materia. Habes
 novum, id est quadruplum, Geryonem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p>Sic et exitum singulis dividunt. Materiali quidem, id est carnali, 
+         </div>
+         <div n="26" type="chapter">
+            <p>Sic et exitum singulis dividunt. Materiali quidem, id est carnali, 
 quem et sinistrum vocant, indubitatum interitum; animali
 vero, quem et dextrum appellant, dubitatum eventum, utpote inter
 materialem spiritalemque nutanti et illac debito qua plurimum
@@ -746,12 +720,10 @@ et contactui et defunctui ingratis subiaceret. Materiale autem
 nihil in illo fuisse, utpote salutis alienum. Quasi aliis fuerit necessarius
 quam egentibus salute. Et totum hoc, ut carnis nostrae
 habitum alienando a Christo a spe etiam salutis expellant.</p>
-<pb xml:id="v.2.p.411"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p>Nunc reddo de Christo, is quem tanta licentia Iesum inserunt 
+            <pb xml:id="v.2.p.411"/>
+         </div>
+         <div n="27" type="chapter">
+            <p>Nunc reddo de Christo, is quem tanta licentia Iesum inserunt 
 quidam, quanta spiritale semen animali cum inflatu infulciunt,
 fartilia nescio quae commenti et hominum et deorum suorum. Esse
 etiam Demiurge suum Christum, filium naturalem. Denique animalem
@@ -776,10 +748,9 @@ Achamoth formandam substantivali, non agnitionali, forma cruci,
 
 id est Horo, fuerat innixus. Ita omnia in imagines urgent, plane
 et ipsi imaginarii Christiani.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p> Interes Demiurgus omnium adhuc nescins, etsi aliquid et ipse
+         </div>
+         <div n="28" type="chapter">
+            <p> Interes Demiurgus omnium adhuc nescins, etsi aliquid et ipse
 per prophetas contionabitur, ne huius quidem operis sui intellegens
 (dividunt enim et prophetiale patrocinium in Achamoth, in semen,
 in Demiurgum), ubi adventum Soteris accepit, propere et
@@ -788,10 +759,9 @@ Et de omnibus inluminatus ab illo etiam spem suam discit, quod
 successurus sit in locum matris. Ita exinde securus dispensationem
 mundi buius, vel maxime ecclesiae protegendae nomine, quanto
 tempore oportuerit, insequitur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p> Colligam nunc ex disperso ad concludendum, quae de totius
+         </div>
+         <div n="29" type="chapter">
+            <p> Colligam nunc ex disperso ad concludendum, quae de totius
 generis humani dispositione disserant. Triformem naturam primordio
 professi, et tamen inunitam in Adam, inde iam dividunt
 per singulares generum proprietates, nacti occasionem distinctionis
@@ -818,10 +788,9 @@ quae nunc quoque, si plenam atque perfectam notitiam
 adprehenderint istarum naeniarum, naturificatae iam spiritalis
 conditionis germanitate certam obtinebunt salutem, immo omnimodo
 debitam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p>Ideoque nec operationes necessarias sibi existimant, nec ulla 
+         </div>
+         <div n="30" type="chapter">
+            <p>Ideoque nec operationes necessarias sibi existimant, nec ulla 
 disciplinae munia observant, martyrii quoque eludentes necessitatem
 <pb xml:id="v.2.p.414"/>
 
@@ -843,10 +812,9 @@ feminae, adhaerendo; alioquin degenerem, nec legitimum veritatis,
 
 qui deversatus in mundo non amaverit feminam nec se ei iunxerit.
 Et quid facient spadones quos videmus apud illos?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p>Superest de consummatione et dispensatione mercedis. Ubi 
+         </div>
+         <div n="31" type="chapter">
+            <p>Superest de consummatione et dispensatione mercedis. Ubi 
 Achamoth totam messem seminis sui perfecerit, dein colligere in
 horreum coeperit, vel cum ad molas delatum et defarinatum in
 consparsionis alvearia absconderit, donec totum confermentetur,
@@ -861,10 +829,9 @@ sicut et scenam et Demiurgus tunc de Hebdomade caelesti in
 
 superiora mutabit, in vacuum iam coenaculum matris, sciens iam,
 nec videns illam. Nam si ita erat, semper ignorare maluisset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="32">
-<p> Humana vero gens in hoc exitus ibit: Choicae et materialis
+         </div>
+         <div n="32" type="chapter">
+            <p> Humana vero gens in hoc exitus ibit: Choicae et materialis
 <bibl n="Ies. XL, 6."/> notae totum interit interitum, quia omnis caro foenum; et anima
 mortalis apud illos, nisi quae salutem fide invenerit. Iustorum
 animae, id est nostrae, ad Demiurgum in medietatis receptacula
@@ -900,10 +867,9 @@ post excessum omnino non nubitur, ubi superindui potius quam
 despoliari, ubi etsi despolior sexui meo, deputor angelis, non
 angelus, non angela. Nemo mihi quicquam faciet, quem nec
 tunc masculum invenient.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="33">
-<p> Producam denique velut epicitharisma post fabulam tantam
+         </div>
+         <div n="33" type="chapter">
+            <p> Producam denique velut epicitharisma post fabulam tantam
 etiam illa quae, ne ordini obstreperent, et lectoris intentionem
 interiectione dispargerent, hunc malui in locum distulisse aliter
 atque aliter commendata ab emendatoribus Ptolemaei. Extiterunt
@@ -914,21 +880,18 @@ duabus facillimo prolatu. Primum coniugium Monogenem et Veritatem,
 ad imaginem quidem Cogitationis feminam Veritatem, ad
 imaginem voluntatis marem Monogenem. Voluntatis enim vis, ut
 quae effectum praestat Cogitationi, maris obtinet censum.</p>
-<pb xml:id="v.2.p.419"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="34">
-<p>Pudiciores alii honorem divinitatis recordati, ut etiam unius 
+            <pb xml:id="v.2.p.419"/>
+         </div>
+         <div n="34" type="chapter">
+            <p>Pudiciores alii honorem divinitatis recordati, ut etiam unius 
 coniugii dedecus ab eo avellerent, maluerunt nullum Bytho sexum
 deputare, et fortasse, Hoc deum, non, Hic deus, neutro genere
 pronuntiant. Alii contra magis et masculum et feminam dicunt,
 ne apud solos Lunenses Hermaphroditum existimet annalium commentator
 Fenestella.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="35">
-<p>Sunt qui nec principatum Bytho defendant, sed postumatum, 
+         </div>
+         <div n="35" type="chapter">
+            <p>Sunt qui nec principatum Bytho defendant, sed postumatum, 
 Ogdoadem ante omnia praemittentes, ex Tetrade quidem et ipsam,
 sed et aliis nominibus derivatam. Primo enim constituunt Proarchen,
 secundo AnennoÃ«ton, tertio Arrheton, quarto Aoraton. Ex
@@ -938,10 +901,9 @@ septimo loco Anonomaston, ex Invisibili quarto et octavo loco
 Agenneton. Hoc quae ratio disponat, ut singula binis locis et quidem
 tam intercisis nascantur, malo ignorare quam discere. Quid
 enim recti habent quae tam perverse proferuntur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="36">
-<p>Quanto meliores qui totum hoc taedium de medio amoliti nullum 
+         </div>
+         <div n="36" type="chapter">
+            <p>Quanto meliores qui totum hoc taedium de medio amoliti nullum 
 Aeonem voluerunt alium ex alio per gradus revera Gemonios
 structum, sed mappa, quod aiunt, missa semel octoiugem istam
 ex Patre et Ennoea eius exclusam. Ex ipso denique eius motu
@@ -952,12 +914,10 @@ autem praecogitavit cum protulit, tunc Ecclesia nuncupata est.
 Sonuit Homo Sermonem, et hic est primogenitus filius, et Sermoni
 accessit Vita, et Ogdoas prima conclusa est. Sed hoc taedium
 omnino pusillum.</p>
-<pb xml:id="v.2.p.420"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="37">
-<p> Accipe alia ingonia circulatoria insignioris apud eos magistri,
+            <pb xml:id="v.2.p.420"/>
+         </div>
+         <div n="37" type="chapter">
+            <p> Accipe alia ingonia circulatoria insignioris apud eos magistri,
 qui et pontificali sua auctoritate in hunc modum censuit: Est,
 <pb xml:id="v.2.p.421"/>
 
@@ -971,18 +931,16 @@ Unio. Hac igitur virtutes, Solitas, Singularitas, Unitas,
 Unio, ceteras prolationes Aeonum propagarunt. O differentia!
 Mutetur Unio et Unitas, Singularitas est summa et Solitas.
 Quamquam designaveris, unum est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="38">
-<p>Humanior iam Secundus, ut brevior, Ogdoadem in duas 
+         </div>
+         <div n="38" type="chapter">
+            <p>Humanior iam Secundus, ut brevior, Ogdoadem in duas 
 Tetradas dividens, in dexteram et sinistram, in lumen et tenebras;
 tantum quod desultricem et defetricem illam virtutem non
 vult ab aliquo deducere Aeonum, sed a fructibus de substantia
 venientibus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="39">
-<p>De ipso iam domino Iesu quanta diversitas scinditur! Hi ex 
+         </div>
+         <div n="39" type="chapter">
+            <p>De ipso iam domino Iesu quanta diversitas scinditur! Hi ex 
 omnium Aeonum flosculis eum construunt: illi ex solis decem
 constitisse contendunt, quos Sermo et Vita protulerunt; inde et in
 ipsum Sermonis et Vitae concurrerunt tituli: isti ex duodecim
@@ -996,11 +954,10 @@ quoniam ipsum Patrem pro magno nominis sacramento Hominem
 appellasse praesumpserint, ut quid amplius speres de eius dei fide
 cui nunc adaequaris. Talia ingenia superfruticant apud illos ex
 materni seminis redundantia. Atque ita inolescentes doctrinae
-Valentinianorum in silvas iam exoleverunt Gnosticorum.</p></div>
-<pb xml:id="v.2.p.423"/>
-
-<pb xml:id="v.2.p.424"/>
-</div></body></text>
-
-
+Valentinianorum in silvas iam exoleverunt Gnosticorum.</p>
+         </div>
+         <pb xml:id="v.2.p.423"/>
+         <pb xml:id="v.2.p.424"/>
+      </body>
+   </text>
 </TEI>

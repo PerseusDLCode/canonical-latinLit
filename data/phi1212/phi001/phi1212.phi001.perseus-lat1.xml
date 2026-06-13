@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- https://epidoc.stoa.org/schema/latest/tei-epidoc.rng -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader xml:lang="eng">
       <fileDesc>
          <titleStmt>
-            <title xml:lang="lat">Apologia</title>            
+            <title xml:lang="lat">Apologia</title>
             <author>Apuleius</author>
             <editor>Rudolf Helm</editor>
             <funder n="org:Mellon">The Mellon Foundation</funder>
@@ -31,6 +28,7 @@
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
             <date type="release">2011-03-14</date>
+            <idno type="CTS">urn:cts:latinLit:phi1212.phi001.perseus-lat1</idno>
          </publicationStmt>
          <sourceDesc>
             <biblStruct>
@@ -52,18 +50,19 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <refsDecl n="CTS">
-            <cRefPattern n="section"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-               <p>This pointer pattern extracts Section</p>
-            </cRefPattern>
-         </refsDecl>
          <refsDecl>
             <refState unit="section"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-section"/>
+         </textClass>
          <langUsage>
             <language ident="eng">English</language>
             <language ident="lat">Latin</language>
@@ -75,12 +74,9 @@
       </revisionDesc>
    </teiHeader>
    <text xml:lang="lat">
-      <body>
-         <div type="edition"
-              xml:lang="lat"
-              n="urn:cts:latinLit:phi1212.phi001.perseus-lat1">
-            <div type="textpart" n="1" subtype="section">
-               <p>
+      <body xml:base="urn:cts:latinLit:phi1212.phi001.perseus-lat1">
+         <div n="1" type="section">
+            <p>
 Certus equidem eram proque uero obtinebam, Maxime
 Cl(audi) quique in consilio estis, Sicinium Aemilianum, senem notissimae temeritatis, accusationem mei prius apud
 te coeptam quam apud se cogitatam penuria criminum
@@ -96,9 +92,9 @@ ultro eos ad accusandum crebris flagitationibus prouocaui.
 ibi uero Aemilianus cum te quoque acrius motum et ex
 uerbis rem factam uideret, quaerere occepit ex diffidentia
 latibulum aliquod temeritati.</p>
-            </div>
-            <div type="textpart" n="2" subtype="section">
-               <p>igitur Pontianum fratris sui <pb n="p.1"/>
+         </div>
+         <div n="2" type="section">
+            <p>igitur Pontianum fratris sui <pb n="p.1"/>
 filium, quem paulo prius occisum a me clamitarat, postquam ad subscribendum compellitur, ilico oblitus est; de
 morte cognati adolescentis subito tacere<del>m</del>. tanti criminis descriptione <add>ne</add> tamen omnino desistere uideretur, calumnia<add>m</add> magiae, quae facilius infamatur quam probatur,
 eam solum sibi delegit ad accusandum. ac ne id quidem
@@ -118,9 +114,9 @@ Lollius Vrbicus V. C. uerum uideri et ratum esse debere
 de consilio consularium uirorum pronuntiasset, contra clarissimam uocem iurauerit uecordissimus iste, tamen illud
 testamentum fictum esse, adeo ut aegre Lollius Vrbicus ab
 eius pernicie temperarit.</p>
-            </div>
-            <div type="textpart" n="3" subtype="section">
-               <p>quam quidem uocem et tua
+         </div>
+         <div n="3" type="section">
+            <p>quam quidem uocem et tua
 aequitate et mea innocentia fretus spero in hoc quoque
 iudicio erupturam, quippe qui sciens innocentem criminatur eo sane facilius, quod iam, ut dixi, mentiens apud
 praefectum urbi in amplissima causa conuictus est. namque peccatum semel ut bonus quisque postea sollicitius
@@ -152,19 +148,19 @@ dici, quae ipse possit aliis uere obiectare. quod si forte
 inepta uidebor et oppido friuola uelle defendere, illis debet <pb n="p.4"/>
 ea res uitio uorti, quibus turpe est etiam haec obiectasse,
 non mihi culpae dari, cui honestum erit etiam haec diluisse.</p>
-            </div>
-            <div type="textpart" n="4" subtype="section">
-               <p>Audisti ergo paulo prius in principio accusationis ita
+         </div>
+         <div n="4" type="section">
+            <p>Audisti ergo paulo prius in principio accusationis ita
 dici: <q>accusamus apud te philosophum formonsum et tam
 Graece quam Latine</q>—pro nefas—<q>disertissimum.</q> nisi
 fallor enim, his ipsis uerbis accusationem mei ingressus
 est Tannonius Pudens, homo uere ille quidem non disertissimus. quod utinam tam grauia formae et facundiae
 crimina uere mihi opprobrasset; non difficile ei respondissem quod <add>H</add>omericus Alexander Hectori:
 <quote rend="blockquote">
-                     <lb/>
-                     <foreign xml:lang="grc">οὔ τοι ἀπόβλητ᾽ ἐστὶ θεῶν ἐρικυδέα δῶρα,</foreign>
-                     <foreign xml:lang="grc">ὅσσα κεν αὐτοὶ δῶσιν, ἑκὼν δ᾽ οὐκ ἄν τις ἕλοιτο,</foreign>
-                  </quote>
+                  <lb/>
+                  <foreign xml:lang="grc">οὔ τοι ἀπόβλητ᾽ ἐστὶ θεῶν ἐρικυδέα δῶρα,</foreign>
+                  <foreign xml:lang="grc">ὅσσα κεν αὐτοὶ δῶσιν, ἑκὼν δ᾽ οὐκ ἄν τις ἕλοιτο,</foreign>
+               </quote>
 munera deum gloriosissima nequaquam aspernanda; quae
 tamen ab ipsis tribui sueta multis uolentibus non obtingunt. haec ego de forma respondissem. praeterea: licere
 etiam philosophis esse uoltu liberali; Pythagoram, qui primum se esse philosophum nuncuparit, eum sui saeculi
@@ -183,9 +179,9 @@ amoenus ac delicatus, horrore implexus atque impeditus,
 stuppeo tomento adsimilis et inaequaliter hirtus et globosus et congestus, prorsum inenodabilis diutina incuria
 non modo comendi, sed saltem expediendi et discriminandi:
 satis ut puto crinium crimen, quod illi quasi capitale intenderunt, refutatur.</p>
-            </div>
-            <div type="textpart" n="5" subtype="section">
-               <p>De eloquentia uero, si qua mihi fuisset, neque mirum
+         </div>
+         <div n="5" type="section">
+            <p>De eloquentia uero, si qua mihi fuisset, neque mirum
 neque inuidiosum deberet uideri, si ab ineunte aeuo unis
 studiis litterarum ex summis uiribus deditus omnibus aliis
 spretis uoluptatibus ad hoc aeui haud sciam anne super
@@ -200,16 +196,16 @@ eloqui non auderem? eundem me aio facundissimum esse,
 nam omne peccatum semper nefas habui; eundem disertissimum, quod nullum meum factum uel dictum extet,
 de quo di<add>s</add>serere publice non possim ita, ut iam de uorsibus di<add>s</add>sertabo quos a me factos quasi pudendos protulerunt, cum quidem me animaduertisti cum risu illis
 suscensentem, quod eos absone et indocte pronuntiarent.</p>
-            </div>
-            <div type="textpart" n="6" subtype="section">
-               <p>Primo igitur legerunt e ludicris meis epistolium de
+         </div>
+         <div n="6" type="section">
+            <p>Primo igitur legerunt e ludicris meis epistolium de
 dentifricio uersibus scriptum ad quendam Calpurnianum,
 qui cum aduersum me eas litteras promeret, non uidit
 profecto cupiditate laedendi, si quid mihi ex illis fieret
 criminosum, id mihi secum esse commune. nam petisse
 eum a me aliquid tersui dentibus uersus testantur:
 <quote rend="blockquote">
-                     <lb/>Calpurniane, salue properis uersibus.
+                  <lb/>Calpurniane, salue properis uersibus.
 <lb/>misi, ut petisti, <add>tibi</add> munditias dentium,
 <lb/>nitelas oris ex Arabicis frugibus,
 <lb/>tenuem, candificum, nobilem puluisculum,
@@ -217,15 +213,15 @@ eum a me aliquid tersui dentibus uersus testantur:
 <lb/>conuerritorem pridianae reliquiae,
 <lb/>ne qua uisatur tetra labes sordium,
 <lb/>restrictis forte si labellis riseris.</quote>
-                  <pb n="p.7"/>
+               <pb n="p.7"/>
 quaeso, quid habent isti uersus re aut uerbo pudendum,
 quid omnino quod philosophus suum nolit uideri? nisi
 forte in eo reprehendendus sum, quod Calpurniano puluisculum ex Arabicis frugibus miserim, quem multo aequius erat spurcissimo ritu Hiberorum, ut ait Catullus,
 sua sibi urina <q>dentem atque russam pumicare gingiuam.</q>
-               </p>
-            </div>
-            <div type="textpart" n="7" subtype="section">
-               <p>uidi ego dudum uix risum quosdam tenentis, cum munditias oris uidelicet orator ille aspere accusaret et dentifricium tanta indignatione pronuntiaret, quanta nemo quisquam uenenum. quidni? crimen haud contemnendum
+            </p>
+         </div>
+         <div n="7" type="section">
+            <p>uidi ego dudum uix risum quosdam tenentis, cum munditias oris uidelicet orator ille aspere accusaret et dentifricium tanta indignatione pronuntiaret, quanta nemo quisquam uenenum. quidni? crimen haud contemnendum
 philosopho, nihil in se sordidum sinere, nihil uspiam corporis aperti immundum pati ac fetulentum, praesertim
 os, cuius in propatulo et conspicuo usus homini creberrimus, siue ille cuipiam osculum ferat seu cum qui<del>c</del>quam
 sermocinetur siue in auditorio dissertet siue in templo
@@ -242,9 +238,9 @@ et pecudibus os humile et deorsum ad pedes deiectum,
 uestigio et pabulo proximum, nunquam ferme nisi mortuis <pb n="p.8"/>
 aut ad morsum exasperatis conspicitur: hominis uero
 nihil prius tacentis, nihil saepius loquentis contemplere.</p>
-            </div>
-            <div type="textpart" n="8" subtype="section">
-               <p>uelim igitur censor meus Aemilianus respondeat, unquamne
+         </div>
+         <div n="8" type="section">
+            <p>uelim igitur censor meus Aemilianus respondeat, unquamne
 ipse soleat pedes lauare; uel, si id non negat, contendat
 maiorem curam munditiarum pedibus quam dentibus inpertiendam. plane quidem, si quis ita ut tu, Aemiliane,
 nunquam ferme os suum nisi maledictis et calumniis
@@ -262,9 +258,9 @@ recluso, multae hiru<del>n</del>dines dentibus implectuntur; eas illi,
 cum egressus in praeripia fluminis hiauit, una ex auibus <pb n="p.9"/>
 fluuialibus amica auis iniecto rostro sine noxae periculo
 exculpit.</p>
-            </div>
-            <div type="textpart" n="9" subtype="section">
-               <p>Mitto haec. uenio ad ceteros uorsus ut illi uocant
+         </div>
+         <div n="9" type="section">
+            <p>Mitto haec. uenio ad ceteros uorsus ut illi uocant
 amatorios, quos tamen tam dure et rustice legere, ut
 odium mouerent. sed quid ad magica maleficia, quod ego
 pueros Scriboni Laeti, amici mei, carmine laudaui? an
@@ -287,7 +283,7 @@ scripta Diogenis Cynici et Zenonis Stoicae sectae conditoris <pb n="p.10"/>
 id genus plurima. recitem denuo, ut sciant me eorum
 non pigere:
 <quote rend="blockquote">
-                     <lb/>et Critias mea delicia est et salua, Charine,
+                  <lb/>et Critias mea delicia est et salua, Charine,
 <lb/>pars in amore meo, uita, tibi remanet;
 <lb/>ne metuas; nam me ignis et ignis torreat ut uult,
 <lb/>hasce duas flammas, dum potiar, patiar.
@@ -296,7 +292,7 @@ non pigere:
 recitem nunc et alios, quos illi quasi intemperantissimos
 postremum legere:
 <quote rend="blockquote">
-                     <lb/>florea serta, meum mel, et haec tibi carmina dono.
+                  <lb/>florea serta, meum mel, et haec tibi carmina dono.
 <lb/>carmina dono tibi, serta tuo genio,
 <lb/>carmina, uti, Critia, lux haec optata canatur,
 <lb/>quae bis septeno uere tibi remeat,
@@ -308,10 +304,10 @@ postremum legere:
 <lb/>proque rosis oris sauia purpurei.
 <lb/>quod si animam inspires donaci, iam carmina nostra
 <lb/>cedent uicta tuo dulciloquo calamo.</quote>
-               </p>
-            </div>
-            <div type="textpart" n="10" subtype="section">
-               <p>Habes crimen meum, Maxime, quasi improbi comisatoris
+            </p>
+         </div>
+         <div n="10" type="section">
+            <p>Habes crimen meum, Maxime, quasi improbi comisatoris
 de sertis et canticis compositum. hic illud etiam reprehendi
 animaduertisti, quod, cum aliis nominibus pueri uocentur,
 ego eos Charinum et Critian appellitarim. eadem igitur
@@ -332,34 +328,34 @@ nam cetera omnia, credo quod tam lepida non erant, igni
 deussit. disce igitur uersus Platonis philosophi in puerum
 Astera, si tamen tantus natu potes litteras discere:
 <lb/>
-                  <foreign xml:lang="grc">ἀστὴρ πρὶν μὲν ἔλαμπες ἐνὶ ξωοῖσιν Ἑῷος·
+               <foreign xml:lang="grc">ἀστὴρ πρὶν μὲν ἔλαμπες ἐνὶ ξωοῖσιν Ἑῷος·
 <lb/>νῦν δὲ θανὼν λάμπεις Ἕσπερος ἐν φθιμένοις.</foreign>
 item eiusdem Platonis in Alexin Phaedrumque pueros
 coniuncto carmine:
 <quote rend="blockquote">
-                     <lb/>
-                     <foreign xml:lang="grc">νῦν ὅτε μηδὲν Ἄλεξις ὅσον μόνον εἶφ᾽ ὅτι καλός,
+                  <lb/>
+                  <foreign xml:lang="grc">νῦν ὅτε μηδὲν Ἄλεξις ὅσον μόνον εἶφ᾽ ὅτι καλός,
 <lb/>ὦπται καὶ πάντῃ πᾶσι περιβλέπεται.</foreign>
-                     <pb n="p.12"/>
-                     <lb/>
-                     <foreign xml:lang="grc">θυμέ,</foreign>
-                     <note>
-                        <foreign xml:lang="grc">τί</foreign>
-                     </note>
-                     <foreign xml:lang="grc">μηνύεις κυσὶν ὀστέον</foreign>; <foreign xml:lang="grc">εἶτ᾽ ἀνιήσει
+                  <pb n="p.12"/>
+                  <lb/>
+                  <foreign xml:lang="grc">θυμέ,</foreign>
+                  <note>
+                     <foreign xml:lang="grc">τί</foreign>
+                  </note>
+                  <foreign xml:lang="grc">μηνύεις κυσὶν ὀστέον</foreign>; <foreign xml:lang="grc">εἶτ᾽ ἀνιήσει
 <lb/>ὕστερον. οὐχ οὕτω Φαῖδρον ἀπωλέσαμεν;</foreign>
-                  </quote>
+               </quote>
 ne pluris commemorem, nouissimum uersum eius de Dione
 Syracusano si dixero, finem faciam: <foreign xml:lang="grc">ὦ ἐμὸν ἐκμήνας θυμὸν
 ἔρωτι Δίων</foreign>.</p>
-            </div>
-            <div type="textpart" n="11" subtype="section">
-               <p>Sed sumne ego ineptus, qui haec etiam in
+         </div>
+         <div n="11" type="section">
+            <p>Sed sumne ego ineptus, qui haec etiam in
 iudicio? an uos potius calumniosi, qui etiam haec in
 accusatione, quasi ullum specimen morum sit uersibus
 ludere? Catullum ita respondentem maliuolis non legistis:
 <quote rend="blockquote">
-                     <lb/>nam castum esse decet pium poetam
+                  <lb/>nam castum esse decet pium poetam
 <lb/>ipsum, uersiculos nihil necesse est?</quote>
 Diuus Adrianus cum Voconi amici sui poetae tumulum
 uorsibus muneraretur, ita scripsit: <q>lasciuus uersu, mente
@@ -372,9 +368,9 @@ quos nunc percensui tanto sanctiores sunt, quanto apertiores, tanto pudicius com
 namque haec et id genus omnia dissimulare et occultare
 peccantis, profiteri et promulgare ludentis est; quippe
 natura uox innocentiae, silentium maleficio distributa.</p>
-            </div>
-            <div type="textpart" n="12" subtype="section">
-               <p>mitto enim dicere alta illa et diuina Platonica, rarissimo
+         </div>
+         <div n="12" type="section">
+            <p>mitto enim dicere alta illa et diuina Platonica, rarissimo
 cuique piorum ignara, ceterum omnibus profanis incognita: <pb n="p.13"/>
 geminam esse Venerem deam, proprio quamque amore et
 diuersis amatoribus pollentis; earum alteram uulgariam,
@@ -393,16 +389,16 @@ semper, eleganter Afranius hoc scriptum relinquat: <q>amabit <pb n="p.14"/>
 sapiens, cupient ceteri,</q> tamen si uerum uelis, Aemiliane,
 uel si haec intellegere unquam potes, non tam amat
 sapiens quam recordatur.</p>
-            </div>
-            <div type="textpart" n="13" subtype="section">
-               <p>da igitur ueniam Platoni philosopho uersuum eius de amore, ne ego necesse habeam
+         </div>
+         <div n="13" type="section">
+            <p>da igitur ueniam Platoni philosopho uersuum eius de amore, ne ego necesse habeam
 contra sententiam Neoptolemi Enniani pluribus philosophari; uel si tu id non facis, ego me facile patiar in
 huiuscemodi uersibus culpari cum Platone. tibi autem,
 Maxime, habeo gratiam propensam, cum has quoque appendices defensionis meae iccirco necessarias, quia accusationi
 rependuntur, tam attente audis. et ideo hoc etiam peto,
 quod mihi ante ipsa crimina superest audias, ut adhuc
 fecisti, libenter et diligenter.</p>
-               <p>Sequitur enim de speculo longa illa et censoria oratio,
+            <p>Sequitur enim de speculo longa illa et censoria oratio,
 de quo pro rei atrocitate paene diruptus est Pudens clamitans: <q>habet speculum philosophus, possidet speculum
 philosophus.</q> ut igitur habere concedam—ne aliquid
 obiecisse te credas, si negaro—, non tamen ex eo accipi
@@ -417,9 +413,9 @@ quam inspectio, illud etiam doceas necesse est, quando <pb n="p.15"/>
 et quibus praesentibus in speculum inspexerim, quoniam,
 ut res est, magis piaculum decernis speculum philosopho
 quam Cereris mundum profano uidere.</p>
-            </div>
-            <div type="textpart" n="14" subtype="section">
-               <p>Cedo nunc, si et inspexisse me fateor, quod tandem
+         </div>
+         <div n="14" type="section">
+            <p>Cedo nunc, si et inspexisse me fateor, quod tandem
 crimen est imaginem suam nosse eamque non uno loco
 conditam, sed quoquo uelis paruo speculo promptam
 gestare? an tu ignoras nihil esse aspectabilius homini
@@ -443,9 +439,9 @@ temporis dissimile redditur et ritu cadaueris unum uultum
 et immobilem possidet. tantum praestat imaginis artibus
 ad similitudinem referundam leuitas illa speculi fabra et
 splendor opifex.</p>
-            </div>
-            <div type="textpart" n="15" subtype="section">
-               <p>Aut igitur unius Hagesilai Lacedaemonii sententia nobis
+         </div>
+         <div n="15" type="section">
+            <p>Aut igitur unius Hagesilai Lacedaemonii sententia nobis
 sequenda est, qui se neque pingi neque fingi unquam diffidens formae suae passus est, aut si mos omnium ceterorum hominum retinendus uidetur in statuis et imaginibus non repudiandis, cur existimes imaginem suam cuique
 uisendam potius in lapide quam in argento, magis in tabula quam in speculo? an turpe arbitraris formam suam
 spectaculo assiduo explorare? an non Socrates philosophus
@@ -475,9 +471,9 @@ rentur, cum alicui corpori inciderunt spisso et splendido et
 leui, paribus angulis quibus inciderant resultent ad faciem
 suam reduces atque ita, quod extra tangant ac uisant, id
 intra speculum imaginentur.</p>
-            </div>
-            <div type="textpart" n="16" subtype="section">
-               <p>uideturne uobis debere philosophia haec omnia uestigare et inquirere et cuncta specula,
+         </div>
+         <div n="16" type="section">
+            <p>uideturne uobis debere philosophia haec omnia uestigare et inquirere et cuncta specula,
 uel uda uel suda soli, uidere? quibus praeter ista quae
 dixi etiam illa ratiocinatio necessaria est, cur in planis
 quidem speculis ferme pares optutus et imagines uideantur,
@@ -493,7 +489,7 @@ quem tu librum, Aemiliane, si nosses ac non modo campo
 et glebis, uerum etiam abaco et puluisculo te dedisses,
 mihi istud crede, quanquam teterrimum os tuum minimum
 a Thyesta tragico demutet, tamen profecto discendi cupidine speculum inuiseres et aliquando relicto aratro mirarere tot in facie tua sulcos rugarum.</p>
-               <p>At ego non mirer, si boni consulis me de isto distortissimo uultu tuo dicere, de moribus tuis multo truculentioribus reticere. ea res est: praeter quod non sum
+            <p>At ego non mirer, si boni consulis me de isto distortissimo uultu tuo dicere, de moribus tuis multo truculentioribus reticere. ea res est: praeter quod non sum
 iurgiosus, etiam libenter te nuper usque albus an ater
 esses ignoraui et adhuc <add>h</add>ercle non satis noui. id adeo
 factum, quod et tu rusticando obscurus es et ego discendo
@@ -505,10 +501,10 @@ uenit, quod qui forte constitit in loco lumine conlustrato
 atque eum alter e tenebris prospectat. nam ad eundem <pb n="p.19"/>
 modum tu quidem, quid ego in propatulo et celebri agam,
 facile e tenebris tuis arbitraris, cum ipse humilitate</p>
-            </div>
-            <div type="textpart" n="17" subtype="section">
-               <p>abdita et lucifuga non sis mihi mutuo conspicuus.</p>
-               <p>Ego adeo seruosne tu habeas ad agrum colendum an
+         </div>
+         <div n="17" type="section">
+            <p>abdita et lucifuga non sis mihi mutuo conspicuus.</p>
+            <p>Ego adeo seruosne tu habeas ad agrum colendum an
 ipse mutuarias operas cum uicinis tuis cambies, neque
 scio neque laboro. at tu me scis eadem die tris Oeae
 manu misisse, idque mihi patronus tuus inter cetera a te
@@ -540,9 +536,9 @@ ex urbe duxisse; quoniam ad uillam publicam uenerat,
 parum uisum qui uteretur, iussisse duos pueros in foro
 de mensa emi, eos quinque in Hispaniam duxisse. haec
 Pudens si legisset, ut mea opinio est, aut omnino huic maledicto supersedisset aut in tribus seruis multitudinem comitum philosophi quam paucitatem reprehendere maluisset.</p>
-            </div>
-            <div type="textpart" n="18" subtype="section">
-               <p>Idem mihi etiam paupertatem obprobrauit, acceptum
+         </div>
+         <div n="18" type="section">
+            <p>Idem mihi etiam paupertatem obprobrauit, acceptum
 philosopho crimen et ultro profitendum. enim paupertas
 olim philosophiae uernacula est, frugi, sobria, paruo potens, aemula laudis, aduersum diuitias possessa, habitu
 secura, cultu simplex, consilio benesuada, neminem umquam superbia inflauit, neminem inpotentia deprauauit,
@@ -564,9 +560,9 @@ populi reconciliator, quorum funus ob tenuis opes a populo
 Romano collatis <add>s</add>extantibus adornatum est, si Atilius Regulus, cuius agellus ob similem penuriam publica pecunia
 cultus est, si denique omnes illae ueteres prosapiae consulares et censoriae et triumphales breui usura lucis ad
 iudicium istud remissae audirent, auderesne paupertatem</p>
-            </div>
-            <div type="textpart" n="19" subtype="section">
-               <p>philosopho exprobrare apud tot consules pauperes? an tibi
+         </div>
+         <div n="19" type="section">
+            <p>philosopho exprobrare apud tot consules pauperes? an tibi
 Claudius Maximus idoneus auditor uidetur ad irridendam
 paupertatem, quod ipse uberem et prolixam rem familiarem <pb n="p.22"/>
 sortitus est? erras, Aemiliane, et longe huius animi frustra
@@ -584,9 +580,9 @@ cultu, dissimulatis facultatibus agunt et diuitias magnas
 administrant sine ostentatione, sine superbia, specie mediocritatis pauperum similes. quod si etiam ditibus ad
 argumentum modestiae quaeritur imago quaepiam et color
 paupertatis, cur eius pudeat tenuioris, qui eam non simulata<add>m</add>, sed uere fungimur?</p>
-            </div>
-            <div type="textpart" n="20" subtype="section">
-               <p>Possum equidem tibi et ipsius nominis controuersiam
+         </div>
+         <div n="20" type="section">
+            <p>Possum equidem tibi et ipsius nominis controuersiam
 facere, neminem nostrum pauperem esse qui superuacanea
 nolit, possit necessaria, quae natura oppido pauca sunt.
 namque is plurimum habebit, qui minimum desiderabit; <pb n="p.23"/>
@@ -607,9 +603,9 @@ Aemiliane, si pauperem me haberi uis, prius auarum esse
 doceas necesse est. quod si nihil in animo deest, de
 rebus extrariis quantum desit non laboro, quarum neque
 laus in copia neque culpa in penuria consistit.</p>
-            </div>
-            <div type="textpart" n="21" subtype="section">
-               <p>sed finge
+         </div>
+         <div n="21" type="section">
+            <p>sed finge
 haec aliter esse ac me ideo pauperem, quia mihi fortuna
 diuitias inuidit easque, ut ferme euenit, aut tutor imminuit aut inimicus eripuit aut pater non reliquit: hocine
 homini opprobrari, pauperiem, quod nulli ex animalibus
@@ -628,9 +624,9 @@ similiter etiam in ista uitae humanae tempestate<del>s</del> leuia
 sustentui, grauia demersui. equidem didici ea re praecedere maxime deos hominibus, quod nulla re ad usum
 sui indigeant, igitur ex nobis cui quam minimis opus sit,
 eum esse deo similiorem.</p>
-            </div>
-            <div type="textpart" n="22" subtype="section">
-               <p>Proinde gratum habui, cum ad contumeliam diceretis
+         </div>
+         <div n="22" type="section">
+            <p>Proinde gratum habui, cum ad contumeliam diceretis
 rem familiarem mihi peram et baculum fuisse. quod utinam tantus animi forem, ut praeter eam supellectilem
 nihil quicquam requirerem, sed eundem ornatum digne
 gestarem, quem <del>so</del>Crates ultro diuitiis abiectis appetiuit.
@@ -645,20 +641,20 @@ ad hoc Homericis uersibus, quibus ille Cretam insulam
 nobilitat. principium dicam, ne me haec ad defensionem
 putes confinxisse:
 <quote rend="blockquote">
-                     <lb/>
-                     <del>
-                        <foreign xml:lang="grc">κρήτη</foreign>
-                     </del>
-                     <note>
-                        <foreign xml:lang="grc">πήρη</foreign>
-                     </note>
-                     <foreign xml:lang="grc">τις πόλις ἐστὶ μέσῳ ἐνὶ οἴνοπι
+                  <lb/>
+                  <del>
+                     <foreign xml:lang="grc">κρήτη</foreign>
+                  </del>
+                  <note>
+                     <foreign xml:lang="grc">πήρη</foreign>
+                  </note>
+                  <foreign xml:lang="grc">τις πόλις ἐστὶ μέσῳ ἐνὶ οἴνοπι
 <lb/>τύφῳ</foreign>
-                     <del>
-                        <foreign xml:lang="grc">πόντῳ</foreign>
-                     </del>
-                     <foreign xml:lang="grc">,</foreign>
-                  </quote>
+                  <del>
+                     <foreign xml:lang="grc">πόντῳ</foreign>
+                  </del>
+                  <foreign xml:lang="grc">,</foreign>
+               </quote>
 iam cetera tam mirifica, quae si tu legisses, magis mihi
 peram quam nuptias Pudentillae inuidisses. peram et
 baculum tu philosophis, exprobrares igitur et equitibus
@@ -674,10 +670,10 @@ sordent—, ipse inquam Hercules lustrator orbis, purgator ferarum, gentium domi
 terras peragraret, paulo prius quam in caelum ob uirtutes
 as<del>s</del>citus est, neque una pelli uestitior fuit neque uno
 baculo comitatior. <pb n="p.26"/>
-               </p>
-            </div>
-            <div type="textpart" n="23" subtype="section">
-               <p>Quod si haec exempla nihili putas ac me non ad causam agundam, uerum ad censum dis<add>s</add>erundum uocasti, ne
+            </p>
+         </div>
+         <div n="23" type="section">
+            <p>Quod si haec exempla nihili putas ac me non ad causam agundam, uerum ad censum dis<add>s</add>erundum uocasti, ne
 quid tu rerum mearum nescias, si tamen nescis, profiteor
 mihi ac fratri meo relictum a patre ⟨HS XX⟩ paulo secus, idque a me longa peregrinatione et diutinis studiis
 et crebris liberalitatibus modice imminutum. nam et amicorum plerisque opem tuli et magistris plurimis gratiam
@@ -692,9 +688,9 @@ cuipiam obiectare, qui nuper usque agellum Zarathensem,
 quem tibi unicum pater tuus reliquerat, solus uno asello
 ad tempestiuum imbrem triduo exarabas. neque enim diu
 est, cum te crebrae mortes propinquorum immeritis hereditatibus fulserunt, unde tibi potius quam ob istam teterrimam faciem Charon nomen est.</p>
-            </div>
-            <div type="textpart" n="24" subtype="section">
-               <p>De patria mea uero, quod eam sitam Numidiae et
+         </div>
+         <div n="24" type="section">
+            <p>De patria mea uero, quod eam sitam Numidiae et
 Gaetuliae in ipso confinio mei<add>s</add> scriptis ostendistis, quibus
 memet professus sum, cum Lolliano Auito c. u. praesente
 publice dissererem, Seminumidam et Semigaetulum, non
@@ -720,10 +716,10 @@ pari, spero, honore et existimatione tueor. cur ergo illa
 protuli? ut mihi tu, Aemiliane, minus posthac suscenseas,
 potiusque ut ueniam inpertias, si per neglegentiam forte
 non elegi illud tuum Atticum Zarat, ut in eo nascerer. <pb n="p.28"/>
-               </p>
-            </div>
-            <div type="textpart" n="25" subtype="section">
-               <p>Nonne uos puditum est haec crimina tali uiro audiente
+            </p>
+         </div>
+         <div n="25" type="section">
+            <p>Nonne uos puditum est haec crimina tali uiro audiente
 tam adseuerate obiectare, friuola et inter se repugnantia
 simul promere et utraque tamen reprehendere? at non
 contraria accusastis? peram et baculum ob auctoritatem,
@@ -732,14 +728,14 @@ deparci, tris libertos ut profusi, praeterea eloquentiam Graecam, patriam barbar
 apud uirum seuerum et totius prouinciae negotiis occupatum? quin, inquam, uana haec conuicia aufertis? quin
 ostenditis quod insimulauistis, scelera immania et inconcessa maleficia et artis nefandas? cur uestra oratio rebus
 flaccet, strepitu uiget?</p>
-               <p>Aggredior enim iam ad ipsum crimen magiae, quod
+            <p>Aggredior enim iam ad ipsum crimen magiae, quod
 ingenti tumultu ad inuidiam mei accensum frustrata expectatione omnium per nescio quas anilis fabulas defraglauit. ecquandone uidisti, Maxime, flammam stipula
 exortam claro crepitu, largo fulgore, cito incremento,
 sed enim materia leui, caduco incendio, nullis reliquiis?
 em tibi illa accusatio iurgiis inita, uerbis aucta, argumentis defecta, nullis post sententiam tuam reliquiis calumniae permansura. quae quidem omnis Aemiliano fuit
 in isto uno destinata, me magum esse, et ideo mihi libet
 quaerere ab eruditissimis eius aduocatis, quid sit magus.</p>
-               <p>Nam si, quod ego apud plurimos lego, Persarum lingua <pb n="p.29"/>
+            <p>Nam si, quod ego apud plurimos lego, Persarum lingua <pb n="p.29"/>
 magus est qui nostra sacerdos, quod tandem est crimen,
 sacerdotem esse et rite nosse atque scire atque callere
 leges cerimoniarum, fas sacrorum, ius religionum, si quidem
@@ -752,9 +748,11 @@ Maxime, recognosce: <foreign xml:lang="grc">δὶς ἑπτὰ δὲ γενόμ�
 σωφρονέστατος καὶ ὁ ἀνδρειότατος. ὧν ὁ μὲν μαγείαν τε
 διδάσκει τὴν Ζωροάστρου τοῦ Ὠρομάζου· ἔστι δὲ τοῦτο
 θεῶν θεραπεία·
-διδάσκει δὲ καὶ τὰ βασιλικά.</foreign> </p>
-            </div>
-            <div type="textpart" n="26" subtype="section"><p>auditisne
+διδάσκει δὲ καὶ τὰ βασιλικά.</foreign>
+            </p>
+         </div>
+         <div n="26" type="section">
+            <p>auditisne
 magiam, qui eam temere accusatis, artem esse dis immortalibus acceptam, colendi eos ac uenerandi pergnaram,
 piam scilicet et diuini scientem, iam inde a Zoroastre et
 Oromaze auctoribus suis nobilem, caelitum antistitam,
@@ -774,9 +772,9 @@ qualem isti dicunt in discrimen capitis deducit, quibus
 comitibus, quibus scrupulis, quibus custodibus perniciem
 caecam et ineuitabilem prohibeat? nullis scilicet; et ideo
 id genus crimen non est eius accusare, qui credit.</p>
-            </div>
-            <div type="textpart" n="27" subtype="section">
-               <p>uerum
+         </div>
+         <div n="27" type="section">
+            <p>uerum
 haec ferme communi quodam errore imperitorum philosophis obiectantur, ut partim eorum qui corporum causas
 meras et simplicis rimantur irreligiosos putent eoque aiant
 deos abnuere, ut Anaxagoram et Leucippum et Democritum et Epicurum ceterosque rerum naturae patronos,
@@ -786,8 +784,8 @@ fuere Epimenides et Orpheus et Pythagoras et Ostanes,
 ac dein similiter suspectata Empedocli catharmoe, Socrati
 daemonion, Platonis <foreign xml:lang="grc">τὸ ἀγαθόν</foreign>. gratulor igitur mihi, cum
 et ego tot ac tantis uiris adnumeror. <pb n="p.31"/>
-               </p>
-               <p>Ceterum ea quae ab illis ad ostendendum crimen obiecta sunt uana et inepta simpliciter uereor, ne ideo tantum crimina putes, quod obiecta sunt. <q>cur</q> inquit
+            </p>
+            <p>Ceterum ea quae ab illis ad ostendendum crimen obiecta sunt uana et inepta simpliciter uereor, ne ideo tantum crimina putes, quod obiecta sunt. <q>cur</q> inquit
 <q>piscium quaedam genera quaesisti?</q> quasi id cognitionis
 gratia philosopho facere non liceat, quod luxurioso gulae
 causa liceret. <q>cur mulier libera tibi nupsit post annos
@@ -804,9 +802,9 @@ quid, si etiam senex adsistente me corruisset uel morbo
 corporis impeditus uel lubrico soli prolapsus? hiscine
 argumentis magian probatis, casu pueruli et matrimonio
 mulieris et obsonio piscium?</p>
-            </div>
-            <div type="textpart" n="28" subtype="section">
-               <p>Possem equidem bono periculo uel his dictis contentus
+         </div>
+         <div n="28" type="section">
+            <p>Possem equidem bono periculo uel his dictis contentus
 perorare: quoniam mihi pro accusationis longitudine largiter aquae superest, cedo, si uidetur, singula consideremus.
 atque ego omnia obiecta, seu uera seu falsa sunt, non
 negabo, sed perinde atque si facta sint fatebor, ut omnis
@@ -835,9 +833,9 @@ non mea culpa, desertis liberalibus studiis ac repudiata
 omni disciplina, scelestis accusationis huius rudimentis
 patruo Aemiliano potius quam fratri Pontiano similem
 futurum.</p>
-            </div>
-            <div type="textpart" n="29" subtype="section">
-               <p>Nunc, ut institui, proficiscar ad omnia Aemiliani
+         </div>
+         <div n="29" type="section">
+            <p>Nunc, ut institui, proficiscar ad omnia Aemiliani
 huiusce deliramenta orsus ab eo, quod ad suspicionem
 magiae quasi ualidissimum in principio dici animaduertisti,
 nonnulla me piscium genera per quosdam piscatores pretio
@@ -861,9 +859,9 @@ tamen quantitatem nullam taxauere, ne, si mediocre pretium dixissent, contemnere
 —si in his, ut dico, nulla suspicio est: respondeat mihi
 Aemilianus, quo proximo signo ad accusationem magiae
 sit inductus.</p>
-            </div>
-            <div type="textpart" n="30" subtype="section">
-               <p>'Pisces' inquit <q>quaeris.</q> nolo negare. sed, oro te,
+         </div>
+         <div n="30" type="section">
+            <p>'Pisces' inquit <q>quaeris.</q> nolo negare. sed, oro te,
 qui pisces quaerit, magus est? equidem non magis arbitror
 quam si lepores quaererem uel apros uel altilia. an soli
 pisces habent aliquit occultum aliis, sed magis cognitum?
@@ -880,7 +878,7 @@ hanc rem solere; ille enim, quantum scio, enumerat uittas
 mollis et uerbenas pinguis et tura mascula et licia discolora, praeterea laurum fragilem, limum durabilem, ceram
 liquabilem, nec minus quae iam in opere serio scripsit:
 <quote rend="blockquote">
-                     <lb/>falcibus et messae ad lunam quaeruntur aenis
+                  <lb/>falcibus et messae ad lunam quaeruntur aenis
 <lb/>pubentes herbae nigri cum lacte ueneni.
 <lb/>quaeritur et nascentis equi de fronte reuulsus
 <lb/>et matri praereptus amor.</quote>
@@ -897,17 +895,17 @@ epistulam legere nequiuisse. igitur unum etiam
 poetam Latinum attingam, uersus ipsos, quos agnoscent
 qui Laeuium legere:
 <quote rend="blockquote">
-                     <lb/>philtra omnia undique eruunt:
+                  <lb/>philtra omnia undique eruunt:
 <lb/>antipathes illud quaeritur,
 <lb/>trochiscili, ung<add>u</add>es, taeniae,
 <lb/>radiculae, herbae, surculi,
 <lb/>saurae inlices bicodulae,
 <lb/>hinnientium dulcedines.
 </quote>
-               </p>
-            </div>
-            <div type="textpart" n="31" subtype="section">
-               <p>haec et alia quaesisse me potius quam pisces longe uerisimilius confinxisses (his etenim fortasse per famam peruulgatam fides fuisset), si tibi ulla eruditio adfuisset;
+            </p>
+         </div>
+         <div n="31" type="section">
+            <p>haec et alia quaesisse me potius quam pisces longe uerisimilius confinxisses (his etenim fortasse per famam peruulgatam fides fuisset), si tibi ulla eruditio adfuisset;
 enimuero piscis ad quam rem facit captus nisi ad epulas
 coctus? ceterum ad magian nihil quicquam uidetur mihi
 adiutare. dicam unde id coniectem. Pythagoram plerique
@@ -925,7 +923,7 @@ hunc modum memorauit: <foreign xml:lang="grc">ἣ τόσα φάρμακα ἤδ�
 εὐρεῖα χθών</foreign> itemque alibi carminum similiter:
 
 <quote rend="blockquote" xml:lang="greek">
-                     <lb/>th=| plei=sta fe/rei zei/dwros a)/roura
+                  <lb/>th=| plei=sta fe/rei zei/dwros a)/roura
 <lb/>fa/rmaka, polla\ me\n e)sqla\ memigme/na, polla\ de\ lugra/,</quote>
 cum tamen numquam apud eum marino aliquo et piscolento medicauit nec Prot<del>h</del>eus faciem nec Vlixes scrobem
 nec Aeolus follem nec Helena creterram nec Circe poculum nec Venus cingulum. at uos soli reperti estis ex
@@ -935,9 +933,9 @@ uentribus insuatis. igitur ut solebat ad magorum cerimonias aduocari Mercurius c
 Venus et Luna noctium conscia et manium potens Triuia,
 uobis auctoribus posthac Neptunus cum Salacia et Portuno <pb n="p.37"/>
 et omni choro Nerei ab aestibus fretorum ad aestus amorum transferentur.</p>
-            </div>
-            <div type="textpart" n="32" subtype="section">
-               <p>Dixi, cur non arbitrer quicquam negotii esse magis et
+         </div>
+         <div n="32" type="section">
+            <p>Dixi, cur non arbitrer quicquam negotii esse magis et
 piscibus. nunc, si uidetur, credamus Aemiliano solere
 pisces etiam ad magicas potestates adiutare. num ergo
 propterea quicumque quaerit et ipse magus est? eo quidem pacto et qui myoparonem quaesierit pirata erit et
@@ -958,10 +956,10 @@ cicutam uel sucum papaueris emissem, item alia eiusdem
 modi quorum moderatus usus salutaris, sed commixtio uel
 quantitas noxia est, quis aequo animo pateretur, si me per
 haec ueneficii arcesseres, quod ex illis potest homo occidi? <pb n="p.38"/>
-               </p>
-            </div>
-            <div type="textpart" n="33" subtype="section">
-               <p>Videamus tamen, quae fuerint piscium genera tam
+            </p>
+         </div>
+         <div n="33" type="section">
+            <p>Videamus tamen, quae fuerint piscium genera tam
 necessaria ad habendum tamque rara ad repperiendum, ut
 merito statuto praemio quaererentur. tria omnino nominauerunt, unum falsi, duo mentiti; falsi, quod leporem
 marinum fuisse dixerunt qui alius omnino piscis fuit,
@@ -979,10 +977,10 @@ haesitato tandem uirile marinum nescio qua circumlocutione male ac sordide nomin
 pacto repperiens munditer dicere ad mea scripta confugit
 et quodam libro meo legit: <q>interfeminium tegat et femoris
 obiectu et palmae uelamento.</q>
-               </p>
-            </div>
-            <div type="textpart" n="34" subtype="section">
-               <p>Hic etiam pro sua grauitate uitio mihi uortebat, quod
+            </p>
+         </div>
+         <div n="34" type="section">
+            <p>Hic etiam pro sua grauitate uitio mihi uortebat, quod
 me nec sordidiora dicere honeste pigeret. at ego illi contra
 iustius exprobrarim, quod qui eloquentiae patrocinium
 uulgo profiteatur etiam honesta dictu sordide blateret ac
@@ -1001,9 +999,9 @@ pectinem comendo capillo quaesitum uel aucupandis uolantibus piscem accipitrem a
 igitur ad hunc uestrum locum non minus insulse quam
 absurde commentum, me hasce nugas marinas et quiscilias
 litoralis neque pretio neque gratis quaesisse.</p>
-            </div>
-            <div type="textpart" n="35" subtype="section">
-               <p>Illud etiam praeterea respondeo, nescisse uos, quid a
+         </div>
+         <div n="35" type="section">
+            <p>Illud etiam praeterea respondeo, nescisse uos, quid a
 me quaesitum fingeretis. haec enim friuola quae nominastis pleraque in litoribus omnibus congestim et aceruatim iacent et sine ullius opera quamlibet leuiter motis
 flucticulis ultro foras euoluuntur. quin ergo dicitis me
 eadem opera pretio impenso per plurim<del>is</del>os piscatoris
@@ -1023,9 +1021,9 @@ proxima humanitate, qui hasce eorum argumentationes
 diu hercle perpessus sis; equidem, cum haec ab illis quasi
 grauia et uincibilia dicerentur, illorum stultitiam ridebam,
 tuam patientiam mirabar.</p>
-            </div>
-            <div type="textpart" n="36" subtype="section">
-               <p>Ceterum quam ob rem plurimos iam piscis cognouerim,
+         </div>
+         <div n="36" type="section">
+            <p>Ceterum quam ob rem plurimos iam piscis cognouerim,
 quorundam adhuc nescius esse nolim, discat Aemilianus,
 quoniam usque adeo rebus meis curat; quanquam est
 iam praecipiti aeuo et occidua senectute, tamen, si uidetur,
@@ -1035,7 +1033,7 @@ Aristotelen dico et Theop<add>h</add>rastum et <del>t</del>Eudemum et Lyconem ce
 genitu animalium deque uictu deque particulis deque omni
 differentia reliquerunt. bene quod apud te, Maxime, causa
 agitur, qui pro tua eruditione legisti profecto Aristotelis <pb n="p.41"/>
-                  <foreign xml:lang="grc">περὶ ζῴων γενέσεως, περὶ ζῴων ἀνατομῆς, περὶ ζῴων ἱστορίας</foreign>
+               <foreign xml:lang="grc">περὶ ζῴων γενέσεως, περὶ ζῴων ἀνατομῆς, περὶ ζῴων ἱστορίας</foreign>
 multiiuga uolumina, praeterea problemata innumera eiusdem, tum ex eadem secta ceterorum, in quibus id genus
 uaria tractantur. quae tanta cura conquisita si honestum
 et gloriosum illis fuit scribere, cur turpe sit nobis experiri, praesertim cum ordinatius et cohibilius eadem
@@ -1048,9 +1046,9 @@ habuere sedulique, naturalium quaestionum, atque eum
 maxime, in quo plura de piscium genere tractata sunt.
 interea, dum hic quaerit, ego exemplum rei competens
 dixero.</p>
-            </div>
-            <div type="textpart" n="37" subtype="section">
-               <p>Sophocles poeta Euripidi aemulus et superstes, uixit
+         </div>
+         <div n="37" type="section">
+            <p>Sophocles poeta Euripidi aemulus et superstes, uixit
 enim ad extremam senectam, cum igitur accusaretur a
 filio suomet dementiae, quasi iam per aetatem desiperet,
 protulisse dicitur Coloneum suam, peregregiam tragoediarum, quam forte tum in eo tempore conscribebat, eam
@@ -1061,13 +1059,13 @@ iudices tanto poetae adsurrexisse, miris laudibus eum
 tulisse ob argumenti sollertiam et coturnum facundiae,
 nec ita multum omnis afuisse quin accusatorem potius
 dementiae condemnarent.</p>
-               <p>Inuenisti tu librum? beasti. cedo enim experiamur,
+            <p>Inuenisti tu librum? beasti. cedo enim experiamur,
 an et mihi possint in iudicio litterae meae prodesse.
 lege pauca de principio, dein quaedam de piscibus. at
 tu interea, dum legit, <del>t</del>aquam<del>quam</del> sustine.—</p>
-            </div>
-            <div type="textpart" n="38" subtype="section">
-               <p>Audisti, Maxime, quorum pleraque scilicet legeras
+         </div>
+         <div n="38" type="section">
+            <p>Audisti, Maxime, quorum pleraque scilicet legeras
 apud antiquos philosophorum. et memento de solis piscibus haec uolumina a me conscripta, qui eorum coitu progignantur, qui ex limo coalescant, quotiens et quid anni
 cuiusque eorum generis feminae subent<del>ant</del>, mares suriant,
 quibus membris et causis discrerit natura uiuiparos eorum
@@ -1086,34 +1084,34 @@ igitur quae dicam. iam me clamabis magica nomina Aegyptio uel Babylonico ritu pe
 λεπιδωτά, φολιδωτά, δερμόπτερα, στεγανόποδα, μονήρη, συναγελαστικά</foreign>—possum etiam pergere; sed non est operae in
 istis diem terere, ut sit mihi tempus adgredi ad cetera.
 haec interim quae dixi pauca recita Latine a me enuntiata.—</p>
-            </div>
-            <div type="textpart" n="39" subtype="section">
-               <p>Vtrum igitur putas philosopho non secundum Cynicam
+         </div>
+         <div n="39" type="section">
+            <p>Vtrum igitur putas philosopho non secundum Cynicam
 temeritatem rudi et indocto, sed qui se Platonicae scolae
 meminerit, utrum ei putas turpe scire ista an nescire,
 neglegere an curare, nosse quanta sit etiam in istis prouidentiae ratio an <add>de</add> diis immortalibus matri et patri
 credere? Q. Ennius hedyphagetica <del>a</del> uersibus scribsit; innumerabilia genera piscium enumerat, quae scilicet curiose
 cognorat. paucos uersus memini, eos dicam:
 <quote rend="blockquote">
-                     <lb/>Omnibus ut Clipea praestat mustela marina,
+                  <lb/>Omnibus ut Clipea praestat mustela marina,
 <lb/>mures sunt Aeni, asp<del>e</del>ra ostrea plurima Abydi<del>mus</del>. <pb n="p.44"/>
-                     <lb/>Mytilenae est pecten C<add>h</add>aradrumque apud Ambraciae sus.
+                  <lb/>Mytilenae est pecten C<add>h</add>aradrumque apud Ambraciae sus.
 <lb/>Brundisii sargus bonus est; hunc, magnus si erit, sume.
 <lb/>apriculum piscem scito primum esse Tarenti;
 <lb/>Surrenti t<add>u</add> elopem fac emas, glaucumque aput Cumas.
 <lb/>quid scarum praeterii cerebrum Iouis paene sup<del>p</del>remi
 <lb/>(Nestoris ad patriam hic capitur magnusque bonusque)
 <lb/>melanurum, turdum, merulamque umbramque marinam. <pb n="p.45"/>
-                     <lb/>polypus Corcyrae, caluaria pinguia <add>a</add>carnae,
+                  <lb/>polypus Corcyrae, caluaria pinguia <add>a</add>carnae,
 <lb/>purpura<del>m</del>, mu<del>r</del>riculi, mures, dulces quoque echini.
 </quote>
 alios etiam multis uersibus decorauit, et ubi gentium quisque eorum, qualiter assus aut iurulentus optime sapiat,
 nec tamen ab eruditis reprehenditur, ne ego reprehendar,
 qui res paucissimis cognitas Graece et Latine propriis
 et elegantibus uocabulis conscribo.</p>
-            </div>
-            <div type="textpart" n="40" subtype="section">
-               <p>Cum hoc satis dixi, tum aliud accipe. quid enim
+         </div>
+         <div n="40" type="section">
+            <p>Cum hoc satis dixi, tum aliud accipe. quid enim
 tandem, si medicinae neque instudiosus neque imperitus
 quaepiam remedia ex piscibus quaero? ut sane sunt
 plurima cum in aliis omnibus rebus eodem naturae munere
@@ -1145,10 +1143,10 @@ suillorum in uentre eius conexa et catenata sunt. quod
 Aristoteles si <add>scisset, n</add>umquam profecto omisisset scribto
 prodere, qui aselli piscis solius omnium in medio aluo
 corculum situm pro maximo memorauit.</p>
-            </div>
-            <div type="textpart" n="41" subtype="section">
-               <p>
-                  <q>piscem</q> inquit
+         </div>
+         <div n="41" type="section">
+            <p>
+               <q>piscem</q> inquit
 <q>proscidisti.</q> hoc quis ferat philosopho crimen esse, quod
 lanio uel coquo non fuisset? <q>piscem proscidisti.</q> quod
 crudum, id accusas? si cocto uentrem rusparer, hepatia
@@ -1161,21 +1159,21 @@ haruspicem, omnium deum sacerdotem? hoc in me accusas,
 quod ego et Maximus in Aristotele miramur? cuius nisi
 libros bibliothecis exegeris et studiosorum manibus extorseris, accusare me non potes. sed de hoc paene plura
 quam debui.</p>
-               <p>Nunc praeterea uide, quam ipsi sese reuincant; aiunt
+            <p>Nunc praeterea uide, quam ipsi sese reuincant; aiunt
 mulierem magicis artibus, marinis illecebris a me petitam
 eo in tempore, quo me non negabunt in Gaetuliae mediterran<add>e</add>is montibus fuisse, ubi pisces per Deucalionis diluuia repperientur. quod ego gratulor nescire istos legisse
 me Theophrasti quoque <foreign xml:lang="grc">περὶ δακέτων καὶ βλητ</foreign>
-                  <note>
-                     <foreign xml:lang="grc">ικ</foreign>
-                  </note>
-                  <foreign xml:lang="grc">ῶν</foreign> et
+               <note>
+                  <foreign xml:lang="grc">ικ</foreign>
+               </note>
+               <foreign xml:lang="grc">ῶν</foreign> et
 Nicandri <foreign xml:lang="grc">θηριακά</foreign>; ceterum me etiam ueneficii reum postularent; at quidem hoc negotium ex lectione et aemulatione
 Aristoteli nactus sum, nonnihil et Platone meo adhortante,
 qui ait eum, qui ista uestiget, <foreign xml:lang="grc">ἀμεταμέλητον παιδιὰν ἐν βίῳ
 παίζειν</foreign>.</p>
-            </div>
-            <div type="textpart" n="42" subtype="section">
-               <p>Nunc quoniam pisces horum satis patuerunt, accipe
+         </div>
+         <div n="42" type="section">
+            <p>Nunc quoniam pisces horum satis patuerunt, accipe
 aliud pari quidem stultitia, sed multo tanta uanius et
 nequius excogitatum. scierunt et ipsi argumentum piscarium futile et nihil futurum, praeterea nouitatem eius
 ridiculam, (quis enim fando audiuit ad magica maleficia <pb n="p.48"/>
@@ -1198,9 +1196,9 @@ esset crumina cum parti eorum, ceteri ut forent distributi;
 unum etiam denarium ex eo numero habere M. Catonem
 philosophum; quem se a pedisequo in stipe Apollinis
 accepisse Cato confessus est.</p>
-            </div>
-            <div type="textpart" n="43" subtype="section">
-               <p>Haec et alia apud plerosque de magiis et pueris lego <pb n="p.49"/>
+         </div>
+         <div n="43" type="section">
+            <p>Haec et alia apud plerosque de magiis et pueris lego <pb n="p.49"/>
 equidem, sed dubius sententiae sum, dicamne fieri posse
 an negem, quamquam Platoni credam inter deos atque
 homines natura et loco medias quasdam diuorum potestates
@@ -1226,9 +1224,9 @@ conquassatus, oculis hebes, naribus hiulcus, pedibus caducus. <pb n="p.50"/>
 maximus omnium magus est, quo praesente Thallus
 diu steterit: ita plerumque morbo ceu somno uergens
 inclinatur.</p>
-            </div>
-            <div type="textpart" n="44" subtype="section">
-               <p>eum tamen uos carminibus meis subuersum
+         </div>
+         <div n="44" type="section">
+            <p>eum tamen uos carminibus meis subuersum
 dixistis, quod forte me coram semel decidit. conserui eius
 plerique adsunt, quos ex<add>h</add>iberi denuntiastis. possunt dicere
 omnes, quid in Thallo despuant, cur nemo audeat cum
@@ -1255,9 +1253,9 @@ in media quaestione hic ibidem pro tribunali oculos trucis
 in te inuertisset, faciem tuam spumabundus conspuisset,
 manus contraxisset, caput succussisset, postremo in sinu
 tuo corruisset.</p>
-            </div>
-            <div type="textpart" n="45" subtype="section">
-               <p>XIIII seruos quos postulasti exhibeo. cur illis ad quaestionem nihil uteris? unum puerum atque eum caducum
+         </div>
+         <div n="45" type="section">
+            <p>XIIII seruos quos postulasti exhibeo. cur illis ad quaestionem nihil uteris? unum puerum atque eum caducum
 requiris, quem olim abesse pariter mecum scis. quae
 alia est euidentior calumnia? XIIII serui petitu tuo adsunt, eos dissimulas; unus puerulus abest, eum insimulas.
 postremo quid uis? puta Thallum adesse: uis probare
@@ -1280,9 +1278,9 @@ refragaretur, tamen accusatio fidem deroget. facilius
 fuit, Aemiliane, ac multo grauius, tete ut ipsum diceres interfuisse et ex eo sacro coepisse dementire potius
 quam totum negotium quasi ludicrum pueris donares.
 puer cecidit, puer uidit: num etiam puer aliqui incantauit?</p>
-            </div>
-            <div type="textpart" n="46" subtype="section">
-               <p>Hic satis ueteratorie Tannonius Pudens, cum hoc quoque mendacium frigere ac prope iam omnium uultu et
+         </div>
+         <div n="46" type="section">
+            <p>Hic satis ueteratorie Tannonius Pudens, cum hoc quoque mendacium frigere ac prope iam omnium uultu et
 murmure explosum uideret, ut uel suspiciones quorundam
 spe moraretur, ait pueros alios producturum, qui sint
 aeque a me incantati, atque ita ad aliam speciem argumenti transgressus est. quod quamquam dissimulare potui,
@@ -1300,9 +1298,9 @@ uirum, ludibrio habere, me calumnia insectari? quod si
 forte patronus tuus uerbo prolapsus est et nullos pueros
 habes quos producas, saltem XIIII seruis quos ex<add>h</add>ibui ad
 aliquid utere.</p>
-            </div>
-            <div type="textpart" n="47" subtype="section">
-               <p>aut cur sisti postulabas tantam familiam?
+         </div>
+         <div n="47" type="section">
+            <p>aut cur sisti postulabas tantam familiam?
 magiae accusans de XV seruis denuntiasti: quid, si de ui
 accusares, quot tandem seruos postulares? sciunt ergo
 aliquid XV serui et occultum est. an occultum non est
@@ -1321,9 +1319,9 @@ sunt? XV liberi homines populus est, totidem serui
 familia, totidem uincti ergastulum. an adiutorio multitudo eorum necessaria fuit, qui diutine hostias lustralis <pb n="p.54"/>
 tenerent? at nullas hostias nisi gallinas nominastis. an
 ut grana turis numerarent, an ut Thallum prosternerent?</p>
-            </div>
-            <div type="textpart" n="48" subtype="section">
-               <p>Mulierem etiam liberam perductam ad me domum
+         </div>
+         <div n="48" type="section">
+            <p>Mulierem etiam liberam perductam ad me domum
 dixistis eiusdem Thalli ualetudinis, quam ego pollicitus
 sim curaturum, eam quoque a me incantatam corruisse.
 ut uideo, uos palaestritam, non magum accusatum uenistis: ita omnis qui me accessere dicitis cecidisse. negauit
@@ -1339,7 +1337,7 @@ dudum enim, cum haec agitarentur et illi incantatam
 mulierem dicerent, medicus qui adfuerat abnueret, quaesisti
 tu nimis quam prudenter, quod mihi emolumentum fuerit
 incantandi. responderunt: <q>ut mulier rueret.</q>
-                  <q>quid deinde?
+               <q>quid deinde?
 mortua est?</q> inquis. negarunt. <q>quid ergo dicitis? quod
 Apulei commodum, si ruisset?</q> ita enim pulchre ac perseueranter tertio quaesisti, ut qui scires omnium factorum
 rationes diligentius examinandas ac saepius causas quaeri,
@@ -1358,9 +1356,9 @@ purgandi mei gratia in ea re, quam tu iam praeiudicasti
 neque culpae neque crimini confinem, quam ut ne quid
 dignum auribus tuis et doctrinae tuae congruens reticuerim. dicam igitur quam breuissime potuero; etenim
 admonendus es mihi, non docendus.</p>
-            </div>
-            <div type="textpart" n="49" subtype="section">
-               <p>Plato philosophus in illo praeclarissimo Timaeo caelesti quadam facundia uniuersum mundum molitus, <add>is</add> igitur
+         </div>
+         <div n="49" type="section">
+            <p>Plato philosophus in illo praeclarissimo Timaeo caelesti quadam facundia uniuersum mundum molitus, <add>is</add> igitur
 postquam de nostri quoque animi trinis potestatibus sollertissime disseruit et, cur quaeque membra nobis diuina
 prouidentia fabricata sint, aptissime docuit, causam morborum omnium trifariam percenset. primam causam primordiis corporis adtribuit, si ipsae elementorum qualitates,
 uuida et frigida et h<del>i</del>is duae aduorsae, non congruant; id
@@ -1372,9 +1370,9 @@ ossi et medullae, porro illa quae ex hisce singularibus
 mixta sunt. tertio in corpore concrementa uarii fellis et
 turbidi spiritus et pinguis humoris nouissima aegritudinum
 incitamenta sunt.</p>
-            </div>
-            <div type="textpart" n="50" subtype="section">
-               <p>quorum e numero praecipuast materia
+         </div>
+         <div n="50" type="section">
+            <p>quorum e numero praecipuast materia
 morbi comitialis, de quo dicere exorsus sum, cum caro in
 humorem crassum et spumidum inimico igni conliquescit
 et spiritu indidem parto ex candore compressi aeris albida <pb n="p.56"/>
@@ -1391,9 +1389,9 @@ etiam uigilantium capiti offundatur, tum uero repentino
 mentis nubilo obtorpescunt et moribundo corpore, cessante animo cadunt. eum nostri non modo maiorem et
 comitialem, uerum etiam diuinum morbum, ita ut Graeci
 <foreign xml:lang="grc">ἱερὰν νόσον</foreign>, uere nuncuparunt, uidelicet quod animi partem rationalem, quae longe sanctissimast, eam uiolet.</p>
-            </div>
-            <div type="textpart" n="51" subtype="section">
-               <p>Agnoscis, Maxime, rationem Platonis quantum potui
+         </div>
+         <div n="51" type="section">
+            <p>Agnoscis, Maxime, rationem Platonis quantum potui
 pro tempore perspicue explicatam; cui ego fidem arbitratus
 causam diuini morbi esse, cum illa pestis in caput redu<add>n</add>dauit, haudquaquam uideor de nihilo percontatus, an esset
 mulieri illi caput graue, ceruix torpens, tempora pulsata,
@@ -1418,9 +1416,9 @@ qui adduxit ad <add>me et</add> mea ratiocinatione recte factum
 esse conueniat, aut constituant magi et malefici hominis
 esse morbis mederi, aut si hoc dicere non audent, fateantur se in puero et muliere caducis uanas et prorsus
 caducas calumnias intendisse.</p>
-            </div>
-            <div type="textpart" n="52" subtype="section">
-               <p>Immo enim si uerum uelis, Aemiliane, tu potius <pb n="p.58"/>
+         </div>
+         <div n="52" type="section">
+            <p>Immo enim si uerum uelis, Aemiliane, tu potius <pb n="p.58"/>
 caducus qui iam tot calumniis cecidisti. neque enim grauius est corpore quam corde collabi, pede potius quam
 mente corruere, in cubiculo despui quam in isto splendidissimo coetu detestari. at tu fortasse te putas sanum,
 quod non domi contineris, sed insaniam tuam, quoquo te
@@ -1434,9 +1432,9 @@ peccat: at tu, miser, prudens et sciens delinquis, tanta
 uis morbi te instigat; falsum pro uero insimulas, infectum
 pro facto criminaris, quem innocentem liquido scis, tamen
 accusas ut nocentem.</p>
-            </div>
-            <div type="textpart" n="53" subtype="section">
-               <p>Quin etiam—quod praeterii—sunt quae fatearis
+         </div>
+         <div n="53" type="section">
+            <p>Quin etiam—quod praeterii—sunt quae fatearis
 nescire, et eadem rursus, quasi scias, criminari<add>s</add>. ais enim
 me habuisse quaedam sudariolo inuoluta apud lares Pontiani. ea inuoluta quae et cuius modi fuerint, nescisse
 te confiteris, neque praeterea quemquam esse qui uiderit;
@@ -1464,9 +1462,9 @@ auferendum temere exponebam, alienae custodiae commendabam, alieno arbitrio perm
 indiuiduo contubernio mecum uixit, id te scire, quem numquam uiderim nisi pro tribunali? an quod libertus adsiduus, cui omnis facultas inspiciendi fuit, quod is libertus
 non uiderit, te qui numquam eo accesseris uidisse? denique ut, quod non uidisti, id tale fuerit, quale dicis: atqui, stulte, si hodie illud sudariolum tu intercepisses,
 quicquid ex eo promeres, ego magicum negarem.</p>
-            </div>
-            <div type="textpart" n="54" subtype="section">
-               <p>Tibi adeo permitto, finge quiduis, <del>r</del>eminiscere, excogita,
+         </div>
+         <div n="54" type="section">
+            <p>Tibi adeo permitto, finge quiduis, <del>r</del>eminiscere, excogita,
 quod possit magicum uideri: tamen de eo tecum decertarem. aut ego subiectum dicerem aut remedio acceptum <pb n="p.60"/>
 aut sacro traditum aut somnio imperatum; mille alia
 sunt quibus possem more communi et uulgatissima obseruationum consuetudine uere refutare. nunc id postulas,
@@ -1477,8 +1475,8 @@ dicas: <q>quid ergo illud fuit, quod linteo tectum apud lares
 potissimum deposuisti?</q> itane est, Aemiliane? sic accusas,
 ut omnia a reo percontere, nihil ipse adferas cognitum.
 <q>quam ob rem piscis quaeris?</q>
-                  <q>cur aegram mulierem inspexisti?</q>
-                  <q>quid in sudario habuisti?</q> utrum tu accusatum
+               <q>cur aegram mulierem inspexisti?</q>
+               <q>quid in sudario habuisti?</q> utrum tu accusatum
 an interrogatum uenisti? si accusatum, tute argue quae
 dicis, si interrogatum, noli praeiudicare, quid fuerit, quod
 ideo te necesse est interrogare, quia nescis. ceterum hoc
@@ -1494,9 +1492,9 @@ me deficiet, si omnia uelim persequi, quorum rationem
 similiter calumniator flagitabit. praesertim quod conditum cumque, quod obsignatum, quod inclusum domi adseruatur, <pb n="p.61"/>
 id omne eodem argumento magicum dicetur aut
 e cella promptaria in forum atque in iudicium proferetur.</p>
-            </div>
-            <div type="textpart" n="55" subtype="section">
-               <p>Haec quanta sint et cuiusce modi, Maxime, quantusque campus calumniis hoc Aemiliani tramite aperiatur,
+         </div>
+         <div n="55" type="section">
+            <p>Haec quanta sint et cuiusce modi, Maxime, quantusque campus calumniis hoc Aemiliani tramite aperiatur,
 quantique sudores innocentibus hoc uno sudariolo adferantur, possum equidem pluribus disputare, sed faciam
 quod institui: etiam quod non necesse est confitebor et
 interrogatus ab Aemiliano respondebo. interrogas, Aemiliane, quid in sudario habuerim. at ego quanquam omnino
@@ -1509,7 +1507,7 @@ uiderit—tamen, inquam, per me licet fuerit refertissimum.
 sic enim, si uis, arbitrare, ut olim Vlixi socii thesaurum
 repperisse arbitrati sunt, cum utrem uentosissimum manticularentur. uin dicam, cuius modi illas res in sudario
 obuolutas laribus Pontiani commendarim? mos tibi geretur.</p>
-               <p>Sacrorum pleraque initia in Graecia participaui. eorum
+            <p>Sacrorum pleraque initia in Graecia participaui. eorum
 quaedam signa et monumenta tradita mihi a sacerdotibus
 sedulo conseruo. nihil insolitum, nihil incognitum dico.
 uel unius Liberi patris mystae qui adestis scitis, quid
@@ -1525,10 +1523,10 @@ manibus uersatur, non tam facundia mea quam mentione
 Aesculapii religiosis Oeensibus commendata. dicite aliquis,
 si qui forte meminit, huius loci principium.—audisne,
 Maxime, multos suggerentis? immo, ecce etiam liber offertur. recitari ipsa haec iubebo, quoniam ostendis</p>
-            </div>
-            <div type="textpart" n="56" subtype="section">
-               <p>humanissimo uultu auditionem te istam non grauari.—</p>
-               <p>Etiamne cuiquam mirum uideri potest, cui sit ulla
+         </div>
+         <div n="56" type="section">
+            <p>humanissimo uultu auditionem te istam non grauari.—</p>
+            <p>Etiamne cuiquam mirum uideri potest, cui sit ulla
 memoria religionis, hominem tot mysteriis deum conscium
 quaedam sacrorum crepundia domi adseruare atque ea
 lineo texto inuoluere, quod purissimum est rebus diuinis
@@ -1557,9 +1555,9 @@ sentiat, manum non uorterim, ceteris autem clarissima
 uoce profiteor: si qui forte adest eorundem sollemnium
 mihi particeps, signum dato, et audias licet quae ego
 adseruem. nam equidem nullo umquam periculo compellar, quae reticenda accepi, haec ad profanos enuntiare.</p>
-            </div>
-            <div type="textpart" n="57" subtype="section">
-               <p>Vt puto, Maxime, satis uideor cuiuis uel iniquissimo
+         </div>
+         <div n="57" type="section">
+            <p>Vt puto, Maxime, satis uideor cuiuis uel iniquissimo
 animum explesse et, quod ad sudarium pertineat, omnem <pb n="p.64"/>
 criminis maculam detersisse, ac bono iam periculo ad
 testimonium illud Crassi, quod post ista quasi grauissimum legerunt, a suspicionibus Aemiliani transcensurus.
@@ -1580,9 +1578,9 @@ cani, cui uulturio Alexandrini caeli quicquam abusque
 Oeensium finibus oboleat? est quidem Crassus iste
 summus helluo et omnis fumi non imperitus, sed profecto pro studio bibendi, quo solo censetur, facilius ad
 eum Alexandria<add>m</add> uini aura quam fumi perueniret.</p>
-            </div>
-            <div type="textpart" n="58" subtype="section">
-               <p>intellexit hoc et ipse incredibile futurum; nam dicitur ante <pb n="p.65"/>
+         </div>
+         <div n="58" type="section">
+            <p>intellexit hoc et ipse incredibile futurum; nam dicitur ante <pb n="p.65"/>
 horam diei secundam ieiunus adhuc et abstemius testimonium istud uendidisse. igitur scripsit haec se ad hunc
 modum comperisse: postquam Alexandria reuenerit, domum
 suam recta contendisse, qua iam Quintianus migrarat; ibi
@@ -1607,9 +1605,9 @@ plumbeae tam diu aduentum Crassi manserunt? non <pb n="p.66"/>
 insimulet Crassus seruum suum: ipse haec potius de fuligine
 et pinnis mentitus est, dum non potest nec in testimonio
 dando discedere longius a culina.</p>
-            </div>
-            <div type="textpart" n="59" subtype="section">
-               <p>Cur autem testimonium ex libello legistis? Crassus
+         </div>
+         <div n="59" type="section">
+            <p>Cur autem testimonium ex libello legistis? Crassus
 ipse ubi gentium est? an Alexandriam taedio domus
 remeauit? an parietes suos detergit? an, quod uerius est,
 ex crapula helluo adtemptatur? nam equidem hic Sabratae
@@ -1633,9 +1631,9 @@ abligurriuit, nec quicquam ei de bonis paternis superest,
 nisi una domus ad calumniam uenditandam, quam tamen
 numquam carius quam in hoc testimonio locauit; nam
 temulentum istud mendacium tribus milibus nummis Aemiliano huic uendidit, idque Oeae nemini ignoratur.</p>
-            </div>
-            <div type="textpart" n="60" subtype="section">
-               <p>Omnes hoc, antequam fieret, cognouimus, et potui denuntiatione impedire, nisi scirem mendacium tam stultum
+         </div>
+         <div n="60" type="section">
+            <p>Omnes hoc, antequam fieret, cognouimus, et potui denuntiatione impedire, nisi scirem mendacium tam stultum
 potius Aemiliano, qui frustra redimebat, quam mihi, qui
 merito contemnebam, obfuturum. uolui et Aemilianum
 damno adfici et Crassum testimonii sui dedecore prostitui.
@@ -1652,9 +1650,9 @@ tamen testimonio Crassi, cuius oboluisse faecem uidebant, <pb n="p.68"/>
 uerum ego ista propterea commemoraui, non quod pinnarum formidines et fuliginis maculam te praesertim iudice
 timerem, sed ut ne impunitum foret <add>Crasso</add>, crassum
 quod Aemiliano, homini rustico, fumum uendidit.</p>
-            </div>
-            <div type="textpart" n="61" subtype="section">
-               <p>Unum etiam crimen ab illis, cum Pudentillae litteras
+         </div>
+         <div n="61" type="section">
+            <p>Unum etiam crimen ab illis, cum Pudentillae litteras
 legerent, de cuiusdam sigilli fabricatione prolatum est,
 quod me aiunt ad magica maleficia occulta fabrica ligno
 exquisitissimo comparasse et, cum sit <add>s</add>celeti forma turpe
@@ -1662,7 +1660,7 @@ et horribile, tamen impendio colere et Graeco uocabulo
 <foreign xml:lang="grc">βασιλέα</foreign> nuncupare. nisi fallor, ordine eorum uestigia
 persequor et singillatim apprehendens omnem calumniae
 textum retexo.</p>
-               <p>Occulta fuisse fabricatio sigilli quod dicitis qui potest,
+            <p>Occulta fuisse fabricatio sigilli quod dicitis qui potest,
 cuius uos adeo artificem non ignorastis, ut ei, praesto
 adesset, denuntiaueritis? en adest Cornelius Saturninus
 artifex, uir inter suos et arte laudatus et moribus comprobatus, qui tibi, Maxime, paulo ante diligenter sciscitanti omnem ordinem gestae rei summa cum fide et ueritate percensuit: me, cum apud eum multas geometricas
@@ -1675,9 +1673,9 @@ attulisse, ex illa potius materia rariore et durabiliore uti
 faceret adhortatum: id munus cum primis mihi gratum
 fore. secundum ea se fecisse, proinde ut loculi<del>s</del> suppetebant. ita minutatim ex tabellis compacta crassitudine
 Mercuriolum expediri potuisse.</p>
-            </div>
-            <div type="textpart" n="62" subtype="section">
-               <p>Haec ut dico omnia audisti. praeterea a filio Capitolinae probissimo adulescente, qui praesens est, sciscitante
+         </div>
+         <div n="62" type="section">
+            <p>Haec ut dico omnia audisti. praeterea a filio Capitolinae probissimo adulescente, qui praesens est, sciscitante
 te eadem dicta sunt: Pontianum loculos petisse, Pontianum
 Saturnino artifici detulisse. etiam illud non negatur,
 Pontianum a Saturnino perfectum sigillum recepisse, postea
@@ -1692,9 +1690,9 @@ seruorum tum amicorum qui ad me uentitabant scierunt.
 lignum a me toto oppido et quidem oppido quaesitum non
 piguit uos commentiri, quem <del>quem</del> afuisse in eo tempore
 scitis, quem ius<add>s</add>isse fieri qualicumque materia probatum est.</p>
-            </div>
-            <div type="textpart" n="63" subtype="section">
-               <p>Tertium mendacium uestrum fuit macilentam uel
+         </div>
+         <div n="63" type="section">
+            <p>Tertium mendacium uestrum fuit macilentam uel
 omnino euisceratam formam diri cadaueris fabricatam, <pb n="p.70"/>
 prorsus horribilem et larualem. quodsi compertum habebatis tam e<del>n</del>uidens signum magiae, cur mihi ut exhiberem
 non denuntiastis? an ut possetis in rem absentem libere
@@ -1720,9 +1718,9 @@ lepide super tempora pares pinnulae emineant, quam autem
 festiue circa humeros uestis substricta sit. hunc qui sceletum audet dicere, profecto ille simulacra deorum nulla <pb n="p.71"/>
 uidet aut omnia neglegit; hunc denique qui laruam putat,
 ipse est laruans.</p>
-            </div>
-            <div type="textpart" n="64" subtype="section">
-               <p>At tibi, Aemiliane, pro isto mendacio duit deus iste
+         </div>
+         <div n="64" type="section">
+            <p>At tibi, Aemiliane, pro isto mendacio duit deus iste
 superum et inferum commeator utrorumque deorum malam
 gratiam semperque obuias species mortuorum, quidquid umbrarum est usquam, quidquid lemurum, quidquid manium,
 quidquid laruarum, oc<del>c</del>ulis tuis oggerat, omnia noctium
@@ -1738,11 +1736,11 @@ totius rerum naturae causa et ratio et origo initialis, <pb n="p.72"/>
 summus animi genitor, aeternus animantum sospitator, assiduus mundi sui opifex, sed enim sine opera opifex, sine
 cura sospitator, sine propagatione genitor, neque loco neque tempore neque uice ulla comprehensus eoque paucis
 cogitabilis, nemini effabilis.</p>
-            </div>
-            <div type="textpart" n="65" subtype="section">
-               <p>en ultro augeo magiae suspicionem: non respondeo tibi, Aemiliane, quem colam <foreign xml:lang="grc">βασιλέα</foreign>;
+         </div>
+         <div n="65" type="section">
+            <p>en ultro augeo magiae suspicionem: non respondeo tibi, Aemiliane, quem colam <foreign xml:lang="grc">βασιλέα</foreign>;
 quin si ipse proconsul interroget, quid sit deus meus, taceo.</p>
-               <p>De nomine ut inpraesentiarum satis dixi. quod superest, nec ipse sum nescius quosdam circumstantium
+            <p>De nomine ut inpraesentiarum satis dixi. quod superest, nec ipse sum nescius quosdam circumstantium
 cupere audire, cur non argento uel auro, sed potissimum
 ex ligno simulacrum fieri uoluerim, idque eos arbitror
 non tam ignoscendi quam cognoscendi causa desiderare,
@@ -1760,20 +1758,20 @@ satis esse ciuibus ad immolandas uictimas templa publica
 πόλεσιν ἰδίᾳ καὶ ἐν ἱεροῖς ἐστιν ἐπίφθονον κτῆμα, ἐλέφας
 δὲ ἀπὸ λελοιπότος ψυχὴν σώματος οὐκ εὔχαρι ἀνάθημα,
 σίδηρος δὲ καὶ χαλκὸς πολέμων ὄργανα· ξύλου δὲ μονόξυλον ὅ τι ἂν θέλῃ τις ἀνατιθέτω, καὶ λίθου ὡσαύτως.</foreign>
-                  <pb n="p.73"/>
+               <pb n="p.73"/>
 ut omnium assensus declarauit, Maxime quique in consilio
 estis, competentissime uideor usus Platone ut uitae magistro, ita causae patrono, cuius legibus obedientem me
 uidetis.</p>
-            </div>
-            <div type="textpart" n="66" subtype="section">
-               <p>Nunc tempus est ad epistulas Pudentillae praeuerti, uel
+         </div>
+         <div n="66" type="section">
+            <p>Nunc tempus est ad epistulas Pudentillae praeuerti, uel
 adeo totius rei ordinem paulo altius petere, ut omnibus
 manifestissime pateat me, quem lucri cupiditate inuasisse
 Pudentillae domum dictitant, si ullum lucrum cogitarem,
 fugere semper a domo ista debuisse, quin et in ceteris
 causis minime prosperum matrimonium,—nisi ipsa mulier
 tot incommoda uirtutibus suis repensaret, inimicum.</p>
-               <p>Neque enim ulla alia causa praeter cassam inuidiam
+            <p>Neque enim ulla alia causa praeter cassam inuidiam
 repperiri potest, quae iudicium istud mihi et multa antea
 pericula uitae conflauerit. ceterum cur Aemilianus commoueretur, etsi uere magum me comperisset, qui non
 modo ullo facto, sed ne tantulo quidem dicto meo laesus
@@ -1792,9 +1790,9 @@ maleficiis infensus accusationem istam pro morum integritate suscepit. at hoc eg
 sed illi Africano et Numantino et praeterea Censorio uix
 credidissem: ne huic frutici credam non modo odium
 peccatorum, sed saltem. intellectum inesse.</p>
-            </div>
-            <div type="textpart" n="67" subtype="section">
-               <p>Quid igitur est? cuiuis clarius dilucet aliam rem
+         </div>
+         <div n="67" type="section">
+            <p>Quid igitur est? cuiuis clarius dilucet aliam rem
 inuidia nullam esse quae hunc et Herennium Rufinum,
 impulsorem huius, de quo mox dicam, ceterosque inimicos meos ad nectendas magiae calumnias prouocarit.
 quin<add>que</add> igitur res sunt, quas me oportet disputare. nam si
@@ -1815,20 +1813,20 @@ putetis, ut inuidiam meam reperta occasione palam restinguerem. mihi credite, qu
 quam mihi laborandum est, ne tam friuolam accusationem
 me potius callide excogitasse quam illos stulte suscepisse
 existimetis.</p>
-            </div>
-            <div type="textpart" n="68" subtype="section">
-               <p>Nunc dum ordinem rei breuiter persequor et efficio,
+         </div>
+         <div n="68" type="section">
+            <p>Nunc dum ordinem rei breuiter persequor et efficio,
 ut ipse Aemilianus re cognita falso se ad inuidiam meam
 inductum et longe a vero aberrasse necesse habeat confiteri, quaeso, uti adhuc fecistis uel si quo magis etiam
 potestis, ipsum fontem et fundamentum iudicii huiusce
 diligentissime cognoscatis.</p>
-               <p>Aemilia Pudentilla, quae nunc mihi uxor est, ex quodam Sicinio Amico, quicum antea nubta fuerat, Pontianum
+            <p>Aemilia Pudentilla, quae nunc mihi uxor est, ex quodam Sicinio Amico, quicum antea nubta fuerat, Pontianum
 et Pudentem filios genuit eosque pupillos relictos in
 potestate paterni aui—nam superstite patre Amicus
 decesserat—per annos ferme quattuordecim memorabili
 pietate sedulo aluit, non tamen libenter in ipso aetatis
 suae flore tam diu uidua. sed puerorum auus inuita<add>m</add>
-                  <pb n="p.76"/>
+               <pb n="p.76"/>
 eam conciliare studebat <add>in</add> ceterum filio<del>s</del> suo<del>s</del> Sicinio
 Claro eoque ceteros procos absterrebat; et praeterea minabatur, si extrario nubsisse<add>t</add>, nihil se filiis eius ex paternis
 eorum bonis testamento relicturum. quam condicione<add>m</add> cum
@@ -1839,9 +1837,9 @@ uerum enimuero uariis frustrationibus nuptias eludit eo
 ad, dum puerorum auus fato concessit relictis filiis eius
 heredibus ita, ut Pontianus, qui maior natu erat, fratri
 suo tutor esset.</p>
-            </div>
-            <div type="textpart" n="69" subtype="section">
-               <p>eo scrupulo liberata cum a principibus
+         </div>
+         <div n="69" type="section">
+            <p>eo scrupulo liberata cum a principibus
 uiris in matrimonium peteretur, decreuit sibi diutius in
 uiduitate non permanendum; quippe ut solitudinis taedium perpeti posset, tamen aegritudine<add>m</add> corporis ferre
 non poterat. mulier sancte pudica, tot annis uiduitatis
@@ -1859,13 +1857,13 @@ oportere; at tibi, Aemiliane, non uenit in mentem, priusquam ego Oeam uenirem, t
 scribsisse ad filium eius Pontianum, qui tum adultus
 Romae agebat. cedo tu epistolam uel potius da ipsi:
 legat, sua sibi uoce suisque uerbis sese reuincat.</p>
-               <p>Estne haec tua epistola? quid palluisti? nam erubescere tu quidem non potes. estne tua ista subscribtio?—
+            <p>Estne haec tua epistola? quid palluisti? nam erubescere tu quidem non potes. estne tua ista subscribtio?—
 recita quaeso clarius, ut omnes intellegant, quantum
 lingua eius manu discrepet, quantumque minor illi<del>s</del> sit
 mecum quam secum dissensio.—</p>
-            </div>
-            <div type="textpart" n="70" subtype="section">
-               <p>Scripsistine haec, Aemiliane, quae lecta sunt? <q>nubere
+         </div>
+         <div n="70" type="section">
+            <p>Scripsistine haec, Aemiliane, quae lecta sunt? <q>nubere
 illam uelle et debere scio, sed quem eligat nescio.</q> recte
 tu quidem: nesciebas; Pudentilla enim tibi, cuius infesta<add>m</add>
 malignitatem probe norat, de ipsa re tantum, ceterum de
@@ -1888,9 +1886,9 @@ et aegritudini subuenire; ceterum de pietate sua et supremo
 iudicio nihil metuerent; qualis uidua eis fuerit, talem
 nuptam futuram. recitari iubebo exemplum epistolae huius
 ad filium missae.—</p>
-            </div>
-            <div type="textpart" n="71" subtype="section">
-               <p>Satis puto ex <del>h</del>istis posse cuiuis liquere Pudentillam
+         </div>
+         <div n="71" type="section">
+            <p>Satis puto ex <del>h</del>istis posse cuiuis liquere Pudentillam
 non meis carminibus ab obstinata uiduitate compulsam,
 sed olim sua sponte a nubendo non alienam <add>uti</add>quam
 me fortasse prae ceteris maluisse. quae electio tam grauis
@@ -1908,9 +1906,9 @@ sestertium quadragies po<add>s</add>sidebat, ex quo sane aliquantam
 pecuniam nullis tabulis, sed, ut aequum erat, mera fide
 acceptam filiis debebat. hunc ille timorem mus<add>s</add>itabat;
 a<add>d</add>uersari propalam non audebat, ne uideretur diffidere.</p>
-            </div>
-            <div type="textpart" n="72" subtype="section">
-               <p>Cum in hoc statu res esset inter procationem matris
+         </div>
+         <div n="72" type="section">
+            <p>Cum in hoc statu res esset inter procationem matris
 et metum fili, fortene an fato ego aduenio pergens Alexandream. dixissem hercule <q>quod utinam numquam euenisset,</q> ni me uxoris meae respectus prohiberet. hiemps
 anni erat. ego ex fatigatione itineris aduectus apud Appios i<add>s</add>tos amicos meos, quos honoris et amoris gratia
 nomino, aliquam multis diebus decumbo. eo uenit ad me
@@ -1927,9 +1925,9 @@ opperiendam, quod illam mihi infirmitas exemisset. multis
 etiam precibus meis Appiis aufert, ut ad sese in domum
 matris suae transferar; salubriorem mihi habitationem
 futuram; praeterea prospectum maris, qui mihi gratissimus est, liberius me ex ea fruiturum.</p>
-            </div>
-            <div type="textpart" n="73" subtype="section">
-               <p>Haec omnia adnixus impenso studio persuadet, matrem
+         </div>
+         <div n="73" type="section">
+            <p>Haec omnia adnixus impenso studio persuadet, matrem
 suam suumque fratrem, puerum istum, mihi commendat.
 non nihil a me in communibus studiis adiuuantur, augetur oppido familiaritas. interibi reualesco; dissero aliquid
 postulantibus amicis publice; omnes qui aderant ingenti
@@ -1952,9 +1950,9 @@ persuaserat idem Pontianus matri suae, ut me aliis omnibus mallet, et quam primu
 studio auebat. uix ab eo tantulam moram impetramus,
 dum prius ipse uxorem duceret, frater eius uirilis togae
 usum auspicaretur: tunc deinde ut nos coniungeremur.</p>
-            </div>
-            <div type="textpart" n="74" subtype="section">
-               <p>Vtinam hercule possem quae deinde dicenda sunt
+         </div>
+         <div n="74" type="section">
+            <p>Vtinam hercule possem quae deinde dicenda sunt
 sine maximo causae dispendio tran<add>s</add>gredi, ne Pontiano, cui
 <del>h</del>errorem suum deprecanti simpliciter ignoui, uidear nunc
 leuitatem exprobrare. confiteor enim, quod mihi obiectum
@@ -1969,7 +1967,7 @@ aut inquinatiorem reliquit. paucis hominem,
 quam modestissime potero, necessario demonstrabo, ne, si
 omnino de eo reticuero, operam perdiderit, quod negotium
 istud mihi ex summis uiribus conflauit.</p>
-               <p>Hic est enim pueruli huius instigator, hic accusationis
+            <p>Hic est enim pueruli huius instigator, hic accusationis
 auctor, hic aduocatorum conductor, hic testium coemptor,
 hic totius calumniae fornacula, hic Aemiliani huius fax et
 flagellum, idque apud omnis intemperantissime gloriatur,
@@ -1980,9 +1978,9 @@ inde ab ineunte aeuo cunctis probris palam notus, olim
 in pueritia, priusquam isto caluitio deformaretur, emasculatoribus suis ad omnia infanda morigerus, mox in iuuentute saltandis fabulis exossis plane et eneruis, sed, ut
 audio, indocta et rudi mollitia; negatur enim quicquam
 histrionis habuisse praeter impudicitiam.</p>
-            </div>
-            <div type="textpart" n="75" subtype="section">
-               <p>in hac etiam
+         </div>
+         <div n="75" type="section">
+            <p>in hac etiam
 aetate qua nunc est—qui istum di perduint! multus
 honos auribus praefandus est—domus eius tota lenonia,
 tota familia contaminata: ipse propudiosus, uxor lupa,
@@ -2012,9 +2010,9 @@ habere ex fraude paterna diceretur; homo iustus et morum
 dedit operam, quod male partum erat ut male periret,
 nec quicquam ei relictum est ex largiore fortuna praeter
 ambitionem miseram et profundam gulam.</p>
-            </div>
-            <div type="textpart" n="76" subtype="section">
-               <p>Ceterum uxor iam propemodum uetula et effeta totam
+         </div>
+         <div n="76" type="section">
+            <p>Ceterum uxor iam propemodum uetula et effeta totam
 domum contumeliis <add>alere</add> abnuit; filia autem per
 adulescentulos ditiores inuitamento matris suae nequicquam
 circumlata, quibusdam etiam procis ad experiundum permissa, nisi in facilitatem Pontiani incidisset, fortasse an
@@ -2031,9 +2029,9 @@ agnouit, cum in puella uideret i<add>m</add>medicatum os et purpurissatas <pb n=
 genas et inlices oculos. dos erat a creditore
 omnis ad terruncium pridie sumpta et quidem grandior
 quam domus exhausta et plena liberis postulabat.</p>
-            </div>
-            <div type="textpart" n="77" subtype="section">
-               <p>Sed enim iste, ut est rei modicus, spei immodicus,
+         </div>
+         <div n="77" type="section">
+            <p>Sed enim iste, ut est rei modicus, spei immodicus,
 pari auaritia et egestate totum Pudentillae quadragiens
 praesumptione cassa deuorarat eoque me amoliendum
 ratus, quo facilius Pontiani facilitatem, Pudentillae solitudinem circumueniret, infit generum suum obiurgare, quod
@@ -2046,9 +2044,9 @@ grauitate ultro ipse leuitatis et inconstantiae increpitus
 reportat ad socerum haud mollia: matri suae praeter ingenium placidissimum immobili iram quoque sua expostulatione accessisse, non mediocre pertinaciae adiumentum;
 respondisse eam denique non clam se esse Rufini exoratione secum expostulari; eo uel magis sibi auxilium mariti
 aduersum eius desperatam auaritiam comparandum.</p>
-            </div>
-            <div type="textpart" n="78" subtype="section">
-               <p>Hisce auditis exacerbatus aquariolus iste uxoris suae
+         </div>
+         <div n="78" type="section">
+            <p>Hisce auditis exacerbatus aquariolus iste uxoris suae
 ita ira extumuit, ita exarsit furore, ut in feminam sanctissimam et pudicissimam praesente filio eius digna cubiculo <pb n="p.86"/>
 suo diceret, amatricem eam, me magum et ueneficum
 clamitaret multis audientibus (quos, si uoles, nominabo):
@@ -2065,9 +2063,9 @@ confessa est sese mea magia in amorem inductam dementire; quas tamen litteras ta
 contra scribente Aemiliano nudius tertius tuo iussu, Maxime,
 testato describsimus; in quibus omnia contra praedicationem
 istorum pro me reperiuntur.</p>
-            </div>
-            <div type="textpart" n="79" subtype="section">
-               <p>quamquam, etsi destrictius
+         </div>
+         <div n="79" type="section">
+            <p>quamquam, etsi destrictius
 magum me dixisset, posset uideri excusabunda se filio
 uim meam quam uoluntatem suam causari maluisse. an
 sola Phaedra falsum epistolium de amore commenta est,
@@ -2093,9 +2091,9 @@ concedo interim. num tamen omnes qui amantur magi
 sunt, si hoc forte qui amat scripserit? c<add>r</add>edo nunc quod
 Pudentilla me in eo tempore non amabat, siquidem id
 foras scripsit, quod palam erat mihi obfuturum.</p>
-            </div>
-            <div type="textpart" n="80" subtype="section">
-               <p>postremo quid uis, sanam an insanam fuisse, dum scriberet?
+         </div>
+         <div n="80" type="section">
+            <p>postremo quid uis, sanam an insanam fuisse, dum scriberet?
 sanam dices? nihil ergo erat magicis artibus passa.
 insanam respondebis? nesciit ergo quid scribserit, eoque
 ei fides non habenda est; immo etiam, si fuisset insana,
@@ -2110,16 +2108,16 @@ si compotem mentis se non putabat. possum, si uelim,
 pluribus, sed mitto dialectica. ipsas litteras longe aliud
 clamantis et quasi dedita opera ad iudicium istud praeparatas et accommodatas recitabo. accipe tu et lege,
 usque dum ego interloquar.—</p>
-               <p>Sustine paulisper quae secuntur; nam ad deuerticulum
+            <p>Sustine paulisper quae secuntur; nam ad deuerticulum
 rei uentum est. adhuc enim, Maxime, quantum equidem
 animaduerti, nusquam mulier magiam nominauit, sed
 ordinem repetiuit eundem, quem ego paulo prius, de longa
 uiduitate, de remedio ualetudinis, de uoluntate nubendi,
 de meis laudibus, quas ex Pontiano cognouerat, de suasu
 ipsius, ut mihi potissimum nuberet.</p>
-            </div>
-            <div type="textpart" n="81" subtype="section">
-               <p>Haec usque adhuc lecta sunt. superest ea pars epistulae, quae similiter pro me scripta in memet ipsum
+         </div>
+         <div n="81" type="section">
+            <p>Haec usque adhuc lecta sunt. superest ea pars epistulae, quae similiter pro me scripta in memet ipsum
 uertit cornua, ad expellendum a me crimen magiae sedulo
 <del>o</del>missa memorabili laude Rufini uice<add>m</add> mutauit et ultro
 contrariam mihi opinionem quorundam Oeensium quasi
@@ -2135,9 +2133,9 @@ uidebuntur. o mirum commentum! o subtilitas digna
 carcere et robore! quis credat effici potuisse, ut quae
 defensio fuerat, eadem manentibus eisdem litteris in accusationem transuerteretur? est hercule incredibile. sed
 hoc incredibile qui sit factum, probabo.</p>
-            </div>
-            <div type="textpart" n="82" subtype="section">
-               <p>Obiurgatio erat matris ad filium, quod me, talem
+         </div>
+         <div n="82" type="section">
+            <p>Obiurgatio erat matris ad filium, quod me, talem
 uirum qualem sibi praedicasset, nunc de Rufini sententia
 magum dictitaret. uerba ipsa ad hunc modum se habebant: <foreign xml:lang="grc">Ἀπολέϊος μάγος, καὶ ἐγὼ ὑπ᾽ αὐτοῦ μεμάγευμαι καὶ
 ἐρῶ. ἐλθὲ τοίνυν πρὸς ἐμέ, ἕως ἔτι σωφρονῶ.</foreign> haec ipsa
@@ -2160,20 +2158,20 @@ ordine scriptorum ad lubidinem supprimantur, si quae
 simulationis causa dicta sunt adseuerantis pronuntiatione quam exprobrantis legantur.</q> haec et id genus
 ea quam merito tunc dici potuerunt; ipse ordo epistulae
 ostendat.</p>
-            </div>
-            <div type="textpart" n="83" subtype="section">
-               <p>At tu, Aemiliane, recognosce, an et haec mecum
+         </div>
+         <div n="83" type="section">
+            <p>At tu, Aemiliane, recognosce, an et haec mecum
 testato descripseris: <foreign xml:lang="grc">βουλομένην γάρ με δι᾽ ἃς εἶπον αἰτίας γαμηθῆναι, αὐτὸς ἔπεισας τοῦτον ἀντὶ πάντων αἱρεῖσθαι, θαυμάζων τὸν ἄνδρα καὶ σπουδάζων αὐτὸν οἰκεῖον
 ὑμῖν δι᾽ ἐμοῦ ποιεῖσθαι. νῦν δὲ ὡς κατ</foreign>
-                  <note>
-                     <foreign xml:lang="grc">ήγ</foreign>
-                  </note>
-                  <foreign xml:lang="grc">οροι ἡμῶν
+               <note>
+                  <foreign xml:lang="grc">ήγ</foreign>
+               </note>
+               <foreign xml:lang="grc">οροι ἡμῶν
 κακοήθεις σε ἀναπείθουσιν, αἰφνίδιον ἐγένετο Ἀπολέϊος
 μάγος, καὶ ἐγὼ μεμάγευμαι ὑπ᾽ αὐτοῦ καὶ ἐρῶ. ἐλθὲ τοίνυν πρὸς ἐμέ, ἕως ἔτι σωφρονῶ.</foreign>
-                  <pb n="p.91"/>
-               </p>
-               <p>Oro te, Maxime, si litterae ita, ut partim uocales
+               <pb n="p.91"/>
+            </p>
+            <p>Oro te, Maxime, si litterae ita, ut partim uocales
 dicuntur, etiam propriam uocem usurparent, si uerba ita,
 ut poetae aiunt, pinnis apta uulgo uolarent, nonne, cum
 primum epistolam istam Rufinus mala fide excerperet,
@@ -2187,17 +2185,17 @@ accusatum a Pudentilla, sed accusante Rufino absolutum?</q>
 quae omnia etsi tum dicta non sunt, tamen nunc, cum magis
 prosunt, luce inlustrius apparent. patent artes tuae, Rufine,
 fraudes hiant, detectum mendacium est: ueritas olim interuersa nun<add>c</add> se fert et uelut alto barathro calumnia se mergit.</p>
-            </div>
-            <div type="textpart" n="84" subtype="section">
-               <p>Ad litteras Pudentillae prouocastis: litteris uinco,
+         </div>
+         <div n="84" type="section">
+            <p>Ad litteras Pudentillae prouocastis: litteris uinco,
 quarum si uultis extremam quoque clausulam audire, non
 inuidebo. dic tu, quibus uerbis epistulam finierit mulier
 obcantata, uecors, amens, amans: <foreign xml:lang="grc">Ἐγὼ οὔτε μεμάγευμαι
 οὔ</foreign>
-                  <del>
-                     <foreign xml:lang="grc">τε</foreign>
-                  </del>
-                  <foreign xml:lang="grc">τ᾽ ἐρῶ. τὴν εἱμαρμένην ἐκφ.</foreign> etiamne amplius? <pb n="p.92"/>
+               <del>
+                  <foreign xml:lang="grc">τε</foreign>
+               </del>
+               <foreign xml:lang="grc">τ᾽ ἐρῶ. τὴν εἱμαρμένην ἐκφ.</foreign> etiamne amplius? <pb n="p.92"/>
 reclamat uobis Pudentilla et sanitatem suam a uestris
 calumniis quodam praeconio uindicat nubendi autem seu
 rationem seu necessitatem fato adscribit, a quo multum
@@ -2214,9 +2212,9 @@ confessam. hocine uerum fuit, Rufine, hoc non dico pium,
 sed saltem humanum, prouulgari eas litteras et potissimum
 fili praeconio puplicari? sed sum<add>ne</add> ego insci<add>t</add>us, qui
 postulo, ut alienum pudorem conserues qui tuum perdideris?</p>
-            </div>
-            <div type="textpart" n="85" subtype="section">
-               <p>Cur autem praeterita conqueror, cum non sint minus
+         </div>
+         <div n="85" type="section">
+            <p>Cur autem praeterita conqueror, cum non sint minus
 acerba praesentia? hocusque a uobis miserum istum
 puerum deprauatum, ut matris suae epistulas quas putat
 amatorias pro tribunali procons(ulari) recitet apud uirum
@@ -2243,9 +2241,9 @@ scelere quam tempore, ante nocentem quam potentem, uiridi
 pueritia, cana malitia? uel potius hoc magis noxium, <pb n="p.94"/>
 quod cum uenia perniciosus est et nondum poenae, iam
 iniuriae sufficit—iniuriae dico? immo enim sceleri aduersum parentem nefando, immani, impetibili.</p>
-            </div>
-            <div type="textpart" n="86" subtype="section">
-               <p>Athenienses quidem propter commune ius humanitatis
+         </div>
+         <div n="86" type="section">
+            <p>Athenienses quidem propter commune ius humanitatis
 ex captiuis epistulis Philippi Macedonis hostis sui unam
 epistulam, cum singulae publice legerentur, recitari prohibuerunt, quae erat ad uxorem Olympiadem conscripta;
 hosti potius pepercerunt, ne maritale secretum diuulgarent, praeferendum rati fas commune propriae ultioni.
@@ -2262,12 +2260,12 @@ bonum tuum factum optutu capesseret. miser, non intellegis iccirco patruum tuum 
 hominibus purgaret, si ex litteris tuis nosceretur te etiam
 prius, quam ad eum commigrasses, etiam cum matri
 blandirere, tamen iam tum uolpionem et impium fuisse. <pb n="p.95"/>
-               </p>
-            </div>
-            <div type="textpart" n="87" subtype="section">
-               <p>ceterum nequeo in animum inducere tam stultum Aemilianum esse, ut arbitretur mihi litteras pueri et eiusdem
+            </p>
+         </div>
+         <div n="87" type="section">
+            <p>ceterum nequeo in animum inducere tam stultum Aemilianum esse, ut arbitretur mihi litteras pueri et eiusdem
 accusatoris me<add>i</add> offuturas.</p>
-               <p>Fuit et illa commenticia epistula neque mea manu
+            <p>Fuit et illa commenticia epistula neque mea manu
 scripta neque uerisimiliter conficta, qua uideri uolebant
 blanditiis a me mulierem sollicitatam. cur ego blandirem,
 si magia confidebam? qua autem uia ad istos peruenit
@@ -2280,7 +2278,7 @@ quem idem aiunt uersibus amatoriis satis scite lasciuire?
 sic est profecto, cuiuis palam est: hic, qui epistulam
 Pudentillae Graecatiorem legere non potuerat, hanc ut
 suam facilius legit et aptius commendauit.</p>
-               <p>Sed iam de epistulis satis dictum habebo, si hoc unum
+            <p>Sed iam de epistulis satis dictum habebo, si hoc unum
 addidero: Pudentillam, quae scribserat dissimulamenti causa
 et deridiculi: <foreign xml:lang="grc">ἐλθὲ τοίνυν, ἕως ἔτι σωφρονῶ,</foreign> post hasce
 litteras euocasse ad se filios et nurum, cum his ferme
@@ -2295,9 +2293,9 @@ condicto loco nubsisse. quippe ita placuerat, in suburbana
 uilla potius ut coniungeremur, ne ciues denuo ad sportulas
 conuolarent, cum haud pridem Pudentilla de suo quinquaginta milia nummum <add>in</add> populum expunxisset ea die,
 qua Pontianus uxorem duxit et hic puerulus toga est inuolutus, praeterea, ut conuiuiis multis ac molestiis supersederemus, quae ferme ex more nouis maritis obeunda sunt.</p>
-            </div>
-            <div type="textpart" n="88" subtype="section">
-               <p>Habes, Aemiliane, causam totam, cur tabulae nubtiales
+         </div>
+         <div n="88" type="section">
+            <p>Habes, Aemiliane, causam totam, cur tabulae nubtiales
 inter me ac Pudentillam non in oppido sint, sed in uilla
 suburbana consignatae: ne quinquaginta milia nummum
 denuo profundenda essent nec tecum aut apud te cenandum.
@@ -2317,13 +2315,13 @@ Quintis et Serranis et multis aliis similibus non
 modo uxores, uerum etiam consulatus et dictaturae in
 agris offerebantur. cohibe<del>b</del>am me in tam prolixo loco,
 ne tibi gratum faciam, si uillam laudauero.</p>
-            </div>
-            <div type="textpart" n="89" subtype="section">
-               <p>De aetate uero Pudentillae, de qua post ista satis
+         </div>
+         <div n="89" type="section">
+            <p>De aetate uero Pudentillae, de qua post ista satis
 confidenter mentitus es, ut etiam sexaginta annos natam
 diceres nubsisse, de ea tibi paucis respondebo: nam <add>non</add>
 necesse est in re tam perspicua pluribus disputare.</p>
-               <p>Pater eius natam sibi filiam more ceterorum professus est. tabulae eius partim tabulario publico partim
+            <p>Pater eius natam sibi filiam more ceterorum professus est. tabulae eius partim tabulario publico partim
 domo adseruantur, quae iam tibi ob os obiciuntur. porrige tu Aemiliano tabulas istas: linum consideret, signa
 quae impressa sunt recognoscat, consules legat, annos
 computet, quos sexaginta mulieri adsignabat. probet quinque et quinquaginta: lustro mentitus sit. parum hoc est,
@@ -2339,9 +2337,9 @@ si triginta annos pro decem dixisses, posses uideri computationis gestu errasse,
 cum uero quadraginta, quae facilius ceteris porrecta palma
 significantur, ea quadraginta tu dimidio auges, non potes<del>t</del>
 digitorum gestu errasse, nisi forte triginta annorum Pudentillam ratus binos cuiusque anni consules numerasti.</p>
-            </div>
-            <div type="textpart" n="90" subtype="section">
-               <p>Missa haec facio. uenio nunc ad ipsum stirpem accusationis, ad ipsam causam maleficii. respondeat Aemilianus et Rufinus, ob quod emolumentum, etsi maxime
+         </div>
+         <div n="90" type="section">
+            <p>Missa haec facio. uenio nunc ad ipsum stirpem accusationis, ad ipsam causam maleficii. respondeat Aemilianus et Rufinus, ob quod emolumentum, etsi maxime
 magus forem, Pudentillam carminibus et uenenis ad matrimonium pellexissem. atque ego scio plerosque reos alicuius facinoris postulatos, si fuisse quaepiam causae probarentur, hoc uno se tamen <del>h</del>abunde defendisse, uitam
 suam procul ab huiusmodi sceleribus abhorrere nec id
 sibi obesse debere, quod uideantur quaedam fuisse ad
@@ -2359,9 +2357,9 @@ si una causa uel minima fuerit inuenta, cur ego debuerim
 Pudentillae nubtias ob aliquod meum commodum appetere, si quamlibet modicum emolumentum probaueritis,
 ego ille sim Carmendas uel Damigeron uel † his Moses uel
 I<del>oh</del>annes uel Apollobex uel ipse Dardanus uel quicumque alius post Zoroastren et Hostanen inter magos celebratus est.</p>
-            </div>
-            <div type="textpart" n="91" subtype="section">
-               <p>Vide quaeso, Maxime, quem tumultum suscitarint,
+         </div>
+         <div n="91" type="section">
+            <p>Vide quaeso, Maxime, quem tumultum suscitarint,
 quoniam ego paucos magorum nominatim percensui. quid
 faciam tam rudibus, tam barbaris? doceam rursum haec
 et multo plura alia nomina in bybliothecis publicis apud
@@ -2373,7 +2371,7 @@ perfecta eruditione fretus contemnam stultis et impolitis <pb n="p.100"/>
 ad haec respondere? ita potius faciam: quid illi existiment, nauci non putabo; quod institui pergam disputare:
 nullam mihi causam fuisse Pudentillam ueneficiis ad
 nuptias prolectandi.</p>
-               <p>Formam mulieris et aetatem ipsi ultro improbauerunt
+            <p>Formam mulieris et aetatem ipsi ultro improbauerunt
 idque mihi uitio dederunt, talem uxorem causa auaritiae
 concupisse atque adeo primo dotem in congressu grandem et uberem rapuisse. ad haec, Maxime, longa oratione
 fatigare te non est consilium; nihil uerbis opus est, cum
@@ -2386,9 +2384,9 @@ me susceptis liberis <add>si</add> uita demigrasset, uti dos omnis
 apud filios eius Pontianum et Pudentem maneret, sin uero
 uno unaue superstite diem suum obisset, uti tum diuidua
 pars dotis posteriori filio, reliqua prioribus cederet.</p>
-            </div>
-            <div type="textpart" n="92" subtype="section">
-               <p>Haec, ut dico, tabulis ipsis docebo. fors fuat an ne
+         </div>
+         <div n="92" type="section">
+            <p>Haec, ut dico, tabulis ipsis docebo. fors fuat an ne
 sic quidem credat Aemilianus sola trecenta milia nummum
 scripta eorumque repetitionem filiis Pudentillae pacto
 datam. cape sis ipse tu manibus tuis tabulas istas, da
@@ -2419,9 +2417,9 @@ amisit maritum, ut scaeui ominis mulier et infausti coniugii minime appetenda, s
 habe<add>n</add>s culpam mulier, quae aut tam intolerabilis fuit, ut
 repudiaretur, aut tam insolens, ut repudiaret. ob haec
 et alia uiduae dote aucta procos sollicitant. quod Pudentilla quoque in alio marito fecisset, si philosophum spernentem dotis non rep<add>p</add>erisset.</p>
-            </div>
-            <div type="textpart" n="93" subtype="section">
-               <p>Age uero, si auaritiae causa mulierem concupissem,
+         </div>
+         <div n="93" type="section">
+            <p>Age uero, si auaritiae causa mulierem concupissem,
 quid mihi utilius ad possidendam domum eius fuit quam
 simultatem inter matrem et filios serere, alienare ab eius
 animo liberorum caritatem, quo liberius et artius desolatam
@@ -2440,9 +2438,9 @@ cetera hereditatis bona spe<del>i</del> inuitaret. haec ergo ab inuita Pudentill
 dicere—aegre extudi, ingentibus precibus inuitae et <pb n="p.103"/>
 iratae extorsi, matrem filiis reconciliaui, priuignos meos
 primo hoc uitrici beneficio grandi pecunia auxi.</p>
-            </div>
-            <div type="textpart" n="94" subtype="section">
-               <p>Cognitum hoc est tota ciuitate. Rufinum omnes execrati me laudibus tulere. uenerat ad nos, priusquam
+         </div>
+         <div n="94" type="section">
+            <p>Cognitum hoc est tota ciuitate. Rufinum omnes execrati me laudibus tulere. uenerat ad nos, priusquam
 istam donationem perficeret, cum dissimili isto fratre suo
 Pontianus, pedes nostros aduolutus ueniam et obliuionem
 praeteritorum omnium postularat, flens et manus nostras
@@ -2458,10 +2456,10 @@ si praelegam, mea uoce pronuntiabo. cedo tu Auiti epistulas, ut quae semper orna
 etiam saluti. at tu licebit aquam sinas fluere; namque
 optimi uiri litteras ter et quater aueo quantouis temporis
 dispendio lectitare.— <pb n="p.104"/>
-               </p>
-            </div>
-            <div type="textpart" n="95" subtype="section">
-               <p>Non sum nescius debuisse me post istas Auiti litteras
+            </p>
+         </div>
+         <div n="95" type="section">
+            <p>Non sum nescius debuisse me post istas Auiti litteras
 perorare. quem enim laudatorem locupletiorem, quem
 testem uitae meae sanctiorem producam, quem denique
 aduocatum facundiorem? multos in uita mea Romani
@@ -2476,17 +2474,17 @@ nec Gracchus impetum nec Caesar calorem nec <add>H</add>ortensius
 distributionem nec Caluus argutias nec parsimoniam
 Salustius nec opulentiam Cicero: prorsus, inquam, ne
 omnis persequar, si Auitum audias, neque additum quicquam uelis neque detractum neque autem aliquid commutatum.</p>
-               <p>Video, Maxime, quam benigne audias, quae in amico
+            <p>Video, Maxime, quam benigne audias, quae in amico
 tuo Auito recognosces. tua me comitas, ut uel pauca
 dicerem de eo, inuitauit. at non usque adeo tuae beniuolentiae indulgebo, ut mihi permittam iam propemodum
 fesso in causa prorsus ad finem inclinata de egregiis uirtutibus eius nunc demum incipere, quin potius eas integris
 uiribus et tempori libero seruem.</p>
-            </div>
-            <div type="textpart" n="96" subtype="section">
-               <p>nunc enim mihi, quod
+         </div>
+         <div n="96" type="section">
+            <p>nunc enim mihi, quod
 aegre fero, a commemoratione tanti uiri ad pestes istas
 oratio reuoluenda est.</p>
-               <p>Audesne te ergo, Aemiliane, cum Auito conferre? <pb n="p.105"/>
+            <p>Audesne te ergo, Aemiliane, cum Auito conferre? <pb n="p.105"/>
 quemme ille bonum uirum ait, cuius animi disputationem
 tam plene suis litteris collaudat, eum tu magiae maleficii
 criminis insectabere? an inuasisse me domum Pudentillae
@@ -2503,10 +2501,10 @@ non impedisses. quas mihi aut coram aut denique in testamento gratias egisset. l
 ualidus, quas iam aeger, plenas honoris, plenas amoris,
 quaeso, Maxime, paulisper recitari sinas, ut sciat frater
 eius, accusator meus, quam in omnibus minor u<add>it</add>ae curriculum cum fratre optumae memoriae uiro<del>c</del> currat.— <pb n="p.106"/>
-               </p>
-            </div>
-            <div type="textpart" n="97" subtype="section">
-               <p>Audistine uocabula, quae mihi Pontianus frater tuus
+            </p>
+         </div>
+         <div n="97" type="section">
+            <p>Audistine uocabula, quae mihi Pontianus frater tuus
 tribuerat me parentem suum, me dominum, me magistrum
 cum saepe alias, tum in extremo te<add>m</add>pore uitae uocans,
 postquam * * * ; tuas quoque paris epistolas promerem,
@@ -2529,9 +2527,9 @@ est, matrem cum fratre, cui, ut uides, admodum puero
 eandem illam filiae suae machinam Rufinus admouet ac <pb n="p.107"/>
 mulierem aliquam multo natu maiorem, nuperrime uxorem
 fratris, misero puero obicit et obsternit.</p>
-            </div>
-            <div type="textpart" n="98" subtype="section">
-               <p>A<del>i</del>t ille puellae meretricis blandimentis et lenonis
+         </div>
+         <div n="98" type="section">
+            <p>A<del>i</del>t ille puellae meretricis blandimentis et lenonis
 patris illectamentis captus et possessus, exinde ut frater
 eius animam edidit, relicta matre ad patruum commigrauit, quo facilius remotis nobis coepta perficerentur; fauet
 enim Rufino Aemilianus et prouentum cupit.—ehem, recte
@@ -2559,9 +2557,9 @@ ante, pro nefas, priuignum meum, fratrem Pontiani,
 diserti iuuenis, uix singulas syllabas fringultientem, cum
 ab eo quaereres, dona<add>s</add>setne illis mater quae ego dicebam
 me adnitente donata.</p>
-            </div>
-            <div type="textpart" n="99" subtype="section">
-               <p>Testor igitur te, Claudi Maxime, uosque, qui in consilio estis, uosque etiam, qui tribunal mecum adsistitis,
+         </div>
+         <div n="99" type="section">
+            <p>Testor igitur te, Claudi Maxime, uosque, qui in consilio estis, uosque etiam, qui tribunal mecum adsistitis,
 haec damna et dedecora morum eius patruo huic et candidato illo socero adsignanda meque posthac boni consulturum, quod talis priuignus curae meae iugum ceruice
 excusserit, neque postea pro eo matri eius supplicaturum.
 nam, quod paenissime oblitus sum, nuperrime cum testamentum Pudentilla post mortem Pontiani filii sui in mala
@@ -2581,9 +2579,9 @@ hereditatem omnem mihi relictam falso ex sua auaritia
 coniectauere. soluo uos in praeteritum isto metu. namque animum meum neque hereditatis neque ultionis occasio
 potuit loco demouere. pugnaui cum irata matre pro priuigno malo uitricus, ueluti pater pro optimo filio aduersus nouercam, nec satis fuit, ni bonae uxoris prolixam
 liberalitatem circa me nimio plus aequo coercerem.</p>
-            </div>
-            <div type="textpart" n="100" subtype="section">
-               <p>Cedo tu testamentum iam inimico filio a matre factum
+         </div>
+         <div n="100" type="section">
+            <p>Cedo tu testamentum iam inimico filio a matre factum
 me, quem isti praedonem dicunt, uerba singula cum precibus praeeunte<del>m</del>. rumpi tabulas istas iube, Maxime: inuenies filium heredem, mihi uero tenue nescio quid honoris
 gratia legatum, ne, si quid ei humanitus attigisset, nomen
 maritus in uxoris tabulis non haberem. cape ist<del>a</del>ut matris
@@ -2606,11 +2604,11 @@ maritu<add>m</add> tuum, quem elegeras, quem, ut ipse obiciebat,
 efflictim amabas, capitis accusauit? aperi quaeso, bone
 puer, aperi testamentum: facilius insaniam matris sic
 probabis.</p>
-               <p>Quid abnuis, quid recusas, postquam sollicitudinem de
+            <p>Quid abnuis, quid recusas, postquam sollicitudinem de
 hereditate materna reppulisti? at ego hasce tabulas,</p>
-            </div>
-            <div type="textpart" n="101" subtype="section">
-               <p>Maxime, hic ibidem pro pedibus tuis abicio testorque me
+         </div>
+         <div n="101" type="section">
+            <p>Maxime, hic ibidem pro pedibus tuis abicio testorque me
 deinceps incuriosius habiturum, quid Pudentilla testamento
 suo scribat. ipse iam, ut libet, matrem suam de cetero
 exoret: mihi, ut ultra pro eo deprecer, locum non reliquit.
@@ -2620,8 +2618,8 @@ poterit exorare. mihi iam dudum satis est, si non modo
 crimina obiecta plenissime dilui, uerum etiam radicem
 iudicii huius, id est hereditatis quaesitae inuidiam, funditus
 sustuli. <pb n="p.111"/>
-               </p>
-               <p>Illud etiam, <del>c</del> ne quid omnium praeteream, priusquam peroro, falso obiectum reuincam. dixistis me magna
+            </p>
+            <p>Illud etiam, <del>c</del> ne quid omnium praeteream, priusquam peroro, falso obiectum reuincam. dixistis me magna
 pecunia mulieris pulcherrimum praedium meo nomine
 emisse. dico exiguum herediolum LX milibus nummum,
 id quoque non me, sed Pudentillam suo nomine emisse,
@@ -2630,15 +2628,15 @@ eo agello tributum dependi. praesens est quaestor publicus, cui depensum est, Co
 etiam tutor auctor mulieris, uir grauissimus et sanctissimus, omni cum honore mihi nominandus, Cassius Longinus.
 quaere, Maxime, cuius emptionis auctor fuerit, quantulo
 pretio mulier locuples agellum suum praestinarit.—</p>
-               <p>
-                  <del>testimonium Cassi Longini tutoris et Coruini Clementis
+            <p>
+               <del>testimonium Cassi Longini tutoris et Coruini Clementis
 quaestor(is)</del>
-               </p>
-               <p>Estne ita ut dixi? uspiam in hac emptione nomen
+            </p>
+            <p>Estne ita ut dixi? uspiam in hac emptione nomen
 meum ascriptum est? num ipsum heredioli pretium inuidiosum est, num uel hoc saltem in me collatum?</p>
-            </div>
-            <div type="textpart" n="102" subtype="section">
-               <p>Quid etiam est, Aemiliane, quod non te iudice refutauerim? quod pretium magiae meae repperisti? cur
+         </div>
+         <div n="102" type="section">
+            <p>Quid etiam est, Aemiliane, quod non te iudice refutauerim? quod pretium magiae meae repperisti? cur
 ergo Pudentillae animum ueneficiis flecterem? quod ut
 ex ea commodum caperem? uti dotem mihi modicam
 potius quam a<del>m</del>mpla<add>m</add> diceret? o praeclara carmina.
@@ -2664,13 +2662,13 @@ etiam dure reppulisse liberalitatem suae uxoris <del>h</del>ostenditur.
 quae igitur alia causa est? quid ommutuistis? quid
 tacetis? ubi illud libelli uestri atrox principium nomine
 priuigni mei form<del>orm</del>atum:</p>
-            </div>
-            <div type="textpart" n="103" subtype="section">
-               <p>
-                  <q>hunc ego, domine Maxime,reum apud te facere institui?</q> quin igitur addis; <q>reum
+         </div>
+         <div n="103" type="section">
+            <p>
+               <q>hunc ego, domine Maxime,reum apud te facere institui?</q> quin igitur addis; <q>reum
 magistrum, reum uitricum, reum deprecatorem?</q> sed quid
 deinde? <q>plurimorum maleficiorum et manifestissimorum.</q>
-                  <pb n="p.113"/>
+               <pb n="p.113"/>
 cedo unum de plurimis, cedo dubium uel saltem obscurum
 de manifestissimis. ceterum ad haec, quae obiecistis, numera
 an binis uerbis respondeam. <q>dentes sp<add>l</add>endidas:</q> ignosce
@@ -2687,9 +2685,8 @@ pennis eum tenui: si haec, ut dico, ita sunt, possum
 securus existimationem tuam reuereri quam potestatem
 uereri, quod minus graue et uerendum mihi arbitror a<del>c</del>
 procons(ule) damnari quam si a tam bono tamque emendato uiro improber.</p>
-               <p>Dixi. <pb n="p.114"/>
-               </p>
-            </div>
+            <p>Dixi. <pb n="p.114"/>
+            </p>
          </div>
       </body>
    </text>

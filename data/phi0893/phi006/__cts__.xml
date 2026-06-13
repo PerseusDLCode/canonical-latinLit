@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0893.phi006" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0893">
             <ti:title xml:lang="lat">Ars Poetica</ti:title>
             <ti:edition urn="urn:cts:latinLit:phi0893.phi006.perseus-lat2" workUrn="urn:cts:latinLit:phi0893.phi006">
@@ -9,4 +10,4 @@
             <ti:description xml:lang="eng">Horace. The Works of Horace. Smart, Christopher, translator. Buckley, Theodoore Alois, editor.
               New York: Harper and Brothers, 1862.</ti:description>
             </ti:translation>
-          </ti:work>
+          <ti:genre confidence="high">verse-stichic</ti:genre></ti:work>

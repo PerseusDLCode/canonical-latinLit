@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0845.phi002" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0845">
 	<ti:title xml:lang="lat">Res Rustica</ti:title>
 	<ti:edition urn="urn:cts:latinLit:phi0845.phi002.perseus-lat3" workUrn="urn:cts:latinLit:phi0845.phi002">
@@ -5,4 +6,4 @@
 		<ti:description xml:lang="eng">Columella. On agriculture, Volume 1-2. Ash, Harrison Boyd; Foster, Edward Seymour; Heffner, Edward H., editors.
 			Cambridge, MA; London: Harvard University Press; William Heinemann, Ltd., 1941.</ti:description>
 	</ti:edition>
-</ti:work>
+<ti:genre confidence="high">prose-book-chapter</ti:genre></ti:work>

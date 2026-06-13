@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Exhortatione Castitatis Liber</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Exhortatione Castitatis Liber</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=765%3Bownerid=13510798896211526-789">HathiTrust</ref>                    
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa015.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.737"/>
-<head>DE EXHORTATIONE CASTITATIS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Non dubito, frater, te post uxorem in pace praemissam ad 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa015.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=765%3Bownerid=13510798896211526-789">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa015.opp-lat1">
+         <pb xml:id="v.1.p.737"/>
+         <head>DE EXHORTATIONE CASTITATIS.</head>
+         <div n="1" type="chapter">
+            <p>Non dubito, frater, te post uxorem in pace praemissam ad 
 conpositionem animi conversum de exitu singularitatis cogitare et
 utique consilii indigere. Quamquam in huiusmodi cum fide sua
 conloqui debet unusquisque eiusque vires consulere, tamen quoniam
@@ -69,8 +72,8 @@ tamquam advocato adversus carnis necessitates. Quae quidem
 necessitas facillime circumscribi potest, si voluntas potius
 dei quam indulgentia consideretur. Nemo indulgentia utendo promeretur,
 sed voluntati obsequendo. Voluntas dei est sanctificatio <bibl n="I Thess. IV, 3."/>
-<pb xml:id="v.1.p.738"/>
-<bibl n="Lev. XI, 44 sq. XIX, 2. XX, 7."/> nostra. Vult enim imaginem suam nos etiam similitudinem fieri,
+               <pb xml:id="v.1.p.738"/>
+               <bibl n="Lev. XI, 44 sq. XIX, 2. XX, 7."/> nostra. Vult enim imaginem suam nos etiam similitudinem fieri,
 ut simus sancti, sicut ipse sanctus est. Id bonum, sanctificationem
 dico, in species distribuo complures, ut in aliqua earum
 deprehendamur. Prima species est virginitas a nativitate: secunda,
@@ -85,10 +88,10 @@ praeter virtutis etiam modestiae laus est. Modestia est
 enim ablatum non desiderare, et ablatum a domino deo, sine
 <bibl n="Matth. X, 29."/> cuius voluntate nec folium de arbore delabitur nec passer assis
 unius ad terram cadit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p><bibl n="Iob. I, 21."/> Quam denique modesta illa vox est: Dominus dedit, dominus
+         </div>
+         <div n="2" type="chapter">
+            <p>
+               <bibl n="Iob. I, 21."/> Quam denique modesta illa vox est: Dominus dedit, dominus
 abstulit, ut domino visum est, ita factum est. Et ideo si nuptias
 sublatas restauremus, sine dubio contra voluntatem dei nitimur.
 volentes habere rursus quod habere nos noluit. Si enim voluisset,
@@ -136,10 +139,9 @@ cum solum sit in nobis velle, et in hoc probetur nostra erga
 deum mens, an ea velimus quae cum voluntate ipsius faciunt,
 alte et impresse recogitandam esse dico dei voluntatem, quid
 etiam in occulto velit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Quae enim in manifesto, scimus omnes, eaque ipsa qualiter
+         </div>
+         <div n="3" type="chapter">
+            <p> Quae enim in manifesto, scimus omnes, eaque ipsa qualiter
 in manifesto sint perspiciendum est. Nam etsi quaedam
 videntur voluntatem dei sapere, dum ab eo remittuntur, non
 statim omne quod permittitur ex mera et tota voluntate procedit
@@ -203,10 +205,9 @@ habere, quia nec bonum. Nemo igitur captet ex hoc capitulo
 defensionem, quod proprie ad innuptos et viduos spectat, quibus
 nulla adhuc coniunctio numeratur. Quamquam ostenderim etiam
 illis intellegendam esse permissi condicionem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Ceterum de secundo matrimonio scimus plane apostolum pronuntiasse, 
+         </div>
+         <div n="4" type="chapter">
+            <p>Ceterum de secundo matrimonio scimus plane apostolum pronuntiasse, 
 Solutus es ab uxore, ne quaesieris uxorem, sed si <bibl n="I Cor. VII, 25—40."/>
 duxeris, non delinques. Perinde tamen et huius sermonis ordinem
 de consilio suo, non de divino praecepto introduxit. Multum
@@ -249,10 +250,9 @@ non ex parte, quod celeri. Ita spiritus sancti auctoritatem
 ad eam speciem adire fecit, cui magis nos obsequi voluit,
 et factum est iam non consilium divini spiritus, sed pro eius
 maiestate praeceptum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Ad legem semel nubendi dirigendam ipsa erigo humani generis
+         </div>
+         <div n="5" type="chapter">
+            <p> Ad legem semel nubendi dirigendam ipsa erigo humani generis
 patrocinatur, contestans quid deus in primordio constituerit
 in formam posteritati recensendam. Nam cum hominem fig(??)lasset
 eique parem necessariam prospexisset, unam de costis eius
@@ -277,17 +277,16 @@ De uno matrimonio censemur utrobique, et carnaliter in
 Adam et spiritaliter in Christo. Duarum nativitatum unum est
 monogamiae praescriptum. In utraque degenerat is qui de monogamia
 exorbitat. Numerus matrimonii a maledicto viro coepit.
-Primus Lamech duabus maritatus tres in unam carnem effecit. <bibl n="Gen. IV, 19."/></p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sed et benedicti, inquis, patriarchae non modo pluribus uxoribus, 
+Primus Lamech duabus maritatus tres in unam carnem effecit. <bibl n="Gen. IV, 19."/>
+            </p>
+         </div>
+         <div n="6" type="chapter">
+            <p>Sed et benedicti, inquis, patriarchae non modo pluribus uxoribus, 
 verum etiam concubinis coniugia miscuerunt. Ergo propterea
 nobis quoque licebit innumerum nubere? Sane licebit, si adhuc
 typi, futuri alicuius sacramenta, supersunt quos nuptiae tuae
 <pb xml:id="v.1.p.746"/>
-
-<bibl n="Gen. I, 28."/> figurent, vel si etiam nunc locus est vocis illius: Crescite et multiplicamini,
+               <bibl n="Gen. I, 28."/> figurent, vel si etiam nunc locus est vocis illius: Crescite et multiplicamini,
 id est, si nondum alia vox supervenit, Tempus iam in
 collecto esse, restare, ut et qui uxores habeant tamquam non habentes
 agant. Utique enim continentiam indicens et compescens
@@ -305,12 +304,10 @@ caedat. Silva erat vetus dispositio, quae ab evangelio novo deputatur,
 <bibl n="Rom. XII, 17."/> oculo et dentem pro dente iam senuit ex quo iuvenuit Malum pro
 malo nemo reddat. Puto autem etiam in humanas constitutiones
 atque decreta posteriora pristinis praevalere.</p>
-<pb xml:id="v.1.p.747"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Cur autem de pristinis exemplis non ea potius agnoscamus 
+            <pb xml:id="v.1.p.747"/>
+         </div>
+         <div n="7" type="chapter">
+            <p>Cur autem de pristinis exemplis non ea potius agnoscamus 
 quae cum posterioribus communicant de disciplina et formam vetustatis
 ad novitatem transmittunt? Ecce enim in vetere lege animadverto
 castratam licentiam saepius nubendi. Cautum in Levitico:
@@ -348,10 +345,9 @@ alleguntur, quomodo erunt presbyteri qui de laicis alleguntur?
 Ergo pugnare debemus ante laicum iussum a secundo matrimonio
 abstinere, dum presbyter esse non alius potest quam laicus
 semel fuerit maritus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Liceat nunc denuo nubere, si omne quod licet bonum est.
+         </div>
+         <div n="8" type="chapter">
+            <p> Liceat nunc denuo nubere, si omne quod licet bonum est.
 <bibl n="I Cor. VI, 12."/> Idem apostolus exclamat, Omnia licent, sed non omnia prosunt.
 Quod non prodest, oro te, bonum potest dici? Si licita sunt et
 quae non pro salute, ergo et quae non bona sunt licita sunt. Quid
@@ -375,10 +371,9 @@ Licebat et apostolis nubere et uxores circumducere. Licebat et de <bibl n="I Cor
 evangelio ali. Sed qui iure hoc non usus est in occasionem,
 ad exemplum nos suum provocat, docens in eo esse probationem
 in quo licentia experimentum abstinentiae praestruxit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Si penitus sensus eius interpretemur, non aliud dicendum 
+         </div>
+         <div n="9" type="chapter">
+            <p>Si penitus sensus eius interpretemur, non aliud dicendum 
 erit secundum matrimonium quam species stupri. Cum enim dicat
 maritos hoc in sollicitudine habere, quemadmodum sibi placeant,
 non utique de moribus (nam bonam sollicitudinem non suggillaret),
@@ -422,10 +417,9 @@ tamquam Sodoma et Gomorra, quo die VAE illud super praegnantes
 et lactantes adimplebitur, id est super maritos et incontinentes;
 de nuptiis enim uteri et ubera et infantes. Et quando finis
 nubendi? Credo post finem vivendi.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Renuntiemus carnalibus, ut aliquando spiritalia fructificemus. 
+         </div>
+         <div n="10" type="chapter">
+            <p>Renuntiemus carnalibus, ut aliquando spiritalia fructificemus. 
 Rape occasionem, etsi non exoptatissimam, attamen opportunam,
 non habere cui debitum solveres et a quo exsolvereris. Desisti
 esse debitor. O te felicem! Dimisisti debitorem: sustine damnum.
@@ -461,12 +455,10 @@ etiam voces audiunt manifestas, tam salutares quam et occultas.
 Si haec obtusio, etiam cum in unis nuptiis res carnis exercetur,
 spiritum sanctum avertit, quanto magis, cum in secundo
 matrimonio agitur?</p>
-<pb xml:id="v.1.p.753"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Duplex enim rubor est, quia in secundo matrimonio duae 
+            <pb xml:id="v.1.p.753"/>
+         </div>
+         <div n="11" type="chapter">
+            <p>Duplex enim rubor est, quia in secundo matrimonio duae 
 uxores eundem circumstant maritum, una spiritu, alia in carne.
 Neque enim pristinam poteris odisse, cui etiam religiosiorem reservas
 affectionem, ut iam receptae apud dominum, pro cuius
@@ -476,10 +468,9 @@ et offeres pro duabus, et commendabis illas duas per sacerdotem de
 monogamia ordinatum aut etiam de virginitate sancitum, circumdatum
 viduis univiris? et ascendet sacrificium tuum libera fronte,
 et inter cetera bonae mentis postulabis tibi et uxori castitatem?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Scio, quibus causationibus coloremus insatiabilem carnis 
+         </div>
+         <div n="12" type="chapter">
+            <p>Scio, quibus causationibus coloremus insatiabilem carnis 
 cupiditatem. Praetendimus necessitates adminiculorum, domum
 administrandam, familiam regendam, loculos, claves custodiendas,
 lanificium dispensandum, victum procurandum, curas comminuendas.
@@ -524,10 +515,9 @@ praesumptione huius providentiae suae dei aemulationem provocarit.
 Scimus denique quendam ex fratribus, cum propter filiam
 suam secundo matrimonio sterilem captasset uxorem, tam iterum
 patrem factum quam et iterum maritum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Ad hanc meam cohortationem, frater dilectissime, accedunt 
+         </div>
+         <div n="13" type="chapter">
+            <p>Ad hanc meam cohortationem, frater dilectissime, accedunt 
 etiam saecularia exempla, quae saepe nobis etiam in testimonio
 posita sunt, cum quid bonum et deo placitum ab extraneis quoque
 agnoscitur et testimonio honoratur. Denique monogamia
@@ -568,12 +558,11 @@ suae honorem restituere, quique se iam illius aevi filios dicaverunt,
 occidentes in se concupiscentiam libidinis, et totum illud
 quod intra paradisum non potuit admitti! Unde praesumendum
 est hos qui intra paradisum recipi volent, tandem debere cessare
-ab ea re a qua paradisus intactus est.</p></div>
-<pb xml:id="v.1.p.758"/>
-
-<pb xml:id="v.1.p.759"/>
-
-<pb xml:id="v.1.p.760"/>
-</div></body></text>
-
+ab ea re a qua paradisus intactus est.</p>
+         </div>
+         <pb xml:id="v.1.p.758"/>
+         <pb xml:id="v.1.p.759"/>
+         <pb xml:id="v.1.p.760"/>
+      </body>
+   </text>
 </TEI>

@@ -1,68 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-   <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Adversus Marcionem</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-         <monogr>
-          <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
-          <author>Tertullian</author>
-          <editor>Franz Oehler</editor>
-          <imprint>
-           <publisher>T. O. Weigel</publisher>
-           <pubPlace>Leipzig</pubPlace>
-           <date>1854</date>
-          </imprint>
-          <biblScope unit="volume">2</biblScope>
-         </monogr>
-         <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=344%3Bownerid=13510798896211811-362">HathiTrust</ref>    
-        </biblStruct>        
-        </sourceDesc>
-  </fileDesc>
-   <encodingDesc>
-    <refsDecl n="CTS">
-     <cRefPattern n="chapter" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-      <p>This pointer pattern extracts Chapter</p>
-     </cRefPattern>
-     <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-      <p>This pointer pattern extracts Chapter</p>
-     </cRefPattern>
-    </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa006.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.47"/>
-<head>ADVERSUS MARCIONEM</head>
-<div type="textpart" subtype="book" n="1"><head>LIBER PRIMUS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Si quid retro gestum est nobis adversus Marcionem, iam 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Adversus Marcionem</title>
+            <author>Tertullian</author>
+            <editor>Franz Oehler</editor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa006.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=344%3Bownerid=13510798896211811-362">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-book-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa006.opp-lat1">
+         <pb xml:id="v.2.p.47"/>
+         <head>ADVERSUS MARCIONEM</head>
+         <div n="1" type="book">
+            <head>LIBER PRIMUS.</head>
+            <div n="1" type="chapter">
+               <p>Si quid retro gestum est nobis adversus Marcionem, iam 
 hinc viderit. Novam rem aggredimur ex vetere. Primum opusculum
 quasi properatum pleniore postea compositione rescideram.
 Hanc quoque nondum exemplariis suffectam fraude tunc fratris,
@@ -115,10 +119,9 @@ admittenda congressio est, interdum ne compendium praescriptionis
 ubique advocatum diffidentiae deputetur, regulam adversarii
 prius praetexam, ne cui lateat in qua principalis quaestio dimicatura
 est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Duos Ponticus deos affert, tanquam duas Symplegadas naufragii 
+            </div>
+            <div n="2" type="chapter">
+               <p>Duos Ponticus deos affert, tanquam duas Symplegadas naufragii 
 sui, quem negare non potuit, id est creatorem nostrum, et quem
 probare non poterit, id est suum; passus infelix huius praesumptionis
 instinctum de simplici capitulo dominicae pronuntiationis
@@ -146,10 +149,9 @@ deum, quem confiteri cogebatur, de malo infamando destruxit, alterum,
 quem commentari connitebatur, de bono praestruendo
 construxit. Has naturas quibus disposuerit articulis per ipsas responsiones
 nostras ostendimus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Principalis itaque, et exinde tota congressio de numero, an
+            </div>
+            <div n="3" type="chapter">
+               <p> Principalis itaque, et exinde tota congressio de numero, an
 duos deos liceat induci, si forte, poÄ&#x93;tica et pictoria licentia, et
 tertia iam, haeretica. Sed veritas Christiana destricte pronuntiavit,
 Deus si non unus est, non est, quia dignius credimus non esse
@@ -187,10 +189,9 @@ aeternum, ita et summum magnum. Duo ergo summa magna quomodo
 consistent, cum hoc sit summum magnum, par non habere,
 par autem non habere Ã¼ni competat et in duobus esse nullo
 modo possit?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Sed argumentabitur quilibet posse et duo summa magna consistere, 
+            </div>
+            <div n="4" type="chapter">
+               <p>Sed argumentabitur quilibet posse et duo summa magna consistere, 
 distincta atque disiuncta in suis finibus, et utique advocabit
 exemplum regna terrarum tanta numero et tamen summa magna
 in suis quibusque regionibus, et putabit ubique humana divinis
@@ -260,10 +261,9 @@ mihi duo sunt. Si alterum colerem, aeque recogitarem ne suffundere
 viderer numeri vanitatem sine differentia supervacui, hoc est
 ut tutius censerem neutrum colendum quam alterum cum scrupulo
 colendum aut ambos vane.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sic adhuc videmur disputare quasi Marcion duos pares constituat. 
+            </div>
+            <div n="6" type="chapter">
+               <p>Sic adhuc videmur disputare quasi Marcion duos pares constituat. 
 Nam dum defendimus deum summum magnum unicum
 credi oportere, excludentes ab eo parilitatem, tanquam de duobus
 paribus de his retraclavimus, nihilominus tamen docendo pares
@@ -294,10 +294,9 @@ nega summum magnum quem credis minorem. Deum vero
 confessus utrumque duo summa magna confessus es. Nihil
 alteri adimes aut alteri adscribes. Agnoscens divinitatem negasti
 diversitatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Temptabis ad haec de nomine dei concutere retractatum ut passivo
+            </div>
+            <div n="7" type="chapter">
+               <p> Temptabis ad haec de nomine dei concutere retractatum ut passivo
 <bibl n="Ps. LXXXII, 1. 6."/> et in alios quoque permisso, quia scriptum sit, Deus deorum
 stetit in ecclesia deorum, in medio autem deos diiudicabit,
 et, Ego dixi, vos dii estis. Nec tamen idcirco eis competat possessio
@@ -339,10 +338,9 @@ dispares deos sistere potes. Duo enim non sunt; quod pertineat
 proprie ad numeri retractatum. Quamquam tota materia de duobus
 deis dimicetur, his interim lineis eam clausimus, intra quas
 de singularibus iam proprietatibus congrediemur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Primo, supercilio stuporem suum aedificant Marcionitae, quod 
+            </div>
+            <div n="8" type="chapter">
+               <p>Primo, supercilio stuporem suum aedificant Marcionitae, quod 
 novum deum proferant, quasi nos veteris dei pudeat. Inflantur
 et pueri novis calceis, sed a vetere paedagogo calceati mox vanam
 gloriam vapulabunt. Novum igitur audiens deum in vetere mundo
@@ -364,10 +362,9 @@ pati non potest. Caret aetate quod non licet nasci. Deus si est
 vetus, non erit, si est novus, non fuit. Novitas initium testificatur,
 vetustas finem comminatur. Deus autem tam alienus ab initio et
 fine est quam a tempore, arbitro et metatore initii et finis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Scio quidem quo sensu novum deum iactitent, agnitione utique.
+            </div>
+            <div n="9" type="chapter">
+               <p> Scio quidem quo sensu novum deum iactitent, agnitione utique.
 Sed et ipsam novitatis cognitionem percutientem rudes animas
 ipsamque naturalem novitatis gratiositatem volui repercutere,
 et hinc iam de ignoto deo provocare. Utique enim quem agnitione
@@ -427,10 +424,9 @@ non esse qui sit hodie incertus, quia retro ignotus, quando quem
 
 constat esse, ex hoc ipso constat quod nunquam fuerit ignotus,
 ideo nec incertus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Siquidem a primordio rerum conditor earum cum ipsis pariter
+            </div>
+            <div n="10" type="chapter">
+               <p> Siquidem a primordio rerum conditor earum cum ipsis pariter
 compertus est, ipsis ad hoc prolatis ut deus cognosceretur. Nec
 enim si aliquanto posterior Moyses primus videtur in templo litterarum
 suarum deum mundi dedicasse, idcirco a Pentateucho natales
@@ -454,10 +450,9 @@ nunquam deus deerit. Semper intellegetur, semper audietur, etiam
 videbitur, quomodo volet. Habet deus testimonia, totum hoc quod
 sumus et in quo sumus. Sic probatur et deus et unus, dum non
 ignoratur, alio adhuc probari laborante.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Et merito, inquiunt. Quis enim non tam suis notus est quam
+            </div>
+            <div n="11" type="chapter">
+               <p> Et merito, inquiunt. Quis enim non tam suis notus est quam
 extraneis? Nemo. Teneo et hanc vocem. Quale est enim ut aliquid
 extraneum deo sit, cui nihil extraneum esset, si quis esset?
 quia dei hoc est, omnia illius esse et omnia ad illum pertinere,
@@ -513,10 +508,9 @@ sibi prospexerit agnoscendo paraturam? quando etiam insigniora et
 superbiora opera debuisset condidisse, ut et deus ex operibus
 cognosceretur secundum creatorem, et ex honestioribus potior et
 generosior creatore.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Ceterum etsi esse eum possemus confiteri, sine causa esse
+            </div>
+            <div n="12" type="chapter">
+               <p> Ceterum etsi esse eum possemus confiteri, sine causa esse
 eum deberemus argumentari. Sine causa enim esset qui rem non
 haberet, quia res omnis causa est, ut sit aliquis cuius res sit.
 Porro in quantum nihil oportet esse sine causa, id est sine re,
@@ -535,10 +529,9 @@ cessationis et defectionis operum et impudentiae et malignitatis
 affinis est: impudentiae, qua fidem non debitam sibi captat, cui
 praestruendae nihil prospexit, malignitatis, qua plures incredulitatis
 reos fecit nihil fidei procurando.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Cum deum hoc gradu expellimus, cui nulla conditio tam propria
+            </div>
+            <div n="13" type="chapter">
+               <p> Cum deum hoc gradu expellimus, cui nulla conditio tam propria
 et deo digna quam creatoris testimonium praesignaverit, narem
 <pb xml:id="v.2.p.61"/>
 
@@ -582,10 +575,9 @@ Unus, opinor, de sepibus flosculus, non dico de pratis,
 una cuiuslibet maris conchula, non dico de rubro, una tetraonis
 pennula, taceo de pavo, sordidum artificem pronuntiabit tibi
 creatorem?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> At cum et animalia irrides minutiora quae maximus artifex de
+            </div>
+            <div n="14" type="chapter">
+               <p> At cum et animalia irrides minutiora quae maximus artifex de
 industria ingeniis aut viribus ampliavit, sic magnitudinem in mediocritate
 probari docens quemadmodum virtutem in infirmitate
 <bibl n="II Cor. XII, 5."/> secundum apostolum, imitare, si potes, apis aedificia, formicae
@@ -616,10 +608,9 @@ creatoris (nam haec apud vos pro martyrio affectari debuisset,
 si vobis mundus displiceret), in quamcunque materiam resolveris,
 substantia creatoris uteris. Quanta obstinatio duritiae tuae!
 Depretias in quibus et vivis et moreris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Post haec, vel ante haec, cum dixeris esse et illi conditionem 
+            </div>
+            <div n="15" type="chapter">
+               <p>Post haec, vel ante haec, cum dixeris esse et illi conditionem 
 suam et suum mundum et suum caelum, de caelo quidem illo tertio
 videbimus, si et ad apostolum vestrum discutiendum pervenerimus,
 interim, quaecunque substantia est, cum suo utique deo apparuisse
@@ -662,10 +653,9 @@ inferioribus quatuor. His cum accedunt et sui Christi, alter qui
 apparuit sub Tiberio, alter qui a creatore promittitur, manifestam
 iam fraudem Marcion patitur ab eis qui duos illum deos inferre
 praesumunt, cum novem assignet, licet nesciens.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Non comparente igitur mundo alio, sicut nec deo eius, consequens
+            </div>
+            <div n="16" type="chapter">
+               <p> Non comparente igitur mundo alio, sicut nec deo eius, consequens
 est ut duas species rerum, visibilia et invisibilia, duobus
 auctoribus deis dividant, et ita suo deo invisibilia defendant. Quis
 autem poterit inducere in animum, nisi spiritus haereticus, eius
@@ -698,10 +688,9 @@ utique, si illa invisibilia maiora sunt visibilibus creaturis suo loco
 magnis, sic quoque congruit eius esse maiora cuius et magna,
 quia nec magna, nedum maiora, ei competant cuius nec modica
 comparent.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>His compressi erumpunt dicere: Sufficit unicum opus deo nostro, 
+            </div>
+            <div n="17" type="chapter">
+               <p>His compressi erumpunt dicere: Sufficit unicum opus deo nostro, 
 quod hominem liberavit summa et praecipua bonitate sua, et
 omnibus locustis anteponenda. O deum maiorem, cuius tam
 <pb xml:id="v.2.p.66"/>
@@ -731,10 +720,9 @@ revelationis necessariae, aut dubitavit, aut non potuit, aut noluit.
 Omnia haec deo indigna, maxime optimo. Sed et hunc locum
 alibi implebimus exprobratione serae revelationis, sicut nunc sola
 demonstratione.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Processerit, age, iam in notitiam quando voluit, quando potuit,
+            </div>
+            <div n="18" type="chapter">
+               <p> Processerit, age, iam in notitiam quando voluit, quando potuit,
 quando hora fatalis advenit. Fortasse enim anabibazon ei obstabat,
 <pb xml:id="v.2.p.67"/>
 
@@ -762,10 +750,9 @@ Romulus Consum et Tatius Cloacinam et Hostilius Pavorem
 et Metellus Alburnum et quidam ante hoc tempus Antinoum, hoc
 aliis licebit: nos Marcionem nauclerum novimus, non regem nec
 imperatorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Immo, inquiunt Marcionitae, deus noster, etsi non ab initio, 
+            </div>
+            <div n="19" type="chapter">
+               <p>Immo, inquiunt Marcionitae, deus noster, etsi non ab initio, 
 etsi non per conditionem, sed per semetipsum revelatus est in
 Christo Iesu. Dabitur et in Christum liber de omni statu eius.
 Distingui enim materias oportet, quo plenius et ordinatius retractentur.
@@ -805,10 +792,9 @@ utique ratio servavit quae non alium deum et legis et evangelii
 
 tuebatur praeter creatorem, adversus quem tanto post tempore separatio
 a Pontico immissa est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Huic expeditissimae probationi defensio quoque a nobis necessaria 
+            </div>
+            <div n="20" type="chapter">
+               <p>Huic expeditissimae probationi defensio quoque a nobis necessaria 
 est adversus obstrepitacula diversae partis. Aiunt enim Marcionem
 non tam innovasse regulam separatione legis et evangelii
 quam retro adulteratam recurasse. O Christe, patientissime domine,
@@ -856,10 +842,9 @@ apostolo praedicatum quam cuius decreta cupiebat iam agnosci, falsos
 et apostolos et fratres notans in hac causa, qui evangelium
 Christi creatoris transferrent a novitate praenuntiata a creatore ad
 vetustatem recusatam a creatore.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p> Ceterum si qua novum deum praedicans veteris dei legem
+            </div>
+            <div n="21" type="chapter">
+               <p> Ceterum si qua novum deum praedicans veteris dei legem
 cupiebat excludere, quare de deo quidem novo nihil praescribit,
 sed de vetere lege solummodo, nisi quoniam fide manente in creatorem
 sola lex eius concessare debebat? Ut et psalmus ille praecinuerat:
@@ -898,10 +883,9 @@ id est non de suis sensibus. Quod si Marcion poterit dici, debebit
 etiam probari. Nihil retractare oportebat. Hoc enim cuneo veritatis
 omnis extruditur haeresis, cum Christus non alterius dei quam
 creatoris circumlator ostenditur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p>Sed quomodo funditus evertetur antichristus, nisi ceteris quoque 
+            </div>
+            <div n="22" type="chapter">
+               <p>Sed quomodo funditus evertetur antichristus, nisi ceteris quoque 
 iniectionibus eius elidendis locus detur, relaxata praescriptionum
 defensione? Accedamus igitur iam hinc ad ipsam dei personam,
 vel potius umbram et phantasma, secundum Christum ipsius,
@@ -963,10 +947,9 @@ et non accessione, si ingenio optimus, et non disciplina,
 si ab aevo deus, et non a Tiberio, immo, quod verius, a Cerdone
 et Marcione. Tiberio nunc deus ille praestiterit ut imperio eius
 divina bonitas in terris dedicaretur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Aliam illi regulam praetendo, sicut naturalia, ita rationalia 
+            </div>
+            <div n="23" type="chapter">
+               <p>Aliam illi regulam praetendo, sicut naturalia, ita rationalia 
 esse debere in deo omnia. Exigo rationem bonitatis, quia nec
 aliud quid bonum haberi liceat quod non rationaliter bonum sit,
 nedum ut ipsa bonitas irrationalis deprehendatur. Facilius malum
@@ -1025,10 +1008,9 @@ de alienis bonis ob alium deum nomine eleemosynae et dilectionis
 operatur. Quis iste deus tam bonus ut homo ab illo malus
 fiat, tam propitius ut alium illi deum, et dominum quidem ipsius,
 faciat iratum?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p>Sed deus sicut aeternus et rationalis, ita opinor et perfectus 
+            </div>
+            <div n="24" type="chapter">
+               <p>Sed deus sicut aeternus et rationalis, ita opinor et perfectus 
 in omnibus. Eritis enim perfecti, quemadmodum pater vester, qui <bibl n="Matth. V, 46."/>
 in caelis est. Exhibe perfectam quoque bonitatem eius. Etsi de
 imperfecta satis constat, quae neque naturalis invenitur neque rationalis,
@@ -1089,10 +1071,9 @@ et de praesenti, ut perfecte? Alia est nostra condicio apud auctorem,
 apud iudicem, apud offensum principem generis. Tu tantummodo
 bonum deum praefers. Non potes autem perfecte bonum
 ostendere a quo non perfecte liberaris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Quod attinet ad bonitatis quaestionem, his lineis deduximus 
+            </div>
+            <div n="25" type="chapter">
+               <p>Quod attinet ad bonitatis quaestionem, his lineis deduximus 
 eam minime deo adaequari, ut neque ingenitam neque rationalem
 neque perfectam, sed et improbam et iniustam et ipso iam bonitatis
 nomine indignam, quod scilicet in quantum deo congruat, in
@@ -1137,10 +1118,9 @@ per quos administratur adversus creatorem, ne sic quoque irrationalis
 praescribatur, si careat et sensibus et affectibus debitis,
 Haec multo plenius defendemus in causa creatoris, in qua et
 exprobrantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p> At hic sufficit perversissimum deum ostendi in ipso praeconio
+            </div>
+            <div n="26" type="chapter">
+               <p> At hic sufficit perversissimum deum ostendi in ipso praeconio
 solitariae bonitatis, qua nolunt ei adscribere eiusmodi motus animi
 quos in creatore reprehendunt. Si enim neque aemulatur neque
 irascitur neque damnat neque vexat, utpote qui nec iudicem praestat,
@@ -1180,10 +1160,9 @@ Malo autem parcere deum indignius sit quam animadvertere, et quidem
 deo optimo, qui non alias plene bonus sit, nisi mali aemulus,
 uti boni amorem odio mali exerceat et boni tutelam expugnatione
 mali impleat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p>Sed iudicat plane malum nolendo et damnat prohibendo, dimittit 
+            </div>
+            <div n="27" type="chapter">
+               <p>Sed iudicat plane malum nolendo et damnat prohibendo, dimittit 
 autem non vindicando et absolvit non puniendo. O deum veritatis
 praevaricatorem! sententiae suae circumscriptorem! Timet
 damnare quod damnat, timet odisse quod non amat, factum sinit
@@ -1226,10 +1205,9 @@ optimo competat. Et quid erit abici, nisi amittere id quod erat
 consecuturus si non abiceretur, id est salutem? Ergo salutis in
 detrimentum abicietur, et hoc decerni non poterit nisi ab irato et
 offenso et executore delicti, id est iudice.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p> Exitus autem illi abiecto quis? Ab igne, inquiunt, creatoris
+            </div>
+            <div n="28" type="chapter">
+               <p> Exitus autem illi abiecto quis? Ab igne, inquiunt, creatoris
 <pb xml:id="v.2.p.81"/>
 
 deprehendetur. Adeone nullum habet elementum vel in hanc causam
@@ -1260,10 +1238,9 @@ sanctam? Quid aut onerat infirmam aut exornat indignam? Quid
 non salute remunerat quam onerat vel exornat? Quid fraudat mercedem
 operis non rependens carni salutem? Quid et honorem
 sanctitatis in illa mori patitur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p>Non tinguitur apud illum caro, nisi virgo, nisi vidua, nisi 
+            </div>
+            <div n="29" type="chapter">
+               <p>Non tinguitur apud illum caro, nisi virgo, nisi vidua, nisi 
 caelebs, nisi divortio baptisma mercata, quasi non etiam spadonibus
 <pb xml:id="v.2.p.82"/>
 
@@ -1328,13 +1305,14 @@ divinitatis et condiciones statuum eius omnino non esse confirmant.
 Sed et totius opusculi series in hoc utique succedit. Proinde
 si cui minus quid videmur egisse, speret reservatum suo
 tempori, sicut et ipsarum scripturarum examinationem quibus
-Marcion utitur.</p></div></div>
-
-<div type="textpart" subtype="book" n="2"><head>LIBER SECUNDUS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<pb xml:id="v.2.p.84"/>
-<p> Occasio reformandi opusculi huius, cui quid acciderit primo
+Marcion utitur.</p>
+            </div>
+         </div>
+         <div n="2" type="book">
+            <head>LIBER SECUNDUS.</head>
+            <div n="1" type="chapter">
+               <pb xml:id="v.2.p.84"/>
+               <p> Occasio reformandi opusculi huius, cui quid acciderit primo
 libellulo praefati sumus, hoc quoque contulit nobis, uti duobus
 deis adversus Marcionem retractandis suum cuique tilulum et volumen
 distingueremus pro materiae divisione, alterum deum definientes
@@ -1352,10 +1330,9 @@ iudicandum, et demerendum magis quam retractandum, vel quam
 timendum ob severitatem. Quid enim amplius homini necessarium
 quam cura in deum verum, in quem, ut ita dixerim, inciderat,
 quia alius deus non erat?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> At nunc negotium patitur deus omnipotens, dominus et conditor
+            </div>
+            <div n="2" type="chapter">
+               <p> At nunc negotium patitur deus omnipotens, dominus et conditor
 universitatis. Ideo tantum opinor, quia a primordio notus
 <pb xml:id="v.2.p.85"/>
 est, quia nunquam latuit, quia semper illuxit, etiam ante Romulum
@@ -1388,8 +1365,7 @@ dei iudicis, et ininvestigabiles viae eius, utique intellectus et scientiae,
 quas ei nemo monstravit, nisi forte isti censores divinitatis,
 dicentes, Sic non debuit deus, et, Sic magis debuit, quasi cogno-
 <pb xml:id="v.2.p.86"/>
-
-<bibl n="I Cor. II, 11."/> scat aliquis quae sint in deo nisi spiritus dei. Mundi autem habentes
+                  <bibl n="I Cor. II, 11."/> scat aliquis quae sint in deo nisi spiritus dei. Mundi autem habentes
 <bibl n="I Cor. I, 21."/> spiritum, non agnoscentes in sapientia dei per sapientiam
 deum, consultiores sibimet videntur deo, quoniam sicut sapientia
 mundi stultitia est penes deum, ita et sapientia dei stultitia est
@@ -1413,10 +1389,9 @@ occultavit seductricem. Rudis admodum haereticus fuit. Non
 obaudiit, non tamen blasphemavit creatorem, nec reprehendit
 auctorem, quem a primordio sui bonum et optimum invenerat,
 et ipse, si forte, iudicem fecerat a primordio.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Igitur oportebit ineuntes examinalionem in deum notum, si
+            </div>
+            <div n="3" type="chapter">
+               <p> Igitur oportebit ineuntes examinalionem in deum notum, si
 quaeritur in qua condicione sit notus, ab operibus eius incipere,
 quae priora sunt homine, ut statim cum ipso comperta bonitas eius
 et exinde constituta atque praescripta aliquem sensum suggerat no-
@@ -1449,10 +1424,9 @@ praesumenda ac per hoc deo digna, suffundens iam hinc
 bonitatem dei Marcionis, non dico initiis et temporibus, sed ipsa
 malitia creatoris posteriorem, si tamen malitia potuit a bonitale
 committi.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Igitur cum cognoscendo deo hominem prospexisset bonitas dei 
+            </div>
+            <div n="4" type="chapter">
+               <p> Igitur cum cognoscendo deo hominem prospexisset bonitas dei 
 ipsius, etiam hoc praeconio suo addidit, quod prius domicilium
 homini commentata est, aliquam postmodum molem maximam, postmodum
 et maiorem, ut in magna tanquam in minore proluderet
@@ -1512,10 +1486,9 @@ ante praedixit. Agnosce igitur bonitatem dei nostri interim vel
 bucusque ex operibus bonis, ex benedictionibus bonis, ex indulgentiis,
 ex providentiis, ex legibus et praemonitionibus bonis et
 benignis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Iam hinc ad quaestiones omnes, o canes, quos foras apostolus <bibl n="Apec."/>
+            </div>
+            <div n="5" type="chapter">
+               <p>Iam hinc ad quaestiones omnes, o canes, quos foras apostolus <bibl n="Apec."/>
 expellit, latrantes in deum veritatis. Haec sunt argumentationum <bibl n="XXII, 15."/>
 ossa, quae obroditis. Si deus bonus et praescius futuri et
 avertendi mali potens, cur hominem, et quidem imaginem et similitudinem
@@ -1563,10 +1536,9 @@ ante hominem bonum et malum, vitam et mortem, sed nec alias
 totum ordinem disciplinae per praecepta dispositum, avocante deo,
 et minante, et exhortante, nisi et ad obsequium et ad contemptum
 libero et voluntario homine.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Sed quoniam ex hoc iam intellegimur eo struentes liberam
+            </div>
+            <div n="6" type="chapter">
+               <p> Sed quoniam ex hoc iam intellegimur eo struentes liberam
 hominis potestatem arbitrii sui ut quod ei evenit non deo, sed
 ipsi debeat exprobrari, ne et tu hinc iam opponas non ita illum
 institui debuisse, si libertas et potestas arbitrii exitiosa futura esset,
@@ -1634,10 +1606,9 @@ quod accidit, quia nec auctoris examinata sit ratio. Denique
 et bonitas dei a primordio operum perspecta persuadebit nihil a
 deo mali evenire potuisse, et libertas hominis recogitata se potius
 ream ostendet quod ipsa commisit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Hac definitione omnia deo salva sunt, et natura bonitatis et
+            </div>
+            <div n="7" type="chapter">
+               <p> Hac definitione omnia deo salva sunt, et natura bonitatis et
 ratio dispositionis et praescientiae et potentiae copia. Exigere tamen
 a deo debes et gravitatem summam et fidem praecipuam in
 omni institutione eius, ut desinas quaerere an deo nolente potuerit
@@ -1678,10 +1649,9 @@ peroraturus in creatorem, si libero arbitrio hominis ex providentia
 et potentia, quas exigis, obstitisset, nunc tibi insusurra
 pro creatore et gravitatem et patientiam et fidem, institutionibus
 suis functo ut et rationalibus et bonis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Neque enim ad vivendum solummodo produxerat hominem, ut 
+            </div>
+            <div n="8" type="chapter">
+               <p>Neque enim ad vivendum solummodo produxerat hominem, ut 
 non ad recte vivendum, in respectu scilicet dei legisque eius. Igitur
 vivere quidem illi ipse praestiterat facto in animam vivam,
 recte vero vivere demandarat admonito in legis obsequium. Ita
@@ -1703,10 +1673,9 @@ fecisset infirmum, sed potius defectione earum. Atque adeo eundem
 hominem, eandem substantiam animae, eundem Adae statum
 eadem arbitrii libertas et potestas victorem efficit hodie de eodem
 diabolo, cum secundum obsequium legum eius administratur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Quoquo tamen, inquis, modo substantia creatoris delicti capax 
+            </div>
+            <div n="9" type="chapter">
+               <p> Quoquo tamen, inquis, modo substantia creatoris delicti capax 
 invenitur, cum afflatus dei, id est anima, in homine deliquit, nec
 potest non ad originalem summam referri corruptio portionis. Ad
 hoc interpretanda erit qualitas animae. Inprimis tenendum quod
@@ -1773,10 +1742,9 @@ est delicti auctor qui invenitur interdictor, immo et condemnator.
 Si mors malum, nec mors comminatori suo, sed contemptori
 faciet invidiam, ut auctori. Contemnendo enim eam fecit,
 non utique futuram si non contempsisset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Sed et si ab homine in diabolum transcripseris mali elogium,
+            </div>
+            <div n="10" type="chapter">
+               <p> Sed et si ab homine in diabolum transcripseris mali elogium,
 ut in instinctorem delicti, uti sic quoque in creatorem dirigas culpam
 ut in auctorem diaboli, qui facit angelos spiritus, ergo
 quod factus a deo est, id est angelus, id erit eius qui fecit, quod
@@ -1837,10 +1805,9 @@ recuperaret, et diabolus amarius puniretur ab eo quem eliserat
 ante devictus, et deus tanto magis bonus inveniretur, sustinens
 hominem gloriosiorem in paradisum ad licentiam decerpendae arboris
 vitae iam de vita regressurum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Igitur usque ad delictum hominis deus a primordio tantum
+            </div>
+            <div n="11" type="chapter">
+               <p> Igitur usque ad delictum hominis deus a primordio tantum
 bonus, exinde iudex et severus et, quod Marcionitae volunt, saevus.
 <bibl n="Gen. III, 16."/> Statim mulier in doloribus parere et viro servire damnatur, sed
 quae ante sine ulla contristatione per benedictionem incrementum
@@ -1874,10 +1841,9 @@ tanto bonum iustitia. Nec species solummodo, sed tutela reputanda
 bonitatis, quia bonitas, nisi iustitia regatur ut iusta sit, non
 erit bonitas, si iniusta sit. Nihil enim bonum quod iniustum, bonum
 autem omne quod iustum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Ita si societas et conspiratio bonitatis atque iustitiae, separationem 
+            </div>
+            <div n="12" type="chapter">
+               <p>Ita si societas et conspiratio bonitatis atque iustitiae, separationem 
 earum non potes cavere. Quo ore constitues diversitatem
 duorum deorum, in separatione seorsum deputans deum bonum et
 seorsum deum iustum? Illic consistit bonum ubi et iustum. A
@@ -1899,12 +1865,10 @@ mali offusces. His enim modis ostendimus eam cum auctrice
 omnium bonitate prodisse, ut et ipsam ingenitam deo et naturalem
 nec obventiciam deputandam quae in domino inventa sit arbitratrix
 operum eius.</p>
-<pb xml:id="v.2.p.100"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>At enim ut malum postea erupit atque inde iam coepit bonitas
+               <pb xml:id="v.2.p.100"/>
+            </div>
+            <div n="13" type="chapter">
+               <p>At enim ut malum postea erupit atque inde iam coepit bonitas
 dei cum adversario agere, aliud quoque negotium eadem illa iustitia
 dei nacta est iam secundum adversionem dirigendae bonitatis, ut
 seposita libertate eius, qua et ultro deus bonus, pro meritis cuiusque
@@ -1947,10 +1911,9 @@ diligendum, quia malit paenitentiam peccatoris quam mortem, <bibl n="Exech. XXXI
 et timendum, quia nolit peccatores sui iam non paenitentes.
 Ideo lex utrumque definit: Diliges deum, et, Timebis deum. Aliud <bibl n="Matth. XXII, 37 sqq."/>
 obsecutori proposuit, aliud exorbitatori.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Ad omnia tibi occurrit deus, idem percutiens, sed et sanans, 
+            </div>
+            <div n="14" type="chapter">
+               <p>Ad omnia tibi occurrit deus, idem percutiens, sed et sanans, 
 mortificans, sed et vivificans, humilians, sed et sublimans, condens
 mala, sed et pacem faciens, ut etiam et hinc respondeam
 haereticis. Ecce enim, inquiunt, ipse se conditorem profitetur
@@ -1975,18 +1938,16 @@ voluit caruisse, iniuste malitiam aevi illius imbribus, dehinc et
 ignibus caesam, iniuste Aegyptum foedissimam, superstitiosam, amplius
 hospitis populi conflictatricem, decemplici castigatione per-
 <pb xml:id="v.2.p.102"/>
- 
-<bibl n="Num. XI. XXI."/> cussam. Indural cor Pharaonis: sed meruerat in exitium subministrari
+                  <bibl n="Num. XI. XXI."/> cussam. Indural cor Pharaonis: sed meruerat in exitium subministrari
 qui iam negaverat deum, qui iam legatos eius totiens
 superbus excusserat, qui iam populo laborem operis adiecerat,
 postremo qua Aegyptius, olim deo reus fuerat gentilis idololatriae,
 ibin et crocodilum citius colens quam deum vivum. Impendit
 <bibl n="II Reg. II, 23 sqq."/> et ipsum populum, sed ingratuns. Immisit et pueris ursos, sed
 irreverentibus in prophetam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Iustitiam ergo primo iudicis dispice, cuius si ratio constiterit,
+            </div>
+            <div n="15" type="chapter">
+               <p> Iustitiam ergo primo iudicis dispice, cuius si ratio constiterit,
 tunc et severitas, et per quae severitas decurrit, rationi et iustitiae
 reputabuntur. Ac ne pluribus immoremur, asserite causas ceteras
 quoque, ut sententias condemnetis, excusate delicta, ut iudicia
@@ -2008,12 +1969,10 @@ filios patrum delicta cognosces, ad illos scilicet qui hanc ultro sibi
 <bibl n="Matth. XXVII, 25."/> sententiam fuerant irrogaturi, Sanguis illius super capita nostra et
 filiorum nostrorum. Hoc itaque omnis providentia dei censuit
 quod iam audierat.</p>
-<pb xml:id="v.2.p.103"/> 
-
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Bona igitur et severitas quia iusta, si bonus iudex, id est 
+               <pb xml:id="v.2.p.103"/>
+            </div>
+            <div n="16" type="chapter">
+               <p>Bona igitur et severitas quia iusta, si bonus iudex, id est 
 iustus. Item cetera bona per quae opus bonum currit bonae severitatis,
 sive ira sive aemulatio sive saevitia. Debita enim omnia
 haec sunt severitati, sicut severitas debitum est iustitiae. Vindicanda
@@ -2072,10 +2031,9 @@ propter errantes, et patientiam propter non resipiscentes,
 et praestantiam propter merentes, et quicquid bonis opus est.
 Quae omnia patitur suo more, quo eum pati condecet, propter
 quem homo eadem patitur aeque suo more.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Haec ita dispecta totum ordinem dei iudicis operarium et, ut
+            </div>
+            <div n="17" type="chapter">
+               <p> Haec ita dispecta totum ordinem dei iudicis operarium et, ut
 dignius dixerim, protectorem catholicae et summae illius bonitatis
 ostendunt quam semotam a iudiciariis sensibus et in suo statu
 puram nolunt Marcionitae in eodem deo agnoscere, pluentem super
@@ -2111,10 +2069,9 @@ solvuntur, cum eodem tempore agro parcitur, egenis cedendo
 locum, bovi etiam terenti vincula oris remittuntur ad fructum praesentis
 laboris, quo facilius in pecudibus praemeditata humanitas in
 bominum refrigeria erudiretur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Sed quae potins legis bona defendam quam quae haeresis concupiit? <bibl n="Exod. XXI, 24."/>
+            </div>
+            <div n="18" type="chapter">
+               <p> Sed quae potins legis bona defendam quam quae haeresis concupiit? <bibl n="Exod. XXI, 24."/>
 ut talionis definitionem, oculum pro oculo, dentem pro
 dente, et livorem pro livore repetentis. Non enim iniuriae mutuo
 exercendae licentiam sapit, sed in totum cohibendae violentiae pro-
@@ -2150,10 +2107,9 @@ in idololatriam et transgressionem eiusmodi officiis religioni
 suae voluit adstringere quibus superstitio saeculi agebatur, ut ab
 ea avocaret illos, sibi iubens fieri, quasi desideranti ne simulacris
 faciendis delinqueret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p> Sed et in ipsis commerciis vitae et conversationis humanae
+            </div>
+            <div n="19" type="chapter">
+               <p> Sed et in ipsis commerciis vitae et conversationis humanae
 domi ac foris adusque curam vasculorum omnifariam distinxit, ut
 <pb xml:id="v.2.p.107"/>
 
@@ -2181,8 +2137,7 @@ non abire in concilium impiorum, nec stare in via peccatorum, nec <bibl n="Ps. I
 in cathedra pestilentium sedere. Sed ubi? Vide quam bonum <bibl n="Ps. CXXXIII, i."/>
 et quam iocundum habitare fratres in unum, meditantes die ac
 <pb xml:id="v.2.p.108"/>
-
-<bibl n="Ps. CX(??)III, 8. 9."/> nocte in lege domini, quia bonum scilicet fidere in dominum quam
+                  <bibl n="Ps. CX(??)III, 8. 9."/> nocte in lege domini, quia bonum scilicet fidere in dominum quam
 fidere in hominem, et sperare in dominum quam sperare in
 <bibl n="Ps. I, 8."/> hominem. Qualis enim apud deum merces homini? Et erit tanquam
 lignum quod plantatum est iuxta exitus aquarum, quod fructum
@@ -2200,10 +2155,10 @@ eorum: unum ex ipsis non comminuetur. Redimet dominus
 animas servorum suorum. Pauca ista de tantis scripturis creatoris
 intulimus, et nihil puto iam ad testimonium dei optimi deesse,
 quod satis et praecepta bonitatis et praemissa consignant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p><bibl n="Deut. XIV, 11."/> Sed enim sepiae isti, quorum figura illud quoque pisculentum
+            </div>
+            <div n="20" type="chapter">
+               <p>
+                  <bibl n="Deut. XIV, 11."/> Sed enim sepiae isti, quorum figura illud quoque pisculentum
 de cibis lex recusavit, ut traductionem sui sentiunt, tenebras
 hine blasphemiae intervomunt, atque ita intentionem uniuscuiusque
 iam proximam dispargunt, iactitando et asseverando ea quae relucentem
@@ -2241,10 +2196,9 @@ tempore expeditionis angusto aliquo solatio tacitae compensationis
 
 expunxi. Plane minus exigi iussit, Hebraeis etiam filios Aegyptii
 restituere debuerant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p> Sic et in ceteris contrarietates praeceptorum ei exprobras ut
+            </div>
+            <div n="21" type="chapter">
+               <p> Sic et in ceteris contrarietates praeceptorum ei exprobras ut
 mobili et instabili, prohibentis sabbatis operari et iubentis arcam
 circumferri per dies octo, id est etiam sabbato, in expugnatione
 civitatis Hiericho. Nec sabbati enim inspicis legem, opera humana,
@@ -2264,10 +2218,9 @@ sabbatis lignatum ierat, morti datus est. Suum enim opus fecerat,
 lege interdictum. Qui vero arcam sabbatis circumtulerant, impune
 gesserunt. Non suum enim opus, sed dei, ex praecepto scilicet
 ipsius, administraverant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Proinde et similitudinem vetans fieri omnium quae in caelo et
+            </div>
+            <div n="22" type="chapter">
+               <p> Proinde et similitudinem vetans fieri omnium quae in caelo et
 in terra et in aquis ostendit et causas, idololatriae scilicet caecae
 substantiam cohibentes. Subicit enim, Non adorabitis ea neque
 servietis illis. Serpentis autem aenei effigies postea praecepta
@@ -2305,10 +2258,9 @@ vestra dicendo quae secundum libidinem suam, non secundum
 religionem dei celebrande sua iam, non dei fecerant, condicionalem
 idcirco et rationalem demonstravit recusationem eorum quae
 administranda praescripserat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p> Si vero etiam circa personas levem vultis intellegi, cum
+            </div>
+            <div n="23" type="chapter">
+               <p> Si vero etiam circa personas levem vultis intellegi, cum
 reprobat aliquando probatos, aut improvidum, cum probat quandoque
 reprobandos, quasi iudicia sua aut damnet praeterita aut ignoret
 futura, atquin nihil tam bono et iudici convenit quam pro
@@ -2328,10 +2280,9 @@ et nunquam adlegetur. Ceterum si idem homo, ut in utroque
 pro temporibus, in utroque dispungetur a deo et bono et iudice,
 qui non levitate aut improvidentia sententias vertit, sed censura
 gravissima et providentissima merita temporis cuiusque dispensat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Sic et paenitentiam apud illum prave interpretaris, quasi proinde
+            </div>
+            <div n="24" type="chapter">
+               <p> Sic et paenitentiam apud illum prave interpretaris, quasi proinde
 mobilitate vel improvidentia, immo iam ex delicti recordatione
 <bibl n="I Sam. XV, 11."/> paeniteat, quoniam quidem dixerit, Paenituit quod regem fecerim
 <pb xml:id="v.2.p.113"/>
@@ -2404,12 +2355,10 @@ nedum in deo, cuius omnis sententia caret culpa. Nam et
 in Graeco sono paenitentiae nomen non ex delicti confessione, sed
 ex animi demutatione compositum est, quam apud deum pro rerum
 variantium sese occursu regi ostendimus.</p>
-<pb xml:id="v.2.p.115"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Iam nunc, ut omnia eiusmodi expediam, ad ceteras pusillitates 
+               <pb xml:id="v.2.p.115"/>
+            </div>
+            <div n="25" type="chapter">
+               <p>Iam nunc, ut omnia eiusmodi expediam, ad ceteras pusillitates 
 et infirmitates et incongruentias, ut putatis, interpretandas
 purgandasque pertendam. Inclamat deus, Adam, ubi es? scilicet <bibl n="Gen. III, 9. 11."/>
 ignorans ubi esset, et causato nuditatis pudore an de arbore gustasset
@@ -2459,10 +2408,10 @@ sensum, sub sciscitationis obtentu? Quodsi descensum quoque dei
 irrides, quasi aliter non potuerit perficere iudicium nisi descendisset,
 vide ne tuum aeque deum pulses. Nam et ille descendit
 ut quod vellet efficeret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p><bibl n="Ies. XLV, 23."/> Sed et iurat deus. Numquid forte per deum Marcionis? Immo,
+            </div>
+            <div n="26" type="chapter">
+               <p>
+                  <bibl n="Ies. XLV, 23."/> Sed et iurat deus. Numquid forte per deum Marcionis? Immo,
 inquit, multo vanius, quod per semetipsum. Quid vellet facere,
 si alius deus non erat in conscientia eius, hoc cum maxime iurantis
 alium absque se omnino non esse? Igitur peierantem deprehendis,
@@ -2491,10 +2440,9 @@ ut famulus postulare posset a domino, id dominus a se postulavit.
 Ad hoc enim famulo dixit, Sine me, et disperdam illos, ut ille
 postulando et semetipsum offerendo non sineret, atque ita disceres
 quantum liceat fideli et prophetae apud deum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p>Iam nunc, ut et cetera compendio absolvam, quaecunque adhuc 
+            </div>
+            <div n="27" type="chapter">
+               <p>Iam nunc, ut et cetera compendio absolvam, quaecunque adhuc 
 ut pusilla et infirma et indigna colligitis ad destructionem
 creatoris, simplici et certa ratione proponam: deum non potuisse
 humanos congressus inire, nisi humanos et sensus et affectus sucepisset,
@@ -2552,10 +2500,9 @@ nec amicus. Quid si nunc eadem et in vestro deprehendantur?
 Iudicem quidem et illum esse iam ostendimus in libello suo, et
 de iudice necessarie severum, et de severo sic et saevum, si
 lamen saevum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p> Nunc et de pusillitatibus et malignitatibus ceterisque notis et
+            </div>
+            <div n="28" type="chapter">
+               <p> Nunc et de pusillitatibus et malignitatibus ceterisque notis et
 <pb xml:id="v.2.p.119"/>
 ipse adversus Marcionem Antitheses aemulas faciam. Si ignoravit
 deus meus esse alium super se, etiam tuus omnino non scivit esse
@@ -2586,12 +2533,10 @@ quam in eum a quo vellet occidi. Multos autem occidisse
 deum eius probabo Marcioni. Nam fecit homicidam, utique
 periturum, nisi si populus nihil deliquit in Christum. Sed
 expedita virtus veritatis paucis amat. Multa mendacio erunt necessaria.</p>
-<pb xml:id="v.2.p.120"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p> Ceterum ipsas quoque Antitheses Marcionis cominus cecidissem,
+               <pb xml:id="v.2.p.120"/>
+            </div>
+            <div n="29" type="chapter">
+               <p> Ceterum ipsas quoque Antitheses Marcionis cominus cecidissem,
 si operosiore destructione earum egeret defensio creatoris
 tam boni quam et indicis, secundum utriusque partis exempla congruentia
 deo, ut ostendimus. Quodsi utraque pars bonitatis atque
@@ -2624,13 +2569,14 @@ ipse mundus eius agnoscet ex contrarietatibus elementorum, summa
 lamen ratione modulatus. Quam ob rem, inconsiderantissime Marcion,
 alium deum lucis ostendisse debueras, alium vero tenebrarum,
 quo facilius alium bonitatis, alium severitatis persuasisses.
-Ceterum eius erit Antithesis cuius est et in mundo.</p></div></div>
-
-<div type="textpart" subtype="book" n="3"><head>LIBER TERTIUS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<pb xml:id="v.2.p.122"/>
-<p> Secundum vestigia pristini operis, quod amissum reformare
+Ceterum eius erit Antithesis cuius est et in mundo.</p>
+            </div>
+         </div>
+         <div n="3" type="book">
+            <head>LIBER TERTIUS.</head>
+            <div n="1" type="chapter">
+               <pb xml:id="v.2.p.122"/>
+               <p> Secundum vestigia pristini operis, quod amissum reformare
 perseveramus, iam hinc ordo de Christo, licet ex abundanti post
 decursam defensionem unicae divinitatis. Satis etenim praeiudicatum
 est Christum non alterius dei intellegendum quam creatoris, cum
@@ -2649,11 +2595,10 @@ Ceterum in praescriptionum compendiis vincit. Sed decretum est
 ut gestientem ubique adversario occurrere, in tantum furenti ut
 facilius praesumpserit eum venisse Christum qui nunquam sit adnuntiatus
 quam eum qui semper sit praedicatus.</p>
-<pb xml:id="v.2.p.123"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Hinc denique gradum consero, an debuerit tam subito venisse. 
+               <pb xml:id="v.2.p.123"/>
+            </div>
+            <div n="2" type="chapter">
+               <p>Hinc denique gradum consero, an debuerit tam subito venisse. 
 Primo quia et ipse dei sui filius. Hoc enim ordinis fuerat,
 ut ante pater filium profiteretur quam patrem filius, et ante pater
 de filio testaretur quam filius de patre. Dehinc et quia missus
@@ -2679,15 +2624,14 @@ fundamentis dispositionis et praedicationis, quo ordine
 fides informata merito et homini indicertur a deo et deo exhiberetur
 ab homine, ex agnitione debens credere quia posset, quae
 scilicet credere didicisset ex praedicatione.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Non fuit, inquis, ordo eiusmodi necessarius, quia statim se 
+            </div>
+            <div n="3" type="chapter">
+               <p>Non fuit, inquis, ordo eiusmodi necessarius, quia statim se 
 et filium et missum et dei Christum rebus ipsis esset probaturus
 per documenta virtutum. At ego negabo solam hanc illi speciem
 ad testimonium competisse, quam et ipse postmodum exauctoravit,
 <pb xml:id="v.2.p.124"/>
-<bibl n="Mattb. XXIV, 24."/> siquidem edicens multos venturos et signa facturos et virtutes magnas
+                  <bibl n="Mattb. XXIV, 24."/> siquidem edicens multos venturos et signa facturos et virtutes magnas
 edituros, aversionem etiam electorum, nec ideo tamen admittendos,
 temerariam signorum et virtutum fidem ostendit, ut
 etiam apud pseudochristos facillimarum. Aut quale est si inde
@@ -2723,10 +2667,9 @@ Sed quomodo a deo nunquam praedicato Christus eius praedicaretur?
 Hoc est ergo quod exigit, nec deum nec Christum tuum
 credi, quia et dens ignotus esse non debuit et Christus agnosci
 per deum debuit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Dedignatus, opinor, est imitari ordinem dei nostri, ut displicentis, 
+            </div>
+            <div n="4" type="chapter">
+               <p>Dedignatus, opinor, est imitari ordinem dei nostri, ut displicentis, 
 ut cum maxime revincendi. Novus nove venire voluit,
 filius ante patris professionem et missus ante mandatoris auctoritatem,
 ut et ipse fidem monstruosissimam induceret, qua ante crederetur
@@ -2765,10 +2708,9 @@ adversus Christum, regnum redarguens eius. Tunc ergo conclurus
 ordinem suum, tunc, si forte, credendus est, aut si iam
 hinc perfecta res est eius, vane ergo venturus est, nihil scilicet
 peracturus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> His proluserim quasi de gradu primo adhuc et quasi de longinquo.
+            </div>
+            <div n="5" type="chapter">
+               <p> His proluserim quasi de gradu primo adhuc et quasi de longinquo.
 Sed et hinc iam ad certum et cominus dimicaturus video
 aliquas etiam nunc lineas praeducendas, ad quas erit dimicandum,
 ad scripturas scilicet creatoris. Secundum eas enim probaturus
@@ -2810,10 +2752,9 @@ Abrahae allegorice cucurrisse, et suggerens Ephesiis quod in primordio <bibl n="
 de homine praedicatum est relicturo patrem et matrem et
 futuris duobus in unam carnem, id se in Christum et ecclesiam
 agnoscere.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Si satis constat de istis interim duabus proprietatibus Iudaicae 
+            </div>
+            <div n="6" type="chapter">
+               <p>Si satis constat de istis interim duabus proprietatibus Iudaicae 
 litteraturae, memento, lector, constitisse, ut, cum tale quid adhibuerimus,
 non retractetur de forma scripturae, sed de statu causae.
 Cum igitur haeretica dementia eum Christum venisse praesumeret
@@ -2894,10 +2835,9 @@ qua suum, id est Iudaeum, sed Iudaismi exorbitatorem et destructorem,
 deduxerint in indicium et suo iure punierint, alienum scilicet
 non iudicaluri. Tanto abest ut alienum Christum intellexisse
 videantur qui nec hominem eius ut alienum iudicaverunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Discat nunc haereticus ex abundanti cum ipso licebit Iudaeo
+            </div>
+            <div n="7" type="chapter">
+               <p> Discat nunc haereticus ex abundanti cum ipso licebit Iudaeo
 rationem quoque errorum eius, a quo ducatum muluatus in hac
 argumentatione caecus a caeco in eandem decidit foveam. Duos
 dicimus Christi habitus a prophetis demonstratos totidem adventus
@@ -2962,10 +2902,9 @@ id est secundum, non immerito decepti sunt circa obscuriorem,
 certe indigniorem, id est primum. Atque ita in hodiernum
 negant venisse Christum suum, quia non in sublimitate venerit,
 dum ignorant etiam in humilitate fuisse venturum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Desinat nunc haereticus a Iudaeo, aspis, quod aiunt, a vipera, 
+            </div>
+            <div n="8" type="chapter">
+               <p> Desinat nunc haereticus a Iudaeo, aspis, quod aiunt, a vipera, 
 <pb xml:id="v.2.p.132"/>
 
 mutuari venenum, evomat iam hinc proprii ingenii virus, phantasma
@@ -3022,10 +2961,9 @@ autem etiam falsi testes dei, quod testimonium dixerint,
 quasi resuscitaverit Christum, quem non resuscitavit. Et sumus
 adhuc in delictis. Et qui in Christo dormierunt, perierunt; sane
 resurrecturi, sed phantasmate forsitan, sicut et Christus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>In ista quaestione qui putaveris opponendos esse nobis angelos 
+            </div>
+            <div n="9" type="chapter">
+               <p>In ista quaestione qui putaveris opponendos esse nobis angelos 
 creatoris, quasi et illi in phantasmate, putativae utique carnis, egerint
 apud Abraham et Loth, et tamen vere sint et congressi et
 pasti et operati quod mandatum eis fuerat, primo non admitteris
@@ -3072,10 +3010,9 @@ ignem flagrantem, tam vere spiritus quam et ignem, idem illos
 vere fecit et carnem, ut nunc recordemur et haereticis renuntiemus
 eius esse promissum homines in angelos reformandi quandoque
 qui angelos in homines formarit aliquando.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Igitur non admissus ad consortium exemplorum creatoris, ut
+            </div>
+            <div n="10" type="chapter">
+               <p> Igitur non admissus ad consortium exemplorum creatoris, ut
 alienorum, et suas habentium causas, velim edas et ipse consilium
 dei tui, quo Christum suum non in veritate carnis exhibuit. Si
 aspernatus est illam ut terrenam et, ut dicitis, stercoribus infersam,
@@ -3102,10 +3039,9 @@ absque mendacio tamen. Et ideo quale est ut dedecus existimarit
 veritatem potius quam mendacium carnis? Atquin honoravit illam
 fingendo. Quanta iam caro est cuius phantasma necessarium fuit
 deo superiori?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Totas istas praestigias putativae in Christo corpulentiae Marcion 
+            </div>
+            <div n="11" type="chapter">
+               <p>Totas istas praestigias putativae in Christo corpulentiae Marcion 
 cion illa intentione suscepit, ne ex testimonio substantiae humanae
 nativitas quoque eius defenderetur, atque ita Christus creatoris vindicaretur,
 ut qui nascibilis ac per hoc carneus annuntiaretur. Stultissime
@@ -3158,10 +3094,9 @@ Itaque, si carneus habebitur, quia natus, et natus, quia carneus,
 quia phantasma non fuerit, ipse erit agnoscendus, qui in
 carne et ex nativitate venturus annuntiabatur a creatoris prophetis,
 utpote Christus creatoris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Provoca nunc, ut soles, ad hanc Esaiae comparationem Christi, 
+            </div>
+            <div n="12" type="chapter">
+               <p>Provoca nunc, ut soles, ad hanc Esaiae comparationem Christi, 
 contendens illam in nullo convenire. Primo enim, inquis, Christus
 Esaiae Emmanuel vocari habebit, dehinc virtutem sumere Damasci <bibl n="Les.VII, 14. VIII, 4."/>
 et spolia Samariae adversum regem Assyriorum. Porro iste, qui
@@ -3188,12 +3123,10 @@ nominis, quod est Nobiscum deus, quam in sono nominis,
 quod est Emmanuel. Atque ita constat venisse iam illum qui praedicabatur
 Emmanuel, quia quod significat Emmanuel venit, id est
 Nobiscum deus.</p>
-<pb xml:id="v.2.p.138"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Aeque et sono nominum duceris, cum virtutem Damasci et
+               <pb xml:id="v.2.p.138"/>
+            </div>
+            <div n="13" type="chapter">
+               <p> Aeque et sono nominum duceris, cum virtutem Damasci et
 spolia Samariae et regem Assyriorum sic accipis quasi bellatorem
 portendant Christum creatoris, non animadvertens quid scriptura
 <bibl n="Ies. VIII, 4."/> promittat. Quoniam priusquam cognoscat vocare patrem et matrem,
@@ -3264,10 +3197,9 @@ despoliatos, quod habuerant cum Samaritis, ut diximus, idololatriam.
 Adversus regem autem Assyriorum adversus Herodem intellege,
 cui utique adversati sunt Magi tunc non renuntiando de Christo,
 quem intercipere quaerebat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Adiuvabitur haec nostra interpretatio , dum et alibi bellatorem
+            </div>
+            <div n="14" type="chapter">
+               <p> Adiuvabitur haec nostra interpretatio , dum et alibi bellatorem
 existimans Christum, ob armorum quorundam vocabula et eiusmodi
 verba, ex reliquorum quoque sensuum comparatione convinceris.
 <bibl n="Pa. XLV, 4."/> Accingere, inquit David, ense super femur. Sed quid supra legis
@@ -3313,10 +3245,9 @@ loquente et apostolo scribente non temere interpretationibus eius
 utimur, quarum exempla etiam adversarii admittunt, atque ita in
 tantum Esaiae erit Christus qui venit, in quantum non fuit bellator,
 quia non talis ab Esaia praedicatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>De quaestione carnis et per eam nativitatis et unius interim 
+            </div>
+            <div n="15" type="chapter">
+               <p>De quaestione carnis et per eam nativitatis et unius interim 
 nominis Emmanuelis hucusque. De ceteris vero nominibus et inprimis
 Christi quid pars diversa respondebit? Si proinde commune
 est apud vos Christi nomen quemadmodum et dei, ut sicut utriusque
@@ -3364,10 +3295,9 @@ Sed nec effectum consilii huius invenio, cum facilius aut suum cre-
 
 diderint Christum, aut planum potius aliquem, quam alterius dei
 Christum, sicut evangelium probabit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Nunc si nomen Christi, ut sportulam furunculus, captavit, cur 
+            </div>
+            <div n="16" type="chapter">
+               <p>Nunc si nomen Christi, ut sportulam furunculus, captavit, cur 
 etiam Iesus voluit appellari, non tam expectabili apud Iudaeos
 nomine? Nec enim, si nos per dei gratiam intellectum consecuti
 sacramentorum eius hoc quoque nomen agnoscimus Christo destinatum,
@@ -3419,10 +3349,9 @@ longe alium demonstraveritis a Christo creatoris, nec nos eum creatoris
 vindicare, nisi talem eum ostenderimus qualis constituitur a
 creatore. De nominibus iam obduximus. Mihi vindico Christum,
 mihi defendo Iesum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Reliquum ordinem eius cum scripturis conferamus. Quodcunque
+            </div>
+            <div n="17" type="chapter">
+               <p> Reliquum ordinem eius cum scripturis conferamus. Quodcunque
 illud corpusculum sit, quoniam habitum et quoniam conspectum
 fuit, si inglorius, si ignobilis, si inhonorabilis, meus erit Christus,
 talis enim habitu et aspectu annuntiabatur. Adest rursus Esaias:
@@ -3464,14 +3393,13 @@ docentes praedicatorem interim annuntiari Christum per Esaiam:
 Quis enim, inquit, in vobis, qui deum metuit et exaudiet vocem <bibl n="Ies. L, 10."/>
 filii eius? Item medicatorem. Ipse enim, inquit, imbecillitates <bibl n="Ies. LIII, 4."/>
 nostras abstulit, et languores portavit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>De exitu plane, puto, diversitatem temptatis inducere, negantes 
+            </div>
+            <div n="18" type="chapter">
+               <p>De exitu plane, puto, diversitatem temptatis inducere, negantes 
 passionem crucis in Christum creatoris praedicatam, et argumentantes
 insuper non esse credendum, ut in id genus mortis exposuerit
 creator filium suum quod ipse maledixerat. Maledictus, <bibl n="Deut. XXI, 23. Gal. III, 13."/>
-<pb xml:id="v.2.p.146"/>
+                  <pb xml:id="v.2.p.146"/>
 
 inquit, omnis qui pependerit in ligno. Sed huius maledictionis
 sensum differo, dignae sola praedicatione crucis, de qua nune
@@ -3522,10 +3450,9 @@ salutare proposuit? An et hic dominicae crucis vim intentabat,
 qua serpens diabolus publicabatur, et laeso cuique a spiritalibus
 colubris, intuenti tamen et credenti in eam, sanitas morsuum peccatorum
 et salus exinde praedicabatur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Age nunc, si legisti penes David, Dominus regnavit a ligno, <bibl n="Ps. XCVI, 10."/>
+            </div>
+            <div n="19" type="chapter">
+               <p>Age nunc, si legisti penes David, Dominus regnavit a ligno, <bibl n="Ps. XCVI, 10."/>
 expecto quid intellegas. Nisi forte lignarium aliquem regem significari
 ludaeorum, et non Christum, qui exinde a passione ligni
 superata morte regnavit. Etsi enim mors ab Adam regnavit usque
@@ -3578,11 +3505,10 @@ quod tradita est anima eius in mortem. Ostensa est enim causa
 gratiae huius pro iniuria scilicet mortis repensandae. Pariter ostensum
 est haec illum propter mortem consecuturum. post mortem
 utique per resurrectionem consecuturum.</p>
-<pb xml:id="v.2.p.149"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Sufficit hucusque de his interim ordinem Christi decucurrisse, 
+               <pb xml:id="v.2.p.149"/>
+            </div>
+            <div n="20" type="chapter">
+               <p>Sufficit hucusque de his interim ordinem Christi decucurrisse, 
 quo talis probatus qualiter annuntiabatur non alius haberi debeat
 quam qui talis annuntiabatur, ut iam ex ista consonantia rerum
 eius et scripturarum creatoris illis etiam restituenda sit fides ex
@@ -3649,10 +3575,9 @@ non David; principem et imperantem nationibus, non David, qui
 soli Isra(??)li imperavit. Christum hodie invocant nationes, quae eum
 non sciebant, et populi ad Christum hodie confugiunt, quem
 retro ignorabant. Non potest futurum dici quod vides fieri.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p> Sic nec illam iniectionem tuam potes sistere ad differentiam
+            </div>
+            <div n="21" type="chapter">
+               <p> Sic nec illam iniectionem tuam potes sistere ad differentiam
 <pb xml:id="v.2.p.151"/>
 
 duorum Christorum, quasi Iudaicus quidem Christus populo soli ex
@@ -3696,10 +3621,10 @@ ipsum introgressum atque decursum vocationis in nationes a novissimis
 diebus adeuntes ad deum creatorem, non in proselytos,
 quorum a primis magis diebus allectio est. Etenim fidem istam
 apostoli induxerunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p><bibl n="Ies. LII, 7."/> Habes et apostolorum opus praedicatum. Quam tempestivi
+            </div>
+            <div n="22" type="chapter">
+               <p>
+                  <bibl n="Ies. LII, 7."/> Habes et apostolorum opus praedicatum. Quam tempestivi
 <bibl n="Rom. X, 15."/> pedes evangelizantium pacem, evangelizantium bona, non bellum
 <bibl n="Ps. XIX, 5."/> nec mala. Respondit et psalmus, In omnem terram exivit sonus
 eorum et in terminos terrae voces eorum, circumferentium scilicet
@@ -3757,10 +3682,9 @@ dictio et laus et hymni. Quae omnia cum in te quoque deprehendantur,
 et signaculum frontium et ecclesiarum sacramenta et munditiae
 sacrificiorum, debes iam erumpere, uti dicas spiritum creatoris
 tuo Christo prophetasse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p> Nunc, quia cum Iudaeis negas venisse Christum eorum, recognosce
+            </div>
+            <div n="23" type="chapter">
+               <p> Nunc, quia cum Iudaeis negas venisse Christum eorum, recognosce
 et exitum ipsorum, quem post Christum relaturi praedicabantur
 ob impietatem, qua eum et despexerunt et interemerunt.
 <bibl n="Ies. II, 20."/> Primum enim ex die, qua secundum Esaiam proiecit homo asper(??)amenta
@@ -3817,10 +3741,9 @@ Plane deus zelotes, tamen vicit. Erubesce, qui victo deo credis.
 Quid sperabis ab eo qui se protegere non valuit? Aut enim per
 infirmitatem oppressus est a virtutibus et hominibus creatoris, aut
 per maliliositatem, ut tantum illis sceleris patientia infigeret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Immo, inquis, spero ab illo, quod et ipsum faciat ad testimonium 
+            </div>
+            <div n="24" type="chapter">
+               <p> Immo, inquis, spero ab illo, quod et ipsum faciat ad testimonium 
 diversitatis, regnum dei aeternae et caelestis possessionis. Ceterum
 vester Christus pristinum statum Iudaeis pollicetur ex restitutione
 terrae, et post decursum vitae apud inferos in sinu Abrahae refrigerium.
@@ -3920,13 +3843,14 @@ aliquod caelum probes eius. At nunc vocas ad coenam, nec domum
 ostendis; allegas regnum, nec regiam monstras. An quia Christus
 tuus caeleate regnum repro(??)ittit, non habens caelum, quomodo et
 hominem praestitit non habens carnem? O phantasma omne! O
-praestigia magnae etiam promissionis!</p></div></div>
-
-<div type="textpart" subtype="book" n="4"><head>LIBER QUARTUS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<pb xml:id="v.2.p.159"/>
-<p>Omnem sententiam et omnem paraturam impii atque sacrilegi 
+praestigia magnae etiam promissionis!</p>
+            </div>
+         </div>
+         <div n="4" type="book">
+            <head>LIBER QUARTUS.</head>
+            <div n="1" type="chapter">
+               <pb xml:id="v.2.p.159"/>
+               <p>Omnem sententiam et omnem paraturam impii atque sacrilegi 
 Marcionis ad ipsum iam evangelium eius provocamus, quod interpotando
 suum fecit. Et ut fidem instrueret, dotem quandam commentatus
 est illi, opus ex contrarietatum oppositionibus Antitheses
@@ -4010,11 +3934,10 @@ itaque debueras alium deum luminis, alium tenebrarum determinasse,
 ut ita posses alium legis, alium evangelii asseverasse. Ceterum
 praeiudicatum est ex manifestis, cuius opera et ingenia per Antitheses
 constant, eadem forma constare etiam sacramenta.</p>
-<pb xml:id="v.2.p.162"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Habes nunc ad Antitheses expeditam a nobis responsionem.
+               <pb xml:id="v.2.p.162"/>
+            </div>
+            <div n="2" type="chapter">
+               <p> Habes nunc ad Antitheses expeditam a nobis responsionem.
 Transeo nunc ad evangelii, sane non Iudaici, sed Pontici, interim
 adulterati demonstrationem, praestructuram ordinem quem aggredimur.
 Censtituimus inprimis evangelicum instrumentum apostolos
@@ -4054,10 +3977,9 @@ praedicandi distinxerunt, ut illi in Iudaeos, Paulus in Iudaeos et
 in nationes. Igitur si ipse illuminator Lucae auctoritatem antecessorum
 et fidei et praedicationi suae optavit, quanto magis eam
 evangelio Lucae expostulem, quae evangelio magistri eius fuit necessaria?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Aliud est si penes Marcionem a discipulatu Lucae coepit religionis 
+            </div>
+            <div n="3" type="chapter">
+               <p>Aliud est si penes Marcionem a discipulatu Lucae coepit religionis 
 Christianae sacramentum. Ceterum si et retro decucurrit,
 habuit utique authenticam paraturam, per quam ad Lucam usque
 pervenit, cuius testimonio adsistente Lucas quoque possit admitti.
@@ -4094,10 +4016,9 @@ statim Lucae deputandum est quo Marcion utitur, quia nostro consonat,
 scilicet adulterato etiam circa titulum, ceterum apostolorum
 est. Iam ergo et nostrum, quod illi consonat, aeque apostolorum
 est, sed adulteratum de titulo quoque.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Funis ergo ducendus est contentionis, pari hinc inde nisu
+            </div>
+            <div n="4" type="chapter">
+               <p> Funis ergo ducendus est contentionis, pari hinc inde nisu
 fluctuante. Ego meum dico verum, Marcion suum. Ego Marcionis
 affirmo adulteratum, Marcion meum. Quis inter nos determinabit,
 nisi temporis ratio, ei praescribens auctoritatem quod antiquius
@@ -4142,10 +4063,9 @@ citius anathema dicendus quam evangelizator, quia aliter evangelizavit. <bibl n=
 Itaque dum emendat, utrumque confirmat, et nostrum
 anterius, id emendans quod invenit, et id posterius quod de nostri
 emendatione constituens suum et novum fecit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> In summa, si constat id verius quod prius, id prius quod et 
+            </div>
+            <div n="5" type="chapter">
+               <p> In summa, si constat id verius quod prius, id prius quod et 
 ab initio, id ab initio quod ab apostolis, pariter utique constabit
 id esse ab apostolis traditum quod apud ecclesias apostolorum
 fuerit sacrosanctum. Videamus quod lac a Paulo Corinthii hauserint,
@@ -4204,10 +4124,9 @@ ordinem posteritati falsariorum praescribentem, et auctoritatem
 ecclesiarum traditioni apostolorum patrocinantem, quia veritas
 falsum praecedat necesse est, et ab eis procedat a quibus
 tradita est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sed alium iam hinc inimus gradum, ipsum, ut professi sumus, 
+            </div>
+            <div n="6" type="chapter">
+               <p>Sed alium iam hinc inimus gradum, ipsum, ut professi sumus, 
 evangelium Marcionis provocantes, sic quoque probaturi adulteratum.
 Certe enim totum quod elaboravit etiam Antitheses praestruendo
 in hoc cogit, ut veteris et novi testamenti diversitatem constituat,
@@ -4236,7 +4155,9 @@ si repraesentaverit promissiones eius, si restauraverit virtutes eius,
 si sententias reformaverit, si mores, si proprietates expresserit.
 Huius pacti et huius praescripti, quaeso te, lector, memineris ubique,
 et incipe recognoscere aut. Marcionis Christum aut creatoris.</p>
-<bibl n="Cap. VII."/><bibl n="Luc. III, 1. IV, 31."/><p>Anno quintodecimo principatus Tiberiani proponit eum descendisse
+               <bibl n="Cap. VII."/>
+               <bibl n="Luc. III, 1. IV, 31."/>
+               <p>Anno quintodecimo principatus Tiberiani proponit eum descendisse
 in civitatem Galilaeae Capharnaum, utique de caelo creatoris,
 in quod de suo ante descenderat. Ecquid ergo ordinis fuerat,
 ut prius de suo caelo in creatoris descendens describeretur? Cur
@@ -4352,11 +4273,10 @@ mentitus est, non ob mendacium increpitus; ipse enim erat Iesus,
 praeter quem alium daemon agnovisse non poterat, et Iesus eum
 confirmavit quem agnoverat daemon, dum non ob mendacium increpat
 daemonem.</p>
-<pb xml:id="v.2.p.172"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>  Naxaraeus vocari habebat secundum prophetiam Christus creatoris.
+               <pb xml:id="v.2.p.172"/>
+            </div>
+            <div n="8" type="chapter">
+               <p>  Naxaraeus vocari habebat secundum prophetiam Christus creatoris.
 Unde et ipso nomine nos Iudaei Nazaraeos appellant per
 <bibl n="Thren. IV, 7."/> Nam et sumus de quibus scriptum est: Nazaraei exalbati
 sunt super nivem, qui scilicet retro luridati delinquentiae maculis
@@ -4376,7 +4296,7 @@ et ad praecipitium usque protractus admiserit. Nam etsi per medios
 evasit, sed ante iam vim expertus, et postea dimissus; scilicet soluto,
 uti assolet, tumultu, vel etiam irrupto, non tamen per caliginem
 eluso, quae nulli omnino tactui succidisset, si fuisset.</p>
-<p> Tangere enim et tangi, nisi corpus, nulla potest res,
+               <p> Tangere enim et tangi, nisi corpus, nulla potest res,
 <bibl n="Luc. IV, 40."/> etiam saecularis sapientia digna sententia est. Ad summam, et ipse
 mox tetigit alios, quibus manus imponens, utique sentiendas, beneficia
 medicinarum conferebat, tam vera, tam non imaginaria, quam
@@ -4423,10 +4343,9 @@ puto adhuc usque. Sed de his loquebatur qui alium quoque deum
 noverant? Nec hoc credo. Ergo si nec ille alium deum ediderat
 nec illi noverant praeter creatorem, eiusdem dei regnum portende.
 bat quem solum sciebat notum eis qui audiebant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> De tot generibus operum quid utique ad piscaturam respexit, 
+            </div>
+            <div n="9" type="chapter">
+               <p> De tot generibus operum quid utique ad piscaturam respexit, 
 ut ab illa in apostolos sumeret Simonem et filios Zebedaei (non <bibl n="Luc. V, 1-11."/>
 enim simplex factum videri potest de quo argumentum processurum
 erat), dicens Petro trepidanti de copiosa indagine piscium, Ne time,
@@ -4499,7 +4418,7 @@ fluvius creatoris? Secundum haec cetera quoque occurrunt. Quantum
 enim ad gloriae humanae aversionem pertinebat, vetuit eum
 divulgare, quantum autem ad tutelam legis, iussit ordinem impleri.
 Vade, ostende te sacerdoti, et offer munus quod praecepit Moyses. <bibl n="Luc. V, 14."/>
-<pb xml:id="v.2.p.176"/>
+                  <pb xml:id="v.2.p.176"/>
 
 Argumenta enim figurata utpote prophetatae legis adhuc in suis
 imaginibus tuebatur, quae significabant hominem quondam peccatorem
@@ -4543,10 +4462,9 @@ Quid ergo tibi fuit de evangelio erasisse quod salvum est?
 Confessus es enim prae bonitate fecisse illum quod negas dixisse.
 Constat ergo dixisse illum, quia et fecit, et te potius vocem domini
 de evangelio erasisse quam nostros iniecisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Curatur et paralyticus, et quidem in coetu, spectante populo. <bibl n="Luc. V, 15- -26. les. XXXV, 2 sq."/>
+            </div>
+            <div n="10" type="chapter">
+               <p>Curatur et paralyticus, et quidem in coetu, spectante populo. <bibl n="Luc. V, 15- -26. les. XXXV, 2 sq."/>
 Videbit enim, inquit Esaias, populus sublimitatem domini et gloriam
 dei. Quam sublimitatem, et quam gloriam? Convalescite manus
 dimissae et genua dissoluta; hoc erit paralysis. Convalescite, nec
@@ -4666,10 +4584,9 @@ hominis, corpus ex corpore est. Plane facilius invenias hominem
 natum cor non habere vel cerebrum, sicut ipsum Marcionem, quam
 corpus, ut Christum Marcionis. Atque adeo inspice cor Pontici
 aut cerebrum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Publicanum adlectum a domino in argumentum deducit, quasi
+            </div>
+            <div n="11" type="chapter">
+               <p> Publicanum adlectum a domino in argumentum deducit, quasi
 <bibl n="Luc. V, 27-39."/> ab adversario legis adlectum, extraneum legis et Iudaismi profanum.
 <bibl n="Matth. XVI, 17."/> Excidit ei vel de Petro, legis homine, et tamen non tantum adlecto,
 sed etiam testimonium consecuto agnitionis praestitae a patre.
@@ -4766,10 +4683,9 @@ psalmo: Aperiam, inquit, in parabolam os meum, id est similitudinem; <bibl n="Ps
 eloquar problemata, id est edisseram quaestiones. Si hominem
 alterius gentis probare voluisses, utique de proprietate
 loquelae probares.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> De sabbalo quoque illud praemitto, nec hanc quaestionem consistere <bibl n="Luc. VI, 1-11."/>
+            </div>
+            <div n="12" type="chapter">
+               <p> De sabbalo quoque illud praemitto, nec hanc quaestionem consistere <bibl n="Luc. VI, 1-11."/>
 potuisse, si non dominum sabbati circumferret Christus.
 Nec enim disceptaretur cur destrueret sabbatum, si destruere deberet.
 Porro destruere deberet, si alterius dei esset, nec quisquam
@@ -4844,7 +4760,7 @@ per hominem fieri potest in salutem animae, a deo tamen, quod
 facturus fuerat et Christus homo, quia et deus. In hunc ergo sensum
 legis inducere volens illos per manus arefactae restitutionem
 interrogat, Licetne sabbatis benefacere, an non? animam liberare, <bibl n="Luc. VI, 9."/>
-<pb xml:id="v.2.p.186"/>
+                  <pb xml:id="v.2.p.186"/>
 
 an perdere? ut id operis permittens quod pro anima facturus
 esset admoneret eos quae opera sabbati lex prohiberet, humana
@@ -4880,11 +4796,10 @@ intulisse quod non sit ex forma, ex lenitate, ex misericordia, ex
 <bibl n="Ies. XXXV, 3."/> praedicatione quoque creatoris. Nam et hic specialis medicinae
 prophetiam repraesentat. Invalescunt manus dissolutae, sicut et
 genua dissoluta in paralytico.</p>
-<pb xml:id="v.2.p.187"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Certe evangelizat Sion et Hierusalem pacem et bona omnia, <bibl n="Luc. VI, 12."/>
+               <pb xml:id="v.2.p.187"/>
+            </div>
+            <div n="13" type="chapter">
+               <p> Certe evangelizat Sion et Hierusalem pacem et bona omnia, <bibl n="Luc. VI, 12."/>
 certe ascendit in montem et illic pernoctat in oratione et, utique
 auditur a patre. Evolve igitur prophetas, et ordinem totum recoguosce.
 In montem excelsum, inquit Esaias, ascende, qui evangelizas <bibl n="Ies. XL, 9."/>
@@ -4942,10 +4857,9 @@ Vides ignotos et extraneos, et dices cordi tuo, Quis istos genuit
 mihi? porro hos quis mihi educavit? at hi mihi ubi fuerunt? Hic
 erit Christus non prophetarum? et quis erit Christus Marcionitarum?
 Si perversitas placet, qui non fuerit prophetarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Venio nunc ad ordinarias sententias eius, per quas proprietatem
+            </div>
+            <div n="14" type="chapter">
+               <p> Venio nunc ad ordinarias sententias eius, per quas proprietatem
 doctrinae suae inducit ad edictum, ut ita dixerim, Christi,
 <bibl n="Luc. VI, 20."/> Beati mendici (sic enim exigit interpretatio vocabuli quod in Graeco
 est), quoniam illorum est regnum dei. Iam hoc ipsum, quod a benedictionibus
@@ -4998,8 +4912,7 @@ quod caelum nullius alterius usque adhuc dei apparet nisi cuius et
 terra, bene quod creator vel minora promisit, ut facilius illi et de
 maioribus credam quam qui nunquam de minoribus prius fidem
 <pb xml:id="v.2.p.190"/>
-
-<bibl n="Luc. VI, 21."/> liberalitatis suae struxit. Beati esurientes, quoniam ipsi saturabuntur.
+                  <bibl n="Luc. VI, 21."/> liberalitatis suae struxit. Beati esurientes, quoniam ipsi saturabuntur.
 Possem hunc titulum in superiorem transmisisse, quod
 non alii sunt esurientes quam pauperes et mendici, si non et hanc
 promissionem creator specialiter in evangelii scilicet sui praestructionem
@@ -5058,11 +4971,11 @@ antecessisse. Nam et sancitur penes nos, et animam suam circumscribit,
 propter nos eam ponens, et aspernamento habetur a
 nationibus. Et qui natus est, ipse erit filius hominis, propter
 quem et nomen nostrum recusatur.</p>
-<pb xml:id="v.2.p.192"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p><bibl n="Luc. VI, 23."/> Secundum haec, inquit, faciebant prophetis patres eorum. O
+               <pb xml:id="v.2.p.192"/>
+            </div>
+            <div n="15" type="chapter">
+               <p>
+                  <bibl n="Luc. VI, 23."/> Secundum haec, inquit, faciebant prophetis patres eorum. O
 Christum versipellem, nunc destructorem, nunc assertorem prophetarum! destruebat ut aemulus, convertens discipulos eorum, sibi
 asserebat ut amicus, suggillans insectatores eorum. Porro, in quantum
 non congruisset Christo Marcionis assertio prophetarum, adquorum venerat destructionem, in tantum congruit Christo creatoris
@@ -5185,10 +5098,9 @@ autem laudatos sive benedictos a patribus eorum tam eius est
 exprobrare quam prophetas vexatos et recusatos: sicut iniuriae
 prophetarum non pertinuissent ad deum ipsorum, ita nec gratiae
 pseudoprophetarum displicuissent nisi deo prophetarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Sed vobis dico, inquit, qui auditis (ostendens hoc olim mandatum 
+            </div>
+            <div n="16" type="chapter">
+               <p>Sed vobis dico, inquit, qui auditis (ostendens hoc olim mandatum 
 a creatore, Loquere in aures audientium), diligite inimicos <bibl n="IV Eadrae XV, 1."/>
 vestros, et benedicite eos qui vos oderunt, et orate pro eis qui <bibl n="Luc. VI, 27. 28."/>
 vos calumniantur. Haec creator una pronuntiatione clusit per
@@ -5319,10 +5231,9 @@ qui illud retro et praestruxit et distinxit et ad arbitrium disciplinae
 suae disposuit et merito iam compendio substrinxit, quoniam <bibl n="Ies. X, 23."/>
 et alias recisum sermonem facturus in terris dominus, id est
 Christus, praedicabatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Hic nunc de fenore cum interponit, Et si feneraveritis a quibus <bibl n="Luc. VI, 34."/>
+            </div>
+            <div n="17" type="chapter">
+               <p>Hic nunc de fenore cum interponit, Et si feneraveritis a quibus <bibl n="Luc. VI, 34."/>
 bus speratis vos recepturos, quae gratia est vobis? percurre sequentia
 Ezechielis de eodem viro iusto: Pecuniam, inquit, suam <bibl n="Ezech. XVIII, 8."/>
 fenori non dedit, et quod abundaverit, non sumet, fenoris scilicet
@@ -5420,10 +5331,10 @@ a me, contionatus est, veterem utique illis, contumaciam imputabat.
 Alioquin quam absurdum, ut novus deus, novus Christus, novae
 tantaeque religionis illuminator, contumaces et inobsequentes pronuntiaret
 quos non potuisset experiri?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p><bibl n="Luc. VII, 1-10."/> Proinde extollenda fide centurionis incredibile si is professus
+            </div>
+            <div n="18" type="chapter">
+               <p>
+                  <bibl n="Luc. VII, 1-10."/> Proinde extollenda fide centurionis incredibile si is professus
 est talem se fidem nec in Isra(??)le invenisse ad quem non pertinebat
 fides Isra(??)lis. Sed nec exinde pertinere poterat adhuc cruda ut
 probaretur vel compararetur, ne dixerim adhuc nulla. Sed cur non
@@ -5478,8 +5389,7 @@ ea renuntiarit intellegendum per quae magis Christum creatoris
 agnosci compellebat. Multo perversius, si et testimonium Ioanni
 perhibet non Ioannis Christus, propheten eum confirmans, immo
 <pb xml:id="v.2.p.204"/>
-
-<bibl n="Luc. VII, 26. 27."/> et supra ut angelum, ingerens etiam scriptum super illo: Ecce ego
+                  <bibl n="Luc. VII, 26. 27."/> et supra ut angelum, ingerens etiam scriptum super illo: Ecce ego
 <bibl n="Malach. III, 1 sqq."/> mitto angelum meum ante faciem tuam, qui praeparabit viam tuam;
 eleganter ad superiorem sensum scandalizati Ioannis commemorans
 prophetiam, ut confirmans praecursorem Ioannem iam advenisse
@@ -5508,10 +5418,9 @@ veniam, praeponere solitum sacrificio. Sed et si paenitentiae
 stimulus ex fide acciderat, per paenitentiam ex fide iustificatam ab
 eo audiit, Fides tua te salvam fecit, qui per Abacuc pronuntiarat, <bibl n="Habac. II, 4."/>
 Iustus ex fide sua vivet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Quod divites Christo mulieres adhaerebant, quae ei de facultatibus <bibl n="Luc. VIII, 1-3."/>
+            </div>
+            <div n="19" type="chapter">
+               <p>Quod divites Christo mulieres adhaerebant, quae ei de facultatibus <bibl n="Luc. VIII, 1-3."/>
 suis ministrabant ei, inter quas et uxor regis procuratoris,
 de prophetia est. Has enim vocabat per Esaiam mulieres divites:
 Exsurgite et audite vocem meam, ut discipulas primo, debinc ut <bibl n="Ies. XXXII, 9 sq."/>
@@ -5594,10 +5503,9 @@ in semetipso docens qui patrem aut matrem aut fratres praeponeret verbo dei non 
 Quod alios adoptabat, confirmabat quos ex offensa negavit, quibus
 non ut veriores substituit, sed ut digniores. Denique nihil magnum,
 si fidem sanguini praeposuit, quam non habebat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Quis autem iste est qui et ventis et mari imperat? nimirum <bibl n="Luc. VIII, 25."/>
+            </div>
+            <div n="20" type="chapter">
+               <p>Quis autem iste est qui et ventis et mari imperat? nimirum <bibl n="Luc. VIII, 25."/>
 novus dominator atque possessor elementorum subacti iam et exclusi
 creatoris? Non ita est. Sed agnorant substantiae auctorem
 suum, quae famulis quoque eius obaudire consueverant. Inspice
@@ -5700,10 +5608,9 @@ quaestionem. Si enim non erat veritas corporis, phantasma
 utique contaminari, qua res vacua, non posset. Qui ergo non potest
 contaminari prae inanitate substantiae, quomodo voluisset? Ut
 aemulus legis mentiebatur, qui non vere polluebatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Dimittit discipulos ad praedicandum dei regnum. Numquid vel 
+            </div>
+            <div n="21" type="chapter">
+               <p>Dimittit discipulos ad praedicandum dei regnum. Numquid vel 
 hic edidit cuius? Prohibet eos, victui aut vestitui quid in viam <bibl n="Luc. IX, 1-6."/>
 ferre. Quis hoc mandasset, nisi qui et corvos alit, et flores agri
 vestit, qui bovi quoque terenti libertatem oris ad veniam pabuli ex
@@ -5806,10 +5713,9 @@ idololatriae satis deo faceret per impudentiam fidei. Quid horum
 
 Christo tuo competit, Marcion, ad meritum confusionis? Plane
 pudere te debet quod illum ipse finxisti.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p>Nam et hoc vel maxime erubescere debuisti, quod illum cum <bibl n="Luc. IX, 28-36."/>
+            </div>
+            <div n="22" type="chapter">
+               <p>Nam et hoc vel maxime erubescere debuisti, quod illum cum <bibl n="Luc. IX, 28-36."/>
 Moyse et Helia in secessu montis conspici pateris, quorum destructor
 advenerat. Hoc scilicet intellegi voluit vox illa de caelo: Hic <bibl n="Luc. IX, 35."/>
 est filius meus dilectus, hunc audite, id est non Moysen iam et
@@ -5934,10 +5840,9 @@ illustratus discessit a Christo quam solebat a creatore, proinde tunc
 oculos percutere filiorum Israelis quemadmodum et nunc excaecati
 Marcionis, qui hoc quoque argumentum adversus se facere
 non vidit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Suscipio in me personam Isra(??)lis. Stet Christus Marcionis et 
+            </div>
+            <div n="23" type="chapter">
+               <p>Suscipio in me personam Isra(??)lis. Stet Christus Marcionis et 
 exclamet: O genitura incredula, quousque ero apud vos? Quousque <bibl n="Luc. IX, 41."/>
 sustinebo vos? Statim a me audire debebit: Quisquis es,
 á¼&#x90;Ï&#x80;ÎµÏ&#x81;Ï&#x87;á½¹Î¼ÎµÎ½Îµ, prius ede quis sis, et a quo venias, et quod in nobis
@@ -6018,10 +5923,9 @@ tertium illum prius suis valedicere parantem prohibet retro respe-
 <pb xml:id="v.2.p.222"/>
 ctare, sectam creatoris exequitur. Hoc et ille noluerat fecisse
 quos ex Sodomis liberarat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Adlegit et alios septuaginta apostolos super duodecim. Quo
+            </div>
+            <div n="24" type="chapter">
+               <p> Adlegit et alios septuaginta apostolos super duodecim. Quo
 <bibl n="Luc. X, 1 sqq. Exed. XV, 27."/> enim duodecim secundum totidem fontes in Elim, si non et septuaginta
 <bibl n="Num. XXXIII, 9."/> secundum totidem arbusta palmarum? Antitheses plurimum
 causarum diversitas fecit, non potestatum. Sed qui diversitatem
@@ -6120,10 +6024,9 @@ et clara erit lingua mutorum. Igitur ubi medicinarum edidit beneficia,
 tunc et scorpios et serpentes sanctis suis subdidit, ille scilicet
 qui hanc potestatem, ut et aliis praestaret, prior acceperat a patre
 et secundum ordinem praedicationis exhibuit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Quis dominus caeli invocabitur qui non prius factor ostenditur? 
+            </div>
+            <div n="25" type="chapter">
+               <p>Quis dominus caeli invocabitur qui non prius factor ostenditur? 
 Gratias enim, inquit, ago, et confiteor, domine caeli, quod <bibl n="Luc. X, 21."/>
 ea quae erat abscondita sapientibus et prudentibus, revelaveris
 parvulis. Quae ista? et cuius? et a quo abscondita? et a quo
@@ -6151,7 +6054,7 @@ deum non requirentes vel perperam in illum philesophentes, <bibl n="Ram. I, 20 s
 et ingenia haereticis subministrantes, et novissime zelotes est.
 Denique olim hoc per Esaiam contionabatur quod Christus gratulaur:
 Perdam sapientiam sapientium et prudentiam prudentium ce- <bibl n="Ies. XXIX, 14."/>
-<pb xml:id="v.2.p.226"/>
+                  <pb xml:id="v.2.p.226"/>
 
 labo. Sicut et alibi tam abscondisse quam revelaturum esse significat:
 <bibl n="Ies. XL, 3."/> Et dabo illis thesauros abscontitos, invisibiles aperiam illis.
@@ -6261,10 +6164,9 @@ invitator de longaeva consultus, quam destruebat, non ad aeternam
 potius exhortatus est hominem, quam inferebat. Quid, oro
 te, fecisset Christus creatoris, si qui creatori diligendo aedificaverat
 hominem, non erat creatoris? Credo, negasset diligendum creatorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p>Cum in quodam loco orasset ad patrem illum superiorem, satis <bibl n="Luc. XI, 1."/>
+            </div>
+            <div n="26" type="chapter">
+               <p>Cum in quodam loco orasset ad patrem illum superiorem, satis <bibl n="Luc. XI, 1."/>
 impudentibus et temerariis oculis suspiciens ad caelum creatoris, a
 quo tam aspero et saevo et grandine et fulmine potuisset elidi,
 sicut et Hierusalem suffigi ab eo potuit, aggressus eum ex discipulis
@@ -6370,10 +6272,9 @@ et obsecutores dei praefert. Nam nec hic mater assistebat
 illi. Adeo nec retro negaverat natum. Cum id rursus audit,
 rursus proinde felicitatem ab utero et uberibus matris suae transtulit
 in discipulos, a qua non transtulisset si eam non haberet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p> Alibi malo purgare quae reprehendunt Marcionitae in creatore.
+            </div>
+            <div n="27" type="chapter">
+               <p> Alibi malo purgare quae reprehendunt Marcionitae in creatore.
 Hic enim sufficit si ea in Christo reperiuntur. Ecce inaequalis et
 ipse, inconstans, levis, aliud docens aliud faciens, iubet omni pelenti
 <bibl n="Luc. XI, 29."/> dare, et ipse signum petentibus non dat. Tanto aevo lucem
@@ -6429,8 +6330,7 @@ munditias catinorum? Ceterum excusandos potius censuisset si
 importabilia portare non possent. Sed quae onera taxat? quae ipsi
 de sue exaggerabant, docentes praecepta, doctrinas hominum, com-
 <pb xml:id="v.2.p.234"/>
-
-<bibl n="Ies. V, 8. 23. X,2."/> modorum suorum causa, iungentes domum ad domum, ut quae
+                  <bibl n="Ies. V, 8. 23. X,2."/> modorum suorum causa, iungentes domum ad domum, ut quae
 proximi sunt auferrent, clamantes populum, amantes munera, sectantes
 retributionem, diripientes iudicata pauperum, uti esset illis
 vidua in rapinam et pupillus in praedam. De quibus idem Esaias:
@@ -6455,10 +6355,9 @@ quem delinquentes Vae habituri essent. Et quis saevum non potius
 timeret provocare deficiendo ab eo? Tanto magis ergo demerendum
 docebat quem timendum ingerebat. Sic oportebat Christum
 creatoris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p> Merito itaque non placebat illi hypocrisis pharisaeorum, labiis
+            </div>
+            <div n="28" type="chapter">
+               <p> Merito itaque non placebat illi hypocrisis pharisaeorum, labiis
 <bibl n="Luc. XII, 1."/> scilicet amatium deum, non corde. Cavete, inquit discipulis, a
 fermento pharisaeorum, quod est hypocrisis, non praedicatio creatoris.
 Odit contumaces patris filius, non vult suos tales existere
@@ -6552,10 +6451,9 @@ agrorum suorum, cui deus dicit, Stulte, hac nocte animam tuam <bibl n="Luc. XII,
 reposcent; quae autem parasti, cuius erunt? Sic denique rex de <bibl n="Ies. XXXIX."/>
 gaxis et apothecis delitiarum suarum apud Persas gloriatus per
 Esaiam male audivit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p>Quis nollet curam nos agere animae de victu et corpori de <bibl n="Luc. XII, 22-23."/>
+            </div>
+            <div n="29" type="chapter">
+               <p>Quis nollet curam nos agere animae de victu et corpori de <bibl n="Luc. XII, 22-23."/>
 vestitu nisi qui ista homini ante prospexit et exinde praestans
 merito curam eorum tanquam aemulam liberalitatis suae prohibet?
 qui et substantiam ipsius animae accommodavit potiorem esca, et
@@ -6689,10 +6587,9 @@ creatoris obtrectationis nomine disserunt. Ad quod necesse habeo
 eodem gradu occurrere. Quotienscunque enim severitas creatoris
 opponitur, totiens illius est Christus cui per timorem cogit
 obsequium.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p>Quaestionem rursus de curatione sabbato facta quomodo discussit? 
+            </div>
+            <div n="30" type="chapter">
+               <p>Quaestionem rursus de curatione sabbato facta quomodo discussit? 
 Unusquisque vestrum sabbatis non solvit asinum aut bovem <bibl n="Luc. XIII, 16-17. Exod."/>
 suum a praesepi et ducit ad potum? Ergo secundum condicionem <bibl n="XII, 16."/>
 legis operatus legem confirmavit, non dissolvit, iubentem
@@ -6710,7 +6607,7 @@ a Christo in hominem accipientem semen regni et seminantem in
 horto cordis sui, nec ipsa materia alii conveniet quam creatori.
 Quale est enim ut sit lenissimi dei regnum quod etiam iudicii
 fervor lacrimosa austeritate subsequitur? De sequenti plane simili- <bibl n="Luc. XII, 20. 21."/>
-<pb xml:id="v.2.p.242"/>
+                  <pb xml:id="v.2.p.242"/>
 
 tudine vereor ne forte ulterius dei regno portendat. Fermento
 enim comparavit illud, non azymis, quae familiariora sunt creatori.
@@ -6738,10 +6635,10 @@ creatore ipse auctor infamiae creatoris. Haec si nulla ratione consistunt,
 ut alius punire, alius liberare credatur, unius erit tam
 iudicium quam et regnum, et dum unius est utrumque, qui et
 indicat creatoris est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p><bibl n="Luc. XIV, 12-14."/> Ad prandium vel ad coenam quales vocari iubet? Quales
+            </div>
+            <div n="31" type="chapter">
+               <p>
+                  <bibl n="Luc. XIV, 12-14."/> Ad prandium vel ad coenam quales vocari iubet? Quales
 ostenderat per Esaiam: Confringe panem tuum esurienti, et mendicos,
 <bibl n="Ies. LVIII, 7."/> et qui sine tecto sunt, induc in domum tuam, qui scilicet
 humanitatis istius vicem retribuere non possint. Hanc si Christus
@@ -6788,7 +6685,7 @@ Itaque misit ad alios vocandos ex eadem adhuc civitate. Dehinc <bibl n="Luc. XIV
 loco abundante praecepit etiam de viis et sepibus colligi, id est
 nos iam de extraneis gentibus; illa scilicet aemulatione qua in Deuteronomio:
 Avertam faciem meam ab eis, et monstrabo quid illis <bibl n="Deut. XXXII, 20 sq."/>
-<pb xml:id="v.2.p.244"/>
+                  <pb xml:id="v.2.p.244"/>
 
 in novissimis, id est alios possessuros locum eorum quoniam quoniam genitura
 perversa est, filii in quibus fides non est. Illi obaemulati
@@ -6813,10 +6710,10 @@ collocaturus, Interea qui coenae istius vocationem in caeleste convivium
 interpretaris spiritalis saturitatis et iocunditatis, memento et
 terrenas promissiones vini et olei et frumenti et ipsius civitatis
 aeque in spiritalis figurari a creatore.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="32">
-<p><bibl n="Luc. XV, 4 sqq. 8 sqq."/> Ovem et dragmam perditam quis requirit? nonne qui perdidit?
+            </div>
+            <div n="32" type="chapter">
+               <p>
+                  <bibl n="Luc. XV, 4 sqq. 8 sqq."/> Ovem et dragmam perditam quis requirit? nonne qui perdidit?
 Quis autem perdidit? nonne qui habuit? Quis vero habuit?
 nonne cuius fuit? Si igitur homo non alterius est res quam creatoris,
 is eum habuit cuius fuit. is perdidit quid habuit, is requisivit
@@ -6827,11 +6724,10 @@ nec requisivit, quia non perdidit, nec invenit, quia nec requisivit,
 nec exultavit, quia non invenit, Atque adeo exultare illius est de
 paenitentia peccatoris, id est de perditi recuperatione, qui se professus
 est olim malle peccatoris paenitentiam quam mortem.</p>
-<pb xml:id="v.2.p.245"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="33">
-<p>Quibus duobus dominis neget posse serviri, quia alterum offendi <bibl n="Luc. XVI, 13."/>
+               <pb xml:id="v.2.p.245"/>
+            </div>
+            <div n="33" type="chapter">
+               <p>Quibus duobus dominis neget posse serviri, quia alterum offendi <bibl n="Luc. XVI, 13."/>
 sit necesse, alterum defendi, ipse declarat, deum proponens
 et mammonam. Deinde mammonam quem intellegi velit, si interpretem
 non habes, ab ipso potes discere. Admonens enim nos de
@@ -6910,10 +6806,9 @@ venturum ut legis et prophetarum ordo exinde cessaret, per adimpletionem,
 non per destructionem, et regnum dei a Christo annuntiaretur,
 ideo subtexuit facilius elementa transitura quam verba
 sua, confirmans hoc quoque quod de Ioanne dixerat non praeterisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="34">
-<p>Sed Christus divortium prohibet dicens, Qui dimiserit uxorem <bibl n="Luc. XVI, 16."/>
+            </div>
+            <div n="34" type="chapter">
+               <p>Sed Christus divortium prohibet dicens, Qui dimiserit uxorem <bibl n="Luc. XVI, 16."/>
 suam et aliam duxerit, adulterium committit; qui dimissam a viro
 duxerit, aeque adulter est. Ut sic quoque prohibeat divortium,
 illicitum facit repudiatae matrimonium. Moyses vero permittit repudium
@@ -7053,10 +6948,9 @@ annuntiata a Moyse et prophetis, decreta autem ab eo deo qui de
 thronis deponit dynastas, et de sterquilinis elevat inopes. Ita cum <bibl n="Ps. CXIII, 6"/>
 utrinque pronuntiationis diversitas competat creatori, non erit divinitatum
 statuenda distantia, sed ipsarum materiarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="35">
-<p>Conversus ibidem ad discipulos Vae dicit auctori scandalorum, <bibl n="Luc. XVII, 1. 2."/>
+            </div>
+            <div n="35" type="chapter">
+               <p>Conversus ibidem ad discipulos Vae dicit auctori scandalorum, <bibl n="Luc. XVII, 1. 2."/>
 expedisse ei, si natus non fuisset, aut si molino saxo ad collum
 <pb xml:id="v.2.p.252"/>
 
@@ -7124,8 +7018,7 @@ prophetam collocaverat apud Samariam Hieroboam. Sed et alias
 semper sibi placentes erant Samaritani de montibus et puteis patrum,
 sicut in evangelio loannis Samaritana illa in colloquio domini
 <pb xml:id="v.2.p.254"/>
-
-<bibl n="Io. IV, 12. 20."/> apud puteum: Nae tu maior sis, et cetera; et rursus: Patres
+                  <bibl n="Io. IV, 12. 20."/> apud puteum: Nae tu maior sis, et cetera; et rursus: Patres
 nostri in isto monte adoraverunt, et vos dicitis, quia Hierosolymis
 <bibl n="Amos VI, 1."/> oportet adorare. Itaque qui et per Amos Vae dixerit eis qui
 confident in monte Samariae, iam et ipsam restituere diguatus de
@@ -7184,10 +7077,9 @@ me, non debuit per eius documenta formare quem destruit, ne ille
 me formare videatur. Si vero et hic non de suo loquitur adventu,
 sed de Iudaei Christi, expectemus etiam nunc ne quid de suo praedicet,
 illum interim esse credentes quem omni loco praedicat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="36">
-<p>Nam et orandi perseverantiam et instantiam mandans parabolam <bibl n="Luc. XVIII, 1-18."/>
+            </div>
+            <div n="36" type="chapter">
+               <p>Nam et orandi perseverantiam et instantiam mandans parabolam <bibl n="Luc. XVIII, 1-18."/>
 iudicis ponit coacti audire viduam instantia et perseverantia
 interpellationum eius. Ergo iudicem deum ostendit orandum, non
 se, si non ipse est iudex. Sed subiunxit facturum deum vindictam
@@ -7291,10 +7183,10 @@ quodammodo placatus filius David restituit lumina, cum
 testimonio fidei, qua hoc ipsum crediderat, exorandum sibi esse
 filium David. Et tamen David audacia hominum, puto, offenderit,
 non valetudo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="37">
-<p><bibl n="Luc. XIX, 1-10."/> Consequitur et Zachaei domus salutem. Quo merito? Numquid
+            </div>
+            <div n="37" type="chapter">
+               <p>
+                  <bibl n="Luc. XIX, 1-10."/> Consequitur et Zachaei domus salutem. Quo merito? Numquid
 vel ille crediderat Christum a Marcione venisse? Atquin adhuc in
 <bibl n="Luc. XVIII, 37. 43."/> auribus erat omnium vox illa caeci, Miserere mei, Iesu, fili David,
 et, Omnis populus laudes referebat deo, non Marcionis, sed David.
@@ -7332,10 +7224,9 @@ non tantum honorantem, verum et auferentem quod quis
 videatur habuisse. Aut si et hic creatorem finxerit austerum, tollentem
 quod non posuerit et metentem quod non severit, hic quoque
 me ille instruit cuius pecuniam ut fenerem edocet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="38">
-<p>Sciebat Christus baptisma Ioannis unde esset. Et cur quasi 
+            </div>
+            <div n="38" type="chapter">
+               <p>Sciebat Christus baptisma Ioannis unde esset. Et cur quasi 
 nesciens interrogabat? Sciebat non responsuros sibi pharisaeos. <bibl n="Luc. XX, 1-8."/>
 Et cur frustra interrogabat? An ut ex ore ipsorum iudicaret illos,
 vel ex corde? Refer ergo et haec ad exeusationem creatoris et ad
@@ -7423,10 +7314,9 @@ remunerata quidem fide caeci, qua filium David crediderat
 illum, pulsata vero traditione scribarum, qua non et dominum
 eum norant. Quodcunque ad gloriam spectaret Christi creatoris,
 sic non alius tueretur quam Christus creatoris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="39">
-<p> Oi. n constitit de nominum proprietate deberi illam qui prior
+            </div>
+            <div n="39" type="chapter">
+               <p> Oi. n constitit de nominum proprietate deberi illam qui prior
 et Christum suum in homines annuntiaret et Iesum transnominaret.
 Constabit itaque et de impudentia eius qui multos dicat venturos
 in nomine ipsius, quod non sit ipsius, si non Christus et Iesus
@@ -7483,9 +7373,8 @@ Christum non subiectum patri infert. A proximis quoque persecutiones <bibl n="Lu
 et nominis ex odio utique blasphemiam praedicatam non
 debeo rursus ostendere. Sed per tolerantiam, inquit, salvos <bibl n="Ibid. v. 19."/>
 facietis vosmetipsos, de qua scilicet psalmus, Tolerantia, inquit, <bibl n="Ps. IX, 19."/>
-<pb xml:id="v.2.p.264"/>
-
-<bibl n="Ps. CXVI, 15."/> iustorum non periet in finem. Quia et alibi: Honorabilis mors
+                  <pb xml:id="v.2.p.264"/>
+                  <bibl n="Ps. CXVI, 15."/> iustorum non periet in finem. Quia et alibi: Honorabilis mors
 <bibl n="Zach. VI, 14."/> iustorum; ex tolerantia sine dubio, quia et Zacharias: Corona autem
 erit eis qui toleraverint. Sed ne audeas argumentari apostolos
 ut alterius dei praecones a Iudaeis vexatos, memento prophotas
@@ -7554,8 +7443,7 @@ Christis constituas in persona unius filii hominis in quam utraque
 dispositio referatur. Aut et creatorem optimum aut et deum tuum
 asperum dedisti natura. In summa ipsius parabolae considera
 <pb xml:id="v.2.p.266"/>
-
-<bibl n="Luc. XXI, 23-31."/> exemplum. Aspice ficum et arbores omnes, cum fructum protulerint,
+                  <bibl n="Luc. XXI, 23-31."/> exemplum. Aspice ficum et arbores omnes, cum fructum protulerint,
 intellegunt homines aestatem appropinquasse, sic et vos cum
 videritis haec fieri, scitote in proximo esse regnum dei. Si enim
 fructificationes arbuscularum signum aestivo tempori praestant, antecedendo
@@ -7589,12 +7477,10 @@ Diluculo conveniendum erat, qui per Esaiam cum dixisset,
 <bibl n="Ies. L, 4."/> Dominus dat mihi linguam disciplinae, adiecit, Apposuit mihi
 mane aurem ad audiendum. Si hoc est prophetias dissolvere, quid
 erit adimplere?</p>
-<pb xml:id="v.2.p.267"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="40">
-<p>Proinde scit et quando pati oporteret eum cuius passionem <bibl n="Luc. XXII, I sqq."/>
+               <pb xml:id="v.2.p.267"/>
+            </div>
+            <div n="40" type="chapter">
+               <p>Proinde scit et quando pati oporteret eum cuius passionem <bibl n="Luc. XXII, I sqq."/>
 lex figurat. Nam et tot festis Iudaeorum paschae diem elegit. In
 hoc enim sacramentum pronuntiarat Moyses, Pascha est domini. <bibl n="Lev. XXIII, 5. Luc. XXII, 15."/>
 Ideo et affectum suum ostendit: Concupiscentia concupivi pascha
@@ -7651,10 +7537,10 @@ vino stolam suam et in sanguine uvae amictum suum, stolam et
 amictum carnem demonstrans et vinum sanguinem. Ita et nune
 sanguinem suum in vino consccravit, qui tunc vinum in sanguine
 figuravit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="41">
-<p><bibl n="Luc. XXII, 22."/> Vae, ait, per quem traditur filius hominis. Ergo iam Vae
+            </div>
+            <div n="41" type="chapter">
+               <p>
+                  <bibl n="Luc. XXII, 22."/> Vae, ait, per quem traditur filius hominis. Ergo iam Vae
 constat imprecationis et comminationis inclamationem intellegendam
 et irato et offenso deputandam; nisi si Iudas impune erat tantum
 sceleris relaturus. Aut si impune, vacat Vae: si non impune, utique
@@ -7700,11 +7586,11 @@ senserunt, Ergo tu dei es filius? quod te non vis aperte dicere,
 aeque ita et ille, Vos dicitis, confirmative respondit, et adeo sic
 fuit pronuntiatio eius, ut perseveraverint in eo quod pronuntiatio
 sapiebat.</p>
-<pb xml:id="v.2.p.270"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="42">
-<p><bibl n="Luc. XXIII, 1. 2."/> Perductum enim illum ad Pilatum onerare coeperunt quod se
+               <pb xml:id="v.2.p.270"/>
+            </div>
+            <div n="42" type="chapter">
+               <p>
+                  <bibl n="Luc. XXIII, 1. 2."/> Perductum enim illum ad Pilatum onerare coeperunt quod se
 regem diceret Christum, sine dubio dei filium, sessurum ad dei
 dexteram. Ceterum alio eum titulo gravassent, incerti an filium
 dei se dixisset, nisi Vos dicitis sic pronuntiasset, hoc se esse
@@ -7771,13 +7657,12 @@ impudentiae haereticae dicere phantasma illic phantasmatis
 remansisse. Sed si et Ioseph corpus fuisse noverat, quod tota
 pietate tractavit? ille Ioseph qui non consenserat in sceiere Iudaeis?
 <pb xml:id="v.2.p.272"/>
-
-<bibl n="Ps. I, 1."/> Beatus vir, qui non abiit in consilio impiorum, et in via peccatorum
+                  <bibl n="Ps. I, 1."/> Beatus vir, qui non abiit in consilio impiorum, et in via peccatorum
 non stetit, et in cathedra pestilentiae non sedit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="43">
-<p><bibl n="Luc. XXIV, 1 sqq."/> Oportuerat etiam sepuitorem domini prophetari ac iam tunc
+            </div>
+            <div n="43" type="chapter">
+               <p>
+                  <bibl n="Luc. XXIV, 1 sqq."/> Oportuerat etiam sepuitorem domini prophetari ac iam tunc
 merito benedici, si nec mulierum illarum officium praeterit prophetia
 quae ante lucem convenerunt ad sepulcrum cum odorum
 <bibl n="Hos. V, 15. VI, 1 sq."/> paratura. De hoc enim per Osee, Ut quaerant, inquit, faci(??)m
@@ -7844,15 +7729,14 @@ non alium quam creatoris, siquidem et apostolos mittens ad praedicandum <bibl n=
 universis nationibus in omnem terram exire sonum eorum <bibl n="Luc. XXIV, 47."/>
 et in terminos terrae voces eorum psalmum adimplendo praecepit. <bibl n="Ps. XIX, 5."/>
 Misereor tui, Marcion, frustra laborasti. Christus enim Iesus in
-evangelio tuo meus est.</p></div></div>
-
-
-
-<div type="textpart" subtype="book" n="5"><head>LIBER QUINTUS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<pb xml:id="v.2.p.274"/>
-<p> Nihil sine origine nisi deus solus. Quae quantum praecedit
+evangelio tuo meus est.</p>
+            </div>
+         </div>
+         <div n="5" type="book">
+            <head>LIBER QUINTUS.</head>
+            <div n="1" type="chapter">
+               <pb xml:id="v.2.p.274"/>
+               <p> Nihil sine origine nisi deus solus. Quae quantum praecedit
 in statu omnium rerum, tantum praecedat necesse est etiam in
 retractatu earum, ut constare de statu possit, quia nec habeas
 dispicere quid quale sit, nisi certus an sit, cum cognoveris unde
@@ -7882,7 +7766,7 @@ nec per hominem, sed per Iesum Christum. Plane profiteri potest semet ipsum quiv
 mentiatur, quanto magis qui se apostolum praedicet Christi? Adbuc ego in persona discipuli et inquisitoris conversor, ut iam hinc et fidem tuam obtundam, qui unde eam probes, non habes, et impudentiam suflundam, qui vindicas, et unde possis vindicare, non recipis. Sit Christus, sit apostolus, ut alterius, dum non probantur nisi de instrumento creatoris. Nam mihi Paulum etiam Genesis olim repromisit Inter illas enim figuras et propheticas super filios suos benedictiones Iacob, cum ad Beniamin dixisset: Beniamin, inquit, iupus rapax ad matutinum comedet adhuc, et ad vesperam dabit escam. Ex tribu enim Beniamin oriturum Paulum providebat, lupum rapacem ad matutinum comedentem, id est, prima aetate vastaturum pecora domiai ut persecutorem ecclesiorum, dehinc ad vesperam escam daturum, id est, devergente iam aetate oves Christi edocaturum ut doctorem nationum. Nam et Saulis primo asperitas insectationis erga David, dehinc poenitentia et satisfactio, hona pro malis recipientis, non aliod portendebat, qoam Paolum in Saule secundum trihus et lesum in David secondom virginis censum. Haec figurarum sacramenta si tibi displicent, certe Acta Apostolorum hunc mihi ordinem Pauli tradiderunt a te quoque non negandum. Inde apostolom ostendo persecutorem, non 
 
 <pb xml:id="v.2.p.276"/>
-<bibl n="Gal. I, 1."/> ab hominibus neque per hominem; inde et ipsi credere inducor;
+                  <bibl n="Gal. I, 1."/> ab hominibus neque per hominem; inde et ipsi credere inducor;
 inde te a defensione eius expello, nec timeo dicentem, Tu ergo
 negas apostolum Paulum? Non blasphemo quem tueor. Nego, ut
 to probare compellam. Nego, ut meum esse convincam. Aut si ad
@@ -7909,10 +7793,9 @@ ut iam hinc profiteamur nos proinde probaturos nullum alium deum
 ab apostolo circumlatum, sicut probavimus nec a Christo, ex ipsius
 utique epistulis Pauli, quas proinde mutilatas etiam de numero
 forma iam haeretici evangelii praeiudicasse debebit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> DE EPISTULA AD GALATAS. Principalem adversus 
+            </div>
+            <div n="2" type="chapter">
+               <p> DE EPISTULA AD GALATAS. Principalem adversus 
 <pb xml:id="v.2.p.277"/>
 
 Iudaismum epistolam nos quoque confitemur, quae Galatas docet. Amplectimur 
@@ -7998,10 +7881,9 @@ apostolo convenire, cum ordinem eius secundum ipsius testimo-
 nium ostendunt, ex parte vero dissidere, cum divinitatem in Christo
 creatoris annuntiant, ut praedicationem quidem apostolorum non
 sit secutus Paulus, qui formam ab eis dedocendae legis accepit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Denique ad patrocinium Petri ceterorumque apostolorum ascendisse <bibl n="Gal. II, 1. 2."/>
+            </div>
+            <div n="3" type="chapter">
+               <p>Denique ad patrocinium Petri ceterorumque apostolorum ascendisse <bibl n="Gal. II, 1. 2."/>
 Hierosolymam post annos quatuordecim scribit, ut conferret
 cum illis de evangelii sui regula, ne in vacuum tot annis cucurrisset
 aut curreret, si quid scilicet citra formam illorum evangelizaret.
@@ -8029,7 +7911,7 @@ Ergo cesserunt, quia fuerunt propter quos crederetur. Hoc enim
 rudi fidei et adhuc de legis observatione suspensae competebat,
 ipso quoque apostolo ne in vacuum cucurrisset aut curreret su-
 <pb xml:id="v.2.p.280"/>
-<bibl n="Gal. II, 9. 10."/> specto. Itaque frustrandi erant falsi fratres, speculantes libertatem
+                  <bibl n="Gal. II, 9. 10."/> specto. Itaque frustrandi erant falsi fratres, speculantes libertatem
 Christianam, ne ante eam in servitutem abducerent Iudaismi quam
 Paulus sciret se non in vacuum cucurrisse, quam dexteras ei darent
 antecessores, quam ex censu eorum in nationes praedicandi
@@ -8080,10 +7962,10 @@ dei alterius non potest admitti, ut credentes iustitiae deputet,
 ut iustos vivere faciat, ut nationes filios fidei dicat. Totum hoc
 eius est apud quem ante iam notum est sub eadem Abrahae mentione,
 dum ipso sensu revincatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p><bibl n="Gal. III, 15. IV, 3."/> Adhuc, inquit, secundum hominem dico: Dum essemus parvuli,
+            </div>
+            <div n="4" type="chapter">
+               <p>
+                  <bibl n="Gal. III, 15. IV, 3."/> Adhuc, inquit, secundum hominem dico: Dum essemus parvuli,
 sub elementis mundi eramus positi, ad deserviendum eis.
 Atquin non est hoc humanitus dictum. Non enim exemplum est,
 sed veritas. Quis enim parvulus, utique sensu, quod sunt nationes,
@@ -8104,8 +7986,7 @@ filii denique sui revelationem in extremitatem temporum et disposuit
 et in novissimis diebus effundam de spiritu meo in omnem carnem, secundum loelem. Ipsius erat sustinuisse tempus impleri, cuius erat etiam finis temporis, sicut initium. Ceterum deus ille otiosus nec operationis nec praedicationis ullius atque ita nec temporis alicuius, quid omnino egit, quod efficeret tempus impleri el iam implendum sustineri? Si nihil, satis vanum est, ut creatoris tempora sustinuerit serviens creatori. Cui autem rei misit filium suum? ut eos, qui sub lege erant, redimeret; hoc est, ut efiiceret tortuosa in viam rectam et aspera in vias lenes, secundum Esaiam, ut vetera transirent et nova orirentur, lex nova ex Sion et sermo domini ex Hierusalem, et ut adoptionem filiorum acciperemus, utique nationes, quae filii non eramus. Et ipse enim lux erit nationum, et in nomine eius nationes sperabunt.  Itaque ut certum esset, nos filios dei esse, misit spiritum
 suum in corda nostra, clamantem: Abba, pater. In novissimis enim, inquit, diebus effundam de meo spiritu in omnem carnem. Cuius gratia, nisi cuius et promissio gratiae? Quis pater, nisi qui et factor? Post has itaque divitias non erat revertendum ad infirma et mendica elementa. Elementa autem apud Romanos quoque etiam primae literae solent dici. Non ergo per mundialium elementorum derogationem a deo eorum avertere cupiebat, etsi diceudo supra: si ergo his, qui non natura sunt dei, servitis, physicae, id est, naturalis, superstitionis elementa pro deo habentis suggillat errorem, nec sic tamen elementorum deum taxans. Sed quae velit intelligi elementa, primas scilicet literas legis, ipse declarat. Dies observatis et menses ct tempora et annos et sabbata, ut opinor, et coenas puras et iciuraa et dies magnos. Cessare enim ab his quoque, sicut et circumcisione, oportebat ex decretis creatoris, qui et per Esaiam: neomenias vestras et sabbata et diem magnum non sustinebo, ieiunium et ferias et cerimonias vestras odit anima mea. Et per Amos,
 <pb xml:id="v.2.p.284"/>
-
-<bibl n="Amos V, 21."/> Odi, reieci cerimonias vestras, et non odorabor in frequentiis
+                  <bibl n="Amos V, 21."/> Odi, reieci cerimonias vestras, et non odorabor in frequentiis
 <bibl n="Hes. II, 11."/> vestris; item per Osee, Avertam universas iocunditates eius et
 cerimonias eius et sabbata et neomenias eius et omnes frequentias
 eius. Quae ipse constituerat, inquis, erasit? Magis quam alius;
@@ -8141,9 +8022,7 @@ apud quem fuit servitus legis. Et merito. Non decebat manumissos rursus iugo ser
 
 
 <pb xml:id="v.2.p.286"/>
-
-
-<bibl n="Gal. V, 6."/> dicendo per dilectionem perfici, sic quoque creatoris ostendit. Sive
+                  <bibl n="Gal. V, 6."/> dicendo per dilectionem perfici, sic quoque creatoris ostendit. Sive
 <bibl n="Deut. VI, 5."/> enim dilectionem dicit quae in deum, et hoc creatoris est, Diliges
 deum ex toto corde tuo, et ex tota anima tua, et ex totis viribus
 <bibl n="Lev. XIX, 18."/> tuis, sive quae in proximum, Et proximum tuum tanquam te, creatoris
@@ -8181,12 +8060,10 @@ mutuo transfigimur et invicem morimur. Persecutores
 gestare se (utique corporalia competunt), iam non putativam, sed
 veram et solidam carnem professus est Christi, cuius stigmata corporalia
 ostendit.</p>
-<pb xml:id="v.2.p.287"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>DE EPISTULA AD CORINTHIOS PRIMA. Praestructio superioris 
+               <pb xml:id="v.2.p.287"/>
+            </div>
+            <div n="5" type="chapter">
+               <p>DE EPISTULA AD CORINTHIOS PRIMA. Praestructio superioris 
 epistulae ita duxit, ut de titulo eius non retractaverim,
 certus et alibi retractari eum posse, communem scilicet et eundem
 in epistulis omnibus, quod non utique salutem praescribit eis quibus
@@ -8281,18 +8158,17 @@ redarguere, ne glorietur omnis caro, ut, quemadmodum scriptum <bibl n="I Cor. I,
 est, Qui gloriatur, in domino glorietur. In quo? utique in eo
 qui hoc praecepit. Nisi creator praecepti ut in deo Marcionis
 glorietur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Igitur per haec omnia ostendit cuius dei sapientiam Ioquatur <bibl n="I Cor. II, 5."/>
+            </div>
+            <div n="6" type="chapter">
+               <p>Igitur per haec omnia ostendit cuius dei sapientiam Ioquatur <bibl n="I Cor. II, 5."/>
 inter perfectos, eius scilicet qui sapientiam sapientium abstulerit
 et prudentiam prudentium irritam fecerit, qui infatuaverit sapientiam
 mundi, stulta eligens eius et disponens in salutem. Hanc dicit
 sapientiam in occulto fuisse quae fuerit in stultis et in pusillis et
 inhonestis, quae latuerit etiam sub figuris, allegoriis et aenigmatibus,
 revelanda postmodum in Christo, posito in lumen nationum <bibl n="Ies. XLII, 6."/>
-<pb xml:id="v.2.p.290"/>
-<bibl n="Ies. XLV, 3."/> a creatore promittente per Esaiae vocem patefacturum se thesauros
+                  <pb xml:id="v.2.p.290"/>
+                  <bibl n="Ies. XLV, 3."/> a creatore promittente per Esaiae vocem patefacturum se thesauros
 invisibiles et occultos. Nam ut absconderit aliquid is deus qui nihil
 egit omnino in quod aliquid abscondisse existimaretur, satis incredibile.
 Ipse si esset, latere non posset, nedum aliqua eius sacramenta.
@@ -8361,7 +8237,7 @@ ubique? Quis enim cognovit sensum domini, et quis illi consiliarius <bibl n="Ies
 rius fuit? Esaias est. Quid illi etiam cum exemplis dei nostri?
 Nam quod architectum se prudentem affirmat, hoc invenimus significari <bibl n="I Cor. III, 19."/>
 depalatorem disciplinae divinae a creatore per Esaiam. Au- <bibl n="Ies. III, 3."/>
-<pb xml:id="v.2.p.292"/>
+                  <pb xml:id="v.2.p.292"/>
 
 feram enim, inquit, a Iudaea inter cetera et sapientem architectum.
 Et numquid ipse tunc Paulus destinabatur, de Iudaea, id
@@ -8392,10 +8268,10 @@ si non illi doceret. Ergo, inquit, nemo glorietur in homine.
 <bibl n="Ies. XVII, 5."/> Et hoc secundum creatoris disciplinam: Miserum hominem, qui
 <bibl n="Ps. CXVIII, S."/> spem habet in hominem! et, Bonum est fidere in deo, quam
 fidere in hominibus; ita et gloriari.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p><bibl n="I Cor. IV, 5."/> Et occulta tenebrarum ipse illuminabit, utique per Christum,
+            </div>
+            <div n="7" type="chapter">
+               <p>
+                  <bibl n="I Cor. IV, 5."/> Et occulta tenebrarum ipse illuminabit, utique per Christum,
 <bibl n="Ies. XLII, 6. Ps. VII, 10."/> qui Christum illuminationem repromisit, se quoque lucernam pronuntiavit,
 scrutantem corda et renes. Ab illo erit et laus unicuique
 a quo et contrarium laudis, ut a iudice. Certe, inquis, vel hic
@@ -8439,7 +8315,7 @@ Christi, non nostra, utique sibi salva praestabit quae magno comparavit.
 Iam nunc quomodo honorabimus, quomodo tollemus deum <bibl n="Ibid."/>
 in corpore perituro? Sequitur de nuptiis congredi, quas Marcion
 constantior apostolo prohibet. Etenim apostolus, etsi bonum con- <bibl n="I Cor. VII, 7 sq. 20 sq."/>
-<pb xml:id="v.2.p.294"/>
+                  <pb xml:id="v.2.p.294"/>
 
 tinentiae praefert, tamen coniugium et contrahi permittit et usui
 esse, et magis
@@ -8511,12 +8387,11 @@ legis onera dimissa, sed ab eo qui imposuit, qui novationem repromisit.
 Ita et cibos qui abstulit, reddidit, quod et a primordio
 praestitit. Ceterum si quis alius deus fuisset destructor dei nostri,
 nihil magis suos prohibuisset quam de copiis adversarii vivere.</p>
-<pb xml:id="v.2.p.296"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p><bibl n="I Cor. XI, 3."/> Caput viri Christus est. Quis Christus, qui non est viri auctor?
+               <pb xml:id="v.2.p.296"/>
+            </div>
+            <div n="8" type="chapter">
+               <p>
+                  <bibl n="I Cor. XI, 3."/> Caput viri Christus est. Quis Christus, qui non est viri auctor?
 Capul enim ad auctoritatem posuit, auctoritas autem non alterius
 erit quam auctoris. Cuius denique viri caput est? Certe de quo
 <bibl n="I Cor. XI, 7."/> subicit, Vir enim non debet capnt velare, cum sit dei imago. Igitur
@@ -8586,7 +8461,7 @@ alii genera linguarum, alii interpretatio linguarum: hic erit agnitionis
 spiritus. Vide apostolum et in distributione facienda unius
 spiritus et in specialitate interpretanda prophetae conspirantem.
 Possum dicere ipsum, qui corporis nostri per multa et diversa <bibl n="I Cor. XII, 12 sqq."/>
-<pb xml:id="v.2.p.298"/>
+                  <pb xml:id="v.2.p.298"/>
 
 membra unitatem charismatum variorum compagini adaequavit, eundem
 et corporis humani et spiritus sancti dominum ostendit, qui
@@ -8621,7 +8496,7 @@ magnidicam: si haec omnia facilius a me proferuntur, et utique
 conspirantia regulis et dispositionibus et disciplinis creatoris, sine
 dubio dei mei erit et Christus et spiritus et apostolus. Habet professionem
 meam qui voluerit eam exigere.</p>
-<p>Interim
+               <p>Interim
  Marcionites nihil huiusmodi exhibebit, qui timet <bibl n="Cap. IX."/>
 iam pronuntiare cuius magis Christus nondum sit revelatus. Sicut
 meus expectandus est, qui a primordio praedicatus est, illius idcirco
@@ -8728,10 +8603,9 @@ pertinebit propter quod hunc psalmum et intuli et ad meam sententiam
 defendi, ut confirmaverim et regni gloriam et inimicorum
 subiectionem secundum dispositionem creatoris, consecuturus non
 alium credendum quam creatoris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Revertamur nunc ad resurrectionem, cui et alias quidem proprio
+            </div>
+            <div n="10" type="chapter">
+               <p> Revertamur nunc ad resurrectionem, cui et alias quidem proprio
 volumine satisfecimus omnibus haereticis resistentes; sed nec
 <bibl n="I Cor. XV, 29."/> hic desumus, propter eos qui illud opusculum ignorant. Quid, ait,
 facient qui pro mortuis baptizantur, si mortui non resurgunt?
@@ -8762,7 +8636,7 @@ volet, si unicuique seminum proprium ait esse corpus, ut aliam
 quidem carnem hominum, aliam vero pecudum et volucrum, et
 corpora caelestia atque terrena, et aliam gloriam solis, et lunae
 aliam, et stellarum aliam, - nonne carnalem et corporalem pro- <bibl n="Ib. V. 37-41."/>
-<pb xml:id="v.2.p.304"/>
+                  <pb xml:id="v.2.p.304"/>
 
 tendit resurrectionem, quam per carnalia et corporalia exempla
 commendat? nonne etiam ab eo deo eam spondet a quo sunt et
@@ -8840,8 +8714,7 @@ Resurgere itaque dicimus carnem, sed mutatam consequi regnum.
 Resurgent enim mortui incorrupti, illi scilicet qui fuerant corrupti
 dilapsis corporibus in interitum. Et nos mutabimur, in atomo, in
 <pb xml:id="v.2.p.306"/>
-
-<bibl n="I Cor. XV, 51-53."/> oculi momentaneo motu. Oportet enim corruptivum hoc, tenens
+                  <bibl n="I Cor. XV, 51-53."/> oculi momentaneo motu. Oportet enim corruptivum hoc, tenens
 utique carnem suam dicebat apostolus, induere incorruptelam, et
 mortale hoc immortalitatem, ut scilicet habilis substantia efficiatur
 <bibl n="Matth. XXII, 30."/> regno dei. erimus enim sicut angeli. Haec erit demutatio carnis,
@@ -8856,10 +8729,9 @@ tua? Ubi est, mors, aculeus tuus? (verbum autem hoc creatoris
 est per prophetam), eius erit et res, id est regnum, cuius et verbum
 fiet in regno. Nec alii deo gratias dicit, quod nobis victoriam
 utique de morte et triumphatorium accepit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> DE EPISTULA SECUNDA AD CORINTIOS. Si deus commune
+            </div>
+            <div n="11" type="chapter">
+               <p> DE EPISTULA SECUNDA AD CORINTIOS. Si deus commune
 <bibl n="I Cor. XV, 57."/> vocabulum factum est vitio erroris humani, quatenus plures
 dei dicuntur atque creduntur in saeculo, benedictus tamen deus
 domini nostri Iesu Christi non alius quam creator intellegetur,
@@ -8980,8 +8852,7 @@ virtus ipsa; quia propterea in vasa ficlilia commissa sunt, ut eminentia
 eius proberetur. Ceterum iam non erit alterius dei gloria
 ideoque nec virtus, sed magis dedecus et infirmitas, cuius eminen-
 <pb xml:id="v.2.p.310"/>
-
-<bibl n="IICor. IV, 7-10."/> tiam fictilia et quidem aliena ceperunt. Quodsi haec sunt fictilia
+                  <bibl n="IICor. IV, 7-10."/> tiam fictilia et quidem aliena ceperunt. Quodsi haec sunt fictilia
 vasa, in quibus tanta nos pati dicit, in quibus etiam mortificationem
 circumferimus dei, satis ingratus deus et iniustus, si non
 et hanc substantiam resuscitaturus est, in qua pro fide eius tanta
@@ -8999,10 +8870,10 @@ et non quasi aeterno interitu post mortem, verum laboribus et
 Nam et interiorem hominem nostrum renovari de die in diem dicens
 hic utrumque demonstrat, et corporis corruptionem ex vexatione
 temptationum et animi renovationem ex contemplatione promissionum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p><bibl n="IICor. V,1."/> Terreni domicilii nostri non sic ait habere nos domum aeternam,
+            </div>
+            <div n="12" type="chapter">
+               <p>
+                  <bibl n="IICor. V,1."/> Terreni domicilii nostri non sic ait habere nos domum aeternam,
 non manu factam, in caelo, quia quae manu facta sit creatoris
 intereat in totum dissoluta post mortem. Haec enim ad
 mortis metum et ad ipsius dissolutionis contristationem consolandam
@@ -9052,7 +8923,7 @@ Si et pseudapostolos dicit operarios dolosos transfiguratores sui, <bibl n="II C
 per hypocrisin scilicet, conversationis, non praedicationis adulteratae
 eos taxat. Adeo de disciplina, non de divinitate dissidebatur.
 Si transfiguratur satanas in angelum lucis, non potest hoc dirigi in <bibl n="Ib. v. 14."/>
-<pb xml:id="v.2.p.312"/>
+                  <pb xml:id="v.2.p.312"/>
 
 creatorem. Deus enim, non angelus creator; in deum lucis, non
 in angelum transfigurare se dictus esset, si non eum satanan
@@ -9074,10 +8945,9 @@ sed creatoris angelum satanae colaphizando apostolo suo applicuisse,
 <bibl n="Ib. v. 19."/> Immo et ipsam durius agendi in praesentia potestatem a domino
 datam sibi affimat. Nega nunc, haeretice, timeri deum tuum,
 cuius spostolus timebatur!</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> DE KPISTULA AD ROMANOS. Quando opusculum profligatur,
+            </div>
+            <div n="13" type="chapter">
+               <p> DE KPISTULA AD ROMANOS. Quando opusculum profligatur,
 breviter iam retractanda sunt quae rursus occurrunt, quaedam
 vero tramittenda, quae saepius occurrerunt. Piget de lege
 adhuc congredi, qui totiens probaverim concessionem eius nullum
@@ -9119,7 +8989,7 @@ dico et iram, etiam illa ipsius sint necesse est per quem
 haec habent transigi, evangelium et Christus. Et ideo vehitur in <bibl n="Rom. II, 21."/>
 transgressores legis, docentes non furari et furantes, ut homo dei
 legis, non ut creatorem ipsum his modis tangens, qui et furari <bibl n="Exod. XII, 34 sq."/>
-<pb xml:id="v.2.p.314"/>
+                  <pb xml:id="v.2.p.314"/>
 
 vetans fraudem mandaverit in Aegyptios auri et argenti, quemadmodum
 et cetera in illum retorquent. Scilicet apostolus verebatur
@@ -9174,10 +9044,9 @@ credi cuius praeceptum et bonum et iustum est? Si autem
 et spiritalem confirmat legem, utique et propheticam, utique et <bibl n="Ib. v. 14."/>
 figuratam. Debeo enim et hinc constituere Christum in lege figurate
 praedicatum, quo nec a Iudaeis omnibus potuerit agnosei.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Hunc si pater misit in similitudinem carnis peccati, non ideo <bibl n="Rom. VIII, 3. Rom. VII, 23."/>
+            </div>
+            <div n="14" type="chapter">
+               <p>Hunc si pater misit in similitudinem carnis peccati, non ideo <bibl n="Rom. VIII, 3. Rom. VII, 23."/>
 phantasma dicetur caro quae in illo videbatur. Peccatum enim carni
 supra adscripsit, et illam fecit legem peccati habitantem in membris
 suis, et adversantem legi sensus. Ob hoc igitur missum filium in
@@ -9264,8 +9133,8 @@ Amore fraternitatis invicem affectuosi; non enim id ipsum est, Diliges <bibl n="
 proximum tanquam te. Spe gaudentes, utique dei. Bonum est <bibl n="Rom. XII, 12."/>
 enim sperare in dominum, quam sperare in magistratus. Pressuram <bibl n="Ps. CXVIII, 9. Rom. XII, 12."/>
 sustinentes. Exaudiet enim te dominus in die pressurae. <bibl n="Ps. XX, 2."/>
-<pb xml:id="v.2.p.318"/>
-<bibl n="(??)m. XII, 14."/> Habes psalmum. Benedicite, et nolite maledicere. Quis hoc docebit
+                  <pb xml:id="v.2.p.318"/>
+                  <bibl n="(??)m. XII, 14."/> Habes psalmum. Benedicite, et nolite maledicere. Quis hoc docebit
 <bibl n="Rom. XII, 16."/> quam qui omnia benedictionibus condidit? Non altum sapientes,
 <bibl n="Ies. V, 21."/> sed humilibus assentantes, ne sitis apud vos sapientes. Vae
 <bibl n="Rom. XII, 17."/> enim audiunt per Esaiam. Malum pro malo nemini retribueritis.
@@ -9285,10 +9154,9 @@ laboravit. Si evangelium legem non adimplevit, ecce lex evangelium
 comminatur, utique iudicis et ultoris, utique creatoris, illum certeco
 constituens promerendum quem intentat timendum, etiamsi alium
 praedicaret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> DE EPISTULA AD THESSALONICENSES PRIMA. Brevioribus
+            </div>
+            <div n="15" type="chapter">
+               <p> DE EPISTULA AD THESSALONICENSES PRIMA. Brevioribus
 quoque epistulis non pigebit intendere. Est sapor et in paucis.
 <bibl n="I Thess. II, 15."/> Occiderant Iudaei prophetas suos. Possum dicere, Quid ad apostolum
 dei alterius, et quidem optimi, qui nec suorum delicta
@@ -9359,10 +9227,9 @@ substantiam in homine non video post spiritum et animam cui vocabulum
 corporis accommodetur praeter carnem, hanc totiens in
 corporis nomine intellegens quotiens non nominatur; multo magis
 hic, cum quae dicitur corpus suo nomine appellatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> DE EPRISTULA AD THESSALONICRNSES SECUNDA. Cogimur
+            </div>
+            <div n="16" type="chapter">
+               <p> DE EPRISTULA AD THESSALONICRNSES SECUNDA. Cogimur
 quaedam identidem iterare, ut cohaerentia eis confirmemus.
 Dominum et hic retriutorem utriusque meriti dicimus circumferri
 <pb xml:id="v.2.p.321"/>
@@ -9401,7 +9268,7 @@ deo creatore: secundum vero Marcionem nescio ne sit Christus
 creatoris. Nondum venit apud illum. Quisquis est autem ex
 duobus, quaero cur veniat in omni virtute et signis et ostentis
 mendacii? propterea, inquit, quod dilectionem veritatis non susce- <bibl n="II Thess. II, 10-12."/>
-<pb xml:id="v.2.p.322"/>
+                  <pb xml:id="v.2.p.322"/>
  
 perint, ut salvi essent, et propter hoc erit eis instinctum fallaciae,
 ut iudicentur omnes qui non crediderunt veritati, sed consenserunt
@@ -9427,10 +9294,9 @@ incerto, nae palam alium deum praedicante, productus est? Ita
 cui competit vindicta, ei competet materia vindictae, evangelium
 <bibl n="II Thess. III, 10."/> dico, et veritas et salus, Iubere autem operari eum qui velit manducare
 <bibl n="Deut. XXV, 4."/>eius disciplina est qui bovi trituranti os liberum iussit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> DE EPISTULA AD LAODICENOS. Ecclesiae quidem veritate
+            </div>
+            <div n="17" type="chapter">
+               <p> DE EPISTULA AD LAODICENOS. Ecclesiae quidem veritate
 <pb xml:id="v.2.p.323"/> 
 epistulam istam ad Ephesios habemus emissam, non ad Laodicenos;
 sed Marcion ei titulum aliquando interpolare gestiit, quasi et in
@@ -9466,7 +9332,7 @@ spiritu promissionis eius sancto. Cuius promissionis? factae per
 IoÄ&#x93;lem: in novissimis diebus effundam de meo spiritu in omnem <bibl n="Io(??)l III, 1."/>
 carnem, id est et in nationes. Ita et spiritus et evangelium in
 eo erit Christo qui praesperabatur, dum praedicabatur. Sed et pater <bibl n="Eph. I. 17."/>
-<pb xml:id="v.2.p.324"/>
+                  <pb xml:id="v.2.p.324"/>
 
 gloriae ille est cuius Christus rex gloriae canitur in psalmo ascendens:
 <bibl n="Ps. XXIV. 10."/> dens: Quis est iste rex gloriae? dominus virtutum ipse est rex
@@ -9569,10 +9435,9 @@ scilicet ne et super veterum prophetarum fundamenta aedificatio
 <bibl n="Ib. v. 20."/> exstruere non cesset. Unde enim accepit summum lapidem
 <bibl n="Ps. CVIII, 22."/> angularem dicere Christum, nisi de psalmi significatione: Lapis,
 quem reprobaverunt aedificantes, iste factus est in summo anguli?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> De manibus haeretici praecidentis non miror si syllabas subtrahit,
+            </div>
+            <div n="18" type="chapter">
+               <p> De manibus haeretici praecidentis non miror si syllabas subtrahit,
 <bibl n="Eph. III, 8. 9."/> cum paginas totas plerumque subducit. Datam, inquit,
 <pb xml:id="v.2.p.327"/>
 
@@ -9693,10 +9558,9 @@ per aenigmata nescio quae creatorem taxaret, qui in catenis iam
 constitutus ob libertatem praedicationis constantiam manifestandi
 sacramenti in apertione oris, quam ibi expostulare a deo mandabat,
 ecclesiae utique praestabat?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p> DE EPISTULA AD COLOSSENSES. Soleo in prascriptione
+            </div>
+            <div n="19" type="chapter">
+               <p> DE EPISTULA AD COLOSSENSES. Soleo in prascriptione
 adversus haereses omnes de testimonio temporum compendium
 figere, priorem vindicans regulam nostram omni haeretica posteritate.
 <bibl n="Col. I, 5. 6."/> Hoc nunc probabit et apostolus, dicens, De spe reposita in
@@ -9796,10 +9660,9 @@ sit iam alibi docuisse quam a creatore manarint, qui cum velera <bibl n="Ies. LX
 praedicaret transitura, nova facturus universa, mandans etiam, Novate
 vobis novamen novum, iam tum docebat deponere veterem <bibl n="Ier. IV, 3."/>
 hominem et novum induere.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> DE EPISTULA AD PHILIPPENSES. Cum praedicationis 
+            </div>
+            <div n="20" type="chapter">
+               <p> DE EPISTULA AD PHILIPPENSES. Cum praedicationis 
 enumerat varietatem, quod alii ex fiducia vinculorum eius audentius
 sermonem enuntiarent, alii per invidiam et contentionem, quidam
 vero et per sermonis existimationem, plerique ex dilectione,
@@ -9869,10 +9732,9 @@ deputari habebunt, quid facient qui primi resurgent? Non habebunt
 de quo transfigurentur. Atquin, Cum illis, dicit, simul rapiemur <bibl n="I Thesa. IV, 16. 17."/>
 in nubibus obviam domino. Si cum illis sublati, utique
 cum illis et transfigurati.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p> DE EPISTULA AD PHILEMONEM. Soli huic epistulae brevitas 
+            </div>
+            <div n="21" type="chapter">
+               <p> DE EPISTULA AD PHILEMONEM. Soli huic epistulae brevitas 
 sua profuit ut falsarias manus Marcionis evaderet. Miror tamen,
 cum ad unum hominem litteras factas receperit, quod ad Timotheum
 duas et unam ad Titum de ecclesiastico statu compositas
@@ -9884,11 +9746,11 @@ qua confirmavimus spem pristinam, aut illic suspectam habeas
 <pb xml:id="v.2.p.336"/>
 
 dilationem, qua eruimus ipsa ista. Si totum opusculum inspexeris,
-nec hic redundantiam nec illic diffidentiam iudicabis.</p></div></div>
-<pb xml:id="v.2.p.337"/>
-
-<pb xml:id="v.2.p.338"/>
-</div></body></text>
-
-
+nec hic redundantiam nec illic diffidentiam iudicabis.</p>
+            </div>
+         </div>
+         <pb xml:id="v.2.p.337"/>
+         <pb xml:id="v.2.p.338"/>
+      </body>
+   </text>
 </TEI>

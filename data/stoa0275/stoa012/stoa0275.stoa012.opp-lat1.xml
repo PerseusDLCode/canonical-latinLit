@@ -1,67 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng"><fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Carne Christi</title>
-        <author>Tertullian</author>
-        <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Carne Christi</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=431%3Bownerid=13510798896211811-455">HathiTrust</ref>              
-          
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa012.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.425"/>
-<head>DE CARNE CHRISTI.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Qui fidem resurrectionis ante istos Sadducaeorum propinquos 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa012.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=431%3Bownerid=13510798896211811-455">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa012.opp-lat1">
+         <pb xml:id="v.2.p.425"/>
+         <head>DE CARNE CHRISTI.</head>
+         <div n="1" type="chapter">
+            <p>Qui fidem resurrectionis ante istos Sadducaeorum propinquos 
 sine controversia moratam ita student inquietare, ut eam spem
 negent etiam ad carnem pertinere, merito Christi quoque carnem
 quaestionibus distrahunt, tamquam aut nullam omnino aut quoquo
@@ -85,10 +86,9 @@ aeque potuit nativitatem quoque phantasma confingere, ut et
 conceptus et praegnatus et partus virginis et ipsius exinde infantis
 ordo <foreign xml:lang="grc">τῷ δοκεῖν</foreign> haberentur. Eosdem oculos eosdemque sensus
 fefellissent quos carnis opinio elusit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Plane nativitas a Gabriele adnuntiatur. Quid illi cum angelo
+         </div>
+         <div n="2" type="chapter">
+            <p> Plane nativitas a Gabriele adnuntiatur. Quid illi cum angelo
 <bibl n="Luc. I, 26 sqq."/> creatoris? Et in virginis uterum conceptus inducitur. Quid illi
 <bibl n="Ies. VII, 14."/> cum Esaia propheta creatoris? Odit moras, qui subito Christum
 <bibl n="Luc. II, 1 sqq."/> de caelo deferebat. Aufer hinc, inquit, molestos semper Caesaris
@@ -124,10 +124,9 @@ iure fecisti. Sed plenius eiusmodi praescriptionibus adversus omnes
 haereses alibi iam usi sumus. Post quas nunc ex abundanti retractamus,
 desiderantes rationem qua non putaveris natum esse
 Christum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Necesse est, quatenus hoc putas arbitrio tuo licuisse, ut aut
+         </div>
+         <div n="3" type="chapter">
+            <p> Necesse est, quatenus hoc putas arbitrio tuo licuisse, ut aut
 impossibilem aut inconvenientem deo existimaveris nativitatem. Sed
 deo nihil impossibile nisi quod non vult. An ergo voluerit nasci
 (quia si voluit, et potuit et natus est) consideremus. Ad compendium
@@ -188,10 +187,9 @@ cum de nihilo proferebatur, scisses et cum in nihilum subducebatur.
 Si non fuit initium visihile, nec finis. Tamen corporis
 soliditas erat, quoquo momento corpus videbatur. Non potest
 non fuisse quod scriptum est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Igitur si neque ut impossibilem neque ut periculosam deo
+         </div>
+         <div n="4" type="chapter">
+            <p> Igitur si neque ut impossibilem neque ut periculosam deo
 repudias corporationem, superest ut quasi indignam reicias et accuses.
 Ab ipsa quidem exorsus nativitate, perora, age, iam spurcitias
 genitalium in utero elementorum, humoris et sanguinis foeda
@@ -245,10 +243,9 @@ stulta non esse, et alia sint quae deus in aemulationem elegerit
 sapientiae saecularis. Et tamen apud illam facilius creditur Iuppiter
 taurus factus aut cygnus quam vere homo Christus penes
 Marcionem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Sunt plane et alia tam stulta, quae pertinent ad contumelias 
+         </div>
+         <div n="5" type="chapter">
+            <p>Sunt plane et alia tam stulta, quae pertinent ad contumelias 
 et passiones dei. Aut prudentiam dicant deum crucifixum.
 Aufer hoc quoque, Mercion, immo hoc potius. Quid enim indignius
 deo, quid magis erubescendum, nasci an mori? carnem
@@ -269,8 +266,7 @@ Nihil enim ab eis passus est Christus, si nihil vere est passus.
 Parce unicae spei totius orbis, qui destruis necessarium dedecus
 fidei. Quodcunque deo indignum est, mihi expedit. Salvus
 <pb xml:id="v.2.p.434"/>
-
-<bibl n="Matth. X, 32 sqq. Mare. VIII. 33. Luc. IX, 23"/> sum si non confundar de domino meo. Qui mei, inquit, confusus 
+               <bibl n="Matth. X, 32 sqq. Mare. VIII. 33. Luc. IX, 23"/> sum si non confundar de domino meo. Qui mei, inquit, confusus 
 fuerit, confundar et ego eius. Alias non invenio materias
 confusionis quae me per contemptum ruboris probent bene impudentem
 et feliciter stultum. Crucifixus est dei filius; non
@@ -317,10 +313,9 @@ circulatorio coetu, nec deum praeter hominem, sed magum hominem,
 nec salutis pontificem, sed spectaculi artiflcem, nec mortuorum 
 resuscitatorem, sed vivorum avocatorom Nisi quod et
 si magus fuit natus est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sed quidam discentes Pontici illius, supra magistrum sapere 
+         </div>
+         <div n="6" type="chapter">
+            <p>Sed quidam discentes Pontici illius, supra magistrum sapere 
 <pb xml:id="v.2.p.436"/>
 
 compuisi, concedunt Christo carnis veritatem, sine pracindicio tamen 
@@ -402,10 +397,9 @@ dominicae carnis ex causa alterius dispositionis. Homo vere
 futurus usque ad mortem eam carnem oportebat indueret cuius
 est mors. Eam porro carnem, cuius est mors, nativitas
 antecedit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Sed quotiens de nativitate contenditur, omnes, qui respuunt
+         </div>
+         <div n="7" type="chapter">
+            <p> Sed quotiens de nativitate contenditur, omnes, qui respuunt
 <pb xml:id="v.2.p.439"/>
 
 eam ut praeiudicantem de carnis in Christo veritate, ipsum deum
@@ -492,12 +486,10 @@ et digniorem fraternitatem recusato carnali genere nuncupavit.
 Eodem sensu denique et illi exclamationi respondit, non matris
 uterum et ubera negans, sed feliciores designans qui verbum dei
 audiunt.</p>
-<pb xml:id="v.2.p.442"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Solis istis capitulis, quibus maxime instructi sibi videntur
+            <pb xml:id="v.2.p.442"/>
+         </div>
+         <div n="8" type="chapter">
+            <p> Solis istis capitulis, quibus maxime instructi sibi videntur
 Marcion et Apelles, secundum veritatem integri et incorrupti evangelii
 interpretatis satis esse debuerat ad probationem carnis humanae
 in Christo per defensionem nativitatis. Sed quoniam et isti
@@ -535,10 +527,9 @@ non secundum carnem caelestes. Si ergo qui fiunt caelestes, qualis
 et Christus, terrenam carnis substantiam gestant, hinc quoque
 confirmatur ipsum etiam Christum in carne terrena fuisse caelestem,
 sicut ii sunt qui ei adaequantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Praetendimus adhuc nihil quod ex alio acceptum sit, ut aliud 
+         </div>
+         <div n="9" type="chapter">
+            <p>Praetendimus adhuc nihil quod ex alio acceptum sit, ut aliud 
 sit quam id de quo sit acceptum, ita aliud esse ut non suggerat
 unde sit acceptum. Omnis materia sine testimonib originis suae
 non est, etsi demutetur in novam proprietatem. Ipsum certe corpus
@@ -582,10 +573,9 @@ Haec sunt, opinor, signa caelestia. Sed quomodo, inquam, contemni
 et pati posset, sicut et dixi, si quid in illa carne de
 caelesti generositate radiasset? Ex hoc ergo convincimus nihil
 in illa de caelis fuisse, propterea ut contemni et pati posset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Convertor ad alios aeque sibi prudentes, qui carnem Christi 
+         </div>
+         <div n="10" type="chapter">
+            <p>Convertor ad alios aeque sibi prudentes, qui carnem Christi 
 animalem affirmant, quod anima caro sit facta, ergo et caro anima,
 et sicut caro animalis, ita et anima carnalis. Et hic itaque causas
 requiro. Si, ut animam salvam faceret, in semetipso suscepit animam
@@ -612,10 +602,9 @@ nostra, id est non carnea, Sed liberatam constat illam. Ergo
 non fuit carnea, et fuit nostra, si ea fuit quae liberaretur, quoniam
 periclitabatur. Iam ergo si anima non fuit carnalis in Christo,
 nec caro potest animalis fuisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Sed aliam argumentationem, eorum convenimus, exigentes cur
+         </div>
+         <div n="11" type="chapter">
+            <p> Sed aliam argumentationem, eorum convenimus, exigentes cur
 animalem carnem subeundo Christus animam carnalem videatur
 habuisse. Deus enim, inquiunt, gestivit animam visibilem hominibus
 exhibere, faciendo eam corpus, quae retro invisibilis extiterit,
@@ -655,10 +644,9 @@ Sed non poterat Christus inter homines nisi homo videri.
 Redde igitur Christo fidem suam, ut qui homo voluerit incedere,
 animam quoque humanae condicionis ostenderit, non faciens eam
 carneam, sed induens eam carne.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Ostensa sit nunc anima per carnem, si constiterit illam ostendendam 
+         </div>
+         <div n="12" type="chapter">
+            <p>Ostensa sit nunc anima per carnem, si constiterit illam ostendendam 
 quoquo modo fuisse, id est incognitam sibi et nobis. Quamquam
 in hoc vana distinctio est, quasi nos seorsum ab anima simus, cum
 totum quod sumus anima sit. Denique sine anima nihil sumus, ne
@@ -698,10 +686,9 @@ Sed et hoc non aliter in se quam in Lazaro aliquo, cuius caro
 non erat animalis, ita nec anima carnalis. Quid ergo amplius innotuit
 nobis de animae ignoratae retro dispositione? Quid invisibile
 eius fuit quod visibilitatem per carnem desideraret?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Caro facta est anima ut anima ostenderetur. Numquid ergo et
+         </div>
+         <div n="13" type="chapter">
+            <p> Caro facta est anima ut anima ostenderetur. Numquid ergo et
 caro anima facta est, ut caro manifestaretur? Si caro anima est,
 iam non anima est, sed caro. Si anima caro est, iam non caro
 est, sed anima. Ubi ergo caro, et ubi anima est, alterutrum facta
@@ -740,12 +727,10 @@ praeter illam quae anima erat. Quodsi una caro et una anima,
 illa tristis usque ad mortem et illa panis pro mundi salute, salvus
 est numerus duarum substantiarum in suo genere distantium, excludens
 carneae animae unicam speciem.</p>
-<pb xml:id="v.2.p.450"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Sed angelum, aiunt, gestavit Christus. Qua ratione? Qua et
+            <pb xml:id="v.2.p.450"/>
+         </div>
+         <div n="14" type="chapter">
+            <p> Sed angelum, aiunt, gestavit Christus. Qua ratione? Qua et
 hominem. Eadem ergo est et causa ut hominem gestaret Christus.
 Salus hominis fuit causa, scilicet ad restituendum quod perierat.
 Homo perierat, hominem restitui oportuerat. Ut angelum gestaret
@@ -787,10 +772,9 @@ prophetarum: Haec dicit dominus. Ipse enim erat dominus coram
 ex sua auctoritate pronuntians: Ego autem dico vobis. Quid
 ultra ad haec? Esaiam exclamantem audi: Non angelus neque <bibl n="Ies. LXIII, 9."/>
 legatus, sed ipse dominus salvos eos fecit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Licuit et Valentino ex privilegio haeretico carnem Christi spiritalem 
+         </div>
+         <div n="15" type="chapter">
+            <p>Licuit et Valentino ex privilegio haeretico carnem Christi spiritalem 
 comminisci. Quidvis eam fingere potuit quisquis humanam
 credere noluit, quando, quod ad omnes dictum est, si humana
 non fuit nec ex homine, non video ex qua substantia ipse se
@@ -830,10 +814,9 @@ credunt, et quod est mortuum ex incorruptela natum esse contendunt,
 quasi corruptela aliud sit a morte. Sed et nostra caro statim
 resurgere debebat. Exspecta. Nondum inimicos suos Christus oppressit,
 ut eum amicis de inimicis triumphet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Insuper argumentandi libidine ex forma ingenii haeretici locum
+         </div>
+         <div n="16" type="chapter">
+            <p> Insuper argumentandi libidine ex forma ingenii haeretici locum
 sibi fecit Alexander ille, quasi nos affirmemus idcirco Christum
 terreni census induisse carnem, ut evacuaret in semetipso carnem
 peccati. Quod etsi diceremus, quacunque ratione muniremus sententiam
@@ -868,10 +851,9 @@ fuit ex viri semine, recordentur Adam ipsum in hanc carnem non
 ex semine viri factum. Sicut terra conversa est in hanc carnem
 sine viri semine, ita et dei verbum potuit sine coagulo in eiusdem
 carnis transire materiam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Sed remisso Alexandro cum suis syllogismis, quos in argumentationibus 
+         </div>
+         <div n="17" type="chapter">
+            <p>Sed remisso Alexandro cum suis syllogismis, quos in argumentationibus 
 torquet, etiam cum psalmis Valentini, quos magna
 impudentia quasi idonei alicuius auctoris interserit, ad unam iam
 lineam congressionem dirigamus, an carnem Christus ex virgine
@@ -915,11 +897,9 @@ quandoque praestaret. In vulvam ergo deus verbum suum
 detulit, bonum fratrem, ut memoriam mali fratris eraderet. Inde 
 prodeundum fuit Christo ad salutem hominis quo homo iam 
 damnatus intraverat.</p>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Nunc ut simplicius respondeamus, non competebat ex semine
+         </div>
+         <div n="18" type="chapter">
+            <p> Nunc ut simplicius respondeamus, non competebat ex semine
 
 <bibl n="Matth. XII, 41.42."/> humano dei filium nasci, 'ne, si totus esset filius hominis, non 
 esset et dei filius, nihilque haberet amplios Salomone, et amplius 
@@ -964,10 +944,10 @@ videri de spiritu quidem suo, de carne vero non sua determinasse.
 
 Ita cum ipse sit de spiritu dei et spirtus deus est, ex deo natus
 ipse est et ex carne hominis, homo in carne generatus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p><bibl n="Io. I, 13."/> Quid est ergo, Non ex sanguine nec ex voluntate carnis nec
+         </div>
+         <div n="19" type="chapter">
+            <p>
+               <bibl n="Io. I, 13."/> Quid est ergo, Non ex sanguine nec ex voluntate carnis nec
 ex voluntate viri, sed ex deo natus est? Hoc quidem capitulo
 ego potius utar cum aduleratores eius obduxero. Sic enim scriptum
 esse contendunt: Nem ex sanguine nec ex carnis voluntate
@@ -1006,10 +986,9 @@ nihil extulit. Sed non sine causa descendit in vulvam. Ergo ex
 illa accepit, quia si non ex illa accepit, sine causa in illam descendit,
 maxime eius qualitatis caro futurus quae non erat vulvae, id
 est spiritalis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Qualis est autem tortuositas vestra, ut ipsam EX syllabam 
+         </div>
+         <div n="20" type="chapter">
+            <p>Qualis est autem tortuositas vestra, ut ipsam EX syllabam 
 praepositionis officio adscriptam auferre quaeratis, et alia magis
 uti, quae in hac specie non invenitur penes scripturas sanctas?
 Per virginem dicitis natum, non ex virgine, et in vulva, non ex
@@ -1063,10 +1042,9 @@ quod ex virgine, secundum rationem quam edidimus, eo uti
 virgo esset regeneratio nestra spiritaliter ab omnibus inquinamentis
 sanctificata per Christum, virginem et ipsum, etiam carnaliter, ut
 ex virginis carne.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Si ergo contendunt hoc competisse novitati, ut quemadmodum 
+         </div>
+         <div n="21" type="chapter">
+            <p>Si ergo contendunt hoc competisse novitati, ut quemadmodum 
 non ex viri semine, ita nec ex virginis carne caro fieret dei verbum,
 quare non hoc sit tota novitas, ut caro non ex semine nata
 carne processerit? Accedam adhuc cominius ad congressum. Ecce, <bibl n="Matth. I, 23. Ies. VII, 14."/>
@@ -1106,10 +1084,9 @@ et Iesse per David sciant adhaerere. Ideo hunc fructum ex lumbis
 David, id est ex posteritate carnis eius, iurat illi deus consessurum
 <bibl n="Ps. CXXXII, 11. Act. II, 30."/> in throno ipsius. Si ex lumbis David, quanto magis ex
 lumbis Mariae, ob quam in lumbis David?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Deleant igitur et testimonia daemonum filium David proclamantia
+         </div>
+         <div n="22" type="chapter">
+            <p> Deleant igitur et testimonia daemonum filium David proclamantia
 Iesum, sed testimonia apostolorum delere non poterunt,
 si daemonum indigna sunt. Ipse inprimis Matthaeus, fidelissimus
 evangelii commentator, ut comes domini, non aliam ob causam
@@ -1144,10 +1121,9 @@ Adam Christus. Consequens ergo est ut aut illos spiritalem
 carnem habuisse contendant, quo eadem conditio substantiae
 deducatur in Christo, aut concedant carnem Christi spiritalem non
 fuisse, quae non de spiritali stirpe censetur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Sed agnoscimus adimpleri propheticam vocem Simeonis super 
+         </div>
+         <div n="23" type="chapter">
+            <p>Sed agnoscimus adimpleri propheticam vocem Simeonis super 
 adhuc recentem infantem dominum pronuntiatam: Ecce hic positus <bibl n="Luc. II, 31."/>
 est in ruinam et suscitationem multorum in IsraÃ«l, et in signum,
 quod contradicetur. Signum enim nativitatis Christi secundum
@@ -1182,11 +1158,11 @@ sanctus notarit hac voce, disceptatures super uterum Mariae. Ceterum
 <pb xml:id="v.2.p.463"/>
 
 non contra illam suam simplicitatem pronuntiasset dubitative,
-Esaia dicente, Concipiet et pariet. <bibl n="Ies. VII, 14."/></p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p>Quod enim Esaias iaculatur in suggillatione haereticorum ipsorum, 
+Esaia dicente, Concipiet et pariet. <bibl n="Ies. VII, 14."/>
+            </p>
+         </div>
+         <div n="24" type="chapter">
+            <p>Quod enim Esaias iaculatur in suggillatione haereticorum ipsorum, 
 et inprimis, Vae qui faciunt dulce amarum et tenebras lucem, <bibl n="Ies. V, 20."/>
 istos scilicet notat qui nec vocabula ista in luce proprietatum suarum
 conservant, ut anima non alia sit quam quae vocatur, et caro
@@ -1216,10 +1192,9 @@ et illi erubescant qui adfirmant carnem in caelis vacuam sensu ut
 
 vaginam exempto Christo sedere, aut qui carnem et animam tantundem,
 aut tantummodo animam, carnem vero non iam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p> Sed hactenus de materia praesenti. Satis iam enim arbitror
+         </div>
+         <div n="25" type="chapter">
+            <p> Sed hactenus de materia praesenti. Satis iam enim arbitror
 instructam esse carnis in Christo et ex virgine natae et humanae
 probationem. Quod et solum discussum sufficere potuisset, citra
 singularunm ex diverse opinionum congressionem quam et argumentationibus
@@ -1228,10 +1203,10 @@ ex abundanti, uti eo quod probavimus quid et unde fuerit Christi
 caro quid non fuerit adversus omnes praeiudicaverimus. Ut autem
 clausulam de praefatione communi faciat resurrectio nostrae
 carnis alio libello defendenda, hic habebit praestructionem, manifesto
-iam quale fuerit quod in Christo resurrexit.</p></div>
-<pb xml:id="v.2.p.465"/>
-
-<pb xml:id="v.2.p.466"/>
-</div></body></text>
-
+iam quale fuerit quod in Christo resurrexit.</p>
+         </div>
+         <pb xml:id="v.2.p.465"/>
+         <pb xml:id="v.2.p.466"/>
+      </body>
+   </text>
 </TEI>

@@ -1,64 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng"><fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De ieiunio adversus psychicos</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De ieiunio adversus psychicos</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=97%3Bownerid=13510798896211526-101">HathiTrust</ref>                                                  
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa018.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.851"/>
-<head>DE IEIUNIO ADVERSUS PSYCHICOS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Mirarer psychicos, si sola luxuria tenerentur, qua saepius 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa018.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=97%3Bownerid=13510798896211526-101">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa018.opp-lat1">
+         <pb xml:id="v.1.p.851"/>
+         <head>DE IEIUNIO ADVERSUS PSYCHICOS.</head>
+         <div n="1" type="chapter">
+            <p>Mirarer psychicos, si sola luxuria tenerentur, qua saepius 
 nubunt, si non etiam ingluvie lacerarentur, qua ieiunia oderunt.
 Monstrum scilicet haberetur libido sine gula, cum duo haec tam
 unita atque concreta sint, ut si disiungi omnino potuissent, ipsi
@@ -91,10 +95,10 @@ arido victui. Novitatem igitur obiectant, de cuius inlicito praescribant
 aut haeresin iudicandam si humana praesumptio est, aut
 pseudoprophetiam pronuntiandam si spiritalis indictio est, dum
 quaque ex parte anathema audiamus qui aliter adnuntiamus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p><bibl n="Lev. XVI, 29 sqq. XXIII, 27."/> Nam quod ad ieiunia pertineat, certos dies a deo constitutos
+         </div>
+         <div n="2" type="chapter">
+            <p>
+               <bibl n="Lev. XVI, 29 sqq. XXIII, 27."/> Nam quod ad ieiunia pertineat, certos dies a deo constitutos
 opponunt, ut cum in Levitico praecipit dominus Moysi decimam
 mensis septimi diem placationis, Sancta, inquiens, erit vobis dies,
 et vexabitis animas vestras, et omnis anima, quae vexata non fuerit
@@ -107,7 +111,7 @@ legalibus et propheticis vetustatibus. Ubi volunt enim, adgnoscunt
 quid sapiat, Lex et prophetae usque ad Ioannem. Itaque de cetero <bibl n="Luc. XVI, 16. Matth. XI, 13."/>
 indifferenter ieiunandum ex arbitrio, non ex imperio, novae disciplinae
 pro temporibus et causis uniuscuiusque; sic et apostolos <bibl n="Act. XV, 10."/>
-<pb xml:id="v.1.p.854"/>
+               <pb xml:id="v.1.p.854"/>
 
 observasse, nullum aliud imponentes iugum certorum et in commune
 omnibus obeundorum ieiuniorum, proinde nec stationum,
@@ -145,10 +149,9 @@ sint carnalium commodorum suasoriae, quam facile dicatur, Opus
 est de totis praecordiis credam, diligam deum et proximum tanquam
 me. In his enim duobus praeceptis tota lex pendet et prophetae,
 non in pulmonum et intestinorum meorum inanitate.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Itaque nos hoc prius affirmare debemus quod occulte subrui 
+         </div>
+         <div n="3" type="chapter">
+            <p>Itaque nos hoc prius affirmare debemus quod occulte subrui 
 periclitatur, quantum valeat apud deum inanitas ista, et ante omnia,
 unde ratio ipsa processerit hoc modo promerendi deum. Tunc
 enim agnoscetur observationis necessitas, cum eluxerit rationis
@@ -181,10 +184,9 @@ ut homo per eandem materiam causae satis deo faciat per quam
 offenderat, id est per cibi interdictionem, atque ita salutem aemulo
 modo redaccenderet inedia, sicut extinxerat sagina, pro unico
 inlicito plura licita contemnens?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Haec ratio servabatur apud providentiam dei, pro temporibus
+         </div>
+         <div n="4" type="chapter">
+            <p> Haec ratio servabatur apud providentiam dei, pro temporibus
 omnia modulantis, ne quis ex diverso ad deiciendam propositionem
 nostram, Cur ergo, dicat, non statim deus aliquam victus
 constituit castigationem, quinimmo et auxit permissionem? Nam
@@ -214,10 +216,9 @@ ut demeret quaedam, plus exacturus, si plus commisisset, abstinentiam
 imperaturus, cum indulgentiam praemisisset, quo magis,
 ut diximus, primordiale delictum expiaretur maioris abstinentiae
 operatione in maioris licentiae occasione.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Denique ubi iam et familiaris populus allegi deo coepit et restitutio 
+         </div>
+         <div n="5" type="chapter">
+            <p>Denique ubi iam et familiaris populus allegi deo coepit et restitutio 
 <pb xml:id="v.1.p.858"/>
 
 hominis imbui potuit, tunc leges disciplinaeque omnes impositae
@@ -243,10 +244,9 @@ potius et cepe quam caelum fragrare malebant. Et ideo tam
 ingratis gratiora et esculentiora quaeque detracta sunt, puniendae
 simul gulae et exercendae continentiae causa, ut illa damnaretur,
 ista erudiretur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Nunc si temere rationes castigati a deo victus et castigandi
+         </div>
+         <div n="6" type="chapter">
+            <p> Nunc si temere rationes castigati a deo victus et castigandi
 propfer deum a nobis ad primordiorum experimenta revocavimus,
 conscientiam communem consulamus. Ipsa natura enuntiabit quales
 <pb xml:id="v.1.p.859"/>
@@ -284,8 +284,7 @@ pane vivere hominem, sed in omni verbo dei, cum quidem nec
 ipsum Moysen deo pastum inediamque eius nomine saginatam
 constanter contemplari valeret pinguior populus. Merito igitur etiam
 <pb xml:id="v.1.p.860"/>
-
-<bibl n="Matth. XVII, 3sqq."/> in carne se dominus ei ostendit collegae ieiuniorum suorum, non
+               <bibl n="Matth. XVII, 3sqq."/> in carne se dominus ei ostendit collegae ieiuniorum suorum, non
 minus et Heliae. Nam et Helias hoc primum, quod famem fuerat
 <bibl n="I Reg. XVII, 1."/> imprecatus, satis iam se ieiuniis voverat. Vivit, inquit, dominus,
 cui adsisto in conspectu eius, si erit ros istis annis et imber. Dehinc
@@ -299,10 +298,9 @@ Tanta est circumscripti victus praerogativa, ut deum
 praestet homini contubernalem, parem revera pari. Si enim deus
 <bibl n="Ies. XL, 28."/> aeternus non esuriet, ut testatur per Esaiam, hoc erit tempus quo
 homo deo adaequetur, cum sine pabulo vivit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Processimus itaque iam ad exempla, uti revolvamus utilitatis
+         </div>
+         <div n="7" type="chapter">
+            <p> Processimus itaque iam ad exempla, uti revolvamus utilitatis
 efficacia potestates istius officii quod etiam iratum deum homini
 <bibl n="I Sam. VII, 5sqq."/> reconciliat. Deliquerat Israël in aquatione apud Maspha congregatus
 a Samuele, sed ita statim delictum ieiunio diluit, ut periculum
@@ -346,8 +344,7 @@ et quidem propheta. Sed non modo naturae mutationem aut periculorum
 aversionem aut delictorum obliterationem, verum etiam
 sacramentorum agnitionem ieiunia de deo merebuntur. Aspice
 <pb xml:id="v.1.p.862"/>
-
-<bibl n="Dan. II. VI. X. XIV, 34sqq."/> Danielis exemplum. Circa somnium regis Rabylonis omnes turbantur
+               <bibl n="Dan. II. VI. X. XIV, 34sqq."/> Danielis exemplum. Circa somnium regis Rabylonis omnes turbantur
 sophistae, negant ultro de praestantia humana posse cognosci.
 Solus Daniel deo fidens, et sciens quid ad demerendam
 dei gratiam faceret, spatium tridui postulat, cum sua fraternitate
@@ -361,10 +358,9 @@ professus est causam divinae dignationis: Veni, inquit, demonstrare
 tibi, quatenus miserabilis es, ieiunando scilicet. Si deo miserabilis,
 leonibus in lacu fuerat horribilis, ubi quidem illi sex diebus
 ieiunanti prandium angelus procuravit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Reddimus et cetera. Ad nova enim nunc documenta properamus.
+         </div>
+         <div n="8" type="chapter">
+            <p> Reddimus et cetera. Ad nova enim nunc documenta properamus.
 <bibl n="Luc. II, 37 sqq."/> In limine evangelii Anna prophetis, filia Phanuelis, quae
 infantem dominum et agnovit et multa super eo praedicavit expectantibus
 redemptionem Israëlis, post egregium titulum veteris et
@@ -387,10 +383,9 @@ cum charismate insuper prophetiae festinasset, ieiunia eius legimus
 
 labores suos et pericula et incommoda post famem ac sitim ieiunia
 quoque plurima enumerat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Principalis haec species in castigatione victus potest iam de 
+         </div>
+         <div n="9" type="chapter">
+            <p>Principalis haec species in castigatione victus potest iam de 
 interioribus quoque abstinentiae operationibus praeiudicare, ut et
 ipsis pro modo utilibus aut necessariis. Nam exceptio eduliorum
 quorundam portionale ieiunium est. Inspiciamus igitur et xerophagiarum
@@ -447,10 +442,9 @@ argumenti satis est, quem propter stomachum et adsiduas
 sed ex devotione abstinebat (ceterum stomacho magis consuetudo
 prodesset), hoc ipso abstinentiam vini dignam deo suasit,
 quam ex necessitate dissuasit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Aeque stationes nostras ut indictas, quidam vero et in
+         </div>
+         <div n="10" type="chapter">
+            <p> Aeque stationes nostras ut indictas, quidam vero et in
 <pb xml:id="v.1.p.865"/>
 
 serum constitutas, novitatis nomine incusant, hoc quoque munus
@@ -531,10 +525,9 @@ me in oratione. ecce vir, quem videram in somnis initio,
 velociter volans appropinquavit mihi quasi hora vespertini sacrificii.
 Haec erit statio sera quae ad vesperam ieiunans pinguiorem
 orationem deo immolat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Omnia autem ista credo ignota eis qui ad nostra turbantur, 
+         </div>
+         <div n="11" type="chapter">
+            <p>Omnia autem ista credo ignota eis qui ad nostra turbantur, 
 aut sola forsitan lectione non etiam intentione comperta, secundum
 maiorem vim imperitorum apud gloriosissimam scilicet multitudinem
 psychicorum. Propterea per singulas direximus species ieiunationum,
@@ -579,10 +572,9 @@ de solleminbus, ut proinde officia cessaverint, quemadmodum et
 beneficia eius, atque ita negetis usque adhuc eum munia imponere,
 quia et hic Lex et prophetae usque ad Ioannem. Superest ut totum <bibl n="Matth. XI, 13."/>
 auferatis quantum in vobis tam otiosum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Iam enim et in ista specie ditati saturatique regnatis, non <bibl n="I Cor. IV, 8."/>
+         </div>
+         <div n="12" type="chapter">
+            <p>Iam enim et in ista specie ditati saturatique regnatis, non <bibl n="I Cor. IV, 8."/>
 delicta incursantes, quae ieiuniis elimentur, nec revelationum
 scientia indigentes, quae xerophagiis extorqueantur, nec bella propria
 metuentes, quae stationibus discutiantur. Ut ab Ioanne paracletus
@@ -619,10 +611,9 @@ iam extortus, cum singultus et ructus solos haberet, in ipsa
 negatione discessit. Ideo sobrietatis disciplinam qui praedicant
 pseudoprophetae, ideo haeretici qui observant. Quid ergo cessatis
 paracletum, quem in Montano negatis, in Apicio credere?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Praescribitis constituta esse sollemnia huic fidei scripturis vel 
+         </div>
+         <div n="13" type="chapter">
+            <p>Praescribitis constituta esse sollemnia huic fidei scripturis vel 
 traditione maiorum, nihilque observationis amplius adiciendum ob
 illicitum innovationis. State in isto gradu, si potestis. Ecce
 enim convenio vos et praeter pascha ieiunantes citra illos dies
@@ -666,10 +657,9 @@ et ieiunationibus operati dolere cum dolentibus, et ita demum
 congaudere gaudentibus norunt. Si et ista sollemnia, quibus tunc
 praesens patrocinatus est sermo, nos quoque in diversis provinciis
 fungimur in spiritu invicem repraesentati, lex est sacramenti.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Ho(??)m igitur tempora observantes et dies et menses et annos <bibl n="Gal. VI, 10 sqq."/>
+         </div>
+         <div n="14" type="chapter">
+            <p>Ho(??)m igitur tempora observantes et dies et menses et annos <bibl n="Gal. VI, 10 sqq."/>
 galaticamur. Plane, si Iudaicarum caeremoniarum, si legalium
 sollemnitatum observantes sumus; illas enim apostolus dedocet compescens
 veteris testamenti in Christo sepulti perseverantiam et novi
@@ -687,10 +677,10 @@ dies etiam vulgata consecratione celebratur. Nec ergo apud apostolum
 differentiae ratio, distinguentem nova et vetera. Sed et hic
 inaequalitas vestra ridebitur, cum vetustatum formam nobis exprobratis
 in quo causam novitatis accusatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p><bibl n="I Tim. IV, 3."/> Reprobat etiam illos qui iubeant cibis abstinere, sed de
+         </div>
+         <div n="15" type="chapter">
+            <p>
+               <bibl n="I Tim. IV, 3."/> Reprobat etiam illos qui iubeant cibis abstinere, sed de
 providentia spiritus sancti, praedamnans iam haereticos perpetuam
 abstinentiam praecepturos ad destruenda et despicienda opera creatoris,
 quales inveniam apud Marcionem, apud Tatianum, apud
@@ -734,10 +724,10 @@ convicia et lites ieiunatis et caeditis pugnis. Non tale ieiunium
 
 ego elegi, sed quale subiecit, et subiciendo non abstutit, sed
 confirmavit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p><bibl n="Ps. (??), 18 sq."/> Nam et si mavult opera iustitiae, non tamen sine sacrificio,
+         </div>
+         <div n="16" type="chapter">
+            <p>
+               <bibl n="Ps. (??), 18 sq."/> Nam et si mavult opera iustitiae, non tamen sine sacrificio,
 quod est anima conflictata ieiuniis. Ille certe deus, cui nec populus
 <bibl n="Num. XI, 4. 13. 32 sqq."/> incontinens gulae placuit, nec sacerdos, nec prophetes. Manent
 adhuc monumenta concupiscentiae, ubi sepultus est populus carnis
@@ -784,12 +774,10 @@ deo idolo gulam suam mactat, tu deo non vis. Deus enim <bibl n="Rom. XVI, 18."/>
 tibi venter est, et pulmo templum, et aqualiculus altare, et sacerdos
 cocus, et sanctus spiritus nidor, et condimenta charismata, et
 ructus prophetia.</p>
-<pb xml:id="v.1.p.878"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Vetus es, vera si velimus dicere, tu qui tantum gulae indulges,
+            <pb xml:id="v.1.p.878"/>
+         </div>
+         <div n="17" type="chapter">
+            <p> Vetus es, vera si velimus dicere, tu qui tantum gulae indulges,
 et merito te priorem iactitas; semper agnosco sapere Esau venatorem
 ferarum; ita passim indagandis turdis studes, ita de campo laxissimae
 disciplinae tuae venis, ita spiritu deficis. Si tibi lenticulam
@@ -825,13 +813,11 @@ sed adversus mundi potestates, adversus spiritalia malitiae. Adversus
 haec non carne et sanguine, sed fide et spiritu robusto
 oportet adsistere. Ceterum saginatior Christianus ursis et leonibus
 forte quam deo erit necessarius, nisi quod et adversus bestias
-maciem exercere debebit.</p></div>
-<pb xml:id="v.1.p.880"/>
-
-<pb xml:id="v.1.p.881"/>
-
-<pb xml:id="v.1.p.882"/>
-</div></body></text>
-
-
+maciem exercere debebit.</p>
+         </div>
+         <pb xml:id="v.1.p.880"/>
+         <pb xml:id="v.1.p.881"/>
+         <pb xml:id="v.1.p.882"/>
+      </body>
+   </text>
 </TEI>

@@ -1,66 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng"><fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Corona</title>
-        <author>Tertullian</author>
-        <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Corona</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=443%3Bownerid=13510798896211526-455">HathiTrust</ref>                    
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa013.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.414"/>
-<head>DE CORONA.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<pb xml:id="v.1.p.415"/>
-<p>Proxime factum est: Liberalitas praestantissimorum imperatorum 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa013.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=443%3Bownerid=13510798896211526-455">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa013.opp-lat1">
+         <pb xml:id="v.1.p.414"/>
+         <head>DE CORONA.</head>
+         <div n="1" type="chapter">
+            <pb xml:id="v.1.p.415"/>
+            <p>Proxime factum est: Liberalitas praestantissimorum imperatorum 
 expungebatur in castris, milites laureati adibant. Quidam
 illic magis dei miles ceteris constantior fratribus, qui se duobus
 dominis servire posse praesumpserant, solus libero capite,
@@ -102,10 +105,9 @@ revincantur, ipsi vel maxime Christiani laureati, quibus id solum
 quaestio est, quasi aut nullum aut incertum saltem haberi possit
 delictum quod patiatur quaestionem. Nec nullum autem nec incertum
 hinc interim ostendam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Neminem dico fidelium coronam capite nosse alias extra tempus
+         </div>
+         <div n="2" type="chapter">
+            <p> Neminem dico fidelium coronam capite nosse alias extra tempus
 temptationis eiusmodi. Omnes ita observant a catechumenis
 <pb xml:id="v.1.p.419"/>
 
@@ -139,10 +141,9 @@ non iubeat. Quid faciet disciplina? Utrunque recipiet, quasi
 neutrum prohibitum sit? an utrumque reiciet, quasi neutrum
 praeceptum sit? Sed quod non prohibetur, ultro permissum est(??) Immo
 prohibetur quod non ultro est permissum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Et quamdiu per hanc lineam serram reciprocabin(??), habendes
+         </div>
+         <div n="3" type="chapter">
+            <p> Et quamdiu per hanc lineam serram reciprocabin(??), habendes
 observationem inveteratam, quae praeveniendo statum fecit?
 Hanc si nulla scriptura determinavit, certe consuetudo corroboravit,
 quae sine dubio de traditione manavit. Quomodo enim usurpari
@@ -176,12 +177,10 @@ atque promotum, ad omnem aditum et exitum, ad vestitum et
 calciatum, ad lavacra, ad mensas, ad lumina, ad cubilia, ad sedilia,
 quacumque nos conversatio exercet, frontem signaculo
 terimus.</p>
-<pb xml:id="v.1.p.424"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Harum et aliarum eiusmodi disciplinarum si legem expostules
+            <pb xml:id="v.1.p.424"/>
+         </div>
+         <div n="4" type="chapter">
+            <p> Harum et aliarum eiusmodi disciplinarum si legem expostules
 scripturarum, nullam leges. Traditio tibi praetendetur auctrix,
 consuetudo confirmatrix, et fides observatrix. Rationem traditioni
 et consuetudini et fidei patrocinaturam aut ipse perspicies,
@@ -226,10 +225,9 @@ inprimis consuetudinis ipsius, quae propterea colenda est, ne non
 
 sit rationis interpres, ut, si et hanc deus dederit, tunc discas
 non an observanda sit tibi consuetudo, sed cur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Maior efficitur ratio Christianarum observationum, cum illas
+         </div>
+         <div n="5" type="chapter">
+            <p> Maior efficitur ratio Christianarum observationum, cum illas
 etiam natura defendit, quae prima omnium disciplina est. Ideoque
 haec prima praescribit coronam capiti non convenire. Puto autem
 naturae deus noster est, qui figuravit hominem et fructibus rerum
@@ -265,10 +263,9 @@ est florem capite sectari, quam cibum aure, quam sonum nare.
 Omne autem, quod contra naturam est, monstri meretur notam
 penes omnes, penes nos vero etiam elogium sacrilegii in deum,
 naturae dominum et auctorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Quaerens igitur dei legem habes communem istam in publico
+         </div>
+         <div n="6" type="chapter">
+            <p> Quaerens igitur dei legem habes communem istam in publico
 mundi, in naturalibus tabulis, ad quas et Apostolus solet provocare,
 <bibl n="I Cor. XI, 14."/> ut cum in velamine feminae, Nec natura vos, inquit, docet?
 <bibl n="Rom. II, 14."/> ut cum ad Romanos natura facere dicens nationes ea, quae sunt
@@ -292,10 +289,9 @@ qui natura quidem omnia dei sentiunt ex quibus spectacula instruuntur,
  scientia autem deficiunt illud quoque intellegere, omnia
 esse a diabolo mutata. Sed et huic materiae propter suaviludios
 nostros Graeco quoque stilo satisfecimus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Proinde coronarii isti agnoscant interim naturae auctoritatem
+         </div>
+         <div n="7" type="chapter">
+            <p> Proinde coronarii isti agnoscant interim naturae auctoritatem
 communis sapientiae nomine, qua homines, et propriae religionis
 pignora, qua deum naturae de proximo colentes, atque ita velut
 ex abundanti ceteras quoque rationes dispiciant quae nostro
@@ -365,10 +361,9 @@ magis quod ipsa sibi idola fecerunt cum adviverent? Ipsi scilicet
 
 sibi procuraverant daemones per eos in quibus esurierant
 ante quod procuraverant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Tene interim hanc fidem, dum incursum quaestionis excutio. 
+         </div>
+         <div n="8" type="chapter">
+            <p>Tene interim hanc fidem, dum incursum quaestionis excutio. 
 Iam enim audio dici et alia multa ab eis prolata quos saeculum
 deos credidit, tamen et in nostris hodie usibus et in pristinorum
 sanctorum et in dei rebus et in ipso Christo deprehendi,
@@ -403,10 +398,9 @@ priore prospectore et instructore et oblectatore, si forte, hominis
 sui, quae vero hunc ordinem excesserunt, ea non convenire
 usibus nostris, praesertim quae propterea scilicet nec apud saeculum
 nec in dei rebus nec in conversationibus Christi recognosci est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Quis denique patriarches, quis prophetes, quis levites aut sacerdos 
+         </div>
+         <div n="9" type="chapter">
+            <p>Quis denique patriarches, quis prophetes, quis levites aut sacerdos 
 aut archon, quis vel postea apostolus aut evangelizator aut
 episcopus invenitur coronatus? Puto nec ipsum dei templum nec
 <pb xml:id="v.1.p.438"/>
@@ -430,10 +424,9 @@ de coronae decore aut dedecore tacuisset. Adeo et Esaias
 <bibl n="Ies. V, 12."/> quoniam inquit, Cum tympanis et psalteriis et tibiis bibunt
 vinum, dicturus esset etiam, Cum coronis, si umquam hic usus
 fuisset in dei rebus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Ita cum idcirco proponis deorum saecularium ornamenta etiam
+         </div>
+         <div n="10" type="chapter">
+            <p> Ita cum idcirco proponis deorum saecularium ornamenta etiam
 apud deum deprehendi, ut inter haec coronam quoque capitis communi
 <pb xml:id="v.1.p.439"/>
 
@@ -456,7 +449,7 @@ gentum et aurum. Oculos habent, nec vident, nares, nec odorantur,
 manus, nec contrectabunt. Per haec enim floribus frui
 est. Quod si tales edicit futuros qui idola fabricantur, tales iam
 sunt qui secundum idolorum ornatum quid utuntur. Omnia munda <bibl n="Tit. I, 15."/>
-<pb xml:id="v.1.p.440"/>
+               <pb xml:id="v.1.p.440"/>
 
 mundis, ita et immunda omnia immundis, nihil autem immundius
 idolis. Ceterum substantiae mundae, ut dei res, et hac sua conditione
@@ -500,10 +493,9 @@ ut, dum ostendimus extraneas, immo et contrarias disciplinae,
 nullam earum rationis patrocinio fultam probemus, quod posset
 habitus huiusmodi quoque communioni vindicari, sicut et quidam,
 quorum exempla nobis obiectantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Etenim, ut ipsam causam coronae militaris aggrediar, puto
+         </div>
+         <div n="11" type="chapter">
+            <p> Etenim, ut ipsam causam coronae militaris aggrediar, puto
 prius conquirendum, an in totum Christianis militia conveniat.
 Quale est alioquin de accidentibus retractare, cum a praecedentibus
 <pb xml:id="v.1.p.443"/>
@@ -566,10 +558,9 @@ prima specie quaestionis, etiam militiae ipsius inlicitae, plura non
 faciam, ut secunda reddatur. Nae, si omni ope expulero militiam,
 frustra iam de corona militari provocarim. Puta denique
 licere militiam usque ad causam coronae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Sed et de corona prius dicam. Laurea ista Apollini vel Libero
+         </div>
+         <div n="12" type="chapter">
+            <p> Sed et de corona prius dicam. Laurea ista Apollini vel Libero
 sacra est, illi ut deo telorum, huic ut deo triumphorum.
 Sic docet Claudius, cum et myrto ait milites redimiri solere.
 <pb xml:id="v.1.p.447"/>
@@ -605,10 +596,9 @@ munificae et ipsae sollemnium Caesarianorum. Sed et tum
 proinde miles ac servus alterius es, et si duorum, dei et Caesaris,
 certe tunc non Caesaris, cum te deo debes, etiam in communibus,
 credo, potiori.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Coronant et publicos ordines laureis publicae causae, magistratus 
+         </div>
+         <div n="13" type="chapter">
+            <p>Coronant et publicos ordines laureis publicae causae, magistratus 
 vero insuper aureis, ut Athenis, ut Romae. Superferuntur
 etiam illis Hetruscae. Hoc vocabulum est coronarum quas
 gemmis et foliis ex auro quercinis ab Iove insignes ad deducendas
@@ -673,10 +663,9 @@ quantos deos etiam ostiis diabolus adfinxerit, Ianum a ianua,
 Limentinum a limine, Forculum et Carnam a foribus et
 eardinibus, etiam apud Graecos Thyraeum Apollinem et Antelios
 daemonas.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Tanto abest, ut capiti suo munus inferat idololatriae, immo 
+         </div>
+         <div n="14" type="chapter">
+            <p>Tanto abest, ut capiti suo munus inferat idololatriae, immo 
 iam dixerim Christo, siquidem viri caput Christus est, tam
 liberum quam et Christus, ne velamento quidem obnoxium, nedum
 <pb xml:id="v.1.p.454"/>
@@ -709,10 +698,9 @@ patre modico quid citra angelos, et ita gloria et honore coronatus.
 Si ob haec caput ei tuum debes, tale, si potes, ei
 repende, quale suum pro tuo obtulit, aut nec floribus coroneris,
 si spinis non potes, quia floribus non potes.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Serva deo rem suam intaminatam. Ille eam, si volet, coronabit. 
+         </div>
+         <div n="15" type="chapter">
+            <p>Serva deo rem suam intaminatam. Ille eam, si volet, coronabit. 
 Immo et vult denique, invitat. Qui vicerit, inquit, dabo <bibl n="Apoc. II, 10. Iac. I, 12."/>
 ei coronam vitae. Esto et tu fidelis ad mortem et decerta et tu
 bonum agonem, cuius coronam et apostolus repositam sibi merito
@@ -741,12 +729,11 @@ signum habet ad probationem sui, sicubi temptatus fuerit de sacramento,
 statimque creditur Mithrae miles, si deiecerit coronam,
 si eam in deo suo esse dixerit. Agnoscamus ingenia diaboli, idcirco
 quaedam de divinis affectantis, ut nos de suorum fide confundat
-et iudicet.</p></div>
-<pb xml:id="v.1.p.458"/>
-
-<pb xml:id="v.1.p.459"/>
-
-<pb xml:id="v.1.p.460"/>
-</div></body></text>
-
+et iudicet.</p>
+         </div>
+         <pb xml:id="v.1.p.458"/>
+         <pb xml:id="v.1.p.459"/>
+         <pb xml:id="v.1.p.460"/>
+      </body>
+   </text>
 </TEI>

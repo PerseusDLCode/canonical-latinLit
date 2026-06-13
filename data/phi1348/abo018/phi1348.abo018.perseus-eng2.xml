@@ -1,74 +1,82 @@
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader xml:lang="eng">
-		<fileDesc>
-			<titleStmt>
-				<title xml:lang="lat">Otho</title>
-				<author>Suetonius</author>
-				<editor role="translator">Alexander Thomson</editor>
-				<sponsor>Perseus Project, Tufts University</sponsor>
-				<principal>Gregory Crane</principal>
-				<respStmt>
-					<resp>Prepared under the supervision of</resp>
-					<name>Bridget Almas</name>
-					<name>Lisa Cerrato</name>
-					<name>William Merrill</name>
-					<name>David Smith</name>
-				</respStmt>
-				<funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Trustees of Tufts University</publisher>
-				<pubPlace>Medford, MA</pubPlace>
-				<authority>Perseus Project</authority>
-				<date type="release" cert="unknown">2000-08-01</date>
-			</publicationStmt>
-			
-
-			<sourceDesc>
-				<biblStruct>
-					<monogr>
-						<title>The Lives of the Twelve Caesars</title>
-						<author xml:lang="lat">C. Suetonius Tranquillus</author>
-						<editor>J. Eugene Reed</editor>
-						<editor role="translator">Alexander Thomson</editor>
-						<imprint>
-							<pubPlace>Philadelphia</pubPlace>
-							<publisher>Gebbie and Co.</publisher>
-							<date>1883</date>
-						</imprint>
-					</monogr>
-					<ref target="https://archive.org/details/livesoftwelvecsa00suet/page/428/mode/2up">Internet Archive</ref>
-				</biblStruct>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Otho</title>
+            <author>Suetonius</author>
+            <editor role="translator">Alexander Thomson</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" cert="unknown">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi1348.abo018.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>The Lives of the Twelve Caesars</title>
+                  <author xml:lang="lat">C. Suetonius Tranquillus</author>
+                  <editor>J. Eugene Reed</editor>
+                  <editor role="translator">Alexander Thomson</editor>
+                  <imprint>
+                     <pubPlace>Philadelphia</pubPlace>
+                     <publisher>Gebbie and Co.</publisher>
+                     <date>1883</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/livesoftwelvecsa00suet/page/428/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
 				<!--<refState delim=" " unit="life"/>-->
-				<refState unit="chapter"/>
-			</refsDecl>
-			<editorialDecl>
-				<correction method="silent" status="low"><p>Perseus OCR</p></correction>
-			</editorialDecl>
-			
-		</encodingDesc>
-
-		<profileDesc>
-			<langUsage>
-				<language ident="eng">English </language>
-				<language ident="lat">Latin </language>
-				<language ident="grc">Greek </language>
-				<language ident="fre">French </language>
-			</langUsage>
-		</profileDesc>
-		<revisionDesc>
-			<change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
-		</revisionDesc>
-	</teiHeader>
-	<text xml:lang="eng">
-		<body><div xml:lang="eng" type="translation" n="urn:cts:latinLit:phi1348.abo018.perseus-eng2">
-			<div type="textpart" n="1" subtype="chapter">
-				<p>THE ancestors of Otho were originally of
+            <refState unit="chapter"/>
+         </refsDecl>
+         <editorialDecl>
+            <correction method="silent" status="low">
+               <p>Perseus OCR</p>
+            </correction>
+         </editorialDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English </language>
+            <language ident="lat">Latin </language>
+            <language ident="grc">Greek </language>
+            <language ident="fre">French </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1348.abo018.perseus-eng2">
+         <div n="1" type="chapter">
+            <p>THE ancestors of Otho were originally of
 					the town of Ferentum, of an ancient and honourable family, and, indeed, one of
 					the most considerable in Etruria. His grandfather, M. Salvius Otho (whose father
 					was a Roman knight, but his mother of mean extraction, for it is not certain
@@ -97,9 +105,9 @@
 					Terentia, namely, Lucius Titianus, and a younger called Marcus, who had the same
 					cognomen as himself. He had also a daughter, whom he contracted to Drusus,
 					Germanicus's son, before she was of marriageable age.</p>
-			</div>
-			<div type="textpart" n="2" subtype="chapter">
-				<p>The emperor Otho was born upon the fourth of the calends of May [28th April], in
+         </div>
+         <div n="2" type="chapter">
+            <p>The emperor Otho was born upon the fourth of the calends of May [28th April], in
 					the consulship of Camillus Aruntius and Domitius Aenobarbus.<note anchored="true">A. U. C. 784 or 785.</note> He was from his earliest youth
 					so riotous and wild, that he was often severely scourged by his father. He was
 					said to run about in the night-time, and seize upon any one he met, who was
@@ -112,11 +120,11 @@
 					condemned for bribery, having tampered with him for a large sum of money, to
 					procure his pardon; before he had quite effected it, he scrupled not to
 					introduce him into the senate, to return his thanks.</p>
-			</div>
-			<div type="textpart" n="3" subtype="chapter">
-				<p>Having by means of this woman, insinuated himself into all the emperor's secrets,
+         </div>
+         <div n="3" type="chapter">
+            <p>Having by means of this woman, insinuated himself into all the emperor's secrets,
 					he, upon the day designed for the murder of his mother, entertained them both at
-					a very splendid feast, to prevent suspicion. Poppaea Sabina, for whom >Nero entertained such a violent passion that
+					a very splendid feast, to prevent suspicion. Poppaea Sabina, for whom &gt;Nero entertained such a violent passion that
 					he had taken her from her husband <note anchored="true">See NERO, C. XXXV.
 					</note> and entrusted her to him, he received, and went through the form of
 					marrying her. And not satisfied with obtaining her favour, he loved her so
@@ -128,18 +136,22 @@
 					being dissolved, he was sent lieutenant into <placeName key="tgn,1000090">Lusitania</placeName>. This treatment of him was thought sufficiently
 					severe, because harsher proceedings might have brought the whole farce to light,
 					which notwithstanding, at last came out, and was published to the world in the
-					following distich: <quote xml:lang="lat"><l>Cur Otho mentitus sit, quaeritis,
+					following distich: <quote xml:lang="lat">
+                  <l>Cur Otho mentitus sit, quaeritis,
 							exul honore?</l>
-						<l>Uxoris moechus cseperat esse suae.</l></quote>
-					<quote xml:lang="eng"><l>You ask why Otho's banish'd? Know, the cause</l>
-						<l>Comes not within the verge of vulgar laws,</l>
-						<l>Against all rules of fashionable life,</l>
-						<l>The rogue had dared to sleep with his own wife.</l></quote> He governed
+                  <l>Uxoris moechus cseperat esse suae.</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>You ask why Otho's banish'd? Know, the cause</l>
+                  <l>Comes not within the verge of vulgar laws,</l>
+                  <l>Against all rules of fashionable life,</l>
+                  <l>The rogue had dared to sleep with his own wife.</l>
+               </quote> He governed
 					the province in quality of quaestor for ten years, with singular moderation and
 					justice.</p>
-			</div>
-			<div type="textpart" n="4" subtype="chapter">
-				<p>As soon as an opportunity of revenge offered, he readily joined in Galba's
+         </div>
+         <div n="4" type="chapter">
+            <p>As soon as an opportunity of revenge offered, he readily joined in Galba's
 					enterprises, and at the same time conceived hopes of obtaining the imperial
 					dignity for himself. To this he was much encouraged by the state of the times,
 					but still more by the assurances given him by Seleucus, the astrologer, who,
@@ -153,9 +165,9 @@
 					dispute with his neighbour about a piece of land, he bought it, and gave it to
 					him; so that now almost every body thought and said, that he was the only man
 					worthy of succeeding to the empire.</p>
-			</div>
-			<div type="textpart" n="5" subtype="chapter">
-				<p>He entertained hopes of being adopted by Galba, and expected it every day. But
+         </div>
+         <div n="5" type="chapter">
+            <p>He entertained hopes of being adopted by Galba, and expected it every day. But
 					finding himself disappointed. by Piso's being preferred before him, he turned
 					his thoughts to obtaining his purpose by the use of violence; and to this he was
 					instigated, as well by the greatness of his debts, as by resentment at Galba's
@@ -170,9 +182,9 @@
 					promised fifty thousand more. By these, others were drawn in, but not many; from
 					a confident assurance, that when the matter came to the crisis, they should have
 					enough to join them.</p>
-			</div>
-			<div type="textpart" n="6" subtype="chapter">
-				<p>His first intention was, immediately after the departure of Piso, to seize the
+         </div>
+         <div n="6" type="chapter">
+            <p>His first intention was, immediately after the departure of Piso, to seize the
 					camp, and fall upon Galba whilst he was at supper in the palace; but he was
 					restrained by a regard for the cohort at that time on duty, lest he should bring
 					too great an odium upon it; because it happened that the same cohort was on
@@ -222,9 +234,9 @@
 					soldiers to dispatch Galba and Piso, he said nothing else in his address to the
 					soldiery, to secure their affections, than these few words: ",I shall be content
 					with whatever ye think fit to leave me."</p>
-			</div>
-			<div type="textpart" n="7" subtype="chapter">
-				<p>Towards the close of the day, he entered the senate, and after he had made a
+         </div>
+         <div n="7" type="chapter">
+            <p>Towards the close of the day, he entered the senate, and after he had made a
 					short speech to them, pretending that he had been seized in the streets, and
 					compelled by violence to assume the imperial authority, which he designed to
 					exercise in conjunction with them, he retired to the palace. Besides other
@@ -243,15 +255,21 @@
 					atonement to appease the ghost of Galba, by which he had found himself violently
 					tumbled out of bed. The next day, as he was taking the omens, a great storm
 					arising, and sustaining a grievous fall, he muttered to himself from time to
-					time: <quote xml:lang="grc"><l>τί γαρ<note anchored="true">The two last words, literally translated, mean "long
+					time: <quote xml:lang="grc">
+                  <l>τί γαρ<note anchored="true">The two last words, literally translated, mean "long
 								trumpets;" such as were used at sacrifices. The sense is, therefore,
 								"What have I to do, my hands stained with blood, with performing
-								religious ceremonies?" </note></l></quote>
-					<quote xml:lang="eng"><l>What business have I the loud trumpets to
-						sound?</l></quote></p>
-			</div>
-			<div type="textpart" n="8" subtype="chapter">
-				<p>About the same time, the armies in <placeName key="tgn,7000084">Germany</placeName> took an oath to Vitellius as emperor. Upon receiving
+								religious ceremonies?" </note>
+                  </l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>What business have I the loud trumpets to
+						sound?</l>
+               </quote>
+            </p>
+         </div>
+         <div n="8" type="chapter">
+            <p>About the same time, the armies in <placeName key="tgn,7000084">Germany</placeName> took an oath to Vitellius as emperor. Upon receiving
 					this intelligence, he advised the senate to send thither deputies, to inform
 					them, that a prince had been already chosen; and to persuade them to peace and a
 					good understanding. By letters and messengers, however, he offered Vitellius to
@@ -269,7 +287,7 @@
 					nor would they quit the place until they had seen him. He now entered upon his
 					expedition against Vitellius with great alacrity, but too much precipitation,
 					and without any regard to the ominous circumstances which attended it.</p>
-				<p>For the Ancilia<note anchored="true">The Ancile was a round shield, said to have
+            <p>For the Ancilia<note anchored="true">The Ancile was a round shield, said to have
 						fallen from heaven in the reign of Numa, and supposed to be the shield of
 						Mars. It was kept with great care in the sanctuary of the temple, as a
 						symbol of the perpetuity of the Roman empire; and that it might not be
@@ -300,9 +318,9 @@
 					inundations of the <placeName key="tgn,1130786">Tiber</placeName>; and at twenty
 					miles' distance from the city, found the road blocked up by the fall of
 					houses.</p>
-			</div>
-			<div type="textpart" n="9" subtype="chapter">
-				<p>Though it was the general opinion that it would be proper to protract the war, as
+         </div>
+         <div n="9" type="chapter">
+            <p>Though it was the general opinion that it would be proper to protract the war, as
 					the enemy were distressed by famine and the straitness of their quarters, yet he
 					resolved with equal rashness to force them to an engagement as soon as possible;
 					whether from impatience of prolonged anxiety, and in the hope of bringing
@@ -325,9 +343,9 @@
 					second trial of his fortune, and others were coming up from <placeName key="tgn,7015451">Dalmatia</placeName>, <placeName key="tgn,4008442">Pannonia</placeName>, and <placeName key="tgn,7016746">Moesia</placeName>;
 					nor were the troops lately defeated so far discouraged as not to be ready, even
 					of themselves, to run all risks in order to wipe off their recent disgrace.</p>
-			</div>
-			<div type="textpart" n="10" subtype="chapter">
-				<p>My father, Suetonius Lenis, <note anchored="true">Lenis was a name of similar
+         </div>
+         <div n="10" type="chapter">
+            <p>My father, Suetonius Lenis, <note anchored="true">Lenis was a name of similar
 						signification with that of Tranquillus, borne by his son, the author of the
 						present work. We find from Tacitus, that there was, among Otho's generals,
 						in this battle, another person of the name of Suetonius, whose cognomen was
@@ -366,9 +384,9 @@
 					of his relics and memory. He then burnt all the letters which he had by him, to
 					prevent the danger and mischief that might otherwise befall the writers from the
 					conqueror. What ready money he had, he distributed among his domestics.</p>
-			</div>
-			<div type="textpart" n="11" subtype="chapter">
-				<p>And now being prepared, and just upon the point of dispatching himself, he was
+         </div>
+         <div n="11" type="chapter">
+            <p>And now being prepared, and just upon the point of dispatching himself, he was
 					induced to suspend the execution of his purpose by a great tumult which had
 					broken out in the camp. Finding that some of the soldiers who were making off
 					had been seized and detained as deserters, " Let us add," said he, " this night
@@ -383,10 +401,11 @@
 					his wound to the view of the bystanders, and thus life soon ebbed away. His
 					funeral was hastily performed, according to his own order, in the thirty-eighth
 					year of his age, and ninety-fifth day of his reign.<note anchored="true">A.U.C.
-						823</note></p>
-			</div>
-			<div type="textpart" n="12" subtype="chapter">
-				<p>The person and appearance of Otho no way corresponded to the great spirit he
+						823</note>
+            </p>
+         </div>
+         <div n="12" type="chapter">
+            <p>The person and appearance of Otho no way corresponded to the great spirit he
 					displayed on this occasion; for he is said to have been of low stature,
 					splayfooted, and bandy-legged. He was, however, effeminately nice in the care of
 					his person: the hair on his body he plucked out by the roots; and because he was
@@ -394,7 +413,8 @@
 					nobody could have known it for such. He used to shave every day, and rub his
 					face with soaked bread; the use of which he began when the down first appeared
 					upon his chin, to prevent his having any beard. It is said likewise that he
-					celebrated publicly the sacred rites of Isis, <note anchored="true"><placeName key="tgn,1125260">Jupiter</placeName>, to prevent the discovery of his
+					celebrated publicly the sacred rites of Isis, <note anchored="true">
+                  <placeName key="tgn,1125260">Jupiter</placeName>, to prevent the discovery of his
 						amour with Io, the daughter of the river Inachus, transformed her into a
 						heifer, in which metamorphosis she was placed by Juno under the watchful
 						inspection of <placeName key="tgn,2086061">Argus</placeName>; but flying
@@ -417,10 +437,10 @@
 					driven to destruction by his rival, not so much for the sake of reigning
 					himself, as of restoring <placeName key="tgn,7013962">Rome</placeName> to its
 					ancient liberty."</p>
-			</div>
-			<div type="textpart" n="note" subtype="chapter">
-				<head>Remarks on Otho</head>
-				<p>IT is remarkable, in the fortune of this emperor, that he owed both his elevation
+         </div>
+         <div n="note" type="chapter">
+            <head>Remarks on Otho</head>
+            <p>IT is remarkable, in the fortune of this emperor, that he owed both his elevation
 					and catastrophe to the inextricable embarrassments in which he was involved;
 					first, in respect of pecuniary circumstances, and next, of political. He was
 					not, so far as we can learn, a follower of any of the sects of philosophers
@@ -429,7 +449,7 @@
 					less remarkable, from the motive, as he avowed, of public expediency only. It
 					was observed of him, for many years after his death, that "none ever died like
 					Otho." </p>
-			</div>
-		</div></body>
-	</text>
+         </div>
+      </body>
+   </text>
 </TEI>

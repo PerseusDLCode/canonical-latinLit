@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>In Defense of Quintus Ligarius </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>In Defense of Quintus Ligarius </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi033.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,16 +159,16 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <pb n="469"/>
-        <front>
-            <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF QUINTUS LIGARIUS.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>Quintus Ligarius was a Roman knight, who had been one of the lieutenants of
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <pb n="469"/>
+      <front>
+         <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF QUINTUS LIGARIUS.</head>
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>Quintus Ligarius was a Roman knight, who had been one of the lieutenants of
                     Considius, the proconsul of Africa, and one of Pompey's partisans, and as such
                     had borne arms against Caesar in Africa, on which account he had gone into
                     voluntary exile, to get out of the reach of the conqueror. But his two brothers
@@ -170,12 +185,12 @@ Added to repository.
                     acquittal against his will; and he afterwards pardoned Ligarius and allowed him
                     to return to Rome. Ligarius afterwards became a great friend of Brutus, and
                     joined him in the conspiracy against Caesar.</p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>It is a new crime, and one never heard of before this day, O Caius Caesar, which my
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi033.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>It is a new crime, and one never heard of before this day, O Caius Caesar, which my
                 relation Quintus Tubero has brought before you, when he accuses Quintus Ligarius
                 with having been in Africa; and that charge Caius Pansa, a man of eminent genius,
                 relying perhaps on that intimacy with you which he enjoys, has ventured to confess.
@@ -189,13 +204,14 @@ Added to repository.
                 be addressed to your mercy; by which many have already been preserved, having
                 besought of <pb n="470"/> you, not a release from all guilt, but pardon from
                 admitted error. </p>
-            <p><milestone n="2" unit="section"/> You, therefore, O Tubero, have that which is of all
+         <p>
+            <milestone n="2" unit="section"/> You, therefore, O Tubero, have that which is of all
                 things most desirable for a prosecutor, a defendant who confesses his fault; but
                 still, one who confesses it only so far as he admits that he was of the same party
                 as you yourself, O Tubero, were, and as that man worthy of all praise, your father,
                 also was. Therefore you must inevitably confess yourselves also to be guilty, before
                 you can find fault with any part of the conduct of Ligarius. </p>
-            <p>Quintus Ligarius, then, at a time when there was no suspicion of war, went as
+         <p>Quintus Ligarius, then, at a time when there was no suspicion of war, went as
                 lieutenant into Africa with Caius Considius, in which lieutenancy he made himself so
                 acceptable, both to our citizens there and to our allies, that Considius on
                 departing from the province could not have given satisfaction to those men if he had
@@ -217,8 +233,9 @@ Added to repository.
                 private individual, by the clamour of an ignorant mob, without the sanction of any
                 public council. <milestone n="4" unit="section"/> Therefore, Ligarius, who was
                 anxious to avoid being mixed up in any transactions of the sort remained quiet for
-                some time on the arrival of Varus. <milestone n="2" unit="chapter"/></p>
-            <p>Up to this point, O Caius Caesar, Quintus Ligarius is free from all blame. He left
+                some time on the arrival of Varus. <milestone n="2" unit="chapter"/>
+         </p>
+         <p>Up to this point, O Caius Caesar, Quintus Ligarius is free from all blame. He left
                 his home, not only not for the <pb n="471"/> purpose of joining in any war, but when
                 there was not even the slightest suspicion of war. Having gone as lieutenant in time
                 of peace, he behaved himself in a most peaceable province in such a manner that it
@@ -229,7 +246,8 @@ Added to repository.
                 him to remain. Both these times, then, are free from all fault—the time when he
                 first went as lieutenant and the time when, having been demanded by the province, he
                 was appointed governor of Africa. </p>
-            <p><milestone n="5" unit="section"/> There is a third time that during which he remained
+         <p>
+            <milestone n="5" unit="section"/> There is a third time that during which he remained
                 in Africa after the arrival of Varus; and if that is at all criminal, the crime is
                 one of necessity, not of inclination. Would he, if he could possibly have escaped
                 thence by any means whatever, would he rather have been at Utica than at Rome,—with
@@ -237,10 +255,9 @@ Added to repository.
                 been among strangers, than with his own friends? When his lieutenancy itself had
                 been full of regret and anxiety on account of the extraordinary affection subsisting
                 between him and his brothers, could he possibly remain there with any equanimity
-                when separated from those brothers by the discord of war? <milestone n="6"
-                    unit="section"/>
-            </p>
-            <p>You have, therefore, O Caesar, no sign as yet of the affections of Quintus Ligarius
+                when separated from those brothers by the discord of war? <milestone n="6" unit="section"/>
+         </p>
+         <p>You have, therefore, O Caesar, no sign as yet of the affections of Quintus Ligarius
                 being alienated from you. And observe, I entreat you, with what good faith I am
                 defending his cause. I am betraying my own by so doing. O the admirable clemency,
                 deserving to be celebrated by all possible praise, and publicity, and writings, and
@@ -248,11 +265,11 @@ Added to repository.
                 inclinations of another were not the same as he admits his own to have been; nor
                 does he fear your silent thoughts, nor is he under any apprehension as to what while
                 you are hearing of the conduct of another, may occur to you respecting his own.
-                    <milestone n="3" unit="chapter"/></p>
-            <p>See how entirely free from fear I am. See how brilliantly the light of your
+                    <milestone n="3" unit="chapter"/>
+         </p>
+         <p>See how entirely free from fear I am. See how brilliantly the light of your
                 liberality and wisdom rises upon me while speaking before you. As far as I can, I
-                will lift up my voice so that the Roman people may hear me. <milestone n="7"
-                    unit="section"/> When the war began, O Caesar, when it was even very greatly
+                will lift up my voice so that the Roman people may hear me. <milestone n="7" unit="section"/> When the war began, O Caesar, when it was even very greatly
                 advanced <pb n="472"/> towards its end, I, though compelled by no extraneous force,
                 of my own free judgment and inclination went to join that party which had taken up
                 arms against you. Before whom now am I saying this? Forsooth, before the man who,
@@ -265,7 +282,8 @@ Added to repository.
                 thought it becoming to retain them at all, and who would not have considered that he
                 was giving me safety at all, if he did not give it me without my being stripped of
                 any of my previous distinctions. </p>
-            <p><milestone n="8" unit="section"/> Observe, I pray you, O Tubero, how I, who do not
+         <p>
+            <milestone n="8" unit="section"/> Observe, I pray you, O Tubero, how I, who do not
                 hesitate to speak of my own conduct, do not venture to make any confession with
                 respect to Ligarius: and I have said thus much respecting myself, to induce Tubero
                 to excuse me when I say the same things of him. For I look in the forum on his
@@ -281,9 +299,10 @@ Added to repository.
                 took up arms? What was your intention? Where were your eyes? your hands? your
                 eagerness of mind? what were you desirous of? What were you willing for? I am
                 pressing you too hard. The young man appears to be moved. I will return to myself. I
-                also was in arms in the same camp. <milestone n="4" unit="chapter"/><milestone
-                    n="10" unit="section"/></p>
-            <p>But what other object had we, O Tubero, except to be able to do what this man can do
+                also was in arms in the same camp. <milestone n="4" unit="chapter"/>
+            <milestone n="10" unit="section"/>
+         </p>
+         <p>But what other object had we, O Tubero, except to be able to do what this man can do
                 now? Shall, then, O Caesar, the speech of those men spur you on to deeds of cruelty
                     <pb n="473"/> whose impunity is the great glory of your clemency? And in this
                 cause, in truth, O Tubero, I am somewhat at a loss to discern your usual prudence,
@@ -291,7 +310,7 @@ Added to repository.
                 for genius and erudition, did not perceive what sort of case this was. For if he had
                 perceived it, he would, I doubt not, have preferred that you should conduct it in
                 any manner in the world, rather than as you did. </p>
-            <p>You are accusing one who confesses the facts which you allege against him. That is
+         <p>You are accusing one who confesses the facts which you allege against him. That is
                 not enough. You are accusing one who has a case, as I say, better than your own, or,
                 as you yourself allow, at least as good as yours. <milestone n="11" unit="section"/>
                 This is strange though; but what I am about to say is a perfect miracle. That
@@ -305,16 +324,15 @@ Added to repository.
                 Brocchus's son, his cousin? To prevent his appearing in his country? Was that it?
                 Can he be more deprived of all these things than he is already? He is prevented from
                 approaching Italy; he is banished. You, therefore, do not wish to deprive him of his
-                country, of which he already is deprived, but of his life. <milestone n="12"
-                    unit="section"/>
-            </p>
-            <p>But even in the time of that dictator who punished with death every one whom he
+                country, of which he already is deprived, but of his life. <milestone n="12" unit="section"/>
+         </p>
+         <p>But even in the time of that dictator who punished with death every one whom he
                 disliked, no one ever proceeded in that manner to accomplish such an end. He himself
                 ordered men to be slain, without any one asking him; he even invited men to slay
                 them by rewards; and that cruelty of his was avenged some years afterwards by this
-                selfsame man whom you now wish to become cruel! <milestone n="5" unit="chapter"
-                /></p>
-            <p>“But I am not asking for his death,” you will say. I think indeed that you do not
+                selfsame man whom you now wish to become cruel! <milestone n="5" unit="chapter"/>
+         </p>
+         <p>“But I am not asking for his death,” you will say. I think indeed that you do not
                 intend to do so, O Tubero, for I know you, I know your father, I know your birth and
                 your name, and the pursuits of your race and family; our love of virtue, and
                 civilization, and learning; your many admirable qualities,—all are known to me.
@@ -335,7 +353,7 @@ Added to repository.
                 renounced all humanity by such conduct? How much harder is this, for you to oppose
                 in the forum what we begged of him in his own house! and while numbers are in this
                 distress, to take away from them the refuge which they might find in his clemency! </p>
-            <p>I will speak plainly, O Caius Caesar, what I feel. <milestone n="15" unit="section"/>
+         <p>I will speak plainly, O Caius Caesar, what I feel. <milestone n="15" unit="section"/>
                 If in this splendid fortune of yours your lenity had not been as great as you of
                 your own accord—of your own accord, I say, (I know well what I am saying,) make it,
                 that victory of yours would have been pregnant with the bitterest grief to the
@@ -344,8 +362,8 @@ Added to repository.
                 how many who, wishing no one to be pardoned by you, would have thrown obstacles in
                 the way of your clemency, when even those men whom you yourself have pardoned are
                 unwilling that you should be merciful to others </p>
-            <p>
-                <milestone n="16" unit="section"/> But if we could prove to Caesar that Ligarius was
+         <p>
+            <milestone n="16" unit="section"/> But if we could prove to Caesar that Ligarius was
                 actually not in Africa at all, if we wished to save an unfortunate citizen by an
                 honourable and merciful falsehood; still it would not be the act of a man, in a case
                 of such danger and peril to a fellow-citizen, to contradict and refute our
@@ -356,9 +374,10 @@ Added to repository.
                 Caesar, of believing all this—Ligarius was in Africa. He did bear arms against you.”
                 But now what is it that you say “Take care you do not pardon him.” This is not the
                 language of a man but he who uses it to you, O Caius Caesar, will find it an easier
-                matter to abjure his own humanity than to strip you of yours. <milestone n="6"
-                    unit="chapter"/><milestone n="17" unit="section"/></p>
-            <p>And the first beginning, and the first proposition of Tubero, I imagine, was this;
+                matter to abjure his own humanity than to strip you of yours. <milestone n="6" unit="chapter"/>
+            <milestone n="17" unit="section"/>
+         </p>
+         <p>And the first beginning, and the first proposition of Tubero, I imagine, was this;
                 that he intended to speak of wickedness of Quintus Ligarius. I make no doubt that
                 you wondered how it was that no one made this statement respecting some one else, or
                 how it was that he made it who had been in the same condition himself, or what new
@@ -370,7 +389,8 @@ Added to repository.
                 for a proper and accurate name for our misfortune, that some disaster sent by
                 destiny descended upon and occupied the provident minds of men; so that no one ought
                 to wonder that human counsels were overruled by divine necessity. </p>
-            <p><milestone n="18" unit="section"/> Let it be allowed to us to be miserable, although
+         <p>
+            <milestone n="18" unit="section"/> Let it be allowed to us to be miserable, although
                 that cannot be when this man is our conqueror. But I am not speaking of those who
                 have perished. Grant that they were ambitious, that they were angry, that they were
                 obstinate men; but still let Cnaeus Pompeius, for he is dead, and let any others
@@ -395,9 +415,10 @@ Added to repository.
                 which deserved to be approved of; but now that is unquestionably entitled to be
                 thought the better cause which even the gods assisted. But now that your clemency is
                 known; who is there who does not think well of that victory, in which no one has
-                fallen except those who fell with arms in their hands? <milestone n="7"
-                    unit="chapter"/><milestone n="20" unit="section"/></p>
-            <p>But to say no more of the general question, let us come to our own individual case.
+                fallen except those who fell with arms in their hands? <milestone n="7" unit="chapter"/>
+            <milestone n="20" unit="section"/>
+         </p>
+         <p>But to say no more of the general question, let us come to our own individual case.
                 Which do you think was easiest, O Tubero, for Ligarius to depart from Africa, or for
                 you to abstain from coming into Africa? “Could we so abstain,” you will say, “after
                 the senate had voted that we should do so?” If you ask me, I say, Certainly not. But
@@ -407,15 +428,14 @@ Added to repository.
                 man of your family, of your name, of your race, of your hereditary principles, could
                 not act otherwise. But I do not grant that you have a right to reprove in others the
                 very same conduct which you boast of in yourselves. </p>
-            <p>
-                <milestone n="21" unit="section"/> Tubero's lot was drawn in pursuance of a
+         <p>
+            <milestone n="21" unit="section"/> Tubero's lot was drawn in pursuance of a
                 resolution of the senate when he himself was not present, when he was even hindered
                 by sickness from being present. He had made up his mind to excuse himself. I know
                 all this from the great intimacy which exists between Lucius Tubero and myself: we
                 were brought up together, in our campaigns we were comrades, afterwards we became
                 connected by marriage, and throughout the whole of our lives, in short, we have been
-                friends; it has been, moreover, a great bond between us, that we have been <pb
-                    n="477"/> devoted to the same studies. I know, therefore, that Tubero wished to
+                friends; it has been, moreover, a great bond between us, that we have been <pb n="477"/> devoted to the same studies. I know, therefore, that Tubero wished to
                 remain at home; but there was a person who contrived matters in such a way, who put
                 forth that most holy name of the republic so artfully, that even had his sentiments
                 been different from what they were, he would not have been able to support the
@@ -433,9 +453,9 @@ Added to repository.
                     <milestone n="23" unit="section"/> But however the case, as to that part of it
                 may be, what weight is there, O Tubero, in this complaint of yours? “We were
                 admitted into the province.” Well, suppose you had been admitted? was it your object
-                to deliver it up to Caesar, or to hold it against Caesar? <milestone n="8"
-                    unit="chapter"/></p>
-            <p>See, O Caesar, what licence, or rather what audacity, your liberality gives us. If
+                to deliver it up to Caesar, or to hold it against Caesar? <milestone n="8" unit="chapter"/>
+         </p>
+         <p>See, O Caesar, what licence, or rather what audacity, your liberality gives us. If
                 Tubero replies that his father would have given up to you that province to which the
                 senate and the lot which be drew had sent him, I will not hesitate in severe
                 language to reprove that design of his before you yourself, to whose advantage it
@@ -444,14 +464,13 @@ Added to repository.
                 But, however, all these topics I will pass over, not so much for fear of offending
                 your most patient ears, as because that I do not wish that Tubero should appear to
                 have been likely to do what he never thought of. </p>
-            <p>You two came, then, into the province of Africa,—the province of all others that was
+         <p>You two came, then, into the province of Africa,—the province of all others that was
                 most hostile to the views of this victorious party in which there was a most
                 powerful king, an enemy to this cause, and in which the inclinations of a large and
                 powerful body of Roman settlers were entirely adverse to it. I ask what you intended
                 to do? Though I do not really <pb n="478"/> doubt what you intended to do, when I
                 see what you have done. You were forbidden to set foot in your province, and
-                forbidden, as you state yourselves, with the greatest insults. <milestone n="25"
-                    unit="section"/> How did you bear that? To whom did you carry your complaints of
+                forbidden, as you state yourselves, with the greatest insults. <milestone n="25" unit="section"/> How did you bear that? To whom did you carry your complaints of
                 the insults which you had received? Why, to that man whose authority you had
                 followed when you came to join his party in the war. If it had been in Caesar's
                 cause that you were coming to the province, unquestionably, when excluded from the
@@ -462,8 +481,10 @@ Added to repository.
                 though it will be falsely, that you would have given the province up to Caesar, even
                 if you had been forbidden by Varus, and by some others. But I will confess that the
                 fault was all Ligarius's, who deprived you of an opportunity of acquiring so much
-                glory. <milestone n="9" unit="chapter"/><milestone n="26" unit="section"/></p>
-            <p>But observe, I pray you, O Caius Caesar, the consistency of that most accomplished
+                glory. <milestone n="9" unit="chapter"/>
+            <milestone n="26" unit="section"/>
+         </p>
+         <p>But observe, I pray you, O Caius Caesar, the consistency of that most accomplished
                 man, Lucius Tubero, which even though I thought as highly of it as I do, I still
                 would not mention, if I were not aware that that is a virtue which you are in the
                 habit of praising as much as any. Where, then, was there ever an example of such
@@ -472,8 +493,7 @@ Added to repository.
                 as to return to that same party by which he had been rejected in a time of civil
                 dissension, and rejected even with cruelty? That is the act of a great mind, and of
                 a man whom no contumely, no violence, and no danger can turn from a side which he
-                has espoused, and from an opinion which he has adopted. <milestone n="27"
-                    unit="section"/> Grant that in all other respects Tubero and Varus were on a
+                has espoused, and from an opinion which he has adopted. <milestone n="27" unit="section"/> Grant that in all other respects Tubero and Varus were on a
                 par, as to honour, that is, and nobleness of birth, and respectability, and
                 genius,—which, however, was by no means the case; at all events, Tubero had this
                 great advantage, that he had come to his own province with a legitimate command, in
@@ -482,10 +502,9 @@ Added to repository.
                 not go home, lest he should be thought inactive,—he did not go <pb n="479"/> to any
                 other district, lest he might seem to condemn that cause which he had espoused. He
                 came into Macedonia to the camp of Cnaeus Pompeius, to join that very party by whom
-                he had been repulsed with every circumstance of insult. <milestone n="28"
-                    unit="section"/>
-            </p>
-            <p>What? when that affair had had no effect on the mind of man to whom you came, you
+                he had been repulsed with every circumstance of insult. <milestone n="28" unit="section"/>
+         </p>
+         <p>What? when that affair had had no effect on the mind of man to whom you came, you
                 behaved, after that with a more languid zeal, I suppose, in his cause? You only
                 stayed in some garrison? But your affections were alienated from his cause? Or were
                 we all, as is the case in a civil war, and not more with respect to you two, than
@@ -496,8 +515,10 @@ Added to repository.
                 as you had come into a place where you must inevitably perish if your side were not
                 victorious. Although, the result now turns out, I make no doubt that you confer your
                 present safety preferable to what would have been the consequences of victory.
-                    <milestone n="10" unit="chapter"/><milestone n="29" unit="section"/></p>
-            <p>I would not say these things, O Tubero, if you had any reason to repent of your
+                    <milestone n="10" unit="chapter"/>
+            <milestone n="29" unit="section"/>
+         </p>
+         <p>I would not say these things, O Tubero, if you had any reason to repent of your
                 consistency, or Caesar of his kindness. I ask now whether you are seeking to avenge
                 your own injuries, or those of the republic? If those of the republic, what reply
                 can you make with respect to your perseverance in the cause of that other party? If
@@ -526,9 +547,9 @@ Added to repository.
                 Ligarius should have no reason for hope, when I am allowed to approach you even for
                 the purpose of entreating mercy for another? Although the hope which we entertain in
                 this cause does not rest upon this oration of mine, nor on the zeal of those who
-                entreat you for Ligarius, intimate friends of your own. <milestone n="11"
-                    unit="chapter"/></p>
-            <p>For I have seen and known what it was that you mainly considered when many men were
+                entreat you for Ligarius, intimate friends of your own. <milestone n="11" unit="chapter"/>
+         </p>
+         <p>For I have seen and known what it was that you mainly considered when many men were
                 exerting themselves for any one's safety; I have seen that the causes of those who
                 were entreating you had more weight with you than the persons of the advocates, and
                 that you considered, not how much the man who was entreating you was your friend,
@@ -538,7 +559,8 @@ Added to repository.
                 I see, as I said before, that the causes of those who entreat your mercy have more
                 weight with you than the entreaties themselves; and that you are most moved by those
                 men whose grief, which they display in their petitions to you, is the most genuine. </p>
-            <p><milestone n="32" unit="section"/> In preserving Quintus Ligarius you will do what
+         <p>
+            <milestone n="32" unit="section"/> In preserving Quintus Ligarius you will do what
                 will be acceptable to numbers of your intimate friends; but, I entreat you, give
                 weight to the considerations which are accustomed to influence you. I can mention to
                 you most brave men, Sabines, men most highly esteemed by you; and the whole of the
@@ -563,9 +585,10 @@ Added to repository.
                 esteemed by you? They all were with you then; and we were full of anger against
                 them,—we were attacking them; some even personally threatened them. Preserve,
                 therefore, their friends to your friends; so that, like everything else which has
-                been said by you, this, too, may be found to be strictly true. <milestone n="12"
-                    unit="chapter"/></p>
-            <p><milestone n="34" unit="section"/> But if you were able to look into the hearts of
+                been said by you, this, too, may be found to be strictly true. <milestone n="12" unit="chapter"/>
+         </p>
+         <p>
+            <milestone n="34" unit="section"/> But if you were able to look into the hearts of
                 the Ligarii, so as to see the perfect unanimity which subsists between them, you
                 would think that all the brothers were on your side. Can any one entertain a doubt
                 that, if Quintus Ligarius had been able to be in Italy, he would also have adopted
@@ -577,7 +600,8 @@ Added to repository.
                 necessity of the times, one was separated from <pb n="482"/> you; but he, even if he
                 had done what he did deliberately, would still have been only like those men whom,
                 nevertheless, you have shown yourself desirous to save. </p>
-            <p><milestone n="35" unit="section"/> However, grant that he went up of his own accord
+         <p>
+            <milestone n="35" unit="section"/> However, grant that he went up of his own accord
                 to the war, and that he departed, not only from you, but also from his brothers.
                 These friends of your own entreat you to pardon him. I, indeed, at the time when I
                 was present at, and mixed up in, all your affairs, remember well what was the
@@ -596,9 +620,9 @@ Added to repository.
                     the consulship of Lentulus and Philippus, (the year of Cicero's recall,)
                     respecting the vote of pay to Caesar's army in Gaul.</note> in the discharge of
                 his duty as quaestor, and while you remember, too, how some other quaestors
-                behaved,—I hope, I say, that you will also recollect this. <milestone n="36"
-                    unit="section"/></p>
-            <p>This Titus Ligarius, then, who had at that time no other object except to induce you
+                behaved,—I hope, I say, that you will also recollect this. <milestone n="36" unit="section"/>
+         </p>
+         <p>This Titus Ligarius, then, who had at that time no other object except to induce you
                 to think him attached to your interests, and a virtuous man also, (for he could
                 never foresee these present circumstances,) now as a suppliant begs the safety of
                 his brother from you. And when, urged by the recollection of his devotion to you,
@@ -614,7 +638,7 @@ Added to repository.
                 most glorious to you, and at the same time most acceptable to the Roman people, do
                 not, I entreat you,—do not hesitate to earn the praise of a glory like that as
                 frequently as possible. </p>
-            <p>For there is nothing so calculated to win the affections of the people as kindness.
+         <p>For there is nothing so calculated to win the affections of the people as kindness.
                 Of all your many virtues, there is none more admirable, none more beloved than your
                 mercy. <milestone n="38" unit="section"/> For there is no action by which men make a
                 nearer approach to the gods, than by conferring safety on others. Fortune has no
@@ -626,6 +650,6 @@ Added to repository.
                 yourself, than for me or any one else to be speaking to you, I shall now make an
                 end. This only will I remind you of, that if you do grant this protection to him who
                 is absent, you will be giving it also to all these men who are here present. </p>
-        </body>
-    </text>
+      </body>
+   </text>
 </TEI>

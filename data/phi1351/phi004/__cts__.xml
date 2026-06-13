@@ -1,4 +1,5 @@
-<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi1351" urn="urn:cts:latinLit:phi1351.phi004">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1351" urn="urn:cts:latinLit:phi1351.phi004">
     
     <ti:title xml:lang="lat">Historiae</ti:title>
     
@@ -12,4 +13,4 @@
         <ti:description xml:lang="eng">The History of Tacitus. Tacitus, Cornelius; Church, Alfred John and Brodribb, William Jackson, translators. London, MacMillan and Co. 1864. (Modern Library reprint 1942).</ti:description>
     </ti:translation>
     
-</ti:work>
+<ti:genre confidence="high">prose-standard</ti:genre></ti:work>

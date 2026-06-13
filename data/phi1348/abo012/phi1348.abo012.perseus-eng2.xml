@@ -1,76 +1,82 @@
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader xml:lang="eng">
-		<fileDesc>
-			<titleStmt>
-				<title>Augustus</title>
-				<author>Suetonius</author>
-				<editor role="translator">Alexander Thomson</editor>
-				<sponsor>Perseus Project, Tufts University</sponsor>
-				<principal>Gregory Crane</principal>
-				<respStmt>
-					<resp>Prepared under the supervision of</resp>
-					<name>Bridget Almas</name>
-					<name>Lisa Cerrato</name>
-					<name>William Merrill</name>
-					<name>David Smith</name>
-				</respStmt>
-				<funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Trustees of Tufts University</publisher>
-				<pubPlace>Medford, MA</pubPlace>
-				<authority>Perseus Project</authority>
-				<date type="release" cert="unknown">2000-08-01</date>
-			</publicationStmt>
-			
-
-			<sourceDesc>
-				<biblStruct>
-					<monogr>
-						<title>The Lives of the Twelve Caesars</title>
-						<author xml:lang="lat">C. Suetonius Tranquillus</author>
-						<editor>J. Eugene Reed</editor>
-						<editor role="translator">Alexander Thomson</editor>
-						<imprint>
-							<pubPlace>Philadelphia</pubPlace>
-							<publisher>Gebbie and Co.</publisher>
-							<date>1883</date>
-						</imprint>
-					</monogr>
-					<ref target="https://archive.org/details/livesoftwelvecsa00suet/page/n93/mode/2up">Internet Archive</ref>
-				</biblStruct>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>Augustus</title>
+            <author>Suetonius</author>
+            <editor role="translator">Alexander Thomson</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" cert="unknown">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi1348.abo012.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>The Lives of the Twelve Caesars</title>
+                  <author xml:lang="lat">C. Suetonius Tranquillus</author>
+                  <editor>J. Eugene Reed</editor>
+                  <editor role="translator">Alexander Thomson</editor>
+                  <imprint>
+                     <pubPlace>Philadelphia</pubPlace>
+                     <publisher>Gebbie and Co.</publisher>
+                     <date>1883</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/livesoftwelvecsa00suet/page/n93/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
 				<!--<refState delim=" " unit="life"/>-->
-				<refState unit="chapter"/>
-			</refsDecl>
-			<editorialDecl>
-				<correction method="silent" status="low">
-					<p>Perseus OCR</p>
-				</correction>
-			</editorialDecl>
-			
-		</encodingDesc>
-
-		<profileDesc>
-			<langUsage>
-				<language ident="eng">English </language>
-				<language ident="lat">Latin </language>
-				<language ident="grc">Greek </language>
-				<language ident="fre">French </language>
-			</langUsage>
-		</profileDesc>
-		<revisionDesc>
-			<change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
-		</revisionDesc>
-	</teiHeader>
-	<text xml:lang="eng">
-		<body><div xml:lang="eng" type="translation" n="urn:cts:latinLit:phi1348.abo012.perseus-eng2">
-			<div type="textpart" n="1" subtype="chapter">
-				<p>THAT the family of the Octavii was of the first distinction in <placeName key="perseus,Velitrae">Velitrae</placeName>,<note anchored="true">A town in
+            <refState unit="chapter"/>
+         </refsDecl>
+         <editorialDecl>
+            <correction method="silent" status="low">
+               <p>Perseus OCR</p>
+            </correction>
+         </editorialDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English </language>
+            <language ident="lat">Latin </language>
+            <language ident="grc">Greek </language>
+            <language ident="fre">French </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1348.abo012.perseus-eng2">
+         <div n="1" type="chapter">
+            <p>THAT the family of the Octavii was of the first distinction in <placeName key="perseus,Velitrae">Velitrae</placeName>,<note anchored="true">A town in
 						the ancient Volscian territory, now called Veletri. It stands on the verge
 						of the <placeName key="tgn,7009077">Pontine Marshes</placeName>, on the road
 						to <placeName key="tgn,7004474">Naples</placeName>.</note> is rendered
@@ -83,9 +89,9 @@
 					he returned victorious. This incident gave rise to a law, by which it was
 					enacted, that in all future times the entrails should be offered to Mars in the
 					same manner; and the rest of the victim be carried to the Octavii.</p>
-			</div>
-			<div type="textpart" n="2" subtype="chapter">
-				<p>This family, as well as several in <placeName key="perseus,Rome">Rome</placeName>, was admitted into the senate by Tarquinius Priscus, and soon
+         </div>
+         <div n="2" type="chapter">
+            <p>This family, as well as several in <placeName key="perseus,Rome">Rome</placeName>, was admitted into the senate by Tarquinius Priscus, and soon
 					afterwards placed by Servius Tullius among the patricians; but in process of
 					time it transferred itself to the plebeian order, and, after the lapse of a long
 					interval, was restored by Julius Caesar to the rank of patricians. The first
@@ -108,12 +114,12 @@
 						territory in Magna Graeca, on the coast, near <placeName key="tgn,7004100">Tarentum</placeName>.</note> and a rope-maker, and his grandfather a
 					usurer. This is all the information I have any where met with, respecting the
 					ancestors of Augustus, by the father's side.</p>
-			</div>
-			<div type="textpart" n="3" subtype="chapter">
-				<p>His father Caius Octavius was, from his earliest years, a person both of opulence
+         </div>
+         <div n="3" type="chapter">
+            <p>His father Caius Octavius was, from his earliest years, a person both of opulence
 					and distinction: for which reason I am surprised at those who say that he was a
 					money-dealer, <note anchored="true">
-						<foreign xml:lang="lat">Argentarius</foreign>; a banker, one who dealt in
+                  <foreign xml:lang="lat">Argentarius</foreign>; a banker, one who dealt in
 						exchanging money, as well as lent his own funds at interest to borrowers. As
 						a class, they possessed great wealth, and were persons of consideration in
 							<placeName key="perseus,Rome">Rome</placeName> at this period. </note>
@@ -131,9 +137,9 @@
 					letters from M. Tullius Cicero, in which he advises and exhorts his brother
 					Quintus, who then held the proconsulship of <placeName key="tgn,1000004">Asia</placeName> with no great reputation, to imitate the example of his
 					neighbour Octavius, in gaining the affections of the allies of <placeName key="perseus,Rome">Rome</placeName>.</p>
-			</div>
-			<div type="textpart" n="4" subtype="chapter">
-				<p>After quitting <placeName key="tgn,7006667">Macedonia</placeName>, before he
+         </div>
+         <div n="4" type="chapter">
+            <p>After quitting <placeName key="tgn,7006667">Macedonia</placeName>, before he
 					could declare himself a candidate for the consulship, he died suddenly, leaving
 					behind him a daughter, the elder Octavia, by Ancharia; and another daughter,
 					Octavia the younger, as well as Augustus, by Atia, who was the daughter of
@@ -152,9 +158,9 @@
 					his words: "Thou art a lump of thy mother's meal, which a money-changer of
 					Nerulum taking from the newest bake-house of <placeName key="perseus,Aricia">Aricia</placeName>, kneaded into some shape, with his hands all discoloured
 					by the fingering of money."</p>
-			</div>
-			<div type="textpart" n="5" subtype="chapter">
-				<p>Augustus was born in the consulship of Marcus Tullius Cicero and Caius
+         </div>
+         <div n="5" type="chapter">
+            <p>Augustus was born in the consulship of Marcus Tullius Cicero and Caius
 						Antonius,<note anchored="true">A.U.C. 691. A.C. (before Christ) 61.</note>
 					upon the ninth of the calends of October [the 23rd September], a little before
 					sunrise, in the quarter of the <placeName key="tgn,3000935">Palatine
@@ -177,9 +183,9 @@
 					favour, for the sake of that deity, who was in a peculiar manner his; an act of
 					the senate was passed, for the consecration of that part of his house in which
 					Augustus was born.</p>
-			</div>
-			<div type="textpart" n="6" subtype="chapter">
-				<p>His nursery is shewn to this day, in a villa belonging to the family, in the
+         </div>
+         <div n="6" type="chapter">
+            <p>His nursery is shewn to this day, in a villa belonging to the family, in the
 					suburbs of <placeName key="perseus,Velitrae">Velitrae</placeName>; being a very
 					small place, and much like a pantry. An opinion prevails in the neighbourhood,
 					that he was also born there. Into this place no person presumes to enter, unless
@@ -191,9 +197,9 @@
 					the night, a few hours afterwards, he was thrown out by some sudden violence, he
 					knew not how, and was found in a state of stupefaction, with the coverlid of his
 					bed, before the door of the chamber.</p>
-			</div>
-			<div type="textpart" n="7" subtype="chapter">
-				<p>While he was yet an infant, the surname of Thurinus was given him, in memory of
+         </div>
+         <div n="7" type="chapter">
+            <p>While he was yet an infant, the surname of Thurinus was given him, in memory of
 					the birth-place of his family, or because, soon after he was born, his father
 					Octavius had been successful against the fugitive slaves, in the country near
 						<placeName key="tgn,6005942">Thurium</placeName>. That he was surnamed
@@ -213,12 +219,20 @@
 					anything is consecrated by augury, are denominated august, either from the word
 						<foreign xml:lang="lat">auctus</foreign>, signifying augmentation, or
 						<foreign xml:lang="lat">ab avium gestu, gustuve</foreign>, from the flight
-					and feeding of birds; as appears from this verse of Ennius: <quote xml:lang="eng"><l>When glorious <placeName key="perseus,Rome">Rome</placeName> by
-							august augury was built.<note anchored="true"><quote xml:lang="lat"><l>Augusto augurio postquam inclyta condita Roma
-									est.</l></quote></note></l></quote></p>
-			</div>
-			<div type="textpart" n="8" subtype="chapter">
-				<p>He lost his father when he was only four years of age; and, in his twelfth year,
+					and feeding of birds; as appears from this verse of Ennius: <quote xml:lang="eng">
+                  <l>When glorious <placeName key="perseus,Rome">Rome</placeName> by
+							august augury was built.<note anchored="true">
+                        <quote xml:lang="lat">
+                           <l>Augusto augurio postquam inclyta condita Roma
+									est.</l>
+                        </quote>
+                     </note>
+                  </l>
+               </quote>
+            </p>
+         </div>
+         <div n="8" type="chapter">
+            <p>He lost his father when he was only four years of age; and, in his twelfth year,
 					pronounced a funeral oration in praise of his grand-mother Julia. Four years
 					afterwards, having assumed the robe of manhood, he was honoured with several
 					military rewards by Caesar in his African triumph, although he took no part in
@@ -242,9 +256,9 @@
 					together a strong military force, he first held the government in conjunction
 					with Mark Antony and Marcus Lepidus, then with Antony only, for nearly twelve
 					years, and at last in his own hands during a period of four and forty.</p>
-			</div>
-			<div type="textpart" n="9" subtype="chapter">
-				<p>Having thus given a very short summary of his life, I shall prosecute the several
+         </div>
+         <div n="9" type="chapter">
+            <p>Having thus given a very short summary of his life, I shall prosecute the several
 					parts of it, not in order of time, but arranging his acts into distinct classes,
 					for the sake of perspicuity. He was engaged in five civil wars, namely, those of
 						<placeName key="tgn,7009565">Modena</placeName>, <placeName key="perseus,Philippi">Philippi</placeName>, <placeName key="tgn,7000526">Perugia</placeName>, <placeName key="tgn,7003122">Sicily</placeName>, and
@@ -252,9 +266,9 @@
 					were against Antony, and the second against Brutus and Cassius; the third
 					against Lucius Antonius, the triumvir's brother, and the fourth against Sextus
 					Pompeius, the son of Cneius Pompeius.</p>
-			</div>
-			<div type="textpart" n="10" subtype="chapter">
-				<p>The motive which gave rise to all these wars was the opinion he entertained that
+         </div>
+         <div n="10" type="chapter">
+            <p>The motive which gave rise to all these wars was the opinion he entertained that
 					both his honour and interest were concerned in revenging the murder of his
 					uncle, and maintaining the state of affairs he had established. Immediately
 					after his return from <placeName key="perseus,Apollonia">Apollonia</placeName>,
@@ -285,9 +299,9 @@
 					performed the part not only of a general, but a soldier; for, in the heat of the
 					battle, when the standard-bearer of his legion was severely wounded, he took the
 					eagle upon his shoulders, and carried it a long time.</p>
-			</div>
-			<div type="textpart" n="11" subtype="chapter">
-				<p>In this war,<note anchored="true">A. U. C. 711.</note> Hirtius being slain in
+         </div>
+         <div n="11" type="chapter">
+            <p>In this war,<note anchored="true">A. U. C. 711.</note> Hirtius being slain in
 					battle, and Pansa dying a short time afterwards of a wound, a report was
 					circulated that they both were killed through his means, in order that, when
 					Antony fled, the republic having lost its consuls, he might have the victorious
@@ -296,9 +310,9 @@
 					on a suspicion of having poisoned his wound. And to this, Aquilius Niger adds,
 					that he killed Hirtius, the other consul in the confusion of the battle, with
 					his own hands.</p>
-			</div>
-			<div type="textpart" n="12" subtype="chapter">
-				<p>But upon intelligence that Antony, after his defeat, had been received by Marcus
+         </div>
+         <div n="12" type="chapter">
+            <p>But upon intelligence that Antony, after his defeat, had been received by Marcus
 					Lepidus, and that the rest of the generals and armies had all declared for the
 					senate, he, without any hesitation, deserted from the party of the nobles;
 					alleging as an excuse for his conduct, the actions and sayings of several
@@ -310,9 +324,9 @@
 					expelled them from the town, for having inscribed upon a monument, erected at
 					the public charge to their countrymen who were slain in the battle of <placeName key="tgn,7009565">Modena</placeName>, "That they fell in the cause of
 					liberty."</p>
-			</div>
-			<div type="textpart" n="13" subtype="chapter">
-				<p>Having entered into a confederacy with Antony and Lepidus, he brought the war at
+         </div>
+         <div n="13" type="chapter">
+            <p>Having entered into a confederacy with Antony and Lepidus, he brought the war at
 						<placeName key="perseus,Philippi">Philippi</placeName> to an end in two
 					battles, although he was at that time weak, and suffering from sickness. <note anchored="true">A. U. C. 712. </note> In the first battle he was driven from
 					his camp, and with some difficulty made his escape to the wing of the army
@@ -340,10 +354,11 @@
 					rewarded according to their merit.<note anchored="true">Virgil was one of the
 						fugitives, having narrowly escaped being killed by the centurion Ario; and
 						being ejected from his farm. <bibl n="Verg. Ecl. 1">Eclog. 1.</bibl>
-					</note></p>
-			</div>
-			<div type="textpart" n="14" subtype="chapter">
-				<p>At this time he obliged Lucius Antony, who, presuming upon his own authority as
+               </note>
+            </p>
+         </div>
+         <div n="14" type="chapter">
+            <p>At this time he obliged Lucius Antony, who, presuming upon his own authority as
 					consul, and his brother's power, was raising new commotions, to fly to
 						<placeName key="tgn,7000526">Perugia</placeName>, and forced him, by famine,
 					to surrender at last, although not without having been exposed to great hazards,
@@ -356,9 +371,9 @@
 					no violence having been offered him. And whilst he was sacrificing under the
 					walls of <placeName key="tgn,7000526">Perugia</placeName>, he nearly fell into
 					the hands of a body of gladiators, who sallied out of the town.</p>
-			</div>
-			<div type="textpart" n="15" subtype="chapter">
-				<p>After the taking of <placeName key="tgn,7000526">Perugia</placeName>,<note anchored="true">A.U.C. 714.</note> he sentenced a great number of the
+         </div>
+         <div n="15" type="chapter">
+            <p>After the taking of <placeName key="tgn,7000526">Perugia</placeName>,<note anchored="true">A.U.C. 714.</note> he sentenced a great number of the
 					prisoners to death, making only one reply to all who implored pardon, or
 					endeavoured to excuse themselves, "You must die." Some authors write, that three
 					hundred of the two orders, selected from the rest, were slaughtered, like
@@ -370,9 +385,9 @@
 					an opportunity, with Lucius Antony at their head; and that having defeated them,
 					and confiscated their estates, he might be enabled to fulfil his promises to the
 					veteran soldiers.</p>
-			</div>
-			<div type="textpart" n="16" subtype="chapter">
-				<p>He soon commenced the Sicilian war, but it was protracted by various delays
+         </div>
+         <div n="16" type="chapter">
+            <p>He soon commenced the Sicilian war, but it was protracted by various delays
 					during a long period;<note anchored="true">A.U.C. 712-718.</note> at one time
 					for the purpose of repairing his fleets, which he lost twice by storm, even in
 					the summer; at another, while patching up a peace, to which he was forced by the
@@ -414,9 +429,9 @@
 					himself the principal management of affairs in a threatening manner, he divested
 					him of his command, but, upon his humble submission, granted him his life, but
 					banished him for life to <placeName key="tgn,7009536">Circeii</placeName>.</p>
-			</div>
-			<div type="textpart" n="17" subtype="chapter">
-				<p>The alliance between him and Antony, which had always been precarious, often
+         </div>
+         <div n="17" type="chapter">
+            <p>The alliance between him and Antony, which had always been precarious, often
 					interrupted, and ill cemented by repeated reconciliations, he at last entirely
 						dissolved.<note anchored="true">A.U.C. 723</note> And to make it known to
 					the world how far Antony had degenerated from patriotic feelings, he caused a
@@ -474,9 +489,9 @@
 					but was retaken. The children which Antony had by Cleopatra he saved, and
 					brought up and cherished in a manner suitable to their rank, just as if they had
 					been his own relations.</p>
-			</div>
-			<div type="textpart" n="18" subtype="chapter">
-				<p>At this time he had a desire to see the sarcophagus and body of Alexander the
+         </div>
+         <div n="18" type="chapter">
+            <p>At this time he had a desire to see the sarcophagus and body of Alexander the
 					Great, which, for that purpose, were taken out of the cell in which they
 						rested;<note anchored="true">Strabo informs us that Ptolemy caused it to be
 						deposited in a golden sarcophagus, which was afterwards exchanged for one of
@@ -495,9 +510,9 @@
 					old temple of Apollo, he ornamented with naval trophies<note anchored="true">The
 						naval trophies were formed of the prows of ships.</note> the spot on which
 					he had pitched his camp, and consecrated it to Neptune and Mars.</p>
-			</div>
-			<div type="textpart" n="19" subtype="chapter">
-				<p>He afterwards<note anchored="true">A. U. C. 721.</note> quashed several tumults
+         </div>
+         <div n="19" type="chapter">
+            <p>He afterwards<note anchored="true">A. U. C. 721.</note> quashed several tumults
 					and insurrections, as well as several conspiracies against his life, which were
 					discovered, by the confession of accomplices, before they were ripe for
 					execution; and others subsequently. Such were those of the younger Lepidus, of
@@ -526,9 +541,9 @@
 					with a hunting-dagger. Whether the person was really disordered in the head, or
 					only counterfeited madness, is uncertain; for no confession was obtained from
 					him by torture.</p>
-			</div>
-			<div type="textpart" n="20" subtype="chapter">
-				<p>He conducted in person only two foreign wars; the Dalmatian, whilst he was yet
+         </div>
+         <div n="20" type="chapter">
+            <p>He conducted in person only two foreign wars; the Dalmatian, whilst he was yet
 					but a youth; and, after Antony's final defeat, the Cantabrian. He was wounded in
 					the former of these wars; in one battle he received a contusion in the right
 					knee from a stone, and in another, he was much hurt in one leg and both arms, by
@@ -539,15 +554,16 @@
 						<placeName key="tgn,7000084">Germany</placeName>, or remained at no great
 					distance, proceeding from <placeName key="perseus,Rome">Rome</placeName> as far
 					as <placeName key="perseus,Ravenna">Ravenna</placeName>, <placeName key="tgn,7005903">Milan</placeName>, or <placeName key="perseus,Aquileia">Aquileia</placeName>.</p>
-			</div>
-			<div type="textpart" n="21" subtype="chapter">
-				<p>He conquered, however, partly in person, and partly by his lieutenants,
-						<placeName key="tgn,7002760">Cantabria</placeName>,<note anchored="true"><placeName key="tgn,7002760">Cantabria</placeName>, in the north of
+         </div>
+         <div n="21" type="chapter">
+            <p>He conquered, however, partly in person, and partly by his lieutenants,
+						<placeName key="tgn,7002760">Cantabria</placeName>,<note anchored="true">
+                  <placeName key="tgn,7002760">Cantabria</placeName>, in the north of
 							<placeName key="tgn,1000095">Spain</placeName>, now the Basque
 						province.</note>
-					<placeName key="tgn,7002878">Aquitania</placeName> and <placeName key="tgn,4008442">Pannonia</placeName>,<note anchored="true">The ancient
+               <placeName key="tgn,7002878">Aquitania</placeName> and <placeName key="tgn,4008442">Pannonia</placeName>,<note anchored="true">The ancient
 							<placeName key="tgn,4008442">Pannonia</placeName> includes <placeName key="tgn,7006278">Hungary</placeName> and part of <placeName key="tgn,1000062">Austria</placeName>, <placeName key="tgn,7003028">Styria</placeName> and <placeName key="tgn,7012988">Carniola</placeName>.</note>
-					<placeName key="tgn,7015451">Dalmatia</placeName>, with all <placeName key="tgn,7016683">Illyricum</placeName> and <placeName key="tgn,7011731">Rhaetia</placeName>,<note anchored="true">The <placeName key="tgn,1109533">Rhaetian Alps</placeName> are that part of the chain bordering on the
+               <placeName key="tgn,7015451">Dalmatia</placeName>, with all <placeName key="tgn,7016683">Illyricum</placeName> and <placeName key="tgn,7011731">Rhaetia</placeName>,<note anchored="true">The <placeName key="tgn,1109533">Rhaetian Alps</placeName> are that part of the chain bordering on the
 							<placeName key="tgn,7003029">Tyrol</placeName>.</note> besides the two
 					Alpine nations, the Vindelici and the Salassii.<note anchored="true">The
 						Vindelici principally occupied the country which is now the kingdom of
@@ -581,9 +597,9 @@
 					him hostages besides. Afterwards, when a contest arose between several
 					pretenders to the crown of that kingdom, they refused to acknowledge any one who
 					was not chosen by him.</p>
-			</div>
-			<div type="textpart" n="22" subtype="chapter">
-				<p>The temple of Janus Quirinus, which had been shut twice only, from the era of the
+         </div>
+         <div n="22" type="chapter">
+            <p>The temple of Janus Quirinus, which had been shut twice only, from the era of the
 					building of the city to his own time, he closed thrice in a much shorter period,
 					having established universal peace both by sea and land. He twice entered the
 					city with the honours of an Ovation,<note anchored="true">"The Ovatio was an
@@ -633,9 +649,9 @@
 						and a great number of lamps and torches."-Thomson. </note> for his several
 					victories in <placeName key="tgn,7015451">Dalmatia</placeName>, <placeName key="tgn,7010713">Actium</placeName>, and <placeName key="perseus,Alexandria">Alexandria</placeName>; each of which lasted three
 					days.</p>
-			</div>
-			<div type="textpart" n="23" subtype="chapter">
-				<p>In all his wars, he never received any signal or ignominious defeat, except twice
+         </div>
+         <div n="23" type="chapter">
+            <p>In all his wars, he never received any signal or ignominious defeat, except twice
 					in <placeName key="tgn,7000084">Germany</placeName>, under his lieutenants
 					Lollius and Varus. The former indeed had in it more of dishonour than disaster;
 					but that of Varus threatened the security of the empire itself; three legions,
@@ -651,9 +667,9 @@
 					several months, and sometimes knocked his head against the door-post, crying
 					out, "O, Quintilius Varus! give me back my legions!" And ever after he observed
 					the anniversary of this calamity, as a day of sorrow and mourning.</p>
-			</div>
-			<div type="textpart" n="24" subtype="chapter">
-				<p>In military affairs he made many alterations, introducing some practices entirely
+         </div>
+         <div n="24" type="chapter">
+            <p>In military affairs he made many alterations, introducing some practices entirely
 					new, and reviving others, which had become obsolete. He maintained the strictest
 					discipline among the troops; and would not allow even his lieutenants the
 					liberty to visit their wives, except reluctantly, and in the winter season only.
@@ -671,9 +687,9 @@
 					kinds of disgrace; such as obliging them to stand all day before the praetorium,
 					sometimes in their tunics only, and without their belts, sometimes to carry
 					poles ten feet long, or sods of turf.</p>
-			</div>
-			<div type="textpart" n="25" subtype="chapter">
-				<p>After the conclusion of the civil wars, he never, in any of his military
+         </div>
+         <div n="25" type="chapter">
+            <p>After the conclusion of the civil wars, he never, in any of his military
 					harangues, or proclamations, addressed them by the title of "Fellow-soldiers,"
 					but as "Soldiers" only. Nor would he suffer them to be otherwise called by his
 					sons or step-sons, when they were in command; judging the former epithet to
@@ -701,14 +717,14 @@
 					frequently in his mouth those proverbs: <quote xml:lang="grc">σπεῦδε βραδέως</quote>, <gloss>hasten slowly</gloss>; and <quote xml:lang="grc">ἀσφαλὴσ γὰρ ἐστ' ἀμείνων, ἡ θράσυσ στρατηλάτησ</quote>, <gloss>The
 						cautious captain's better than the bold.</gloss>. And "That is done fast
 					enough, which is done well enough."</p>
-				<p>He was wont to say also, that "a battle or a war ought never to be undertaken,
+            <p>He was wont to say also, that "a battle or a war ought never to be undertaken,
 					unless the prospect of gain over balanced the fear of loss. For," said he, "men
 					who pursue small advantages with no small hazard, resemble those who fish with a
 					golden hook, the loss of which, if the line should happen to break, could never
 					be compensated by all the fish they might take."</p>
-			</div>
-			<div type="textpart" n="26" subtype="chapter">
-				<p>He was advanced to public offices before the age at which he was legally
+         </div>
+         <div n="26" type="chapter">
+            <p>He was advanced to public offices before the age at which he was legally
 					qualified for them; and to some, also, of a new kind, and for life. He seized
 					the consulship in the twentieth year of his age, quartering his legions in a
 					threatening manner near the city, and sending deputies to demand it for him in
@@ -740,10 +756,11 @@
 					but upon the fourth in <placeName key="tgn,1000004">Asia</placeName>, the fifth
 					in the Isle of <placeName key="tgn,7002673">Samos</placeName>, and the eighth
 					and ninth at <placeName key="tgn,7008715">Tarragona</placeName>. <note anchored="true">Now <placeName key="tgn,7008813">Saragossa</placeName>.
-					</note></p>
-			</div>
-			<div type="textpart" n="27" subtype="chapter">
-				<p>During ten years he acted as one of the triumvirate for settling the
+					</note>
+            </p>
+         </div>
+         <div n="27" type="chapter">
+            <p>During ten years he acted as one of the triumvirate for settling the
 					commonwealth, in which office he for some time opposed his colleagues in their
 					design of a proscription; but after it was begun, he prosecuted it with more
 					determined rigour than either of them. For whilst they were often prevailed
@@ -777,7 +794,7 @@
 					conference with him, for the purpose of assassinating him; that he therefore put
 					him in prison, but afterwards released him, and banished him the city; when he
 					perished either in a storm at sea, or by falling into the hands of robbers.</p>
-				<p>He accepted of the tribunitian power for life, but more than once chose a
+            <p>He accepted of the tribunitian power for life, but more than once chose a
 					colleague in that office for two lustra <note anchored="true">The <foreign xml:lang="lat">Lustrum</foreign> was a period of five years, at the end
 						of which the census of the people was taken. It was first made by the Roman
 						kings, then by the consuls, but after the year 310 from the building of the
@@ -787,9 +804,9 @@
 					supervision of morality and observance of the laws, for life, but without the
 					title of censor; yet he thrice took a census of the people, the first and third
 					time with a colleague, but the second by himself.</p>
-			</div>
-			<div type="textpart" n="28" subtype="chapter">
-				<p>He twice entertained thoughts of restoring the republic;<note anchored="true">Augustus appears to have been in earnest on these occasions, at least, in
+         </div>
+         <div n="28" type="chapter">
+            <p>He twice entertained thoughts of restoring the republic;<note anchored="true">Augustus appears to have been in earnest on these occasions, at least, in
 						his desire to retire into private life and release himself from the cares of
 						government, if we may believe <placeName key="tgn,2652379">Seneca</placeName>.-De Brev. Vit. c. 5. Of his two intimate advisers,
 						Agrippa gave this counsel, while Mecaenas was for continuing his career of
@@ -809,9 +826,9 @@
 					moulding it into the form best adapted to present circumstances; so that, on my
 					leaving the world, I may carry with me the hope that the foundations which I
 					have laid for its future government, will stand firm and stable."</p>
-			</div>
-			<div type="textpart" n="29" subtype="chapter">
-				<p>The city, which was not built in a manner suitable to the grandeur of the empire,
+         </div>
+         <div n="29" type="chapter">
+            <p>The city, which was not built in a manner suitable to the grandeur of the empire,
 					and was liable to inundations of the <placeName key="tgn,1130786">Tiber</placeName>, <note anchored="true">The <placeName key="tgn,1130786">Tiber</placeName> has been always remarkable for the frequency of its
 						inundations and the ravages they occasioned, as remarked by Pliny, iii. 5.
 						Livy mentions several such occurrences, as well as one extensive fire, which
@@ -859,17 +876,19 @@
 						Caius Julius Hegenus, a freedman of Augustus, and an eminent grammarian, was
 						the librarian. </note> and when advanced in years, used frequently there to
 					hold the senate, and examine the rolls of the judges.</p>
-				<p>He dedicated the temple to Jupiter Tonans [or. Apollo Tonans],<note anchored="true">The three fluted Corinthian columns of white marble, which
+            <p>He dedicated the temple to Jupiter Tonans [or. Apollo Tonans],<note anchored="true">The three fluted Corinthian columns of white marble, which
 						stand on the declivity of the Capitoline hill, are commonly supposed to be
 						the remains of the temple of <placeName key="tgn,2019952">Jupiter</placeName> Tonans, erected by Augustus. Part of the frieze and
 						cornice are attached to them, which with the capitals of the columns are
 						finely wrought. Suetonius tells us on what occasion this temple was erected.
 						Of all the epithets given to Jupiter, none conveyed more terror to
 						superstitious minds than that of the Thunderer- <cit>
-							<quote xml:lang="lat"><l>Caelo tonantem credidimus Jovem</l>
-								<l>Regnare.</l></quote>
-							<bibl n="Hor. Carm. 3.5">Hor. l. iii. Ode 5.</bibl>
-						</cit> We shall find this temple mentioned again in c. lxxxix. of the life
+                     <quote xml:lang="lat">
+                        <l>Caelo tonantem credidimus Jovem</l>
+                        <l>Regnare.</l>
+                     </quote>
+                     <bibl n="Hor. Carm. 3.5">Hor. l. iii. Ode 5.</bibl>
+                  </cit> We shall find this temple mentioned again in c. lxxxix. of the life
 						of Augustus. </note> in acknowledgment of his escape from a great danger
 					in his Cantabrian expedition; when, as he was travelling in the night, his
 					litter was struck by lightning, which killed the slave who carried a torch
@@ -899,14 +918,28 @@
 					noble edifices by Marcus Agrippa.<note anchored="true">Among these were, at
 						least, the noble portico, if not the whole, of the Pantheon, still the pride
 						of <placeName key="tgn,7013962">Rome</placeName>, under the name of the
-						Rotondo, on the frieze of which may be seen the inscription, <quote xml:lang="lat"><abbr>M.<expan><ex>Marcus</ex></expan></abbr> AGRIPPA. <abbr>L.<expan><ex>Lucii</ex></expan></abbr>
-							<abbr>F.<expan><ex>filius</ex></expan></abbr>
-							<abbr>COS.<expan><ex>consul</ex></expan></abbr> TERTIUM. FECIT.</quote> Agrippa also
+						Rotondo, on the frieze of which may be seen the inscription, <quote xml:lang="lat">
+                     <abbr>M.<expan>
+                           <ex>Marcus</ex>
+                        </expan>
+                     </abbr> AGRIPPA. <abbr>L.<expan>
+                           <ex>Lucii</ex>
+                        </expan>
+                     </abbr>
+                     <abbr>F.<expan>
+                           <ex>filius</ex>
+                        </expan>
+                     </abbr>
+                     <abbr>COS.<expan>
+                           <ex>consul</ex>
+                        </expan>
+                     </abbr> TERTIUM. FECIT.</quote> Agrippa also
 						built the temple of <placeName key="tgn,2065560">Neptune</placeName>, and
-						the portico of the Argonauts. </note></p>
-			</div>
-			<div type="textpart" n="30" subtype="chapter">
-				<p>He divided the city into regions and districts, ordaining that the annual
+						the portico of the Argonauts. </note>
+            </p>
+         </div>
+         <div n="30" type="chapter">
+            <p>He divided the city into regions and districts, ordaining that the annual
 					magistrates should take by lot the charge of the former; and that the latter
 					should be superintended by wardens chosen out of the people of each
 					neighbourhood. He appointed a nightly watch to be on their guard against
@@ -937,9 +970,9 @@
 					occasion, he deposited in the cell of the temple of Jupiter Capitolinus, sixteen
 					thousand pounds of gold, with jewels and pearls to the amount of fifty millions
 					of sesterces.</p>
-			</div>
-			<div type="textpart" n="31" subtype="chapter">
-				<p>The office of Pontifex Maximus, of which he could not decently deprive Lepidus as
+         </div>
+         <div n="31" type="chapter">
+            <p>The office of Pontifex Maximus, of which he could not decently deprive Lepidus as
 					long as he lived,<note anchored="true">It had formed a sort of honourable
 						retirement in which Lepidus was shelved, to use a familiar expression, when
 						Augustus got rid of him quietly from the Triumvirate. Augustus assumed it
@@ -968,7 +1001,7 @@
 					the number, dignity, and revenues of the priests, and especially those of the
 					Vestal Virgins. And when, upon the death of one of them, a new one was to be
 					taken, <note anchored="true">
-						<foreign xml:lang="lat">Capi</foreign>. There is a peculiar force in the word
+                  <foreign xml:lang="lat">Capi</foreign>. There is a peculiar force in the word
 						here adopted by Suetonius; the form used by the Pontifex Maximus, when he
 						took the novice from the hand of her father, being <foreign xml:lang="lat">Te
 							capio amata</foreign>, "I have you, my dear," implying the forcible
@@ -976,7 +1009,7 @@
 					many persons made interest that their daughters names might be omitted in the
 					lists for election, he replied with an oath, "If either of my own
 					grand-daughters were old enough, I would have proposed her."</p>
-				<p>He likewise revived some old religious customs, which had become obsolete; as the
+            <p>He likewise revived some old religious customs, which had become obsolete; as the
 					augury of public health, <note anchored="true">At times when the temple of Janus
 						was shut, and then only, certain divinations were made, preparatory to
 						solemn supplication for the public health, "as if," says Dio, " even that
@@ -994,7 +1027,7 @@
 						the former, were hyacinths, roses, and white violets; among the latter,
 						lychinis, amaryllis, iris, and some species of lilies. </note> in the
 					Compitalian festival.</p>
-				<p>Next to the immortal gods, he paid the highest honours to the memory of those
+            <p>Next to the immortal gods, he paid the highest honours to the memory of those
 					generals who had raised the Roman state from its low origin to the highest pitch
 					of grandeur. He accordingly repaired or rebuilt the public edifices erected by
 					them; preserving the former inscriptions, and placing statues of them all, with
@@ -1004,14 +1037,15 @@
 					conformity to those illustrious examples." He likewise removed the statue of
 					Pompey from the senate-house, in which Caius Caesar had been killed, and placed
 					it under a marble arch, fronting the palace attached to Pompey's theatre.</p>
-			</div>
-			<div type="textpart" n="32" subtype="chapter">
-				<p>He corrected many ill practices, which, to the detriment of the public, had
+         </div>
+         <div n="32" type="chapter">
+            <p>He corrected many ill practices, which, to the detriment of the public, had
 					either survived the licentious habits of the late civil wars, or else originated
 					in the long peace. Bands of robbers shewed themselves openly, completely armed,
 					under colour of self-defence; and in different parts of the country, travellers,
 					freemen and slaves without distinction, were forcibly carried off, and kept to
-					work in the houses of correction.<note anchored="true"><foreign xml:lang="lat">Ergastulis</foreign>. These were subterranean strong rooms, with narrow
+					work in the houses of correction.<note anchored="true">
+                  <foreign xml:lang="lat">Ergastulis</foreign>. These were subterranean strong rooms, with narrow
 						windows, like dungeons, in the country houses, where incorrigible slaves
 						were confined in fetters, in the intervals of the severe tasks in grinding
 						at the hand-mills, quarrying stones, drawing water, and other hard
@@ -1042,10 +1076,11 @@
 						Long Vacation" of the lawyers, but during them there was a general cessation
 						of business at <placeName key="tgn,7013962">Rome</placeName>; the calendar
 						exhibiting a constant succession of festivals. The month of December, in
-						particular, was devoted to pleasure and relaxation.</note></p>
-			</div>
-			<div type="textpart" n="33" subtype="chapter">
-				<p>He was himself assiduous in his functions as a judge, and would sometimes prolong
+						particular, was devoted to pleasure and relaxation.</note>
+            </p>
+         </div>
+         <div n="33" type="chapter">
+            <p>He was himself assiduous in his functions as a judge, and would sometimes prolong
 					his sittings even into the night:<note anchored="true">Causes are mentioned, the
 						hearing of which was so protracted that lights were required in the court;
 						and sometimes they lasted, we are told, as long as eleven or twelve days.
@@ -1063,9 +1098,9 @@
 					All appeals in causes between inhabitants of <placeName key="tgn,7013962">Rome</placeName>, he assigned every year to the praetor of the city; and
 					where provincials were concerned, to men of consular rank, to one of whom the
 					business of each province was referred.</p>
-			</div>
-			<div type="textpart" n="34" subtype="chapter">
-				<p>Some laws he abrogated, and he made some new ones; such as the sumptuary law,
+         </div>
+         <div n="34" type="chapter">
+            <p>Some laws he abrogated, and he made some new ones; such as the sumptuary law,
 					that relating to adultery and the violation of chastity, the law against bribery
 					in elections, and likewise that for the encouragement of marriage. Having been
 					more severe in his reform of this law than the rest, he found the people utterly
@@ -1079,13 +1114,14 @@
 					of the law was eluded, by marrying girls under the age of puberty, and by
 					frequent change of wives, he limited the time for consummation after espousals,
 					and imposed restrictions on divorce.</p>
-			</div>
-			<div type="textpart" n="35" subtype="chapter">
-				<p>By two separate scrutinies he reduced to their former number and splendour the
+         </div>
+         <div n="35" type="chapter">
+            <p>By two separate scrutinies he reduced to their former number and splendour the
 					senate, which had been swamped by a disorderly crowd; for they were now more
 					than a thousand, and some of them very mean persons, who, after Caesar's death,
 					had been chosen by dint of interest and bribery, so that they had the nickname
-					of Orcini among the people. <note anchored="true"><foreign xml:lang="lat">Orcini</foreign>. They were also called Charonites, the point of the
+					of Orcini among the people. <note anchored="true">
+                  <foreign xml:lang="lat">Orcini</foreign>. They were also called Charonites, the point of the
 						sarcasm being, that they owed their elevation to a dead man, one who was
 						gone to Orcus, namely Julius Caesar, after whose death Mark Antony
 						introduced into the senate many persons of low rank who were designated for
@@ -1123,9 +1159,9 @@
 					subject of importance, not according to custom, nor in regular order, but as he
 					pleased; that every one might hold himself ready to give his opinion, rather
 					than a mere vote of assent.</p>
-			</div>
-			<div type="textpart" n="36" subtype="chapter">
-				<p>He also made several other alterations in the management of public affairs, among
+         </div>
+         <div n="36" type="chapter">
+            <p>He also made several other alterations in the management of public affairs, among
 					which were these following: that the acts of the senate should not be
 						published;<note anchored="true">Julius Caesar had introduced the contrary
 						practice. See <placeName key="tgn,2008628">JULIUS</placeName>, c. XX.</note>
@@ -1137,9 +1173,9 @@
 					those who had already served in the latter office; and that the decemviri should
 					call together the court of One hundred, which had been formerly summoned by
 					those who had filled the office of quaestor.</p>
-			</div>
-			<div type="textpart" n="37" subtype="chapter">
-				<p>To augment the number of persons employed in the administration of the state, he
+         </div>
+         <div n="37" type="chapter">
+            <p>To augment the number of persons employed in the administration of the state, he
 					devised several new offices: such as surveyors of the public buildings, of the
 					roads, the aqueducts, and the bed of the <placeName key="tgn,1130786">Tiber</placeName>; for the distribution of corn to the people; the
 					prefecture of the city; a triumvirate for the election of the senators; and
@@ -1158,9 +1194,9 @@
 					but his proposal was rejected, all the senators declaring by acclamation that he
 					abated his high majesty quite enough in not filling the office alone, and
 					consenting to share it with another.</p>
-			</div>
-			<div type="textpart" n="38" subtype="chapter">
-				<p>He was unsparing in the reward of military merit, having granted to above thirty
+         </div>
+         <div n="38" type="chapter">
+            <p>He was unsparing in the reward of military merit, having granted to above thirty
 					generals the honour of the greater triumph; besides which, he took care to have
 					triumphal decorations voted by the senate for more than that number. That the
 					sons of senators might become early acquainted with the administration of
@@ -1178,7 +1214,8 @@
 					auxiliary horse. And that all might have an opportunity of acquiring military
 					experience, he commonly joined two sons of senators in command of each troop of
 					horse. He frequently reviewed the troops of the equestrian order, reviving the
-					ancient custom of a cavalcade,<note anchored="true"><foreign xml:lang="lat">Transvectio</foreign>: a procession of the equestrian order, which they
+					ancient custom of a cavalcade,<note anchored="true">
+                  <foreign xml:lang="lat">Transvectio</foreign>: a procession of the equestrian order, which they
 						made with great splendour through the city, every year, on the fifteenth of
 						July. They rode on horseback from the temple of Honour, or of <placeName key="tgn,2090583">Mars</placeName>, without the city, to the Capitol,
 						with wreaths of olive on their heads, dressed in robes of scarlet, and
@@ -1196,26 +1233,31 @@
 					answer to their names, when the muster roll was called over soon afterwards. He
 					permitted those who had attained the age of thirty-five years, and desired not
 					to keep their horse any longer, to have the privilege of giving it up.</p>
-			</div>
-			<div type="textpart" n="39" subtype="chapter">
-				<p>With the assistance of ten senators, he obliged each of the Roman knights to give
+         </div>
+         <div n="39" type="chapter">
+            <p>With the assistance of ten senators, he obliged each of the Roman knights to give
 					an account of his life: in regard to those who fell under his displeasure, some
 					were punished; others had a mark of infamy set against their names. The most
 					part he only reprimanded, but not in the same terms. The mildest mode of reproof
-					was by delivering them tablets,<note anchored="true"><foreign xml:lang="lat">Pugillaria</foreign> were a kind of pocket-book, so called, because
+					was by delivering them tablets,<note anchored="true">
+                  <foreign xml:lang="lat">Pugillaria</foreign> were a kind of pocket-book, so called, because
 						memorandums were written or impinged by the <foreign xml:lang="lat">styli</foreign>, on their waxed surface. They appear to have been of
 						very ancient origin, for we read of them in Homer under the name of <foreign xml:lang="grc">πίνακεσ</foreign>—<cit>
-							<bibl n="Hom. Il. 6.169">Il. 6.169</bibl>
-							<quote xml:lang="grc"><l>γράψασ ἐν πίνακι πτυκτῷ θυμοφθόρα</l></quote>
-						</cit>
-						<quote xml:lang="eng"><l>Writing dire things upon his tablet's
-							roll.</l></quote>
-					</note> the contents of which, confined to themselves, they were to read on the
+                     <bibl n="Hom. Il. 6.169">Il. 6.169</bibl>
+                     <quote xml:lang="grc">
+                        <l>γράψασ ἐν πίνακι πτυκτῷ θυμοφθόρα</l>
+                     </quote>
+                  </cit>
+                  <quote xml:lang="eng">
+                     <l>Writing dire things upon his tablet's
+							roll.</l>
+                  </quote>
+               </note> the contents of which, confined to themselves, they were to read on the
 					spot. Some he disgraced for borrowing money at low interest, and letting it out
 					again upon usurious profit.</p>
-			</div>
-			<div type="textpart" n="40" subtype="chapter">
-				<p>In the election of tribunes of the people, if there was not a sufficient number
+         </div>
+         <div n="40" type="chapter">
+            <p>In the election of tribunes of the people, if there was not a sufficient number
 					of senatorian candidates, he nominated others from the equestrian order;
 					granting them the liberty, after the expiration of their office, to continue in
 					whichsoever of the two orders they pleased. As most of the knights had been much
@@ -1248,20 +1290,29 @@
 					were to be manumitted; he likewise enacted that none who had been put in chains
 					or tortured, should ever obtain the freedom of the city in any degree. He
 					endeavoured also to restore the old habit and dress of the Romans; and upon
-					seeing once, in an assembly of the people, a crowd in grey cloaks,<note anchored="true"><foreign xml:lang="lat">Pullatorum</foreign>; dusky, either
+					seeing once, in an assembly of the people, a crowd in grey cloaks,<note anchored="true">
+                  <foreign xml:lang="lat">Pullatorum</foreign>; dusky, either
 						from their dark colour, or their being soiled. The toga was white, and was
 						the distinguishing costume of the sovereign people of <placeName key="tgn,7013962">Rome</placeName>, without which, they were not to
 						appear in public; as members of a university are forbidden to do so, without
 						the academical dress, or officers in garrisons out of their regimentals.
-					</note> he exclaimed with indignation, "See there, <quote xml:lang="lat"><l>Romanos rerum dominos, gentemque togatam.<note anchored="true"><bibl n="Verg. A. 1.186">Aen. 1.186</bibl></note></l></quote>
-					<quote xml:lang="eng"><l><placeName key="tgn,7013962">Rome</placeName>'s
+					</note> he exclaimed with indignation, "See there, <quote xml:lang="lat">
+                  <l>Romanos rerum dominos, gentemque togatam.<note anchored="true">
+                        <bibl n="Verg. A. 1.186">Aen. 1.186</bibl>
+                     </note>
+                  </l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>
+                     <placeName key="tgn,7013962">Rome</placeName>'s
 							conquering sons, lords of the wide-spread globe,</l>
-						<l>Stalk proudly in the toga's graceful robe.</l></quote> And he gave orders
+                  <l>Stalk proudly in the toga's graceful robe.</l>
+               </quote> And he gave orders
 					to the ediles not to permit, in future, any Romans to be present in the forum or
 					circus unless they took off their short coats, and wore the toga.</p>
-			</div>
-			<div type="textpart" n="41" subtype="chapter">
-				<p>He displayed his munificence to all ranks of the people on various occasions.
+         </div>
+         <div n="41" type="chapter">
+            <p>He displayed his munificence to all ranks of the people on various occasions.
 					Moreover, upon his bringing the treasure belonging to the kings of <placeName key="tgn,7016833">Egypt</placeName> into the city, in his Alexandrian
 					triumph, he made money so plentiful, that interest fell, and the price of land
 					rose considerably. And afterwards, as often as large sums of money came into his
@@ -1276,9 +1327,9 @@
 					used to receive anything, until they arrived at eleven years of age. In a
 					scarcity of corn, he would frequently let them have it at a very low price, or
 					none at all; and doubled the number of the money tickets.</p>
-			</div>
-			<div type="textpart" n="42" subtype="chapter">
-				<p>But to show that he was a prince who regarded more the good of his people than
+         </div>
+         <div n="42" type="chapter">
+            <p>But to show that he was a prince who regarded more the good of his people than
 					their applause, he reprimanded them very severely, upon their complaining of the
 					scarcity and dearness of wine. "My son-in-law, Agrippa," he said, "has
 					sufficiently provided for quenching your thirst, by the great plenty of water
@@ -1306,17 +1357,18 @@
 						reader's attention to views of political economy so worthy of an enlightened
 						prince. But it was easier to make the Roman people wear the toga, than to
 						forego the cry of <quote xml:lang="lat">Panem et Circenses.</quote>
-					</note></p>
-			</div>
-			<div type="textpart" n="43" subtype="chapter">
-				<p>In the number, variety, and magnificence of his public spectacles, he surpassed
+               </note>
+            </p>
+         </div>
+         <div n="43" type="chapter">
+            <p>In the number, variety, and magnificence of his public spectacles, he surpassed
 					all former example. Four-and-twenty times, he says, he treated the people with
 					games upon his own account, and three-and-twenty times for such magistrates as
 					were either absent, or not able to afford the expense. The performances took
 					place sometimes in the different streets of the city, and upon several stages,
 					by players in all languages. The same he did not only in the forum and
 					amphitheatre, but in the circus likewise, and in the septa: <note anchored="true">
-						<foreign xml:lang="lat">Septa</foreign> were enclosures made with boards,
+                  <foreign xml:lang="lat">Septa</foreign> were enclosures made with boards,
 						commonly for the purpose of distributing the people into distinct classes,
 						and erected occasionally, like our hustings. </note> and sometimes he
 					exhibited only the hunting of wild beasts. He entertained the people with
@@ -1337,7 +1389,7 @@
 					and bitter speech made in the senate by Asinius Pollio, the orator, in which he
 					complained bitterly of the misfortune of /Eserninus, his grandson, who likewise
 					broke his leg in the same diversion.</p>
-				<p>Sometimes he engaged Roman knights to act upon the stage, or to fight as
+            <p>Sometimes he engaged Roman knights to act upon the stage, or to fight as
 					gladiators; but only before the practice was prohibited by a decree of the
 					senate, Thenceforth, the only exhibition he made of that kind, was that of a
 					young man named Lucius, of a good family, who was not quite two feet in height,
@@ -1369,9 +1421,9 @@
 					falling, that all his efforts to re-assure them and keep them quiet, failed, he
 					moved from his place, and seated himself in that part of the theatre which was
 					thought to be exposed to most danger.</p>
-			</div>
-			<div type="textpart" n="44" subtype="chapter">
-				<p>He corrected the confusion and disorder with which the spectators took their
+         </div>
+         <div n="44" type="chapter">
+            <p>He corrected the confusion and disorder with which the spectators took their
 					seats at the public games, after an affront which was offered to a senator at
 						<placeName key="perseus,Puteoli">Puteoli</placeName>, for whom, in a crowded
 					theatre, no one would make room. He therefore procured a decree of the senate,
@@ -1397,9 +1449,9 @@
 					deferred producing a pair of combatants which the people called for, until the
 					next morning; and intimated by proclamation, "his pleasure that no woman should
 					appear in the theatre before five o'clock."</p>
-			</div>
-			<div type="textpart" n="45" subtype="chapter">
-				<p>He generally viewed the Circensian games himself from the upper rooms of the
+         </div>
+         <div n="45" type="chapter">
+            <p>He generally viewed the Circensian games himself from the upper rooms of the
 					houses of his friends or freedmen; sometimes from the place appointed for the
 					statues of the gods, and sitting in company with his wife and children. He
 					occasionally absented himself from the spectacles for several hours, and
@@ -1435,9 +1487,9 @@
 					And Pylades he not only banished from the city, but from <placeName key="tgn,1000080">Italy</placeName> also, for pointing with his finger at a
 					spectator by whom he was hissed, and turning the eyes of the audience upon
 					him.</p>
-			</div>
-			<div type="textpart" n="46" subtype="chapter">
-				<p>Having thus regulated the city and its concerns, he augmented the population of
+         </div>
+         <div n="46" type="chapter">
+            <p>Having thus regulated the city and its concerns, he augmented the population of
 						<placeName key="tgn,1000080">Italy</placeName> by planting in it no less
 					than twenty-eight colonies,<note anchored="true">A.U.C. 726</note> and greatly
 					improved it by public works, and a beneficial application of the revenues. In
@@ -1450,9 +1502,9 @@
 					their demands were seconded by the recommendation of the town in which they
 					lived; and when he visited the several districts of <placeName key="tgn,1000080">Italy</placeName>, he distributed a thousand sesterces a head to such of
 					the lower class as presented him with sons or daughters.</p>
-			</div>
-			<div type="textpart" n="47" subtype="chapter">
-				<p>The more important provinces, which could not with ease or safety be entrusted to
+         </div>
+         <div n="47" type="chapter">
+            <p>The more important provinces, which could not with ease or safety be entrusted to
 					the government of annual magistrates, he reserved for his own administration:
 					the rest he distributed by lot amongst the proconsuls; but sometimes he made
 					exchanges, and frequently visited most of both kinds in person. Some cities in
@@ -1466,9 +1518,9 @@
 					provinces, he was indeed preparing to cross over from <placeName key="tgn,7003122">Sicily</placeName> to them, but was prevented by continual
 					and violent storms, and afterwards there was no occasion or call for such a
 					voyage.</p>
-			</div>
-			<div type="textpart" n="48" subtype="chapter">
-				<p>Kingdoms, of which he had made himself master by the right of conquest, a few
+         </div>
+         <div n="48" type="chapter">
+            <p>Kingdoms, of which he had made himself master by the right of conquest, a few
 					only excepted, he either restored to their former possessors, <note anchored="true">As in the case of Herod, Joseph. Antiq. Jud. xv. 10. </note>
 					or conferred upon aliens. Between kings in alliance with <placeName key="perseus,Rome">Rome</placeName>, he encouraged most intimate union;
 					being always ready to promote or favour any proposal of marriage or friendship
@@ -1477,9 +1529,9 @@
 					lunatics he appointed guardians, until they arrived at age, or recovered their
 					senses; and the sons of many of them he brought up and educated with his
 					own.</p>
-			</div>
-			<div type="textpart" n="49" subtype="chapter">
-				<p>With respect to the army, he distributed the legions and auxiliary troops
+         </div>
+         <div n="49" type="chapter">
+            <p>With respect to the army, he distributed the legions and auxiliary troops
 					throughout the several provinces. He stationed a fleet at <placeName key="perseus,Misenum">Misenum</placeName>, and another at <placeName key="tgn,7004935">Ravenna</placeName>, for the protection of the Upper and
 					Lower Seas.<note anchored="true">The Adriatic and the <placeName key="tgn,2072785">Tuscan</placeName>.</note> A certain number of the
 					forces were selected, to occupy the posts in the city, and partly for his own
@@ -1501,16 +1553,16 @@
 					couriers with fast vehicles; which appeared to him the most commodious, because
 					the persons who were the bearers of dispatches, written on the spot, might then
 					be questioned about the business, as occasion occurred.</p>
-			</div>
-			<div type="textpart" n="50" subtype="chapter">
-				<p>In sealing letters-patent, rescripts, or epistles, he at first used the figure of
+         </div>
+         <div n="50" type="chapter">
+            <p>In sealing letters-patent, rescripts, or epistles, he at first used the figure of
 					a sphinx, afterwards the head of Alexander the Great, and at last his own,
 					engraved by the hand of Dioscorides; which practice was retained by the
 					succeeding emperors. He was extremely precise in dating his letters, putting
 					down exactly the time of the day or night at which they were dispatched.</p>
-			</div>
-			<div type="textpart" n="51" subtype="chapter">
-				<p>Of his clemency and moderation there are abundant and signal instances. For, not
+         </div>
+         <div n="51" type="chapter">
+            <p>Of his clemency and moderation there are abundant and signal instances. For, not
 					to enumerate how many and what persons of the adverse party he pardoned,
 					received into favour, and suffered to rise to the highest eminence in the state;
 					he thought it sufficient to punish Junius Novatus and Cassius Patavinus, who
@@ -1530,9 +1582,9 @@
 					Tiberius, give way to the ardour of youth in this affair; nor be so indignant
 					that any person should speak ill of me. It is enough, for us, if we can prevent
 					any one from really doing us mischief."</p>
-			</div>
-			<div type="textpart" n="52" subtype="chapter">
-				<p>Although he knew that it had been customary to decree temples in honour of the
+         </div>
+         <div n="52" type="chapter">
+            <p>Although he knew that it had been customary to decree temples in honour of the
 					proconsuls, yet he would not permit them to be erected in any of the provinces,
 					unless in the joint names of himself and <placeName key="perseus,Rome">Rome</placeName>. Within the limits of the city, he positively refused any
 					honour of that kind. He melted down all the silver statues which had been
@@ -1540,13 +1592,13 @@
 					the Palatine Apollo. And when the people importuned him to accept the
 					dictatorship, he bent down on one knee, with his toga thrown over his shoulders,
 					and his breast exposed to view, begging to be excused.</p>
-			</div>
-			<div type="textpart" n="53" subtype="chapter">
-				<p>He always abhorred the title of Lord,<note anchored="true">Tertullian, in his
+         </div>
+         <div n="53" type="chapter">
+            <p>He always abhorred the title of Lord,<note anchored="true">Tertullian, in his
 						Apology, c. 34, makes the same remark. The word seems to have conveyed then,
 						as it does in its theological sense now, the idea of Divinity, for it is
 						coupled with <foreign xml:lang="lat">Deus</foreign>, God: <quote xml:lang="lat">nunquum se dominum vel deum appellare voluerit.</quote>
-					</note> as ill-omened and offensive. And when, in a play, performed at the
+               </note> as ill-omened and offensive. And when, in a play, performed at the
 					theatre, at which he was present, these words were introduced, "O just and
 					gracious lord," and the whole company, with joyful acclamations, testified their
 					approbation of them, as applied to him, he instantly put a stop to their
@@ -1572,9 +1624,9 @@
 					only a slight acquaintance, had suddenly lost his sight, and under that
 					privation had resolved to starve himself to death, he paid him a visit, and by
 					his consolatory admonitions diverted him from his purpose.</p>
-			</div>
-			<div type="textpart" n="54" subtype="chapter">
-				<p>On his speaking in the senate, he has been told by one of the members, "I did not
+         </div>
+         <div n="54" type="chapter">
+            <p>On his speaking in the senate, he has been told by one of the members, "I did not
 					understand you," and by another, "I would contradict you, could I do it with
 					safety." And sometimes, upon his being so much offended at the heat with which
 					the debates were conducted in the senate, as to quit the house in anger, some of
@@ -1585,16 +1637,16 @@
 					and being asked by the latter, "Is there no other person more deserving?" he
 					replied, "Every man has his own opinion." Nor was any one ever molested for his
 					freedom of speech, although it was carried to the extent of insolence.</p>
-			</div>
-			<div type="textpart" n="55" subtype="chapter">
-				<p>Even when some infamous libels against him were dispersed in the senate-house, he
+         </div>
+         <div n="55" type="chapter">
+            <p>Even when some infamous libels against him were dispersed in the senate-house, he
 					was neither disturbed, nor did he give himself much trouble to refute them. He
 					would not so much as order an inquiry to be made after the authors; but only
 					proposed, that, for the future, those who published libels, or lampoons, in a
 					borrowed name, against any person, should be called to account.</p>
-			</div>
-			<div type="textpart" n="56" subtype="chapter">
-				<p>Being provoked by some petulant jests, which were designed to render him odious,
+         </div>
+         <div n="56" type="chapter">
+            <p>Being provoked by some petulant jests, which were designed to render him odious,
 					he answered them by a proclamation; and yet he prevented the senate from passing
 					an act, to restrain the liberties which were taken with others in people's
 					wills. Whenever he attended at the election of magistrates, he went round the
@@ -1608,7 +1660,7 @@
 					it." And upon the audience rising on their entering the theatre, while they were
 					yet minors, and giving them applause in a standing position, he made it a matter
 					of serious complaint.</p>
-				<p>He was desirous that his friends should be great and powerful in the state, but
+            <p>He was desirous that his friends should be great and powerful in the state, but
 					have no exclusive privileges, or be exempt from the laws which governed others.
 					When Asprenas Nonius, an intimate friend of his, was tried upon a charge of
 					administering poison at the instance of Cassius Severus, he consulted the senate
@@ -1622,9 +1674,9 @@
 					relieved any one from prosecution but in a single instance, in the case of a man
 					who had given information of the conspiracy of Muraena; and that he did only by
 					prevailing upon the accuser, in open court, to drop his prosecution.</p>
-			</div>
-			<div type="textpart" n="57" subtype="chapter">
-				<p>How much he was beloved for his worthy conduct in all these respects, it is easy
+         </div>
+         <div n="57" type="chapter">
+            <p>How much he was beloved for his worthy conduct in all these respects, it is easy
 					to imagine. I say nothing of the decrees of the senate in his honour, which may
 					seem to have resulted from compulsion or deference. The Roman knights
 					voluntarily, and with one accord, always celebrated his birth for two days
@@ -1647,9 +1699,9 @@
 					him not only with joyful acclamations, but with songs. It is also remarked, that
 					as often as he entered the city, the infliction of punishment was suspended for
 					the time.</p>
-			</div>
-			<div type="textpart" n="58" subtype="chapter">
-				<p>The whole body of the people, upon a sudden impulse, and with unanimous consent,
+         </div>
+         <div n="58" type="chapter">
+            <p>The whole body of the people, upon a sudden impulse, and with unanimous consent,
 					offered him the title of FATHER OF HIS COUNTRY. It was announced to him first at
 						<placeName key="perseus,Antium">Antium</placeName>, by a deputation from the
 					people, and upon his declining the honour, they repeated their offer on his
@@ -1665,7 +1717,7 @@
 					have done those of Messala): "Having now arrived at the summit of my wishes, O
 					Conscript Fathers, what else have I to beg of the Immortal Gods, but the
 					continuance of this your affection for me to the last moments of my life?"</p>
-				<p>To the physician Antonius Musa, who had cured him of a dangerous illness, they
+            <p>To the physician Antonius Musa, who had cured him of a dangerous illness, they
 					erected a statue near that of aEsculapius, by a general subscription. Some heads
 					of families ordered in their wills, that their heirs should lead victims to the
 					capitol, with a tablet carried before them, and pay their vows, " Because
@@ -1673,7 +1725,7 @@
 					first visited them, to be thenceforth the beginning of their year. And most of
 					the provinces, besides erecting temples and altars, instituted games, to be
 					celebrated to his honour, in most towns, every five years.</p>
-				<p>The kings, his friends and allies, built cities in their respective kingdoms, to
+            <p>The kings, his friends and allies, built cities in their respective kingdoms, to
 					which they gave the name of <placeName key="tgn,7001266">Caesarea</placeName>:
 					and all with one consent resolved to finish, at their common expense, the temple
 					of Jupiter Olympius, at <placeName key="perseus,Athens">Athens</placeName>,
@@ -1681,9 +1733,9 @@
 					frequently also left their kingdoms, laid aside the badges of royalty, and
 					assuming the toga, attended and paid their respects to him daily, in the manner
 					of clients to their patrons: not only at <placeName key="perseus,Rome">Rome</placeName>, but when he was travelling through the provinces.</p>
-			</div>
-			<div type="textpart" n="59" subtype="chapter">
-				<p>Having thus given an account of the manner in which he filled his public offices
+         </div>
+         <div n="59" type="chapter">
+            <p>Having thus given an account of the manner in which he filled his public offices
 					both civil and military, and his conduct in the government of the empire, both
 					in peace and war; I shall now describe his private and domestic life, his habits
 					at home and among his friends and dependents, and the fortune attending him in
@@ -1692,9 +1744,9 @@
 					fifty-fourth year of his age. <note anchored="true">A.U.C. 711. </note> He
 					behaved towards them both with the utmost kindness whilst living, and after
 					their decease paid the highest honours to their memory.</p>
-			</div>
-			<div type="textpart" n="60" subtype="chapter">
-				<p>He was contracted when very young to the daughter of Publius Servilius Isauricus;
+         </div>
+         <div n="60" type="chapter">
+            <p>He was contracted when very young to the daughter of Publius Servilius Isauricus;
 					but upon his reconciliation with Antony after their first rupture, <note anchored="true">See cc. x. xi. xii. and xiii.</note> the armies on both
 					sides insisting on a family alliance between them, he married Antony's
 					step-daughter Claudia, the daughter of Fulvia by Publius Claudius, although at
@@ -1708,9 +1760,9 @@
 					himself writes, with the perverseness of her temper; and immediately took Livia
 					Drusilla, though then pregnant, from her husband Tiberius Nero; and she had
 					never any rival in his love and esteem.</p>
-			</div>
-			<div type="textpart" n="61" subtype="chapter">
-				<p>By Scribonia he had a daughter named <placeName key="tgn,2118772">Julia</placeName>, but no children by <placeName key="tgn,2039991">Livia</placeName>, although extremely desirous of issue. She, indeed,
+         </div>
+         <div n="61" type="chapter">
+            <p>By Scribonia he had a daughter named <placeName key="tgn,2118772">Julia</placeName>, but no children by <placeName key="tgn,2039991">Livia</placeName>, although extremely desirous of issue. She, indeed,
 					conceived once, but miscarried. He gave his daughter <placeName key="tgn,2428630">Julia</placeName> in the first instance to <placeName key="tgn,2040171">Marcellus</placeName>, his sister's son, who had just
 					completed his minority; and, after his death, to Marcus Agrippa, having
 					prevailed with his sister to yield her son-in-law to his wishes; for at that
@@ -1722,14 +1774,16 @@
 					first contracted <placeName key="tgn,2428630">Julia</placeName> to his son, and
 					afterwards to Cotiso, king of Getae,<note anchored="true">He is mentioned by
 							<placeName key="tgn,2028398">Horace</placeName>: <cit>
-							<quote xml:lang="lat"><l>Occidit Daci Cotisonis agimen.</l></quote>
-							<bibl n="Hor. Carm. 3.8">Ode 8, b. iii.</bibl>
-						</cit> Most probably Antony knew the imputation to be unfounded, and made it
+                     <quote xml:lang="lat">
+                        <l>Occidit Daci Cotisonis agimen.</l>
+                     </quote>
+                     <bibl n="Hor. Carm. 3.8">Ode 8, b. iii.</bibl>
+                  </cit> Most probably Antony knew the imputation to be unfounded, and made it
 						for the purpose of excusing his own marriage with <placeName key="tgn,2038217">Cleopatra</placeName>; </note> demanding at the same
 					time the king's daughter in marriage for himself."</p>
-			</div>
-			<div type="textpart" n="62" subtype="chapter">
-				<p>He had three grandsons by Agrippa and <placeName key="tgn,2428630">Julia</placeName>, namely, Caius, <placeName key="tgn,2023439">Lucius</placeName>, and Agrippa; and two granddaughters, <placeName key="tgn,2024572">Julia</placeName> and Agrippina. <placeName key="tgn,2118772">Julia</placeName> he married to <placeName key="tgn,2023439">Lucius</placeName> Paulus, the censor's son, and Agrippina
+         </div>
+         <div n="62" type="chapter">
+            <p>He had three grandsons by Agrippa and <placeName key="tgn,2428630">Julia</placeName>, namely, Caius, <placeName key="tgn,2023439">Lucius</placeName>, and Agrippa; and two granddaughters, <placeName key="tgn,2024572">Julia</placeName> and Agrippina. <placeName key="tgn,2118772">Julia</placeName> he married to <placeName key="tgn,2023439">Lucius</placeName> Paulus, the censor's son, and Agrippina
 					to Germanicus, his sister's grandson. Caius and Lucius he adopted at home, by
 					the ceremony of purchase<note anchored="true">This form of adoption consisted in
 						a fictitious sale. See Cicero, Topic iii.</note> from their father, advanced
@@ -1745,16 +1799,17 @@
 					nothing more than to perfect them in the imitation of his hand-writing. He never
 					supped but he had them sitting at the foot of his couch; nor ever travelled but
 					with them in a chariot before him, or riding beside him.</p>
-			</div>
-			<div type="textpart" n="63" subtype="chapter">
-				<p>But in the midst of all his joy and hopes in his numerous and well-regulated
+         </div>
+         <div n="63" type="chapter">
+            <p>But in the midst of all his joy and hopes in his numerous and well-regulated
 					family, his fortune failed him. The two Julias, his daughter and grand-daughter,
 					abandoned themselves to such courses of lewdness and debauchery, that he
 					banished them both. Caius and <placeName key="tgn,2023439">Lucius</placeName> he
 					lost within the space of eighteen months; the former dying in <placeName key="tgn,7001294">Lycia</placeName>, and the latter at <placeName key="tgn,7008781">Marseilles</placeName>. His third grandson Agrippa, with
 					his step-son Tiberius, he adopted in the forum, by a law passed for the purpose
-					by the sections; <note anchored="true"><foreign xml:lang="lat">Curiae.</foreign>
-						<placeName key="tgn,2072021">Romulus</placeName> divided the people of
+					by the sections; <note anchored="true">
+                  <foreign xml:lang="lat">Curiae.</foreign>
+                  <placeName key="tgn,2072021">Romulus</placeName> divided the people of
 							<placeName key="tgn,7013962">Rome</placeName> into three tribes; and
 						each tribe into ten Curiae. The number of tribes was afterwards increased by
 						degrees to thirty-five; but that of the Curiae always remained the same.
@@ -1785,15 +1840,18 @@
 						now Pianosa. It is one of the group in the Tuscan sea, between <placeName key="tgn,7016548">Elba</placeName> and <placeName key="tgn,7001093">Corsica</placeName>. </note> and placed a guard of soldiers about him;
 					procuring at the same time an act of the senate for his confinement there during
 					life. Upon any mention of him and the two Julias, he would say, with a heavy
-					sigh, <quote xml:lang="eng"><l>Would I were wifeless, or had childless died!<note anchored="true">A quotation from the <bibl n="Hom. Il. 3.40">Iliad,
+					sigh, <quote xml:lang="eng">
+                  <l>Would I were wifeless, or had childless died!<note anchored="true">A quotation from the <bibl n="Hom. Il. 3.40">Iliad,
 									iii. 40; where Hector is venting his rage on Paris. The
 									inflexion is slightly changed, the line in the original
-									commencing, </bibl><quote xml:lang="grc">αἵθ'</quote>, "would thou wert, etc."</note></l>
-					</quote> nor did he usually call them by any other name than that of his "three
+									commencing, </bibl>
+                        <quote xml:lang="grc">αἵθ'</quote>, "would thou wert, etc."</note>
+                  </l>
+               </quote> nor did he usually call them by any other name than that of his "three
 					imposthumes or cancers."</p>
-			</div>
-			<div type="textpart" n="64" subtype="chapter">
-				<p>He was cautious in forming friendships, but clung to them with great constancy;
+         </div>
+         <div n="64" type="chapter">
+            <p>He was cautious in forming friendships, but clung to them with great constancy;
 					not only rewarding the virtues and merits of his friends according to their
 					deserts, but bearing likewise with their faults and vices, provided that they
 					were of a venial kind, For amongst all his friends, we scarcely find any who
@@ -1816,7 +1874,7 @@
 					some slight coolness, and from jealousy that Marcellus received greater marks of
 					favour; and the latter having confidentially imparted to his wife Terentia the
 					discovery of Murena's conspiracy.</p>
-				<p>He likewise expected from his friends, at their deaths as well as during their
+            <p>He likewise expected from his friends, at their deaths as well as during their
 					lives, some proofs of their reciprocal attachment. For though he was far from
 					coveting their property, and indeed would never accept of any legacy left him by
 					a stranger, yet he pondered in a melancholy mood over their last words; not
@@ -1827,9 +1885,9 @@
 					parents, he used to restore to their children, either immediately, or if they
 					were under age, upon the day of their assuming the manly dress, or of their
 					marriage; with interest.</p>
-			</div>
-			<div type="textpart" n="65" subtype="chapter">
-				<p>As a patron and master, his behaviour in general was mild and conciliating; but
+         </div>
+         <div n="65" type="chapter">
+            <p>As a patron and master, his behaviour in general was mild and conciliating; but
 					when occasion required it, he could be severe. He advanced many of his freedmen
 					to posts of honour and great importance, as Licinus, Enceladus, and others; and
 					when his slave, Cosmus, had reflected bitterly upon him, he resented the injury
@@ -1845,15 +1903,15 @@
 					to give loose to their insolence and rapacity in the province he governed, he
 					caused heavy weights to be tied about their necks, and had them thrown into a
 					river.</p>
-			</div>
-			<div type="textpart" n="66" subtype="chapter">
-				<p>In his early youth various aspersions of an infamous character were heaped upon
+         </div>
+         <div n="66" type="chapter">
+            <p>In his early youth various aspersions of an infamous character were heaped upon
 					him. Sextus Pompey reproached him with being an effeminate fellow; and M.
 					Antony, with earning his adoption from his uncle by improper means. Lucius
 					Antony, likewise Mark's brother, charges him with the same.</p>
-			</div>
-			<div type="textpart" n="67" subtype="chapter">
-				<p>That he was guilty of various acts of adultery, is not denied even by his
+         </div>
+         <div n="67" type="chapter">
+            <p>That he was guilty of various acts of adultery, is not denied even by his
 					friends; but they allege in excuse for it, that he engaged in those intrigues
 					not from lewdness, but from policy, in order to discover more easily the designs
 					of his enemies, through their wives. Mark Antony, besides the precipitate
@@ -1874,61 +1932,77 @@
 						of fondling diminutives of the names of Tertia, Terentia, and Rufa, some of
 						Augustus's favourites. </note> or Salvia Titiscenia, or all of them. What
 					matters it to you where, or upon whom, you spend your manly vigour?"</p>
-			</div>
-			<div type="textpart" n="68" subtype="chapter">
-				<p>A private entertainment which he gave, commonly called the Supper of the Twelve
+         </div>
+         <div n="68" type="chapter">
+            <p>A private entertainment which he gave, commonly called the Supper of the Twelve
 					Gods, <note anchored="true">
-						<foreign xml:lang="grc">δωδεκάθεοσ</foreign>, the twelve <foreign xml:lang="lat">Dii Majores</foreign>; they are enumerated in two verses
-						by Ennius: <quote xml:lang="lat"><l>Juno, Vesta, Minerva, Ceres, Diana,
+                  <foreign xml:lang="grc">δωδεκάθεοσ</foreign>, the twelve <foreign xml:lang="lat">Dii Majores</foreign>; they are enumerated in two verses
+						by Ennius: <quote xml:lang="lat">
+                     <l>Juno, Vesta, Minerva, Ceres, Diana,
 								Venus, Mars;</l>
-							<l>Mercurius, Jovus, Neptunus, Vulcanus, Apollo.</l></quote>
-					</note> and at which the guests were dressed in the habit of gods and goddesses,
+                     <l>Mercurius, Jovus, Neptunus, Vulcanus, Apollo.</l>
+                  </quote>
+               </note> and at which the guests were dressed in the habit of gods and goddesses,
 					while he personated Apollo himself, afforded subject of much conversation, and
 					was imputed to him not only by Antony in his letters, who likewise names all the
-					parties concerned, but in the following well-known anonymous verses: <quote xml:lang="lat"><l>Cum primum istorum conduxit mensa choragum,</l>
-						<l>Sexque deos vidit <placeName key="tgn,7010916">Mallia</placeName>, sexque
+					parties concerned, but in the following well-known anonymous verses: <quote xml:lang="lat">
+                  <l>Cum primum istorum conduxit mensa choragum,</l>
+                  <l>Sexque deos vidit <placeName key="tgn,7010916">Mallia</placeName>, sexque
 							deas</l>
-						<l>Impia dum Phoebi Caesar mendacia ludit,</l>
-						<l>Dum nova divorum coenat adulteria:</l>
-						<l>Omnia se a terris tunc numina declinarunt:</l>
-						<l>Fugit et auratos Jupiter ipse thronos.</l></quote>
-					<quote xml:lang="eng"><l>When Mallia late beheld, in mingled train,</l>
-						<l>Twelve mortals ape twelve deities in vain,</l>
-						<l>Caesar assumed what was Apollo's due,</l>
-						<l>And wine and lust inflamed the motley crew.</l>
-						<l>At the foul sight the gods avert their eyes,</l>
-						<l>And from his throne great Jove indignant flies.</l></quote> What rendered
+                  <l>Impia dum Phoebi Caesar mendacia ludit,</l>
+                  <l>Dum nova divorum coenat adulteria:</l>
+                  <l>Omnia se a terris tunc numina declinarunt:</l>
+                  <l>Fugit et auratos Jupiter ipse thronos.</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>When Mallia late beheld, in mingled train,</l>
+                  <l>Twelve mortals ape twelve deities in vain,</l>
+                  <l>Caesar assumed what was Apollo's due,</l>
+                  <l>And wine and lust inflamed the motley crew.</l>
+                  <l>At the foul sight the gods avert their eyes,</l>
+                  <l>And from his throne great Jove indignant flies.</l>
+               </quote> What rendered
 					this supper more obnoxious to public censure, was, that it happened at a time
 					when there was a great scarcity, and almost a famine, in the city. The day
 					after, there was a cry current among the people, "that the gods had eaten up all
 					the corn; and that Caesar was indeed Apollo, but Apollo the Tormentor;" under
 					which title that god was worshipped in some quarter of the city. <note anchored="true">Probably in the Suburra, where Martial informs us that
 						torturing scourges were sold: <cit>
-							<quote xml:lang="lat">Tonstrix Suburra: faucibus sed et primis,
-									<l>Cruenta pendent qua flagella tortorum.</l></quote>
-							<bibl n="Mart. 11.15.1">Mart. xi. 15, i.</bibl>
-						</cit>
-					</note> He was likewise charged with being excessively fond of fine furniture,
+                     <quote xml:lang="lat">Tonstrix Suburra: faucibus sed et primis,
+									<l>Cruenta pendent qua flagella tortorum.</l>
+                     </quote>
+                     <bibl n="Mart. 11.15.1">Mart. xi. 15, i.</bibl>
+                  </cit>
+               </note> He was likewise charged with being excessively fond of fine furniture,
 					and Corinthian vessels, as well as with being addicted to gaming. For, during
 					the time of the proscription, the following line was written upon his statue:
-						<quote xml:lang="lat"><l>Pater argentarius, ego Corinthiarius;</l></quote>
-					<quote xml:lang="eng"><l>My father was a silversmith, <note anchored="true">Like
+						<quote xml:lang="lat">
+                  <l>Pater argentarius, ego Corinthiarius;</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>My father was a silversmith, <note anchored="true">Like
 								the gold and silver-smiths of the middle ages, the Roman
 								money-lenders united both trades. See afterwards <placeName key="tgn,2538429">NERo</placeName>, c. 5. It is hardly necessary
 								to remark that vases or vessels of the compound metal which went by
 								the name of Corinthian brass, or bronze, were esteemed even more
 								valuable than silver plate.</note> my dealings are in
-						brass;</l></quote> because it was believed, that he had put some persons
+						brass;</l>
+               </quote> because it was believed, that he had put some persons
 					upon the list of the proscribed, only to obtain the Corinthian vessels in their
 					possession. And afterwards, in the Sicilian war, the following epigram was
-					published: <quote xml:lang="lat"><l>Postquam bis classe victus naves
+					published: <quote xml:lang="lat">
+                  <l>Postquam bis classe victus naves
 							perdidit,</l>
-						<l>Aliquando ut vincat, ludit assidue aleam.</l></quote>
-					<quote xml:lang="eng"><l>Twice having lost a fleet in luckless fight,</l>
-						<l>To win at last, he games both day and night.</l></quote></p>
-			</div>
-			<div type="textpart" n="69" subtype="chapter">
-				<p>With respect to the charge or imputation of loathsome impurity before-mentioned,
+                  <l>Aliquando ut vincat, ludit assidue aleam.</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Twice having lost a fleet in luckless fight,</l>
+                  <l>To win at last, he games both day and night.</l>
+               </quote>
+            </p>
+         </div>
+         <div n="69" type="chapter">
+            <p>With respect to the charge or imputation of loathsome impurity before-mentioned,
 					he very easily refuted it by the chastity of his life, at the very time when it
 					was made, as well as ever afterwards. His conduct likewise gave the lie to that
 					of luxurious extravagance in his furniture, when, upon the taking of <placeName key="tgn,7002256">Alexandria</placeName>, he reserved for himself nothing of
@@ -1943,7 +2017,8 @@
 					his own hand, in which he says, "I supped, my dear Tiberius, with the same
 					company. We had, besides, Vinicius, and Silvius the father. We gamed at supper
 					like old fellows, both yesterday and to-day. And as any one threw upon the
-						<foreign xml:lang="lat">tali</foreign><note anchored="true">The Romans, at
+						<foreign xml:lang="lat">tali</foreign>
+               <note anchored="true">The Romans, at
 						their feasts, during the intervals of drinking, often played at dice, of
 						which there were two kinds, the <foreign xml:lang="lat">tesserae</foreign>
 						and <foreign xml:lang="lat">tali</foreign>. The former had six sides, like
@@ -1963,9 +2038,9 @@
 					daughter, he writes thus . "I have sent you two hundred and fifty denarii, which
 					I gave to every one of my guests; in case they were inclined at supper to divert
 					themselves with the Tali, or at the game of Even-or-Odd."</p>
-			</div>
-			<div type="textpart" n="70" subtype="chapter">
-				<p>In other matters, it appears that he was moderate in his habits, and free from
+         </div>
+         <div n="70" type="chapter">
+            <p>In other matters, it appears that he was moderate in his habits, and free from
 					suspicion of any kind of vice. He lived at first near the Roman Forum, above the
 					Ring-maker's Stairs, in a house which had once been occupied by Calvus the
 					orator. He afterwards moved to the <placeName key="tgn,2565724">Palatine
@@ -1983,7 +2058,8 @@
 					health in the winter, he nevertheless resided constantly in it during that
 					season. If at any time he wished to be perfectly retired, and secure from
 					interruption, he shut himself up in an apartment at the top of his house, which
-					he called his <placeName key="tgn,7014561">Syracuse</placeName> or <foreign xml:lang="grc">Τεχνόφυον</foreign><note anchored="true">This word may be
+					he called his <placeName key="tgn,7014561">Syracuse</placeName> or <foreign xml:lang="grc">Τεχνόφυον</foreign>
+               <note anchored="true">This word may be
 						interpreted the Cabinet of Arts. It was common, in the houses of the great,
 						among the Romans, to have an apartment called the Study, or Museum.
 							<persName>Pliny</persName> says, beautifully, <quote xml:lang="lat">"0
@@ -1993,22 +2069,26 @@
 					went to some villa belonging to his freedmen near the city. But when he was
 					indisposed, he commonly took up his residence in the house of Maecenas. <note anchored="true">Maecenas had a house and gardens on the Esquiline Hill,
 						celebrated for their salubrity: <cit>
-							<quote xml:lang="lat"><l>Nunc licet Esquiliis habitore
-								salubribus.</l></quote>
-							<bibl n="Hor. S. 1.8">Hor. Sat. i. 8, 14.</bibl>
-						</cit>
-					</note> Of all the places of retirement from the city, he chiefly frequented
+                     <quote xml:lang="lat">
+                        <l>Nunc licet Esquiliis habitore
+								salubribus.</l>
+                     </quote>
+                     <bibl n="Hor. S. 1.8">Hor. Sat. i. 8, 14.</bibl>
+                  </cit>
+               </note> Of all the places of retirement from the city, he chiefly frequented
 					those upon the seacoast, and the islands of <placeName key="tgn,7003005">Campania</placeName>,<note anchored="true">Such as <placeName key="tgn,7004516">Baiae</placeName>, and the islands of <placeName key="tgn,7010392">Ischia</placeName>, <placeName key="tgn,7006846">Procida</placeName>, <placeName key="tgn,7006855">Capri</placeName>,
 						and others; the resorts of the opulent nobles, where they had magnificent
 						marine villas. </note> or the towns nearest the city, such as <placeName key="perseus,Lanuvium">Lanuvium</placeName>, <placeName key="perseus,Praeneste">Praeneste</placeName>, and <placeName key="perseus,Tibur">Tibur</placeName>,<note anchored="true">Now <placeName key="tgn,7006968">Tivoli</placeName>, a delicious spot, where Horace had
 						a villa, in which he hoped to spend his declining years. <cit>
-							<quote xml:lang="lat"><l>Ver ubi longum, tepidasque praebet</l>
-								<l part="I">Jupiter brumas: …</l>
-								<l part="F">… ibi, tu calentem</l>
-								<l>Debit sparges lachryma favillam</l>
-								<l>Vatis amici.</l></quote>
-							<bibl n="Hor. Carm. 2.5">Odes, B. ii. 5.</bibl>
-						</cit> Adrian also had a magnificent villa near <placeName key="perseus,Tibur">Tibur</placeName>. </note> where he often used to
+                     <quote xml:lang="lat">
+                        <l>Ver ubi longum, tepidasque praebet</l>
+                        <l part="I">Jupiter brumas: …</l>
+                        <l part="F">… ibi, tu calentem</l>
+                        <l>Debit sparges lachryma favillam</l>
+                        <l>Vatis amici.</l>
+                     </quote>
+                     <bibl n="Hor. Carm. 2.5">Odes, B. ii. 5.</bibl>
+                  </cit> Adrian also had a magnificent villa near <placeName key="perseus,Tibur">Tibur</placeName>. </note> where he often used to
 					sit for the administration of justice, in the porticos of the temple of
 					Hercules. He had a particular aversion to large and sumptuous palaces; and some
 					which had been raised at a vast expense by his grand-daughter, <placeName key="tgn,2118772">Julia</placeName>, he leveled to the ground. Those of his
@@ -2017,9 +2097,9 @@
 					their antiquity or rarity; such as, at <placeName key="tgn,7006855">Capri</placeName>, the huge limbs of sea-monsters and wild beasts, which
 					some affect to call the bones of giants; and also the arms of ancient
 					heroes.</p>
-			</div>
-			<div type="textpart" n="71" subtype="chapter">
-				<p>His frugality in the furniture of his house appears even at this day, from some
+         </div>
+         <div n="71" type="chapter">
+            <p>His frugality in the furniture of his house appears even at this day, from some
 					beds and tables still remaining, most of which are scarcely elegant enough for a
 					private family. It is reported that he never lay upon a bed, but such as was
 					low, and meanly furnished. He seldom wore any garment but what was made by the
@@ -2041,9 +2121,9 @@
 					than common, to make him appear taller than he was. He had always clothes and
 					shoes, fit to appear in public, ready in his bed-chamber for any sudden
 					occasion.</p>
-			</div>
-			<div type="textpart" n="72" subtype="chapter">
-				<p>At his table which was always plentiful and elegant, he constantly entertained
+         </div>
+         <div n="72" type="chapter">
+            <p>At his table which was always plentiful and elegant, he constantly entertained
 					company; but was very scrupulous in the choice of them, both as to rank and
 					character. Valerius Messala informs us, that he never admitted any freedmen to
 					his table, except Menas, when rewarded with the privilege of citizenship, for
@@ -2056,9 +2136,9 @@
 					talked in whispers, he encouraged to join in the general conversation; and
 					introduced buffoons and stage players, or even low performers from the circus,
 					and very often itinerant humourists, to enliven the company.</p>
-			</div>
-			<div type="textpart" n="73" subtype="chapter">
-				<p>Festivals and holidays he usually celebrated very expensively, but sometimes only
+         </div>
+         <div n="73" type="chapter">
+            <p>Festivals and holidays he usually celebrated very expensively, but sometimes only
 					with merriment. In the Saturnalia, or at any other time when the fancy took him,
 					he distributed to his company clothes, gold and silver; sometimes coins of all
 					sorts, even of the ancient kings of <placeName key="tgn,7013962">Rome</placeName> and of foreign nations; sometimes nothing but towels,
@@ -2072,11 +2152,12 @@
 					lot, disappoint or gratify the expectation of the purchasers. This sort of
 					traffic went round the whole company, every one being obliged to buy something,
 					and to run the chance of loss or gain with the rest.</p>
-			</div>
-			<div type="textpart" n="74" subtype="chapter">
-				<p>He ate sparingly (for I must not omit even this), and commonly used a plain diet.
+         </div>
+         <div n="74" type="chapter">
+            <p>He ate sparingly (for I must not omit even this), and commonly used a plain diet.
 					He was particularly fond of coarse bread, small fishes, new cheese made of cow's
-						milk,<note anchored="true"><foreign xml:lang="lat">Casum bubulum
+						milk,<note anchored="true">
+                  <foreign xml:lang="lat">Casum bubulum
 							manupressum</foreign>; probably soft cheese, not reduced to solid
 						consistence in the cheese-press. </note> and green figs of the sort which
 					bear fruit twice a year.<note anchored="true">A species of fig tree, known in
@@ -2086,7 +2167,8 @@
 					The following passages relative to this subject, I have transcribed from his
 					letters. " I ate a little bread and some small dates, in my carriage." Again. "
 					In returning home from the palace in my litter, I ate an ounce of bread, and a
-					few raisins." Again: "No Jew, my dear <placeName key="tgn,2720789">Tiberius</placeName>, ever keeps such strict fast upon the Sabbath,<note anchored="true"><foreign xml:lang="lat">Sabbatis jejunium</foreign>. Augustus
+					few raisins." Again: "No Jew, my dear <placeName key="tgn,2720789">Tiberius</placeName>, ever keeps such strict fast upon the Sabbath,<note anchored="true">
+                  <foreign xml:lang="lat">Sabbatis jejunium</foreign>. Augustus
 						might have been better informed of the Jewish rites, from his familiarity
 						with <placeName key="tgn,2023148">Herod</placeName> and others; for it is
 						certain that their sabbath was not a day of fasting. <placeName key="tgn,2105285">Justin</placeName>, however, fell into the same error:
@@ -2097,28 +2179,28 @@
 							<foreign xml:lang="grc">νηστεύω δίσ τοῦ σαββάτου</foreign>, 'I
 						fast twice in the week' of the Pharisee, in <bibl n="Luke 18.12">St. Luke
 							xviii. 12.</bibl>
-					</note> as I have to-day; for while in the bath, and after the first hour of the
+               </note> as I have to-day; for while in the bath, and after the first hour of the
 					night, I only ate two biscuits, before I began to be rubbed with oil." From this
 					great indifference about his diet, he sometimes supped by himself, before his
 					company began, or after they had finished, and would not touch a morsel at table
 					with his guests.</p>
-			</div>
-			<div type="textpart" n="75" subtype="chapter">
-				<p>He was by nature extremely sparing in the use of wine. Cornelius Nepos says, that
+         </div>
+         <div n="75" type="chapter">
+            <p>He was by nature extremely sparing in the use of wine. Cornelius Nepos says, that
 					he used to drink only three times at supper in the camp of <placeName key="tgn,7009565">Modena</placeName>; and when he indulged himself the most,
 					he never exceeded a pint; or if he did his stomach rejected it. Of all wines, he
 					gave the preference to the Rhaetian, <note anchored="true">The Rhaetian wines
 						had a great reputation; Virgil says, <cit>
-							<quote xml:lang="lat">Ex quo te carmine dicam, Rhaetica.</quote>
-							<bibl n="Verg. G. 2.96">Georg. ii. 96.</bibl>
-						</cit> The vineyards lay at the foot of the <placeName key="tgn,1109533">Rhaetian Alps</placeName>; their produce, we have reason to believe,
+                     <quote xml:lang="lat">Ex quo te carmine dicam, Rhaetica.</quote>
+                     <bibl n="Verg. G. 2.96">Georg. ii. 96.</bibl>
+                  </cit> The vineyards lay at the foot of the <placeName key="tgn,1109533">Rhaetian Alps</placeName>; their produce, we have reason to believe,
 						was not a very generous liquor. </note> but scarcely ever drank any in the
 					day-time. Instead of drinking, he used to take a piece of bread dipped in cold
 					water, or a slice of cucumber, or some leaves of lettuce, or a green, sharp,
 					juicy apple.</p>
-			</div>
-			<div type="textpart" n="76" subtype="chapter">
-				<p>After a slight repast at noon, he used to seek repose,<note anchored="true">A
+         </div>
+         <div n="76" type="chapter">
+            <p>After a slight repast at noon, he used to seek repose,<note anchored="true">A
 						custom in all warm countries; the siesta of the Italians in later
 						times.</note> dressed as he was, and with his shoes on, his feet covered,
 					and his hand held before his eyes. After supper he commonly withdrew to his
@@ -2136,9 +2218,9 @@
 					spot, belonging to any of his attendants. If at any time a fit of drowsiness
 					seized him in passing along the streets, his litter was set down while he
 					snatched a few moments' sleep.</p>
-			</div>
-			<div type="textpart" n="77" subtype="chapter">
-				<p>In person he was handsome and graceful through every period of his life. But he
+         </div>
+         <div n="77" type="chapter">
+            <p>In person he was handsome and graceful through every period of his life. But he
 					was negligent in his dress; and so careless about dressing his hair, that he
 					usually had it done in great haste, by several barbers at a time. His beard he
 					sometimes clipped, and sometimes shaved; and either read or wrote during the
@@ -2158,9 +2240,9 @@
 					This, however, was so much concealed by the just proportion of his limbs, that
 					it was only perceivable upon comparison with some taller person standing by
 					him.</p>
-			</div>
-			<div type="textpart" n="78" subtype="chapter">
-				<p>He is said to have been born with many spots upon his breast and belly, answering
+         </div>
+         <div n="78" type="chapter">
+            <p>He is said to have been born with many spots upon his breast and belly, answering
 					to the figure, order, and number of the stars in the constellation of the Bear.
 					He had besides several callosities resembling scars, occasioned by an itching in
 					his body, and the constant and violent use of the strigil<note anchored="true">The strigil was used in the baths for scraping the body when in a state of
@@ -2173,9 +2255,9 @@
 					with cold, to use it in writing, he was obliged to have recourse to a circular
 					piece of horn. He had occasionally a complaint in the bladder; but upon voiding
 					some stones in his urine, he was relieved from that pain.</p>
-			</div>
-			<div type="textpart" n="79" subtype="chapter">
-				<p>During the whole course of his life, he suffered, at times, dangerous fits of
+         </div>
+         <div n="79" type="chapter">
+            <p>During the whole course of his life, he suffered, at times, dangerous fits of
 					sickness, especially after the conquest of <placeName key="tgn,7002760">Cantabria</placeName>; when his liver being injured by a defluxion upon it,
 					he was reduced to such a condition, that he was obliged to undergo a desperate
 					and doubtful method of cure: for warm applications having no effect, Antonius
@@ -2187,11 +2269,12 @@
 					the wind was southerly, with a cold in his head. By all these complaints, his
 					constitution was so shattered, that he could not easily bear either heat or
 					cold.</p>
-			</div>
-			<div type="textpart" n="80" subtype="chapter">
-				<p>In the winter, he was protected against the inclemency of the weather by a thick
+         </div>
+         <div n="80" type="chapter">
+            <p>In the winter, he was protected against the inclemency of the weather by a thick
 					toga, four tunics, a shirt, a flannel stomacher, and swathings upon his legs and
-					thighs. <note anchored="true"><foreign xml:lang="lat">Feminalibus et
+					thighs. <note anchored="true">
+                  <foreign xml:lang="lat">Feminalibus et
 							tibialibus</foreign>: Neither the ancient Romans or the Greeks wore
 						breeches, trews, or trowsers, which they despised as barbarian articles of
 						dress. The coverings here mentioned were swathings for the legs and thighs,
@@ -2209,7 +2292,8 @@
 					the free use of the bath; but he was often rubbed with oil, and sweated in a
 					stove; after which he was washed with tepid water, warmed either by a fire, or
 					by being exposed to the heat of the sun. When, upon account of his nerves, he
-					was obliged to have recourse to sea-water, or the waters of <placeName key="tgn,1121086">Albula</placeName>,<note anchored="true"><placeName key="tgn,1121086">Albula</placeName>. On the left of the road to
+					was obliged to have recourse to sea-water, or the waters of <placeName key="tgn,1121086">Albula</placeName>,<note anchored="true">
+                  <placeName key="tgn,1121086">Albula</placeName>. On the left of the road to
 							<placeName key="tgn,7006968">Tivoli</placeName>, near the ruins of
 						Adrian's villa. The waters are sulphureous, and the deposit from them causes
 						incrustations on twigs and other matters plunged in the springs. See a
@@ -2217,9 +2301,9 @@
 						40.</note> he was contented with sitting over a wooden tub, which he called
 					by a Spanish name Dureta, and plunging his hands and feet in the water by
 					turns.</p>
-			</div>
-			<div type="textpart" n="81" subtype="chapter">
-				<p>As soon as the civil wars were ended, he gave up riding and other military
+         </div>
+         <div n="81" type="chapter">
+            <p>As soon as the civil wars were ended, he gave up riding and other military
 					exercises in the <placeName key="tgn,7006964">Campus Martius</placeName>, and
 					took to playing at ball, or foot-ball; but soon afterwards used no other
 					exercise than that of going abroad in his litter, or walking. Towards the end of
@@ -2229,9 +2313,9 @@
 					Syrians, for their beauty or amusing talk. But dwarfs, and such as were in any
 					way deformed, he held in abhorrence, as lusus naturae (nature's abortions), and
 					of evil omen.</p>
-			</div>
-			<div type="textpart" n="82" subtype="chapter">
-				<p>From early youth he devoted himself with great diligence and application to the
+         </div>
+         <div n="82" type="chapter">
+            <p>From early youth he devoted himself with great diligence and application to the
 					study of eloquence, and the other liberal arts. In the war of <placeName key="tgn,7009565">Modena</placeName>, notwithstanding the weighty affairs in
 					which he was engaged, he is said to have read, written, and declaimed every day.
 					He never addressed the senate, the people, or the army, but in a premeditated
@@ -2244,9 +2328,9 @@
 					himself in a sweet and peculiar tone, in which he was diligently instructed by a
 					master of elocution. But when he had a cold, he sometimes employed a herald to
 					deliver his speeches to the people.</p>
-			</div>
-			<div type="textpart" n="83" subtype="chapter">
-				<p>He composed many tracts in prose on various subjects, some of which he read
+         </div>
+         <div n="83" type="chapter">
+            <p>He composed many tracts in prose on various subjects, some of which he read
 					occasionally in the circle of his friends, as to an auditory. Among these was
 					his "Rescript to Brutus respecting <placeName key="tgn,2068381">Cato</placeName>." Most of the pages he read himself, although he was advanced
 					in years, but becoming fatigued, he gave the rest to Tiberius to finish. He
@@ -2260,12 +2344,13 @@
 					begun a tragedy with great zest, becoming dissatisfied with the style, he
 					obliterated the whole; and his friends saying to him, "What is your Ajax doing?"
 					he answered, "My Ajax met with a sponge."<note anchored="true">
-						<foreign xml:lang="lat">In spongam incubuisse</foreign>, literally has fallen
+                  <foreign xml:lang="lat">In spongam incubuisse</foreign>, literally has fallen
 						upon a sponge, as Ajax is said to have perished by falling on his own sword.
-					</note></p>
-			</div>
-			<div type="textpart" n="84" subtype="chapter">
-				<p>He cultivated a style which was neat and chaste, avoiding frivolous or harsh
+					</note>
+            </p>
+         </div>
+         <div n="84" type="chapter">
+            <p>He cultivated a style which was neat and chaste, avoiding frivolous or harsh
 					language, as well as obsolete words, which he calls disgusting. His chief object
 					was to deliver his thoughts with all possible perspicuity. To attain this end,
 					and that he might nowhere perplex, or retard the reader or hearer, he made no
@@ -2274,7 +2359,8 @@
 					grace to the style. Those who used affected language, or adopted obsolete words,
 					he despised, as equally faulty, though in different ways. He sometimes indulged
 					himself in jesting, particularly with his friend Maecenas, whom he rallied upon
-					all occasions for his fine phrases,<note anchored="true"><foreign xml:lang="grc">μυροβρεχεῖσ</foreign>. Suetonius often preserves
+					all occasions for his fine phrases,<note anchored="true">
+                  <foreign xml:lang="grc">μυροβρεχεῖσ</foreign>. Suetonius often preserves
 						expressive Greek phrases which Augustus was in the habit of using. This
 						compound word means, literally, myrrh-scented, perfumed. </note> and
 					bantered by imitating his way of talking. Nor did he spare Tiberius, who was
@@ -2288,9 +2374,9 @@
 					language ?" And in a letter where he commends the talent of his grand-daughter,
 					Agrippina, he says, "But you must be particularly careful, both in writing and
 					speaking, to avoid affectation."</p>
-			</div>
-			<div type="textpart" n="85" subtype="chapter">
-				<p>In ordinary conversation, he made use of several peculiar expressions, as appears
+         </div>
+         <div n="85" type="chapter">
+            <p>In ordinary conversation, he made use of several peculiar expressions, as appears
 					from letters in his own hand-writing; in which, now and then, when he means to
 					intimate that some persons would never pay their debts, he says, "They will pay
 					at the Greek Calends." And when he advised patience in the present posture of
@@ -2307,9 +2393,9 @@
 					never divides his words, so as to carry the letters which cannot be inserted at
 					the end of a line to the next, but puts them below the other, enclosed by a
 					bracket.</p>
-			</div>
-			<div type="textpart" n="86" subtype="chapter">
-				<p>He did not adhere strictly to orthography as laid down by the grammarians, but
+         </div>
+         <div n="86" type="chapter">
+            <p>He did not adhere strictly to orthography as laid down by the grammarians, but
 					seems to have been of the opinion of those who think, that we ought to write as
 					we speak; for as to his changing and omitting not only letters but whole
 					syllables, it is a vulgar mistake. Nor should I have taken notice of it, but
@@ -2319,13 +2405,13 @@
 					occasion to write in cypher, he put <term>b</term> for <term>a</term>,
 						<term>c</term> for <term>b</term>, and so forth; and instead of
 						<term>z</term>, <term>aa</term>.</p>
-			</div>
-			<div type="textpart" n="87" subtype="chapter">
-				<p>He was no less fond of the Greek literature, in which he made considerable
+         </div>
+         <div n="87" type="chapter">
+            <p>He was no less fond of the Greek literature, in which he made considerable
 					proficiency; having had Apollodorus of <placeName key="tgn,7016140">Pergamus</placeName>, for his master in rhetoric; whom, though much
 					advanced in years, he took with him from The City, when he was himself very
 					young, to <placeName key="perseus,Apollonia">Apollonia</placeName>.</p>
-				<p>Afterwards, being instructed in philology by Sephaerus, he received into his
+            <p>Afterwards, being instructed in philology by Sephaerus, he received into his
 					family Areus the philosopher, and his sons Dionysius and Nicanor; but he never
 					could speak the Greek tongue readily, nor ever ventured to compose in it. For if
 					there was occasion for him to deliver his sentiments in that language, he always
@@ -2356,18 +2442,19 @@
 					and by men of the most eminent abilities: and he enjoined the praetors not to
 					suffer his name to be made too common in the contests amongst orators and poets
 					in the theatres.</p>
-			</div>
-			<div type="textpart" n="88" subtype="chapter">
-				<p>We have the following account of him respecting his belief in omens and such
+         </div>
+         <div n="88" type="chapter">
+            <p>We have the following account of him respecting his belief in omens and such
 					like. He had so great a dread of thunder and lightning that he always carried
 					about him a seal's skin, by way of preservation. And upon any apprehension of a
 					violent storm, he would retire to some place of concealment in a vault under
 					ground; having formerly been terrified by a flash of lightning, while travelling
 					in the night, as we have already mentioned.<note anchored="true">Chap.
-						xxix.</note></p>
-			</div>
-			<div type="textpart" n="89" subtype="chapter">
-				<p>He neither slighted his own dreams nor those of other people relating to himself.
+						xxix.</note>
+            </p>
+         </div>
+         <div n="89" type="chapter">
+            <p>He neither slighted his own dreams nor those of other people relating to himself.
 					At the battle of <placeName key="tgn,7010789">Philippi</placeName>, although he
 					had resolved not to stir out of his tent, on account of his being indisposed,
 					yet, being warned by a dream of one of his friends, he changed his mind; and
@@ -2385,9 +2472,9 @@
 					hung at the gates of great houses. In consequence of a dream, too, he always, on
 					a certain day of the year, begged alms of the people, reaching out his hand to
 					receive the dole which they offered him.</p>
-			</div>
-			<div type="textpart" n="90" subtype="chapter">
-				<p>Some signs and omens he regarded as infallible. If in the morning his shoe was
+         </div>
+         <div n="90" type="chapter">
+            <p>Some signs and omens he regarded as infallible. If in the morning his shoe was
 					put on wrong, the left instead of the right, that boded some disaster. If when
 					he commenced a long journey, by sea or land, there happened to fall a mizzling
 					rain, he held it to be a good sign of a speedy and happy return. He was much
@@ -2422,9 +2509,9 @@
 						the nones they reckoned backwards to the calends, as they also did from the
 						ides to the nones."-Ib.</note> avoiding nothing else in it, as he writes to
 					Tiberius, than its unlucky name.</p>
-			</div>
-			<div type="textpart" n="91" subtype="chapter">
-				<p>With regard to the religious ceremonies of foreign nations, he was a strict
+         </div>
+         <div n="91" type="chapter">
+            <p>With regard to the religious ceremonies of foreign nations, he was a strict
 					observer of those which had been established by ancient custom; but others he
 					held in no esteem. For, having been initiated at <placeName key="perseus,Athens">Athens</placeName>, and coming afterwards to hear a cause at <placeName key="perseus,Rome">Rome</placeName>, relative to the privileges of the
 					priests of the Attic Ceres, when some of the mysteries of the sacred rites were
@@ -2437,10 +2524,11 @@
 					passage through <placeName key="tgn,7001407">Judea</placeName>.<note anchored="true">The early Christians shared with the Jews the aversion of
 						the Romans to their religion, more than that of others, arising probably
 						from its monotheistic and exclusive character. But we find from Josephus and
-						Philo that Augustus was in other respects favourable to the Jews.</note></p>
-			</div>
-			<div type="textpart" n="92" subtype="chapter">
-				<p>Since we are upon this subject, it may not be improper to give an account of the
+						Philo that Augustus was in other respects favourable to the Jews.</note>
+            </p>
+         </div>
+         <div n="92" type="chapter">
+            <p>Since we are upon this subject, it may not be improper to give an account of the
 					omens, before and at his birth, as well as afterwards, which gave hopes of his
 					future greatness, and the good fortune that constantly attended him. A part of
 					the wall of <placeName key="tgn,7009108">Velletri</placeName> having in former
@@ -2449,14 +2537,14 @@
 					which prediction, the Velletrians both then, and several times afterwards, made
 					war upon the Roman people, to their own ruin. At last it appeared by the event,
 					that the omen had portended the elevation of Augustus.</p>
-				<p>Julius Marathus informs us, that a few months before his birth, there happened at
+            <p>Julius Marathus informs us, that a few months before his birth, there happened at
 						<placeName key="perseus,Rome">Rome</placeName> a prodigy, by which was
 					signified that Nature was in travail with a king for the Roman people; and that
 					the senate, in alarm, came to the resolution that no child born that year should
 					be brought up; but that those amongst them, whose wives were pregnant, to secure
 					to themselves a chance of that dignity, took care that the decree of the senate
 					should not be registered in the treasury.</p>
-				<p>I find in the theological books of Asclepiades the Mendesian,<note anchored="true">Strabo tells us that Mendes was a city of <placeName key="tgn,7016833">Egypt</placeName> near <placeName key="tgn,7001111">Lycopolis</placeName>. Asclepias wrote a book in Greek with the idea of
+            <p>I find in the theological books of Asclepiades the Mendesian,<note anchored="true">Strabo tells us that Mendes was a city of <placeName key="tgn,7016833">Egypt</placeName> near <placeName key="tgn,7001111">Lycopolis</placeName>. Asclepias wrote a book in Greek with the idea of
 							<foreign xml:lang="grc">θεολογουμενῶν</foreign>, in defence of some
 						very strange religious rites, of which the example in the text is a
 						specimen. </note> that Atia, upon attending at midnight a religious
@@ -2471,7 +2559,7 @@
 					dreamed that her bowels stretched to the stars, and expanded through the whole
 					circuit of heaven and earth. His father Octavius, likewise, dreamt that a
 					sun-beam issued from his wife's womb.</p>
-				<p>Upon the day he was born, the senate being engaged in a debate on Catiline's
+            <p>Upon the day he was born, the senate being engaged in a debate on Catiline's
 					conspiracy, and Octavius, in consequence of his wife's being in childbirth,
 					coming late into the house, it is a well-known fact, that Publius Nigidius, upon
 					hearing the occasion of his coming so late, and the hour of his wife's delivery,
@@ -2486,10 +2574,11 @@
 					thunder and a sceptre, and the other insignia of <placeName key="tgn,1125260">Jupiter</placeName>, Optimus, Maximus, having on his head a radiant crown,
 					mounted upon a chariot decked with laurel, and drawn by six pair of milk-white
 					horses.</p>
-				<p>Whilst he was yet an infant, as Caius Drusus relates, being laid in his cradle by
+            <p>Whilst he was yet an infant, as Caius Drusus relates, being laid in his cradle by
 					his nurse, and in a low place, the next day he was not to be found, and after he
 					had been sought for a long time, he was at last discovered upon a lofty tower,
-					lying with his face towards the rising sun.<note anchored="true"><placeName key="tgn,7009108">Velletri</placeName> stands on very high ground,
+					lying with his face towards the rising sun.<note anchored="true">
+                  <placeName key="tgn,7009108">Velletri</placeName> stands on very high ground,
 						commanding extensive views of the Pontine marshes and the sea.</note> When
 					he first began to speak, he ordered the frogs that happened to make a
 					troublesome noise, upon an estate belonging to the family near the town, to be
@@ -2498,7 +2587,7 @@
 					eagle suddenly snatched a piece of bread out of his hand, and, soaring to a
 					prodigious height, after hovering, came down most unexpectedly, and returned it
 					to him.</p>
-				<p>Quintus Catulus had a dream, for two nights successively after his dedication of
+            <p>Quintus Catulus had a dream, for two nights successively after his dedication of
 					the Capitol. The first night he dreamt that <placeName key="tgn,2019952">Jupiter</placeName>, out of several boys of the order of the nobility, who
 					were playing about his altar, selected one, into whose bosom he put the public
 					seal of the commonwealth, which he held in his hand; but in his vision the next
@@ -2512,7 +2601,7 @@
 					might have a guardian, had pointed to one amongst them, to whom they were to
 					prefer their requests; and putting his fingers to the boy's mouth to kiss, he
 					afterwards applied them to his own.</p>
-				<p>Marcus Cicero, as he was attending Caius Caesar to the Capitol, happened to be
+            <p>Marcus Cicero, as he was attending Caius Caesar to the Capitol, happened to be
 					telling some of his friends a dream which he had the preceding night, in which
 					he saw a comely youth, let down from heaven by a golden chain, who stood at the
 					door of the Capitol, and had a whip put into his hands by Jupiter. And
@@ -2522,7 +2611,8 @@
 					manly toga, his senatorian tunic becoming loose in the seam on each side, fell
 					at his feet. Some would have this to forbode, that the order, of which that was
 					the badge of distinction, would some time or other be subject to him.</p>
-				<p>Julius Caesar, in cutting down a wood to make room for his camp near <placeName key="tgn,2552514">Munda</placeName>,<note anchored="true"><placeName key="tgn,2552514">Munda</placeName> was a city in the Hispania Boetica,
+            <p>Julius Caesar, in cutting down a wood to make room for his camp near <placeName key="tgn,2552514">Munda</placeName>,<note anchored="true">
+                  <placeName key="tgn,2552514">Munda</placeName> was a city in the Hispania Boetica,
 						where Julius Caesar fought a battle. See c. lvi.</note> happened to light
 					upon a palm-tree, and ordered it to be preserved as an omen of victory. From the
 					root of this tree there put out immediately a sucker, which, in a few days, grew
@@ -2531,7 +2621,7 @@
 					particularly avoids a hard and rough leaf. It is likewise reported, that Caesar
 					was chiefly influenced by this prodigy, to prefer his sister's grandson before
 					all others for his successor.</p>
-				<p>In his retirement at <placeName key="tgn,7016987">Apollonia</placeName>, he went
+            <p>In his retirement at <placeName key="tgn,7016987">Apollonia</placeName>, he went
 					with his friend Agrippa to visit Theogenes, the astrologer, in his gallery on
 					the roof. Agrippa, who first consulted the fates, having great and almost
 					incredible fortunes predicted of him, Augustus did not choose to make known his
@@ -2542,9 +2632,9 @@
 					was so confident of the greatness of his destiny, that he published his
 					horoscope, and struck a silver coin, bearing upon it the sign of Capricorn,
 					under the influence of which he was born.</p>
-			</div>
-			<div type="textpart" n="93" subtype="chapter">
-				<p>After the death of Caesar, upon his return from <placeName key="tgn,7016987">Apollonia</placeName>, as he was entering the city, on a sudden, in a clear
+         </div>
+         <div n="93" type="chapter">
+            <p>After the death of Caesar, upon his return from <placeName key="tgn,7016987">Apollonia</placeName>, as he was entering the city, on a sudden, in a clear
 					and bright sky, a circle resembling the rainbow surrounded the body of the sun;
 					and, immediately afterwards, the tomb of <placeName key="tgn,2118772">Julia</placeName>, Caesar's daughter, was struck by lightning. In his first
 					consulship, whilst he was observing the auguries, twelve vultures presented
@@ -2552,9 +2642,9 @@
 					livers of all the victims were folded inward in the lower part; a circumstance
 					which was regarded by those present, who had skill in things of that nature, as
 					an indubitable prognostic of great and wonderful fortune.</p>
-			</div>
-			<div type="textpart" n="94" subtype="chapter">
-				<p>He certainly had a presentiment of the issue of all his wars. When the troops of
+         </div>
+         <div n="94" type="chapter">
+            <p>He certainly had a presentiment of the issue of all his wars. When the troops of
 					the Triumviri were collected about Bolognia, an eagle, which sat upon his tent,
 					and was attacked by two crows, beat them both, and struck them to the ground, in
 					the view of the whole army; who thence inferred that discord would arise between
@@ -2578,9 +2668,9 @@
 						Greek, signifies "fortunate," and the latter, "victorious." </note> After
 					the victory, he erected a brazen statue to each, in a temple built upon the spot
 					where he had encamped.</p>
-			</div>
-			<div type="textpart" n="95" subtype="chapter">
-				<p>His death, of which I shall now speak, and his subsequent deification, were
+         </div>
+         <div n="95" type="chapter">
+            <p>His death, of which I shall now speak, and his subsequent deification, were
 					intimated by divers manifest prodigies. As he was finishing the census amidst a
 					great crowd of people in the <placeName key="tgn,7006964">Campus
 						Martius</placeName>, an eagle hovered round him several times, and then
@@ -2600,14 +2690,15 @@
 					several persons who applied to him respecting causes they had depending, he
 					cried out, (and it was afterwards regarded as an omen of his death), "Not all
 					the business in the world, shall detain me at <placeName key="perseus,Rome">Rome</placeName> one moment longer;" and setting out upon his journey, he
-					went as far as <placeName key="perseus,Astura">Astura</placeName>; <note anchored="true"><placeName key="perseus,Astura">Astura</placeName> stood not
+					went as far as <placeName key="perseus,Astura">Astura</placeName>; <note anchored="true">
+                  <placeName key="perseus,Astura">Astura</placeName> stood not
 						far from <placeName key="tgn,7006704">Terracina</placeName>, on the road to
 							<placeName key="tgn,7004474">Naples</placeName>. Augustus embarked there
 						for the islands lying off that coast.</note> whence, contrary to his custom,
 					he put to sea in the nighttime, as there was a favourable wind.</p>
-			</div>
-			<div type="textpart" n="96" subtype="chapter">
-				<p>His malady proceeded from diarrhoea; notwithstanding which, he went round the
+         </div>
+         <div n="96" type="chapter">
+            <p>His malady proceeded from diarrhoea; notwithstanding which, he went round the
 					coast of <placeName key="tgn,7003005">Campania</placeName>, and the adjacent
 					islands, and spent four days in that of <placeName key="tgn,7006855">Capri</placeName>; where he gave himself up entirely to repose and
 					relaxation. Happening to sail by the bay of <placeName key="perseus,Puteoli">Puteoli</placeName>, the passengers and mariners aboard a ship of
@@ -2639,13 +2730,21 @@
 						African origin.</note> he used to call <foreign xml:lang="grc">κτιστήσ</foreign>, as if he had been the planter of the island. And
 					observing from his room a great company of people with torches, assembled at the
 					tomb of this Masgabas, who died the year before, he uttered very distinctly this
-					verse, which he made extempore: <quote xml:lang="grc"><l>κτιστοῦ δὲ τύμβον</l></quote>
-					<quote xml:lang="eng"><l>Blazing with lights I see the founder's
-						tomb.</l></quote> Then turning to Thrasyllus, a companion of Tiberius, who
+					verse, which he made extempore: <quote xml:lang="grc">
+                  <l>κτιστοῦ δὲ τύμβον</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Blazing with lights I see the founder's
+						tomb.</l>
+               </quote> Then turning to Thrasyllus, a companion of Tiberius, who
 					reclined on the other side of the table, he asked him, who knew nothing about
 					the matter, what poet he thought was the author of that verse; and on his
-					hesitating to reply, he added another: <quote xml:lang="grc"><l>ὁρᾷς</l></quote>
-					<quote xml:lang="eng"><l>Honor'd with torches, Masgabas you see;</l></quote> and
+					hesitating to reply, he added another: <quote xml:lang="grc">
+                  <l>ὁρᾷς</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Honor'd with torches, Masgabas you see;</l>
+               </quote> and
 					put the same question to him concerning that likewise. The latter replying,
 					that, whoever might be the author, they were excellent verses,<note anchored="true">A courtly answer from the Professor of Science, in which
 						character he attended Tiberius. We shall hear more of him in the reign of
@@ -2657,16 +2756,20 @@
 					disorder increasing, he stopped at <placeName key="tgn,2113780">Nola</placeName>, sent for Tiberius back again, and had a long discourse with
 					him in private; after which, he gave no further attention to business of any
 					importance.</p>
-			</div>
-			<div type="textpart" n="97" subtype="chapter">
-				<p>Upon the day of his death, he now and then enquired, if there was any disturbance
+         </div>
+         <div n="97" type="chapter">
+            <p>Upon the day of his death, he now and then enquired, if there was any disturbance
 					in the town on his account; and calling for a mirror, he ordered his hair to be
 					combed, and his shrunk cheeks to be adjusted. Then asking his friends who were
 					admitted into the room, "Do you think that I have acted my part on the stage of
-					life well?" he immediately subjoined, <quote xml:lang="grc"><l>εἰ δὲ πᾶν</l>
-						<l>δότε κρότον, καὶ πάντεσ ὑμεῖσ μετὰ χαρᾶσ κτυπήσατε.</l></quote>
-					<quote xml:lang="eng"><l>If all be right, with joy your voices raise,</l>
-						<l>In loud applauses to the actor's praise.</l></quote> After which, having
+					life well?" he immediately subjoined, <quote xml:lang="grc">
+                  <l>εἰ δὲ πᾶν</l>
+                  <l>δότε κρότον, καὶ πάντεσ ὑμεῖσ μετὰ χαρᾶσ κτυπήσατε.</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>If all be right, with joy your voices raise,</l>
+                  <l>In loud applauses to the actor's praise.</l>
+               </quote> After which, having
 					dismissed them all, whilst he was inquiring of some persons who were just
 					arrived from <placeName key="tgn,7013962">Rome</placeName>, concerning Drusus's
 					daughter, who was in a bad state of health, he expired suddenly, amidst the
@@ -2680,14 +2783,15 @@
 					complained that he was carried away by forty men. But this was rather a presage,
 					than any delirium: for precisely that number of soldiers belonging to the
 					praetorian cohort, carried out his corpse.</p>
-			</div>
-			<div type="textpart" n="98" subtype="chapter">
-				<p>He expired in the same room in which his father Octavius had died, when the two
+         </div>
+         <div n="98" type="chapter">
+            <p>He expired in the same room in which his father Octavius had died, when the two
 					Sextus's, Pompey and Apuleius, were consuls, upon the fourteenth of the calends
 					of September [the 19th August], at the ninth hour of the day, being seventy-six
 					years of age, wanting only thirty-five days. <note anchored="true">Augustus was
 						born A. U. C. 691, and died A. U. C. 766.</note> His remains were carried by
-					the magistrates of the municipal <note anchored="true"><foreign xml:lang="lat">Municipia</foreign> were towns which had obtained the rights of Roman
+					the magistrates of the municipal <note anchored="true">
+                  <foreign xml:lang="lat">Municipia</foreign> were towns which had obtained the rights of Roman
 						citizens. Some of them had all which could be enjoyed without residing at
 							<placeName key="tgn,7013962">Rome</placeName>. Others had the right of
 						serving in the Roman legions, but not that of voting, nor of holding civil
@@ -2730,9 +2834,9 @@
 						Bustum, where the bodies of the emperor and his family were burnt, is
 						supposed to have stood on the site of the church of the <placeName key="tgn,2047837">Madonna</placeName> of that name.</note> at which time
 					likewise he gave the groves and walks about it for the use of the people.</p>
-			</div>
-			<div type="textpart" n="99" subtype="chapter">
-				<p>He made a will a year and four months before his death, upon the third of the
+         </div>
+         <div n="99" type="chapter">
+            <p>He made a will a year and four months before his death, upon the third of the
 					nones of April [the 11th of April], in the consulship of Lucius Plancus, and
 					Caius Silius. It consisted of two skins of parchment, written partly in his own
 					hand, and partly by his freedmen Polybius and Hilarian; and had been committed
@@ -2769,10 +2873,10 @@
 					in the treasury, the revenue, and arrears of taxes; to which were added the
 					names of the freedmen and slaves from whom the several accounts might be taken.
 				</p>
-			</div>
-			<div type="textpart" n="note" subtype="chapter">
-				<head>Remarks on Augustus</head>
-				<p>OCTAVIUS Caesar, afterwards Augustus, had now attained to the same position in
+         </div>
+         <div n="note" type="chapter">
+            <head>Remarks on Augustus</head>
+            <p>OCTAVIUS Caesar, afterwards Augustus, had now attained to the same position in
 					the state which had formerly been occupied by Julius Caesar; and though he entered upon it by violence, he
 					continued to enjoy it through life with almost uninterrupted tranquillity. By
 					the long duration of the late civil war, with its concomitant train of public
@@ -2803,7 +2907,7 @@
 					was by the assistance of the legions that he had risen to power; and they were
 					the men who, in the last resort, if such an emergency should ever occur, could
 					alone enable him to preserve it.</p>
-				<p>History relates, that after the overthrow of Antony, Augustus held a consultation
+            <p>History relates, that after the overthrow of Antony, Augustus held a consultation
 					with Agrippa and Maecenas about restoring the republican form of government;
 					when Agrippa gave his opinion in favour of that measure, and Maecenas opposed
 					it. The object of this consultation, in respect to its future consequences on
@@ -2827,7 +2931,7 @@
 					with members for a decision according to his wish, he would have rendered
 					himself obnoxious to the public odium, and given rise to discontents which might
 					have endangered his future security.</p>
-				<p>But to submit this important question to the free and unbiassed decision of a
+            <p>But to submit this important question to the free and unbiassed decision of a
 					numerous assembly, it is probable, neither suited the inclination of Augustus,
 					nor perhaps, in his opinion, consisted with his personal safety. With a view to
 					the attainment of unconstitutional power, he had formerly deserted the cause of
@@ -2840,7 +2944,7 @@
 					intoxicating quality, injurious both to public and private virtue, yet all
 					history contradicts the supposition of its being endued with any which is
 					unpalatable to the general taste of mankind.</p>
-				<p>There were two chief motives by which Augustus would naturally be influenced in a
+            <p>There were two chief motives by which Augustus would naturally be influenced in a
 					deliberation on this important subject; namely, the love of power, and the
 					personal danger which he might incur from relinquishing it. Either of these
 					motives might have been a sufficient in ducement for retaining his authority;
@@ -2850,7 +2954,7 @@
 					can be entertained: but it may be proper to inquire, in a few words, into the
 					foundation of that personal danger which he dreaded to incur, on returning to
 					the station of a private citizen.</p>
-				<p>Augustus, as has been already observed, had formerly sided with the party which
+            <p>Augustus, as has been already observed, had formerly sided with the party which
 					had attempted to restore public liberty after the death of Julius Caesar: but he
 					afterwards abandoned the popular cause, and joined in the ambitious plans of
 					Antony and Lepidus to usurp amongst themselves the entire dominion of the state.
@@ -2880,13 +2984,13 @@
 					end his days in quiet retirement; and the undisturbed security which Augustus
 					ever afterwards enjoyed, affords sufficient proof, that all apprehension of
 					danger to his person was merely chimerical.</p>
-				<p>We have hitherto considered this grand consultation as it might be influenced by
+            <p>We have hitherto considered this grand consultation as it might be influenced by
 					the passions or prejudices of the emperor: we shall now take a short view of the
 					subject in the light in which it is connected with considerations of a political
 					nature, and with public utility. The arguments handed down by history respecting
 					this consultation are few, and imperfectly delivered; but they may be extended
 					upon the general principles maintained on each side of the question.</p>
-				<p>For the restoration of the republican government, it might be contended, that
+            <p>For the restoration of the republican government, it might be contended, that
 					from the expulsion of the kings to the dictatorship of Julius Caesar, through a
 					period of upwards of four hundred and sixty years, the Roman state, with the
 					exception only of a short interval, had flourished and increased with a degree
@@ -2908,7 +3012,7 @@
 					and, upon the whole, that the interests of the people were more safely entrusted
 					in the hands of annual magistrates elected by themselves, than in those of any
 					individual whose power was permanent, and subject to no legal control.</p>
-				<p>In favour of despotic government it might be urged, that though <placeName key="tgn,7013962">Rome</placeName> had subsisted long and gloriously under a
+            <p>In favour of despotic government it might be urged, that though <placeName key="tgn,7013962">Rome</placeName> had subsisted long and gloriously under a
 					republican form of government, yet she had often experienced such violent shocks
 					from popular tumults or the factions of the great, as had threatened her with
 					imminent destruction: that a republican government was only accommodated to a
@@ -2931,14 +3035,14 @@
 					princes successively, so it was only by a similar form of political constitution
 					that she could now be saved from aristocratical tyranny on one hand, or, on the
 					other, from absolute anarchy.</p>
-				<p>On whichever side of the question the force of argument may be thought to
+            <p>On whichever side of the question the force of argument may be thought to
 					preponderate, there is reason to believe that Augustus was guided in his
 					resolution more by inclination and prejudice than by reason. It is related,
 					however, that hesitating between the opposite opinions of his two counsellors,
 					he had recourse to that of Virgil, who joined with Maecenas in advising him to
 					retain the imperial power, as being the form of government most suitable to the
 					circumstances of the times. </p>
-			</div>
-		</div></body>
-	</text>
+         </div>
+      </body>
+   </text>
 </TEI>

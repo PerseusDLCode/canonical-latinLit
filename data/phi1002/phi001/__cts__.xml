@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1002.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1002">
             <ti:title xml:lang="lat">Institutio Oratoria</ti:title>
             <ti:translation urn="urn:cts:latinLit:phi1002.phi001.perseus-eng2" workUrn="urn:cts:latinLit:phi1002.phi001" xml:lang="eng">
@@ -11,4 +12,4 @@
             <ti:description xml:lang="mul">Quintilian. Institutio Oratoria, Volume 1-4. Butler, Harold Edgeworth, editor.
               Cambridge, Mass; London: Harvard University Press, William Heinemann Ltd., 1920-1922.</ti:description>
             </ti:edition>
-          </ti:work>
+          <ti:genre confidence="high">prose-book-chapter</ti:genre></ti:work>

@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0959" projid="latinLit:phi010" urn="urn:cts:latinLit:phi0959.phi010" xml:lang="lat">
   <ti:title xml:lang="lat">Ibis</ti:title>
   <ti:edition projid="latinLit:perseus-lat2" urn="urn:cts:latinLit:phi0959.phi010.perseus-lat2" workUrn="urn:cts:latinLit:phi0959.phi010" xml:lang="lat">
@@ -6,4 +7,4 @@
       Merkel, Rudolph; editors. Leipzig: B. G. Teubner, 1889.
     </ti:description>       
   </ti:edition>
-</ti:work>
+<ti:genre confidence="high">verse-stichic</ti:genre></ti:work>

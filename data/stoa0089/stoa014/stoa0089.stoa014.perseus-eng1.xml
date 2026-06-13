@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Panegyric on the Consuls Probinus and Olybrius</title>
+            <title>Panegyric on the Consuls Probinus and Olybrius</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,11 +41,13 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="poem"/>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -56,8 +58,8 @@
    <text id="stoa0089.stoa014.perseus-eng1">
       <body>
          <pb id="v.1.p.3" TEIform="pb"/>
-               <div1 type="poem" n="1">
-         <p>
+         <div1 type="poem" n="1">
+            <p>
 
 Sun, that encirclest the world with reins of flame
 and rollest in ceaseless motion the revolving centuries,
@@ -68,7 +70,7 @@ the heavens more jocund in their loftier drawn
 chariot. Now let the year bend its new steps for
 the consul brothers and the glad months take their
 beginning.</p>
-         <p>Thou wottest of the Auchenian1 race nor are the
+            <p>Thou wottest of the Auchenian1 race nor are the
 powerful Anniadae unknown to thee, for thou oft
 hast started thy yearly journey with them as consuls
 and hast given their name to thy revolution. For
@@ -80,10 +82,10 @@ kin. Select what man thou wilt from their family,
 counted by the fasces (for each has held them), the
 same recurring honours crown them, and a like
 destiny awaits their children in unbroken succession.</p>
-         <p>No noble, though he boast of the brazen statues of his
+            <p>No noble, though he boast of the brazen statues of his
 ancestors, though Rome be thronged with senators,
 no noble, I say, dare boast himself their equal.</p>
-         <p>Give the first place to the Auchenii and let who will
+            <p>Give the first place to the Auchenii and let who will
 contest the second. It is as when the moon queens
 it in the calm northern sky and her orb gleams with
 brightness equal to that of her brother whose light
@@ -92,11 +94,11 @@ Arcturus' beam grows dim and tawny Leo loses his
 angry glint, far-spaced shine the Bear's stars in the
 Wain, wroth at their eclipse, Orion's shafts grow dark
 as he looks in feeble amaze at his strengthless arm.</p>
-         <p>Which shall I speak of first? Who has not heard
+            <p>Which shall I speak of first? Who has not heard
 of the deeds of Probinus of ancient lineage, who
 knows not the endless praise of Olybrius?
 </p>
-         <p>The far-flung fame of Probus1 and his sire lives
+            <p>The far-flung fame of Probus1 and his sire lives
 yet and fills all ears with widespread discourse: the
 years to come shall not silence it nor time o'ercloud
 or put an end to it. His great name carries him
@@ -125,7 +127,7 @@ water trickling from unsmelted lodes, the glittering
 ore that enriches Hermus' banks, the golden sand
 that rich Pactolus in flood deposits over the plains of Lydia.
 </p>
-         <p>Could my words issue from a hundred mouths,
+            <p>Could my words issue from a hundred mouths,
 could Phoebus' manifold inspiration breathe through
 a hundred breasts, even so I could not tell of Probus'
 deeds, of all the people his ordered governance
@@ -146,7 +148,7 @@ pleasant down. Do thou, my Muse, tell their
 ignorant poet what god it was granted such a boon
 to the twain.
 </p>
-         <p>When the warlike emperor had with the thunderbolt
+            <p>When the warlike emperor had with the thunderbolt
 of his might put his enemy to flight and freed
 <pb id="v.1.p.9"/>
 the Alps from fear, Rome, anxious worthily to thank
@@ -179,7 +181,7 @@ and the wolf that was their nurse; Tiber is embossed
 in electrum, the children in pure gold, brazen is the
 wolf, and Mars fashioned of flashing steel.
 </p>
-         <p>And now Rome, loosing both her steeds together,
+            <p>And now Rome, loosing both her steeds together,
 flies swifter than the fleet east wind; the Zephyrs
 shrill and the clouds, cleft with the track of the
 wheels, glow in separate furrows. What matchless
@@ -189,17 +191,17 @@ goal: it is there where in their furthermost parts the
 Alps narrow their approaches into tortuous valleys
 and extend their adamantine bars of piled-up rocks.
 </p>
-         <p>No other hand could unlock that gate, as, to their
+            <p>No other hand could unlock that gate, as, to their
 cost, those two tyrants 1  found; to the Emperor
 only they offer a way. The smoke of towers o'erthrown
 and of ruined fortresses ascends to heaven.
 </p>
-         <p>Slaughtered men are piled up on a heap and bring
+            <p>Slaughtered men are piled up on a heap and bring
 the lowest valley equal with the hills; corpses
 welter in their blood; the very shades are confounded
 with the inrush of the slain.
 </p>
-         <p>Close at hand the victor, Theodosius, happy that
+            <p>Close at hand the victor, Theodosius, happy that
 his warfare is accomplished, sits upon the green
 sward, his shoulders leaning against a tree. Triumphant
 earth crowned her lord and flowers sprang up
@@ -214,7 +216,7 @@ coursers; an outstretched spear, a huge
 cornel trunk, arms his hand and flashes its tremulous
 splendour over Hebrus' stream.
 </p>
-         <p>When Rome had ended her airy journey and now
+            <p>When Rome had ended her airy journey and now
 stood before her lord, thrice thundered the conscious
 rocks and the black wood shuddered in awe. First
 to speak was the hero: <q direct="unspecified"> Goddess and friend, mother
@@ -229,9 +231,9 @@ Libyan sun nor from the cold winds of a Russian
 midwinter. At thy behest I will traverse all lands
 and fearing no season of the year will hazard Meroe
 in summer and the Danube in winter.</q>
-         </p>
-         <p>Then the Queen answered: <q direct="unspecified">
-               <p>Full well know I,
+            </p>
+            <p>Then the Queen answered: <q direct="unspecified">
+                  <p>Full well know I,
 far-famed ruler, that thy victorious armies toil for
 Italy, and that once again servitude and furious
 rebels have given way before thee, overthrown in
@@ -245,7 +247,7 @@ ones their cradles when the goddess of childbirth
 freed their mother's womb from its blessed burden
 and heaven brought to light her glorious offspring.
 </p>
-               <p>To these I would not prefer the noble Decii nor the
+                  <p>To these I would not prefer the noble Decii nor the
 brave Metelli, no, nor the Scipios who overcame the
 warlike Carthaginians nor the Camilli, that family
 fraught with ruin for the Gauls. The Muses have
@@ -261,15 +263,15 @@ and appoint for them the path of the coming year.
 'Tis no unreasonable request and will be no unheard-
 of boon. Their birth demands it should be so.
 </p>
-               <p>Grant it; so may Scythian Araxes be our vassal
+                  <p>Grant it; so may Scythian Araxes be our vassal
 <pb id="v.1.p.15"/>
 and Rhine's either bank; so may the Mede be
 o'erthrown and the towers that Semiramis built
 yield to our standards, while amazed Ganges flows
 between Roman cities.</p>
-            </q>
-         </p>
-         <p>To this the king: <q direct="unspecified"> Goddess, thou biddest me do
+               </q>
+            </p>
+            <p>To this the king: <q direct="unspecified"> Goddess, thou biddest me do
 what I would fain do and askest a boon that I wish
 to grant: thy entreaties were not needed for this.
 Does forgetfulness so wholly cloud my mind that I
@@ -281,8 +283,8 @@ flowing Indus shall be ice-bound, terror-stricken
 once again by the banquet of Thyestes the sun
 shall stay his course and fly for refuge back into the
 east, all this ere Probus can fade from my memory.</q>
-         </p>
-         <p>He spake, and now the speedy messenger hies him
+            </p>
+            <p>He spake, and now the speedy messenger hies him
 to Rome. Straightway the choirs chant and the
 seven hills re-echo their tuneful applause. Joy is in
 the heart of that aged mother whose skilled fingers
@@ -300,13 +302,13 @@ Maenalus, her unerring bow wearied with much
 hunting, and Phoebus bearing the sword still dripping
 with black venom from the slaughtered Python.
 </p>
-         <p>Then their dear island laved the feet of its acknow-
+            <p>Then their dear island laved the feet of its acknow-
 <pb id="v.1.p.17"/>
 ledged deities, the Aegean smiled more gently on
 its nurslings, the Aegean whose soft ripples bore
 witness to its joy.
 </p>
-         <p>So Proba 1 adorns her children with vestment
+            <p>So Proba 1 adorns her children with vestment
 rare, Proba, the world's glory, by whose increase
 the power of Rome, too, is increased. You would
 have thought her Modesty's self fallen from heaven
@@ -318,12 +320,12 @@ a husband, for he surpassed all husbands as she all
 wives. 'Twas as though in rivalry either sex had
 done its uttermost and so brought about this marriage.
 </p>
-         <p>Let Pelion vaunt no more that Nereid bride .2
+            <p>Let Pelion vaunt no more that Nereid bride .2
 Happy thou that art the mother of consuls twain,
 blessed thy womb whose offspring have given the
 year their name for its own.
 </p>
-         <p>So soon as their hands held the sceptres and the
+            <p>So soon as their hands held the sceptres and the
 jewel-studded togas had enfolded their limbs the
 almighty Sire vouchsafes a sign with riven cloud
 and the shaken heavens, projecting a welcoming
@@ -346,16 +348,16 @@ these pour babbling streamlets; water drips upon
 his breast, showers pour down his hair-crowned
 forehead, flowing rivers from his parted beard.
 </p>
-         <p>There clothes his massy shoulders a cloak woven by
+            <p>There clothes his massy shoulders a cloak woven by
 his wife Ilia, who threaded the crystalline loom
 beneath the flood.
 </p>
-         <p>There lies in Roman Tiber's stream an island
+            <p>There lies in Roman Tiber's stream an island
 where the central flood washes as 'twere two cities
 parted by the sundering waters: with equal threatening
 height the tower-clad banks rise in lofty buildings.
 </p>
-         <p>Here stood Tiber and from this eminence
+            <p>Here stood Tiber and from this eminence
 beheld his prayer of a sudden fulfilled, saw the
 twin-souled brothers enter the Forum amid the
 press of thronging senators, the bared axes gleam
@@ -363,7 +365,7 @@ afar and both sets of fasces brought forth from one
 threshold. He stood amazed at the sight and for a
 long time incredulous joy held his voice in check.
 </p>
-         <p>Yet soon he thus began:
+            <p>Yet soon he thus began:
 <q direct="unspecified"> Behold, Eurotas, river of Sparta, boastest thou
 that thy streams have ever nurtured such as these?
 Did that false swan 1 beget a child to rival them,
@@ -398,15 +400,15 @@ who tempers the fields of Sparta's colony Tarentum.
 This day shall always be held in honour and observed
 by our rivers and its anniversary ever celebrated
 with rich feastings.</q>
-         </p>
-         <p>So spake he, and the Nymphs, obeying their sire's
+            </p>
+            <p>So spake he, and the Nymphs, obeying their sire's
 behest, made ready the rooms for the banquet, and
 the watery palace, ablaze with gleaming purple,
 shone with jewelled tables.
 </p>
-         <p>O happy months to bear these brothers' name!
+            <p>O happy months to bear these brothers' name!
 </p>
-         <p>O year blessed to own such a pair as overlords, begin
+            <p>O year blessed to own such a pair as overlords, begin
 thou to turn the laborious wheel of Phoebus' fourfold
 circle. First let thy winter pursue its course,
 sans numbing cold, not clothed in white snow
@@ -425,8 +427,8 @@ inscribe thy name in various flowers, and age-long
 annals hand thy fame down through the long
 centuries.
 <pb id="v.1.p.25"/>
-         </p>
-                        </div1>
+            </p>
+         </div1>
       </body>
    </text>
 </TEI.2>

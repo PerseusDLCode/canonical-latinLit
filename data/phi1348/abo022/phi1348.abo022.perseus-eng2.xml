@@ -1,76 +1,82 @@
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader xml:lang="eng">
-		<fileDesc>
-			<titleStmt>
-				<title>Domitian</title>
-				<author>Suetonius</author>
-				<editor role="translator">Alexander Thomson</editor>
-				<sponsor>Perseus Project, Tufts University</sponsor>
-				<principal>Gregory Crane</principal>
-				<respStmt>
-					<resp>Prepared under the supervision of</resp>
-					<name>Bridget Almas</name>
-					<name>Lisa Cerrato</name>
-					<name>William Merrill</name>
-					<name>David Smith</name>
-				</respStmt>
-				<funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Trustees of Tufts University</publisher>
-				<pubPlace>Medford, MA</pubPlace>
-				<authority>Perseus Project</authority>
-				<date type="release" cert="unknown">2000-08-01</date>
-			</publicationStmt>
-			
-
-			<sourceDesc>
-				<biblStruct>
-					<monogr>
-						<title>The Lives of the Twelve Caesars</title>
-						<author xml:lang="lat">C. Suetonius Tranquillus</author>
-						<editor>J. Eugene Reed</editor>
-						<editor role="translator">Alexander Thomson</editor>
-						<imprint>
-							<pubPlace>Philadelphia</pubPlace>
-							<publisher>Gebbie and Co.</publisher>
-							<date>1883</date>
-						</imprint>
-					</monogr>
-					<ref target="https://archive.org/details/livesoftwelvecsa00suet/page/500/mode/2up">Internet Archive</ref>
-				</biblStruct>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>Domitian</title>
+            <author>Suetonius</author>
+            <editor role="translator">Alexander Thomson</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" cert="unknown">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi1348.abo022.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>The Lives of the Twelve Caesars</title>
+                  <author xml:lang="lat">C. Suetonius Tranquillus</author>
+                  <editor>J. Eugene Reed</editor>
+                  <editor role="translator">Alexander Thomson</editor>
+                  <imprint>
+                     <pubPlace>Philadelphia</pubPlace>
+                     <publisher>Gebbie and Co.</publisher>
+                     <date>1883</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/livesoftwelvecsa00suet/page/500/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
 				<!--<refState delim=" " unit="life"/>-->
-				<refState unit="chapter"/>
-			</refsDecl>
-			<editorialDecl>
-				<correction method="silent" status="low">
-					<p>Perseus OCR</p>
-				</correction>
-			</editorialDecl>
-			
-		</encodingDesc>
-
-		<profileDesc>
-			<langUsage>
-				<language ident="eng">English </language>
-				<language ident="lat">Latin </language>
-				<language ident="grc">Greek </language>
-				<language ident="fre">French </language>
-			</langUsage>
-		</profileDesc>
-		<revisionDesc>
-			<change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
-		</revisionDesc>
-	</teiHeader>
-	<text xml:lang="eng">
-		<body><div xml:lang="eng" type="translation" n="urn:cts:latinLit:phi1348.abo022.perseus-eng2">
-			<div type="textpart" n="1" subtype="chapter">
-				<p>DOMITIAN was born upon the ninth of the calends of November<note anchored="true">A. U. C. 804.</note> [24th October], when his father was consul elect
+            <refState unit="chapter"/>
+         </refsDecl>
+         <editorialDecl>
+            <correction method="silent" status="low">
+               <p>Perseus OCR</p>
+            </correction>
+         </editorialDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English </language>
+            <language ident="lat">Latin </language>
+            <language ident="grc">Greek </language>
+            <language ident="fre">French </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1348.abo022.perseus-eng2">
+         <div n="1" type="chapter">
+            <p>DOMITIAN was born upon the ninth of the calends of November<note anchored="true">A. U. C. 804.</note> [24th October], when his father was consul elect
 					(being to enter upon his office the month following), in the sixth region of the
 					city, at the Pomegranate,<note anchored="true">A street. in the sixth region of
 						Rome, so called, probably, from a remarkable specimen of this beautiful
@@ -101,9 +107,9 @@
 					AElias Lamia, and married her; and in one day disposed of above twenty offices
 					in the city and provinces; upon which Vespasian said several times, "he wondered
 					he did not send him a successor too."</p>
-			</div>
-			<div type="textpart" n="2" subtype="chapter">
-				<p>He likewise designed an expedition into Gaul and Germany, <note anchored="true">One of Domitian's coins bears on the reverse a captive female and soldier,
+         </div>
+         <div n="2" type="chapter">
+            <p>He likewise designed an expedition into Gaul and Germany, <note anchored="true">One of Domitian's coins bears on the reverse a captive female and soldier,
 						with GERMANIA DEVICTA. </note> without the least necessity for it, and
 					contrary to the advice of all his father's friends; and this he did only with
 					the view of equalling his brother in military achievements and glory. But for
@@ -131,9 +137,9 @@
 					paid him no other honour than that of enrolling him amongst the gods; and he
 					often, both in speeches and edicts, carped at his memory by sneers and
 					insinuations.</p>
-			</div>
-			<div type="textpart" n="3" subtype="chapter">
-				<p>In the beginning of his reign, he used to spend daily an hour by himself in
+         </div>
+         <div n="3" type="chapter">
+            <p>In the beginning of his reign, he used to spend daily an hour by himself in
 					private, during which time he did nothing else but catch flies, and stick them
 					through the body with a sharp pin. When some one therefore inquired, "whether
 					any one was with the emperor," it was significantly answered by Vibius Crispus,
@@ -146,9 +152,9 @@
 					of virtue and vice, until at last his virtues themselves degenerated into vices;
 					being, as we may reasonably conjecture concerning his character, inclined to
 					avarice through want, and to cruelty through fear.</p>
-			</div>
-			<div type="textpart" n="4" subtype="chapter">
-				<p>He frequently entertained the people with most magnificent and costly shows, not
+         </div>
+         <div n="4" type="chapter">
+            <p>He frequently entertained the people with most magnificent and costly shows, not
 					only in the amphitheatre, but the circus; where, besides the usual races with
 					chariots drawn by two or four horses a-breast, he exhibited the representation
 					of an engagement between both horse and foot, and a sea-fight in the
@@ -200,9 +206,9 @@
 					be scrambled for; and on the greater part of them falling amidst the seats of
 					the crowd, he ordered five hundred tickets to be thrown into each range of
 					benches belonging to the senatorian and equestrian orders.</p>
-			</div>
-			<div type="textpart" n="5" subtype="chapter">
-				<p>He rebuilt many noble edifices which had been destroyed by fire, and amongst them
+         </div>
+         <div n="5" type="chapter">
+            <p>He rebuilt many noble edifices which had been destroyed by fire, and amongst them
 					the Capitol, which had been burnt down a second time; <note anchored="true">The
 						Capitol had been burnt, for the third time, in the great fire mentioned
 						TITUS, c. viii. The first fire happened in the Marian war, after which it
@@ -223,9 +229,9 @@
 						used for races both of men and hotses. </note> an odeum, <note anchored="true">The Odeum was a building intended for musical performances.
 						There were four of them at Rome. </note> and a naumachia;<note anchored="true">See before, c. iv.</note> out of the stone dug from which,
 					the sides of the Circus Maximus, which had been burnt down, were rebuilt.</p>
-			</div>
-			<div type="textpart" n="6" subtype="chapter">
-				<p>He undertook several expeditions, some from choice, and some from necessity. That
+         </div>
+         <div n="6" type="chapter">
+            <p>He undertook several expeditions, some from choice, and some from necessity. That
 					against the Catti<note anchored="true">See VESPASIAN, c. xiv.</note> was
 					unprovoked, but that against the Sarmatians was necessary; an entire legion,
 					with its commander, having been cut off by them. He sent two expeditions against
@@ -244,9 +250,9 @@
 					his statue at Rome, making most joyful cries. And shortly after, a rumour became
 					common, that Antonius was slain; nay, many positively affirmed, that they saw
 					his head brought to the city.</p>
-			</div>
-			<div type="textpart" n="7" subtype="chapter">
-				<p>He made many innovations in common practices. He abolished the Sportula,<note anchored="true">See NERO, c. xvi.</note> and revived the old practice of
+         </div>
+         <div n="7" type="chapter">
+            <p>He made many innovations in common practices. He abolished the Sportula,<note anchored="true">See NERO, c. xvi.</note> and revived the old practice of
 					regular suppers. To the four former parties in the Circensian games, he added
 					two new, who wore gold and scarlet. He prohibited the players from acting in the
 					theatre, but permitted them the practice of their art in private houses. He
@@ -264,9 +270,9 @@
 					had been encouraged in his late project by the large sum deposited in the
 					military chest by the two legions which he had in the same winterquarters. He
 					made an addition to the soldiers' pay, of three gold pieces a year.</p>
-			</div>
-			<div type="textpart" n="8" subtype="chapter">
-				<p>In the administration of justice he was diligent and assiduous; and frequently
+         </div>
+         <div n="8" type="chapter">
+            <p>In the administration of justice he was diligent and assiduous; and frequently
 					sat in the forum out of course, to cancel the judgments of the court of The One
 					Hundred, which had been procured through favour, or interest. He occasionally
 					cautioned the judges of the court of recovery to beware of being too ready to
@@ -304,17 +310,21 @@
 					the gods, he ordered the soldiers to demolish a tomb, which one of his freedmen
 					had erected for his son out of the stones designed for the temple of Jupiter
 					Capitolinus, and to sink in the sea the bones and relics buried in it.</p>
-			</div>
-			<div type="textpart" n="9" subtype="chapter">
-				<p>Upon his first succeeding to power, he felt such an abhorrence for the shedding
+         </div>
+         <div n="9" type="chapter">
+            <p>Upon his first succeeding to power, he felt such an abhorrence for the shedding
 					of blood, that, before his father's arrival in Rome, calling to mind the verse
 					of Virgil, <cit>
-						<quote xml:lang="lat"><l>Impia quam caesis gens est epulata
-							juvencis</l></quote>
-						<bibl n="Verg. G. 2.537">G. ii.537</bibl>
-					</cit>
-					<quote xml:lang="eng"><l>Ere impious man, restrain'd from blood in vain,</l>
-						<l>Began to feast on flesh of bullocks slain</l></quote> he designed to have
+                  <quote xml:lang="lat">
+                     <l>Impia quam caesis gens est epulata
+							juvencis</l>
+                  </quote>
+                  <bibl n="Verg. G. 2.537">G. ii.537</bibl>
+               </cit>
+               <quote xml:lang="eng">
+                  <l>Ere impious man, restrain'd from blood in vain,</l>
+                  <l>Began to feast on flesh of bullocks slain</l>
+               </quote> he designed to have
 					published a proclamation, "to forbid the sacrifice of oxen." Before his
 					accession to the imperial authority, and during some time afterwards, he
 					scarcely ever gave the least grounds for being suspected of covetousness or
@@ -336,9 +346,9 @@
 					false prosecutions in the exchequer, by severely punishing the prosecutors; and
 					this saying of his was much taken notice of: "that a prince who does not punish
 					informers, encourages them."</p>
-			</div>
-			<div type="textpart" n="10" subtype="chapter">
-				<p>But he did not long persevere in this course of clemency and justice, although he
+         </div>
+         <div n="10" type="chapter">
+            <p>But he did not long persevere in this course of clemency and justice, although he
 					sooner fell into cruelty than into avarice. He put to death a scholar of Paris,
 					the pantomimic,<note anchored="true">See VESPASIAN, C. iii. </note> though a
 					minor, and then sick, only because, both in person and the practice of his art,
@@ -380,9 +390,9 @@
 					stripe, and a centurion; who, to clear themselves from the charge of being
 					concerned in any rebellious project, proved themselves to have been incapable of
 					exercising any influence either over the general or the soldiers.</p>
-			</div>
-			<div type="textpart" n="11" subtype="chapter">
-				<p>His cruelties were not only excessive, but subtle and unexpected. The day before
+         </div>
+         <div n="11" type="chapter">
+            <p>His cruelties were not only excessive, but subtle and unexpected. The day before
 					he crucified a collector of his rents, he sent for him into his bed-chamber,
 					made him sit down upon the bed by him, and sent him away well pleased, and, so
 					far as could be inferred from his treatment, in a state of perfect security;
@@ -407,9 +417,9 @@
 					criminals the favour of dying in the manner they choose. For by so doing, ye
 					will spare your own eyes, and the world will understand that I interceded with
 					the senate on their behalf."</p>
-			</div>
-			<div type="textpart" n="12" subtype="chapter">
-				<p>Having exhausted the exchequer by the expense of his buildings and public
+         </div>
+         <div n="12" type="chapter">
+            <p>Having exhausted the exchequer by the expense of his buildings and public
 					spectacles, with the augmentation of pay lately granted to the troops, he made
 					an attempt at the reduction of the army, in order to lessen the military
 					charges. But reflecting, that he should, by this measure, expose himself to the
@@ -434,7 +444,8 @@
 						commencing from an early age. </note> when an old man, ninety years of age,
 					had his person exposed to view in a very crowded court, in order that, on
 					inspection, the procurator might satisfy himself whether he was
-						circumcised.<note anchored="true">This is what Martial calls, <quote xml:lang="lat">"Mentula tributis damnata."</quote></note> From his
+						circumcised.<note anchored="true">This is what Martial calls, <quote xml:lang="lat">"Mentula tributis damnata."</quote>
+               </note> From his
 					earliest years Domitian was any thing but courteous, of a forward, assuming
 					disposition, and extravagant both in his words and actions. When Caenis, his
 					father's concubine, upon her return from Istria, offered him a kiss, as she had
@@ -442,10 +453,13 @@
 					brother's son-in-law should be waited on by servants dressed in white,<note anchored="true">The imperial liveries were white and gold.</note> he
 					exclaimed, <foreign xml:lang="grc">οὺκ ἀγαθὸν πολυκοιρανίν</foreign>.
 						<gloss>Too many princes are not good.<note anchored="true">See CALIGULA, c.
-							xxi., where the rest of the line is quoted: <quote xml:lang="grc">εἶσ κοίρανοσ ἔτω, εἶσ βασιλεύσ</quote></note></gloss></p>
-			</div>
-			<div type="textpart" n="13" subtype="chapter">
-				<p>After he became emperor, he had the assurance to boast in the senate, "that he
+							xxi., where the rest of the line is quoted: <quote xml:lang="grc">εἶσ κοίρανοσ ἔτω, εἶσ βασιλεύσ</quote>
+                  </note>
+               </gloss>
+            </p>
+         </div>
+         <div n="13" type="chapter">
+            <p>After he became emperor, he had the assurance to boast in the senate, "that he
 					had bestowed the empire on his father and brother, and they had restored it to
 					him." And upon taking his wife again, after the divorce, he declared by
 					proclamation, "that he had recalled her to his pulvinar."<note anchored="true">An assumption of divinity, as the pulvinar was the consecrated bed, on
@@ -465,7 +479,8 @@
 					erected so many magnificent gates and arches, surmounted by representations of
 					chariots drawn by four horses, and other triumphal ornaments, in different
 					quarters of the city, that a wag inscribed on one of the arches the Greek word
-						'<foreign xml:lang="grc">ἄρκει</foreign><note anchored="true">The pun
+						'<foreign xml:lang="grc">ἄρκει</foreign>
+               <note anchored="true">The pun
 						turns on the similar sound of the Greek word for "enough" and the latin word
 						for "an arch".</note>, "It is enough."' He filled the office of consul
 					seventeen times, which no one had ever done before him, and for the seven middle
@@ -475,9 +490,9 @@
 					triumphs, when he assumed the cognomen of Germanicus, he called the months of
 					September and October, Germanicus and Domitian, after his own names, because he
 					commenced his reign in the one, and was born in the other.</p>
-			</div>
-			<div type="textpart" n="14" subtype="chapter">
-				<p>Becoming by these means universally feared and odious, he was at last taken off
+         </div>
+         <div n="14" type="chapter">
+            <p>Becoming by these means universally feared and odious, he was at last taken off
 					by a conspiracy of his friends and favourite freedmen, in concert with his wife.
 						<note anchored="true">Domitia, who had been repudiated for an intrigue with
 						Paris, the actor, and afterwards taken back. </note> He had long entertained
@@ -489,18 +504,27 @@
 					keenly alive to the slightest suspicions, insomuch that he is thought to have
 					withdrawn the edict ordering the destruction of the vines, chiefly because the
 					copies of it which were dispersed had the following lines written upon them:
-						<quote xml:lang="grc"><l>κἤν με φάγησ ἐπί ῤίζαν ὅμωσ ἔτι</l>
-						<l>ὄσσον ἐπισπεῖσαι Καίσαρι Θυομένῳ.<note anchored="true"> The
+						<quote xml:lang="grc">
+                  <l>κἤν με φάγησ ἐπί ῤίζαν ὅμωσ ἔτι</l>
+                  <l>ὄσσον ἐπισπεῖσαι Καίσαρι Θυομένῳ.<note anchored="true"> The
 								lines, with a slight accommodation, are borrowed from the poet
 								Evenus, Anthol. i. vl. i., who applies them to a goat, the great
 								enemy of vineyards. Ovid, Fasti, i. 357, thus paraphrases them:
-									<quote xml:lang="lat"><l>Rode caper vitem, tamen hinc, cum staris
+									<quote xml:lang="lat">
+                           <l>Rode caper vitem, tamen hinc, cum staris
 										ad aram,</l>
-									<l>In tua quod spargi cornua possit
-						erit.</l></quote></note></l></quote>
-					<quote xml:lang="eng"><l>Gnaw thou my root, yet shall my juice suffice</l>
-						<l>To pour on Caesar's head in sacrifice.</l></quote></p>
-				<p>It was from the same principle of fear, that he refused a new honour, devised and
+                           <l>In tua quod spargi cornua possit
+						erit.</l>
+                        </quote>
+                     </note>
+                  </l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Gnaw thou my root, yet shall my juice suffice</l>
+                  <l>To pour on Caesar's head in sacrifice.</l>
+               </quote>
+            </p>
+            <p>It was from the same principle of fear, that he refused a new honour, devised and
 					offered him by the senate, though he was greedy of all such compliments. It was
 					this: "that as often as he held the consulship, Roman knights, chosen by lot,
 					should walk before him, clad in the Trabea, with lances in their hands, amongst
@@ -516,9 +540,9 @@
 					any pretext, however plausible, he condemned to death Epaphroditus his
 					secretary, because it was believed that he had assisted Nero, in his extremity,
 					to kill himself.</p>
-			</div>
-			<div type="textpart" n="15" subtype="chapter">
-				<p>His last victim was Flavius Clemens,<note anchored="true">See note to c.
+         </div>
+         <div n="15" type="chapter">
+            <p>His last victim was Flavius Clemens,<note anchored="true">See note to c.
 						xvii.</note> his cousin-german, a man below contempt for his want of energy,
 					whose sons, then of very tender age, he had avowedly destined for his
 					successors, and, discarding their former names, had ordered one to be called
@@ -551,9 +575,9 @@
 					and the body, halfburnt, was torn to pieces by dogs; which being observed by
 					Latinus, the comic actor, as he chanced to pass that way, he told it, amongst
 					the other news of the day, to the emperor at supper.</p>
-			</div>
-			<div type="textpart" n="16" subtype="chapter">
-				<p>The day before his death, he ordered some dates, <note anchored="true">Columella
+         </div>
+         <div n="16" type="chapter">
+            <p>The day before his death, he ordered some dates, <note anchored="true">Columella
 						(R. R x.i. 2.) enumerates dates among the foreign fruits cultivated in
 						Italy, cherries, dates, apricots, and almonds; and Pliny, xv. 14, informs us
 						that Sextus Papinius was the first who introduced the date tree, having
@@ -573,9 +597,9 @@
 					that there was a person come to wait upon him about a matter of great
 					importance, which would admit of no delay. Upon this, ordering all persons to
 					withdraw, he retired into his chamber, and was there slain.</p>
-			</div>
-			<div type="textpart" n="17" subtype="chapter">
-				<p>Concerning the contrivance and mode of his death, the common account is this. The
+         </div>
+         <div n="17" type="chapter">
+            <p>Concerning the contrivance and mode of his death, the common account is this. The
 					conspirators being in some doubt when and where they should attack him, whether
 					while he was in the bath, or at supper, Stephanus, a steward of
 						Domitilla's,<note anchored="true">Some suppose that Domitilla was the wife
@@ -609,9 +633,9 @@
 					remains to the temple of the Flavian family, <note anchored="true">See c. v.
 					</note> and mingled them with the ashes of Julia, the daughter of Titus, whom
 					she had also nursed.</p>
-			</div>
-			<div type="textpart" n="18" subtype="chapter">
-				<p>He was tall in stature, his face modest, and very ruddy; he had large eyes, but
+         </div>
+         <div n="18" type="chapter">
+            <p>He was tall in stature, his face modest, and very ruddy; he had large eyes, but
 					was dim-sighted; naturally graceful in his person, particularly in his youth,
 					excepting only that his toes were bent somewhat inward, he was at last
 					disfigured by baldness, corpulence, and the slenderness of his legs, which were
@@ -621,14 +645,18 @@
 					so much annoyed him, that he considered it an affront to himself, if any other
 					person was reproached with it, either in jest or in earnest; though in a small
 					tract he published, addressed to a friend, "concerning the preservation of the
-					hair," he uses for their mutual consolation the words following: <quote xml:lang="grc"><l>οὐκ ὡράασ οἷοσ κἀγὼ κάλοσ τε μέγας</l></quote>
-					<quote xml:lang="eng"><l>Seest thou my graceful mien, my stately
-						form?</l></quote> "and yet the fate of my hair awaits me; however, I bear
+					hair," he uses for their mutual consolation the words following: <quote xml:lang="grc">
+                  <l>οὐκ ὡράασ οἷοσ κἀγὼ κάλοσ τε μέγας</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Seest thou my graceful mien, my stately
+						form?</l>
+               </quote> "and yet the fate of my hair awaits me; however, I bear
 					with fortitude this loss of my hair while I am still young. Remember that
 					nothing is more fascinating than beauty, but nothing of shorter duration."</p>
-			</div>
-			<div type="textpart" n="19" subtype="chapter">
-				<p>He so shrunk from undergoing fatigue, that he scarcely ever walked through the
+         </div>
+         <div n="19" type="chapter">
+            <p>He so shrunk from undergoing fatigue, that he scarcely ever walked through the
 					city on foot. In his expeditions and on a march, he seldom rode on horseback,
 					but was generally carried in a litter. He had no inclination for the exercise of
 					arms, but was very expert in the use of the bow. Many persons have seen him
@@ -638,9 +666,9 @@
 					against the hand of a boy standing at a distance, and expanded as a mark, with
 					such precision, that they all passed between the boy's fingers, without hurting
 					him.</p>
-			</div>
-			<div type="textpart" n="20" subtype="chapter">
-				<p>In the beginning of his reign, he gave up the study of the liberal sciences,
+         </div>
+         <div n="20" type="chapter">
+            <p>In the beginning of his reign, he gave up the study of the liberal sciences,
 					though he took care to restore, at a vast expense, the libraries which had been
 					burnt down; collecting manuscripts from all parts, and sending scribes to
 						Alexandria,<note anchored="true">The famous library of Alexandria collected
@@ -657,9 +685,9 @@
 					wish," said he once, "that I was but as handsome as Metius fancies himself to
 					be." And of the head of some one whose hair was partly reddish, and partly grey,
 					he said "that it was snow sprinkled with mead."</p>
-			</div>
-			<div type="textpart" n="21" subtype="chapter">
-				<p>"The lot of princes," he remarked, "was very miserable, for no one believed them
+         </div>
+         <div n="21" type="chapter">
+            <p>"The lot of princes," he remarked, "was very miserable, for no one believed them
 					when they discovered a conspiracy, until they were murdered." When he had
 					leisure, he amused himself with dice, even on days that were not festivals, and
 					in the morning. He went to the bath early, and made a plentiful dinner, insomuch
@@ -671,9 +699,9 @@
 					soon over, for he never prolonged them after sunset, and indulged in no revel
 					after. For, till bed-time, he did nothing else but walk by himself in
 					private.</p>
-			</div>
-			<div type="textpart" n="22" subtype="chapter">
-				<p>He was insatiable in his lusts, calling frequent commerce with women, as if it
+         </div>
+         <div n="22" type="chapter">
+            <p>He was insatiable in his lusts, calling frequent commerce with women, as if it
 					was a sort of exercise, <foreign xml:lang="grc">κλινοπάλην</foreign>,
 						<gloss>bed-wrestling</gloss>, and it was reported that he swam about in
 					company with the lowest prostitutes. His brother's daughter<note anchored="true">Julia, the daughter of Titus. </note> was offered him in marriage when she
@@ -683,9 +711,9 @@
 					had lost both her father and her husband, he loved her most passionately, and
 					without disguise; insomuch that he was the occasion of her death, by obliging
 					her to procure a miscarriage when she was with child by him.</p>
-			</div>
-			<div type="textpart" n="23" subtype="chapter">
-				<p>The people shewed little concern at his death, but the soldiers were roused by it
+         </div>
+         <div n="23" type="chapter">
+            <p>The people shewed little concern at his death, but the soldiers were roused by it
 					to great indignation, and immediately endeavoured to have him ranked among the
 					gods. They were also ready to avenge his loss, if there had been any to take the
 					lead. However, they soon after effected it, by resolutely demanding the
@@ -697,22 +725,26 @@
 					time a decree to obliterate his titles every where, and abolish all memory of
 					him. A few months before he was slain, a raven on the Capitol uttered these
 					words: "All will be well." Some person gave the following interpretation of this
-					prodigy: <quote xml:lang="lat"><l>Nuper Tarpeio, quae sedit culmine cornix.</l>
-						<l>"Est bene," non potuit dicere; dixit, "Erit."</l></quote>
-					<quote xml:lang="eng"><l>Late croaked a raven from Tarpeia's height,</l>
-						<l>"All is not yet, but shortly will be, right."</l></quote> They say
+					prodigy: <quote xml:lang="lat">
+                  <l>Nuper Tarpeio, quae sedit culmine cornix.</l>
+                  <l>"Est bene," non potuit dicere; dixit, "Erit."</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Late croaked a raven from Tarpeia's height,</l>
+                  <l>"All is not yet, but shortly will be, right."</l>
+               </quote> They say
 					likewise that Domitian dreamed that a golden hump grew out of the back of his
 					neck, which he considered as a certain sign of happy days for the empire after
 					him. Such an auspicious change indeed shortly afterwards took place, through the
 					justice and moderation of the succeeding emperors. </p>
-			</div>
-<div type="textpart" n="note" subtype="chapter">
-				<head>Remarks on Domitian</head>
-				<p>If we view Domitian in the different lights in which he is represented, during his lifetime and after his decease, his character and conduct discover a greater diversity than is commonly observed in the objects of historical detail.
+         </div>
+         <div n="note" type="chapter">
+            <head>Remarks on Domitian</head>
+            <p>If we view Domitian in the different lights in which he is represented, during his lifetime and after his decease, his character and conduct discover a greater diversity than is commonly observed in the objects of historical detail.
           But as posthumous character is always the most just, its decisive verdict affords the surest criterion by which this variegated emperor must be estimated by impartial posterity.
           According to this rule, it is beyond a doubt that his vices were more predominant than his virtues: and when we follow him into his closet, for some time after his accession, when he was thirty years of age, the frivolity of his daily employment, in the killing of flies, exhibits an instance of dissipation, which surpasses all that has been recorded of his imperial predecessors.
           The encouragement, however, which the first Vespasian had shown to literature, continued to operate during the present reign; and we behold the first fruits of its auspicious influence in the valuable treatise of QUINTILIAN.</p>
-		  <p>
+            <p>
           Of the life of this celebrated writer, little is known upon any authority that has a title to much credit.
           We learn, however, that he was the son of a lawyer in the service of some of the preceding emperors, and was born at Rome, though in what consulship, or under what emperor, it is impossible to determine.
           He married a woman of a noble family, by whom he had two sons.
@@ -733,7 +765,7 @@
           From this source of entertainment, they reaped more pleasure during the present reign, than they had done since the time of Augustus.
           The poets of this period were Juvenal, Statius, and Martial.
         </p>
-				</div>
-		</div></body>
-	</text>
+         </div>
+      </body>
+   </text>
 </TEI>

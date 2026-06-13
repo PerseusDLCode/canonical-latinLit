@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>In Defense of Marcus Caelius </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>In Defense of Marcus Caelius </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi024.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,15 +159,15 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <front>
-            <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF MARCUS CAELIUS.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>Marcus Caelius was a young man of the equestrian order, and had been a sort of
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <front>
+         <head>THE SPEECH OF M. T. CICERO IN DEFENCE OF MARCUS CAELIUS.</head>
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>Marcus Caelius was a young man of the equestrian order, and had been a sort of
                     pupil of Cicero himself; and was a man of very considerable abilities. When a
                     very young man, he had distinguished himself by prosecuting Caius Antonius, who
                     had been Cicero's colleague in his consulship; and after that, by prosecuting
@@ -162,21 +177,24 @@ Added to repository.
                     Alexandrian embassy, and in an attempt to poison Clodia, the sister of Clodius.
                     The real truth is said to have been that this prosecution was mainly instigated
                     by Clodia, who considered herself slighted by Caelius, who had been a lover of
-                    hers. Caelius was a tenant of Clodius for a house on the <placeName
-                        key="tgn,3000935">Palatine Hill</placeName>. He was acquitted, and was at
+                    hers. Caelius was a tenant of Clodius for a house on the <placeName key="tgn,3000935">Palatine Hill</placeName>. He was acquitted, and was at
                     all times very grateful to Cicero for his exertions. Some years afterwards he
                     was praetor, in which capacity he recalled
-                        <persName><surname>Milo</surname></persName> from his banishment at
+                        <persName>
+                  <surname>Milo</surname>
+               </persName> from his banishment at
                         <placeName key="tgn,7008781">Marseilles</placeName>, and with
-                            <persName><surname>Milo</surname></persName> was murdered by the
+                            <persName>
+                  <surname>Milo</surname>
+               </persName> was murdered by the
                     soldiery, with whom he was tampering in the hopes of being able to effect some
                     diversion in favour of Pompey, a short time before the battle of Pharsalia.</p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>If any one, O judges, were now present by any chance, ignorant of our laws, and of
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi024.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>If any one, O judges, were now present by any chance, ignorant of our laws, and of
                 our judicial proceedings, and of our customs, he would in truth wonder what great
                 atrocity there is in this particular cause of so serious a nature, as to cause this
                 trial alone to be proceeded with during these days of festival and public games,
@@ -195,7 +213,8 @@ Added to repository.
                 filial affection of Atratinus, but he would think it right to curb the lust of the
                 woman, and he would think you the judges a really laborious race, when you are not
                 allowed to be at rest at a time of universal rest to every one else. </p>
-            <p><milestone n="2" unit="section"/> In truth, if you are willing to attend diligently,
+         <p>
+            <milestone n="2" unit="section"/> In truth, if you are willing to attend diligently,
                 and to form a correct opinion of the whole of this cause, O judges, you will make up
                 your minds that no one would ever have come down to the court, to prefer this
                 accusation who had the power of doing so or not, just as he pleased; and that, when
@@ -207,9 +226,10 @@ Added to repository.
                 it to his filial affection; if he was ordered to do so, I lay the blame on the
                 necessity; if he had any hope of succeeding, I impute that to the inexperience of
                 his boyhood. But as for the other partners in this impeachment, those I have not
-                only no allowance to make for, but I must resist them most vigorously. <milestone
-                    n="2" unit="chapter"/><milestone n="3" unit="section"/></p>
-            <p>And, O judges, this beginning of my defence appears to me to suit most especially
+                only no allowance to make for, but I must resist them most vigorously. <milestone n="2" unit="chapter"/>
+            <milestone n="3" unit="section"/>
+         </p>
+         <p>And, O judges, this beginning of my defence appears to me to suit most especially
                 with the youth of Marcus Caelius so that I should reply first to those things which
                 the accusers have advanced with the general view of disparaging him and for the sake
                 of detracting from his honour and despoiling him of his dignity. His father was cast
@@ -226,8 +246,8 @@ Added to repository.
                 great lustre in the case of Marcus Caelius; and moreover it is so considered, not
                 only by his own relations and friends, but by every one to whom he can possibly be
                 known on any account whatever. <milestone n="4" unit="section"/>
-            </p>
-            <p>And to be the son of a Roman knight ought neither to be attributed to any one as a
+         </p>
+         <p>And to be the son of a Roman knight ought neither to be attributed to any one as a
                 crime, either by the present prosecutor, or before those men who are the judges, or
                 while I am the counsel for the defence. For as to what you have said about his
                 filial affection, or the want of it, that can only be a vague opinion of ours, but
@@ -237,21 +257,21 @@ Added to repository.
                 appearance of his father and his distress which you now behold, and his agony,
                 sufficiently declare. <milestone n="5" unit="section"/> For as to the attack made
                 upon him, that as a young man he was not well thought of by his fellow-citizens of
-                the same municipal town, I say that the people of <placeName key="perseus,Puteoli"
-                    >Puteoli</placeName> never paid greater honours to any one when he was among
+                the same municipal town, I say that the people of <placeName key="perseus,Puteoli">Puteoli</placeName> never paid greater honours to any one when he was among
                 them than they did to Marcus Caelius while he was absent; for though he was absent
                 they elected him a member of their most honourable body; and they conferred those
                 distinctions on him without his asking for them, which they have refused to numbers
                 when they solicited them; and they have, moreover, now sent their most chosen men,
                 and men of our order, and Roman knights, with a deputation to attend this trial, and
                 to bear most honourable and authoritative testimony in his favour. </p>
-            <p>I seem to myself now to have laid the foundations of my defence; and they are the
+         <p>I seem to myself now to have laid the foundations of my defence; and they are the
                 firmest possible, if they rest on the <pb n="249"/> judgment of his own relations
                 and fellow-citizens. For his life could not be sufficiently recommended to you to
                 meet with your approbation, if it displeased not only his parent, who is so
-                excellent a man, but also so illustrious and dignified a municipality. <milestone
-                    n="3" unit="chapter"/><milestone n="6" unit="section"/></p>
-            <p>In truth, to return to myself, it is from such beginnings as his that I myself have
+                excellent a man, but also so illustrious and dignified a municipality. <milestone n="3" unit="chapter"/>
+            <milestone n="6" unit="section"/>
+         </p>
+         <p>In truth, to return to myself, it is from such beginnings as his that I myself have
                 risen to credit among men; and this forensic labour of mine, and the system of
                 conduct which I have adopted, has made its way to the favourable opinion of men, by
                 means of the extended commendation and favourable opinion of my own relations and
@@ -264,8 +284,7 @@ Added to repository.
                 order to define the matter, to bind the man, to prove its charges by argument, and
                 to confirm them by witnesses. But vituperation has no settled object except insult
                 and if any one is attacked in that way with ill-temper it is called abuse; but if it
-                is done with some sort of wit and mirth, it is then styled bantering. <milestone
-                    n="7" unit="section"/> And I wondered and was indignant at that department of
+                is done with some sort of wit and mirth, it is then styled bantering. <milestone n="7" unit="section"/> And I wondered and was indignant at that department of
                 the accusation being given to Atratinus above all men; for it did not become him,
                 nor did his age justify it, nor (as indeed you might have observed yourself) did the
                 modesty of that excellent young man allow him to show to advantage in a speech on
@@ -276,8 +295,8 @@ Added to repository.
                 Atratinus, I will deal more gently, both because your own modesty is a check on my
                 language, and because I am bound to have a regard to the good-will which I entertain
                 towards you and your parent. <milestone n="8" unit="section"/>
-            </p>
-            <p>I wish, however, that you would keep one thing in mind; first of all, to form a
+         </p>
+         <p>I wish, however, that you would keep one thing in mind; first of all, to form a
                 correct estimate of yourself, and to learn <pb n="250"/> to think yourself such a
                 man as in truth you are; in order to keep yourself as clear of licentiousness of
                 language as you are free from all impropriety of conduct; and secondly, to avoid
@@ -289,9 +308,10 @@ Added to repository.
                 are to blame for your undertaking that part, are they who compelled you to make
                 these allegations. This praise belongs to your own modesty, of being, as we saw that
                 you were, unwilling to make them; and to your genius, of making them in a courteous
-                and polite manner. <milestone n="4" unit="chapter"/><milestone n="9" unit="section"
-                /></p>
-            <p>But however, with respect to all that part of your speech, my reply in defence may be
+                and polite manner. <milestone n="4" unit="chapter"/>
+            <milestone n="9" unit="section"/>
+         </p>
+         <p>But however, with respect to all that part of your speech, my reply in defence may be
                 very brief. For, as far as the age of Marcus Caelius might give room for any such
                 suspicion, in the first place it was fortified against it by his own modesty, and in
                 the second place by his father's attentive care of him and rigid discipline; for, as
@@ -300,10 +320,9 @@ Added to repository.
                 immediately brought by his father to me as a pupil,)—after that time no one ever saw
                 Marcus Caelius in that the flower of his age, that he was not either with his
                 father, or with me, or else in that most virtuous house of Marcus Crassus, and being
-                instructed in the most honourable branches of learning. <milestone n="10"
-                    unit="section"/>
-            </p>
-            <p>For as for the imputation which has been levelled against Caelius, of having been
+                instructed in the most honourable branches of learning. <milestone n="10" unit="section"/>
+         </p>
+         <p>For as for the imputation which has been levelled against Caelius, of having been
                 intimate with Catiline, he ought to be wholly exempt from any such suspicion. For
                 you all know that he was a very young man when Catiline stood for the consulship the
                 same year that I did; and if he ever joined his party, or ever departed from mine,
@@ -319,9 +338,10 @@ Added to repository.
                 peculation. Caelius was still with me and never went to him not even as an advocate
                 of his cause. The next year was the one in which I was a candidate for the
                 consulship; Catiline was also a candidate. He never went over to him; he never
-                departed from me. <milestone n="5" unit="chapter"/><milestone n="11" unit="section"
-                /></p>
-            <p>Having then been so many years about the forum without any suspicion, and without any
+                departed from me. <milestone n="5" unit="chapter"/>
+            <milestone n="11" unit="section"/>
+         </p>
+         <p>Having then been so many years about the forum without any suspicion, and without any
                 slur on his character, he espoused the cause of Catiline when he offered himself for
                 the consulship a second time. How long then do you think that men of his age are to
                 be kept in a state of pupilage? Formerly, we had one year established by custom
@@ -346,9 +366,10 @@ Added to repository.
                 toil. The vices of lust raged in him; but at the same time he was conspicuous for
                     <pb n="252"/> great energy and military skill. Nor do I believe that there ever
                 existed so strange a prodigy upon the earth, made up in such a manner of the most
-                various, and different and inconsistent studies and desires. <milestone n="6"
-                    unit="chapter"/><milestone n="13" unit="section"/></p>
-            <p>Who was ever more acceptable at one time to most illustrious men? who was more
+                various, and different and inconsistent studies and desires. <milestone n="6" unit="chapter"/>
+            <milestone n="13" unit="section"/>
+         </p>
+         <p>Who was ever more acceptable at one time to most illustrious men? who was more
                 intimate with the very basest? What citizen was there at times who took a better
                 part than he did? who was there at other times a fouler enemy to this state? Who was
                 more debased in his pleasures? who was more patient in undergoing labours? who was
@@ -368,7 +389,7 @@ Added to repository.
                 virtue. Nor would that infamous attempt to destroy this empire have ever proceeded
                 from him, if the ferocity of so many vices had not been based on the deep-rooted
                 foundations of affability and patience. </p>
-            <p>Let that allegation then, O judges, be disregarded by you, and let not the charge of
+         <p>Let that allegation then, O judges, be disregarded by you, and let not the charge of
                 intimacy with Catiline make any impression upon you. For it is one which only
                 applies to him in common with many other men, and even with some very good men. Even
                 me myself—yes, even me, I say—he once almost deceived, as he seemed to me a virtuous
@@ -379,9 +400,10 @@ Added to repository.
                 the great number of friends whom he had to boast of, there is more reason for his
                 being vexed at having fallen into such a mistake, just as sometimes I myself repent
                 also of having been deceived by the same person, than for his having any reason to
-                fear the accusation of having been a friend of his. <milestone n="7" unit="chapter"
-                    /><milestone n="15" unit="section"/></p>
-            <p>Accordingly, your speech descended from vituperations of him on the score of
+                fear the accusation of having been a friend of his. <milestone n="7" unit="chapter"/>
+            <milestone n="15" unit="section"/>
+         </p>
+         <p>Accordingly, your speech descended from vituperations of him on the score of
                 chastity, to endeavours to excite odium against him on account of that conspiracy.
                 For you laid it down,—though with hesitating steps and without dwelling on it,—that
                 he must have been an accomplice in the conspiracy, on account of his friendship with
@@ -396,8 +418,8 @@ Added to repository.
                 a most decided and avowed enemy of that wickedness, he would never have gone so far
                 as to seek for an especial commendation of his youth by a prosecution of men
                 implicated in that conspiracy. <milestone n="16" unit="section"/>
-            </p>
-            <p>And I know not whether I need think it equally necessary to make a reply to the
+         </p>
+         <p>And I know not whether I need think it equally necessary to make a reply to the
                 charges of corruption, and to the accusations about clubs and agents (since I have
                 lighted on these topics). For Caelius would never have been so insane as to accuse
                 another man of bribery, if he had stained himself with that mean practice of
@@ -409,8 +431,8 @@ Added to repository.
                 plain that a man who conducts himself so, rather thinks it open to him to attack the
                 innocence <pb n="254"/> of another, than that he has any reason to be afraid of
                 anything on his own account. <milestone n="17" unit="section"/>
-            </p>
-            <p>For, as respects the charges that have been brought against him of being in debt, as
+         </p>
+         <p>For, as respects the charges that have been brought against him of being in debt, as
                 regards the reproaches which have been levelled at him on the score of prodigality,
                 and of the demands that have been made to see his accounts, just see how briefly I
                 will reply to them. In the first place, he, who is still under the power of his
@@ -422,8 +444,8 @@ Added to repository.
                 house that Caelius lives in, at a rent, I suppose, of ten thousand sesterces. And
                 you, O prosecutors, out of your anxiety to please him, have permitted yourselves
                 this enormous lie to suit his purposes. <milestone n="18" unit="section"/>
-            </p>
-            <p>You have blamed him for dwelling in a house apart from his father, a thing which is
+         </p>
+         <p>You have blamed him for dwelling in a house apart from his father, a thing which is
                 not at all to be blamed in a man of his age. For as, labouring in the cause of the
                 republic, he had achieved a victory which was, indeed, annoying to me, but glorious
                 to himself; and as he was now of sufficiently mature age to stand for a magistracy,
@@ -431,30 +453,33 @@ Added to repository.
                 he left his house, and as his father's house was a long way from the forum, he hired
                 a house on the <placeName key="tgn,3000935">Palatine Hill</placeName>, at no very
                 high rent, in order the more easily to be able to visit us at our houses, and to
-                receive visits from his friends. <milestone n="8" unit="chapter"/></p>
-            <p>And while speaking on this topic, I may say what that most illustrious man, Marcus
+                receive visits from his friends. <milestone n="8" unit="chapter"/>
+         </p>
+         <p>And while speaking on this topic, I may say what that most illustrious man, Marcus
                 Crassus, said a little time before, when he was making a complaint of the arrival of
                 king Ptolemaeus:— <quote>
-                    <l>“I wish that in the Pelian grove.”</l>
-                </quote><gap reason="* * *"/> And I might go on much farther in applying this poem, <quote>
-                    <l>“For my wandering mistress would never”</l>
-                </quote><gap reason="* * *"/> have given us all this trouble. <quote>
-                    <l>“Medea, sick at heart, wounded in the fierce love.”</l>
-                </quote><note anchored="true">These lines are from Ennius's tragedy of Medea, being
+               <l>“I wish that in the Pelian grove.”</l>
+            </quote>
+            <gap reason="* * *"/> And I might go on much farther in applying this poem, <quote>
+               <l>“For my wandering mistress would never”</l>
+            </quote>
+            <gap reason="* * *"/> have given us all this trouble. <quote>
+               <l>“Medea, sick at heart, wounded in the fierce love.”</l>
+            </quote>
+            <note anchored="true">These lines are from Ennius's tragedy of Medea, being
                     very nearly a translation of the first lines of the <title>Medea</title> of
                     Euripides.</note>
-                <pb n="255"/></p>
-            <p> For in like manner, O judges, you will find, when I come to discuss this point, that
+            <pb n="255"/>
+         </p>
+         <p> For in like manner, O judges, you will find, when I come to discuss this point, that
                 it was this Medea of the <placeName key="tgn,3000935">Palatine Hill</placeName>, and
                 this migration, which has been the cause of all his misfortunes to this young man,
-                or rather of all the things that have been said about him. <milestone n="19"
-                    unit="section"/>
-            </p>
-            <p>Wherefore I, relying on your wisdom, O judges, am not afraid of those assertions
+                or rather of all the things that have been said about him. <milestone n="19" unit="section"/>
+         </p>
+         <p>Wherefore I, relying on your wisdom, O judges, am not afraid of those assertions
                 which I perceived were some time back being invented, and fortified by the oration
                 of the accusers. For they said that a senator would come forward as a witness, who
-                would say that he had been driven away by the <foreign xml:lang="la"
-                    >comitia</foreign> for the election of a pontiff by Caelius. And if he does come
+                would say that he had been driven away by the <foreign xml:lang="la">comitia</foreign> for the election of a pontiff by Caelius. And if he does come
                 forward, I will ask, in the first place, why he did not at once take proceedings
                 against him for such conduct? Secondly, if he preferred complaining of it in this
                 way to bringing an action, why he is brought forward by you instead of coming
@@ -465,20 +490,19 @@ Added to repository.
                 moved by him, as I usually am; but if he is only a little gutter drained and drawn
                 off from the fountain head of your accusation, then I shall rejoice that, while your
                 accusation relies on so much interest and such mighty influence, there has still
-                been but one senator who could be found willing to gratify you. <milestone n="20"
-                    unit="section"/>
-            </p>
-            <p>Nor am I afraid of that other class of night witnesses. For they have asserted that
+                been but one senator who could be found willing to gratify you. <milestone n="20" unit="section"/>
+         </p>
+         <p>Nor am I afraid of that other class of night witnesses. For they have asserted that
                 there would be men who would say that their wives, when returning from supper
                 parties have been roughly handled by Caelius. They will be men of importance who
                 will venture to say this on their oaths as they will be forced to confess that they
                 have never commenced taking any steps for redress for such great injuries not even
-                by a friendly arbitration. <milestone n="9" unit="chapter"/></p>
-            <p>By this time, O judges, you are able to understand the whole nature of the attack
+                by a friendly arbitration. <milestone n="9" unit="chapter"/>
+         </p>
+         <p>By this time, O judges, you are able to understand the whole nature of the attack
                 which is made on my client and when it is urged against him it is your duty to repel
                 it. For Marcus Caelius is not accused by the same people as those by whom he is
-                attacked. Weapons are shot at him openly but they are supplied secretly. <milestone
-                    n="21" unit="section"/> Nor do I say this with the object <pb n="256"/> of
+                attacked. Weapons are shot at him openly but they are supplied secretly. <milestone n="21" unit="section"/> Nor do I say this with the object <pb n="256"/> of
                 exciting odium against those men to whom it ought even to be a subject of boasting.
                 They are discharging their duty, they are defending their friends, they are doing
                 what the bravest men are accustomed to do. When injured they feel pain, when angry
@@ -498,18 +522,19 @@ Added to repository.
                 man's safety and for the religious discharge of your own obligations, and for the
                 general welfare of all the citizens against the perilous influence of unscrupulous
                 men. </p>
-            <p>In truth, I will lead you away from the witnesses. I will not permit the truth of
+         <p>In truth, I will lead you away from the witnesses. I will not permit the truth of
                 this trial, which cannot by any means be altered, to depend on the inclination of
                 the witnesses, which may so easily be modeled any way, and be bent and twisted in
                 every direction without the slightest trouble. We will conduct our case by
                 arguments. We will refute the charges brought against us by proofs clearer than
                 daylight. Facts shall combat with facts, cause with cause, reason with reason.
-                    <milestone n="10" unit="chapter"/><milestone n="23" unit="section"/></p>
-            <p>Therefore, I willingly allow that part of the cause to be concluded, summed up, as it
+                    <milestone n="10" unit="chapter"/>
+            <milestone n="23" unit="section"/>
+         </p>
+         <p>Therefore, I willingly allow that part of the cause to be concluded, summed up, as it
                 has been, with dignity and elegance by Marcus Crassus; the part, I mean, which
                 relates to the seditions at <placeName key="tgn,7004474">Naples</placeName>, to the
-                expulsion of the Alexandrians from <placeName key="perseus,Puteoli"
-                    >Puteoli</placeName>, and to the property of Palla. I wish he had also discussed
+                expulsion of the Alexandrians from <placeName key="perseus,Puteoli">Puteoli</placeName>, and to the property of Palla. I wish he had also discussed
                 the transaction respecting Dio. And yet on that subject what is there that you can
                 expect me to <pb n="257"/> say, when the man who committed the murder is not afraid,
                 but even confesses it? For he is a king. But the man who is said to have been the
@@ -520,8 +545,7 @@ Added to repository.
                 been suspected of being even privy to it? And if the merits of his case availed
                 Asicius more than the odium engendered by the fact of such a crime injured him, is
                 your abuse to injure this man, who has never once had a suspicion of the crime
-                breathed against him, not even by the vaguest report? <milestone n="24"
-                    unit="section"/> Oh, but Asicius was acquitted by the prevarication of the
+                breathed against him, not even by the vaguest report? <milestone n="24" unit="section"/> Oh, but Asicius was acquitted by the prevarication of the
                 judges. It is very easy to reply to such an assertion as that especially for me, by
                 whom that action is defended. But Caelius thinks that the cause of Asicius is a just
                 one; at all events, whatever may be its merits, he thinks it is quite unconnected
@@ -531,13 +555,13 @@ Added to repository.
                 Dio, being bound to him as they were by a common attachment to the pursuit of
                 learning and science and being also connected with him by ties of hospitality, think
                 so too. He was living in the house of Lucius Lucceius, as you have heard; they had
-                become mutually acquainted at <placeName key="perseus,Alexandria"
-                    >Alexandria</placeName>. What Caius Coponius, and what his brother, a man of the
+                become mutually acquainted at <placeName key="perseus,Alexandria">Alexandria</placeName>. What Caius Coponius, and what his brother, a man of the
                 very highest respectability, think of Marcus Caelius, you shall hear from themselves
                 if they are produced as witnesses. <milestone n="25" unit="section"/> So let all
                 these topics be put aside, in order that we may at last come to those facts and
-                charges on which the cause really depends. <milestone n="11" unit="chapter"/></p>
-            <p>For I noticed, O judges, that my intimate friend, Lucius Herennius, was listened to
+                charges on which the cause really depends. <milestone n="11" unit="chapter"/>
+         </p>
+         <p>For I noticed, O judges, that my intimate friend, Lucius Herennius, was listened to
                 by you most attentively. And though you were induced to pay him that attention to a
                 great extent by his own ability and by a sort of eloquence which pervaded his
                 oration, still I was sometimes apprehensive lest that speech of his which was
@@ -556,31 +580,30 @@ Added to repository.
                 with my own intimate friend Bestia; that he had supped with him, had been in the
                 habit of visiting him, had aided him when he was a candidate for the praetorship.
                 These things do not move me at all, for they are notoriously false. In fact he is
-                stating that those men supped together who are either in different places, or <gap
-                    reason="* * *"/></p>
-            <p>Nor am I moved by that assertion either, that he said that Caelius had been a comrade
+                stating that those men supped together who are either in different places, or <gap reason="* * *"/>
+         </p>
+         <p>Nor am I moved by that assertion either, that he said that Caelius had been a comrade
                 of his own in the Lupercal games. No doubt, it is a savage and purely pastoral and
                 uncivilized sort of companionship,<note anchored="true">See Smith, Dict, Ant p. 583,
                     v. <foreign xml:lang="la">Lupercalia</foreign>.</note> that of the Lupercal
                 comrades, whose sylvan companies were established before the institution of
                 civilization and of laws. Since these companions not only prosecute one another, but
                 even in the accusation speak of the companionship as a crime, <gap reason="* * *"/>
-                so that they seem to be afraid, lest any one should be ignorant of it. <milestone
-                    n="27" unit="section"/> But I will pass over these things, and reply to those
+                so that they seem to be afraid, lest any one should be ignorant of it. <milestone n="27" unit="section"/> But I will pass over these things, and reply to those
                 which I thought of more consequence. </p>
-            <p>There was a very long reproach addressed to my client on the score of luxury; it was,
+         <p>There was a very long reproach addressed to my client on the score of luxury; it was,
                 however, a gentle one, and had more argument than ferocity in it; on which account
                 it was listened to with the more attention. For while Publius Clodius, my friend,
                 was allowing himself to be carried away by the greatest violence and impetuosity,
                 and, being in a great state of excitement, was using the most severe language, and
                 speaking at the top of his voice, though I had a high opinion of his eloquence,
                 still I was not at all alarmed. For I had seen him conducting several trials without
-                success. But I will reply to you first of all, O Balbus, with an entreaty to be <pb
-                    n="259"/> allowed, without blame and without a charge of impiety to defend a man
+                success. But I will reply to you first of all, O Balbus, with an entreaty to be <pb n="259"/> allowed, without blame and without a charge of impiety to defend a man
                 who never refuses an invitation to supper, who uses perfumes, and who often goes to
-                    <placeName key="perseus,Baiae">Baiae</placeName>. <milestone n="12"
-                    unit="chapter"/><milestone n="28" unit="section"/></p>
-            <p>In truth, I have seen and heard of many men in this city, not only men who had just
+                    <placeName key="perseus,Baiae">Baiae</placeName>. <milestone n="12" unit="chapter"/>
+            <milestone n="28" unit="section"/>
+         </p>
+         <p>In truth, I have seen and heard of many men in this city, not only men who had just
                 tasted this kind of life with the edge of their lips, and touched it, as people say,
                 with the tips of their fingers, but men who had devoted the whole of their youth to
                 pleasures, who have at last emerged from them, and have be taken themselves to
@@ -589,7 +612,8 @@ Added to repository.
                 desires to youth; and if they break out without injuring any one else a life, or
                 overturning any one else's house, they are generally accounted endurable and
                 pardonable. </p>
-            <p><milestone n="29" unit="section"/> But you seemed to me to wish to bring Caelius into
+         <p>
+            <milestone n="29" unit="section"/> But you seemed to me to wish to bring Caelius into
                 some sort of odium by means of the common irregularities into which youth is apt to
                 fall. And, therefore, all that silence with which your speech was received was
                 produced by the fact that, though we had but one criminal before us, we were
@@ -606,8 +630,8 @@ Added to repository.
                 of morals, and the present times while by this means the defendant is not being
                 impeached for any crime of his own, but is having unjust odium excited against him
                 on account of the vices of many others. <milestone n="30" unit="section"/>
-            </p>
-            <p>Therefore I do not venture to make the reply to your severe judgment which I ought to
+         </p>
+         <p>Therefore I do not venture to make the reply to your severe judgment which I ought to
                 make. For it was my duty to plead for some sort of exemption from several rules for
                     <pb n="260"/> youth, to claim some indulgence. I do not venture, I say, to do
                 this. I will not have recourse to any door of escape which my client's age might
@@ -618,8 +642,9 @@ Added to repository.
                 youth of others and of the times, may not prejudice my client. And while I ask this,
                 I do at the same time offer no objection to being called on to reply most carefully
                 to all the charges which are directed against him in consequence of any conduct of
-                his own. <milestone n="13" unit="chapter"/></p>
-            <p>But there are two especial counts in the indictment. There is a charge respecting
+                his own. <milestone n="13" unit="chapter"/>
+         </p>
+         <p>But there are two especial counts in the indictment. There is a charge respecting
                 gold, and one respecting poison. And in both of them one person is concerned. Gold
                 is said to have been taken from Clodia; poison is said to have been sought for, for
                 the purpose of being given to Clodia. All the other statements are not charges, but
@@ -636,8 +661,7 @@ Added to repository.
                 brought it. Again, I see that a violent quarrel has sprung up between them, and
                 engendered a furious hatred. Our whole business in this part of the case, O judges,
                 is with Clodia, a woman not only of high rank, but also notorious; of whom I will
-                say nothing except for the sake of repelling some accusation. <milestone n="32"
-                    unit="section"/> But you are aware, O Cnaeus Domitius, as a man of your eminent
+                say nothing except for the sake of repelling some accusation. <milestone n="32" unit="section"/> But you are aware, O Cnaeus Domitius, as a man of your eminent
                 wisdom must be, that we have in this matter to deal with no one but her; for if she
                 does not say that she lent the money to Caelius, if she does not accuse him and say
                 that <pb n="261"/> poison was prepared by him for her, then we are acting wantonly
@@ -651,9 +675,10 @@ Added to repository.
                 and go no further than my own duty to my client and the nature of the cause which I
                 am pleading compels me. For I have never thought it my duty to engage in quarrels
                 with any woman, especially with one whom all men have always considered everybody's
-                friend rather than any one's enemy. <milestone n="14" unit="chapter"/><milestone
-                    n="33" unit="section"/></p>
-            <p>But still I will first put this question to her herself, whether she wishes me to
+                friend rather than any one's enemy. <milestone n="14" unit="chapter"/>
+            <milestone n="33" unit="section"/>
+         </p>
+         <p>But still I will first put this question to her herself, whether she wishes me to
                 deal with her strictly, and gravely, and according to old-fashioned notions of right
                 and wrong; or indulgently, mercifully, and courteously? If I am to proceed in the
                 old-fashioned way and manner of pleading, then I must summon up from the shades
@@ -668,16 +693,14 @@ Added to repository.
                 do with one who does not belong to you? Why have you been so intimate with him as to
                 lend him gold, or so much an enemy of his as to fear his poison? Had you never seen
                 that your father, had you never heard that your uncle, your grand-father, your
-                great-grandfather, your great-great-grand-father, were all consuls? <milestone
-                    n="34" unit="section"/> Did you not know, moreover, that you were bound in
+                great-grandfather, your great-great-grand-father, were all consuls? <milestone n="34" unit="section"/> Did you not know, moreover, that you were bound in
                 wedlock to Quintus Metellus, a most illustrious and gallant man, and most devoted to
                 his country? who from the <pb n="262"/> first moment that he put his foot over his
                 threshold, showed himself superior to almost all citizens in virtue, and glory, and
                 dignity. When you had become his wife, and, being previously of a most illustrious
                 race yourself, had married into a most renowned family, why was Caelius so intimate
                 with you? Was he a relation? a connection? Was he a friend of your husband? Nothing
-                of the sort. What then was the reason, except it was some folly or lust? <gap
-                    reason="* * *"/> Even if the images of us, the men of your family, had no
+                of the sort. What then was the reason, except it was some folly or lust? <gap reason="* * *"/> Even if the images of us, the men of your family, had no
                 influence over you, did not even my own daughter, that celebrated Quinta Claudia,
                 admonish you to emulate the praise belonging to our house from the glory of its
                 women? Did not that vestal virgin Claudia recur to your mind, who embraced her
@@ -690,7 +713,9 @@ Added to repository.
                 it for this that I brought water into the city, that you should use it for your
                 impious purposes? Was it for this that I made the Appian road, that you should
                 travel along it escorted by other men besides your husband?”</p>
-            <p><milestone n="15" unit="chapter"/><milestone n="35" unit="section"/> But why, O
+         <p>
+            <milestone n="15" unit="chapter"/>
+            <milestone n="35" unit="section"/> But why, O
                 judges, have I brought a person on the scene, of such gravity as to make me fear
                 that this same Appius may on a sudden turn round and begin also to accuse Caelius
                 with the severity which belongs to the censor? But I will look to this presently,
@@ -702,16 +727,16 @@ Added to repository.
                 intending, and what you are seeking to achieve by this prosecution, you must give an
                 intelligible and satisfactory account of your great familiarity, your intimate
                 connection, your extraordinary union <pb n="263"/> with him. The accusers talk to us
-                about lusts, and loves, and adulteries, and <placeName key="perseus,Baiae"
-                    >Baiae</placeName>, and doings on the sea-shore, and banquets, and revels, and
+                about lusts, and loves, and adulteries, and <placeName key="perseus,Baiae">Baiae</placeName>, and doings on the sea-shore, and banquets, and revels, and
                 songs, and music parties, and water parties; and intimate also that they do not
                 mention all these things without your consent. And as for you, since, through some
                 unbridled and headlong fury which I cannot comprehend, you have chosen these things
                 to be brought into court, and dilated on at this trial, you must either efface the
                 charges yourself, and show that they are without foundation, or else you must
                 confess that no credit is to be given to any accusations which you may make, or to
-                any evidence which you may give. <milestone n="36" unit="section"/></p>
-            <p>But if you wish me to deal more courteously with you, I will argue the matter thus
+                any evidence which you may give. <milestone n="36" unit="section"/>
+         </p>
+         <p>But if you wish me to deal more courteously with you, I will argue the matter thus
                 with you. I will put away that harsh and almost boorish old man; and out of these
                 kinsmen of yours here present I will take some one, and before all I will select
                 your youngest brother, who is one of the best-bred men of his class, who is
@@ -720,32 +745,31 @@ Added to repository.
                 little boy, slept with you his eldest sister. Suppose, then, that he speaks to you
                 in this way. “What are you making this disturbance about, my sister? why are you so
                 mad? <quote>
-                    <l>‘Why thus with outcry loud do you exalt </l>
-                    <l>Such trifles into things of consequence?’</l>
-                </quote> You saw a young man become your neighbour; his fair complexion, his height
+               <l>‘Why thus with outcry loud do you exalt </l>
+               <l>Such trifles into things of consequence?’</l>
+            </quote> You saw a young man become your neighbour; his fair complexion, his height
                 and his countenance and eyes made an impression on you, you wished to see him
                 oftener; you were sometimes seen in the same gardens with him; being a woman of high
                 rank you are unable with all your riches to detain him, the son of a thrifty and
                 parsimonious father: he kicks, he rejects you, he does not think your presents worth
-                so much as you require of him. Try some one else. You have gardens on the <placeName
-                    key="tgn,1130786">Tiber</placeName>, and you carefully made them in that
+                so much as you require of him. Try some one else. You have gardens on the <placeName key="tgn,1130786">Tiber</placeName>, and you carefully made them in that
                 particular spot to which all the youth of the city comes to bathe. From that spot
                 you may every day pick out people to suit you. Why do you annoy this one man who
-                scorns you?” <milestone n="16" unit="chapter"/><milestone n="37" unit="section"
-                /></p>
-            <p>I come now again to you, O Caelius, in your turn; and I take upon myself the
+                scorns you?” <milestone n="16" unit="chapter"/>
+            <milestone n="37" unit="section"/>
+         </p>
+         <p>I come now again to you, O Caelius, in your turn; and I take upon myself the
                 authority and strictness of a father; but I doubt which father's character I shall
-                select to <pb n="264"/> assume. Shall I not the part of some one of Caecilius's<note
-                    anchored="true">Caecilius, one of the old Roman comic writers, from one of whose
+                select to <pb n="264"/> assume. Shall I not the part of some one of Caecilius's<note anchored="true">Caecilius, one of the old Roman comic writers, from one of whose
                     plays these lines are taken.</note> fathers, harsh and vehement? <quote>
-                    <l>“For now, in truth, at length my bosom glows, </l>
-                    <l>My heart with passion rages;”</l>
-                </quote> or that other father?— <quote>
-                    <l>“Oh thou unhappy, worthless son.”</l>
-                </quote> Those are very hard-hearted fathers; <quote>
-                    <l>“What shall I say, what wishes dare I form, </l>
-                    <l>When your base actions frustrate all my prayers;”</l>
-                </quote> Such a father as that would say things which you would find it difficult to
+               <l>“For now, in truth, at length my bosom glows, </l>
+               <l>My heart with passion rages;”</l>
+            </quote> or that other father?— <quote>
+               <l>“Oh thou unhappy, worthless son.”</l>
+            </quote> Those are very hard-hearted fathers; <quote>
+               <l>“What shall I say, what wishes dare I form, </l>
+               <l>When your base actions frustrate all my prayers;”</l>
+            </quote> Such a father as that would say things which you would find it difficult to
                 bear. He would say, “Why did you betake yourself to the neighbourhood of a harlot?
                 Why did you not shun her notorious blandishments? Why did you form a connection with
                 a woman who was nothing to you? Squander your money, throw it away; I give you
@@ -770,12 +794,14 @@ Added to repository.
                 freedom, being a lascivious woman, with wantonness, being a rich woman,
                 extravagantly, and being a lustful woman, after the fashion of prostitutes; am I to
                 think any one an adulterer who might happen to salute her with a little too much
-                freedom? <milestone n="17" unit="chapter"/><milestone n="39" unit="section"/></p>
-            <p>Some one will say, “Is this then the discipline which you enforce? Is this the way
+                freedom? <milestone n="17" unit="chapter"/>
+            <milestone n="39" unit="section"/>
+         </p>
+         <p>Some one will say, “Is this then the discipline which you enforce? Is this the way
                 you train up young men? Was this the object with which a parent recommended his son
                 to you and delivered him to you, that he might devote his youth to love and
                 pleasure, and that you might defend this manner of life and these pursuits?” </p>
-            <p>If, O judges, any one was of such vigour of mind, and of a natural disposition so
+         <p>If, O judges, any one was of such vigour of mind, and of a natural disposition so
                 formed for virtue and continence as to reject all pleasures, and to dedicate the
                 whole course of his life to labour of body and to wholesome training of his mind, a
                 man who took no delight in rest or relaxation, or the pursuits of those of his own
@@ -792,7 +818,7 @@ Added to repository.
                 such a manner were nevertheless at liberty to speak and write honourably and
                 magnificently; when the habits of <placeName key="tgn,1000074">Greece</placeName>
                 became changed other precepts arose and prevailed. </p>
-            <p>Therefore some of their wise men said that they did everything for the sake of
+         <p>Therefore some of their wise men said that they did everything for the sake of
                 pleasure; and even learned men were not ashamed of the degradation of uttering such
                 a sentiment. <milestone n="41" unit="section"/> Others thought that dignity ought to
                 be united with pleasure, so as by their neatness of expression to unite things as
@@ -805,14 +831,15 @@ Added to repository.
                 without some slip or downfall, and has supplied also an infinite variety of
                 exquisite delights, by which not only that tender age, but even one which is more
                 strongly fortified, may be caught. </p>
-            <p><milestone n="42" unit="section"/> Wherefore, if by chance you find any one whose
+         <p>
+            <milestone n="42" unit="section"/> Wherefore, if by chance you find any one whose
                 eyes are so well tutored as to look with scorn on the outward beauty of things; who
                 is not captivated by any fragrance, or touch, or flavour, and who stops his ears
                 against all the allurements of sound; I, and perhaps a few others, may think that
                 the gods have been propitious to this man, but most people will consider that he has
-                been treated by them as an object of their anger. <milestone n="18" unit="chapter"
-                /></p>
-            <p>Let this path be abandoned, deserted and uncultivated as it is, and hemmed in with
+                been treated by them as an object of their anger. <milestone n="18" unit="chapter"/>
+         </p>
+         <p>Let this path be abandoned, deserted and uncultivated as it is, and hemmed in with
                 hedges and brambles. Let some allowance be made for age; let youth be allowed some
                 little freedom; let not everything be refused to pleasure; let us not require that
                 true and proper system of life to be always predominant; let us allow desire and
@@ -828,10 +855,10 @@ Added to repository.
                 recall itself to attention to its domestic affairs, to forensic employment and to
                 the business of the state; so that it may appear from satiety to have thrown away,
                 and from experience to have learnt to despise, those things which it had not been
-                able properly to estimate by its unassisted reason, <pb n="267"/><milestone n="43"
-                    unit="section"/>
-            </p>
-            <p>And, O judges, both within, our own recollection and in the time of our fathers and
+                able properly to estimate by its unassisted reason, <pb n="267"/>
+            <milestone n="43" unit="section"/>
+         </p>
+         <p>And, O judges, both within, our own recollection and in the time of our fathers and
                 ancestors, there have been many most excellent men and most illustrious citizens,
                 who, after their youthful passions had cooled down, displayed, when they became of
                 more mature and vigorous age, the most exalted virtues; of whom there is no need for
@@ -842,9 +869,10 @@ Added to repository.
                 excessive licentiousness in their early days, some for their profuse luxury, their
                 enormous debts, their extravagance, and their debaucheries, but whose early errors
                 were afterwards so veiled over by their numerous virtues, that every one felt at
-                liberty to make excuses for and to defend their youth. <milestone n="19"
-                    unit="chapter"/><milestone n="44" unit="section"/></p>
-            <p>But in Marcus Caelius (for I will speak with the greater confidence of his honourable
+                liberty to make excuses for and to defend their youth. <milestone n="19" unit="chapter"/>
+            <milestone n="44" unit="section"/>
+         </p>
+         <p>But in Marcus Caelius (for I will speak with the greater confidence of his honourable
                 pursuits, because, relying on your good sense, O judges, I am not afraid freely to
                 confess some things respecting him) no luxury will be found; no extravagance; no
                 debt; no lasciviousness; no devotion to banquets or to gluttony. Those vices,
@@ -867,8 +895,7 @@ Added to repository.
                 for it is impossible that a mind which is devoted to lust which is hampered by love,
                 by desire, by passion, often with overindulgence, sometimes too by embarrassment in
                 pecuniary matters, can support the labour; such as they are, which we go through in
-                speaking; not merely when actually pleading, but even in thinking. <milestone n="46"
-                    unit="section"/> Do you suppose that there is any other reason, why, when the
+                speaking; not merely when actually pleading, but even in thinking. <milestone n="46" unit="section"/> Do you suppose that there is any other reason, why, when the
                 prizes of eloquence are so great when the pleasure of speaking is so great, when the
                 glory is so high, the influence derived from it so extensive, and the honour so
                 pure, there are and always have been so few men who devote themselves to this study?
@@ -876,22 +903,23 @@ Added to repository.
                 abandoned, O judges; sports and jesting and feasting; yes, I may almost say, the
                 conversation of one's friends, must be shunned. And this is what deters men of this
                 class from the labours and studies of oratory; not that their abilities are
-                deficient, or that their early training has been neglected. <milestone n="47"
-                    unit="section"/> Would Caelius, if he had given himself up to a life of
+                deficient, or that their early training has been neglected. <milestone n="47" unit="section"/> Would Caelius, if he had given himself up to a life of
                 pleasure, while still a very young man, have instituted a prosecution against a man
                 of consular rank? would he, if he shunned this labour, if he were captivated by and
                 entangled in the pursuit of pleasure, take his place daily among this array of
                 orators? would he court enmities? would he undertake prosecutions? would he incur
                 danger to his life? would he, in the sight of all the Roman people, struggle for so
-                many months for safety or for glory? <milestone n="20" unit="chapter"/></p>
-            <p>Does, then, that neighbourhood of his intimate nothing? nor the common report of men?
+                many months for safety or for glory? <milestone n="20" unit="chapter"/>
+         </p>
+         <p>Does, then, that neighbourhood of his intimate nothing? nor the common report of men?
                 Does not even <placeName key="perseus,Baiae">Baiae</placeName> itself speak pretty
                 plainly? Indeed, they not only speak, but cry aloud; they proclaim that the lust of
                 that one woman is so headlong, that she not only does not seek solitude, and
                 darkness, and the usual concealments of wickedness, but even while behaving in the
                 most shameless manner, exults in the presence of the most numerous crowd, and in the
                 broadest daylight. </p>
-            <p><milestone n="48" unit="section"/> But if there be any one who thinks that youth is
+         <p>
+            <milestone n="48" unit="section"/> But if there be any one who thinks that youth is
                 to be wholly interdicted from amours with courtesans, he certainly <pb n="268"/> is
                 very strict indeed. I cannot deny what he says; but still he is at variance not only
                 with the licence of the present age, but even with the habits of our ancestors, and
@@ -901,7 +929,8 @@ Added to repository.
                 Here, now, I will lay down what I consider a general rule: I will name no woman in
                 particular; I will leave the matter open for each of you to apply what I say as he
                 pleases. </p>
-            <p><milestone n="49" unit="section"/> If any woman, not being married, has opened her
+         <p>
+            <milestone n="49" unit="section"/> If any woman, not being married, has opened her
                 house to the passions of everybody, and has openly established herself in the way of
                 life of a harlot, and has been accustomed to frequent the banquets of men with whom
                 she has no relationship; if she does so in the city in country houses and in that
@@ -929,16 +958,16 @@ Added to repository.
                 it? Give us then a path to and a plan for our defence. For either your modesty will
                 supply us with the defence, that nothing has been done by Marcus Caelius with any
                 undue wantonness; or else your impudence will give both him and every one else very
-                great facilities for defending themselves. <milestone n="21" unit="chapter"
-                    /><milestone n="51" unit="section"/></p>
-            <p>But since my speech appears at last to have raised itself out of the shallows, and to
+                great facilities for defending themselves. <milestone n="21" unit="chapter"/>
+            <milestone n="51" unit="section"/>
+         </p>
+         <p>But since my speech appears at last to have raised itself out of the shallows, and to
                 have passed by the rocks, the rest of my course is made plain and easy to me. For
                 there are two charges, both relating to one woman,—both imputing enormous
                 wickedness; one respecting the gold which is said to have been received from Clodia,
                 the other respecting the poison which the prosecutors accuse Caelius of having
                 prepared with the view of assassinating Clodia. He took gold, as you say, to give to
-                the slaves of Lucius Lucceius, by whom Dio of <placeName key="perseus,Alexandria"
-                    >Alexandria</placeName> was slain, who at that time was living in Lucceius's
+                the slaves of Lucius Lucceius, by whom Dio of <placeName key="perseus,Alexandria">Alexandria</placeName> was slain, who at that time was living in Lucceius's
                 house. It is a great crime to intrigue against ambassadors, or to tamper with slaves
                 to induce them to murder their master's guest; it is a design full of wickedness,
                 full of audacity. <milestone n="52" unit="section"/> But with respect to that
@@ -952,18 +981,18 @@ Added to repository.
                 upright man, with the blot of everlasting impiety—then your well-educated mind ought
                 not to have been privy to so horrible an atrocity; your house, so open to all
                 people, ought not to have been made an instrument in it. Above all, that most
-                hospitable Venus of yours ought not to have been an assistant in it. <milestone
-                    n="53" unit="section"/>
-            </p>
-            <p>Balbus saw that. He said that Clodia was kept in the dark, and that Caelius alleged
+                hospitable Venus of yours ought not to have been an assistant in it. <milestone n="53" unit="section"/>
+         </p>
+         <p>Balbus saw that. He said that Clodia was kept in the dark, and that Caelius alleged
                 to her as his reason for wanting the gold, that he wanted it for the ornamenting of
                 his arms if he was as intimate with Clodia as you make him out when <pb n="271"/>
                 you say so much about his amorous propensities, he, no doubt, told her what he
                 wanted the gold for. If he was not so intimate with her, then, no doubt, she never
                 gave it. Therefore, if Caelius told you the truth, O you most ill-regulated woman,
                 you knowingly gave gold to promote a crime; if he did not venture to tell you, you
-                never gave it at all. <milestone n="22" unit="chapter"/></p>
-            <p>Why need I now bring forward arguments, of which I have a great number, to repel this
+                never gave it at all. <milestone n="22" unit="chapter"/>
+         </p>
+         <p>Why need I now bring forward arguments, of which I have a great number, to repel this
                 accusation? I might say that the habits of Marcus Caelius are wholly foreign to such
                 atrocious wickedness; that it is absolutely incredible that it should never have
                 occurred to so able and prudent a man, that a deed of such guilt was not to be
@@ -998,15 +1027,14 @@ Added to repository.
                 or in public places, was he likely to think lightly of when it was begun in his own
                 city and in his own house? What he would not have concealed if it threatened any
                 country person with danger, can he, a learned man himself, be supposed to have kept
-                secret when a plot was laid against a most learned man? <milestone n="55"
-                    unit="section"/> But why, O judges, do I detain you so long? You shall have the
+                secret when a plot was laid against a most learned man? <milestone n="55" unit="section"/> But why, O judges, do I detain you so long? You shall have the
                 authority and scrupulous faith of the man himself on his oath before you, and listen
                 carefully to every word of his evidence. Read the evidence of Lucius Lucceius. [The
                 evidence of Lucceius is read.] What more do you wait for? Do you think that the case
                 itself, or even that truth of itself can utter any actual words in its own defence?
                 This is the defence made by innocence,—this is the language of the cause
                 itself,—this is the single, unassisted voice of truth. </p>
-            <p>In the circumstances of the crime itself there is no suspicion; in the facts of the
+         <p>In the circumstances of the crime itself there is no suspicion; in the facts of the
                 case there is no argument. In the negotiation which is said to have been carried on,
                 there is no trace of any conversation, of any opportunity, of either time or place.
                 No one is named as having been a witness of it. No one is accused of having been
@@ -1019,8 +1047,10 @@ Added to repository.
                 little doubt can arise,—namely, whether a rash, libidinous, furious woman appears to
                 have invented an accusation, or a dignified, <pb n="273"/> and wise, and virtuous
                 man is to be believed to have given his evidence with a scrupulous regard to truth.
-                    <milestone n="23" unit="chapter"/><milestone n="56" unit="section"/></p>
-            <p>There remains the charge respecting the poison for me to consider; a charge of which
+                    <milestone n="23" unit="chapter"/>
+            <milestone n="56" unit="section"/>
+         </p>
+         <p>There remains the charge respecting the poison for me to consider; a charge of which
                 I can neither discover the origin nor guess the object. For what reason was there
                 for Caelius desiring to give poison to that woman? Was it in order to save himself
                 from being forced to repay the gold? Did she demand it back? Was it to save himself
@@ -1054,8 +1084,9 @@ Added to repository.
                 For if he was as intimate with the woman as you try to make him out, he certainly
                 knew that those slaves also were intimate with her. But if no such intimacy existed
                 between him and her as is alleged by you, then how could he have arrived at such
-                familiarity with her slaves? <milestone n="24" unit="chapter"/></p>
-            <p>But, however, of the poison itself what account is invented? where was it got? how
+                familiarity with her slaves? <milestone n="24" unit="chapter"/>
+         </p>
+         <p>But, however, of the poison itself what account is invented? where was it got? how
                 was it prepared? by what means? to whom was it delivered, and where? They say that
                 he kept it at home, and that he made trial of its strength on one of his slaves whom
                 he provided with that express object, and that his rapid death led him to think
@@ -1077,7 +1108,8 @@ Added to repository.
                 by name, and me myself, and the republic, so as to show that he was grieving, not so
                 much because he was dying, as because both his country and I were about to be
                 deprived of his aid and protection. </p>
-            <p><milestone n="60" unit="section"/> But, if no violence of sudden wickedness had
+         <p>
+            <milestone n="60" unit="section"/> But, if no violence of sudden wickedness had
                 carried off that great man, with what vigour would he, as a man of consular rank,
                 have resisted that frantic cousin of his,—he, who as <pb n="275"/> consul said in
                 the hearing of the senate, at a time when he was beginning and endeavouring to give
@@ -1086,10 +1118,12 @@ Added to repository.
                 poison? Is she not afraid of the very house itself, lest she should make it utter
                 some sound? Does she not dread the very walls, which are privy to her wickedness?
                 does she not shudder at the recollection of that fatal and melancholy night? </p>
-            <p>But I will return to the accusation: but this mention of that most illustrious and
+         <p>But I will return to the accusation: but this mention of that most illustrious and
                 most gallant man has both weakened my voice with weeping, and overcome my mind with
-                sorrow. <milestone n="25" unit="chapter"/><milestone n="61" unit="section"/></p>
-            <p>But still there is no mention made of whence the poison came from, or how it was
+                sorrow. <milestone n="25" unit="chapter"/>
+            <milestone n="61" unit="section"/>
+         </p>
+         <p>But still there is no mention made of whence the poison came from, or how it was
                 prepared. They say that it was given to Publius Licinius, a modest and virtuous
                 young man, and an intimate friend of Caelius. They say that an arrangement was
                 entered into with the slaves, that they should come to the strangers' baths; and
@@ -1101,8 +1135,8 @@ Added to repository.
                 the slaves of that woman having been seen at Caelius's house? But if a quarrel had
                 already sprung up between them, if the intimacy was over, and enmity had taken its
                 place, <quote>
-                    <l>Hence arose those tears.</l>
-                </quote> This is the cause of all that wickedness and of all those crimes.
+               <l>Hence arose those tears.</l>
+            </quote> This is the cause of all that wickedness and of all those crimes.
                     <milestone n="62" unit="section"/> Very true, says he, and when the slaves had
                 reported to their mistress the whole transaction and the guilty designs of Caelius,
                 that crafty woman enjoined her slaves to promise Caelius everything; but in order
@@ -1110,8 +1144,9 @@ Added to repository.
                 detected, she commanded them to appoint the strangers' baths as the place where it
                 was to he delivered in order to send thither friends to lie in ambush there and then
                 on a sudden, when Licinius had arrived and was delivering the poison, to jump out,
-                and arrest the man. <milestone n="26" unit="chapter"/></p>
-            <p>But all these circumstances, O judges, furnish me <pb n="276"/> with a very easy
+                and arrest the man. <milestone n="26" unit="chapter"/>
+         </p>
+         <p>But all these circumstances, O judges, furnish me <pb n="276"/> with a very easy
                 method of refuting them. For why had she appointed the public baths, of all places
                 in the world? where I cannot find any spot which may serve as an ambush for men in
                 their gowns. For if they were in the vestibule of the baths, they would not be lying
@@ -1138,9 +1173,10 @@ Added to repository.
                 box of poison, drew it back again, and, alarmed at that an expected onset of men,
                 took to his heels. O how great is the power of truth! which of its own power can
                 easily defend itself against all the ingenuity, and cunning, and wisdom of men, and
-                against the treacherous plots of all the world. <milestone n="27" unit="chapter"
-                    /><milestone n="64" unit="section"/></p>
-            <p>But how destitute of all proof is the whole of the story of this poetess and
+                against the treacherous plots of all the world. <milestone n="27" unit="chapter"/>
+            <milestone n="64" unit="section"/>
+         </p>
+         <p>But how destitute of all proof is the whole of the story of this poetess and
                 inventress of many fables! How totally without any conceivable object or result is
                 it! For what does she say? Why did so numerous a body of men, <pb n="277"/> (for it
                 is clear enough it was not a small number, as it was requisite that Licinius should
@@ -1154,7 +1190,7 @@ Added to repository.
                 plan of the woman. This was the part allotted to those men who were asked to
                 undertake it but why it is that they sprung forth so precipitately and prematurely
                 as you say, I do not find stated. </p>
-            <p>They had been invited for this express purpose they had been placed with this
+         <p>They had been invited for this express purpose they had been placed with this
                 especial object in order to effect the undeniable detection of the poison, of the
                 plot, and of every particular of the crime. <milestone n="65" unit="section"/> Could
                 they spring forward at a better time than when Licinius had arrived? when he was
@@ -1169,28 +1205,27 @@ Added to repository.
                 very nick of time when Licinius had arrived and was getting out the box, and was
                 stretching out his hand, and delivering the poison. This is rather the end of a
                 farce than a regular comedy; in which, when a regular end cannot be invented for it
-                some one escapes out of some one else's hands, the whistle<note anchored="true"
-                        ><foreign xml:lang="la">Scabillum</foreign> is the Latin word. “<foreign
-                        xml:lang="la">Scabillum</foreign>, a kind of musical instrument which by the
+                some one escapes out of some one else's hands, the whistle<note anchored="true">
+               <foreign xml:lang="la">Scabillum</foreign> is the Latin word. “<foreign xml:lang="la">Scabillum</foreign>, a kind of musical instrument which by the
                     pressure of the foot always produced the same tone. They danced to it on the
                     stage, and it seems to have been used to denote the beginning and end of an
-                    act.”—Riddle, Lat. Dict. in voc.</note> sounds, and the curtain drops. <pb
-                    n="278"/>
-                <milestone n="28" unit="chapter"/><milestone n="66" unit="section"/></p>
-            <p>For I ask why that army under the command of the woman allowed Licinius, when
+                    act.”—Riddle, Lat. Dict. in voc.</note> sounds, and the curtain drops. <pb n="278"/>
+            <milestone n="28" unit="chapter"/>
+            <milestone n="66" unit="section"/>
+         </p>
+         <p>For I ask why that army under the command of the woman allowed Licinius, when
                 embarrassed, hesitating, receding, and endeavouring to fly, to slip through their
                 fingers? why they did not seize him? why they did not prove beyond all denial a
                 crime of such enormous wickedness by his own confession, by the eye-witness of many
                 people, by even the voice of the crime itself if I may say so? Were they afraid that
                 so many men would not be able to get the better of one, that strong men would not be
                 able to beat a weak man, or active men to surprise one in such a fright? </p>
-            <p>No corroborative proof is to be found in the circumstances; no ground for suspicion
+         <p>No corroborative proof is to be found in the circumstances; no ground for suspicion
                 in any part of the case, no object for or result of the crime, can be imagined.
                 Therefore, this cause, instead of being supported by arguments, by conjecture, and
                 by those tokens by which the truth generally has a light thrown upon it rests wholly
                 on the witnesses. And those witnesses, O judges, I long to see, not only without the
-                least apprehension, but with a soft of hope of great enjoyment. <milestone n="67"
-                    unit="section"/> My mind is exceedingly eager to behold them, first, because
+                least apprehension, but with a soft of hope of great enjoyment. <milestone n="67" unit="section"/> My mind is exceedingly eager to behold them, first, because
                 they are luxurious youths, the intimate friends of a rich and high-born woman;
                 secondly, because they are gallant men, placed by their Amazonian general in ambush,
                 and as a sort of garrison to the baths. And, when I see them, I will ask them how
@@ -1200,7 +1235,7 @@ Added to repository.
                 seize this man, who was but a single individual, and as slight and weak a man as you
                 see, while he was standing there; or, at all events, why they did not pursue him
                 when he fled. </p>
-            <p>And, in truth, they will never be able to get out of their perplexity, if they ever
+         <p>And, in truth, they will never be able to get out of their perplexity, if they ever
                 do go into that witness-box; not though they may be ever so witty and talkative at
                 banquets, and sometimes, over their wine, even eloquent. For the forum is one thing,
                 and the banqueting couch another. The benches of counselors are very different from
@@ -1212,9 +1247,10 @@ Added to repository.
                 some one else by some other means; let them display their capacity in other
                 employments; let them flourish in that woman's house in beauty; let them regulate
                 her expenses let them cling to her, sup with her, serve her in every possible way,
-                but let them spare the lives and fortunes of innocent men. <milestone n="29"
-                    unit="chapter"/><milestone n="68" unit="section"/></p>
-            <p>But those slaves have been emancipated by the advice of her relations,—most highly
+                but let them spare the lives and fortunes of innocent men. <milestone n="29" unit="chapter"/>
+            <milestone n="68" unit="section"/>
+         </p>
+         <p>But those slaves have been emancipated by the advice of her relations,—most highly
                 born and illustrious men. At last then we have found something which that woman is
                 said to have done by the advice and authority of her own relations,—men of the
                 highest respectability of character. But I wish to know what proof there is in that
@@ -1225,8 +1261,8 @@ Added to repository.
                 should not they advise it, when you yourself stated that you were reporting to them
                 a matter which you had not received information of from others, but which had been
                 discovered by yourself? <milestone n="69" unit="section"/>
-            </p>
-            <p>Here also we wonder whether any most obscene story followed the tale of that
+         </p>
+         <p>Here also we wonder whether any most obscene story followed the tale of that
                 imaginary box. There is nothing which may not seem applicable to such a woman as
                 that. The matter has been heard of, and has been the subject of universal
                 conversation. You have long ago perceived, O judges, what I wish to say, or rather
@@ -1238,8 +1274,8 @@ Added to repository.
                 men would never have sealed with their approbation, if every sort of story which
                 involved any kind of infamy did not appear consistent with and suited to that
                 woman's character. <milestone n="70" unit="section"/>
-            </p>
-            <p>The cause has now been fully stated by me, O judges, and summed up. You now
+         </p>
+         <p>The cause has now been fully stated by me, O judges, and summed up. You now
                 understand how important an action this is which has been submitted to your
                 decision; how serious <pb n="280"/> a charge is confided to you. You are presiding
                 over an investigation into a charge of violence;—into a law which concerns the
@@ -1250,9 +1286,10 @@ Added to repository.
                 allayed, extinguished the smoking relics of the conspiracy. Under this law the youth
                 of Marcus Caelius is demanded, not for the sake of enduring any punishment called
                 for by the republic, but in order to be sacrificed to the lust and profligate
-                pleasures of a woman. <milestone n="30" unit="chapter"/><milestone n="71"
-                    unit="section"/></p>
-            <p>And even in this place the condemnation of Marcus Camurtius<note anchored="true">It
+                pleasures of a woman. <milestone n="30" unit="chapter"/>
+            <milestone n="71" unit="section"/>
+         </p>
+         <p>And even in this place the condemnation of Marcus Camurtius<note anchored="true">It
                     is quite unknown to as what these allusions of Cicero to passing events refer
                     to.</note> and Caius Caesernius is brought up again! Oh the folly, or shall I
                 rather say, oh the extraordinary impudence! Do you dare,—you prosecutors,—when you
@@ -1267,20 +1304,18 @@ Added to repository.
                 For though they were certainly not liable under the law concerning violence, they
                 were still so implicated in that crime, that they deemed men who ought never to be
                 released from the shackles of the law. <milestone n="72" unit="section"/>
-            </p>
-            <p>But why is Marcus Caelius brought before this court? when no charge properly
+         </p>
+         <p>But why is Marcus Caelius brought before this court? when no charge properly
                 belonging to this mode of investigation is imputed to him, nor indeed anything else
                 of such a nature that, though it may not exactly come under the provisions of my
                 law, still calls for the exercise of your severity. His early youth was devoted to
                 strict discipline; and to those pursuits by which we are prepared for these forensic
-                labours,—for taking part in the administration of the republic,—for honour, <pb
-                    n="281"/> and glory, and dignity <gap reason="* * * *"/> and to those
+                labours,—for taking part in the administration of the republic,—for honour, <pb n="281"/> and glory, and dignity <gap reason="* * * *"/> and to those
                 friendships with his elders, whose industry and temperance he might most desire to
                 imitate; and to those studies of the youths of his own age: so that he appeared to
                 be pursuing the same course of glory as the most virtuous and most highly-born of
                 the citizens. <milestone n="73" unit="section"/> Afterwards, when he had advanced
-                somewhat in age and strength, he went into <placeName key="tgn,7001242"
-                    >Africa</placeName>, as a comrade of Quintus Pompeius the proconsul, one of the
+                somewhat in age and strength, he went into <placeName key="tgn,7001242">Africa</placeName>, as a comrade of Quintus Pompeius the proconsul, one of the
                 most temperate of men, and one of the strictest in the performance of every duty.
                 And as his paternal property and estate lay in that province, he thought that some
                 knowledge of its habits and feelings would be usefully acquired by him, now that he
@@ -1288,12 +1323,13 @@ Added to repository.
                 information. He departed from <placeName key="tgn,7001242">Africa</placeName>,
                 having gained the most favourable opinion of Pompeius, as you shall learn from
                 Pompeius's own evidence. </p>
-            <p>He then wished, according to the old-fashioned custom, and following the example of
+         <p>He then wished, according to the old-fashioned custom, and following the example of
                 those young men who afterwards turned out most eminent men and most illustrious
                 citizens in the state, to signalise his industry in the eyes of the Roman people, by
-                some very conspicuous prosecution. <milestone n="31" unit="chapter"/><milestone
-                    n="74" unit="section"/></p>
-            <p>I wish indeed that his desire for glory had led him in some other direction; but the
+                some very conspicuous prosecution. <milestone n="31" unit="chapter"/>
+            <milestone n="74" unit="section"/>
+         </p>
+         <p>I wish indeed that his desire for glory had led him in some other direction; but the
                 time for this complaint has passed by. He prosecuted Caius Antonius, my colleague;
                 an unhappy man, to whom the recollection of the great service which he did the
                 republic was no benefit, but to whom the belief of the evil which he had designed
@@ -1315,8 +1351,8 @@ Added to repository.
                 himself wholly from it and raised himself out of it, and he is now so far removed
                 from the discredit of any familiarity with that woman, that he is occupied in
                 warding off the attacks which are instigated against him by her enmity and hatred. </p>
-            <p>
-                <milestone n="76" unit="section"/> And in order to put a violent end to the reports
+         <p>
+            <milestone n="76" unit="section"/> And in order to put a violent end to the reports
                 which had arisen of his luxury and inactivity,—(what he did, he did in fact greatly
                 against my will, and in spite of my strongest remonstrances, but still he did
                 it,)—he instituted a prosecution against a friend of mine for bribery and
@@ -1339,21 +1375,21 @@ Added to repository.
                 escort him, or at the general splendour and brilliancy of his appearance, let him
                 recollect that all these things will soon pass away,—that a riper age, and
                 circumstances, and the progress of time, will soon have softened down all of them.
-                    <milestone n="32" unit="chapter"/></p>
-            <p>Preserve, therefore, to the republic, O judges, a <pb n="283"/> citizen devoted to
+                    <milestone n="32" unit="chapter"/>
+         </p>
+         <p>Preserve, therefore, to the republic, O judges, a <pb n="283"/> citizen devoted to
                 liberal studies, and to the most virtuous party in the state, and to all good men. I
                 promise you this,—and I give this undertaking to the republic provided we ourselves
                 have by our own conduct given satisfaction to the republic,—that Caelius's conduct
                 will never be at variance with our own. And I promise not only because I rely on the
                 intimacy that subsists between him and me, but also because he has taken upon
-                himself already the obligation of the most stringent engagements. <milestone n="78"
-                    unit="section"/> For a man who has ventured on such a step as that of
+                himself already the obligation of the most stringent engagements. <milestone n="78" unit="section"/> For a man who has ventured on such a step as that of
                 prosecuting a man of consular rank because he says that the republic has been
                 injured by his violence, cannot possibly behave as a turbulent citizen in the
                 republic himself: a man who will not allow another to be at peace, even after he his
                 been acquitted of bribery and corruption, can never himself become a briber of
                 others with impunity. </p>
-            <p>The republic, O judges, has two prosecutions, which have been carried on by Marcus
+         <p>The republic, O judges, has two prosecutions, which have been carried on by Marcus
                 Caelius, as pledges to secure it from any danger from him and guarantees of his
                 good-will and devotion. Wherefore I do pray and entreat you, O judges, after Sextus
                 Clodius has been acquitted within these few days in this very city;—a man whom you
@@ -1371,9 +1407,7 @@ Added to repository.
                 that man to have been acquitted in this city by the influence of a woman, and at the
                 same time to allow Marcus Caelius to be sacrificed, in the same city, to a woman's
                 lusts. I entreat you never to permit the same woman, in conjunction with a man who
-                is at the same time her brother and her husband, to save a most infamous robber, <pb
-                    n="284"/> and to overwhelm a most honourable and virtuous young man. <milestone
-                    n="79" unit="section"/> And when you have given due consideration to the fact of
+                is at the same time her brother and her husband, to save a most infamous robber, <pb n="284"/> and to overwhelm a most honourable and virtuous young man. <milestone n="79" unit="section"/> And when you have given due consideration to the fact of
                 his youth, then place also before your eyes, I entreat you, the old age of his
                 miserable father whom you see before you; whose whole dependence is on this his only
                 son; who reposes on the hopes which he has formed of him; who fears nothing but the
@@ -1385,8 +1419,7 @@ Added to repository.
                 the misery of another, to yield to your own pious or indulgent dispositions. Do not,
                 O judges, cause this old man, who is already, by the silent progress of nature,
                 declining and hastening to his end, to fail prematurely through a wound inflicted by
-                you, before the day which his natural destiny has appointed for him. <milestone
-                    n="80" unit="section"/> Do not overthrow this other man, now flourishing in the
+                you, before the day which his natural destiny has appointed for him. <milestone n="80" unit="section"/> Do not overthrow this other man, now flourishing in the
                 prime of life, now that his virtue has just taken firm root, as it were by some
                 whirlwind or sudden tempest. Preserve the son for the father, the father for the
                 son, lest you should appear either to have despised the old age of a man almost in
@@ -1396,6 +1429,6 @@ Added to repository.
                 will have him dedicated, devoted, and wholly bound to you and to your children, and
                 you will enjoy, O judges, in the greatest possible degree, the abundant and lasting
                 fruits of all his exertions and labours. </p>
-        </body>
-    </text>
+      </body>
+   </text>
 </TEI>

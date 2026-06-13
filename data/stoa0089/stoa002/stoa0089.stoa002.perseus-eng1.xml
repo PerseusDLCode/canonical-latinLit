@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title>The War Against Gildo</title>
+            <title>The War Against Gildo</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,11 +41,11 @@
             <p>Keyboarding</p>
          </sourceDesc>
       </fileDesc>
-            <encodingDesc>
-                     <refsDecl doctype="TEI.2">            
-                              <state unit="book"/>            
-                     </refsDecl>
-            </encodingDesc>
+      <encodingDesc>
+         <refsDecl doctype="TEI.2">
+            <state unit="book"/>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -56,15 +56,15 @@
    <text id="stoa0089.stoa002.perseus-eng1">
       <body>
          <pb id="v.1.p.99" TEIform="pb"/>
-               <div1 type="book" n="1" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book" n="1" org="uniform" sample="complete" part="N">
+            <p>
 
 The kingdom of the south is restored to our empire,
 the sky of that other hemisphere is once more
 brought into subjection. East and West live in
 amity and concord beneath the sway of one ruler.
 </p>
-         <p>We have joined Europe again to Africa, and unswerving
+            <p>We have joined Europe again to Africa, and unswerving
 singleness of purpose unites the brother
 emperors. The would-be third participant of empire
 has fallen before the prowess of Honorius the son
@@ -73,7 +73,7 @@ Theodosius, the father. Still is my mind troubled
 and admits not the universal joy for very amazement,
 nor can believe the fulfilment of its heartfelt prayers.
 </p>
-         <p>Not yet had the army landed upon Africa's2 coasts
+            <p>Not yet had the army landed upon Africa's2 coasts
 when Gildo yielded to defeat. No difficulties
 delayed our victorious arms, neither length of march
 nor intervening ocean. One and the same word
@@ -97,7 +97,7 @@ shows her grey hairs and the spear she carries is
 a mass of rust. At last she reaches heaven and
 falls at the Thunderer's feet and utters this mournful
 complaint: <q direct="unspecified">
-               <p>If prophecy rightly foretold the
+                  <p>If prophecy rightly foretold the
 permanence of the rising walls of Rome; if the
 Sibyl's verse is unalterable; if thou art not yet
 wearied of our city and the Capitol, I come to thee
@@ -118,13 +118,13 @@ Why tell of Tiber's flooded stream, sweeping
 betwixt roofs and threatening the very hills? My
 submerged city has borne mighty ships, echoed the
 sound of oars, and experienced Pyrrha's flood.</p>
-               <p>
+                  <p>
 Woe is me, whither are fled the power of Latium
 <pb id="v.1.p.103"/>
 and the might of Rome? To what a shadow of our
 former glory are we by gradual decline arrived!
 </p>
-               <p>Time was when my men bore arms and my grey-
+                  <p>Time was when my men bore arms and my grey-
 beards met in council; mistress of the world was I
 and lawgiver to mankind. From rising to setting
 sun I sped in triumph. When proud Caesar had
@@ -148,7 +148,7 @@ beneath that new sway. Africa remained our only
 hope and scarcely did she suffice to feed us, whose
 corn-ships none but the south wind wafted across.
 </p>
-               <p>Her promise for the future was insecure, as, ever
+                  <p>Her promise for the future was insecure, as, ever
 helpless, she demanded the loyalty of the wind
 and of the season.1 This province, too, Gildo
 seized towards the close of autumn. Anxiously and
@@ -157,7 +157,7 @@ sail in the fond hope that perchance a sense of
 shame has extorted somewhat from the powerful
 tyrant, or the conqueror left some corner unconquered.
 </p>
-               <p>We are fed at the pleasure of the Moor,
+                  <p>We are fed at the pleasure of the Moor,
 <pb id="v.1.p.105"/>
 who boasts that he does not repay a debt but that
 he gives us of his own, and rejoices to apportion out
@@ -231,18 +231,18 @@ battle. Let me fall rather into the hands of cruel
 Pyrrhus; abandon me to the fury of the Senones
 or the flames of Brennus. Welcome all this rather
 than to starve!</p>
-            </q>
-         </p>
-         <p>So spake she, and upwelling tears choked her voice.
+               </q>
+            </p>
+            <p>So spake she, and upwelling tears choked her voice.
 </p>
-         <p>Venus, mother of Aeneas, wept, and Mars, father of
+            <p>Venus, mother of Aeneas, wept, and Mars, father of
 Romulus and Minerva, mindful of Vesta's sacred
 charge.! Nor Cybele nor Juno stood with dry eyes.
 </p>
-         <p>The heroes mourn and all the gods whose worship
+            <p>The heroes mourn and all the gods whose worship
 Rome received from without or herself inaugurated.
 </p>
-         <p>And now began the heart of Jove to soften. With
+            <p>And now began the heart of Jove to soften. With
 hand outstretched he was checking the murmurings of
 the gods when, shaking heaven with distraught cries,
 Africa, her cheeks torn, appeared in the distance
@@ -251,7 +251,7 @@ scattered her crown of corn. Her head was wounded
 and the ivory comb that secured her hair hung
 loose and broken. She rushed into Heaven's
 halls shouting thus: <q direct="unspecified">
-               <p>Great Jove, why delayest
+                  <p>Great Jove, why delayest
 thou to loose the bonds of sea, to break its
 decree and hurl thy brother 2 in wrath against
 the land? May I be the first to be overwhelmed.
@@ -279,7 +279,7 @@ to Egypt's coast Gildo has appropriated the land
 as his own. A third of the world belongs to one
 robber-chief.
 </p>
-               <p>He is a prey to the most diverse vices: whatsoe'er
+                  <p>He is a prey to the most diverse vices: whatsoe'er
 his bottomless greed has stolen, a yet more insatiable
 profligacy squanders. He is the terror of the living,
 the heir of the dead, the violator of the unwed, and
@@ -289,7 +289,7 @@ is a misery to the rich, night to the married. Is
 any wealthy or known to possess a beautiful wife,
 he is overwhelmed by some trumped - up charge.
 </p>
-               <p>If no charge be brought against him, he is asked
+                  <p>If no charge be brought against him, he is asked
 to a banquet and there murdered. No form of
 death but is known to this artist in crime. He
 investigates the properties of different poisons and
@@ -299,7 +299,7 @@ he sees by a look or sighs with too much freedom,
 at the very festal board out darts some henchman
 with drawn sword at a nod from his master.
 </p>
-               <p>Each glued to his seat tastes in silent fear of the
+                  <p>Each glued to his seat tastes in silent fear of the
 deadly banquet; drains, pale of face, the treacherous
 cup, and looks around at the weapons that threaten
 his life. The deadly board is decked in infernal
@@ -329,9 +329,9 @@ houses and expels husbandmen from farms so long
 theirs. My people are scattered in exile. Are my
 citizens never to return from their wanderings
 to their native soil?</p>
-            </q>
-         </p>
-         <p>She would have spoken further in her grief had
+               </q>
+            </p>
+            <p>She would have spoken further in her grief had
 not Jove begun from his lofty throne — Atropos
 wrote down his words in adamant and Lachesis spun
 them in with her thread — <q direct="unspecified">Neither thou, Rome,
@@ -339,23 +339,23 @@ nor yet thou, Africa, will we suffer to go long unavenged.
 Honorius shall disperse your common foe.
 Go in peace. No violence shall part your companionship;
 Africa shall serve Rome, and Rome alone.</q>
-         </p>
-         <p>He spake and breathed into Rome a youth renewed.
+            </p>
+            <p>He spake and breathed into Rome a youth renewed.
 </p>
-         <p>Straightway her former strength returned, and her
+            <p>Straightway her former strength returned, and her
 hair put off its grey of eld; her helmet grew solid,
 <pb id="v.1.p.115"/>
 upright stood the plumes, the round shield shone
 once more, and gone was every trace of rust from
 her wingèd, gleaming spear.
 </p>
-         <p>Sleep was now driving the dew-drenched steeds
+            <p>Sleep was now driving the dew-drenched steeds
 of night, guiding them with the reins of Lethe and
 carrying round the stars in her silent course, when
 the elder and the younger Theodosius,1 chief among
 the heroes divine, came to bring peace to men.
 </p>
-         <p>They bore Jove's secret message and mandate to
+            <p>They bore Jove's secret message and mandate to
 the two brothers and ratified the treaty between
 the two empires. So when at dead of night the
 driving tempest has brought the helmsman's skill
@@ -378,9 +378,9 @@ races! Who hath robbed the world of
 such a defender? How long a while has mankind
 prayed thine aid, and missed thy goodness and thy
 might!</q>
-         </p>
-         <p>Sighing, the father made answer: <q direct="unspecified">
-               <p>Was it for
+            </p>
+            <p>Sighing, the father made answer: <q direct="unspecified">
+                  <p>Was it for
 this? Is a Moor become a cause of discord between
 two brothers? Does the empire and court of the
 <pb id="v.1.p.117"/>
@@ -395,7 +395,7 @@ king of Armenia, an unknown monarch by Maeotis'
 shore but sent aid to mine enterprises? The Getae
 gave me succour, the Geloni came to my assistance.
 </p>
-               <p>Gildo alone sent not a man, not a ship, but waited
+                  <p>Gildo alone sent not a man, not a ship, but waited
 the issue in wavering loyalty. Had he sought the
 confronting host as an open foe my wrath had been
 less bitter. He stood apart on Fortune's watchtower
@@ -416,7 +416,7 @@ he maketh great return and hath brought over many
 cities to thine allegiance? Shall honour, then, give
 place to utility? Can gain render treachery welcome?
 </p>
-               <p>I make no mention of his cruel betrayal of thy brother;
+                  <p>I make no mention of his cruel betrayal of thy brother;
 of his fickle nature; were a traitor to bring safety
 even when at peril's height death threatened, never
 shall he win gratitude. When our life is saved
@@ -437,7 +437,7 @@ treachery of a slave. Camillus, too, gave back to
 the beleaguered city the boys brought to his camp
 from out the walls.
 </p>
-               <p>These were consigned to punishment for seeking
+                  <p>These were consigned to punishment for seeking
 to put an end to wars. Is Gildo to live that he
 may kindle them? Takest thou such measures
 against thy brother as another would disdain to
@@ -455,7 +455,7 @@ I pray. That were worthy of cruel Thebes and
 Mycenae; let that accusation be levelled against
 the Moors.
 </p>
-               <p>What wrong is Stilicho devising? when did he
+                  <p>What wrong is Stilicho devising? when did he
 fail in his obedience? than him what more loyal
 <pb id="v.1.p.121"/>
 supporter have we? I will not mention the various
@@ -497,17 +497,17 @@ sun's mid-day heat, yet well I know Stilicho's ingenuity
 —that mind of his equal to any emergency.
 He will force his way through the desert, his own
 greatness will lead him.</p>
-            </q>
-         </p>
-         <p>Thus spake the dead emperor, whereon thus
+               </q>
+            </p>
+            <p>Thus spake the dead emperor, whereon thus
 the son answered: <q direct="unspecified">Right willingly, father, will I
 fulfil thy commands: ever ready am I to welcome
 thy behests. None is dearer to me than my kinsman
 Stilicho. Let the impious Gildo atone for his wrongs,
 and Africa be restored to my brother still safer
 than before.</q>
-         </p>
-         <p>While father and son thus debated in long converse,
+            </p>
+            <p>While father and son thus debated in long converse,
 Theodosius the grandfather made his way to Italy
 and entered the chaste bedchamber where on his
 couch of Tyrian purple Honorius lay in sweet sleep
@@ -536,11 +536,11 @@ one house triumph thus many times over one race.
 Thanks be to the gods who have interposed so many
 years between the sacrifice of Firmus to my arms
 and that of Firmus' brother to those of my grandson.</q>
-         </p>
-         <p>He spake, then fled, as he felt the breath of
+            </p>
+            <p>He spake, then fled, as he felt the breath of
 the approaching dawn.
 </p>
-         <p>Then emulous courage roused the emperor with
+            <p>Then emulous courage roused the emperor with
 insistent goad. He burns to set sail, to cleave the
 main, to assail with the spear the distant Moors. So
 he summons his father-in-law 1 and clasping his hand
@@ -575,8 +575,8 @@ disgrace? Shall I relinquish, now that I am a man,
 what I ruled and governed as a boy? Twice my
 father hurried to the Alps to defend another's
 realm. Am I to be an easy prey, an object of scorn?</q>
-         </p>
-         <p>He ended and Stilicho thus made answer: <q direct="unspecified">Wilt
+            </p>
+            <p>He ended and Stilicho thus made answer: <q direct="unspecified">Wilt
 thou, an emperor, deign to challenge a Moor to
 fight? Is that coward to have the consolation of
 death in battle at thy hand? Shall Honorius fight
@@ -623,8 +623,8 @@ Let Gildo flee headlong before him whom he put to
 flight and fear him whom he o'erwhelmed with the
 murder of his children. As he is being dragged off to
 the slaughter let him recognize his brother's hand.</q>
-         </p>
-         <p>When this advice had been accepted by his son-
+            </p>
+            <p>When this advice had been accepted by his son-
 in-law, Stilicho made ready for war the most famous
 regiments in the army, selecting therefrom special
 companies of picked men; he further prepared the
@@ -638,13 +638,13 @@ named after Augustus, that well called The Unconquered,
 and the brave regiment of the Lion 2
 to whose name their shields bear witness.
 </p>
-         <p>But before they start the emperor, standing upon
+            <p>But before they start the emperor, standing upon
 a platform of earth, heartens them with his words:
 <pb id="v.1.p.131"/>
 leaning upon their spears the soldiers throng around
 him and attune their ready ears to his inspiring
 voice. <q direct="unspecified">
-               <p>My men, so soon to bring defeat upon
+                  <p>My men, so soon to bring defeat upon
 Gildo, now is the time to fulfil your promises and
 make good your threats. If you felt indignation
 on my behalf, now take up arms and prove it.
@@ -677,8 +677,8 @@ him beg aid of lutes and choirs, for he likes not the
 clarion's note, and let him learn (all unwilling) to
 spend in war nights that he now dedicates to love.
 <pb id="v.1.p.133"/>
-               </p>
-               <p>Is not death preferable to a life disgraced? If,
+                  </p>
+                  <p>Is not death preferable to a life disgraced? If,
 in addition to the loss of Illyria, Africa is to be
 surrendered to Moorish kings, what lands still remain
 to us? The empire of Italy, once bounded by the
@@ -696,9 +696,9 @@ back to Africa the laws of Rome she now disregards.
 Let history repeat itself, and the sword smite from
 its trunk the head of this third tyrant 1 and so end
 at last the series of bloody usurpers.</p>
-            </q>
-         </p>
-         <p>An omen confirms his word and before the eyes
+               </q>
+            </p>
+            <p>An omen confirms his word and before the eyes
 of all, the tawny bird, armour-bearer of Jove, swoops
 down from the open sky and seizes a snake in his
 curved talons; and while the eagle tears his struggling
@@ -708,14 +708,14 @@ way the soldiers come hurrying up, crossing rocks
 and streams in their eagerness at the call of this
 portent. Neither mountains nor woods delay them.
 </p>
-         <p>Even as the cranes leave their summer home of
+            <p>Even as the cranes leave their summer home of
 Thrace clamorously to join issue in doubtful war
 with the Pygmies, when they desert the Strymon
 for warm-watered Nile, the letter 2 traced by the
 speeding line stands out against the clouds and the
 heaven is stamped with the figure of their flight.
 </p>
-         <p>When they reached the coast still fiercer blazed
+            <p>When they reached the coast still fiercer blazed
 <pb id="v.1.p.135"/>
 their enthusiasm. They seize upon the ships and
 themselves make ready the hawsers; furl the sails
@@ -723,7 +723,7 @@ and fix the yards to the masts. Etruria's shore
 is shaken with their uproar and Arcadian-founded
 Pisa cannot contain so great a number of ships.
 </p>
-         <p>So Aulis rang with countless voices what time
+            <p>So Aulis rang with countless voices what time
 avenging Greece loosed the cables of Agamemnon's
 fleet. No storm-blast deterred them nor threat of
 coming tempest nor the presence of the treacherous
@@ -746,8 +746,8 @@ seas nor look to the Plough or the Bear to guide
 me. Make no account of Boötes, sailor; launch your
 bark in mid tempest. If winds and storms deny me
 Libya, my emperor's fortune will grant it.</q>
-         </p>
-         <p>The fleet is launched. They pass Liguria on their
+            </p>
+            <p>The fleet is launched. They pass Liguria on their
 right hand, Etruria on their left, avoiding the sunken
 reefs of Corsica. There lies an island formed like
 a human foot (Sardinia its former inhabitants called
@@ -762,7 +762,7 @@ cliffs. Here the pestilence falls on men and beasts,
 so plague-ridden and deadly is the air, so omnipotent
 the South wind and the North winds banished.
 </p>
-         <p>When their much buffeted vessels had given a
+            <p>When their much buffeted vessels had given a
 wide berth to these dangers, they came to land at
 different places on the broken coast-line. Some
 are beached at Sulci, a city founded by Carthage
@@ -777,8 +777,8 @@ wind. For this harbour they make with every effort,
 and reversing their vessels they await the favouring
 breezes of the west wind with fleet at anchor.1
 <pb id="v.1.p.139"/>
-         </p>
-               </div1>
+            </p>
+         </div1>
       </body>
    </text>
 </TEI.2>

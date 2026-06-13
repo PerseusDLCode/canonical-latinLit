@@ -1,81 +1,91 @@
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader xml:lang="eng">
-		<fileDesc>
-			<titleStmt>
-				<title>Vespasian</title>
-				<author>Suetonius</author>
-				<editor role="translator">Alexander Thomson</editor>
-				<sponsor>Perseus Project, Tufts University</sponsor>
-				<principal>Gregory Crane</principal>
-				<respStmt>
-					<resp>Prepared under the supervision of</resp>
-					<name>Bridget Almas</name>
-					<name>Lisa Cerrato</name>
-					<name>William Merrill</name>
-					<name>David Smith</name>
-				</respStmt>
-				<funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Trustees of Tufts University</publisher>
-				<pubPlace>Medford, MA</pubPlace>
-				<authority>Perseus Project</authority>
-				<date type="release" cert="unknown">2000-08-01</date>
-			</publicationStmt>
-			
-
-			<sourceDesc>
-				<biblStruct>
-					<monogr>
-						<title>The Lives of the Twelve Caesars</title>
-						<author xml:lang="lat">C. Suetonius Tranquillus</author>
-						<editor>J. Eugene Reed</editor>
-						<editor role="translator">Alexander Thomson</editor>
-						<imprint>
-							<pubPlace>Philadelphia</pubPlace>
-							<publisher>Gebbie and Co.</publisher>
-							<date>1883</date>
-						</imprint>
-					</monogr>
-					<ref target="https://archive.org/details/livesoftwelvecsa00suet/page/458/mode/2up">Internet Archive</ref>
-				</biblStruct>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>Vespasian</title>
+            <author>Suetonius</author>
+            <editor role="translator">Alexander Thomson</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:FIPSE">Fund for the Improvement of Postsecondary Education</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" cert="unknown">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi1348.abo020.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>The Lives of the Twelve Caesars</title>
+                  <author xml:lang="lat">C. Suetonius Tranquillus</author>
+                  <editor>J. Eugene Reed</editor>
+                  <editor role="translator">Alexander Thomson</editor>
+                  <imprint>
+                     <pubPlace>Philadelphia</pubPlace>
+                     <publisher>Gebbie and Co.</publisher>
+                     <date>1883</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/livesoftwelvecsa00suet/page/458/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
 				<!--<refState delim=" " unit="life"/>-->
-				<refState unit="chapter"/>
-			</refsDecl>
-			<editorialDecl>
-				<correction method="silent" status="low"><p>Perseus OCR</p></correction>
-			</editorialDecl>
-			
-		</encodingDesc>
-
-		<profileDesc>
-			<langUsage>
-				<language ident="eng">English </language>
-				<language ident="lat">Latin </language>
-				<language ident="grc">Greek </language>
-				<language ident="fre">French </language>
-			</langUsage>
-		</profileDesc>
-		<revisionDesc>
-			<change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
-		</revisionDesc>
-	</teiHeader>
-	<text xml:lang="eng">
-		<body><div xml:lang="eng" type="translation" n="urn:cts:latinLit:phi1348.abo020.perseus-eng2">
-			<div type="textpart" n="1" subtype="chapter">
-				<p>THE empire, which had been long thrown into a disturbed and unsettled state, by
+            <refState unit="chapter"/>
+         </refsDecl>
+         <editorialDecl>
+            <correction method="silent" status="low">
+               <p>Perseus OCR</p>
+            </correction>
+         </editorialDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English </language>
+            <language ident="lat">Latin </language>
+            <language ident="grc">Greek </language>
+            <language ident="fre">French </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-18" who="Thibault Clérice">Capitains, CTS and Bump</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1348.abo020.perseus-eng2">
+         <div n="1" type="chapter">
+            <p>THE empire, which had been long thrown into a disturbed and unsettled state, by
 					the rebellion and violent death of its three last rulers, was at length restored
 					to peace and security by the Flavian family, whose descent was indeed obscure,
 					and which boasted no ancestral honours; but the public had no cause to regret
 					its elevation; though it is acknowledged that Domitian met with the just reward
-					of his avarice and cruelty. Titus Flavius Petro, a townsman of <placeName key="perseus,Reate">Reate</placeName>,<note anchored="true"><placeName key="perseus,Reate">Reate</placeName>, the original seat of the Flavian
+					of his avarice and cruelty. Titus Flavius Petro, a townsman of <placeName key="perseus,Reate">Reate</placeName>,<note anchored="true">
+                  <placeName key="perseus,Reate">Reate</placeName>, the original seat of the Flavian
 						family, was a city of the Sabines. Its present name is <placeName key="tgn,7006739">Rieti</placeName>. </note> whether a centurion or an
-						<foreign xml:lang="lat">evocatus</foreign><note anchored="true">It does not
+						<foreign xml:lang="lat">evocatus</foreign>
+               <note anchored="true">It does not
 						very clearly appear what rank in the Roman armies was held by the evocati.
 						They are mentioned on three occasions by Suetonius, without affording us
 						much assistance. Caesar, like our author, joins them with the centurions.
@@ -89,7 +99,8 @@
 					republican, and received the tax of the fortieth penny in <placeName key="tgn,1000004">Asia</placeName>. And there were remaining, at the time of
 					the advancement of the family, several statues, which had been erected to him by
 					the cities of that province, with this inscription: "To the honest
-						Tax-farmer."<note anchored="true">The inscription was in Greek, <foreign xml:lang="grc">καλῶσ τελωθήσαντι</foreign></note> He afterwards
+						Tax-farmer."<note anchored="true">The inscription was in Greek, <foreign xml:lang="grc">καλῶσ τελωθήσαντι</foreign>
+               </note> He afterwards
 					turned usurer amongst the Helvetii, and there died, leaving behind him his wife,
 					Vespasia <placeName key="tgn,1046069">Polla</placeName>, and two sons by her;
 					the elder of whom, Sabinus, came to be prefect of the city, and the younger,
@@ -103,7 +114,8 @@
 					hill, called Vespasiae, where are several monuments of the Vespasii, a
 					sufficient proof of the splendour and antiquity of the family. I will not deny
 					that some have pretended to say. that Petro's father was a native of Gallia
-					Transpadana, <note anchored="true"><placeName key="tgn,1000070">Gaul</placeName>
+					Transpadana, <note anchored="true">
+                  <placeName key="tgn,1000070">Gaul</placeName>
 						beyond, north of, the Po, now <placeName key="tgn,7003237">Lombardy</placeName>. </note> whose employment was to hire work-people
 					who used to emigrate every year from the country of the <placeName key="tgn,7003125">Umbria</placeName> into that of the Sabines, to assist
 					them in their husbandry; <note anchored="true">We find the annual migration of
@@ -116,15 +128,17 @@
 					town of <placeName key="perseus,Reate">Reate</placeName>, and there married. But
 					of this I have not been able to discover the least proof, upon the strictest
 					inquiry.</p>
-			</div>
-			<div type="textpart" n="2" subtype="chapter">
-				<p>Vespasian was born in the country of the Sabines, between the <placeName key="perseus,Reate">Reate</placeName>, and a little country-seat called
+         </div>
+         <div n="2" type="chapter">
+            <p>Vespasian was born in the country of the Sabines, between the <placeName key="perseus,Reate">Reate</placeName>, and a little country-seat called
 					Phalacrine, upon the fifth of the calends of December [27th November], in the
 					evening, in the consulship of Quintus Sulpicius Camerinus and Caius Poppaeus
 					Sabinus, five years before the death of Augustus;<note anchored="true">A.U.C.
-						762. <date when="0010">A.D. 10</date></note> and was educated under the care
+						762. <date when="0010">A.D. 10</date>
+               </note> and was educated under the care
 					of Tertulla, his grandmother by the father's side, upon an estate belonging to
-					the family, at <placeName key="perseus,Cosa">Cosa</placeName>.<note anchored="true"><placeName key="perseus,Cosa">Cosa</placeName> was a place
+					the family, at <placeName key="perseus,Cosa">Cosa</placeName>.<note anchored="true">
+                  <placeName key="perseus,Cosa">Cosa</placeName> was a place
 						in the Volscian territory; of which <placeName key="tgn,7006676">Anagni</placeName> was probably the chief town. It lies about forty
 						miles to the north-east of <placeName key="perseus,Rome">Rome</placeName>.</note> After his advancement to the empire, he used
 					frequently to visit the place where he had spent his infancy; and the villa was
@@ -149,9 +163,9 @@
 					increase the punishment of the conspirators against his life, by exposing their
 					corpses unburied. He likewise gave him thanks in that august assembly for the
 					honour of being admitted to his table.</p>
-			</div>
-			<div type="textpart" n="3" subtype="chapter">
-				<p>Meanwhile, he married Flavia Domitilla, who had formerly been the mistress of
+         </div>
+         <div n="3" type="chapter">
+            <p>Meanwhile, he married Flavia Domitilla, who had formerly been the mistress of
 					Statilius Capella, a Roman knight of <placeName key="tgn,7000646">Sabrata</placeName> in <placeName key="tgn,7001242">Africa</placeName>, who
 					[Domitilla] enjoyed Latin rights; and was soon after declared fully and freely a
 					citizen of <placeName key="perseus,Rome">Rome</placeName>, on a trial before the
@@ -159,7 +173,8 @@
 					Ferentum, but no more than secretary to a quaestor. By her he had the following
 					children: Titus, Domitia and Domitilla. He outlived his wife and daughter, and
 					lost them both before he became emperor. After the death of his wife he renewed
-					his union<note anchored="true"><foreign xml:lang="lat">"Revocavit in
+					his union<note anchored="true">
+                  <foreign xml:lang="lat">"Revocavit in
 							contubernium."</foreign> From the difference of our habits, there is no
 						word in the English language which exactly conveys the meaning of
 						contubernium; a word which, in a military sense, the Romans applied to the
@@ -176,10 +191,11 @@
 						Commodus, by Herodian, 1. xvi. 9 , where he says that she had all the
 						honours of an empress, except that the incense was not offered to her. These
 						connections resembled the left-hand marriages of the German
-					princes.</note></p>
-			</div>
-			<div type="textpart" n="4" subtype="chapter">
-				<p>In the reign of Claudius, by the interest of Narcissus, he was sent to <placeName key="tgn,7000084">Germany</placeName>, in command of a legion; whence being
+					princes.</note>
+            </p>
+         </div>
+         <div n="4" type="chapter">
+            <p>In the reign of Claudius, by the interest of Narcissus, he was sent to <placeName key="tgn,7000084">Germany</placeName>, in command of a legion; whence being
 					removed into <placeName key="tgn,7008653">Britain</placeName>, he engaged the
 					enemy in thirty several battles. He reduced under subjection to the Romans two
 					very powerful tribes, and above twenty great towns, with the Isle of Wight,
@@ -215,7 +231,7 @@
 					society, but debarred the liberty of saluting him in public. Upon this, he
 					retired to a small out-of-the-way town, where he lay skulking in constant fear
 					of his life, until a province, with an army, was offered him.</p>
-				<p>A firm persuasion had long prevailed through all the East,<note anchored="true">Tacitus, Hist. V. xiii. 3, mentions this ancient prediction, and its
+            <p>A firm persuasion had long prevailed through all the East,<note anchored="true">Tacitus, Hist. V. xiii. 3, mentions this ancient prediction, and its
 						currency through the East, in nearly the same terms as Suetonius. The coming
 						power is in both instances described in the plural number, <foreign xml:lang="lat">profecti</foreign>, "those shall come forth;" and Tacitus
 						applies it to Titus as well as Vespasian. The prophecy is commonly supposed
@@ -259,9 +275,9 @@
 					reforming immediately the discipline of the camp, and engaging the enemy once or
 					twice with such resolution, that, in the attack of a castle,<note anchored="true">See note to c. vii.</note> he had his knee hurt by the
 					stroke of a stone, and received several arrows in his shield.</p>
-			</div>
-			<div type="textpart" n="5" subtype="chapter">
-				<p>After the deaths of Nero and Galba, whilst Otho and Vitellius were contending for
+         </div>
+         <div n="5" type="chapter">
+            <p>After the deaths of Nero and Galba, whilst Otho and Vitellius were contending for
 					the sovereignty, he entertained hopes of obtaining the empire, with the prospect
 					of which he had long before flattered himself, from the following omens. Upon an
 					estate belonging to the Flavian family, in the neighbourhood of <placeName key="perseus,Rome">Rome</placeName>, there was an old oak, sacred to Mars,
@@ -274,7 +290,7 @@
 					grandson would be emperor of <placeName key="perseus,Rome">Rome</placeName>;" at
 					which she laughed heartily, wondering, she said, "that her son should be in his
 					dotage whilst she continued still in full possession of her faculties."</p>
-				<p>Afterwards in his aedileship, when Caius Caesar, being enraged at his not taking
+            <p>Afterwards in his aedileship, when Caius Caesar, being enraged at his not taking
 					care to have the streets kept clean, ordered the soldiers to fill the bosom of
 					his gown with dirt, some persons at that time construed it into a sign that the
 					government, being trampled under foot and deserted in some civil commotion,
@@ -289,7 +305,7 @@
 					neck. A cypress-tree likewise, in a field belonging to the family, was torn up
 					by the roots, and laid flat upon the ground, when there was no violent wind; but
 					next day it rose again fresher and stronger than before.</p>
-				<p>He dreamt in <placeName key="tgn,7002733">Achaia</placeName> that the good
+            <p>He dreamt in <placeName key="tgn,7002733">Achaia</placeName> that the good
 					fortune of himself and his family would begin when Nero had a tooth drawn; and
 					it happened that the day after, a surgeon coming into the hall, showed him a
 					tooth which he had just extracted from Nero. In <placeName key="tgn,7001407">Judea</placeName>, upon his consulting the oracle of the divinity at
@@ -319,9 +335,9 @@
 						for Vitellius. See OTHO, c. ix.. VITELLIUS,, C. X.</note> before the battle
 					began, two eagles engaged in the sight of the army; and one of them being
 					beaten, a third came from the east, and drove away the conqueror.</p>
-			</div>
-			<div type="textpart" n="6" subtype="chapter">
-				<p>He made, however, no attempt upon the sovereignty though his friends were very
+         </div>
+         <div n="6" type="chapter">
+            <p>He made, however, no attempt upon the sovereignty though his friends were very
 					ready to support him, and even pressed him to the enterprise until he was
 					encouraged to it by the fortuitous aid of persons unknown to him and at a
 					distance. Two thousand men, drawn out of three legions in the Moesian army, had
@@ -341,7 +357,7 @@
 					all the rest assenting, his name was immediately inscribed on their standards.
 					The design was nevertheless quashed for a time, the troops being brought to
 					submit to Vitellius a little longer.</p>
-				<p>However, the fact becoming known, Tiberius Alexander, governor of <placeName key="tgn,7016833">Egypt</placeName>, first obliged the legions under his
+            <p>However, the fact becoming known, Tiberius Alexander, governor of <placeName key="tgn,7016833">Egypt</placeName>, first obliged the legions under his
 					command to swear obedience to Vespasian as their emperor, on the calends [the
 					1st] of July, which was observed ever after as the day of his accession to the
 					empire; and upon the fifth of the ides of the same month [the 28th of July], the
@@ -357,11 +373,12 @@
 					grudge arising from a jealousy of which he had hitherto made no secret, promised
 					to join him with the Syrian army, and, among the allied kings, Vologesus, king
 					of the Parthians, offered him a reinforcement of forty thousand archers.</p>
-			</div>
-			<div type="textpart" n="7" subtype="chapter">
-				<p>Having, therefore, entered on a civil war, and sent forward his generals and
+         </div>
+         <div n="7" type="chapter">
+            <p>Having, therefore, entered on a civil war, and sent forward his generals and
 					forces into <placeName key="tgn,1000080">Italy</placeName>, he himself, in the
-					meantime, passed over to <placeName key="perseus,Alexandria">Alexandria</placeName>, to obtain possession of the key of <placeName key="tgn,7016833">Egypt</placeName>.<note anchored="true"><placeName key="perseus,Alexandria">Alexandria</placeName> may well be called the
+					meantime, passed over to <placeName key="perseus,Alexandria">Alexandria</placeName>, to obtain possession of the key of <placeName key="tgn,7016833">Egypt</placeName>.<note anchored="true">
+                  <placeName key="perseus,Alexandria">Alexandria</placeName> may well be called the
 						key, <foreign xml:lang="lat">claustra</foreign>, of <placeName key="tgn,7016833">Egypt</placeName>, which was the granary of <placeName key="perseus,Rome">Rome</placeName>. It was of the first importance that
 						Vespasian should secure it at this juncture.</note> Here having entered
 					alone, without attendants, the temple of Serapis, to take the auspices
@@ -452,9 +469,9 @@
 					at Tegea in Arcadia, by the direction of some soothsayers, several vessels of
 					ancient workmanship were dug out of a consecrated place, on which there was an
 					effigy resembling Vespasian.</p>
-			</div>
-			<div type="textpart" n="8" subtype="chapter">
-				<p>Returning now to Rome, under these auspices, and with a great reputation, after
+         </div>
+         <div n="8" type="chapter">
+            <p>Returning now to Rome, under these auspices, and with a great reputation, after
 					enjoying a triumph for victories over the Jews, he added eight consulships<note anchored="true">A. U. C. 823-833, excepting 826 and 831.</note> to his
 					former one. He likewise assumed the censorship, and made it his principal
 					concern, during the whole of his government, first to restore order in the
@@ -491,9 +508,9 @@
 					contained the decrees of the senate, almost from the building of the city, as
 					well as the acts of the people, relative to alliances, treaties, and privileges
 					granted to any person.</p>
-			</div>
-			<div type="textpart" n="9" subtype="chapter">
-				<p>He likewise erected several new public buildings, namely the temple of Peace<note anchored="true">The temple of Peace, erected <date when="0071">A. D.
+         </div>
+         <div n="9" type="chapter">
+            <p>He likewise erected several new public buildings, namely the temple of Peace<note anchored="true">The temple of Peace, erected <date when="0071">A. D.
 							71</date>, on the conclusion of the wars with the Germans and the Jews,
 						was the largest temple in Rome. Vespasian and Titus deposited in it the
 						sacred vessels and other spoils which were carried in their triumph after
@@ -525,9 +542,9 @@
 					publicly when some altercation passed between a senator and a Roman knight,
 					"that senators ought not to be treated with scurrilous language, unless they
 					were aggressors, and then it was fair and lawful to return it."</p>
-			</div>
-			<div type="textpart" n="10" subtype="chapter">
-				<p>The business of the courts had prodigiously accumulated, partly from old law-suits
+         </div>
+         <div n="10" type="chapter">
+            <p>The business of the courts had prodigiously accumulated, partly from old law-suits
 					which, on account of the interruption that had been given to the course of
 					justice, still remained undecided, and partly from the accession of new suits
 					arising out of the disorder of the times. He, therefore, chose cmmissioners by
@@ -536,17 +553,17 @@
 					to the centumviri, and reduce them to as small a number as possible, for the
 					dispatch of which, otherwise, the lives of the litigants could scarcely allow
 					sufficient time.</p>
-			</div>
-			<div type="textpart" n="11" subtype="chapter">
-				<p>Lust and luxury, from the licence which had long prevailed, had also grown to an
+         </div>
+         <div n="11" type="chapter">
+            <p>Lust and luxury, from the licence which had long prevailed, had also grown to an
 					enormous height. He, therefore, obtained a decree of the senate, that a woman
 					who formed an union with the slave of another person, should be considered a
 					bondwoman herself; and that usurers should not be allowed to take proceedings at
 					law for the recovery of money lent to young men whilst they lived in their
 					father's family, not even after their fathers were dead.</p>
-			</div>
-			<div type="textpart" n="12" subtype="chapter">
-				<p>In other affairs, from the beginning to the end of his government, he conducted
+         </div>
+         <div n="12" type="chapter">
+            <p>In other affairs, from the beginning to the end of his government, he conducted
 					himself with great moderation and clemency. He was so far from dissembling the
 					obscurity of his extraction, that he frequently made mention of it himself. When
 					some affected to trace his pedigree to the founders of Reate, and a companion of
@@ -562,9 +579,9 @@
 					time accept of the tribunitian authority, or the title of Father of his Country.
 					And in regard to the custom of searching those who came to salute him, he
 					dropped it even in the time of the civil war.</p>
-			</div>
-			<div type="textpart" n="13" subtype="chapter">
-				<p>He bore with great mildness the freedom used by his friends, the satirical
+         </div>
+         <div n="13" type="chapter">
+            <p>He bore with great mildness the freedom used by his friends, the satirical
 					allusions of advocates, and the petulance of philosophers. Licinius Mucianus,
 					who had been guilty of notorious acts of lewdness, but, presuming upon his great
 					services, treated him very rudely, he reproved only in private; and when
@@ -579,9 +596,9 @@
 					had been sentenced to banishment, meeting him on the road, and refusing to rise
 					up or salute him, nay, snarling at him in scurrilous language, he only called
 					him a cur.</p>
-			</div>
-			<div type="textpart" n="14" subtype="chapter">
-				<p>He was little disposed to keep up the memory of affronts or quarrels, nor did he
+         </div>
+         <div n="14" type="chapter">
+            <p>He was little disposed to keep up the memory of affronts or quarrels, nor did he
 					harbour any resentment on account of them. He made a very splendid marriage for
 					the daughter of his enemy Vitellius, and gave her, besides, a suitable fortune
 					and equipage. Being in a great consternation after he was forbidden the court in
@@ -600,9 +617,9 @@
 					on his nativity being cast, that he was destined by fate to the empire, he made
 					him consul, promising for him, that he would not forget the benefit
 					conferred.</p>
-			</div>
-			<div type="textpart" n="15" subtype="chapter">
-				<p>It will scarcely be found, that so much as one innocent person suffered in his
+         </div>
+         <div n="15" type="chapter">
+            <p>It will scarcely be found, that so much as one innocent person suffered in his
 					reign, unless in his absence, and without his knowledge, or, at least, contrary
 					to his inclination, and when he was imposed upon. Although Helvidius Priscus
 						<note anchored="true">Helvidius Priscus, a person of some celebrity as a
@@ -617,9 +634,9 @@
 					have saved him, had he not been deceived by a false account brought, that he had
 					already perished. He never rejoiced at the death of any man; nay, he would shed
 					tears, and sigh, at the just punishment of the guilty.</p>
-			</div>
-			<div type="textpart" n="16" subtype="chapter">
-				<p>The only thing deservedly blameable in his character was his love of money. For
+         </div>
+         <div n="16" type="chapter">
+            <p>The only thing deservedly blameable in his character was his love of money. For
 					not satisfied with reviving the imposts which had been repealed in the time of
 					Galba he imposed new and onerous taxes, augmented the tribute of the provinces,
 					and doubled that of some of them. He likewise openly engaged in a traffic, which
@@ -642,9 +659,9 @@
 					less than four hundred thousand millions of sesterces were wanting to carry on
 					the government." This is the more likely to be true, because he applied to the
 					best purposes what he procured by bad means.</p>
-			</div>
-			<div type="textpart" n="17" subtype="chapter">
-				<p>His liberality, however, to all ranks of people, was excessive. He made up to
+         </div>
+         <div n="17" type="chapter">
+            <p>His liberality, however, to all ranks of people, was excessive. He made up to
 					several senators the estate required by law to qualify them for that dignity;
 					relieving likewise such men of consular rank as were poor, with a yearly
 					allowance of five hundred thousand sesterces;<note anchored="true">The sesterce
@@ -658,9 +675,9 @@
 						of the empire. </note> and rebuilt, in a better manner than before, several
 					cities in different parts of the empire, which had been damaged by earthquakes
 					or fires.</p>
-			</div>
-			<div type="textpart" n="18" subtype="chapter">
-				<p>He was a great encourager of learning and the liberal arts. He first granted to
+         </div>
+         <div n="18" type="chapter">
+            <p>He was a great encourager of learning and the liberal arts. He first granted to
 					the Latin and Greek professors of rhetoric the yearly stipend of a hundred
 					thousand sesterces <note anchored="true">See AUGUSTUS, c. xliii. The proscenium
 						of the ancient theatres was a solid erection of an architectural design, not
@@ -681,10 +698,11 @@
 					handsomely for his invention, but would not accept his service, saying, "Suffer
 					me to find maintenance for the poor people." <note anchored="true">The usual
 						argument in all times against the introduction of machinery. See AUGUSTUS,
-						c. xxix. </note></p>
-			</div>
-			<div type="textpart" n="19" subtype="chapter">
-				<p>In the games celebrated when the stage-scenery of the theatre of Marcellus<note anchored="true">See Augustus, c. xxix</note> was repaired, restored the old
+						c. xxix. </note>
+            </p>
+         </div>
+         <div n="19" type="chapter">
+            <p>In the games celebrated when the stage-scenery of the theatre of Marcellus<note anchored="true">See Augustus, c. xxix</note> was repaired, restored the old
 					musical entertainments. He gave Apollinaris, the tragedian, four hundred
 					thousand sesterces, and to Terpinus and Diodorus, the harpers, two hundred
 					thousand; to some a hundred thousand; and the least he gave to any of the
@@ -704,9 +722,9 @@
 					much his funeral and the procession would cost?" And being answered "ten
 					millions of sesterces," he cried out, "give him but a hundred thousand
 					sesterces, and they might throw his body into the Tiber, if they would."</p>
-			</div>
-			<div type="textpart" n="20" subtype="chapter">
-				<p>He was broad-set, strong-limbed, and his features gave the idea of a man in the
+         </div>
+         <div n="20" type="chapter">
+            <p>He was broad-set, strong-limbed, and his features gave the idea of a man in the
 					act of straining himself. In consequence, one of the city wits, upon the
 					emperor's desiring him "to say something droll respecting himself," facetiously
 					answered, "I will, when you have done relieving your bowels."<note anchored="true">Notwithstanding the splendour, and even, in many respects,
@@ -715,17 +733,19 @@
 						grossest description, and every scholar knows that many of their writers are
 						not very delicate in their allusions. Apropos of the ludicrous account given
 						in the text, Martial, on one occasion, uses still plainer language. <cit>
-							<quote xml:lang="lat"><l>Utere lactucis, et mollibus utere malvis:</l>
-								<l>Nam faciem durum, Phoebe, cacantis habes.</l></quote>
-							<bibl n="Mart. 3.89">iii. 89.</bibl>
-						</cit>
-					</note> He enjoyed a good state of health, though he used no other means to
+                     <quote xml:lang="lat">
+                        <l>Utere lactucis, et mollibus utere malvis:</l>
+                        <l>Nam faciem durum, Phoebe, cacantis habes.</l>
+                     </quote>
+                     <bibl n="Mart. 3.89">iii. 89.</bibl>
+                  </cit>
+               </note> He enjoyed a good state of health, though he used no other means to
 					preserve it, than repeated friction, as much as he could bear, on his neck and
 					other parts of his body, in the tennis-court attached to the baths, besides
 					fasting one day in every month.</p>
-			</div>
-			<div type="textpart" n="21" subtype="chapter">
-				<p>His method of life was commonly this. After he became emperor, he used to rise
+         </div>
+         <div n="21" type="chapter">
+            <p>His method of life was commonly this. After he became emperor, he used to rise
 					very early, often before day-break. Having read over his letters, and the briefs
 					of all the departments of the government offices, he admitted his friends; and
 					while they were paying him their compliments, he would put on his own shoes, and
@@ -737,9 +757,9 @@
 					They say that he was never more good-humoured and indulgent than at that time:
 					and therefore his attendants always seized that opportunity, when they had any
 					favour to ask.</p>
-			</div>
-			<div type="textpart" n="22" subtype="chapter">
-				<p>At supper, and, indeed, at other times, he was extremely free and jocose. For he
+         </div>
+         <div n="22" type="chapter">
+            <p>At supper, and, indeed, at other times, he was extremely free and jocose. For he
 					had humour, but of a low kind, and he would sometimes use indecent language,
 					such as is addressed to young girls about to be married. Yet there are some
 					things related of him not void of ingenious pleasantry; amongst which are the
@@ -760,15 +780,21 @@
 						lady's proffered favours. </note> four hundred thousand sesterces. When his
 					steward desired to know how he would have the sum entered in his accounts, he
 					replied, "For Vespasian's being seduced."</p>
-			</div>
-			<div type="textpart" n="23" subtype="chapter">
-				<p>He used Greek verses very wittily; speaking of a tall man: <quote xml:lang="grc"><l>μακρὰ βίβας κραδάων δολιχόσκιον ἔγχος;</l></quote>
+         </div>
+         <div n="23" type="chapter">
+            <p>He used Greek verses very wittily; speaking of a tall man: <quote xml:lang="grc">
+                  <l>μακρὰ βίβας κραδάων δολιχόσκιον ἔγχος;</l>
+               </quote>
 					And of Cerylus, a freedman, who being very rich had begun to pass himself off as
 					free-born, to elude the exchequer at his decease, and assumed the name of
-					Laches, he said: <quote xml:lang="grc"><l part="F">ὦ Λάχης, Λάχης</l>
-						<l>ἔπαν ἀποθάνῃς, αὐθίς ἐξ ἀρχῆς ἔσῃ Κήρυλος</l></quote>
-					<quote xml:lang="eng"><l>Ah, Laches, Laches ! when thou art no more,</l>
-						<l>Thou'lt Cerylus be called, just as before.</l></quote> He chiefly
+					Laches, he said: <quote xml:lang="grc">
+                  <l part="F">ὦ Λάχης, Λάχης</l>
+                  <l>ἔπαν ἀποθάνῃς, αὐθίς ἐξ ἀρχῆς ἔσῃ Κήρυλος</l>
+               </quote>
+               <quote xml:lang="eng">
+                  <l>Ah, Laches, Laches ! when thou art no more,</l>
+                  <l>Thou'lt Cerylus be called, just as before.</l>
+               </quote> He chiefly
 					affected wit upon his own shameful means of raising money, in order to wipe off
 					the odium by some joke, and turn it into ridicule. One of his ministers, who was
 					much in his favour, requesting of him a stewardship for some person, under
@@ -778,7 +804,7 @@
 					immediately to the office. The minister soon after renewing his application,
 					"You must," said he, "find another brother; for the one you adopted is in truth
 					mine."</p>
-				<p>Suspecting once, during a journey, that his mule-driver had alighted to shoe his
+            <p>Suspecting once, during a journey, that his mule-driver had alighted to shoe his
 					mules, only in order to have an opportunity for allowing a person they met, who
 					was engaged in a law-suit, to speak to him, he asked him, "how much he got for
 					shoeing his mules?" and insisted on having a share of the profit. When his son
@@ -796,10 +822,11 @@
 						their own tomb. See DOMITIAN, c. v. The prodigy, therefore, did not concern
 						Vespasian. As to the tomb of the Julian family, see AUGUSTUS, c. ci. </note>
 					and the other, the king of the Parthians, who wore his hair long. And when his
-					distemper first seized him, "I suppose." he said, "I shall soon be a god." <note anchored="true">Alluding to the apotheosis of the emperors. </note></p>
-			</div>
-			<div type="textpart" n="24" subtype="chapter">
-				<p>In his ninth consulship, being seized, while in Campania, with a slight
+					distemper first seized him, "I suppose." he said, "I shall soon be a god." <note anchored="true">Alluding to the apotheosis of the emperors. </note>
+            </p>
+         </div>
+         <div n="24" type="chapter">
+            <p>In his ninth consulship, being seized, while in Campania, with a slight
 					indisposition, and immediately returning to the city, he soon afterwards went
 					thence to Cutiliae,<note anchored="true">Cutiliae was a small lake, about
 						three-quarters of a mile from Reate, now called Lago di Configliano. It was
@@ -815,9 +842,9 @@
 					upright." In endeavouring to rise, he died in the hands of those who were
 					helping him up, upon the eighth of the calends of July<note anchored="true">A.U.C. 832</note> [24th June], being sixty-nine years, one month, and seven
 					days old.</p>
-			</div>
-			<div type="textpart" n="25" subtype="chapter">
-				<p>All are agreed that he had such confidence in the calculations of his own
+         </div>
+         <div n="25" type="chapter">
+            <p>All are agreed that he had such confidence in the calculations of his own
 					nativity and that of his sons, that, after several conspiracies against him, he
 					told the senate, that either his sons would succeed him, or nobody. It is said
 					likewise, that he once saw in a dream a balance in the middle of the porch of
@@ -826,11 +853,12 @@
 					symbol; for the reigns of the two parties were precisely of the same
 						duration.<note anchored="true">Each dynasty lasted twenty-eight years;
 						Claudius and Nero both reigning fourteen; and, of the Flavius family,
-						Vespasian reigned ten, Titus three, and Domitian fifteen.</note></p>
-			</div>
-			<div type="textpart" n="note" subtype="chapter">
-				<head>Remarks on Vespasian</head>
-				<p>NEITHER consanguinity nor adoption, as formerly, but great influence in the army
+						Vespasian reigned ten, Titus three, and Domitian fifteen.</note>
+            </p>
+         </div>
+         <div n="note" type="chapter">
+            <head>Remarks on Vespasian</head>
+            <p>NEITHER consanguinity nor adoption, as formerly, but great influence in the army
 					having now become the road to the imperial throne, no person could claim a
 					better title to that elevation than Titus Flavius Vespasian. He had not only
 					served with great reputation in the wars both in Britain and Judaea, but seemed
@@ -842,7 +870,7 @@
 					superstitious credulity of the Romans, impressed them with an idea, that
 					Vespasian's destiny to the throne was confirmed by supernatural indications.
 					But, after his elevation, we hear no more of his miraculous achievements.</p>
-				<p>The prosecution of the war in Britain, which had been suspended for some years,
+            <p>The prosecution of the war in Britain, which had been suspended for some years,
 					was resumed by Vespasian; and he sent thither Petilius Cerealis, who by his
 					bravery extended the limits of the Roman province. Under Julius Frontinus,
 					successor to the general, the invaders continued to make farther progress in the
@@ -862,7 +890,7 @@
 					that boundary. Wherever he established the Roman power, he introduced laws and
 					civilization amongst the inhabitants, and employed every means of conciliating
 					their affection, as well as of securing their obedience.</p>
-				<p>The war in Judaea, which had been commenced under the former reign, was now
+            <p>The war in Judaea, which had been commenced under the former reign, was now
 					continued in that of Vespasian; but he left the siege of Jerusalem to be
 					conducted by his son Titus, who displayed great valour and military talents in
 					the prosecution of the enterprise. After an obstinate defence by the Jews, that
@@ -870,7 +898,7 @@
 					glorious temple itself, the admiration of the world, reduced to ashes; contrary,
 					however, to the will of Titus, who exerted his utmost efforts to extinguish the
 					flames.</p>
-				<p>The manners of the Romans had now attained to an enormous pitch of depravity,
+            <p>The manners of the Romans had now attained to an enormous pitch of depravity,
 					through the unbounded licentiousness of the times; and, to the honour of
 					Vespasian, he discovered great zeal in his endeavours to effect a national
 					reformation. Vigilant, active, and persevering, he was indefatigable in the
@@ -889,7 +917,7 @@
 					inveigh against the flagrant vices of the times; but the only author whose
 					writings we have to notice in the present reign, is a poet of a different class.
 				</p>
-			</div>
-		</div></body>
-	</text>
+         </div>
+      </body>
+   </text>
 </TEI>

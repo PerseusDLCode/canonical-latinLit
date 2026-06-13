@@ -1,76 +1,73 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
- <teiHeader xml:lang="eng">
-  <fileDesc>
-   <titleStmt>
-    <title>In the Senate after his Return</title>
-    <author xml:lang="lat">M. Tullius Cicero</author>
-    <editor role="translator">C. D. Yonge</editor>
-    <sponsor>Perseus Project, Tufts University</sponsor>
-    <principal>Gregory Crane</principal>
-    <respStmt>
-     <resp>Prepared under the supervision of</resp>
-     <name>Bridget Almas</name>
-     <name>Lisa Cerrato</name>
-     <name>William Merrill</name>
-     <name>David Mimno</name>
-     <name>Rashmi Singhal</name>
-     <name>David Smith</name>
-    </respStmt>
-    <respStmt>
-     <persName>Zach Himes</persName>
-     <orgName>Tufts University</orgName>
-     <resp>CTS and EpiDoc conversion</resp>
-    </respStmt>
-    <respStmt>
-     <persName>Allison Dempsey</persName>
-     <orgName>Tufts University</orgName>
-     <resp>Digital editing</resp>
-    </respStmt>
-    <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
-   </titleStmt>
-   <publicationStmt>
-    <publisher>Trustees of Tufts University</publisher>
-    <pubPlace>Medford, MA</pubPlace>
-    <authority>Perseus Project</authority>
-    <date type="release">1997-10-28</date>
-   </publicationStmt>
-   <sourceDesc>
-    <biblStruct>
-     <monogr>
-      <author xml:lang="lat">M. Tullius Cicero</author>
-      <title>The Orations of Marcus Tullius Cicero</title>
-      <title type="sub">Three orations on the Agrarian law, the four against Catiline, the orations
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>In the Senate after his Return</title>
+            <author xml:lang="lat">M. Tullius Cicero</author>
+            <editor role="translator">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <respStmt>
+               <persName>Zach Himes</persName>
+               <orgName>Tufts University</orgName>
+               <resp>CTS and EpiDoc conversion</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Allison Dempsey</persName>
+               <orgName>Tufts University</orgName>
+               <resp>Digital editing</resp>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi019.perseus-eng2</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author xml:lang="lat">M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero</title>
+                  <title type="sub">Three orations on the Agrarian law, the four against Catiline, the orations
        for Rabirius, Murena, Sulla, Archias, Flaccus, Scaurus, etc.</title>
-      <editor role="translator">C. D. Yonge</editor>
-      <imprint>
-       <pubPlace>London</pubPlace>
-       <publisher>Henry G. Bohn</publisher>
-       <date>1856</date>
-       <biblScope unit="volume">2</biblScope>
-      </imprint>
-     </monogr>
-     <ref target="https://archive.org/details/orationsofmarcus02ciceuoft/page/470/mode/2up">Internet
+                  <editor role="translator">C. D. Yonge</editor>
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>Henry G. Bohn</publisher>
+                     <date>1856</date>
+                     <biblScope unit="volume">2</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/orationsofmarcus02ciceuoft/page/470/mode/2up">Internet
       Archive</ref>
-    </biblStruct>
-   </sourceDesc>
-  </fileDesc>
-
-  <encodingDesc>
-   <refsDecl n="CTS">
-    <cRefPattern n="section" matchPattern="(\w+)"
-     replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-     <p>This pointer pattern extracts section</p>
-    </cRefPattern>
-   </refsDecl>
-   <refsDecl>
-    <refState unit="section"/>
-   </refsDecl>
-  </encodingDesc>
-
-  <!--   <encodingDesc>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <!--   <encodingDesc>
    <refsDecl>
     <refState delim=" " unit="text"/>
     <refState unit="section"/>
@@ -96,77 +93,75 @@
     <refState unit="speech"/>
    </refsDecl>
   </encodingDesc> -->
-
-  <profileDesc>
-   <langUsage>
-    <language ident="eng">English</language>
-    <language ident="lat">Latin</language>
-    <language ident="grc">Greek</language>
-   </langUsage>
-  </profileDesc>
-
-  <revisionDesc>
-   <change when="2016-05-20" who="Lisa Cerrato">Review of EpiDoc and CTS work. Minor edits.</change>
-   <change when="2016-03-17" who="Zach Himes">Changed section milestones to divs.</change>
-   <change when="2015-12-13" who="Zach Himes">Cleaned up teiHeader. Converted to TEI P5 and
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-section"/>
+         </textClass>
+         <langUsage>
+            <language ident="eng">English</language>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-05-20" who="Lisa Cerrato">Review of EpiDoc and CTS work. Minor edits.</change>
+         <change when="2016-03-17" who="Zach Himes">Changed section milestones to divs.</change>
+         <change when="2015-12-13" who="Zach Himes">Cleaned up teiHeader. Converted to TEI P5 and
     EpiDoc.</change>
-   <change when="2014-08-01" who="Stella Dee">edited markup</change>
-   <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
-   <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+         <change when="2014-07-01" who="Stella Dee">split composite text and converted to unicode</change>
+         <change when="2013-09-13" who="balmas01">reverting texts back to pre_cts_reorg tagged
     version</change>
-   <change when="2011-03-21" who="lcerrato">fixed typo in while to in which</change>
-   <change when="2011-03-17" who="lcerrato">fixing gap tags against source</change>
-   <change when="2010-08-31" who="rsingh04">cleaned up log keyword</change>
-   <change when="2010-08-31" who="rsingh04">cleaned up log keyword</change>
-   <change when="2010-07-08" who="student">fixing place tags - AD</change>
-   <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
-   <change when="2009-09-22" who="rsingh04">fixed references to Cic. Ver.</change>
-   <change when="2007-01-04" who="packel">fixed the refsDecls for Cornelius</change>
-   <change when="2006-05-05" who="packel">fixed date tags</change>
-   <change when="2006-02-10" who="packel">places/dates now actually tagged</change>
-   <change when="2005-11-21" who="lcerrato">changed thought you shall not perceive them to
+         <change when="2011-03-21" who="lcerrato">fixed typo in while to in which</change>
+         <change when="2011-03-17" who="lcerrato">fixing gap tags against source</change>
+         <change when="2010-08-31" who="rsingh04">cleaned up log keyword</change>
+         <change when="2010-08-31" who="rsingh04">cleaned up log keyword</change>
+         <change when="2010-07-08" who="student">fixing place tags - AD</change>
+         <change when="2009-10-09" who="rsingh04">more reorganizing of texts module by collection</change>
+         <change when="2009-09-22" who="rsingh04">fixed references to Cic. Ver.</change>
+         <change when="2007-01-04" who="packel">fixed the refsDecls for Cornelius</change>
+         <change when="2006-05-05" who="packel">fixed date tags</change>
+         <change when="2006-02-10" who="packel">places/dates now actually tagged</change>
+         <change when="2005-11-21" who="lcerrato">changed thought you shall not perceive them to
     though...</change>
-   <change when="2005-11-21" who="lcerrato">changed: does not the precaution taken of assembling the
+         <change when="2005-11-21" who="lcerrato">changed: does not the precaution taken of assembling the
     senate in thus most defensible place thus to this</change>
-   <change when="2005-08-01" who="packel">removed stray item tags</change>
-   <change when="2005-07-25" who="packel">Converted to XML</change>
-   <change when="2005-03-24" who="lcerrato">Marcus Aquillius changed to Manius Aquilius Agrarian
+         <change when="2005-08-01" who="packel">removed stray item tags</change>
+         <change when="2005-07-25" who="packel">Converted to XML</change>
+         <change when="2005-03-24" who="lcerrato">Marcus Aquillius changed to Manius Aquilius Agrarian
     2.83</change>
-   <change when="2005-03-23" who="lcerrato">changed Pro Font. 38 Marcus Aquillius to Manius Aquilius
+         <change when="2005-03-23" who="lcerrato">changed Pro Font. 38 Marcus Aquillius to Manius Aquilius
     based on Latin and user report</change>
-   <change when="2005-01-19" who="mimno">div1s missing type attributes</change>
-   <change when="2004-06-14" who="lcerrato">changed Rob. Perd. 31 "heave" to "leave"</change>
-   <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor
+         <change when="2005-01-19" who="mimno">div1s missing type attributes</change>
+         <change when="2004-06-14" who="lcerrato">changed Rob. Perd. 31 "heave" to "leave"</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor
     cleanup (esp. character encodings and typos.)</change>
-   <change when="2001-03-14" who="lcerrato">changed ought to he to ought to be in first oration
+         <change when="2001-03-14" who="lcerrato">changed ought to he to ought to be in first oration
     against Cataline</change>
-   <change when="2000-05-04" who="amahoney">really fix language ids</change>
-   <change when="2000-05-04" who="amahoney">fix language codes</change>
-   <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-   <change when="2000-02-22" who="amahoney">fix a couple of broken bibl refs</change>
-   <change when="1999-12-02" who="amahoney">replace the refsdecl, which disappeared somehow, and fix
+         <change when="2000-05-04" who="amahoney">really fix language ids</change>
+         <change when="2000-05-04" who="amahoney">fix language codes</change>
+         <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+         <change when="2000-02-22" who="amahoney">fix a couple of broken bibl refs</change>
+         <change when="1999-12-02" who="amahoney">replace the refsdecl, which disappeared somehow, and fix
     a couple of funny syntax errors</change>
-   <change when="1999-11-30" who="lcerrato">revised and proofread again</change>
-   <change when="1999-10-14" who="dasmith">Added explanatory subtitles to titleStmt</change>
-   <change when="1999-09-01" who="dasmith">Removed tag from attribute value.</change>
-   <change when="1999-08-12" who="dasmith">Fixed refsDecl</change>
-   <change when="1997-11-07" who="textgod">Fixed typo.</change>
-   <change when="1997-10-31" who="textgod">Fixed typo.</change>
-   <change when="1997-09-01" who="textgod">Added sections.</change>
-   <change when="1997-08-18" who="textgod">Added to repository.</change>
-   <change when="1997-07-14" who="DAS">ed.</change>
-  </revisionDesc>
- </teiHeader>
-
- <text xml:lang="eng">
-  <body>
-   <div type="translation" xml:lang="eng" n="urn:cts:latinLit:phi0474.phi019.perseus-eng2"
-    subtype="translation">
-    <head>THE SPEECH OF M. T. CICERO AFTER HIS RETURN. ADDRESSED TO THE SENATE.</head>
-    <div type="textpart" subtype="commentary" resp="editor">
-     <head>THE ARGUMENT.</head>
-     <p>
-      <milestone unit="para"/>Cicero by his conduct in the conspiracy of Catiline had made many
+         <change when="1999-11-30" who="lcerrato">revised and proofread again</change>
+         <change when="1999-10-14" who="dasmith">Added explanatory subtitles to titleStmt</change>
+         <change when="1999-09-01" who="dasmith">Removed tag from attribute value.</change>
+         <change when="1999-08-12" who="dasmith">Fixed refsDecl</change>
+         <change when="1997-11-07" who="textgod">Fixed typo.</change>
+         <change when="1997-10-31" who="textgod">Fixed typo.</change>
+         <change when="1997-09-01" who="textgod">Added sections.</change>
+         <change when="1997-08-18" who="textgod">Added to repository.</change>
+         <change when="1997-07-14" who="DAS">ed.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi0474.phi019.perseus-eng2">
+         <head>THE SPEECH OF M. T. CICERO AFTER HIS RETURN. ADDRESSED TO THE SENATE.</head>
+         <div resp="editor" type="commentary">
+            <head>THE ARGUMENT.</head>
+            <p>
+               <milestone unit="para"/>Cicero by his conduct in the conspiracy of Catiline had made many
       enemies, as there were many citizens of high rank and great influence more or less implicated
       in that treason. And besides those men, he had mortally offended a profligate senator, named
       Clodius, against whom he had appeared as a witness on a trial for impiety. Clodius, (by the
@@ -240,17 +235,14 @@
       in anticipation of it, had already embarked for Italy, and on the fifth of August he landed at
       Brundusium. He was received with the greatest honours by every town through which he passed on
       his way to Rome, and multitudes came from all quarters to see him and to escort him; and on
-      his arrival in the city he was received with universal acclamations. <milestone unit="para"
-      />He arrived in the city on the fourth of September, and the next day the consuls summoned the
+      his arrival in the city he was received with universal acclamations. <milestone unit="para"/>He arrived in the city on the fourth of September, and the next day the consuls summoned the
       senate to give him an opportunity of addressing that body, when he made the following
       speech.</p>
-    </div>
-
-
-    <milestone n="1" unit="chapter"/>
-    <div type="textpart" subtype="section" n="1" resp="perseus">
-     <p>
-      <milestone unit="para"/>If, O conscript fathers, I return you thanks in a very inadequate
+         </div>
+         <milestone n="1" unit="chapter"/>
+         <div n="1" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>If, O conscript fathers, I return you thanks in a very inadequate
       manner for your kindness to me, and to my brother, and to my children, (which shall never be
       forgotten by us,) I beg and entreat you not to attribute it so much to any coldness of my
       disposition, as to the magnitude of the service which you have done me. For what fertility of
@@ -263,9 +255,10 @@
       dignity, our rank, our fortunes, the republic, which we reverence above all things, and our
       country, than which nothing can be dearer to us; you have restored us, in short, to ourselves.
      </p>
-    </div>
-    <div type="textpart" subtype="section" n="2" resp="perseus">
-     <p><milestone unit="para"/> And if we ought to consider our parents most dear to us, because by
+         </div>
+         <div n="2" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/> And if we ought to consider our parents most dear to us, because by
       them our life, our property, our freedom, and our rights as citizens have been given to us; if
       we love the immortal gods, by whose kindness we have preserved all those things, and have also
       had other benefits added to them; if we are most deeply attached to the Roman people owing to
@@ -280,11 +273,11 @@
       parents, and everything to the immortal gods, the honours and enjoyments which we had
       separately before by their instrumentality, we have now recovered all together by your
       kindness. </p>
-    </div>
-    <milestone n="2" unit="chapter"/>
-    <div type="textpart" subtype="section" n="3" resp="perseus">
-     <p>
-      <milestone unit="para"/>Therefore, O conscript fathers, we seem by your agency to have
+         </div>
+         <milestone n="2" unit="chapter"/>
+         <div n="3" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>Therefore, O conscript fathers, we seem by your agency to have
       obtained a species of immortality, a thing too great to be even wished for by men. For what
       time will there ever be in which the memory and fame of your kindnesses to me will perish? The
       memory of your kindness, who, at the very time that you were besieged by violence and arms and
@@ -295,9 +288,9 @@
       tribune of the people, who as he was unable of himself to injure the republic, destroyed it as
       far as he could by the wickedness of another, you never kept silence concerning me, you never
       ceased to demand my safety from those consuls who had sold it. </p>
-    </div>
-    <div type="textpart" subtype="section" n="4" resp="perseus">
-     <p> Therefore, at last it was owing to your <pb n="474"/> authority and your zeal that that
+         </div>
+         <div n="4" resp="perseus" type="section">
+            <p> Therefore, at last it was owing to your <pb n="474"/> authority and your zeal that that
       very year which I had preferred to have fatal to myself rather than to my country, elected
       these men as tribunes, who proposed a law concerning my safety, and constantly brought it
       under your notice. For the consuls being modest men, and having a regard for the laws, were
@@ -312,11 +305,11 @@
       orphan, not only of its regular parents, but even of its annual guardians,—when you were
       forbidden to deliver your opinions,—when the chief clause of my proscription was repeatedly
       read,—still you never hesitated to consider my safety as united with the general welfare. </p>
-    </div>
-    <milestone n="3" unit="chapter"/>
-    <div type="textpart" subtype="section" n="5" resp="perseus">
-     <p>
-      <milestone unit="para"/>But when, by the singular and admirable virtue of Publius Lentulus the
+         </div>
+         <milestone n="3" unit="chapter"/>
+         <div n="5" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>But when, by the singular and admirable virtue of Publius Lentulus the
       consul, you began on the first of January to see light arising in the republic out of the
       clouds and darkness of the preceding year,—when the great reputation of Quintus Metellus, that
       most noble and excellent man, and the virtue and loyalty of the praetors, and of nearly all
@@ -325,21 +318,20 @@
       has ever produced, the most illustrious man that memory can suggest thought that he could
       again come with safety into the senate,—then your unanimity with respect to my safety was so
       great that my body only was absent, my dignity had already returned to this country. </p>
-    </div>
-    <div type="textpart" subtype="section" n="6" resp="perseus">
-     <p> And that month you were able to form an opinion as to what was the difference between me
+         </div>
+         <div n="6" resp="perseus" type="section">
+            <p> And that month you were able to form an opinion as to what was the difference between me
       and my enemies. I abandoned my own safety, in order to save the republic from being (for my
       sake) stained with the blood of the citizens; they thought fit to hinder my return, not by the
       votes of the Roman people, but by a river of blood. Therefore, after those events, you gave no
       answers to the citizens, or the allies, or to kings; the judges gave no decisions; the people
       came to no vote on any matter; this body issued no declarations by its authority; you saw the
       forum silent the senate-house mute, the city dumb and dispirited. </p>
-    </div>
-    <div type="textpart" subtype="section" n="7" resp="perseus">
-     <p> And then, too, when he had gone away, who, being authorized by you, had resisted murder and
+         </div>
+         <div n="7" resp="perseus" type="section">
+            <p> And then, too, when he had gone away, who, being authorized by you, had resisted murder and
       conflagration, you saw men rushing all over the city with sword and firebrand; you saw the
-      houses of the magistrates attacked, the temples of the gods burnt, the <foreign xml:lang="lat"
-       >faces</foreign> of a most admirable man and illustrious consul burnt, the holy person of a
+      houses of the magistrates attacked, the temples of the gods burnt, the <foreign xml:lang="lat">faces</foreign> of a most admirable man and illustrious consul burnt, the holy person of a
       most fearless and virtuous officer, a tribune of the people, not only laid hands on and
       insulted, but wounded with the sword and killed. And by that murder some magistrates were so
       alarmed, that partly out of fear of death, partly out of despair for the republic, they in
@@ -347,11 +339,11 @@
       nor hope, nor fear, nor promises, nor threats, nor arms, nor firebrands, could influence so as
       to make them cease to stand by your authority, and the dignity of the Roman people, and my
       safety. </p>
-    </div>
-    <milestone n="4" unit="chapter"/>
-    <div type="textpart" subtype="section" n="8" resp="perseus">
-     <p>
-      <milestone unit="para"/>The chief of those men was Publius Lentulus, the parent and god of my
+         </div>
+         <milestone n="4" unit="chapter"/>
+         <div n="8" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>The chief of those men was Publius Lentulus, the parent and god of my
       life, and fortune, and memory, and name. He thought that the best proof that he could give of
       his virtue, the best indication that he could afford of his disposition, the greatest ornament
       with which he could embellish his consulship would be the restoration of me to myself, to my
@@ -366,9 +358,9 @@
       will not say what did he do before, but what else did he do at all, except labour by my
       preservation to establish your authority and <pb n="476"/> dignity on a firm basis for the
       future? </p>
-    </div>
-    <div type="textpart" subtype="section" n="9" resp="perseus">
-     <p> O ye immortal gods! what great kindness do you appear to have shown me, in making Publius
+         </div>
+         <div n="9" resp="perseus" type="section">
+            <p> O ye immortal gods! what great kindness do you appear to have shown me, in making Publius
       Lentulus consul this year. How much greater still would your bounty bare been, had he been so
       the preceding year; for I should not have been in want of such medicine as a consul could
       give, unless I had fallen by a wound inflicted by a consul. I had been often told by one of
@@ -382,9 +374,9 @@
       consul, who was then my enemy, do you doubt what would have been his feelings with regard to
       my preservation, when you see that he was a mover and seconder of the measure proposed for my
       restoration? </p>
-    </div>
-    <div type="textpart" subtype="section" n="10" resp="perseus">
-     <p> But at that time there were two consuls, whose minds, narrow, contemptible, mean,
+         </div>
+         <div n="10" resp="perseus" type="section">
+            <p> But at that time there were two consuls, whose minds, narrow, contemptible, mean,
       groveling, dark, and dirty, were unable to look properly at, or to uphold, or to support the
       mere name of the consulship, much less the splendour of that honour, and the importance of
       that authority. They were not consuls, but dealers in provinces, and sellers of your dignity.
@@ -395,11 +387,11 @@
       opposed me, and wished to see me stripped of all aid, not only from themselves, but also from
       you and from the other orders of the state. One of them, however, deceived neither me nor any
       one else. </p>
-    </div>
-    <milestone n="5" unit="chapter"/>
-    <div type="textpart" subtype="section" n="11" resp="perseus">
-     <p>
-      <milestone unit="para"/>For who ever could have any hope of any good existing in that man, the
+         </div>
+         <milestone n="5" unit="chapter"/>
+         <div n="11" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>For who ever could have any hope of any good existing in that man, the
       earliest period of whose life was made openly subservient to everyone's lusts; who had not the
       heart to repel the obscene impurity of men from the holiest portion of his person? who, after
       he had ruined his own estate with no less activity than he afterwards displayed in his
@@ -416,15 +408,13 @@
        <foreign xml:lang="lat">comitia</foreign>, or to put his veto on the passing of a law; and
       that the Aelian and Fufian <note anchored="true">“The <foreign xml:lang="lat">Aelia
         lex</foreign> and <foreign xml:lang="lat">Rufia lex</foreign> were passed about the end of
-       the sixth century of the city, and gave all magistrates the <foreign xml:lang="lat"
-        >obnuntiatio</foreign>, or power of preventing or dissolving the <foreign xml:lang="lat"
-        >comitia</foreign> by observing the omens, and declaring them to be unfavourable.”—Smith,
+       the sixth century of the city, and gave all magistrates the <foreign xml:lang="lat">obnuntiatio</foreign>, or power of preventing or dissolving the <foreign xml:lang="lat">comitia</foreign> by observing the omens, and declaring them to be unfavourable.”—Smith,
        Dict. Ant. p. 560, v. <foreign xml:lang="lat">Lex</foreign>.</note> laws should have no
       validity, which our ancestors had enacted, intending them to be the firmest protection of the
       republic against the insanity of the tribunes. </p>
-    </div>
-    <div type="textpart" subtype="section" n="12" resp="perseus">
-     <p> And he also afterwards, when a countless multitude of virtuous men had come to him from the
+         </div>
+         <div n="12" resp="perseus" type="section">
+            <p> And he also afterwards, when a countless multitude of virtuous men had come to him from the
       Capitol as suppliants, and in morning garments, and when all the most noble young men of Rome,
       and all the Roman knights, had thrown themselves at the feet of that most profligate pander,
       with what an expression of countenance did that curled and perfumed debauchee reject, not only
@@ -437,16 +427,15 @@
       very eager advocate of my safety, because of his intimacy with me, and very much attached to
       the state, as it was likely that a man of his fortune would be. And when you had passed a
       resolution to change your garments, and had changed them, and though, indeed, all virtuous men
-      had already done the same thing, he, reeking with perfumes, clad in his <foreign
-       xml:lang="lat">toga praetexta</foreign>, which all the praetors and aediles had at that time
+      had already done the same thing, he, reeking with perfumes, clad in his <foreign xml:lang="lat">toga praetexta</foreign>, which all the praetors and aediles had at that time
       laid aside, derided your mourning garb, and the grief of a most grateful city, and did what no
       tyrant ever did,—he issued an edict that you should lament your disasters in secret and not
       presume openly to bewail the miseries of your country. </p>
-    </div>
-    <milestone n="6" unit="chapter"/>
-    <div type="textpart" subtype="section" n="13" resp="perseus">
-     <p>
-      <milestone unit="para"/>And when in the Circus Flaminius <note anchored="true">The Circus
+         </div>
+         <milestone n="6" unit="chapter"/>
+         <div n="13" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>And when in the Circus Flaminius <note anchored="true">The Circus
        Flaminius was outside the walls of the city, and the assembly was held there to allow Caesar
        to be present, who, being now invested with a military command, could not come into the
        city.</note> (I will not say the consul had been conducted into the assembly by a tribune of
@@ -463,9 +452,9 @@
       passing him, you noticed how ungentlemanlike, and rough, and sulky he looked, though you might
       think him a barbarian and a boor, still you would not suppose him to be lascivious and
       profligate. </p>
-    </div>
-    <div type="textpart" subtype="section" n="14" resp="perseus">
-     <p> You would think it made no difference whether you were standing in the forum with this man,
+         </div>
+         <div n="14" resp="perseus" type="section">
+            <p> You would think it made no difference whether you were standing in the forum with this man,
       or with a barbarian from Aethiopia; there he was, in that sense, without flavour, a mute,
       slow, uncivilized piece of goods. You would be apt to suppose him a Cappadocian just escaped
       out of a lot of slaves for sale. Then, again, how lustful was he at home,—how impure, how
@@ -478,23 +467,23 @@
       to industry, to encounter dangers for the sake of their country, but men who argue that no
       hour ought to be unoccupied by pleasure; that in every part of the body there ought always to
       be some joy and delight to be perceived. </p>
-    </div>
-    <div type="textpart" subtype="section" n="15" resp="perseus">
-     <p> He uses his masters as a sort of superintendents of his lusts; they seek out and scent out
+         </div>
+         <div n="15" resp="perseus" type="section">
+            <p> He uses his masters as a sort of superintendents of his lusts; they seek out and scent out
       all sorts of pleasures; they are the seasoners and furnishers of his banquets they appraise
       and value the different pleasures, they give a formal decision and judgment as to how much
       indulgence ought to be allowed to each separate pleasure. He, becoming accomplished in all
       these arts, despised this most prudent city to such a degree that he thought that all his
       lusts and all his atrocities could be concealed, if he only thrust his ill-omened face into
       the forum. <milestone n="7" unit="chapter"/>
-      <milestone unit="para"/>He deceived me, though I will not so much say me (for I know, from my
+               <milestone unit="para"/>He deceived me, though I will not so much say me (for I know, from my
       connection with the Pisos how much the Transalpine blood on his mother's side had removed him
       from the qualities of that family) but he deceived you and the Roman people, not by his wisdom
       or his eloquence, as is often the case with many men, but by his wrinkled brow and solemn
       look. </p>
-    </div>
-    <div type="textpart" subtype="section" n="16" resp="perseus">
-     <p> Lucius Piso, did you dare at that time with that eye (I will not say with that mind ) with
+         </div>
+         <div n="16" resp="perseus" type="section">
+            <p> Lucius Piso, did you dare at that time with that eye (I will not say with that mind ) with
       that forehead (I will not say with what character,) and with that arrogance (for I cannot say,
       after such achievements,) to unite with Aulus Gabinius in forming plans for my ruin? Did not
       the odour of that man's perfumes, or his breath reeking with wine, or his forehead marked with
@@ -506,10 +495,10 @@
       were consul, according to your edicts and commands, it was not allowed to the Roman senate or
       people to come to the assistance of the republic, I will not say by their votes and their
       authority, but even by their grief and their mourning garb. </p>
-    </div>
-    <div type="textpart" subtype="section" n="17" resp="perseus">
-     <p>
-      <milestone unit="para"/>Did you think that you were consul at Capua, a city where there was
+         </div>
+         <div n="17" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>Did you think that you were consul at Capua, a city where there was
       once the abode of arrogance, or at Rome, where all the consuls that ever existed before you
       were obedient to the senate? Did you dare, when you were brought forward in the Flaminian
       Circus, with your colleague, to say that you had always been merciful? by which expression you
@@ -524,9 +513,9 @@
       behaved with such wickedness and such intemperance, that you did not allow one single hour to
       elapse between the time of my disaster and your plunder; you did not allow even time for the
       lamentations and groans of the city to die away. </p>
-    </div>
-    <div type="textpart" subtype="section" n="18" resp="perseus">
-     <p> It was not yet openly known that the republic had fallen, when you thought fit to arrange
+         </div>
+         <div n="18" resp="perseus" type="section">
+            <p> It was not yet openly known that the republic had fallen, when you thought fit to arrange
       its interment. At one and the same moment my house was plundered and set on fire, my property
       from my house on the Palatine Hill was taken to the house of the consul who was my neighbour,
       the goods from my Tusculan villa were also taken to the house of my neighbour there, the other
@@ -536,12 +525,12 @@
       going on, the senate being beaten down and crushed, there being two wicked and impious
       consuls, the treasury, the prisoners, the legions, allies and military commands, were given
       away as they pleased. <milestone n="8" unit="chapter"/>
-      <milestone unit="para"/>But the ruin wrought by these consuls you, O consuls, have prevented
+               <milestone unit="para"/>But the ruin wrought by these consuls you, O consuls, have prevented
       from spreading further by your virtue, being assisted as you have been by the admirable
       loyalty and diligence of the tribunes of the people and the praetors. </p>
-    </div>
-    <div type="textpart" subtype="section" n="19" resp="perseus">
-     <p> What shall I say of that most illustrious man, Titus Annius? <note anchored="true">This was
+         </div>
+         <div n="19" resp="perseus" type="section">
+            <p> What shall I say of that most illustrious man, Titus Annius? <note anchored="true">This was
        Titus Annius Milo, by which last name he is best known to us. He was tribune, and finding it
        impossible to bring Clodius to justice in the legal way, resolved to deal with him according
        to his own fashion, and bought a troop of gladiators, at the head of whom he had daily
@@ -557,9 +546,9 @@
       robbers without the greatest gallantry, and large resources and numerous forces. He was the
       first man after my departure who relieved the virtuous from fear, and deprived the audacious
       of hope; who delivered this august body from alarm, and the city from slavery. </p>
-    </div>
-    <div type="textpart" subtype="section" n="20" resp="perseus">
-     <p> And Publius Sextius following the same line of conduct with equal virtue, courage, and
+         </div>
+         <div n="20" resp="perseus" type="section">
+            <p> And Publius Sextius following the same line of conduct with equal virtue, courage, and
       loyalty, thought that there were no enmities, no efforts of violence, no attacks, no dangers
       even to his life, which it became him to shun, in defence of my safety, of your authority, and
       of the constitution of the state. He, by his diligence, so recommended the cause of the
@@ -569,9 +558,9 @@
       and supported me by every sort of kind attention, just as if he had been my own brother; by
       his clients, and freedmen, and household, and resources, and letters, I was so much supported,
       that he seemed to be not only my assistant under, but my partner in calamity. </p>
-    </div>
-    <div type="textpart" subtype="section" n="21" resp="perseus">
-     <p> Now <pb n="482"/> you have seen the kindness and zeal of the others; how devoted to me was
+         </div>
+         <div n="21" resp="perseus" type="section">
+            <p> Now <pb n="482"/> you have seen the kindness and zeal of the others; how devoted to me was
       Caius Cestilius, how attached to you, how uniformly faithful to our cause. What did Marcus
       Cispius do? I know how much I owe to him and to his father and brother; and they, though they
       had some personal grudge against me on their own private account, still disregarded their
@@ -580,21 +569,21 @@
       connection with all zeal, and affection, and courage. Caius Messius made many speeches in my
       behalf, for the sake both of our friendship and of the republic. And he at the beginning
       proposed a special law respecting my safety. </p>
-    </div>
-    <div type="textpart" subtype="section" n="22" resp="perseus">
-     <p> If Quintus Fabricius could only have effected, in spite of violence and arms, what he
+         </div>
+         <div n="22" resp="perseus" type="section">
+            <p> If Quintus Fabricius could only have effected, in spite of violence and arms, what he
       endeavoured to do in my behalf, we should have recovered our position in the month of January.
       His own inclination prompted him to labour for my safety, violence checked him, your authority
       recalled him. <milestone n="9" unit="chapter"/>
-      <milestone unit="para"/>Of what disposition towards me the praetors were, you were able to
+               <milestone unit="para"/>Of what disposition towards me the praetors were, you were able to
       form an opinion when Lucius Caecilius, in his private character, laboured to support me from
       his own resources, and in his public capacity proposed a law respecting my safety, in concert
       with all his colleagues, and refused the plunderers of my property permission to support their
       actions by legal proceedings. But Marcus Calidius, the moment he was elected, showed by his
       vote how dear my safety was to him. </p>
-    </div>
-    <div type="textpart" subtype="section" n="23" resp="perseus">
-     <p> Caius Septimius, Quintus Valerius, Publius Crassus, Sextus Quintilius, and Caius Cornutus,
+         </div>
+         <div n="23" resp="perseus" type="section">
+            <p> Caius Septimius, Quintus Valerius, Publius Crassus, Sextus Quintilius, and Caius Cornutus,
       all devoted all their energies to the promotion of my interests and those of the republic.
        <milestone unit="para"/>And while I gladly make mention of these things, I am not unwilling
       to pass over the wicked actions done by some people with a view to injure me. It is not suited
@@ -605,9 +594,9 @@
       timid friends; to avoiding the showing those who deserted me any indignation at having been
       forced to leave the city; to console those who promoted my return by a proper display of my
       dignity. </p>
-    </div>
-    <div type="textpart" subtype="section" n="24" resp="perseus">
-     <p> And if I had no other duty before me for all the rest of my life, except to appear
+         </div>
+         <div n="24" resp="perseus" type="section">
+            <p> And if I had no other duty before me for all the rest of my life, except to appear
       sufficiently grateful to the very originators and prime movers and authors of my safety, still
       I should think the period that remains to me of life too brief; I will not say for requiting,
       but even for enumerating the kindnesses which have been shown to me. For, when shall I, or
@@ -626,11 +615,11 @@
       been used but three times before since the foundation of Rome, and at those times it was the
       consul who used it in behalf of the entire republic, addressing himself to those only who
       could hear his voice. </p>
-    </div>
-    <milestone n="10" unit="chapter"/>
-    <div type="textpart" subtype="section" n="25" resp="perseus">
-     <p>
-      <milestone unit="para"/>What could I leave to my posterity more glorious than the fact, that
+         </div>
+         <milestone n="10" unit="chapter"/>
+         <div n="25" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>What could I leave to my posterity more glorious than the fact, that
       the senate had declared its judgment that any citizen who did not defend me, did not desire
       the safety of the republic? Therefore your authority, and the preeminent dignity of the
       consul, had this great effect, that every one thought that he was committing a shameful crime
@@ -647,9 +636,9 @@
       summoning them as it were from Acheron; and among them the great conqueror of Numidia, whose
       departure from his country formerly seemed grievous to all the citizens, but scarcely even
       vexatious to himself. </p>
-    </div>
-    <div type="textpart" subtype="section" n="26" resp="perseus">
-     <p> He, therefore, turns out now, not only a defender of my safety, having been previously to
+         </div>
+         <div n="26" resp="perseus" type="section">
+            <p> He, therefore, turns out now, not only a defender of my safety, having been previously to
       this one kindness of his always my enemy, but even the seconder of my restoration to my
       dignity. And on that day when you met in the senate to the number of four hundred and
       seventeen, and when all these magistrates were present one alone dissented; he who thought
@@ -660,11 +649,11 @@
       the greatest eloquence, and brought the assembly into such a state, all Italy standing by and
       listening, that no one would listen to the hateful and detested voice of any of my hired or
       profligate enemies. </p>
-    </div>
-    <milestone n="11" unit="chapter"/>
-    <div type="textpart" subtype="section" n="27" resp="perseus">
-     <p>
-      <milestone unit="para"/>To these acts of his, being not only aids to my safety, but even
+         </div>
+         <milestone n="11" unit="chapter"/>
+         <div n="27" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>To these acts of his, being not only aids to my safety, but even
       ornaments of my dignity, you yourselves added the rest that was wanting. You decreed that no
       one should by any means whatever hinder that matter from proceeding; that if any one did try
       to interpose any obstacle, you would be very angry and indignant; that he would be acting in a
@@ -680,19 +669,19 @@
       and considered the real <foreign xml:lang="lat">comitia</foreign>, he summoned us back to our
       country, so that the same centuries which had made me consul should declare their approval of
       my consulship. </p>
-    </div>
-    <div type="textpart" subtype="section" n="28" resp="perseus">
-     <p> On that day what citizen was there who thought it right, whatever his age or state of
+         </div>
+         <div n="28" resp="perseus" type="section">
+            <p> On that day what citizen was there who thought it right, whatever his age or state of
       health might be, to deny himself the opportunity of giving his vote for my safety? When did
       you ever see such a multitude assembled in the Campus, such a splendid show of all Italy and
       of all orders of men? when did you ever see movers, and tellers, and keepers of the votes all
       of such high rank? Therefore, through the active, and admirable, and godlike kindness of
       Publius Lentulus, we were not allowed to return to our country, as some most eminent citizens
       have been, but we were brought back in triumph, borne by white horses in a gilded car. </p>
-    </div>
-    <div type="textpart" subtype="section" n="29" resp="perseus">
-     <p>
-      <milestone unit="para"/>Can I ever appear grateful enough to Cnaeus Pompeius, who said, not
+         </div>
+         <div n="29" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>Can I ever appear grateful enough to Cnaeus Pompeius, who said, not
       only among you who all were of the same opinion, but also before the whole Roman people, that
       the safety of the republic had been preserved by me, and was inseparably connected with mine?
       who recommended my cause to the wise, and taught the ignorant, and at the same time checked
@@ -701,25 +690,22 @@
       a parent; who, at a time when he was forced to keep within his house from fear of contests and
       bloodshed, begged even of the preceding tribunes to propose and carry a law respecting my
       safety; who in a colony lately erected, where he himself was discharging the duties of a
-      magistrate in it, where there was no bribed interrupter, declared that the <foreign
-       xml:lang="lat">privilegium</foreign>
-      <note anchored="true">“A <foreign xml:lang="lat">Privilegium</foreign> signified an enactment
-       that had for its object a single person, which is indicated by the form of the word <foreign
-        xml:lang="lat">privae res</foreign>, being the same as <foreign xml:lang="lat">singulae
+      magistrate in it, where there was no bribed interrupter, declared that the <foreign xml:lang="lat">privilegium</foreign>
+               <note anchored="true">“A <foreign xml:lang="lat">Privilegium</foreign> signified an enactment
+       that had for its object a single person, which is indicated by the form of the word <foreign xml:lang="lat">privae res</foreign>, being the same as <foreign xml:lang="lat">singulae
         res</foreign>. It might be beneficial to the party to whom it referred, or not; but it is
-       generally used by Cicero in the unfavourable sense.”—Smith, Dict. Ant. p. 500, v. <foreign
-        xml:lang="lat">Lex</foreign>. “In the time of the republic it was not allowed to pass or to
+       generally used by Cicero in the unfavourable sense.”—Smith, Dict. Ant. p. 500, v. <foreign xml:lang="lat">Lex</foreign>. “In the time of the republic it was not allowed to pass or to
        propose such a law.”—Riddle, v. <foreign xml:lang="lat">Privilegium</foreign>. But I do not
        know his authority for such a statement.</note> passed against me was violent and cruel,
       confirming that declaration by the authority of most <pb n="486"/> honourable men, and by
       public letters, and, being the chief man there, gave his opinion that it was becoming to
       implore the protection of all Italy for my safety; who, when he himself had always been a most
       firm friend to me, laboured also to make all his own friends also to me. </p>
-    </div>
-    <milestone n="12" unit="chapter"/>
-    <div type="textpart" subtype="section" n="30" resp="perseus">
-     <p>
-      <milestone unit="para"/>And by what services can I requite the kindness of Titus Annius to me?
+         </div>
+         <milestone n="12" unit="chapter"/>
+         <div n="30" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>And by what services can I requite the kindness of Titus Annius to me?
       all whose actions, the whole of whose conduct and thoughts, the whole of whose tribuneship, in
       short, was nothing else except a consistent, continual, gallant, unwearied advocacy of my
       safety. <milestone unit="para"/>Why need I speak of Publius Sextius? who showed his good-will
@@ -737,9 +723,9 @@
       same deities, but sometimes we pray to one and sometimes to another; so in the case of the men
       who have behaved to me with such godlike service, my whole life shall be devoted to
       celebrating their kindness towards me, and showing my reverent sense of it. </p>
-    </div>
-    <div type="textpart" subtype="section" n="31" resp="perseus">
-     <p> But on this day I have thought that it became me to return thanks especially to the
+         </div>
+         <div n="31" resp="perseus" type="section">
+            <p> But on this day I have thought that it became me to return thanks especially to the
       different magistrates by name, and also to one private individual, who for the sake of my
       safety, had visited all the municipal towns and colonies, had as a suppliant addressed his
       entreaties to the Roman people, and had declared that opinion which you followed when you
@@ -750,13 +736,13 @@
       changed its garments as far as it was allowed to do without interruption from the edicts of
       those men who wished to deprive me in my peril not only of all protection from them, but of
       even the benefit of your prayers in my behalf. </p>
-    </div>
-    <div type="textpart" subtype="section" n="32" resp="perseus">
-     <p>
-      <milestone unit="para"/>And when I was in such circumstances as these, when I saw that I as a
+         </div>
+         <div n="32" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>And when I was in such circumstances as these, when I saw that I as a
       private individual had to contend with the same array which as consul I had defeated, using
       not arms but your authority, I deliberated much with myself. <milestone n="13" unit="chapter"/>
-      <milestone unit="para"/>The consul had said that he would make the Roman knights pay for the
+               <milestone unit="para"/>The consul had said that he would make the Roman knights pay for the
       scenes on the Capitoline Hill. Some were summoned by name, others were prosecuted, some were
       banished. All access to the temples was prevented, not merely by their being garrisoned or
       occupied with a strong force, but by their being demolished. The other consul, not content
@@ -766,17 +752,16 @@
        Caesar, who had the command in Gaul as proconsul for five years.</note> given to him for many
       years, and with a large army. I do not say that he was an enemy of mine, but I do know that he
       did nothing when he was stated to be my enemy. </p>
-    </div>
-    <div type="textpart" subtype="section" n="33" resp="perseus">
-     <p> As there were thought to be two parties in the republic, the one was supposed, out of its
+         </div>
+         <div n="33" resp="perseus" type="section">
+            <p> As there were thought to be two parties in the republic, the one was supposed, out of its
       enmity to me, to demand that I should be given up to it; the other, to defend me, but timidly
       out of fear of bloodshed. But those who seemed to require me to be given up to them increased
       the fear of a contest by their conduct as they never diminished the suspicions and anxieties
       of men by denying what they were suspected of. Wherefore, when I saw the senate deprived of
       leaders, and myself attacked by some of the magistrates, betrayed by some, and abandoned by
       others; when I saw that slaves were being enlisted by name under some pretence of forming
-      guilds; <note anchored="true">“Clodius not only restored the old <foreign xml:lang="lat"
-        >collegia</foreign> or guilds, but formed some new ones of the very dregs of the city, and
+      guilds; <note anchored="true">“Clodius not only restored the old <foreign xml:lang="lat">collegia</foreign> or guilds, but formed some new ones of the very dregs of the city, and
        of the slaves; and this is alluded to in several of the subsequent orations.”—Manut.</note>
       that all the troops of Catiline were recalled to their original hopes of massacre and
       conflagration under <pb n="488"/> almost the same leaders as before; that the Roman knights
@@ -789,11 +774,11 @@
       fall for my sake, and with me, and even after me; and that the avengers of the blood of the
       tribunes were present, but that all satisfaction for my death must he exacted by the slow
       progress of the law, and reserved for posterity. </p>
-    </div>
-    <milestone n="14" unit="chapter"/>
-    <div type="textpart" subtype="section" n="34" resp="perseus">
-     <p>
-      <milestone unit="para"/>I did not choose, after I had as consul maintained the general safety
+         </div>
+         <milestone n="14" unit="chapter"/>
+         <div n="34" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>I did not choose, after I had as consul maintained the general safety
       of the state without having recourse to arms, to take arms as a private individual in my own
       cause; I preferred that virtuous men should grieve for my fortune rather than despair of their
       own; and if I were slain by myself; that I thought would be a shameful end for me; but if I
@@ -809,33 +794,33 @@
       banished from the state when I was banished. And if they had been lost to you for ever, I
       should mourn over your fortunes rather than regret the loss of my home amongst you; but if
       they were ever restored, I was quite sure that I should be enabled to return with them. </p>
-    </div>
-    <div type="textpart" subtype="section" n="35" resp="perseus">
-     <p>
-      <milestone unit="para"/>And of these feelings of mine, he who was the protector of my life is
+         </div>
+         <div n="35" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>And of these feelings of mine, he who was the protector of my life is
       also my most indisputable witness, namely Cnaeus Plancius, who, disregarding all the
       distinctions and emoluments which might have been derived from a province, devoted his whole
       quaestorship to supporting and preserving me. If he had been my quaestor when I was
       commander-in-chief; he would have stood in the relation of a son to me; now he surely shall be
       looked upon by me as a parent, since he has been my quaestor, not while in authority, but in
       grief. </p>
-    </div>
-    <div type="textpart" subtype="section" n="36" resp="perseus">
-     <p>
-      <milestone unit="para"/>Wherefore, O conscript fathers, since I have been restored to the
+         </div>
+         <div n="36" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>Wherefore, O conscript fathers, since I have been restored to the
       republic at the same time with the constitution of the republic, in whatever I do for the
       defence of it, I will not only not in the slightest degree abridge my former liberty, but I
       will even increase it. <milestone n="15" unit="chapter"/>
-      <milestone unit="para"/>In truth, if I defended the republic at a time when it was under some
+               <milestone unit="para"/>In truth, if I defended the republic at a time when it was under some
       obligations to me, what ought I to do now when I owe everything to it? For what is there that
       can crush or even weaken my spirit, when you see that calamity itself is in my case not a
       witness of any error; but of most extraordinary services rendered to the republic? For these
       disasters were brought on me by my defence of the state; they were undergone by me of my own
       free will, in order that the republic which had been defended by me should not be brought into
       the very extremity of peril. </p>
-    </div>
-    <div type="textpart" subtype="section" n="37" resp="perseus">
-     <p> It was not in my case, as in that of Publius Popillius, a most noble man, my young sons, or
+         </div>
+         <div n="37" resp="perseus" type="section">
+            <p> It was not in my case, as in that of Publius Popillius, a most noble man, my young sons, or
       a multitude of my relations that entreated the Roman people in my behalf; it was not in my
       case, as in the case of Quintus Metellus, a most admirable and most illustrious man, a
       youthful son of proved virtue who strove for me; it was not Lucius and Caius Metellus, men of
@@ -850,10 +835,10 @@
       the same abode both in life and death, still he never was alarmed either at the greatness of
       the business, or at his own <pb n="490"/> solitary and unassisted condition, nor at the
       violence and warlike measures of my adversaries. </p>
-    </div>
-    <div type="textpart" subtype="section" n="38" resp="perseus">
-     <p>
-      <milestone unit="para"/>There was another upholder and assiduous defender of my fortunes,
+         </div>
+         <div n="38" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>There was another upholder and assiduous defender of my fortunes,
       Caius Piso, my son-in-law, a man of the greatest virtue and piety, who disregarded the threats
       of my enemies, the hostility of my connection, and his own near relation, the consul; who, as
       quaestor, passed over Pontus and Bithynia for the sake of ensuring my safety. The senate never
@@ -867,19 +852,17 @@
       senate. There was no unanimity of magistrates in their cases,—no summoning of the Roman people
       to come to the defence of the republic,—no commotion throughout Italy,—no decrees of
       municipalities and colonies in their favour. </p>
-    </div>
-    <div type="textpart" subtype="section" n="39" resp="perseus">
-     <p>
-      <milestone unit="para"/>Wherefore, since your authority has summoned me,—since the Roman
+         </div>
+         <div n="39" resp="perseus" type="section">
+            <p>
+               <milestone unit="para"/>Wherefore, since your authority has summoned me,—since the Roman
       people his recalled me,—since the republic has begged me to return,—since almost all Italy has
       brought me back in triumph on its shoulders, I will take care, O conscript fathers, now that
       those things have been restored to me, the restoration of which did not depend on myself, not
       to appear wanting in those qualities with which I can provide myself; I will take care, now
       that I have recovered those things which I had lost, never to lose my virtue and loyal
       attachment to you.</p>
-    </div>
-   </div>
-  </body>
- </text>
-
+         </div>
+      </body>
+   </text>
 </TEI>
