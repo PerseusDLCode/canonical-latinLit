@@ -62,6 +62,7 @@
                     cert="low"
                     resp="#corpus-tools"/>
          </textClass>
+         
          <langUsage>
             <language ident="la">Latin</language>
             <language ident="greek">Greek</language>

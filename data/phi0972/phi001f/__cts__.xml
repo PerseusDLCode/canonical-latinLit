@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<work xmlns="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0972.phi001f" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0972">
+    <title xml:lang="lat">Fragmenta</title>
+    <edition urn="urn:cts:latinLit:phi0972.phi001f.perseus-lat1" workUrn="urn:cts:latinLit:phi0972.phi001f" xml:lang="lat">
+        <label xml:lang="eng">Fragments (Latin)</label>
+        <description xml:lang="eng">Petronius. Heseltine, Michael, editor. London, New York: William Heinemann Ltd.; G. P. Putnam's Sons, 1913.</description>
+    </edition>
+    <edition urn="urn:cts:latinLit:phi0972.phi001f.perseus-eng1" workUrn="urn:cts:latinLit:phi0972.phi001f" xml:lang="eng">
+        <label xml:lang="eng">Fragments (English)</label>
+        <description xml:lang="eng">Petronius. Heseltine, Michael, translator. London, New York: William Heinemann Ltd.; G. P. Putnam's Sons, 1913.</description>
+    </edition>
+    <genre confidence="high">prose-section</genre>
+</work>
