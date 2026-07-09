@@ -26,7 +26,7 @@
             <publisher>Trustees of Tufts University</publisher>
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
-            <date type="release" notBefore="2010-03-02"/>
+            <date type="release" notBefore="2010-03-02" />
             <availability status="free">
                <licence>Test</licence>
                <!-- Creative Common statement instead of Non Commercial one ? -->
@@ -48,21 +48,22 @@
                   </imprint>
                </monogr>
                <series>Loeb Classical Library</series>
-               <ref target="https://archive.org/details/juvenalpersiuswi00juveuoft/page/2/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/juvenalpersiuswi00juveuoft/page/2/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl>
-            <refState unit="book"/>
-            <refState unit="poem"/>
-            <refState unit="line"/>
+            <refState unit="book" />
+            <refState unit="poem" />
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
                   <citeStructure unit="poem" delim="." match="div[@type='poem']" use="@n">
-                     <citeStructure unit="line" delim="." match="l" use="@n"/>
+                     <citeStructure unit="line" delim="." match="l" use="@n" />
                   </citeStructure>
                </citeStructure>
             </citeStructure>
@@ -70,7 +71,7 @@
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-book-poem-line"/>
+            <catRef scheme="#perseus-genre" target="#verse-book-poem-line" />
          </textClass>
          <langUsage default="false">
             <language ident="eng">English</language>
@@ -78,21 +79,24 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2022-03-29" who="Alison Babeu">Edited header and bibliographic data and added in page link.</change>
-         <change when="2015-11-04" who="Zach Himes">Changed @rend="italics" to "italic". Fixed .json file</change>
+         <change when="2022-03-29" who="Alison Babeu">Edited header and bibliographic data and added
+            in page link.</change>
+         <change when="2015-11-04" who="Zach Himes">Changed @rend="italics" to "italic". Fixed .json
+            file</change>
          <change when="2010-03-02" who="J. Matthew Harrington">Mark up text in XML, proofread</change>
          <change when="2015-03-06" who="Thibault Clérice">converted to EpiDoc/CTS/Unicode</change>
-         <change when="2018-05-09" who="Thibault Clérice">Removed the volume from the citation scheme</change>
+         <change when="2018-05-09" who="Thibault Clérice">Removed the volume from the citation
+            scheme</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:lang="lat">
       <body xml:base="urn:cts:latinLit:phi1276.phi001.perseus-lat2">
          <div n="1" org="uniform" sample="complete" type="book">
             <div n="1"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura I</head>
                <l n="1">Semper ego auditor tantum? numquamne reponam</l>
                <l n="2">vexatus totiens rauci Theseide Cordi?</l>
@@ -118,7 +122,8 @@
                <l n="22">Cum tener uxorem ducat spado, Mevia Tuscum</l>
                <l n="23">figat aprum et nuda teneat venabula mamma,</l>
                <l n="24">patricios omnis opibus cum provocet unus</l>
-               <l n="25">quo tondente gravis iuveni mihi barba sonabat,<note> line repeated at 10.226.</note>
+               <l n="25">quo tondente gravis iuveni mihi barba sonabat,<note> line repeated at
+                  10.226.</note>
                </l>
                <l n="26">cum pars Niliacae plebis, cum verna Canopi</l>
                <l n="27">Crispinus Tyrias umero revocante lacernas</l>
@@ -132,16 +137,19 @@
                <l n="35">quod superest, quem Massa timet, quem munere palpat<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">palpat</foreign>
-                     </hi> is omitted by P.</note>
+                     </hi> is
+                  omitted by P.</note>
                </l>
                <l n="36">Carus et a trepido Thymele summissa Latino?</l>
                <l n="37">cum te summoveant qui testamenta merentur</l>
                <l n="38">noctibus,<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">noctibus</foreign>
-                     </hi> Vind. <foreign xml:lang="grc">Ψ</foreign> : <hi rend="italic">
+                     </hi> Vind. <foreign
+                        xml:lang="grc">Ψ</foreign> : <hi rend="italic">
                         <foreign xml:lang="lat">non tibi</foreign>
-                     </hi> P.</note> in caelum quos evenit optima summi</l>
+                     </hi> P.</note>
+                  in caelum quos evenit optima summi</l>
                <l n="39">nunc via processus, vetulae vesica beatae?</l>
                <l n="40">unciolam Proculeius habet, sed Gillo deuncem,</l>
                <l n="41">partes quisque suas ad mensuram inguinis heres,</l>
@@ -173,11 +181,14 @@
                <l n="67">signator falsi<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">falsi</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">falso</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>
-                  </note>, qui se lautum atque beatum </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>
+                  </note>, qui se lautum atque
+                  beatum </l>
                <l n="68">exiguis tabulis et gemma fecerit uda?</l>
                <l n="69">Occurrit matrona potens, quae molle Calenum</l>
                <l n="70">porrectura viro miscet sitiente rubetam</l>
@@ -229,16 +240,22 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">habitas</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">habitat</foreign>
-                     </hi> P Vind. OT Büch. Housman</note>, nullas nummorum ereximus aras, </l>
+                     </hi> P Vind.
+                  OT Büch. Housman</note>, nullas nummorum ereximus aras, </l>
                <l n="115">ut colitur Pax atque<note>In place of the dull <hi rend="italic">
                         <foreign xml:lang="lat">atque</foreign>
-                     </hi> of P<foreign xml:lang="grc">Ψ</foreign>, Postgate, supported by the reading <hi rend="italic">
+                     </hi> of P<foreign
+                        xml:lang="grc">Ψ</foreign>, Postgate, supported by the reading <hi
+                        rend="italic">
                         <foreign xml:lang="lat">firma</foreign>
-                     </hi> found in the MS. II, has made the brilliant conj. <hi rend="italic">
+                     </hi> found in
+                  the MS. II, has made the brilliant conj. <hi rend="italic">
                         <foreign xml:lang="lat">Fama</foreign>
-                     </hi>, approved by L. Havet. See Class. Quart, iii. p. 67.</note> Fides Victoria Virtus </l>
+                     </hi>, approved
+                  by L. Havet. See Class. Quart, iii. p. 67.</note> Fides Victoria Virtus </l>
                <l n="116">quaeque salutate crepitat Concordia nido.</l>
                <l n="117">Sed cum summus honor finito conputet anno,</l>
                <l n="118">sportula quid referat, quantum rationibus addat,</l>
@@ -253,11 +270,14 @@
                <l n="126">profer, Galla, caput, noli vexare, quiescit.’ <note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quiescit</foreign>
-                     </hi> Vind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> Vind.<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">quiescaet</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">quiescet</foreign>
-                     </hi> Büch. Housman.</note>
+                     </hi> Büch.
+                  Housman.</note>
                </l>
                <l n="127">Ipse dies pulchro distinguitur ordine rerum:</l>
                <l n="128">sportula, deinde forum iurisque peritus Apollo</l>
@@ -277,14 +297,17 @@
                <l n="142">poena tamen praesens, cum tu deponis amictus</l>
                <l n="143">turgidus et crudum<note>P has <hi rend="italic">
                         <foreign xml:lang="lat">crudus</foreign>
-                     </hi>: <hi rend="italic">
+                     </hi>: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">crudum</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> etc.</note> pavonem in balnea portas, </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> etc.</note> pavonem in balnea portas, </l>
                <l n="144">hinc subitae mortes atque intestata senectus;</l>
                <l n="145">it<note>So AL and Housman: Büch. follows the <hi rend="italic">
                         <foreign xml:lang="lat">et</foreign>
-                     </hi> of P.</note> nova nec tristis per cunctas fabula cenas: </l>
+                     </hi> of P.</note>
+                  nova nec tristis per cunctas fabula cenas: </l>
                <l n="146">ducitur iratis plaudendum funus amicis.</l>
                <l n="147">Nil erit ulterius quod nostris moribus addat</l>
                <l n="148">posteritas, eadem facient cupientque minores,</l>
@@ -293,38 +316,52 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">dicas</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">dices</foreign>
-                     </hi> PO: Housman prefers <hi rend="italic">
+                     </hi> PO:
+                  Housman prefers <hi rend="italic">
                         <foreign xml:lang="lat">dicas</foreign>
-                     </hi>; see Journal of Phil. No. 67, p. 43.</note> hic forsitan ‘unde </l>
+                     </hi>; see
+                  Journal of Phil. No. 67, p. 43.</note> hic forsitan ‘unde </l>
                <l n="151">ingenium par materiae? unde illa priorum</l>
                <l n="152">scribendi quodcumque animo flagrante liberet</l>
                <l n="153">simplicitas? “cuius non audeo dicere nomen?</l>
                <l n="154">quid refert, dictis ignoscat Mucius an non?”’</l>
                <l n="155">pone Tigellinum: taeda lucebis<note>P has <hi rend="italic">
                         <foreign xml:lang="lat">lucebit</foreign>
-                     </hi>: so also GT</note> in illa </l>
-               <l n="156">qua stantes ardent qui fixo gutture<note>Büch. (1893 edn.) reads <hi rend="italic">
+                     </hi>: so also
+                  GT</note> in illa </l>
+               <l n="156">qua stantes ardent qui fixo gutture<note>Büch. (1893 edn.) reads <hi
+                        rend="italic">
                         <foreign xml:lang="lat">pectore</foreign>
-                     </hi>, as do PAO and Owen: <hi rend="italic">
+                     </hi>, as do
+                  PAO and Owen: <hi rend="italic">
                         <foreign xml:lang="lat">gutture</foreign>
-                     </hi> is read by Vind.GLTU. So Housman; see Journal of Phil. No. 67, p. 							45.</note> fumant, </l>
+                     </hi> is read
+                  by Vind.GLTU. So Housman; see Journal of Phil. No. 67, p. 45.</note> fumant, </l>
                <l n="157">et latum media sulcum deducis<note>So pO: <hi rend="italic">
                         <foreign xml:lang="lat">deducit</foreign>
-                     </hi> P Housman: Büch. (1910) conj. <hi rend="italic">
+                     </hi> P
+                  Housman: Büch. (1910) conj. <hi rend="italic">
                         <foreign xml:lang="lat">ducetis</foreign>
-                     </hi>. Owen conj. <hi rend="italic">
+                     </hi>. Owen
+                  conj. <hi rend="italic">
                         <foreign xml:lang="lat">dent lucis</foreign>
-                     </hi>, reading <hi rend="italic">
+                     </hi>,
+                  reading <hi rend="italic">
                         <foreign xml:lang="lat">ut</foreign>
-                     </hi> for <hi rend="italic">
+                     </hi> for <hi
+                        rend="italic">
                         <foreign xml:lang="lat">et</foreign>
-                     </hi>. Housman supposes a line dropped out after 1.156, containing the word <hi rend="italic">
+                     </hi>. Housman
+                  supposes a line dropped out after 1.156, containing the word <hi rend="italic">
                         <foreign xml:lang="lat">cadaver</foreign>
-                     </hi> which becomes the subject to <hi rend="italic">
+                     </hi> which
+                  becomes the subject to <hi rend="italic">
                         <foreign xml:lang="lat">deducit</foreign>
-                     </hi>.</note> harena. </l>
+                     </hi>.</note>
+                  harena. </l>
                <l n="158">Qui dedit ergo tribus patruis aconita, vehatur</l>
                <l n="159">pensilibus plumis atque illinc despiciat nos?</l>
                <l n="160">‘cum veniet contra, digito compesce labellum:</l>
@@ -339,18 +376,20 @@
                <l n="168">inde ira<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">ira</foreign>
-                     </hi> Housman following AGLO: Büch. reads <hi rend="italic">
+                     </hi> Housman
+                  following AGLO: Büch. reads <hi rend="italic">
                         <foreign xml:lang="lat">irae</foreign>
-                     </hi> from P.</note> et lacrimae. tecum prius ergo voluta</l>
+                     </hi> from P.</note>
+                  et lacrimae. tecum prius ergo voluta</l>
                <l n="169">haec animo ante tubas: galeatum sero duelli</l>
                <l n="170">paenitet.’ experiar quid concedatur in illos,</l>
                <l n="171">quorum Flaminia tegitur cinis atque Latina.</l>
             </div>
             <div n="2"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura II</head>
                <l n="1">ultra Sauromatas fugere hinc libet et glacialem</l>
                <l n="2">Oceanum, quotiens aliquid de moribus audent</l>
@@ -391,7 +430,8 @@
                <l n="35">contemnunt Scauros et castigata remordent?</l>
                <l n="36">Non tulit ex illis torvum Laronia quendam</l>
                <l n="37">clamantem totiens <q>ubi nunc, lex Iulia? dormis?</q>
-                  <note>Housman punctuates <hi rend="italic">
+                  <note>Housman
+                  punctuates <hi rend="italic">
                         <foreign xml:lang="lat">ubi nunc, lex Iulia, dormis?</foreign>
                      </hi>
                   </note>
@@ -405,18 +445,23 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">ac iura</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> (see 1. 72): <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> (see 1. 72): <hi rend="italic">
                         <foreign xml:lang="lat">acturae</foreign>
-                     </hi> P.</note>, citari</l>
+                     </hi> P.</note>,
+                  citari</l>
                <l n="44">ante omnes debet Scantinia: respice primum</l>
                <l n="45">et scrutare viros; faciunt nam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">nam</foreign>
-                     </hi> Housman from O: <hi rend="italic">
+                     </hi> Housman from
+                  O: <hi rend="italic">
                         <foreign xml:lang="lat">hi</foreign>
-                     </hi> Vinci.<foreign xml:lang="grc">Ψ</foreign> and Büch.: <hi rend="italic">
+                     </hi> Vinci.<foreign
+                        xml:lang="grc">Ψ</foreign> and Büch.: <hi rend="italic">
                         <foreign xml:lang="lat">qui</foreign>
-                     </hi> Büch. (1910).</note> plura, sed illos </l>
+                     </hi> Büch.
+                  (1910).</note> plura, sed illos </l>
                <l n="46">defendit numerus iunctaeque umbone phalanges,</l>
                <l n="47">magna inter molles concordia, non erit ullum</l>
                <l n="48">exemplum in nostro tam detestabile sexu.</l>
@@ -454,7 +499,8 @@
                <l n="80">unius scabie cadit et porrigine<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">prurigine</foreign>
-                     </hi> P.</note> porci </l>
+                     </hi> P.</note>
+                  porci </l>
                <l n="81">uvaque conspecta livorem ducit ab uva.</l>
                <l n="82">Foedius hoc aliquid quandoque audebis amictu;</l>
                <l n="83">nemo repente fuit turpissimus, accipient te</l>
@@ -478,7 +524,8 @@
                <l n="99">ille tenet speculum, pathici gestamen Othonis,</l>
                <l n="100">Actoris Aurunci spolium<note>The words <hi rend="italic">
                         <foreign xml:lang="lat">Actoris Aurunci spolium</foreign>
-                     </hi> are a quotation from Virg. Aen. 12.94.</note>, quo se ille videbat </l>
+                     </hi>
+                  are a quotation from Virg. Aen. 12.94.</note>, quo se ille videbat </l>
                <l n="101">armatum, cum iam tolli vexilla iuberet,</l>
                <l n="102">res memoranda novis annalibus atque recenti</l>
                <l n="103">historia, speculum civilis sarcina belli;</l>
@@ -488,24 +535,30 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">spolium</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>O: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>O: <hi rend="italic">
                         <foreign xml:lang="lat">solium</foreign>
-                     </hi> Herwerd. Housman.</note> adfectare Palati,</l>
+                     </hi> Herwerd.
+                  Housman.</note> adfectare Palati,</l>
                <l n="107">et pressum in faciem<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">faciem</foreign>
-                     </hi> Clausen and Willis, so P1, AKLO; <hi rend="italic">
+                     </hi> Clausen
+                  and Willis, so P1, AKLO; <hi rend="italic">
                         <foreign xml:lang="lat">facie</foreign>
-                     </hi> P2, GHTUZ</note> digitis extendere panem,</l>
+                     </hi> P2, GHTUZ</note>
+                  digitis extendere panem,</l>
                <l n="108">quod nec in Assyrio pharetrata Samiramis orbe,</l>
                <l n="109">maesta nec Actiaca fecit Cleopatra carina,</l>
                <l n="110">hic nullus verbis pudor aut reverentia mensae,</l>
                <l n="111">hic turpis<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">turpis</foreign>
-                     </hi> PVind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> PVind.<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">turpes</foreign>
-                     </hi> TParis.</note> Cybeles et fracta voce loquendi</l>
+                     </hi> TParis.</note>
+                  Cybeles et fracta voce loquendi</l>
                <l n="112">libertas et crine senex fanaticus albo</l>
                <l n="113">sacrorum antistes, rarum ac memorabile magni</l>
                <l n="114">gutturis exemplum conducendusque magister,</l>
@@ -548,11 +601,14 @@
                <l n="150">Cocytum<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">et contum</foreign>
-                     </hi> ΣVind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> ΣVind.<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">et pontum</foreign>
-                     </hi> PSTU. Housman reads <hi rend="italic">
+                     </hi> PSTU.
+                  Housman reads <hi rend="italic">
                         <foreign xml:lang="lat">Cocytum</foreign>
-                     </hi> after Luitprandus, Antapodosis 5 B.</note> et Stygio ranas in gurgite nigras, </l>
+                     </hi> after
+                  Luitprandus, Antapodosis 5 B.</note> et Stygio ranas in gurgite nigras, </l>
                <l n="151">atque una transire vadum tot milia cumba</l>
                <l n="152">nec pueri credunt, nisi qui nondum aere lavantur.</l>
                <l n="153">sed tu vera puta: Curius quid sentit et ambo</l>
@@ -564,9 +620,11 @@
                <l n="159">illic<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">illic</foreign>
-                     </hi> Vind.GL: <hi rend="italic">
+                     </hi> Vind.GL: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">illuc</foreign>
-                     </hi> ATU and appar. P.</note> heu miseri traducimur. arma quidem ultra </l>
+                     </hi> ATU and
+                  appar. P.</note> heu miseri traducimur. arma quidem ultra </l>
                <l n="160">litora Iuvernae promovimus et modo captas</l>
                <l n="161">Orcadas ac minima contentos nocte Britannos;</l>
                <l n="162">sed quae nunc populi fiunt victoris in urbe,</l>
@@ -578,20 +636,23 @@
                <l n="168">indulsit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">induerit</foreign>
-                     </hi> Willis, following Nisbet</note> pueris, non umquam<note>
+                     </hi> Willis,
+                  following Nisbet</note> pueris, non umquam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">non umquam</foreign>
-                     </hi> GLOT Housman: <hi rend="italic">
+                     </hi> GLOT
+                  Housman: <hi rend="italic">
                         <foreign xml:lang="lat">non numquam</foreign>
-                     </hi> PUBüch.</note> derit amator, </l>
+                     </hi>
+                  PUBüch.</note> derit amator, </l>
                <l n="169">mittentur bracae cultelli frena flagellum;</l>
                <l n="170">sic praetextatos referunt Artaxata mores.</l>
             </div>
             <div n="3"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura III</head>
                <l n="1">Quamvis digressu veteris confusus amici</l>
                <l n="2">laudo tamen, vacuis quod sedem figere Cumis</l>
@@ -613,9 +674,11 @@
                <l n="18">dissimiles veris, quanto praesentius<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">praestantius</foreign>
-                     </hi> p<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> p<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">presentius</foreign>
-                     </hi> Vind.</note> esset </l>
+                     </hi> Vind.</note>
+                  esset </l>
                <l n="19">numen aquis, viridi si margine clauderet undas</l>
                <l n="20">herba, nec ingentium violarent marmora tofum.</l>
                <l n="21">Hic tunc Vmbricius <q>quando artibus,</q> inquit, ‘honestis</l>
@@ -638,10 +701,13 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">quem</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">cum</foreign>
-                     </hi> PAUBüch. and Housman</note> iubet, occidunt populariter; inde reversi </l>
-               <l n="38">conducunt foricas, et cur non omnia, cum sint <note>Büch. punctuates <hi rend="italic">
+                     </hi> PAUBüch. and
+                  Housman</note> iubet, occidunt populariter; inde reversi </l>
+               <l n="38">conducunt foricas, et cur non omnia, cum sint <note>Büch. punctuates <hi
+                        rend="italic">
                         <foreign xml:lang="lat">et cur non? omnia cum sint.</foreign>
                      </hi>
                   </note>
@@ -716,13 +782,17 @@
                <l n="106">a facie, iactare manus, laudare paratus,</l>
                <l n="107">si bene ructavit, si rectum minxit amicus,</l>
                <l n="108">si trulla inverso crepitum dedit aurea fundo.</l>
-               <l n="109">Praeterea sanctum nihil est neque<note>P defective here. Most MSS. have <hi rend="italic">
+               <l n="109">Praeterea sanctum nihil est neque<note>P defective here. Most MSS. have <hi
+                        rend="italic">
                         <foreign xml:lang="lat">aut</foreign>
-                     </hi> for <hi rend="italic">
+                     </hi> for <hi
+                        rend="italic">
                         <foreign xml:lang="lat">est</foreign>
-                     </hi>. Housman reads <hi rend="italic">
+                     </hi>. Housman
+                  reads <hi rend="italic">
                         <foreign xml:lang="lat">aut tibi</foreign>
-                     </hi>.</note> ab inguine tutum, </l>
+                     </hi>.</note>
+                  ab inguine tutum, </l>
                <l n="110">non matrona Laris, non filia virgo, neque ipse</l>
                <l n="111">sponsus levis adhuc, non filius ante pudicus;</l>
                <l n="112">horum si nihil est, aviam resupinat amici,</l>
@@ -840,17 +910,22 @@
                <l n="217">hic aliquid praeclarum<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">praeclarum</foreign>
-                     </hi> P: Housman conj. <hi rend="italic">
+                     </hi> P:
+                  Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">praedarum</foreign>
-                     </hi>.</note> Euphranoris et Polycliti, </l>
+                     </hi>.</note>
+                  Euphranoris et Polycliti, </l>
                <l n="218">hic<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">hic</foreign>
-                     </hi> conj. by Jahn and confirmed by O and Vind.: <hi rend="italic">
+                     </hi> conj. by
+                  Jahn and confirmed by O and Vind.: <hi rend="italic">
                         <foreign xml:lang="lat">haec</foreign>
-                     </hi> P Büch.: Housman conj. <hi rend="italic">
+                     </hi> P Büch.:
+                  Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">aera</foreign>
-                     </hi>.</note> Asianorum vetera ornamenta deorum, </l>
+                     </hi>.</note>
+                  Asianorum vetera ornamenta deorum, </l>
                <l n="219">hic libros dabit et forulos mediamque Minervam,</l>
                <l n="220">hic modium argenti, meliora ac plura reponit</l>
                <l n="221">Persicus, orborum lautissimus et merito iam</l>
@@ -866,18 +941,23 @@
                <l n="231">unius sese dominum fecisse lacertae.</l>
                <l n="232">Plurimus hic aeger moritur vigilando (set ipsum</l>
                <l n="233">languorem peperit cibus inperfectus et haerens</l>
-               <l n="234">ardenti stomacho), nam quae<note>Housman adopts the conj. <hi rend="italic">
+               <l n="234">ardenti stomacho), nam quae<note>Housman adopts the conj. <hi
+                        rend="italic">
                         <foreign xml:lang="lat">quem</foreign>
-                     </hi> (Hadr. Valesius): <hi rend="italic">
+                     </hi> (Hadr.
+                  Valesius): <hi rend="italic">
                         <foreign xml:lang="lat">quae</foreign>
-                     </hi> PALO.</note> meritoria somnum </l>
+                     </hi> PALO.</note>
+                  meritoria somnum </l>
                <l n="235">admittunt? magnis opibus dormitur in urbe.</l>
                <l n="236">inde caput morbi, raedarum transitus arto</l>
                <l n="237">vicorum in flexu<note>Büch. and Owen read <hi rend="italic">
                         <foreign xml:lang="lat">inflexu</foreign>
-                     </hi>, after PVind.<foreign xml:lang="grc">Ψ</foreign>: Housman <hi rend="italic">
+                     </hi>, after
+                  PVind.<foreign xml:lang="grc">Ψ</foreign>: Housman <hi rend="italic">
                         <foreign xml:lang="lat">in flexu</foreign>
-                     </hi>. See Journal of Phil. No. 67, p. 40.</note> et stantis convicia mandrae </l>
+                     </hi>. See
+                  Journal of Phil. No. 67, p. 40.</note> et stantis convicia mandrae </l>
                <l n="238">eripient somnum Druso vitulisque marinis.</l>
                <l n="239">si vocat officium, turba cedente vehetur</l>
                <l n="240">dives et ingenti curret super ora Liburna</l>
@@ -967,18 +1047,22 @@
                <l n="322">auditor<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">auditor</foreign>
-                     </hi> PVind. Büch. (1910): <hi rend="italic">
+                     </hi> PVind.
+                  Büch. (1910): <hi rend="italic">
                         <foreign xml:lang="lat">adiutor</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>Büch. (1893).</note> gelidos veniam caligatus in agros.’</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>Büch. (1893).</note> gelidos veniam caligatus in
+                  agros.’</l>
             </div>
             <div n="4"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura IV</head>
-               <l n="1">Ecce iterum Crispinus, et est mihi saepe vocandus<note>Willis rejects 4.1-36, following Ribbeck</note>
+               <l n="1">Ecce iterum Crispinus, et est mihi saepe vocandus<note>Willis rejects
+                  4.1-36, following Ribbeck</note>
                </l>
                <l n="2">ad partes, monstrum nulla virtute redemptum</l>
                <l n="3">a vitiis, aegrae solaque libidine fortes</l>
@@ -986,11 +1070,14 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">aspernatur</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">aspernatus</foreign>
-                     </hi> Vind. etc. and Housman: <hi rend="italic">
+                     </hi> Vind.
+                  etc. and Housman: <hi rend="italic">
                         <foreign xml:lang="lat">sper. natur</foreign>
-                     </hi> PSA.</note> adulter, </l>
+                     </hi> PSA.</note>
+                  adulter, </l>
                <l n="5">quid refert igitur, quantis iumenta fatiget</l>
                <l n="6">porticibus, quanta nemorum vectetur in umbra,</l>
                <l n="7">iugera quot vicina foro, quas emerit aedes?</l>
@@ -998,12 +1085,15 @@
                   <del>nemo malus felix, minime<note>
                         <hi rend="italic">
                            <foreign xml:lang="lat">minime</foreign>
-                        </hi> PVind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                        </hi>
+                     PVind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                            <foreign xml:lang="lat">quin sit</foreign>
                         </hi>
-                        <foreign xml:lang="grc">ς</foreign>: Housman conj. <hi rend="italic">
+                        <foreign
+                           xml:lang="grc">ς</foreign>: Housman conj. <hi rend="italic">
                            <foreign xml:lang="lat">qum sit</foreign>
-                        </hi>.</note> corruptor et idem</del>
+                        </hi>.</note>
+                     corruptor et idem</del>
                   <note>Clausen rejects, following Jahn</note>
                </l>
                <l n="9">incestus, cum quo nuper vittata iacebat</l>
@@ -1024,7 +1114,8 @@
                <l n="24">succinctus patria quondam, Crispine, papyro?</l>
                <l n="25">hoc pretio squamas<note>P has <hi rend="italic">
                         <foreign xml:lang="lat">squamae</foreign>
-                     </hi>. So Büch.</note>? potuit fortasse minoris </l>
+                     </hi>. So
+                  Büch.</note>? potuit fortasse minoris </l>
                <l n="26">piscator quam piscis emi; provincia tanti</l>
                <l n="27">vendit agros, sed maiores Apulia vendit,</l>
                <l n="28">qualis tunc epulas ipsum gluttisse putamus</l>
@@ -1069,10 +1160,12 @@
                <l n="67">iste dies, propera stomachum laxare sagina<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">saginam</foreign>
-                     </hi> PS: <hi rend="italic">
+                     </hi> PS: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">saginis</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> Vind.</note>, </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> Vind.</note>, </l>
                <l n="68">et tua servatum consume in saecula rhombum.</l>
                <l n="69">ipse capi voluit.’ quid apertius? et tamen illi</l>
                <l n="70">surgebant cristae; nihil est quod credere de se</l>
@@ -1088,7 +1181,8 @@
                <l n="79">interpres legum sanctissimus omnia, quamquam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quamquam</foreign>
-                     </hi> Vind.<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> Vind.<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">quamque</foreign>
                      </hi> P.</note>
                </l>
@@ -1142,9 +1236,11 @@
                <l n="127">excidet Arviragus. peregrina est belua, cernis</l>
                <l n="128">erectas in<note>Housmam conj. <hi rend="italic">
                         <foreign xml:lang="lat">per</foreign>
-                     </hi> for <hi rend="italic">
+                     </hi> for <hi
+                        rend="italic">
                         <foreign xml:lang="lat">in</foreign>
-                     </hi>.</note> terga sudes?‘ hoc defuit unum </l>
+                     </hi>.</note> terga
+                  sudes?‘ hoc defuit unum </l>
                <l n="129">Fabricio, patriam ut rhombi memoraret et annos.</l>
                <l n="130">
                   <q>Quidnam igitur censes? conciditur?</q> ‘absit ab illo</l>
@@ -1174,10 +1270,10 @@
                <l n="154">coeperat; hoc nocuit Lamiarum caede madenti.</l>
             </div>
             <div n="5"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura V</head>
                <l n="1">Si te propositi nondum pudet atque eadem est mens,</l>
                <l n="2">ut bona summa putes aliena vivere quadra;</l>
@@ -1225,7 +1321,8 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">illic</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note> laudatur iaspis; </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note> laudatur iaspis; </l>
                <l n="43">nam Virro, ut multi, gemmas ad pocula transfert</l>
                <l n="44">a digitis, quas in vaginae fronte solebat</l>
                <l n="45">ponere zelotypo iuvenis praelatus Iarbae.</l>
@@ -1268,10 +1365,12 @@
                <l n="80">Aspice quam longo distinguat<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">distinguat</foreign>
-                     </hi> P Vind.: <hi rend="italic">
+                     </hi> P
+                  Vind.: <hi rend="italic">
                         <foreign xml:lang="lat">distendat</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note> pectore lancem </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note> pectore lancem </l>
                <l n="81">quae fertur domino squilla, et quibus undique saepta</l>
                <l n="82">asparagis qua despiciat convivia cauda,</l>
                <l n="83">dum venit excelsi manibus sublata ministri.</l>
@@ -1282,7 +1381,8 @@
                <l n="88">lanternam; illud enim vestris datur alveolis quod</l>
                <l n="89">canna Micipsarum prora subvexit acuta,</l>
                <l n="90">propter quod Romae cum Boccare nemo lavatur,</l>
-               <l n="91">quod tutos etiam facit a serpentibus atris. <note>This line and 6.126 are the only two lines omitted by P (excepting, of course, vi. O 1-34).</note>
+               <l n="91">quod tutos etiam facit a serpentibus atris. <note>This line and 6.126 are
+                  the only two lines omitted by P (excepting, of course, vi. O 1-34).</note>
                </l>
                <l n="92">Mullus erit domini, quem misit Corsica vel quem</l>
                <l n="93">Tauromenitanae rupes, quando omne peractum est</l>
@@ -1311,10 +1411,12 @@
                <l n="116">spumat<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">spumat</foreign>
-                     </hi> PSA: <hi rend="italic">
+                     </hi> PSA: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">fumat</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note> aper. post hunc tradentur tubera, si ver </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note> aper. post hunc tradentur tubera, si ver </l>
                <l n="117">tunc erit et facient optata tonitrua cenas</l>
                <l n="118">maiores. <q>tibi habe frumentum,</q> Alledius inquit,</l>
                <l n="119">
@@ -1378,10 +1480,10 @@
          </div>
          <div n="2" org="uniform" sample="complete" type="book">
             <div n="6"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura VI</head>
                <l n="1">Credo Pudicitiam Saturno rege moratam</l>
                <l n="2">in terris visamque diu, cum frigida parvas</l>
@@ -1414,9 +1516,11 @@
                <l n="29">dic, qua Tisiphone, quibus exagitare<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">exagitare</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">exagitere</foreign>
-                     </hi> O.</note> colubris?</l>
+                     </hi> O.</note>
+                  colubris?</l>
                <l n="30">ferre potes dominam salvis tot restibus ullam,</l>
                <l n="31">cum pateant altae caligantesque fenestrae,</l>
                <l n="32">cum tibi vicinum se praebeat Aemilius pons?</l>
@@ -1440,9 +1544,11 @@
                <l n="50">paucae adeo Cereris<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">Cereris</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: Housman conj. <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">teretis</foreign>
-                     </hi>.</note> vittas contingere dignae,</l>
+                     </hi>.</note>
+                  vittas contingere dignae,</l>
                <l n="51">quarum non timeat pater oscula: necte coronam</l>
                <l n="52">postibus et densos per limina tende corymbos.</l>
                <l n="53">unus Hiberinae vir sufficit? ocius illud</l>
@@ -1509,7 +1615,8 @@
                <l n="114">Quid privata domus, quid fecerit Eppia, curas?</l>
                <l n="115">respice rivales divorum, Claudius audi</l>
                <l n="116">quae tulerit, dormire virum cum senserat uxor,</l>
-               <l n="117">ausa Palatino tegetem praeferre cubili,<note>Clausen transposes 6.117 and 6.118, following Hermann.</note>
+               <l n="117">ausa Palatino tegetem praeferre cubili,<note>Clausen transposes 6.117 and
+                  6.118, following Hermann.</note>
                </l>
                <l n="118">sumere nocturnos meretrix Augusta cucullos</l>
                <l n="119">linquebat comite ancilla non amplius una.</l>
@@ -1558,10 +1665,12 @@
                <l n="153">mense quidem brumae, quo<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quo</foreign>
-                     </hi> PA: <hi rend="italic">
+                     </hi> PA: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">cum</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>
                   </note> iam mercator Iason</l>
                <l n="154">clausus et armatis opstat casa candida nautis,</l>
                <l n="155">grandia tolluntur crystallina, maxima rursus</l>
@@ -1570,11 +1679,14 @@
                <l n="158">barbarus incestae, dedit hunc<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">dedit hunc</foreign>
-                     </hi> S<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> S<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">dedit huc</foreign>
-                     </hi> P: Housman conj. <hi rend="italic">
+                     </hi> P:
+                  Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">gestare</foreign>
-                     </hi>.</note> Agrippa sorori, </l>
+                     </hi>.</note>
+                  Agrippa sorori, </l>
                <l n="159">observant ubi festa mero pede sabbata reges</l>
                <l n="160">et vetus indulget senibus clementia porcis.</l>
                <l n="161">
@@ -1614,11 +1726,14 @@
                <l n="193">pulsat, adhuc Graece? non est hic sermo pudicus</l>
                <l n="194">in vetula: quotiens lascivum intervenit illud</l>
                <l n="195">
-                  <foreign xml:lang="grc">ζωὴ καὶ ψυχή</foreign>, modo sub lodice relictis<note>Housman conj. <hi rend="italic">
+                  <foreign xml:lang="grc">ζωὴ καὶ ψυχή</foreign>, modo sub lodice relictis<note>Housman
+                  conj. <hi rend="italic">
                         <foreign xml:lang="lat">ferendis</foreign>
-                     </hi> for the <hi rend="italic">
+                     </hi> for the <hi
+                        rend="italic">
                         <foreign xml:lang="lat">relictis</foreign>
-                     </hi> of P<foreign xml:lang="grc">Ψ</foreign>.</note>
+                     </hi> of P<foreign
+                        xml:lang="grc">Ψ</foreign>.</note>
                </l>
                <l n="196">uteris in turba, quod enim non excitet inguen</l>
                <l n="197">vox blanda et nequam? digitos habet, ut tamen omnes</l>
@@ -1777,15 +1892,19 @@
                <l n="346">
                   <del>Audio quid veteres olim moneatis amici:</del>
                </l>
-               <l n="347">‘<del>pone seram, cohibe<note>P here has the false reading <hi rend="italic">
+               <l n="347">‘<del>pone seram, cohibe<note>P here has the false reading <hi
+                           rend="italic">
                            <foreign xml:lang="lat">prohibe</foreign>
-                        </hi> for <hi rend="italic">
+                        </hi>
+                  for <hi rend="italic">
                            <foreign xml:lang="lat">cohibe</foreign>
-                        </hi>.</note>.</del>’ <del>sed quis custodiet ipsos</del>
+                        </hi>.</note>
+                  .</del>’ <del>sed quis custodiet ipsos</del>
                </l>
                <l n="348">
                   <del>custodes? cauta est et ab illis incipit uxor.</del>
-                  <note>Lines 6.346-348 are repeated below, with an addition, as O 29-34. Clausen rejects these verses here; Willis accepts these and rejects O.1-34.</note>
+                  <note>Lines 6.346-348 are repeated below, with an addition, as O 29-34. Clausen
+                     rejects these verses here; Willis accepts these and rejects O.1-34.</note>
                </l>
                <l n="349">iamque eadem summis pariter minimisque libido,</l>
                <l n="350">nec melior, silicem pedibus quae conterit atrum,</l>
@@ -1804,7 +1923,10 @@
                <l n="363">ac velut exhausta redivivus pullulet arca</l>
                <l n="364">nummus et e pleno tollatur semper acervo,</l>
                <l n="365">non umquam re putant quanti sibi gaudia constent.</l>
-               <l n="366O">In quacumque domo vivit luditque professus<note>Housman and Clausen accept the following thirty-four lines (MS O 1-34); Willis rejects them, following Buecheler. The verses were discovered in 1899 by Mr. E. O. Winstedt in Bodleian MS. O (formerly MS Canonicianus 41). Classical Review, May, 1899, pp. 201 foll.</note>
+               <l n="366O">In quacumque domo vivit luditque professus<note>Housman and Clausen
+                  accept the following thirty-four lines (MS O 1-34); Willis rejects them, following
+                  Buecheler. The verses were discovered in 1899 by Mr. E. O. Winstedt in Bodleian
+                  MS. O (formerly MS Canonicianus 41). Classical Review, May, 1899, pp. 201 foll.</note>
                </l>
                <l n="367O">obscenum, tremula promittit et omnia dextra,</l>
                <l n="368O">invenies omnis turpes similesque cinaedis.</l>
@@ -1816,29 +1938,40 @@
                <l n="375O">psellus<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">psellus</foreign>
-                     </hi> so Housman and Owen: O reads <hi rend="italic">
+                     </hi> so
+                  Housman and Owen: O reads <hi rend="italic">
                         <foreign xml:lang="lat">psillus</foreign>
-                     </hi>: Büch. <hi rend="italic">
+                     </hi>: Büch. <hi
+                        rend="italic">
                         <foreign xml:lang="lat">Psyllus</foreign>
-                     </hi>. <hi rend="italic">
+                     </hi>. <hi
+                        rend="italic">
                         <foreign xml:lang="lat">Eupholio</foreign>
-                     </hi> O: Housman reads <hi rend="italic">
+                     </hi> O:
+                  Housman reads <hi rend="italic">
                         <foreign xml:lang="lat">euphono</foreign>
-                     </hi>: Büch. conj. <hi rend="italic">
+                     </hi>: Büch.
+                  conj. <hi rend="italic">
                         <foreign xml:lang="lat">Euhoplio</foreign>
-                     </hi>.</note> ab Eupholio; quid quod nec retia turpi </l>
+                     </hi>.</note>
+                  ab Eupholio; quid quod nec retia turpi </l>
                <l n="376O">iunguntur tunicae, nec cella ponit eadem</l>
                <l n="377O">munimenta umeri pulsatamque arma<note>O reads <hi rend="italic">
                         <foreign xml:lang="lat">pulsatamque arma</foreign>
-                     </hi>: Housman conj. <hi rend="italic">
+                     </hi>:
+                  Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">pulsata hastamque</foreign>
-                     </hi>: <hi rend="italic">
+                     </hi>
+                  : <hi rend="italic">
                         <foreign xml:lang="lat">pulsata arcaque</foreign>
-                     </hi> Owen: <hi rend="italic">
+                     </hi>
+                  Owen: <hi rend="italic">
                         <foreign xml:lang="lat">pulsantemque</foreign>
-                     </hi> Postgate: Büch. conj. <hi rend="italic">
+                     </hi>
+                  Postgate: Büch. conj. <hi rend="italic">
                         <foreign xml:lang="lat">pulsaloremque tridentem</foreign>
-                     </hi> and compares 6.40</note> tridentem</l>
+                     </hi>
+                  and compares 6.40</note> tridentem</l>
                <l n="378O">qui nudus pugnare solet? pars ultima ludi</l>
                <l n="379O">accipit has animas aliusque in carcere nervos,</l>
                <l n="380O">sed tibi communem calicem facit uxor et illis,</l>
@@ -1861,12 +1994,14 @@
                <l n="397O">
                   <q>pone seram, cohibe.</q> sed quis custodiat<note>O here reads <hi rend="italic">
                         <foreign xml:lang="lat">custodiat</foreign>
-                     </hi>, but P<foreign xml:lang="grc">Ψ</foreign> have <hi rend="italic">
+                     </hi>, but P<foreign
+                        xml:lang="grc">Ψ</foreign> have <hi rend="italic">
                         <foreign xml:lang="lat">custodiet</foreign>
-                     </hi> in the repeated passage, line 347.</note> ipsos </l>
+                     </hi> in the
+                  repeated passage, line 347.</note> ipsos </l>
                <l n="398O">custodes, qui nunc lascivae furta puellae</l>
                <l n="399O">hac mercede silent? crimen commune tacetur:</l>
-               <l n="400O">prospicit hoc prudens et ab illis incipit uxor <gap reason="lost"/>
+               <l n="400O">prospicit hoc prudens et ab illis incipit uxor <gap reason="lost" />
                </l>
                <l n="366">Sunt quas eunuchi inbelles ac mollia semper</l>
                <l n="367">oscula delectent et desperatio barbae</l>
@@ -1876,11 +2011,14 @@
                <l n="371">ergo expectatos ac iussos crescere primum</l>
                <l n="372">testiculos, postquam coeperunt esse bilibres,</l>
                <l n="373">tonsoris damno tantum rapit Heliodorus.</l>
-               <l n="373a">mangonum pueros vera ac miserabilis urit<note> The MS. O alone gives two additional lines between 6.373 and 6.374. O reads <hi rend="italic">
+               <l n="373a">mangonum pueros vera ac miserabilis urit<note> The MS. O alone gives two
+                  additional lines between 6.373 and 6.374. O reads <hi rend="italic">
                         <foreign xml:lang="lat">magonum</foreign>
-                     </hi>: Postgate<hi rend="italic">
+                     </hi>:
+                  Postgate<hi rend="italic">
                         <foreign xml:lang="lat">mangonum</foreign>
-                     </hi>. Clausen (1992) accepts.</note>
+                     </hi>.
+                  Clausen (1992) accepts.</note>
                </l>
                <l n="373b">debilitas, follisque pudet cicerisque relicti.</l>
                <l n="374b">conspicuus longe cunctisque notabilis intrat</l>
@@ -1923,16 +2061,19 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">arva</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">arma</foreign>
-                     </hi> P.</note> teneri</l>
+                     </hi> P.</note>
+                  teneri</l>
                <l n="411">diluvio, nutare urbes, subsidere terras</l>
                <l n="412">quocumque in trivio cuicumque est obvia, narrat.</l>
                <l n="413">Nec tamen id vitium magis intolerabile quam quae <note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quod</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">quae</foreign>
                      </hi> P.</note>
                </l>
@@ -1941,9 +2082,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">exorata</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">exortata</foreign>
-                     </hi> P, Housman, Büch. (1910).</note> solet, nam si latratibus alti</l>
+                     </hi> P,
+                  Housman, Büch. (1910).</note> solet, nam si latratibus alti</l>
                <l n="416">rumpuntur somni, <q>fustes huc ocius,</q> inquit,</l>
                <l n="417">
                   <q>adferte</q> atque illis dominum iubet ante feriri,</l>
@@ -1986,16 +2129,20 @@
                <l n="454">ignotosque mihi tenet antiquaria versus</l>
                <l n="455">nec curanda viris<note>Housman puts a full stop after <hi rend="italic">
                         <foreign xml:lang="lat">viris</foreign>
-                     </hi>, and interprets: <hi rend="italic">
+                     </hi>, and
+                  interprets: <hi rend="italic">
                         <foreign xml:lang="lat">aliasque res virorum cura indignas</foreign>
-                     </hi>. Postgate suggests, after one of Ruperti's MSS., <hi rend="italic">
+                     </hi>.
+                  Postgate suggests, after one of Ruperti's MSS., <hi rend="italic">
                         <foreign xml:lang="lat">haec curanda viris</foreign>
-                     </hi>?</note> opicae castigat amicae</l>
+                     </hi>
+                  ?</note> opicae castigat amicae</l>
                <l n="456">verba; soloecismum liceat fecisse marito.</l>
                <l n="457">Nil non permittit mulier sibi, turpe putat nil,</l>
                <l n="458">cum virides gemmas collo circumdedit et cum</l>
                <l n="459">auribus extentis magnos commisit elenchos;</l>
-               <l n="460">intolerabilis nihil est quam femina dives. <note>Clausen and Willis reject line 6.460, following Paldamus.</note>
+               <l n="460">intolerabilis nihil est quam femina dives. <note>Clausen and Willis reject
+                  line 6.460, following Paldamus.</note>
                </l>
                <l n="461">interea foeda aspectu ridendaque multo</l>
                <l n="462">pane tumet facies aut pinguia Poppaeana</l>
@@ -2098,7 +2245,8 @@
                <l n="557">praecipuus tamen est horum, qui saepius exul,</l>
                <l n="558">
                   <del>cuius amicitia conducendaque tabella</del>
-                  <note>Lines 6.558-59 are omitted in PFG and not noted in the scholia. Clausen rejects them, as does Willis, following Hermann.</note>
+                  <note>Lines 6.558-59 are omitted in PFG and not noted in the scholia. Clausen
+                     rejects them, as does Willis, following Hermann.</note>
                </l>
                <l n="559">
                   <del>magnus civis obit et formidatus Othoni.</del>
@@ -2115,11 +2263,14 @@
                <l n="569">haec tamen ignorat<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">haec ignorat</foreign>
-                     </hi> GLOU: <hi rend="italic">
+                     </hi>
+                  GLOU: <hi rend="italic">
                         <foreign xml:lang="lat">haec ignorant</foreign>
-                     </hi> T: <hi rend="italic">
+                     </hi> T: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">hae ignorant</foreign>
-                     </hi> Büch (1893).</note> quid sidus triste minetur</l>
+                     </hi>
+                  Büch (1893).</note> quid sidus triste minetur</l>
                <l n="570">Saturni, quo laeta Venus se proferat astro,</l>
                <l n="571">quis mensis damnis, quae dentur tempora lucro:</l>
                <l n="572">illius occursus etiam vitare memento,</l>
@@ -2138,20 +2289,27 @@
                <l n="585">divitibus responsa dabit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">dabit</foreign>
-                     </hi> PG: <hi rend="italic">
+                     </hi> PG: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">dabunt</foreign>
-                     </hi> FTU.</note> Phryx augur, et Indus<note>
+                     </hi> FTU.</note>
+                  Phryx augur, et Indus<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">indus</foreign>
-                     </hi> Brit. 15 B xvii: <hi rend="italic">
+                     </hi> Brit. 15 B
+                  xvii: <hi rend="italic">
                         <foreign xml:lang="lat">inde</foreign>
-                     </hi> P<foreign xml:lang="grc">ςΨ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">ςΨ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">indi</foreign>
-                     </hi> U: Owen and Büch. (1893) <hi rend="italic">
+                     </hi> U: Owen and
+                  Büch. (1893) <hi rend="italic">
                         <foreign xml:lang="lat">Iudae</foreign>
-                     </hi>: Housman and Büch. (1910) <hi rend="italic">
+                     </hi>: Housman
+                  and Büch. (1910) <hi rend="italic">
                         <foreign xml:lang="lat">inde</foreign>
-                     </hi>. Housman thinks a line has dropped out.</note>
+                     </hi>. Housman
+                  thinks a line has dropped out.</note>
                </l>
                <l n="586">conductus, dabit astrorum mundique peritus</l>
                <l n="587">atque aliquis senior qui publica fulgura condit:</l>
@@ -2177,9 +2335,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">omnes</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">omni</foreign>
-                     </hi> PT and most edd.</note>
+                     </hi> PT and most
+                  edd.</note>
                </l>
                <l n="607">involvitque sinu, domibus tunc porrigit altis</l>
                <l n="608">secretumque sibi mimum parat; hos amat, his se</l>
@@ -2191,7 +2351,8 @@
                <l n="614">quas modo gessisti. tamen hoc tolerabile, si non </l>
                <l n="614a">
                   <del>semper aquam portes rimosa ad dolia, semper</del>
-                  <note>Clausen brakets 6.614abc, which is placed after 6.614 in U, after 6.601 in K, and in the marginalia of certain texts</note>
+                  <note>Clausen brakets 6.614abc, which is placed after 6.614 in U, after 6.601 in
+                     K, and in the marginalia of certain texts</note>
                </l>
                <l n="614b">
                   <del>istud onus subeas ipsis manantibus urnis,</del>
@@ -2248,21 +2409,24 @@
                <l n="660">sed tamen et ferro, si praegustarit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">praegustabit</foreign>
-                     </hi> PSG: <hi rend="italic">
+                     </hi>
+                  PSG: <hi rend="italic">
                         <foreign xml:lang="lat">praegustaret</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">praegustarit</foreign>
-                     </hi> Markl. and Housman.</note> Atrides</l>
+                     </hi>
+                  Markl. and Housman.</note> Atrides</l>
                <l n="661">Pontica ter victi cautus medicamina regis.</l>
             </div>
          </div>
          <div n="3" org="uniform" sample="complete" type="book">
             <div n="7"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura VII</head>
                <l n="1">Et spes et ratio studiorum in Caesare tantum;</l>
                <l n="2">solus enim tristes hac tempestate Camenas</l>
@@ -2309,14 +2473,18 @@
                <l n="40">succensus recites, maculosas<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">maculosas</foreign>
-                     </hi> Heinr.: <hi rend="italic">
+                     </hi>
+                  Heinr.: <hi rend="italic">
                         <foreign xml:lang="lat">maculonsas</foreign>
-                     </hi> Ribb. Housman: <hi rend="italic">
+                     </hi> Ribb.
+                  Housman: <hi rend="italic">
                         <foreign xml:lang="lat">maculonus</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>, <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>, <hi rend="italic">
                         <foreign xml:lang="lat">maculonis</foreign>
-                     </hi> PGBüch.</note> commodat aedes;</l>
+                     </hi>
+                  PGBüch.</note> commodat aedes;</l>
                <l n="41">haec longe ferrata domus servire iubetur,</l>
                <l n="42">in qua sollicitas imitatur ianua portas,</l>
                <l n="43">scit dare libertos extrema in parte sedentis</l>
@@ -2329,7 +2497,9 @@
                <l n="50">nam si discedas, laqueo tenet ambitiosi</l>
                <l n="51">
                   <del>consuetudo mali, tenet insanabile multos</del>
-                  <note>The text of lines 50-52 is evidently corrupt Part of the passage seems to be a gloss, but, even if line 51 be eliminated, lines 50 and 52 can scarcely be translated though the general sense is clear. </note>
+                  <note>The text of lines 50-52 is evidently corrupt Part of the passage seems to be
+                     a gloss, but, even if line 51 be eliminated, lines 50 and 52 can scarcely be
+                     translated though the general sense is clear. </note>
                </l>
                <l n="52">scribendi cacoethes et aegro in corde senescit.</l>
                <l n="53">Sed vatem egregium, cui non sit publica vena,</l>
@@ -2382,11 +2552,14 @@
                <l n="99">scriptores? perit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">perit</foreign>
-                     </hi> PFG: <hi rend="italic">
+                     </hi> PFG: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">petit</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>
-                  </note> hic plus temporis atque olei plus.</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>
+                  </note> hic plus temporis atque
+                  olei plus.</l>
                <l n="100">nullo quippe modo millensima pagina surgit</l>
                <l n="101">omnibus et crescit multa damnosa papyro;</l>
                <l n="102">sic ingens rerum numerus iubet atque operum lex.</l>
@@ -2407,9 +2580,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">Lacertae</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">Lacernae</foreign>
-                     </hi> P.</note>. </l>
+                     </hi> P.</note>
+                  . </l>
                <l n="115">consedere duces, surgis tu pallidus Aiax</l>
                <l n="116">dicturus dubia pro libertate bubulco</l>
                <l n="117">iudice, rumpe miser tensum iecur, ut tibi lasso</l>
@@ -2437,9 +2612,11 @@
                <l n="139">Fidimus eloquio<note> Instead of <hi rend="italic">
                         <foreign xml:lang="lat">fidimus eloquio</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> has <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> has <hi rend="italic">
                         <foreign xml:lang="lat">ut redeant veteres</foreign>
-                     </hi>.</note>? Ciceroni nemo ducentos</l>
+                     </hi>
+                  .</note>? Ciceroni nemo ducentos</l>
                <l n="140">nunc dederit nummos, nisi fulserit anulus ingens.</l>
                <l n="141">respicit haec primum qui litigat, an tibi servi</l>
                <l n="142">octo, decem comites, an post te sella, togati</l>
@@ -2459,9 +2636,11 @@
                <l n="156">quaestio, quae veniant diversa e parte<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">parte</foreign>
-                     </hi>. So <foreign xml:lang="grc">Ψ</foreign>: P and Büch. have <hi rend="italic">
+                     </hi>. So <foreign
+                        xml:lang="grc">Ψ</foreign>: P and Büch. have <hi rend="italic">
                         <foreign xml:lang="lat">forte</foreign>
-                     </hi>.</note> sagittae,</l>
+                     </hi>.</note>
+                  sagittae,</l>
                <l n="157">nosse volunt omnes, mercedem solvere nemo</l>
                <l n="158">
                   <q>mercedem appellas? quid enim scio?</q> culpa docentis</l>
@@ -2474,9 +2653,11 @@
                <l n="165">quantum vis stipulare et protinus accipe: quid<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quid</foreign>
-                     </hi> PFGTU: <hi rend="italic">
+                     </hi> PFGTU: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">quod</foreign>
-                     </hi> ALO.</note> do</l>
+                     </hi> ALO.</note>
+                  do</l>
                <l n="166">ut totiens illum pater audiat? haec alii sex</l>
                <l n="167">vel plures uno conclamant ore sophistae</l>
                <l n="168">et veras agitant lites raptore relicto;</l>
@@ -2491,9 +2672,11 @@
                <l n="177">lautorum pueros: artem scindes<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">scindens</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">scindes</foreign>
-                     </hi> conj. Iahn, confirmed by Voss.</note> Theodori</l>
+                     </hi> conj.
+                  Iahn, confirmed by Voss.</note> Theodori</l>
                <l n="178">Balnea sescentis et pluris porticus in qua</l>
                <l n="179">gestetur dominus quotiens pluit—anne serenum</l>
                <l n="180">expectet spargatve luto iumenta recenti?</l>
@@ -2504,15 +2687,21 @@
                <l n="185">conponat<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">componit</foreign>
-                     </hi> GT. P and most MSS. have <hi rend="italic">
+                     </hi> GT. P
+                  and most MSS. have <hi rend="italic">
                         <foreign xml:lang="lat">componat</foreign>
-                     </hi>. See Housman, Journal of Phil. No. 67, p. 41.</note>, veniet qui pulmentaria condit<note>P has <hi rend="italic">
+                     </hi>. See
+                  Housman, Journal of Phil. No. 67, p. 41.</note>, veniet qui pulmentaria condit<note>P
+                  has <hi rend="italic">
                         <foreign xml:lang="lat">condit</foreign>
-                     </hi>: LOU <hi rend="italic">
+                     </hi>: LOU <hi
+                        rend="italic">
                         <foreign xml:lang="lat">condat</foreign>
-                     </hi>: <hi rend="italic">
+                     </hi>: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">condiat</foreign>
-                     </hi> Lachmann.</note>.</l>
+                     </hi>
+                  Lachmann.</note>.</l>
                <l n="186">hos inter sumptus sestertia Quintiliano,</l>
                <l n="187">ut multum, duo sufficient; res nulla minoris</l>
                <l n="188">constabit patri quam filius. <q>unde igitur tot</q>
@@ -2529,9 +2718,11 @@
                <l n="197">si Fortuna volet, fies<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">fies</foreign>
-                     </hi> p<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> p<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">fiet</foreign>
-                     </hi> P.</note> de rhetore consul;</l>
+                     </hi> P.</note>
+                  de rhetore consul;</l>
                <l n="198">si volet haec eadem, fiet de consule rhetor.</l>
                <l n="199">Ventidius quid enim? quid Tullius? anne aliud quam</l>
                <l n="200">sidus et occulti miranda potentia fati?</l>
@@ -2555,9 +2746,11 @@
                <l n="218">discipuli custos praemordet acoenonoetus<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">acoenonoetus</foreign>
-                     </hi> PS: <hi rend="italic">
+                     </hi> PS: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">acoenonetos</foreign>
-                     </hi> U (<foreign xml:lang="grc">ἀκοινώνηος</foreign>
+                     </hi> U (<foreign
+                        xml:lang="grc">ἀκοινώνηος</foreign>
                      <q> refusing to go shares</q>).</note>
                </l>
                <l n="219">et qui dispensat frangit sibi. cede, Palaemon,</l>
@@ -2586,18 +2779,21 @@
                <l n="242">‘haec,’ inquit, ‘cura, sed<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">cura sed</foreign>
-                     </hi> G and one of Ruperti's MSS.: <hi rend="italic">
+                     </hi> G and
+                  one of Ruperti's MSS.: <hi rend="italic">
                         <foreign xml:lang="lat">curas et</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign> and Büch. (1893): <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign> and Büch. (1893): <hi rend="italic">
                         <foreign xml:lang="lat">cures et</foreign>
-                     </hi> Owen.</note> cum se verterit annus,</l>
+                     </hi> Owen.</note>
+                  cum se verterit annus,</l>
                <l n="243">accipe, victori populus quod postulat, aurum.’</l>
             </div>
             <div n="8"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura VIII</head>
                <l n="1">Stemmata quid faciunt? quid prodest, Pontice, longo</l>
                <l n="2">sanguine censeri, pictos ostendere vultus</l>
@@ -2608,9 +2804,11 @@
                <l n="7">Corvinum<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">Corvinum</foreign>
-                     </hi> P etc.: Housman conj. <hi rend="italic">
+                     </hi> P etc.:
+                  Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">pontifices</foreign>
-                     </hi>.</note>, posthac multa contingere virga</l>
+                     </hi>.</note>,
+                  posthac multa contingere virga</l>
                <l n="8">fumosos equitum cum dictatore magistros,</l>
                <l n="9">si coram Lepidis male vivitur? effigies quo</l>
                <l n="10">tot bellatorum, si luditur alea pernox</l>
@@ -2644,12 +2842,15 @@
                <l n="38">et metues ne tu sic<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">sic</foreign>
-                     </hi> H. Junius: <hi rend="italic">
+                     </hi> H. Junius: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">si</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">sis</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note> Creticus aut Camerinus.</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note> Creticus aut Camerinus.</l>
                <l n="39">His ego quem monui? tecum est mihi sermo, Rubelli</l>
                <l n="40">Blande, tumes alto Drusorum stemmate, tamquam</l>
                <l n="41">feceris ipse aliquid propter quod nobilis esses,</l>
@@ -2666,9 +2867,12 @@
                <l n="51">hinc<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">hinc</foreign>
-                     </hi> conj. by Weidner and confirmed by GU: P<foreign xml:lang="grc">Ψ</foreign> have <hi rend="italic">
+                     </hi> conj. by
+                  Weidner and confirmed by GU: P<foreign xml:lang="grc">Ψ</foreign> have <hi
+                        rend="italic">
                         <foreign xml:lang="lat">hic</foreign>
-                     </hi>.</note> petit Euphraten iuvenis domitique Batavi</l>
+                     </hi>.</note>
+                  petit Euphraten iuvenis domitique Batavi</l>
                <l n="52">custodes aquilas, armis industrius. at tu</l>
                <l n="53">nil nisi Cecropides, truncoque simillimus Hermae:</l>
                <l n="54">nullo quippe alio vineis discrimine quam quod</l>
@@ -2709,16 +2913,20 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">accipiet</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">accipiat</foreign>
-                     </hi> PAF.</note>, pone irae frena modumque,</l>
+                     </hi> PAF.</note>,
+                  pone irae frena modumque,</l>
                <l n="89">pone et avaritiae, miserere inopum sociorum:</l>
                <l n="90">ossa vides rerum<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">rerum</foreign>
-                     </hi> PFGU: <hi rend="italic">
+                     </hi> PFGU: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">regum</foreign>
-                     </hi> ALOT.</note> vacuis exucta medullis;</l>
+                     </hi> ALOT.</note>
+                  vacuis exucta medullis;</l>
                <l n="91">respice quid moneant leges, quid curia mandet,</l>
                <l n="92">praemia quanta bonos maneant, quam fulmine iusto</l>
                <l n="93">et Capito et Numitor ruerint damnante senatu,</l>
@@ -2743,11 +2951,14 @@
                <l n="112">pro summis, iam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">iam</foreign>
-                     </hi> conj. by Büch.: <hi rend="italic">
+                     </hi> conj. by
+                  Büch.: <hi rend="italic">
                         <foreign xml:lang="lat">nam</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign> and Büch. (1893): Housman conj. <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign> and Büch. (1893): Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">quis</foreign>
-                     </hi>.</note> sunt haec maxima, despicias tu</l>
+                     </hi>.</note>
+                  sunt haec maxima, despicias tu</l>
                <l n="113">forsitan inbellis Rhodios unctamque Corinthon;</l>
                <l n="114">despicias merito: quid resinata iuventus</l>
                <l n="115">cruraque totius facient tibi levia gentis?</l>
@@ -2785,11 +2996,15 @@
                <l n="145">tempora Santonico velas adoperta cucullo?</l>
                <l n="146">Praeter maiorum cineres atque ossa volucri</l>
                <l n="147">carpento rapitur pinguis Lateranus, et ipse.</l>
-               <l n="148">ipse rotam adstringit sufflamine mulio<note>All edd before Bücheler (1886) read <hi rend="italic">
+               <l n="148">ipse rotam adstringit sufflamine mulio<note>All edd before Bücheler (1886)
+                  read <hi rend="italic">
                         <foreign xml:lang="lat">multo</foreign>
-                     </hi>. The true reading <hi rend="italic">
+                     </hi>. The true
+                  reading <hi rend="italic">
                         <foreign xml:lang="lat">mulio</foreign>
-                     </hi> was found in the Florilegium Sangallense and is confirmed elsewhere. See Duff's and Housman's notes on the passage.</note> consul.</l>
+                     </hi> was found
+                  in the Florilegium Sangallense and is confirmed elsewhere. See Duff's and
+                  Housman's notes on the passage.</note> consul.</l>
                <l n="149">nocte quidem, sed Luna videt, sed sidera testes</l>
                <l n="150">intendunt oculos, finitum tempus honoris</l>
                <l n="151">cum fuerit, clara Lateranus luce flagellum</l>
@@ -2839,10 +3054,12 @@
                <l n="195">finge tamen gladios inde atque hinc pulpita poni<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">poni</foreign>
-                     </hi> P; <hi rend="italic">
+                     </hi> P; <hi
+                        rend="italic">
                         <foreign xml:lang="lat">pone</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note>,</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note>,</l>
                <l n="196">quid satius? mortem sic quisquam exhorruit, ut sit</l>
                <l n="197">zelotypus Thymeles, stupidi collega Corinthi?</l>
                <l n="198">res haut mira tamen citharoedo principe mimus</l>
@@ -2873,9 +3090,11 @@
                <l n="223">quod<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quod</foreign>
-                     </hi> Madvig: <hi rend="italic">
+                     </hi> Madvig: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">quid</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>.</note> Nero tam saeva crudaque tyrannide fecit?</l>
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>.</note> Nero tam saeva crudaque tyrannide fecit?</l>
                <l n="224">haec opera atque hae sunt generosi principis artes,</l>
                <l n="225">gaudentis foedo peregrina ad pulpita cantu</l>
                <l n="226">prostitui Graiaeque apium meruisse coronae,</l>
@@ -2896,14 +3115,19 @@
                <l n="241">
                   <del>nominis ac tituli, quantum sibi<note>Willis accepts <hi rend="italic">
                            <foreign xml:lang="lat">sibi</foreign>
-                        </hi>, following the cautious conjecture of Jahn.  If we read <hi rend="italic">
+                        </hi>,
+                  following the cautious conjecture of Jahn. If we read <hi rend="italic">
                            <foreign xml:lang="lat">in</foreign>
-                        </hi> with PSGU the line is deficient metrically. <foreign xml:lang="grc">Ψ</foreign> has <hi rend="italic">
+                        </hi> with
+                  PSGU the line is deficient metrically. <foreign xml:lang="grc">Ψ</foreign> has <hi
+                           rend="italic">
                            <foreign xml:lang="lat">non</foreign>
-                        </hi>: Owen conj. <hi rend="italic">
+                        </hi>: Owen
+                  conj. <hi rend="italic">
                            <foreign xml:lang="lat">vi</foreign>
                         </hi>.</note>
-                  </del> Leucade, quantum</l>
+                  </del>
+                  Leucade, quantum</l>
                <l n="242">Thessaliae campis Octavius abstulit udo</l>
                <l n="243">caedibus adsiduis gladio; sed Roma parentem,</l>
                <l n="244">Roma patrem patriae Ciceronem libera dixit.</l>
@@ -2942,10 +3166,10 @@
                <l n="275">aut pastor fuit aut illud quod dicere nolo.</l>
             </div>
             <div n="9"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura IX</head>
                <l n="1">Scire velim, quare totiens mihi, Naevole, tristis</l>
                <l n="2">occurras, fronte obducta ceu Marsya victus,</l>
@@ -2960,13 +3184,18 @@
                <l n="11">et salibus vehemens intra pomeria natis.</l>
                <l n="12">omnia nunc contra: vultus gravis, horrida siccae</l>
                <l n="13">silva comae, nullus tota nitor in cute, qualem</l>
-               <l n="14">Bruttia praestabat calidi tibi fascia visci<note>GU give this line in two places, here and after line 11. The reading is uncertain. Owen reads <hi rend="italic">
+               <l n="14">Bruttia praestabat calidi tibi fascia visci<note>GU give this line in two
+                  places, here and after line 11. The reading is uncertain. Owen reads <hi
+                        rend="italic">
                         <foreign xml:lang="lat">lita</foreign>
-                     </hi> for <hi rend="italic">
+                     </hi> for <hi
+                        rend="italic">
                         <foreign xml:lang="lat">tibi</foreign>
-                     </hi>, taken from <hi rend="italic">
+                     </hi>, taken from <hi
+                        rend="italic">
                         <foreign xml:lang="lat">circumlita</foreign>
-                     </hi> in <foreign xml:lang="grc">Ψ</foreign>.</note>, </l>
+                     </hi> in <foreign
+                        xml:lang="grc">Ψ</foreign>.</note>, </l>
                <l n="15">sed fruticante pilo neglecta et squalida crura.</l>
                <l n="16">quid macies aegri veteris, quem tempore longo</l>
                <l n="17">torret quarta dies olimque domestica febris?</l>
@@ -2980,14 +3209,17 @@
                <l n="25">notior Aufidio moechus celebrare<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">scelerare</foreign>
-                     </hi> P Büch.: <hi rend="italic">
+                     </hi> P
+                  Büch.: <hi rend="italic">
                         <foreign xml:lang="lat">celebrare</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> (<q>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> (<q>
                         <hi rend="italic">
                            <foreign xml:lang="lat">fortasse melius</foreign>
                         </hi>
-                     </q> Housman).</note> solebas,</l>
+                     </q>
+                  Housman).</note> solebas,</l>
                <l n="26">quodque taces, ipsos etiam inclinare maritos.</l>
                <l n="27">‘Utile et hoc multis vitae genus, at mihi nullum</l>
                <l n="28">inde operae pretium, pingues aliquando lacernas,</l>
@@ -2999,7 +3231,8 @@
                <l n="34">nil faciet longi mensura incognita nervi,</l>
                <l n="35">quamvis te nudum spumanti Virro labello</l>
                <l n="36">viderit et blandae adsidue densaeque tabellae</l>
-               <l n="37">sollicitent, <foreign xml:lang="grc">αὐτὸς γὰρ ἐφέλκεται ἄνδρα κίναιδος</foreign>.</l>
+               <l n="37">sollicitent, <foreign xml:lang="grc">αὐτὸς γὰρ ἐφέλκεται ἄνδρα κίναιδος</foreign>
+                  .</l>
                <l n="38">quod tamen ulterius monstrum quam mollis avarus?</l>
                <l n="39">
                   <quote> haec tribui, deinde illa dedi, mox plura tulisti </quote>;</l>
@@ -3008,9 +3241,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">numera</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">numeras</foreign>
-                     </hi> P.</note> sestertia quinque</l>
+                     </hi> P.</note>
+                  sestertia quinque</l>
                <l n="42">omnibus in rebus: numerentur deinde labores,</l>
                <l n="43">an facile et pronum est agere intra viscera penem</l>
                <l n="44">legitimum atque illic hesternae occurrere cenae?</l>
@@ -3031,9 +3266,11 @@
                <l n="59">quantum erat exhausti lumbos donare clientis</l>
                <l n="60">iugeribus paucis? meliusne hic<note>For <hi rend="italic">
                         <foreign xml:lang="lat">ne hic</foreign>
-                     </hi> (P<foreign xml:lang="grc">Ψ</foreign>) Housman conjectured <hi rend="italic">
+                     </hi> (P<foreign
+                        xml:lang="grc">Ψ</foreign>) Housman conjectured <hi rend="italic">
                         <foreign xml:lang="lat">nunc</foreign>
-                     </hi>.</note> rusticus infans</l>
+                     </hi>.</note>
+                  rusticus infans</l>
                <l n="61">cum matre et casulis et conlusore catello</l>
                <l n="62">cymbala pulsantis legatum fiet amici?</l>
                <l n="63">
@@ -3096,7 +3333,8 @@
                <l n="118">vivendum recte cum propter plurima tum est his<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">tum est his</foreign>
-                     </hi>. So Housman instead of the <hi rend="italic">
+                     </hi>. So
+                  Housman instead of the <hi rend="italic">
                         <foreign xml:lang="lat">tunc est</foreign>
                      </hi> of PA.</note>
                </l>
@@ -3122,9 +3360,13 @@
                <l n="134a">
                   <del>gratus eris; tu tantum erucis inprime dentem.</del>
                   <note>
-                     <foreign xml:lang="grc">Ψ</foreign> omits.  After line 134, P has this line, being mainly a repetition of that line. Housman conjectures an omission of five words, and reads the lines thus: <hi rend="italic">
-                        <foreign xml:lang="lat">altera maior spes superest; turbae, properat quae crescere, molli gratus eris, tu tantum erucis imprime dentom</foreign>
-                     </hi>.</note>
+                     <foreign xml:lang="grc">Ψ</foreign> omits. After line 134, P has this line,
+                     being mainly a repetition of that line. Housman conjectures an omission of five
+                     words, and reads the lines thus: <hi rend="italic">
+                        <foreign xml:lang="lat">altera maior spes superest; turbae, properat quae
+                     crescere, molli gratus eris, tu tantum erucis imprime dentom</foreign>
+                     </hi>
+                     .</note>
                </l>
                <l n="135">‘Haec exempla para felicibus, at mea Clotho</l>
                <l n="136">et Lachesis gaudent, si pascitur inguine venter,</l>
@@ -3146,10 +3388,10 @@
          </div>
          <div n="4" org="uniform" sample="complete" type="book">
             <div n="10"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura X</head>
                <l n="1">omnibus in terris, quae sunt a Gadibus usque</l>
                <l n="2">Auroram et Gangen, pauci dinoscere possunt</l>
@@ -3207,17 +3449,23 @@
                <l n="54">Ergo supervacua aut quae<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quae</foreign>
-                     </hi> is a conj. by Büch. (1893), the space being blank in the MSS. <hi rend="italic">
+                     </hi> is a conj.
+                  by Büch. (1893), the space being blank in the MSS. <hi rend="italic">
                         <foreign xml:lang="lat">aut ne perniciosa petantur</foreign>
-                     </hi> Lach. Housman has a mark of interrogation after <hi rend="italic">
+                     </hi>
+                  Lach. Housman has a mark of interrogation after <hi rend="italic">
                         <foreign xml:lang="lat">petuntur</foreign>
-                     </hi>. As the text stands, <hi rend="italic">
+                     </hi>. As the
+                  text stands, <hi rend="italic">
                         <foreign xml:lang="lat">sunt</foreign>
-                     </hi> must be understood after <hi rend="italic">
+                     </hi> must be
+                  understood after <hi rend="italic">
                         <foreign xml:lang="lat">quae</foreign>
-                     </hi>. Owen conj. <hi rend="italic">
+                     </hi>. Owen conj. <hi
+                        rend="italic">
                         <foreign xml:lang="lat">prope</foreign>
-                     </hi>.</note> perniciosa petuntur</l>
+                     </hi>.</note>
+                  perniciosa petuntur</l>
                <l n="55">propter quae fas est genua incerare deorum!</l>
                <l n="56">quosdam praecipiat subiecta potentia magnae</l>
                <l n="57">invidiae, mergit longa atque insignis honorum</l>
@@ -3230,10 +3478,12 @@
                <l n="64">fiunt urceoli pelves sartago matellae<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">matellae</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">patellae</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note>. </l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note>. </l>
                <l n="65">pone domi laurus, duc in Capitolia magnum</l>
                <l n="66">cretatumque bovem! Seianus ducitur unco</l>
                <l n="67">spectandus, gaudent omnes: ‘quae labra, quis illi</l>
@@ -3268,9 +3518,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">angusta</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> Büch. (1910) Housman: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> Büch. (1910) Housman: <hi rend="italic">
                         <foreign xml:lang="lat">augusta</foreign>
-                     </hi> PABüch. (1893).</note> Caprearum in rupe sedentis</l>
+                     </hi> PABüch.
+                  (1893).</note> Caprearum in rupe sedentis</l>
                <l n="94">cum grege Chaldaeo? vis certe pila cohortes</l>
                <l n="95">egregios equites et castra domestica; quidni</l>
                <l n="96">haec cupias? et qui nolunt occidere quemquam,</l>
@@ -3296,10 +3548,12 @@
                <l n="116">quisquis adhuc uno parcam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">parcam</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">partam</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>
                   </note> colit asse Minervam,</l>
                <l n="117">quem sequitur custos augustae vernula capsae.</l>
                <l n="118">eloquio sed uterque perit orator, utrumque</l>
@@ -3307,7 +3561,11 @@
                <l n="120">ingenio manus est et cervix caesa, nec umquam</l>
                <l n="121">sanguine causidici maduerunt rostra pusilli.</l>
                <l n="122">
-                  <q>o fortunatam natam me consule Romam</q>:<note>This line is (apparently) taken from the poem (De suo Consulatu) which Cicero wrote to glorify the events of his Consulship To the many who are not gifted with the divine faculty of poesy it may be a consolation to know that a writer of the most splendid prose could be guilty of such a rubbishy line as that here quoted.</note>
+                  <q>o fortunatam natam me consule Romam</q>:<note>This line is (apparently) taken
+                  from the poem (De suo Consulatu) which Cicero wrote to glorify the events of his
+                  Consulship To the many who are not gifted with the divine faculty of poesy it may
+                  be a consolation to know that a writer of the most splendid prose could be guilty
+                  of such a rubbishy line as that here quoted.</note>
                </l>
                <l n="123">Antoni gladios potuit contemnere, si sic</l>
                <l n="124">omnia dixisset, videnda poemata malo</l>
@@ -3340,9 +3598,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">aliosque</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">altosque</foreign>
-                     </hi> PA.</note> elephantos!</l>
+                     </hi> PA.</note>
+                  elephantos!</l>
                <l n="151">additur imperiis Hispania, Pyrenaeum</l>
                <l n="152">transilit; opposuit natura Alpemque nivemque:</l>
                <l n="153">diducit scopulos et montem rumpit aceto,</l>
@@ -3352,9 +3612,11 @@
                         <hi rend="italic">
                            <foreign xml:lang="lat">acti</foreign>
                         </hi>
-                        <foreign xml:lang="grc">Ψ</foreign> Housman Büch. (1910): <hi rend="italic">
+                        <foreign
+                           xml:lang="grc">Ψ</foreign> Housman Büch. (1910): <hi rend="italic">
                            <foreign xml:lang="lat">actum</foreign>
-                        </hi> PT Büch. (1893).</note>,</q> inquit, ‘nihil est, nisi Poeno milite portas</l>
+                        </hi> PT
+                  Büch. (1893).</note>,</q> inquit, ‘nihil est, nisi Poeno milite portas</l>
                <l n="156">frangimus et media vexillum pono Subura.’</l>
                <l n="157">o qualis facies et quali digna tabella,</l>
                <l n="158">cum Gaetula ducem portaret belua luscum!</l>
@@ -3401,9 +3663,12 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">ille</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>, omitted by PO. Housman conjectures <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>, omitted by PO. Housman conjectures <hi
+                        rend="italic">
                         <foreign xml:lang="lat">ore</foreign>
-                     </hi>.</note> alio, multum hic robustior illo:</l>
+                     </hi>.</note>
+                  alio, multum hic robustior illo:</l>
                <l n="198">una senum facies, cum voce trementia membra</l>
                <l n="199">et iam leve caput madidique infantia nasi,</l>
                <l n="200">frangendus misero gingiva panis inermi;</l>
@@ -3463,10 +3728,12 @@
                <l n="254">quisquis adest socius<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">socius</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">socio</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> and Housman.</note>, cur haec in tempora duret</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> and Housman.</note>, cur haec in tempora duret</l>
                <l n="255">quod facinus dignum tam longo admiserit aevo.</l>
                <l n="256">haec eadem Peleus, raptum cum luget Achillem,</l>
                <l n="257">atque alius cui fas Ithacum lugere natantem.</l>
@@ -3530,18 +3797,24 @@
                <l n="313">lex irae<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">irati</foreign>
-                     </hi> PT: <hi rend="italic">
+                     </hi> PT: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">exire irati</foreign>
-                     </hi> A: <hi rend="italic">
+                     </hi> A: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">exigere irati</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">mariti irati</foreign>
-                     </hi> Büch.Owen: <hi rend="italic">
+                     </hi>
+                  Büch.Owen: <hi rend="italic">
                         <foreign xml:lang="lat">lex irae</foreign>
-                     </hi> conjectures Housman: <hi rend="italic">
+                     </hi>
+                  conjectures Housman: <hi rend="italic">
                         <foreign xml:lang="lat">maritis iratis</foreign>
-                     </hi> Rigalt Büch. (1910).</note> debet, nec erit felicior astro</l>
+                     </hi>
+                  Rigalt Büch. (1910).</note> debet, nec erit felicior astro</l>
                <l n="314">Martis, ut in laqueos numquam incidat, exigit autem</l>
                <l n="315">interdum ille dolor plus quam lex ulla dolori</l>
                <l n="316">concessit: necat hic ferro, secat ille cruentis</l>
@@ -3598,10 +3871,10 @@
                <l n="366">nos facimus. Fortuna, deam caeloque locamus.</l>
             </div>
             <div n="11"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XI</head>
                <l n="1">Atticus exinde si cenat, lautus habetur,</l>
                <l n="2">si Rutilus, demens, quid enim maiore cachinno</l>
@@ -3611,11 +3884,14 @@
                <l n="6">sufficiunt galeae dumque ardent<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">ardenti</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">ardens</foreign>
-                     </hi> U: <hi rend="italic">
+                     </hi> U: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">ardent</foreign>
-                     </hi> conjectures Rigalt.</note> sanguine, fertur</l>
+                     </hi>
+                  conjectures Rigalt.</note> sanguine, fertur</l>
                <l n="7">non cogente quidem sed nec prohibente tribuno,</l>
                <l n="8">scripturas leges et regia verba lanistae.</l>
                <l n="9">multos porro vides, quos saepe elusus ad ipsum</l>
@@ -3635,9 +3911,11 @@
                <l n="23">sumit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">sumit</foreign>
-                     </hi> PS<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> PS<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">sumptus</foreign>
-                     </hi> Heinrich and Housman</note>, et a censu famam trahit. Illum ego iure</l>
+                     </hi> Heinrich
+                  and Housman</note>, et a censu famam trahit. Illum ego iure</l>
                <l n="24">despiciam, qui scit quanto sublimior Atlans</l>
                <l n="25">omnibus in Libya sit montibus, hic tamen idem</l>
                <l n="26">ignoret quantum ferrata distet ab arca</l>
@@ -3675,7 +3953,8 @@
                <l n="57">Persice, non praestem vitae tibi<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">tibi</foreign>
-                     </hi> is added by Büch.: P has a blank.</note> moribus et re,</l>
+                     </hi> is added by
+                  Büch.: P has a blank.</note> moribus et re,</l>
                <l n="58">si laudem siliquas occultus ganeo, pultes</l>
                <l n="59">coram aliis dictem puero, sed in aure placentas,</l>
                <l n="60">nam cum sis conviva mihi promissus, habebis</l>
@@ -3713,9 +3992,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">rigidique</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>, Housman: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>, Housman: <hi rend="italic">
                         <foreign xml:lang="lat">postremo</foreign>
-                     </hi> P Büch.</note> severos</l>
+                     </hi> P Büch.</note>
+                  severos</l>
                <l n="92">censoris mores etiam collega timeret,</l>
                <l n="93">nemo inter curas et seria duxit habendum,</l>
                <l n="94">qualis in Oceani fluctu testudo nataret,</l>
@@ -3732,9 +4013,11 @@
                <l n="105">imperii fato, geminos sub rupe Quirinos,</l>
                <l n="106">ac nudam effigiem clipeo<note>Housman inserts <hi rend="italic">
                         <foreign xml:lang="lat">in</foreign>
-                     </hi> before <hi rend="italic">
+                     </hi> before <hi
+                        rend="italic">
                         <foreign xml:lang="lat">clipeo</foreign>
-                     </hi>.</note> venientis et hasta</l>
+                     </hi>.</note>
+                  venientis et hasta</l>
                <l n="107">pendentisque dei perituro ostenderet hosti,</l>
                <l n="108">ponebant igitur Tusco farrata catino:</l>
                <l n="109">argenti quod erat, solis fulgebat in armis,</l>
@@ -3779,15 +4062,20 @@
                <l n="148">quisquam erit et magno<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quisquam erit et magno</foreign>
-                     </hi> ALOT: <hi rend="italic">
+                     </hi>
+                  ALOT: <hi rend="italic">
                         <foreign xml:lang="lat">quisquam erit in magno</foreign>
-                     </hi> PSFGU: <hi rend="italic">
+                     </hi>
+                  PSFGU: <hi rend="italic">
                         <foreign xml:lang="lat">qui steterit magno</foreign>
-                     </hi> conjectures Housman: <hi rend="italic">
+                     </hi>
+                  conjectures Housman: <hi rend="italic">
                         <foreign xml:lang="lat">in magno si posces</foreign>
-                     </hi> Büch. (1893) Owen; <hi rend="italic">
+                     </hi>
+                  Büch. (1893) Owen; <hi rend="italic">
                         <foreign xml:lang="lat">id magnum</foreign>
-                     </hi> Büch. (1910).</note>: cum posces, posce latine.</l>
+                     </hi> Büch.
+                  (1910).</note>: cum posces, posce latine.</l>
                <l n="149">idem habitus cunctis, tonsi rectique capilli</l>
                <l n="150">atque hodie tantum propter convivia pexi.</l>
                <l n="151">pastoris duri hic est filius, ille bubulci;</l>
@@ -3852,10 +4140,10 @@
                <l n="208">magna: voluptates commendat rarior usus.</l>
             </div>
             <div n="12"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XII</head>
                <l n="1">natali, Corvine, die mihi dulcior haec lux,,</l>
                <l n="2">qua festus promissa deis animalia caespes</l>
@@ -3891,9 +4179,11 @@
                <l n="32">arbori<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">arbori</foreign>
-                     </hi> is Lachmann's conj. for the <hi rend="italic">
+                     </hi> is
+                  Lachmann's conj. for the <hi rend="italic">
                         <foreign xml:lang="lat">arboris</foreign>
-                     </hi> of the MSS.</note> incertae, nullam prudentia cani</l>
+                     </hi> of the
+                  MSS.</note> incertae, nullam prudentia cani</l>
                <l n="33">rectoris cum ferret opem, decidere iactu</l>
                <l n="34">coepit cum ventis, imitatus castora, qui se</l>
                <l n="35">eunuchum ipse facit cupiens evadere damno</l>
@@ -3913,9 +4203,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">callidus</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">pallidus</foreign>
-                     </hi> PA.</note> emptor Olynthi.</l>
+                     </hi> PA.</note>
+                  emptor Olynthi.</l>
                <l n="48">sed quis nunc alius qua mundi parte, quis audet</l>
                <l n="49">argento praeferre caput rebusque salutem?</l>
                <l n="50">
@@ -3936,11 +4228,14 @@
                <l n="61">aspice<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">aspice</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">accipe</foreign>
-                     </hi> Housman: <hi rend="italic">
+                     </hi> Housman: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">respice</foreign>
-                     </hi> Iahn.</note> sumendas in tempestate secures.</l>
+                     </hi> Iahn.</note>
+                  sumendas in tempestate secures.</l>
                <l n="62">Sed postquam iacuit planum mare, tempora postquam</l>
                <l n="63">prospera vectoris fatumque valentius Euro</l>
                <l n="64">et pelago, postquam Parcae meliora benigna</l>
@@ -4014,10 +4309,10 @@
          </div>
          <div n="5" org="uniform" sample="complete" type="book">
             <div n="13"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XIII</head>
                <l n="1">exemplo quodcumque malo committitur, ipsi</l>
                <l n="2">displicet auctori: prima est haec ultio, quod se</l>
@@ -4039,10 +4334,12 @@
                <l n="18">an nihil in melius tot rerum proficis<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">proficit</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">proficis</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign> and Housman.</note> usu?</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign> and Housman.</note> usu?</l>
                <l n="19">Magna quidem, sacris quae dat praecepta libellis,</l>
                <l n="20">victrix fortunae sapientia; ducimus autem</l>
                <l n="21">hos quoque felices, qui ferre incommoda vitae</l>
@@ -4055,11 +4352,14 @@
                <l n="28">nona<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">nona</foreign>
-                     </hi>. So <foreign xml:lang="grc">Ψ</foreign> and Housman: <hi rend="italic">
+                     </hi>. So <foreign
+                        xml:lang="grc">Ψ</foreign> and Housman: <hi rend="italic">
                         <foreign xml:lang="lat">non</foreign>
-                     </hi> FG: P Büch. and Owen have the unmeaning <hi rend="italic">
+                     </hi> FG: P Büch.
+                  and Owen have the unmeaning <hi rend="italic">
                         <foreign xml:lang="lat">nunc</foreign>
-                     </hi>.</note> aetas agitur peioraque saecula ferri</l>
+                     </hi>.</note>
+                  aetas agitur peioraque saecula ferri</l>
                <l n="29">temporibus, quorum sceleri non invenit ipsa</l>
                <l n="30">nomen et a nullo posuit natura metallo.</l>
                <l n="31">nos hominum divumque fidem clamore demus</l>
@@ -4083,9 +4383,12 @@
                <l n="49">pondere, nondum aliquis<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">aliquis</foreign>
-                     </hi> is read by <foreign xml:lang="grc">Ψ</foreign>, but omitted by P. Housman conjectures <hi rend="italic">
+                     </hi> is read
+                  by <foreign xml:lang="grc">Ψ</foreign>, but omitted by P. Housman conjectures <hi
+                        rend="italic">
                         <foreign xml:lang="lat">imi</foreign>
-                     </hi>. See Journal of Phil. No. 67, p. 42.</note> sortitus triste profundi</l>
+                     </hi>. See Journal
+                  of Phil. No. 67, p. 42.</note> sortitus triste profundi</l>
                <l n="50">imperium, aut Sicula torvos cum coniuge Pluton,</l>
                <l n="51">nec rota nec Furiae nec saxum aut vulturis atri</l>
                <l n="52">poena, sed infernis hilares sine regibus umbrae.</l>
@@ -4101,9 +4404,11 @@
                <l n="62">prodigiosa fides et Tuscis digna libellis,</l>
                <l n="63">quaeque coronata lustrari debeat agna.</l>
                <l n="64">egregium sanctumque virum si cerno, bimembri</l>
-               <l n="65">hoc monstrum puero et miranti<note>So <foreign xml:lang="grc">Ψ</foreign> and Housman: Büch. follows the <hi rend="italic">
+               <l n="65">hoc monstrum puero et miranti<note>So <foreign xml:lang="grc">Ψ</foreign>
+                  and Housman: Büch. follows the <hi rend="italic">
                         <foreign xml:lang="lat">mirandis</foreign>
-                     </hi> of P.</note> sub aratro</l>
+                     </hi> of P.</note>
+                  sub aratro</l>
                <l n="66">piscibus inventis et fetae comparo mulae,</l>
                <l n="67">sollicitus, tamquam lapides effuderit imber</l>
                <l n="68">examenque apium longa consederit uva</l>
@@ -4222,9 +4527,11 @@
                <l n="179">invidiosa dabit minimus<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">minimus</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: Housman conj. <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: Housman conj. <hi rend="italic">
                         <foreign xml:lang="lat">solum</foreign>
-                     </hi>.</note> solacia sanguis.</l>
+                     </hi>.</note>
+                  solacia sanguis.</l>
                <l n="180">
                   <q>at vindicta bonum vita iucundius ipsa.</q>
                </l>
@@ -4299,17 +4606,20 @@
                <l n="249">nec surdum nec Teresian quemquam esse deorum.</l>
             </div>
             <div n="14"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XIV</head>
                <l n="1">Plurima sunt, Fuscine, et fama digna sinistra</l>
                <l n="1a">
                   <del>et quod maiorum vitia sequiturque minores</del>
-                  <note>Büch. (1910) inserts within brackets this line found in <foreign xml:lang="grc">Ψ</foreign> between 14.1 and 14.2: . AG read <hi rend="italic">
+                  <note>Büch. (1910) inserts within brackets this line found in <foreign
+                        xml:lang="grc">Ψ</foreign> between 14.1 and 14.2: . AG read <hi
+                        rend="italic">
                         <foreign xml:lang="lat">vitio</foreign>
-                     </hi> for <hi rend="italic">
+                     </hi> for <hi
+                        rend="italic">
                         <foreign xml:lang="lat">vitia</foreign>
                      </hi>.</note>
                </l>
@@ -4359,9 +4669,11 @@
                <l n="45">intra quae pater est<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">est</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">es</foreign>
-                     </hi> Housman after Cramer.</note>; procul, a procul inde puellae</l>
+                     </hi> Housman after
+                  Cramer.</note>; procul, a procul inde puellae</l>
                <l n="46">lenonum et cantus pernoctantis parasiti.</l>
                <l n="47">maxima debetur puero reverentia, siquid</l>
                <l n="48">turpe paras; nec tu pueri contempseris annos,</l>
@@ -4391,11 +4703,14 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">patriae</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">patria</foreign>
-                     </hi> PS: Housman conjectures <hi rend="italic">
+                     </hi> PS:
+                  Housman conjectures <hi rend="italic">
                         <foreign xml:lang="lat">civis</foreign>
-                     </hi>.</note> sit idoneus, utilis agris,</l>
+                     </hi>.</note>
+                  sit idoneus, utilis agris,</l>
                <l n="72">utilis et bellorum et pacis rebus agendis,</l>
                <l n="73">plurimum enim intererit quibus artibus et quibus hunc tu</l>
                <l n="74">moribus instituas. serpente ciconia pullos</l>
@@ -4439,11 +4754,14 @@
                <l n="112">tamquam parcus homo et rerum tutela suarum</l>
                <l n="113">certa magis quam si fortunas<note>PFGU have <hi rend="italic">
                         <foreign xml:lang="lat">fortuna</foreign>
-                     </hi>, other MSS. <hi rend="italic">
+                     </hi>, other
+                  MSS. <hi rend="italic">
                         <foreign xml:lang="lat">fortunas</foreign>
-                     </hi>: Büch. (1910) reads <hi rend="italic">
+                     </hi>: Büch.
+                  (1910) reads <hi rend="italic">
                         <foreign xml:lang="lat">a fortuna</foreign>
-                     </hi>.</note> servet easdem</l>
+                     </hi>.</note>
+                  servet easdem</l>
                <l n="114">Hesperidum serpens aut Ponticus. adde quod hunc de</l>
                <l n="115">quo loquor egregium populus putat adquirendi</l>
                <l n="116">artificem; quippe his crescunt patrimonia fabris,</l>
@@ -4456,9 +4774,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">pergant</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">peragant</foreign>
-                     </hi> P.</note> et eidem incumbere sectae,</l>
+                     </hi> P.</note>
+                  et eidem incumbere sectae,</l>
                <l n="123">sunt quaedam vitiorum elementa, his protinus illos</l>
                <l n="124">inbuit et cogit minimas ediscere sordes;</l>
                <l n="125">mox adquirendi docet insatiabile votum.</l>
@@ -4474,11 +4794,14 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">negabit</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">negavit</foreign>
-                     </hi> PS: <hi rend="italic">
+                     </hi> PS: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">negabat</foreign>
-                     </hi> O.</note>.</l>
+                     </hi> O.</note>
+                  .</l>
                <l n="135">sed quo divitias haec per tormenta coactas,</l>
                <l n="136">cum furor haut dubius, cum sit manifesta phrenesis,</l>
                <l n="137">ut locuples moriaris, egentis vivere fato?</l>
@@ -4486,9 +4809,11 @@
                <l n="139">crescit<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">crevit</foreign>
-                     </hi> P: other MSS <hi rend="italic">
+                     </hi> P: other
+                  MSS <hi rend="italic">
                         <foreign xml:lang="lat">crescit</foreign>
-                     </hi>.</note> amor nummi quantum ipsa pecunia crevit,</l>
+                     </hi>.</note>
+                  amor nummi quantum ipsa pecunia crevit,</l>
                <l n="140">et minus hanc optat qui non habet, ergo paratur</l>
                <l n="141">altera villa tibi, cum rus non sufficit unum,</l>
                <l n="142">et proferre libet fines maiorque videtur</l>
@@ -4505,9 +4830,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">foedae</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">foede</foreign>
-                     </hi> PG.</note> bucina famae!</l>
+                     </hi> PG.</note>
+                  bucina famae!</l>
                <l n="153">
                   <q>quid nocet haec?</q> inquit, ‘tunicam mihi malo lupini</l>
                <l n="154">quam si me toto laudet vicinia pago</l>
@@ -4578,9 +4905,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">maturae</foreign>
                      </hi>
-                     <q>quinque Rupertii</q>: <hi rend="italic">
+                     <q>quinque
+                  Rupertii</q>: <hi rend="italic">
                         <foreign xml:lang="lat">naturae</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>.</note> mala nequitiae, cum pectere barbam</l>
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>.</note> mala nequitiae, cum pectere barbam</l>
                <l n="217">coeperit et longae mucronem admittere cultri,</l>
                <l n="218">falsus erit testis, vendet periuria summa</l>
                <l n="219">exigua et Cereris tangens aramque pedemque,</l>
@@ -4640,14 +4969,18 @@
                <l n="269">perditus ac vilis<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">ac vilis</foreign>
-                     </hi> P etc.: <hi rend="italic">
+                     </hi> P etc.: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">a siculis</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">ac similis</foreign>
-                     </hi> conjecture Housman: <hi rend="italic">
+                     </hi>
+                  conjecture Housman: <hi rend="italic">
                         <foreign xml:lang="lat">assiculis</foreign>
-                     </hi> Büch. (1910).</note> sacci mercator olentis,</l>
+                     </hi> Büch.
+                  (1910).</note> sacci mercator olentis,</l>
                <l n="270">qui gaudes pingue antiquae de litore Cretae</l>
                <l n="271">passum et municipes Iovis advexisse lagonas?</l>
                <l n="272">hic tamen ancipiti figens vestigia planta</l>
@@ -4697,9 +5030,11 @@
                <l n="315">numen habes, si sit prudentia: nos te,</l>
                <l n="316">nos facimus, Fortuna, deam<note>The sentence <hi rend="italic">
                         <foreign xml:lang="lat">nullum</foreign>
-                     </hi> through <hi rend="italic">
+                     </hi> through <hi
+                        rend="italic">
                         <foreign xml:lang="lat">deam</foreign>
-                     </hi> is repeated from 10.365-66, quite irrelevantly.</note>. Mensura tamen quae</l>
+                     </hi> is repeated
+                  from 10.365-66, quite irrelevantly.</note>. Mensura tamen quae</l>
                <l n="317">sufficiat census, siquis me consulat, edam:</l>
                <l n="318">in quantum sitis atque fames et frigora poscunt,</l>
                <l n="319">quantum, Epicure, tibi parvis suffecit in hortis,</l>
@@ -4717,10 +5052,10 @@
                <l n="331">paruit imperiis uxorem occidere iussus.</l>
             </div>
             <div n="15"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XV</head>
                <l n="1">Quis nescit, Volusi Bithynice, qualia demens</l>
                <l n="2">Aegyptos portenta colat? crocodilon adorat</l>
@@ -4731,10 +5066,12 @@
                <l n="7">illic aeluros<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">aeluros</foreign>
-                     </hi> Brod.: <hi rend="italic">
+                     </hi> Brod.: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">illic caeruleos</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note>, hic piscem fluminis, illic</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note>, hic piscem fluminis, illic</l>
                <l n="8">oppida tota canem venerantur, nemo Dianam,</l>
                <l n="9">porrum et caepe nefas violare et frangere morsu;</l>
                <l n="10">o sanctas gentes quibus haec nascuntur in hortis</l>
@@ -4757,12 +5094,15 @@
                <l n="27">Nos miranda quidem, set nuper consule Iunco<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">iunco</foreign>
-                     </hi> Bob.AU: <hi rend="italic">
+                     </hi> Bob.AU: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">iunpo</foreign>
-                     </hi> P: <hi rend="italic">
+                     </hi> P: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">iunio</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note>
                </l>
                <l n="28">gesta super calidae referemus moenia Copti,</l>
                <l n="29">nos volgi scelus et cunctis graviora cothurnis;</l>
@@ -4814,12 +5154,15 @@
                <l n="75">terga fugae<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">fugae</foreign>
-                     </hi> POT: <hi rend="italic">
+                     </hi> POT: <hi
+                        rend="italic">
                         <foreign xml:lang="lat">fuga</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>. The correct reading <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>. The correct reading <hi rend="italic">
                         <foreign xml:lang="lat">instantibus Ombis</foreign>
-                     </hi> is preserved by O only.</note> celeri praestant instantibus Ombis</l>
+                     </hi>
+                  is preserved by O only.</note> celeri praestant instantibus Ombis</l>
                <l n="76">qui vicina colunt umbrosae Tentyra palmae,</l>
                <l n="77">labitur hic quidam nimia formidine cursum</l>
                <l n="78">praecipitans capiturque. ast illum in plurima sectum</l>
@@ -4844,13 +5187,17 @@
                <l n="97">huius enim, quod nunc agitur, miserabile debet</l>
                <l n="98">exemplum esse cibi, sicut<note>Housman reads <hi rend="italic">
                         <foreign xml:lang="lat">tibi</foreign>
-                     </hi> from G in place of <hi rend="italic">
+                     </hi> from G in
+                  place of <hi rend="italic">
                         <foreign xml:lang="lat">cibi</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>, and conjectures <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>, and conjectures <hi rend="italic">
                         <foreign xml:lang="lat">si cui</foreign>
-                     </hi> in place of <hi rend="italic">
+                     </hi> in place
+                  of <hi rend="italic">
                         <foreign xml:lang="lat">sicut</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>.</note> modo dicta mihi gens:</l>
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>.</note> modo dicta mihi gens:</l>
                <l n="99">post omnis herbas, post cuncta animalia, quidquid</l>
                <l n="100">cogebat vacui ventris furor, hostibus ipsis</l>
                <l n="101">pallorem ac maciem et tenuis miserantibus artus,</l>
@@ -4858,18 +5205,22 @@
                <l n="103">et sua. quisnam hominum veniam dare quisve deorum</l>
                <l n="104">ventribus<note>So Housman, after Hadr. Vales.: PU have <hi rend="italic">
                         <foreign xml:lang="lat">urbibus</foreign>
-                     </hi>, and so Büch. and Owen: <hi rend="italic">
+                     </hi>, and so
+                  Büch. and Owen: <hi rend="italic">
                         <foreign xml:lang="lat">viribus</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>.</note> abnueret dira atque inmania passis,</l>
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>.</note> abnueret dira atque inmania passis,</l>
                <l n="105">et quibus illorum poterant ignoscere manes,</l>
                <l n="106">quorum corporibus vescebantur? melius nos</l>
                <l n="107">Zenonis praecepta monent, nec enim omnia, quaedam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quaedam</foreign>
-                     </hi> AGLT: P has <hi rend="italic">
+                     </hi> AGLT: P
+                  has <hi rend="italic">
                         <foreign xml:lang="lat">quidam</foreign>
-                     </hi>: so Büch. and Housman</note>
+                     </hi>: so Büch.
+                  and Housman</note>
                </l>
                <l n="108">pro vita facienda putant; sed Cantaber unde</l>
                <l n="109">Stoicus, antiqui praesertim aetate Metelli?</l>
@@ -4921,9 +5272,11 @@
                      <hi rend="italic">
                         <foreign xml:lang="lat">limine</foreign>
                      </hi>
-                     <foreign xml:lang="grc">Ψ</foreign>: <hi rend="italic">
+                     <foreign
+                        xml:lang="grc">Ψ</foreign>: <hi rend="italic">
                         <foreign xml:lang="lat">limite</foreign>
-                     </hi> PA.</note> somnos</l>
+                     </hi> PA.</note>
+                  somnos</l>
                <l n="155">ut collata daret fiducia, protegere armis</l>
                <l n="156">lapsum aut ingenti nutantem vulnere civem,</l>
                <l n="157">communi dare signa tuba, defendier isdem</l>
@@ -4946,10 +5299,10 @@
                <l n="174">tamquam homine et ventri indulsit non omne legumen?</l>
             </div>
             <div n="16"
-                 met="hexameter"
-                 org="uniform"
-                 sample="complete"
-                 type="poem">
+               met="hexameter"
+               org="uniform"
+               sample="complete"
+               type="poem">
                <head>Satura XVI</head>
                <l n="1">Quis numerare queat felicis praemia, Galli,</l>
                <l n="2">militiae? nam si subeuntur prospera castra,</l>
@@ -4970,18 +5323,22 @@
                <l n="17">et procul a signis. ‘iustissima centurionum</l>
                <l n="18">cognitio est igitur<note>For the <hi rend="italic">
                         <foreign xml:lang="lat">igitur</foreign>
-                     </hi> of P<foreign xml:lang="grc">Ψ</foreign> Housman reads <hi rend="italic">
+                     </hi> of P<foreign
+                        xml:lang="grc">Ψ</foreign> Housman reads <hi rend="italic">
                         <foreign xml:lang="lat">inquis</foreign>
-                     </hi>.</note> de milite, nec mihi derit</l>
+                     </hi>.</note>
+                  de milite, nec mihi derit</l>
                <l n="19">ultio, si iustae defertur causa querellae.’</l>
                <l n="20">tota cohors tamen est inimica, omnesque manipli</l>
                <l n="21">consensu magno efficiunt curabilis ut sit</l>
                <l n="22">vindicta et gravior quam<note>
                      <hi rend="italic">
                         <foreign xml:lang="lat">quam</foreign>
-                     </hi> P<foreign xml:lang="grc">Ψ</foreign>: Büch. (1910) conjectures <hi rend="italic">
+                     </hi> P<foreign
+                        xml:lang="grc">Ψ</foreign>: Büch. (1910) conjectures <hi rend="italic">
                         <foreign xml:lang="lat">tum</foreign>
-                     </hi>.</note> iniuria, dignum erit ergo</l>
+                     </hi>.</note>
+                  iniuria, dignum erit ergo</l>
                <l n="23">declamatoris mulino corde Vagelli,</l>
                <l n="24">cum duo crura habeas, offendere tot caligas, tot</l>
                <l n="25">milia clavorum, quis tam procul absit ab urbe</l>
@@ -5023,7 +5380,8 @@
                <l n="59">ut qui fortis erit, sit felicissimus idem,</l>
                <l n="60">ut laeti phaleris omnes et torquibus, omnes<note>The <hi rend="italic">
                         <foreign xml:lang="lat">Saturae</foreign>
-                     </hi> are broken off at this point.</note>
+                     </hi> are
+                  broken off at this point.</note>
                </l>
             </div>
          </div>
