@@ -81,7 +81,8 @@
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="actio" delim=":" match="div[@type='actio']" use="@n">
                   <citeStructure unit="book" delim="." match="div[@type='book']" use="@n">
-                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n" />
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"
+                        n="chunk" />
                   </citeStructure>
                </citeStructure>
             </citeStructure>
