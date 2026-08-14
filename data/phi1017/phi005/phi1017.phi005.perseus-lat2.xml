@@ -40,7 +40,8 @@
                      <date>1921</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/stream/senecaetragoedi00senegoog#page/n208/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/senecaetragoedi00senegoog#page/n208/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
             <listPerson>
                <person xml:id="phaedra">
@@ -66,17 +67,18 @@
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match=".//l" use="@n"/>
+               <citeStructure use="@n" match="milestone[@unit='card']" n="chunk" delim=":" />
+               <citeStructure unit="line" delim=":" match=".//l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#drama-line"/>
+            <catRef scheme="#perseus-genre" target="#drama-line" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -89,8 +91,8 @@
    </teiHeader>
    <text n="Phaed.">
       <body xml:base="urn:cts:latinLit:phi1017.phi005.perseus-lat2">
-         <milestone n="1" unit="card"/>
-         <pb n="p.157"/>
+         <milestone n="1" unit="card" />
+         <pb n="p.157" />
          <sp who="#hippolytus">
             <speaker>Hippolytus</speaker>
             <l n="1">Ite, umbrosas cingite silvas</l>
@@ -109,7 +111,7 @@
             <l n="14">ubi per graciles levis Ilisos</l>
             <l n="15">labitur agros piger et steriles </l>
             <l n="16">amne maligno radit harenas;</l>
-            <pb n="p.158"/>
+            <pb n="p.158" />
             <l n="17">vos qua Marathon tramite laevo</l>
             <l n="18">saltus aperit,</l>
             <l n="19">qua comitatae gregibus parvis</l>
@@ -140,7 +142,7 @@
             <l n="41">lustraque presso quaerant rostro,</l>
             <l n="42">dum lux dubia est, dum signa pedum</l>
             <l n="43">roscida tellus impressa tenet.</l>
-            <pb n="p.159"/>
+            <pb n="p.159" />
             <l n="44">alius raras</l>
             <l n="45">cervice gravi portare plagas, </l>
             <l n="45b">alius teretes properet laqueos. </l>
@@ -174,7 +176,7 @@
             <l n="71">vacuisque vagus Sarmata campis,</l>
             <l n="72">arcus metuit, Diana, tuos.</l>
             <l n="73">tua si gratus numina cultor</l>
-            <pb n="p.160"/>
+            <pb n="p.160" />
             <l n="74">tulit in saltus.</l>
             <l n="75">retia vinctas tenuere feras, </l>
             <l n="76">nulli laqueum rupere pedes:</l>
@@ -187,7 +189,7 @@
             <l n="83">vocor in silvas, hac, hac pergam</l>
             <l n="84">qua via longum compensat iter.</l>
          </sp>
-         <milestone n="85" unit="card"/>
+         <milestone n="85" unit="card" />
          <sp who="#phaedra nutrix">
             <speaker>Phaedra Nutrix</speaker>
             <l n="85">O magna vasti Creta dominatrix freti, </l>
@@ -208,7 +210,7 @@
             <l n="100">non. me quies nocturna, non altus sopor </l>
             <l n="101">solvere curis: alitur et crescit malum</l>
             <l n="102">et ardet intus qualis Aetnaeo vapor</l>
-            <pb n="p.161"/>
+            <pb n="p.161" />
             <l n="103">exundat antro. Palladis telae vacant</l>
             <l n="104">et inter ipsas pensa labuntur manus;</l>
             <l n="105">non colere donis templa votivis libet. </l>
@@ -243,7 +245,7 @@
             <l n="131">extingue flammas neve te dirae spei</l>
             <l n="132">praebe obsequentem: quisquis in primo obstitit</l>
             <l n="133">pepulitque amorem, tutus ac victor fuit;</l>
-            <pb n="p.162"/>
+            <pb n="p.162" />
             <l n="134">qui blandiendo dulce nutrivit malum,</l>
             <l n="135">sero recusat ferre quod subiit iugum. </l>
             <l n="136">Nec me fugit, quam durus et veri insolens</l>
@@ -275,7 +277,7 @@
             <l n="162">quid poena praesens, conscius mentis pavor</l>
             <l n="163">animusque culpa plenus et semet timens?</l>
             <l n="164">scelus aliqua tutum, nulla securum tulit.</l>
-            <pb n="p.163"/>
+            <pb n="p.163" />
             <l n="165">compesce amoris impii flammas, precor, </l>
             <l n="166">nefasque quod non ulla tellus barbara</l>
             <l n="167">commisit umquam, non vagi campis Getae</l>
@@ -311,11 +313,11 @@
             <l n="193">figit sagitta certior missa puer</l>
             <l n="194">volitatque caelo pariter et terris gravis.</l>
          </sp>
-         <milestone n="195" unit="card"/>
+         <milestone n="195" unit="card" />
          <sp who="#nutrix">
             <speaker>Nvtr.</speaker>
             <l n="195">Deum esse amorem turpis et vitio favens </l>
-            <pb n="p.164"/>
+            <pb n="p.164" />
             <l n="196">finxit libido, quoque liberior foret</l>
             <l n="197">titulum furori numinis falsi addidit.</l>
             <l n="198">natum per omnis scilicet terras vagum</l>
@@ -359,7 +361,7 @@
          <sp who="#nutrix">
             <speaker>Nvtr.</speaker>
             <l n="226">Immitis etiam coniugi castae fuit:</l>
-            <pb n="p.165"/>
+            <pb n="p.165" />
             <l n="227">experta saevam est barbara Antiope manum.</l>
             <l n="228">sed posse flecti coniugem iratum puta:</l>
             <l n="229">quis huius animum flectet intractabilem?</l>
@@ -439,7 +441,7 @@
             <l n="253">haec sola ratio est, unicum effugium mali:</l>
             <l n="254">virum sequamur, morte praevertam nefas.</l>
          </sp>
-         <milestone n="255" unit="card"/>
+         <milestone n="255" unit="card" />
          <sp who="#nutrix">
             <speaker>Nvtr.</speaker>
             <l n="255">Moderare, alumna, mentis effrenae impetus, </l>
@@ -449,7 +451,7 @@
          <sp who="#phaedra">
             <speaker>Ph.</speaker>
             <l n="258">Decreta mors est: quaeritur fati genus.</l>
-            <pb n="p.166"/>
+            <pb n="p.166" />
             <l n="259">laqueone vitam finiam an ferro incubem?</l>
             <l n="260">an missa praeceps arce Palladia cadam? </l>
          </sp>
@@ -497,7 +499,7 @@
             <l n="283">nulla pax isti puero: per orbem</l>
             <l n="284">spargit effusas agilis sagittas;</l>
             <l n="285">quaeque nascentem videt ora solem, </l>
-            <pb n="p.167"/>
+            <pb n="p.167" />
             <l n="286">quaeque ad Hesperiae iacet ora metas,</l>
             <l n="287">si qua ferventi subiecta cancro,</l>
             <l n="288">si qua Parrbasiae glacialis ursae</l>
@@ -528,7 +530,7 @@
             <l n="313">discit et gyro breviore flecti, </l>
             <l n="316">dum tremunt axes graviore curru; </l>
             <l n="314">nec suum tempus tenuere nectes </l>
-            <pb n="p.168"/>
+            <pb n="p.168" />
             <l n="315">et dies tardo remeavit ortu. </l>
             <l n="317">natus Alcmena posuit pharetras </l>
             <l n="318">et minax vasti spolium leonis,</l>
@@ -554,11 +556,11 @@
             <l n="337">flammamque nequit relevare mari.</l>
             <l n="338">ignes sentit genus aligerum;</l>
             <l n="339">Venere instinctus suscipit audax</l>
-            <l n="340">grege pro toto bella iuvencus;  </l>
+            <l n="340">grege pro toto bella iuvencus; </l>
             <l n="341">si coniugio timuere suo,</l>
             <l n="342">poscunt timidi proelia cervi.</l>
             <l n="348">Poeni quatiunt colla leones </l>
-            <pb n="p.169"/>
+            <pb n="p.169" />
             <l n="349">cum movit Amor. </l>
             <l n="343">et mugitu dant concepti </l>
             <l n="343b">signa furoris.</l>
@@ -577,7 +579,7 @@
             <l n="358">altrix, profare quid feras; quonam in loco est</l>
             <l n="359">regina? saevis ecquis- est flammis modus?.</l>
          </sp>
-         <milestone n="360" unit="card"/>
+         <milestone n="360" unit="card" />
          <sp who="#nutrix phaedra chorus">
             <speaker>nutrix phaedra chorus</speaker>
             <l n="360">Spes nulla tantum posse leniri malum, </l>
@@ -588,7 +590,7 @@
             <l n="365">lucem recusant, nil idem dubiae placet </l>
             <l n="366">artusque varie iactat incertus dolor,</l>
             <l n="367">nunc ut soluto labitur moriens gradu</l>
-            <pb n="p.170"/>
+            <pb n="p.170" />
             <l n="368">et vix labante sustinet collo caput,</l>
             <l n="369">nunc se quieti reddit et. somni immemor,</l>
             <l n="370">noctem querelis ducit; attolli iubet </l>
@@ -631,7 +633,7 @@
             <l n="395">umerosque summos, cursibus motae citis </l>
             <l n="396">ventos sequantur, laeva se pharetrae dabit,</l>
             <l n="397">hastile vibret dextra Thessalicum manus.</l>
-            <pb n="p.171"/>
+            <pb n="p.171" />
             <l n="398">
                <del>talis severi mater Hippolyti fuit.</del>
             </l>
@@ -661,7 +663,7 @@
             <l n="421">detrahere numquam Thessali cantus queant</l>
             <l n="422">nullusque de te gloriam pastor ferat,</l>
             <l n="423">ades invocata, iam fave votis, dea:</l>
-            <pb n="p.172"/>
+            <pb n="p.172" />
             <l n="424">ipsum intuor solemne venerantem sacrum</l>
             <l n="425">nullo latus comitante— quid dubitas? dedit </l>
             <l n="426">tempus locumque casus: utendum artibus,</l>
@@ -670,7 +672,7 @@
             <l n="429">deponat omne et pellat ex animo decus:</l>
             <l n="430">malus est minister regii imperii pudor. </l>
          </sp>
-         <milestone n="431" unit="card"/>
+         <milestone n="431" unit="card" />
          <sp who="#hippolytus">
             <speaker>Hipp.</speaker>
             <l n="431">Quid huc seniles fessa moliris gradus,</l>
@@ -699,7 +701,7 @@
             <l n="451">effluere prohibe, propria descripsit deus</l>
             <l n="452">officia et aevum per suos duxit gradus:</l>
             <l n="453">laetitia iuvenem, frons decet tristis senem.</l>
-            <pb n="p.173"/>
+            <pb n="p.173" />
             <l n="454">quid te coherces et necas rectam indolem?</l>
             <l n="455">seges illa magnum fenus agricolae dabit </l>
             <l n="456">quaecumque laetis tenera luxuriat satis,</l>
@@ -730,11 +732,11 @@
             <l n="481">proinde vitae sequere naturam ducem: </l>
             <l n="482">urbem frequenta, civium coetum cole.</l>
          </sp>
-         <milestone n="483" unit="card"/>
+         <milestone n="483" unit="card" />
          <sp who="#hippolytus">
             <speaker>Hipp.</speaker>
             <l n="483">Non alia magis est libera et vitio carens</l>
-            <pb n="p.174"/>
+            <pb n="p.174" />
             <l n="484">ritusque melius vita quae priscos colat,</l>
             <l n="485">quam quae relictis moenibus silvas amat. </l>
             <l n="486">non illum avarae mentis inflammat furor</l>
@@ -765,7 +767,7 @@
             <l n="511">pressisse ripas, caespite aut nudo leves</l>
             <l n="512">duxisse somnos, sive fons largus citas</l>
             <l n="513">defundit undas sive per flores novos</l>
-            <pb n="p.175"/>
+            <pb n="p.175" />
             <l n="514">fugiente dulcis murmurat rivo sonus.</l>
             <l n="515">excussa silvis poma compescunt famem </l>
             <l n="516">et fraga parvis vulsa dumetis cibos</l>
@@ -799,7 +801,7 @@
             <l n="544">pro iure vires esse. tum primum manu</l>
             <l n="545">bellare nuda saxaque et ramos rudes </l>
             <l n="546">vertere in arma: non erat gracili levis</l>
-            <pb n="p.176"/>
+            <pb n="p.176" />
             <l n="547">armata ferro cornus aut longo latus</l>
             <l n="548">mucrone cingens ensis aut crista procul</l>
             <l n="549">galeae comantes: tela faciebat dolor.</l>
@@ -821,7 +823,7 @@
             <l n="563">sileantur aliae: sola coniunx Aegei,</l>
             <l n="564">Medea, reddet feminas dirum genus.</l>
          </sp>
-         <milestone n="565" unit="card"/>
+         <milestone n="565" unit="card" />
          <sp who="#nutrix">
             <speaker>Nvtr.</speaker>
             <l n="565">Cur omnium fit culpa paucarum scelus? </l>
@@ -842,7 +844,7 @@
             <l n="574">Saepe obstinatis induit frenos Amor</l>
             <l n="575">et odia mutat, regna materna aspice: </l>
             <l n="576">illae feroces sentiunt Veneris iugum;</l>
-            <pb n="p.177"/>
+            <pb n="p.177" />
             <l n="577">testaris istud unicus gentis puer.</l>
          </sp>
          <sp who="#hippolytus">
@@ -895,7 +897,7 @@
             <l n="605">
                <del>me nolle</del>
             </l>
-            <pb n="p.178"/>
+            <pb n="p.178" />
          </sp>
          <sp who="#hippolytus">
             <speaker>Hipp.</speaker>
@@ -934,7 +936,7 @@
             <l n="623b" part="F">Summus hoc omen deus</l>
             <l n="624">avertat, aderit sospes actutum parens.</l>
          </sp>
-         <milestone n="625" unit="card"/>
+         <milestone n="625" unit="card" />
          <sp who="#phaedra">
             <speaker>Ph.</speaker>
             <l n="625">Regni tenacis dominus et tacitae Stygis </l>
@@ -968,7 +970,7 @@
          <sp who="#hippolytus">
             <speaker>Hipp.</speaker>
             <l n="639">Ambigua voce verba perplexa iacis:</l>
-            <pb n="p.179"/>
+            <pb n="p.179" />
             <l n="640" part="I">effare aperte,</l>
          </sp>
          <sp who="#phaedra">
@@ -1011,7 +1013,7 @@
             <l n="667">adlapsa genibus regiae proles domus.</l>
             <l n="668">respersa nulla labe et intacta, innocens</l>
             <l n="669">tibi mutor uni. certa descendi ad preces:</l>
-            <pb n="p.180"/>
+            <pb n="p.180" />
             <l n="670">finem hic dolori faciet aut vitae dies. </l>
             <l n="671" part="I">miserere amantis—</l>
          </sp>
@@ -1047,13 +1049,13 @@
             <l n="696">odium dolusque— genitor, invideo tibi:</l>
             <l n="697">Colchide noverca maius haec, maius malum est.</l>
          </sp>
-         <milestone n="698" unit="card"/>
+         <milestone n="698" unit="card" />
          <sp who="#phaedra">
             <speaker>Ph.</speaker>
             <l n="698">Et ipsa nostrae fata cognosco domus:</l>
             <l n="699">fugienda petimus; sed mei non sum potens.</l>
             <l n="700">te vel per ignes, per mare insanum sequar </l>
-            <pb n="p.181"/>
+            <pb n="p.181" />
             <l n="701">rupesque et amnes, unda quos torrens rapit;</l>
             <l n="702">quacumque gressus tuleris hac amens agar—</l>
             <l n="703">iterum, superbe, genibus advolvor tuis.</l>
@@ -1099,11 +1101,11 @@
             <l n="731">recreate, crinis tractus et lacerae comae</l>
             <l n="732">ut sunt remaneant, facinoris tanti notae,</l>
             <l n="733">perferte 4n urbem, recipe iam sensus, era.</l>
-            <pb n="p.182"/>
+            <pb n="p.182" />
             <l n="734">quid te ipsa lacerans omnium adspectus fugis?</l>
             <l n="735">mens inpudicam facere, non casus solet. </l>
          </sp>
-         <milestone n="736" unit="card"/>
+         <milestone n="736" unit="card" />
          <sp who="#chorus">
             <speaker>Chorus</speaker>
             <l n="736">Fugit insanae similis procellae,</l>
@@ -1134,7 +1136,7 @@
             <l n="761">Anceps forma bonum mortalibus,"</l>
             <l n="762">exigui donum breve temporis,</l>
             <l n="763">ut velox celeri pede laberis!</l>
-            <pb n="p.183"/>
+            <pb n="p.183" />
             <l n="764">Non sic prata novo vere decentia</l>
             <l n="765">aestatis calidae despoliat vapor, </l>
             <l n="766">saevit solstitio cum medius dies</l>
@@ -1164,7 +1166,7 @@
             <l n="788">et nuper rubuit, nullaque lucidis</l>
             <l n="789">nubes sordidior vultibus obstitit:</l>
             <l n="790">at nos solliciti numine turbido, </l>
-            <pb n="p.184"/>
+            <pb n="p.184" />
             <l n="791">tractari! Thessalicis carminibus rati,</l>
             <l n="792">tinnitus dedimus: tu fueras labor</l>
             <l n="793">et tu causa morae, te dea noctium</l>
@@ -1198,7 +1200,7 @@
             <l n="821">inpunita fuit. te melior deus</l>
             <l n="822">tutum praetereat formaque nobilis</l>
             <l n="823">deformis senii monstret imaginem.</l>
-            <pb n="p.185"/>
+            <pb n="p.185" />
             <l n="824">Quid sinat inausum feminae praeceps furor?</l>
             <l n="825">nefanda iuveni crimina insonti apparat. </l>
             <l n="826">en scelera! quaerit crine lacerato fidem,</l>
@@ -1211,7 +1213,7 @@
             <l n="833">staretque recta squalor incultus coma.</l>
             <l n="834">en ipse Theseus redditus terris adest.</l>
          </sp>
-         <milestone n="835" unit="card"/>
+         <milestone n="835" unit="card" />
          <sp who="#theseus nutrix">
             <speaker>Theseus Nutrix</speaker>
             <l n="835">Tandem profugi noctis aeternae plagam </l>
@@ -1231,7 +1233,7 @@
             <l n="849">pariterque mortem fugere et Alciden sequi.</l>
             <l n="850">Quis fremitus aures flebilis pepulit meas? </l>
             <l n="851">expromat aliquis, luctus et lacrimae et dolor,</l>
-            <pb n="p.186"/>
+            <pb n="p.186" />
             <l n="852">in limine ipso maesta lamentatio?</l>
             <l n="853">auspicia digna prorsus inferno hospite.</l>
          </sp>
@@ -1309,7 +1311,7 @@
          <sp who="#phaedra">
             <speaker>Ph.</speaker>
             <l n="878">Mori volenti desse mors numquam potest.</l>
-            <pb n="p.187"/>
+            <pb n="p.187" />
          </sp>
          <sp who="#theseus">
             <speaker>Thes.</speaker>
@@ -1369,7 +1371,7 @@
             <l n="896">Hic dicet ensis quem tumultu territus</l>
             <l n="897">liquit stuprator civium accursum timens.</l>
          </sp>
-         <milestone n="898" unit="card"/>
+         <milestone n="898" unit="card" />
          <sp who="#theseus">
             <speaker>Thes.</speaker>
             <l n="898">Quod facinus, heu me, cerno? quod monstrum intuor?</l>
@@ -1388,7 +1390,7 @@
             <l n="904">et qui secundum fluctibus regnum moves,</l>
             <l n="905">unde ista venit generis infandi lues? </l>
             <l n="906">hunc Graia tellus aluit an Taurus Scythes</l>
-            <pb n="p.188"/>
+            <pb n="p.188" />
             <l n="907">Colchusque Phasis? redit ad auctores genus</l>
             <l n="908">stirpemque primam degener sanguis refert.</l>
             <l n="909">est prorsus iste gentis armiferae furor,</l>
@@ -1422,7 +1424,7 @@
             <l n="937">post te furentes, sceleribus poenas dabis.</l>
             <l n="938">profugum per omnis pertinax latebras premam:</l>
             <l n="939">longinqua clausa abstrusa diversa invia</l>
-            <pb n="p.189"/>
+            <pb n="p.189" />
             <l n="940">emetiemur, nullus obstabit locus: </l>
             <l n="941">scis unde redeam, tela quo mitti haud queunt,</l>
             <l n="942">huc vota mittam, genitor aequoreus dedit</l>
@@ -1443,7 +1445,7 @@
             <l n="957">effunde pontum, vulgus aequoreum cie</l>
             <l n="958">fluctusque ab imo tumidus Oceano voca.</l>
          </sp>
-         <milestone n="959" unit="card"/>
+         <milestone n="959" unit="card" />
          <sp who="#chorus">
             <speaker>Chorus</speaker>
             <l n="959">O magna parens, Natura, deum</l>
@@ -1454,7 +1456,7 @@
             <l n="964">cur tanta tibi cura perennes</l>
             <l n="965">agitare vias aetheris alti, </l>
             <l n="966">ut nunc canae frigora brumae</l>
-            <pb n="p.190"/>
+            <pb n="p.190" />
             <l n="967">nudent silvas,</l>
             <l n="968">nunc arbustis redeant umbrae,</l>
             <l n="969">nunc aestivi colla leonis</l>
@@ -1489,7 +1491,7 @@
          <sp who="#theseus">
             <speaker>Thes.</speaker>
             <l n="993">Ne metue cladis fortiter fari asperas:</l>
-            <pb n="p.191"/>
+            <pb n="p.191" />
             <l n="994">non imparatum pectus aerumnis fero.</l>
          </sp>
          <sp who="#nuntius">
@@ -1509,7 +1511,7 @@
             <l n="998">Gnatum parens obisse iam pridem scio:</l>
             <l n="999">nunc raptor obiit, mortis effare ordinem.</l>
          </sp>
-         <milestone n="1000" unit="card"/>
+         <milestone n="1000" unit="card" />
          <sp who="#nuntius">
             <speaker>Nvnt.</speaker>
             <l n="1000">Vt profugus urbem liquit infesto gradu </l>
@@ -1542,7 +1544,7 @@
             <l n="1023">
                <del>et scelere petrae nobiles Scironides</del>
             </l>
-            <pb n="p.192"/>
+            <pb n="p.192" />
             <l n="1024">
                <del>et quae duobus terra comprirnitur fretis.</del>
             </l>
@@ -1574,7 +1576,7 @@
             <l n="1050">tremuere terrae, fugit attonitum pecus </l>
             <l n="1051">passim per agros nec suos pastor sequi</l>
             <l n="1052">meminit iuvencos; omnis e saltu fera</l>
-            <pb n="p.193"/>
+            <pb n="p.193" />
             <l n="1053">diffugit, omnis frigido exsanguis metu</l>
             <l n="1054">venator horret, solus immunis metu</l>
             <l n="1055">Hippolytus artis continet frenis equos </l>
@@ -1605,7 +1607,7 @@
             <l n="1080">non-licuit ultra fugere: nam toto obvius </l>
             <l n="1081">incurrit ore corniger ponti horridus.</l>
             <l n="1082">tum vero pavida sonipedes mente exciti</l>
-            <pb n="p.194"/>
+            <pb n="p.194" />
             <l n="1083">imperia solvunt seque luctantur iugo</l>
             <l n="1084">eripere rectique in pedes iactant onus.</l>
             <l n="1085">praeceps in ora fusus implicuit cadens </l>
@@ -1642,8 +1644,8 @@
          <sp who="#theseus">
             <speaker>Thes.</speaker>
             <l n="1114b" part="F">O nimium potens,</l>
-            <milestone n="1115" unit="card"/>
-            <pb n="p.195"/>
+            <milestone n="1115" unit="card" />
+            <pb n="p.195" />
             <l n="1115">quanto parentes sanguinis vinclo tenes. </l>
             <l n="1116">natura, quam te colimus inviti quoque:</l>
             <l n="1117">occidere volui noxium, amissum fleo.</l>
@@ -1687,11 +1689,11 @@
             <l n="1140">
                <del>circa regna tonat</del>
             </l>
-            <pb n="p.196"/>
+            <pb n="p.196" />
             <l n="1141">Volat ambiguis mobilis alis</l>
             <l n="1142">hora, nec ulli praestat velox</l>
             <l n="1143">Fortuna fidem,</l>
-            <l n="1144">hic qui clari <gap reason="lost"/> sidera mundi</l>
+            <l n="1144">hic qui clari <gap reason="lost" /> sidera mundi</l>
             <l n="1145">nitidumque diem morte relicta. </l>
             <l n="1146">luget maestos tristis reditus</l>
             <l n="1147">ipsoque magis flebile Averno</l>
@@ -1719,7 +1721,7 @@
             <l n="1163">complexus undis ultimo fluctu tegit,</l>
             <l n="1164">o dure Theseu semper, o numquam ad tuos</l>
             <l n="1165">tuto reverse: gnatus et genitor nece </l>
-            <pb n="p.197"/>
+            <pb n="p.197" />
             <l n="1166">reditus tuos luere; pervertis domum</l>
             <l n="1167">amore semper coniugum aut odio nocens.</l>
             <l n="1168">Hippolyte, tales intuor vultus tuos</l>
@@ -1752,10 +1754,10 @@
             <l n="1195">iuvenisque castus crimine incesto iacet, </l>
             <l n="1196">pudicus, insons— recipe iam mores tuos.</l>
             <l n="1197">mucrone pectus impium iusto patet</l>
-            <pb n="p.198"/>
+            <pb n="p.198" />
             <l n="1198">cruorque sancto solvit inferias viro.</l>
          </sp>
-         <milestone n="1199" unit="card"/>
+         <milestone n="1199" unit="card" />
          <sp who="#theseus">
             <speaker>Thes.</speaker>
             <l n="1199">Quid facere rapto debeas gnato parens.</l>
@@ -1784,7 +1786,7 @@
             <l n="1222">nunc tibimet ipse iusta supplicia irroga.</l>
             <l n="1223">pinus coacto vertice attingens humum</l>
             <l n="1224">caelo remissum findat in geminas trabes,</l>
-            <pb n="p.199"/>
+            <pb n="p.199" />
             <l n="1225">mittarve praeceps saxa per Scironia? </l>
             <l n="1226">graviora vidi, quae pati clausos iubet</l>
             <l n="1227">Phlegethon nocentes igneo cingens vado:</l>
@@ -1826,7 +1828,7 @@
          <sp who="#chorus">
             <speaker>Chor.</speaker>
             <l n="1256">Disiecta genitor membra laceri corporis</l>
-            <pb n="p.200"/>
+            <pb n="p.200" />
             <l n="1257">in ordinem dispone et errantes loco</l>
             <l n="1258">restitue partes: fortis hic dextrae locus,</l>
             <l n="1259">hic laeva frenis docta moderandis manus</l>

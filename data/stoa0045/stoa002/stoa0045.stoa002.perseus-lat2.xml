@@ -40,19 +40,20 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/216/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/216/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
                <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
-                  <citeStructure unit="poem" delim="." match="div[@type='poem']" use="@n">
-                     <citeStructure unit="line" delim="." match="l" use="@n"/>
+                  <citeStructure unit="poem" delim="." match="div[@type='poem']" use="@n" n="chunk">
+                     <citeStructure unit="line" delim="." match="l" use="@n" />
                   </citeStructure>
                </citeStructure>
             </citeStructure>
@@ -60,7 +61,7 @@
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-book-poem-line"/>
+            <catRef scheme="#perseus-genre" target="#verse-book-poem-line" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -91,16 +92,16 @@
                <l n="2">Caesar et Augusto nomen transcripsit et arcem,</l>
                <l n="3">privignus post hunc regnat Nero Claudius, a quo</l>
                <l n="4">Caesar, cognomen caligae cui castra dederunt.</l>
-               <l n="5">Claudius hinc potitur regno, post quem Nero saevus, <note n="5"/>
+               <l n="5">Claudius hinc potitur regno, post quem Nero saevus, <note n="5" />
                </l>
                <l n="6">ultimus Aeneadum, post hunc tres, nec tribus annis:</l>
-               <pb n="v.1.p.332"/>
+               <pb n="v.1.p.332" />
                <l n="7">Galba senex, frustra socio confisus inerti;</l>
                <l n="8">mollis Otho, infami per luxum degener aevo</l>
                <l n="9">nec regno dignus nec morte Vitellius ut vir.</l>
                <l n="10">his decimus fatoque accitus Vespasianus </l>
                <l n="11">et Titus imperii felix brevitate, secutus</l>
-               <l n="12">frater, quem calvum dixit sua Roma Neronem.<note n="1"/>
+               <l n="12">frater, quem calvum dixit sua Roma Neronem.<note n="1" />
                </l>
             </div>
             <div n="3" type="poem">
@@ -112,14 +113,14 @@
                <l n="5">Claudius hebdomadam duplicem trahit et Ne?-o dirus </l>
                <l n="6">tantundem, summae consul sed defuit unus.</l>
                <l n="7">Galba senex, Otho lascive, famose Vitelli,</l>
-               <l n="8">tertia vos Latio regnantes nesciit aestas,<note n="2"/>
+               <l n="8">tertia vos Latio regnantes nesciit aestas,<note n="2" />
                </l>
                <l n="9">
-                  <gap reason="omitted"/>
+                  <gap reason="omitted" />
                </l>
                <l n="10">implet fatalem decadam sibi Vespasianus. </l>
                <l n="11">ter dominante Tito cingit nova laurea Ianum:</l>
-               <l n="12">quindecies, saevis potitur dum <note n="3"/> frater habenis.</l>
+               <l n="12">quindecies, saevis potitur dum <note n="3" /> frater habenis.</l>
             </div>
             <div n="4" type="poem">
                <head>DE OBITU SINGULORUM MONOSTICHA</head>
@@ -127,7 +128,7 @@
                <l n="2">addidit Augustum di vis matura senectus,</l>
                <l n="3">sera senex Capreis exul Nero fata peregit,</l>
                <l n="4">expetiit poenas de Caesare Chaerea mollis.</l>
-               <pb n="v.1.p.334"/>
+               <pb n="v.1.p.334" />
                <l n="5">Claudius ambiguo conclusit fata veneno. </l>
                <l n="6">matricida Nero proprii vim pertulit ensis.</l>
                <l n="7">Galba senex periit saevo prostratus Othone</l>
@@ -157,7 +158,7 @@
                <head>OCTAVIUS AUGUSTUS</head>
                <l n="9">ULTOR successorque dehinc Octavius, idem</l>
                <l n="10">Caesar et Augusti nomine nobilior. </l>
-               <pb n="v.1.p.336"/>
+               <pb n="v.1.p.336" />
                <l n="11">longaeva et numquam dubiis violata potestas</l>
                <l n="12">in terris positum prodidit esse deum.</l>
             </div>
@@ -170,7 +171,7 @@
             </div>
             <div n="4" type="section">
                <head>CAESAR CALIGULA</head>
-               <l n="17">POST hunc castrensi caligae cognomine<note n="1"/> Caesar</l>
+               <l n="17">POST hunc castrensi caligae cognomine<note n="1" /> Caesar</l>
                <l n="18">successit saevo saevior ingenio,</l>
                <l n="19">caedibus incestisque dehinc maculosus et omni</l>
                <l n="20">crimine pollutum qui superavit avum. </l>
@@ -188,12 +189,12 @@
                <l n="26">polluit et clausit Iulia sacra Nero.</l>
                <l n="27">nomina quot pietas, tot habet quoque crimina vitae.</l>
                <l n="28">disce ex Tranquillo: set meminisse piget.</l>
-               <pb n="v.1.p.338"/>
+               <pb n="v.1.p.338" />
             </div>
             <div n="7" type="section">
                <head>GALBA</head>
                <l n="29">SPE frustrate senex, privatus sceptra mereri</l>
-               <l n="30">visus et <note n="1"/> imperio proditus inferior, <note n="2"/>
+               <l n="30">visus et <note n="1" /> imperio proditus inferior, <note n="2" />
                </l>
                <l n="31">fama tibi melior iuveni; set iustior ordo est</l>
                <l n="32">conplacuisse dehinc, displicuisse prius.</l>
@@ -214,20 +215,20 @@
             </div>
             <div n="10" type="section">
                <head>VESPASIANUS</head>
-               <l n="41">QUAERENDI adtentus, moderato commodus usu, <note n="3"/>
+               <l n="41">QUAERENDI adtentus, moderato commodus usu, <note n="3" />
                </l>
                <l n="42">auget nec reprimit Vespasianus opes,</l>
                <l n="43">olim qui dubiam privato in tempore famam,</l>
-               <l n="44">rarum aliis, princeps transtulit in melius. <note n="4"/>
+               <l n="44">rarum aliis, princeps transtulit in melius. <note n="4" />
                </l>
-               <pb n="v.1.p.340"/>
+               <pb n="v.1.p.340" />
             </div>
             <div n="11" type="section">
                <head>TITUS</head>
                <l n="45">FELIX imperio, felix brevitate regendi, </l>
-               <l n="46">expers civilis sanguinis, orbis amor.<note n="1"/>
+               <l n="46">expers civilis sanguinis, orbis amor.<note n="1" />
                </l>
-               <l n="47">unum dixisti moriens te crimen habere;<note n="2"/>
+               <l n="47">unum dixisti moriens te crimen habere;<note n="2" />
                </l>
                <l n="48">set nulli de te, nec tibi credidimus.</l>
             </div>
@@ -244,7 +245,7 @@
                <l n="54">Nerva senex, princeps nomine, mente parens.</l>
                <l n="55">nulla viro suboles; imitatur adoptio prolem, </l>
                <l n="56">quam legisse iuvat, quam genuisse velit.</l>
-               <pb n="v.1.p.342"/>
+               <pb n="v.1.p.342" />
             </div>
             <div n="14" type="section">
                <head>TRAIANUS</head>
@@ -257,7 +258,7 @@
                <head>HADRIANUS</head>
                <l n="61">AELIUS hinc subiit mediis praesignis in actis:</l>
                <l n="62">principia et finem fama notat gravior,</l>
-               <l n="63">orbus et hic: cui iunctus erit documenta daturus,<note n="1"/>
+               <l n="63">orbus et hic: cui iunctus erit documenta daturus,<note n="1" />
                </l>
                <l n="64">adsciti quantum praemineant genitis.</l>
             </div>
@@ -274,7 +275,7 @@
                <l n="70">flexit ad imperium patre Pio melior. </l>
                <l n="71">successore suo moriens, set principe pravo,</l>
                <l n="72">hoc solo patriae, quod genuit, nocuit.</l>
-               <pb n="v.1.p.344"/>
+               <pb n="v.1.p.344" />
             </div>
             <div n="18" type="section">
                <head>COMMODUS</head>
@@ -303,7 +304,7 @@
                <l n="86">ut parricidae regna adimat Didio.</l>
                <l n="87">Punica origo illi; set qui virtute probaret</l>
                <l n="88">non obstare locum, cum valet ingenium.</l>
-               <pb n="v.1.p.346"/>
+               <pb n="v.1.p.346" />
             </div>
             <div n="22" type="section">
                <head>BASSIANUS ANTONINUS SIVE CARACALLA</head>
@@ -327,10 +328,10 @@
                   <add>quo nunquam neque turpe magis neque foedius ullum</add>
                </l>
                <l n="100">
-                  <add>monstrum Romano sedit in imperio? <note n="1"/>
+                  <add>monstrum Romano sedit in imperio? <note n="1" />
                   </add>
                </l>
-               <pb n="v.1.p.348"/>
+               <pb n="v.1.p.348" />
             </div>
          </div>
       </body>

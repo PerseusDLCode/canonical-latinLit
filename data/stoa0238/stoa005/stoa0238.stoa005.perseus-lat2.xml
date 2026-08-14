@@ -42,23 +42,26 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/prudentiuswithen01pruduoft/page/116/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/prudentiuswithen01pruduoft/page/116/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" n="chunk"
+                  use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -71,7 +74,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0238.stoa005.perseus-lat2">
-         <pb n="p.116"/>
+         <pb n="p.116" />
          <head>Apotheosis</head>
          <div n="1" type="section">
             <head>Hymnus de trinitate</head>
@@ -100,7 +103,7 @@
             <l n="6">inter reflexas semitas,</l>
             <l n="7">tam multa surgunt perfidorum conpeta</l>
             <l n="8">torris polita erroribus,</l>
-            <pb n="p.118"/>
+            <pb n="p.118" />
             <l n="9">obliqua sese conserunt divortia</l>
             <l n="10">hinc inde textis orbitis. </l>
             <l n="11">quas si quis errans ac vagus sectabitur,</l>
@@ -135,7 +138,7 @@
             <l n="40">ut recta sint vestigia. </l>
             <l n="41">quis in tenebris hostis errantes tamen</l>
             <l n="42">pulsat trahitque et proterit,</l>
-            <pb n="p.120"/>
+            <pb n="p.120" />
             <l n="43">qui sparsa ad ipsum conmeantum transitum</l>
             <l n="44">frumenta saevus devorat,</l>
             <l n="45">qui laeta Christi culta fur interpolat </l>
@@ -163,7 +166,7 @@
             <l n="9">Ioannis magni celebris sententia praesto est,</l>
             <l n="10">haud umquam testata Deum potuisse videri. </l>
             <l n="11">ille Pater, quem nulla acies violenta tuendo</l>
-            <pb n="p.122"/>
+            <pb n="p.122" />
             <l n="12">eminus ardentis penetravit acumine visus,</l>
             <l n="13">qui se forma hominis non induit, et Deitatis</l>
             <l n="14">inmensum adsumpto non temperat ore modove.</l>
@@ -193,7 +196,7 @@
             <l n="38">ipsum, quantus erat, sine corpore visere Christum,</l>
             <l n="39">denique post multi sermonis mutua, postque</l>
             <l n="40">conspectum praesentis Eri et consortia longa, </l>
-            <pb n="p.124"/>
+            <pb n="p.124" />
             <l n="41">
                <q>quaeso</q> ait <q>ut liceat te nune, Deus optime, nosse.</q>
             </l>
@@ -225,7 +228,7 @@
             <l n="67">lambere sanguineos fructus et poma eruenta,</l>
             <l n="68">stringere mortiferi vitalia germina ligni,</l>
             <l n="69">quandoquidem tristes purgantur sanguine eulpae,</l>
-            <pb n="p.126"/>
+            <pb n="p.126" />
             <l n="70">quem contorta rubus densis cruciatibus edit. </l>
             <l n="71">ergo nihil visum nisi quod sub carne videndum,</l>
             <l n="72">lumen imago Dei, verbum Deus et Deus ignis,</l>
@@ -254,7 +257,7 @@
             <l n="95">aspergunt, alapis non vexat palma relisis, </l>
             <l n="96">nec perfossa cruci clavorum vulnera Agunt,</l>
             <l n="97">his adfecta caro est hominis, quam femina praegnans</l>
-            <pb n="p.128"/>
+            <pb n="p.128" />
             <l n="98">enixa est sub lege uteri, sine lege mariti.</l>
             <l n="99">ille famem patitur, fel potat et haurit acetum,</l>
             <l n="100">ille pavet mortis faciem, tremit ille dolorem. </l>
@@ -267,7 +270,7 @@
             <l n="107">et iam falsiloqua est divini pagina libri,</l>
             <l n="108">quae verbum in carnis loquitur fluxisse figuram?</l>
             <l n="109">at non, qui verbi Pater est, caro factus habetur.</l>
-            <l n="110">fige gradum, Scriptura, tuum; nil mobile et anceps  </l>
+            <l n="110">fige gradum, Scriptura, tuum; nil mobile et anceps </l>
             <l n="111">adfirmasse decet: Pater est, quem cernere nulli </l>
             <l n="112">est licitum; Pater est, qui numquam visus in orbe est,</l>
             <l n="113">nec mundana inter radiavit lumina coram.</l>
@@ -283,7 +286,7 @@
             <l n="123">est invisibilis donum Patris edere natum</l>
             <l n="124">visibilem, per quem valeat Pater ipse videri,</l>
             <l n="125">nec solis sanctorum oculis, sed lumine cassis </l>
-            <pb n="p.130"/>
+            <pb n="p.130" />
             <l n="126">caecorum; caecos loquor, atra socordia quorum</l>
             <l n="127">corde tenebroso verum perpendere nescit,</l>
             <l n="128">quem si perspicuum mortalibus infitiaris,</l>
@@ -312,7 +315,7 @@
             <l n="151">carmina sanctorum resonant iam sola virorum</l>
             <l n="152">triplice concentu regem laudantia caeli,</l>
             <l n="153">qui mare, qui terras, qui lucida sidera fecit,</l>
-            <pb n="p.132"/>
+            <pb n="p.132" />
             <l n="154">ignibus et mediis securos texit alumnos.</l>
             <l n="155">semper in auxilium Sermo Patris omnipotentis </l>
             <l n="156">descendit servando homini, mortalia semper</l>
@@ -341,7 +344,7 @@
             <l n="178">Cede, profanator Christi, iam cede, Sabelli, </l>
             <l n="179">depositorque Patris Natique insane negator, </l>
             <l n="180">nonne Patrem violas dum Natum scire recusas? </l>
-            <pb n="p.134"/>
+            <pb n="p.134" />
             <l n="181">quandoquidem non est genitor, nisi filius extet,</l>
             <l n="182">nec vocitare patrem potis es quem germine fraudas,</l>
             <l n="183">sed fortasse velis patriae pietatis honore</l>
@@ -368,7 +371,7 @@
             <l n="204">circumflexus agat, quamvis promittere et ipsi</l>
             <l n="205">gallinam soleant aut gallum, clinicus ut se </l>
             <l n="206">dignetur praestare deus morientibus aequum,</l>
-            <pb n="p.136"/>
+            <pb n="p.136" />
             <l n="207">cum ventum tamen ad normam rationis et artis,</l>
             <l n="208">turbidulos sensus et litigiosa fragosis</l>
             <l n="209">argumenta modis concludunt numen in unum,</l>
@@ -393,7 +396,7 @@
             <l n="228">carnis habet medium, summum Patris, et Stygis imum.</l>
             <l n="229">defluit his gradibus rursusque revolvitur in se;</l>
             <l n="230">est Deus, est et homo; fit mortuus et Deus idem est. </l>
-            <pb n="p.138"/>
+            <pb n="p.138" />
             <l n="231">omnia percurrit naturae munia pronae,</l>
             <l n="232">ut sursum Patris in gremium replicata reportet</l>
             <l n="233">mortua quae fuerant, ipsos quoque subvehat artus,</l>
@@ -420,7 +423,7 @@
             <l n="254">Filius, auctore genitus quod sit Patre summo,</l>
             <l n="255">summus et ipse tamen; nec enim minor aut Patre dispar.</l>
             <l n="256">unde in utroque operis forma indiscreta, nisi omnem </l>
-            <pb n="p.140"/>
+            <pb n="p.140" />
             <l n="257">vim maiestatis patriae generosus haberet</l>
             <l n="258">Filius, idque Deus genitor, quod Filius, esset?</l>
             <l n="259">pergunt ulterius scrutantes quid sit id ipsum</l>
@@ -451,7 +454,7 @@
             <l n="284">fit novus, inque novum ius proficit, absit, ut umquam</l>
             <l n="285">plenus proficiat, qui non eget incremento. </l>
             <l n="286">et Deus et genitor lumenque et gloria semper</l>
-            <pb n="p.142"/>
+            <pb n="p.142" />
             <l n="287">ille fuit, nec post sibi contulit ut Pater esset,</l>
             <l n="288">sic fit ut aeternum credamus cum Patre Christum,</l>
             <l n="289">illo auctore satum, cui nullus praefuit auctor,</l>
@@ -479,7 +482,7 @@
             <l n="310">condimur in faciem Domini bonitate paterna, </l>
             <l n="311">venturo in nostram faciem post saecula Christo,</l>
             <l n="312">possum multa sacris exempla excerpere libris,</l>
-            <pb n="p.144"/>
+            <pb n="p.144" />
             <l n="313">ni refugis, quae te doceant non in Patre solo</l>
             <l n="314">vim maiestatis positam, sed cum Patre Christum</l>
             <l n="315">esse Deum, velut illud ait genealogus idem: </l>
@@ -510,7 +513,7 @@
             <l n="338">heu, frondosa prius ramis felicibus arbos,</l>
             <l n="339">pinguibus, heu, quondam radix oleagina bacis!</l>
             <l n="340">ecce tibi inserto revirescit nunc oleastro </l>
-            <pb n="p.146"/>
+            <pb n="p.146" />
             <l n="341">truncus et externi vestitur cortice libri,</l>
             <l n="342">iam miserere tui. non se silvestris olivi</l>
             <l n="343">surculus exultans alieno stipite iactat,</l>
@@ -538,7 +541,7 @@
             <l n="365">creditus inscriptusque rubet, cui visus in orbe </l>
             <l n="366">haud dubitante fide Deus est, Deus ex Patre verus.</l>
             <l n="367">ille Deum vidit, visum mox credidit: at tu,</l>
-            <pb n="p.148"/>
+            <pb n="p.148" />
             <l n="368">posteritas carnis, carnaliter omnia cernens,</l>
             <l n="369">carnis opus sub lege geris, quam spiritus inplet</l>
             <l n="370">interior; nec enim caelo lex carnea fluxit, </l>
@@ -565,7 +568,7 @@
             <l n="391">Christum concelebrat, Christum sonat, omnia Christum</l>
             <l n="392">muta etiam fidibus sanctis animata loquuntur,</l>
             <l n="393">o nomen praedulce mihi! lux et decus et spes</l>
-            <pb n="p.150"/>
+            <pb n="p.150" />
             <l n="394">praesidiumque meum, requies o certa laborum,</l>
             <l n="395">blandus in ore sapor, fragrans odor, inriguus fons, </l>
             <l n="396">castus amor, pulchra species, sincera voluptas!</l>
@@ -596,7 +599,7 @@
             <l n="421">haec, Iudaea, tuas vox non pervenit ad aures?</l>
             <l n="422">pervenit, mentem sed non penetravit egenam</l>
             <l n="423">lucis, et a primis foribus disclusa refugit.</l>
-            <pb n="p.152"/>
+            <pb n="p.152" />
             <l n="424">audiit adventum Domini, quem solis Hiberi</l>
             <l n="425">vesper habet, roseos 1 et qui novus exeipit ortus. </l>
             <l n="426">laxavit Scythicas verbo penetrante pruinas</l>
@@ -619,7 +622,7 @@
             <l n="443">nec responsa refert Libyeis in Syrtibus Hammon.</l>
             <l n="444">ipsa suis Christum Capitolia Romula maerent</l>
             <l n="445">principibus lucere Deum, destructaque templa </l>
-            <pb n="p.154"/>
+            <pb n="p.154" />
             <l n="446">imperio cecidisse ducum, iam purpura supplex</l>
             <l n="447">sternitur Aeneadae rectoris ad atria Christi,</l>
             <l n="448">vexillumque crucis summus dominator adorat.</l>
@@ -647,7 +650,7 @@
             <l n="470">pallidus ‘en quid ago? maius, rex optime, maius </l>
             <l n="471">numen nescio quod nostris intervenit aris</l>
             <l n="472">quam sufferre queant spumantia cymbia lacte,</l>
-            <pb n="p.156"/>
+            <pb n="p.156" />
             <l n="473">caesarum sanguis pecudum, verbena, coronae,</l>
             <l n="474">accitas video longe dispergier umbras,</l>
             <l n="475">territa Persephone vertit vestigia retro </l>
@@ -672,7 +675,7 @@
             <l n="494">qui Zoroastreos turbasset fronte susurros.</l>
             <l n="495">armiger e cuneo puerorum flavicomantum, </l>
             <l n="496">purpurei custos lateris, deprenditur unus,</l>
-            <pb n="p.158"/>
+            <pb n="p.158" />
             <l n="497">nec negat, et gemino gemmata hastilia ferro</l>
             <l n="498">proicit ac signum Christi se ferre fatetur.</l>
             <l n="499">prosiluit pavidus deiecto antistite princeps</l>
@@ -702,7 +705,7 @@
             <l n="523">fornice curvato tenui super arte pependit,</l>
             <l n="524">sed verbo factum Domini; non voce sonora,</l>
             <l n="525">sed verbo, quod semper erat. verbum caro factum est. </l>
-            <pb n="p.160"/>
+            <pb n="p.160" />
             <l n="526">hoc templum aeternum est, hoc finem non habet, hoc tu</l>
             <l n="527">expugnare volens flagris, cruce, felle petisti,</l>
             <l n="528">destructum iacuit poenis vexantibus: esto,</l>
@@ -722,14 +725,14 @@
             <l n="542">Iudaeus, postquam patria de sede revulsus</l>
             <l n="543">supplicium pro caede luit, Christique negati</l>
             <l n="544">sanguine respersus commissa piacula solvit,</l>
-            <l n="545">en quo priscorum virtus defluxit avorum!  </l>
+            <l n="545">en quo priscorum virtus defluxit avorum! </l>
             <l n="546">ervit ab antiquis dilapsa fidelibus heres</l>
             <l n="547">nobilitas, sed iam non nobilis; illa recentem</l>
             <l n="548">suspectat 1 captiva fidem, vis tanta novellae</l>
             <l n="549">credulitatis inest; Christum confessa triumphat</l>
             <l n="550">gens infida prius, Christi sed victa negatrix </l>
             <l n="551">subditur imperio dominos sortita fideles.</l>
-            <pb n="p.162"/>
+            <pb n="p.162" />
             <l n="552">Sunt qui Iudaico cognatum dogma furori</l>
             <l n="553">instituunt media Christum ratione secuti,</l>
             <l n="554">hoc tantum, quod verus homo est, at caelitus illum</l>
@@ -739,7 +742,7 @@
             <l n="558">omne opus egregium, per quod sollertia pollens</l>
             <l n="559">emicat, ingenii est aut roboris: illud acuto</l>
             <l n="560">corde viget, duris excellit viribus istud. </l>
-            <l n="561">mortale est sed utrumque homini; nam cana  senescunt</l>
+            <l n="561">mortale est sed utrumque homini; nam cana senescunt</l>
             <l n="562">ingenia et validos consumunt saecla lacertos.</l>
             <l n="563">haec nos in Domini virtute et laude perenni</l>
             <l n="564">non sequimur: sequimur nullo quod semine terrae</l>
@@ -757,7 +760,7 @@
             <l n="576">quid renuis? quid inane caput, non credule, quassas?</l>
             <l n="577">angelus hoc saneto fore nuntiat 1 ore: plaeetne</l>
             <l n="578">credere et angelicis aurem reserare loquellis?</l>
-            <pb n="p.164"/>
+            <pb n="p.164" />
             <l n="579">ipsa coruscantis monitum sacra virgo ministri</l>
             <l n="580">credidit atque ideo concepit credula Christum; </l>
             <l n="581">credentes nam Christus adit, dubitabile pectus</l>
@@ -787,7 +790,7 @@
             <l n="605">estne Deus iam noster? homo versatur et adstat </l>
             <l n="606">nobiscum nomenque probat versumque vetustis</l>
             <l n="607">obscurum saeclis praesenti inluminat ore.</l>
-            <pb n="p.166"/>
+            <pb n="p.166" />
             <l n="608">estne Deus, cuius cunas veneratus Eous</l>
             <l n="609">lancibus auratis regalia fercula supplex</l>
             <l n="610">virginis ad gremium pannis puerilibus offert? </l>
@@ -817,7 +820,7 @@
             <l n="633">hunc ego non venerer, qui caelo visus humique</l>
             <l n="634">inventus rex atque Deus moderatur utrumque</l>
             <l n="635">naturae specimen, tumuloque inferna refringens </l>
-            <pb n="p.168"/>
+            <pb n="p.168" />
             <l n="636">regna insurgentes secum iubet ire sepultos?</l>
             <l n="637">caelum habitat, terris intervenit, abdita rumpit</l>
             <l n="638">Tartara, vera fides; Deus est, qui totus ubique est.</l>
@@ -848,7 +851,7 @@
             <l n="663">excitamque hiemem verrunt vidente sereno,</l>
             <l n="664">quis pelagi calcarit aquas? quis per vada glauca</l>
             <l n="665">gressibus inpressis spatiatus triverit udum </l>
-            <pb n="p.170"/>
+            <pb n="p.170" />
             <l n="666">non submersus iter, sola pendulus et pede sicco,</l>
             <l n="667">aequoreae nisi factor aquae, qui Spiritus olim</l>
             <l n="668">ore superfusus patrio volitabat in undis</l>
@@ -880,7 +883,7 @@
             <l n="694">sed postquam liquidus caelesti Spiritus ore</l>
             <l n="695">virgineam respersit humum, medicabilis illa est. </l>
             <l n="696">inde trahit sucum lentoque umore salutem</l>
-            <pb n="p.172"/>
+            <pb n="p.172" />
             <l n="697">inlinit, infunditque diem baptismate lota.</l>
             <l n="698">caecus adest oculis iam Christi ex ore refectis</l>
             <l n="699">seque luto et nitidis lucem sumpsisse fluentis</l>
@@ -908,7 +911,7 @@
             <l n="721">quis cumulare potest epulas in grandia parvas?</l>
             <l n="722">quis, nisi qui corpus pastumque et corporis omnem</l>
             <l n="723">condens ex nihilo nulla existente creavit</l>
-            <pb n="p.174"/>
+            <pb n="p.174" />
             <l n="724">mundum materia? non sicut sculptor ab aeris</l>
             <l n="725">rudere decoctam consuescit vivere massam, </l>
             <l n="726">sed Deus omnipotens orbem sine semine finxit,</l>
@@ -936,7 +939,7 @@
             <l n="748">regna tenebrarum tenui distantia fine</l>
             <l n="749">coniungit superis? ubi Taenara tristia vasto</l>
             <l n="750">in praeceps deiecta chao, latebrosus et ille </l>
-            <pb n="p.176"/>
+            <pb n="p.176" />
             <l n="751">amnis inexpletis volvens incendia ripis?</l>
             <l n="752">ante fores tumuli, quas saxa inmania duro</l>
             <l n="753">obice damnarant scopulis substructa cavatis,</l>
@@ -965,7 +968,7 @@
             <l n="776">ipse gerit quod struxit opus, nec ferre pudescit</l>
             <l n="777">factor quod peperit, corpus loquor atque animae vim.</l>
             <l n="778">finxerat hoc digitis, animam sufflaverat ore.</l>
-            <pb n="p.178"/>
+            <pb n="p.178" />
             <l n="779">totum hominem Deus adsumit, quia totus ab ipso est,</l>
             <l n="780">et totum redimit quem sumpserat, omne reducens, </l>
             <l n="781">quidquid homo est, istud tumulis, ast illud abysso.</l>
@@ -991,7 +994,7 @@
             <l n="801">atque aliud verum est, aliud simulatio veri.</l>
             <l n="802">est similis saeclis quod non consumitur ullis,</l>
             <l n="803">quod sapiens iustique capax reginaque rerum</l>
-            <pb n="p.180"/>
+            <pb n="p.180" />
             <l n="804">imperat, ante videt, perpendit, praecavet, infit,</l>
             <l n="805">verborum morumque opifex instructaque mille </l>
             <l n="806">artibus et caelum sensu percurrere docta,</l>
@@ -1020,7 +1023,7 @@
             <l n="829">hospita et ipsa recens fraterna sedit in aula.</l>
             <l n="830">illa quidem flatus Domini est, sed spiritus et vis </l>
             <l n="831">non est plena Dei, tanto moderamine missa </l>
-            <pb n="p.182"/>
+            <pb n="p.182" />
             <l n="832">quanto flans voluit flandi servare tenorem.</l>
             <l n="833">est inpossibile spectare profunda Sabaoth,</l>
             <l n="834">sed speculum Deitatis homo est: in corpore discas</l>
@@ -1050,7 +1053,7 @@
             <l n="858">nempe manus Domini corpus mortale lutumque</l>
             <l n="859">conposuit digitis, numquid manus articulatim</l>
             <l n="860">est digesta Dei? numquid vola? numquid et ungues </l>
-            <pb n="p.184"/>
+            <pb n="p.184" />
             <l n="861">claudere flexibiles patulam seu tendere palmam?</l>
             <l n="862">ista figura manus nostrae est, quam non habet in se</l>
             <l n="863">incircumscriptus Dominus; sed tradita forma est</l>
@@ -1077,7 +1080,7 @@
             <l n="884">absurde fertur Deus aut pars esse Dei, quae</l>
             <l n="885">divinum summumque bonum de fonte perenni </l>
             <l n="886">nunc bibit obsequio, nunc culpa aut crimine perdit,</l>
-            <pb n="p.186"/>
+            <pb n="p.186" />
             <l n="887">et modo supplicium recipit, modo libera calcat,</l>
             <l n="888">miraris peccare animam, quae carne coactam</l>
             <l n="889">sortita est habitare domum, cum peccet et ipse</l>
@@ -1108,7 +1111,7 @@
             <l n="914">primi hominis maculas, nec quisquam nascitur insons.</l>
             <l n="915">vitandus tamen error erit, ne traduce carnis </l>
             <l n="916">transfundi in subolem credatur fons animarum</l>
-            <pb n="p.188"/>
+            <pb n="p.188" />
             <l n="917">sanguinis exemplo, cui texta propagine vena est.</l>
             <l n="918">non animas animae pariunt, sed lege latent!</l>
             <l n="919">fundit opus natura suum, quo parvula anhelent</l>
@@ -1138,7 +1141,7 @@
             <l n="943">pastus defectu mortem consumit inanem.</l>
             <l n="944">sie mors in Domini consumpta est corpore Christi,</l>
             <l n="945">sic periit, solitum dum non habet arida pastum. </l>
-            <pb n="p.190"/>
+            <pb n="p.190" />
             <l n="946">suspice quapropter solum inculpabile numen,</l>
             <l n="947">virtutem 1 Patris et Christi, et iam desine nostrae</l>
             <l n="948">invidiam conflare animae, quod sit Deus aut quod</l>
@@ -1166,7 +1169,7 @@
             <l n="970">quid? cum discipulos, hominis quid Filius esset </l>
             <l n="971">passurus, fido iam praescius ore monebat,</l>
             <l n="972">nonne fatebatur se cum virtute paterna</l>
-            <pb n="p.192"/>
+            <pb n="p.192" />
             <l n="973">esse hominem verum? quod si non credo, fefellit,</l>
             <l n="974">si natura Dei quae sit, Manichaee, requiris,</l>
             <l n="975">omne quod est, verum est. nam si mendosus agit quid, </l>
@@ -1196,7 +1199,7 @@
             <l n="999">effluxisse hominum, qui sit de semine David,</l>
             <l n="1000">stirpe recensita numerandus sanguinis heres. </l>
             <l n="1001">quid? cum sanctiloquus revoluto germine Lucas</l>
-            <pb n="p.194"/>
+            <pb n="p.194" />
             <l n="1002">sursum versus agit seriem, scandente nepotis</l>
             <l n="1003">corpore perque atavos cursum relegente vetustos,</l>
             <l n="1004">septenos decies conscendit Christus in ortus</l>
@@ -1225,7 +1228,7 @@
             <l n="1027">tantus amor terrae, tanta est dilectio nostri,</l>
             <l n="1028">dignatur praepinguis humi conprendere mollem</l>
             <l n="1029">divinis glaebam digitis, nec sordida censet</l>
-            <pb n="p.196"/>
+            <pb n="p.196" />
             <l n="1030">haerentis massae contagia, iusserat ut lux </l>
             <l n="1031">confieret, facta est ut iusserat; omnia iussu</l>
             <l n="1032">imperitante novas traxerunt edita formas:</l>
@@ -1255,7 +1258,7 @@
             <l n="1056">et gemina verum Christum ratione negato.</l>
             <l n="1057">nam quid magnificum, si non est mortuus Iesus,</l>
             <l n="1058">et redit? illa Dei virtus memorabilis est, ut</l>
-            <pb n="p.198"/>
+            <pb n="p.198" />
             <l n="1059">occisus redeat superis surgatque sepultus.</l>
             <l n="1060">quisque Deum Christum vult dicere, dicat eundem </l>
             <l n="1061">esse hominem, ne maiestas sua fortia perdat.</l>

@@ -40,25 +40,26 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/268/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/268/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n">
-                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n" n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-poem-line"/>
+            <catRef scheme="#perseus-genre" target="#verse-poem-line" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -76,7 +77,7 @@
             <l n="1">PRIMA URBES INTER, DIVUM DOMUS, AUREA ROMA.</l>
          </div>
          <div n="2" type="poem">
-            <head>Constantinopolis et <milestone unit="section" n="3"/>Carthago</head>
+            <head>Constantinopolis et <milestone unit="section" n="3" />Carthago</head>
             <l n="1">CONSTANTINOPOLI adsurgit Carthago priori,</l>
             <l n="2">non toto cessura gradu, quia tertia dici</l>
             <l n="3">fastidit, non ausa locum sperare secundum,</l>
@@ -90,10 +91,10 @@
             <l n="11">ite pares, tandem memores, quod numine divum</l>
             <l n="12">angustas mutastis opes et nomina: tu cum</l>
             <l n="13">Byzantina Lygos, tu Punica Byrsa fuisti.</l>
-            <pb n="v.1.p.270"/>
+            <pb n="v.1.p.270" />
          </div>
          <div n="4" type="poem">
-            <head>Antiochia et <milestone unit="sectin" n="5"/>Alexandria</head>
+            <head>Antiochia et <milestone unit="sectin" n="5" />Alexandria</head>
             <l n="1">TERTIA Phoebeae lauri domus Antiochia,</l>
             <l n="2">vellet Alexandri si quarta colonia poni:</l>
             <l n="3">ambarum locus unus. et has furor ambitionis</l>
@@ -117,7 +118,7 @@
             <l n="5">lata per extentum procurrunt moenia collem: </l>
             <l n="6">largus tranquillo praelabitur amne Mosella,</l>
             <l n="7">longinqua omnigenae vectans conmercia terrae.</l>
-            <pb n="v.1.p.272"/>
+            <pb n="v.1.p.272" />
          </div>
          <div n="7" type="poem">
             <head>MEDIOLANUM</head>
@@ -135,7 +136,7 @@
          </div>
          <div n="8" type="poem">
             <head>CAPUA</head>
-            <l n="1">NEC CAPUAM pol agri <note n="1"/> cultuque penuque potentem,</l>
+            <l n="1">NEC CAPUAM pol agri <note n="1" /> cultuque penuque potentem,</l>
             <l n="2">deliciis, opibus famaque priore silebo,</l>
             <l n="3">fortuna variante vices, quae freta secundis</l>
             <l n="4">nescivit servare modum, nunc subdita Romae</l>
@@ -143,14 +144,14 @@
             <l n="6">sperneret, an coleret dubitans, sperare curules</l>
             <l n="7">Campanis ausa auspiciis unoque suorum</l>
             <l n="8">consule, ut imperium divisi adtolleret orbis.</l>
-            <pb n="v.1.p.274"/>
+            <pb n="v.1.p.274" />
             <l n="9">quin etiam rerum dominam Latiique parentem</l>
             <l n="10">adpetiit bello, ducibus non freta togatis. </l>
             <l n="11">Hannibalis iurata armis deceptaque in hostis</l>
             <l n="12">servitium demens specie transivit erili.</l>
             <l n="13">mox — ut in occasum vitiis communibus acti</l>
             <l n="14">conruerunt Poeni luxu, Campania fasto,</l>
-            <l n="15">(heu numquam stabilem sortita superbia sedem!) —  </l>
+            <l n="15">(heu numquam stabilem sortita superbia sedem!) — </l>
             <l n="16">illa potens opibusque valens, Roma altera quondam,</l>
             <l n="17">comere quae paribus potuit fastigia conis,</l>
             <l n="18">octavum reiecta locum vix paene tuetur.</l>
@@ -166,7 +167,7 @@
             <l n="7">Maximus, armigeri quondam sub nomine lixa.</l>
             <l n="8">felix, quae tanti spectatrix laeta triumphi</l>
             <l n="9">punisti Ausonio Rutupinum Marte latronem.</l>
-            <pb n="v.1.p.276"/>
+            <pb n="v.1.p.276" />
          </div>
          <div n="10" type="poem">
             <head>ARELAS</head>
@@ -180,9 +181,10 @@
             <l n="8">Gallia quis fruitur gremioque Aquitania lato.</l>
          </div>
          <div n="11" type="poem">
-            <head>Hispalis. <milestone unit="section" n="12"/>Corduba. <milestone unit="section" n="13"/>Tarraco. <milestone unit="section" n="14"/>Bracara</head>
+            <head>Hispalis. <milestone unit="section" n="12" />Corduba. <milestone unit="section"
+                  n="13" />Tarraco. <milestone unit="section" n="14" />Bracara</head>
             <l n="1">CARA mihi post has memorabere, nomen Hiberum,</l>
-            <l n="2">Hispalis,<note n="1"/> aequoreus quam praeterlabitur amnis,</l>
+            <l n="2">Hispalis,<note n="1" /> aequoreus quam praeterlabitur amnis,</l>
             <l n="3">submittit cui tota suos Hispania fasces.</l>
             <l n="4">Corduba non, non arce potens tibi Tarraco certat</l>
             <l n="5">quaeque sinu pelagi iactat se BRACARA dives. </l>
@@ -191,14 +193,14 @@
             <head>Athenae</head>
             <l n="1">NUNC et terrigenis patribus memoremus Athenas,</l>
             <l n="2">Pallados et Consi quondam certaminis arcem,</l>
-            <pb n="v.1.p.278"/>
+            <pb n="v.1.p.278" />
             <l n="3">paciferae primum cui contigit arbor olivae,</l>
             <l n="4">Attica facundae cuius mera gloria linguae,</l>
             <l n="5">unde per Ioniae populos et nomen Achaeum </l>
             <l n="6">versa Graia manus centum se effudit in urbes.</l>
          </div>
          <div n="16" type="poem">
-            <head>Catina. <milestone unit="section" n="17"/>Syracusae.</head>
+            <head>Catina. <milestone unit="section" n="17" />Syracusae.</head>
             <l n="1">QUIS CATINAM sileat? quis quadruplices Syracusas?</l>
             <l n="2">hanc ambustorum fratrum pietate celebrem,</l>
             <l n="3">illam conplexam miracula fontis et amnis,</l>
@@ -216,9 +218,9 @@
             <l n="6">inter Aquitanas gentes et nomen Hiberum,</l>
             <l n="7">quae modo quadruplices ex se cum effuderit urbes,</l>
             <l n="8">non ulla exhaustae sentit dispendia plebis,</l>
-            <l n="9">quos genuit cunctos gremio conplexa colonos. <note n="1"/>
+            <l n="9">quos genuit cunctos gremio conplexa colonos. <note n="1" />
             </l>
-            <pb n="v.1.p.280"/>
+            <pb n="v.1.p.280" />
          </div>
          <div n="19" type="poem">
             <head>NARBO</head>
@@ -243,7 +245,7 @@
             <l n="19">aequora, te classes Libyci Siculique profundi,</l>
             <l n="20">et quidquid vario per flumina, per freta cursu </l>
             <l n="21">advehitur: toto tibi navigat orbe cataplus.</l>
-            <pb n="v.1.p.282"/>
+            <pb n="v.1.p.282" />
          </div>
          <div n="20" type="poem">
             <head>BURDIGALA</head>
@@ -270,7 +272,7 @@
             <l n="21">Quid memorem Pario contectum marmore fontem</l>
             <l n="22">Euripi fervere freto? quanta unda profundi!</l>
             <l n="23">quantus in amne tumor! quanto ruit agmine praeceps</l>
-            <pb n="v.1.p.284"/>
+            <pb n="v.1.p.284" />
             <l n="24">marginis extenti bis sena per ostia cursu,</l>
             <l n="25">innumeros populi non umquam exhaustus ad usus! </l>
             <l n="26">hunc cuperes, rex Mede, tuis contingere castris,</l>
@@ -289,7 +291,7 @@
             <l n="39">haec patria est: patrias sed Roma supervenit omnes,</l>
             <l n="40">diligo Burdigalam, Romam colo; civis in hac sum, </l>
             <l n="41">consul in ambabus; cunae hic, ibi sella curulis.</l>
-            <pb n="v.1.p.286"/>
+            <pb n="v.1.p.286" />
          </div>
       </body>
    </text>

@@ -42,23 +42,25 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/prudentius00pruduoft/page/372/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/prudentius00pruduoft/page/372/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" n="chunk"
+                  use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -72,7 +74,7 @@
    <text>
       <body xml:base="urn:cts:latinLit:stoa0238.stoa009.perseus-lat2">
          <div n="1" type="section">
-            <pb n="p.372"/>
+            <pb n="p.372" />
             <head>Epilogus</head>
             <l n="1">Inmolat Deo Patri</l>
             <l n="2">pius, fidelis, innocens, pudicus</l>
@@ -102,7 +104,7 @@
             <l n="26">ut obsoletum vasculum caducis</l>
             <l n="27">Christus aptat usibus</l>
             <l n="28">sinitque parte in anguli manere.</l>
-            <pb n="p.374"/>
+            <pb n="p.374" />
             <l n="29">munus ecce fictile</l>
             <l n="30">inimus intra regiam salutis. </l>
             <l n="31">attamen vel infimam</l>

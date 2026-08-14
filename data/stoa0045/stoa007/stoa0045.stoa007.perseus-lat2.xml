@@ -40,25 +40,26 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/208/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/208/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n">
-                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n" n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-poem-line"/>
+            <catRef scheme="#perseus-genre" target="#verse-poem-line" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -99,7 +100,7 @@
             <head>EX GRAECO PYTHAGORICUM DE AMBIGUITATE ELIGENDAE VITAE</head>
             <l n="1">QUOD vitae sectabor iter, si plena tumultu</l>
             <l n="2">sunt fora, si curis domus anxia, si peregrinos</l>
-            <pb n="v.1.p.164"/>
+            <pb n="v.1.p.164" />
             <l n="3">cura domus sequitur, mercantem si nova semper</l>
             <l n="4">damna manent, cessare vetat si turpis egestas;</l>
             <l n="5">si vexat labor agricolam, mare naufragus horror </l>
@@ -128,7 +129,7 @@
             <l n="28">Tereos incesti vel mollis Sardanapalli.</l>
             <l n="29">perfidiam vitare monent tria Punica bella;</l>
             <l n="30">set prohibet servare fidem deleta Saguntos. </l>
-            <pb n="v.1.p.166"/>
+            <pb n="v.1.p.166" />
             <l n="31">vive et amicitias semper cole.-Crimen ob istud</l>
             <l n="32">Pythagoreorum periit schola docta sophorum.- hoc</l>
             <l n="33">metuens igitur nullas cole.-Crimen ob istud</l>
@@ -150,7 +151,7 @@
             <l n="49">optima Graiorum sententia: quippe homini aiunt</l>
             <l n="50">non nasci esse bonum aut natum cito morte potiri. </l>
             <l n="51">
-               <add>Haec <note n="1"/> quidem Pythagorica est apophasis secundum</add>
+               <add>Haec <note n="1" /> quidem Pythagorica est apophasis secundum</add>
             </l>
             <l n="52">
                <add>tale quod subiectum est distichon:</add>
@@ -163,7 +164,7 @@
                <add>
                   <foreign xml:lang="grc">δεύτερον ὅττι τάχιστα πύλασ Ἀίδαο περῆσαι</foreign>. 2 </add>
             </l>
-            <pb n="v.1.p.168"/>
+            <pb n="v.1.p.168" />
             <l n="55">
                <add>Contra sed alterius sectator dogmatis ista </add>
             </l>
@@ -202,7 +203,7 @@
             <l n="2">milibus e cunctis hominum consultus Apollo,</l>
             <l n="3">iudex ipse sui totum se explorat ad unguem.</l>
             <l n="4">quid proceres vanique levis quid opinio volgi</l>
-            <gap reason="omitted"/>
+            <gap reason="omitted" />
             <l n="5">securus, mundi instar habens, teres atque rotundus, </l>
             <l n="6">externae ne quid labis per levia sidat.1</l>
             <l n="7">ille, dies quam longus erit sub sidere Cancri</l>
@@ -210,7 +211,7 @@
             <l n="9">cogitat et iusto trutinae se examine pendit,</l>
             <l n="10">ne quid luet, ne quid protuberet, angulus aequis </l>
             <l n="11">partibus ut coeat, nil ut deliret amussis,</l>
-            <pb n="v.1.p.170"/>
+            <pb n="v.1.p.170" />
             <l n="12">sit solidum, quodcumque subest, nec inania subter</l>
             <l n="13">indicet .admotus digitis pellentibus ictus,</l>
             <l n="14">non prius in dulcem declinans lumina somnum,</l>
@@ -243,7 +244,7 @@
             <l n="9">sin controversum, dissensio subiciet <q>Non.</q>
             </l>
             <l n="10">hinc fora dissultant clamoribus, hinc furiosi </l>
-            <pb n="v.1.p.172"/>
+            <pb n="v.1.p.172" />
             <l n="11">iurgia sunt circi, cuneati hinc lata theatri</l>
             <l n="12">seditio, et tales agitat quoque curia lites.</l>
             <l n="13">coniugia et nati cum patribus ista quietis</l>
@@ -268,7 +269,7 @@
             <l n="4">et quater egreditur cornicis saecula cervus,</l>
             <l n="5">alipedem cervum ter vincit corvus et illum </l>
             <l n="6">multiplicat novies Phoenix, reparabilis ales.</l>
-            <pb n="v.1.p.174"/>
+            <pb n="v.1.p.174" />
             <l n="7">quem nos perpetuo decies praevertimus aevo,</l>
             <l n="8">Nymphae Hamadryades, quarum longissima vita est.</l>
             <l n="9">Haec cohibet finis vivacia fata animantum.</l>
@@ -293,7 +294,7 @@
             <l n="8">unde vigor viresque manent aeternaque rerum</l>
             <l n="9">mobilitas nulloque umquam superabilis aevo.</l>
             <l n="10">divinis humana licet conponere. sic est </l>
-            <pb n="v.1.p.176"/>
+            <pb n="v.1.p.176" />
             <l n="11">as solidus, quoniam bis sex de partibus aequis</l>
             <l n="12">constat et in minimis paribus tamen una manet vis.</l>
             <l n="13">nam si quid numero minuatur, summa vacillat</l>
@@ -314,7 +315,7 @@
             <l n="28">libra: nec est modulus, quem non hoc nomine signes.</l>
             <l n="29">telluris, medio quae pendet in aere, libra est 2</l>
             <l n="30">et solis lunaeque vias sua libra cohercet. </l>
-            <pb n="v.1.p.178"/>
+            <pb n="v.1.p.178" />
             <l n="31">Libra dii somnique pares determinat horas,1</l>
             <l n="32">libra Caledonios sine litore continet aestus: </l>
             <l n="33">tu quoque certa mane morum mihi libra meorum.</l>
@@ -340,7 +341,7 @@
             <l n="17">obliqua exilem demittit linea lucem,</l>
             <l n="18">adspirans tenues per inertia pondera motus.</l>
             <l n="19">quarta in sede viget primi indulgentia Solis,</l>
-            <pb n="v.1.p.180"/>
+            <pb n="v.1.p.180" />
             <l n="20">suadet et infusus teneros coalescere fetus. </l>
             <l n="21">fulgore et trigono aspectus 1 vitale coruscat,</l>
             <l n="22">clarum et lene micans, quinti qui cardine signi</l>
@@ -364,7 +365,7 @@
             <l n="40">vota levat, trigono vires sociante sequenti. </l>
             <l n="41">at si difficilis rursum trahit Ilithyia,</l>
             <l n="42">tetragono absolvet dubiarum vincla morarum.</l>
-            <pb n="v.1.p.182"/>
+            <pb n="v.1.p.182" />
          </div>
          <div n="8" type="poem">
             <head>DE NOMINIBUS SEPTEM DIERUM</head>
@@ -395,7 +396,7 @@
             <l n="10">triticeo October faenore ditat agros. </l>
             <l n="11">sidera praecipitas pelago, intempeste November.</l>
             <l n="12">tu genialem hiemem, feste December, agis.</l>
-            <pb n="v.1.p.184"/>
+            <pb n="v.1.p.184" />
          </div>
          <div n="10" type="poem">
             <head>ITEM DISTICHA</head>
@@ -423,7 +424,7 @@
             <l n="22">praecipitat, caelo mox reditura suo.</l>
             <l n="23">concludens numerum genialia festa December</l>
             <l n="24">finit, ut a bruma mox novus annus eat.</l>
-            <pb n="v.1.p.186"/>
+            <pb n="v.1.p.186" />
          </div>
          <div n="11" type="poem">
             <head>DE TRIBUS MENSTRUIS MENSUUM</head>
@@ -453,7 +454,7 @@
             <l n="3">et qui solstitio sua tempora Iulius infert,</l>
             <l n="4">cetera pars mensum quartis est praedita nonis;</l>
             <l n="5">omnes vero idus octava luce recurrunt. </l>
-            <pb n="v.1.p.188"/>
+            <pb n="v.1.p.188" />
          </div>
          <div n="14" type="poem">
             <head>QUOTA E KALENDAE SINT MENSUUM SINGULORUM</head>
@@ -480,7 +481,7 @@
             <l n="2">conficit, a tropico in tropicum dum permeat astrum,</l>
             <l n="3">octipedem in Cancrum Phrixeo ab Ariete pergens,</l>
             <l n="4">hoc spatio aestivi pulsusque et meta diei.</l>
-            <pb n="v.1.p.190"/>
+            <pb n="v.1.p.190" />
             <l n="5">semidiemque duosque dies deciesque novenos </l>
             <l n="6">a Cancro in Chelas aequatae tempora noctis</l>
             <l n="7">atque dii cursu peragit Sol aureus altero,</l>
@@ -510,7 +511,7 @@
             <l n="10">aequat et October sementis tempore Libram. </l>
             <l n="11">Scorpios hibernus praeceps iubet ire Novembrem.</l>
             <l n="12">terminat Arquitenens medio sua signa Decembri.</l>
-            <pb n="v.1.p.192"/>
+            <pb n="v.1.p.192" />
          </div>
          <div n="17" type="poem">
             <head>A SOLISTITIO IN AEQUINOCTIUM RATIO</head>
@@ -519,7 +520,7 @@
             <l n="3">fervidis flagrans habenis pulsum aestivum conficit,</l>
             <l n="4">inde autumnus noctis horas librans aequo lumine</l>
             <l n="5">octo et octoginta goeris et super trihorio </l>
-            <gap reason="omitted"/>
+            <gap reason="omitted" />
             <l n="6">inde floridum reflexis ver revisit oreis</l>
             <l n="7">additis ad hos priores goeros geminis orbibus.</l>
          </div>
@@ -538,7 +539,7 @@
             <l n="2">caelicolum duo sunt et duo festa hominum,</l>
             <l n="3">sacra Iovis Phoebique, Palaemonis Archemorique,</l>
             <l n="4">serta quibus pinus, malus, oliva, apium.</l>
-            <pb n="v.1.p.194"/>
+            <pb n="v.1.p.194" />
          </div>
          <div n="20" type="poem">
             <head>DE LOCIS AGONUM</head>
@@ -563,7 +564,7 @@
             <l n="3">Archemori Nemeaea colunt quinquennia Thebae.</l>
             <l n="4">Isthmia defuncto celebrata Palaemone notum.</l>
             <l n="5">Pythia placando Delphi statuere draconi.</l>
-            <pb n="v.1.p.196"/>
+            <pb n="v.1.p.196" />
          </div>
          <div n="23" type="poem">
             <head>DE FERIIS ROMANIS</head>
@@ -585,7 +586,7 @@
             <l n="16">festaque servorum, cum famulantur eri?</l>
             <l n="17">et numquam certis redeuntia festa diebus,</l>
             <l n="18">compita per vicos cum sua quisque colit?</l>
-            <pb n="v.1.p.198"/>
+            <pb n="v.1.p.198" />
             <l n="19">aut duplicem cultum, quem Neptunalia dicunt,</l>
             <l n="20">et quem de Conso consiliisque vocant? </l>
             <l n="21">festa haec navigiis, aut quae celebrata quadrigis</l>
@@ -604,7 +605,7 @@
             <l n="34">decertasse foro: nunc sibi harena suos</l>
             <l n="35">vindicat extremo qui iam sub fine Decembris </l>
             <l n="36">falcigerum placant sanguine Caeligenam.</l>
-            <pb n="v.1.p.200"/>
+            <pb n="v.1.p.200" />
          </div>
          <div n="24" type="poem">
             <head>MONOSTLCHA DE AERUMNIS HERCULIS</head>
@@ -622,13 +623,14 @@
             <l n="12">Cerberus extremi .suprema est meta laboris.</l>
          </div>
          <div n="25" type="poem">
-            <head>QUINTI CICERONIS HI VERSUS EO PERTINENT UT QUOD SIGNUM QUO TEMPORE INLUSTRE SIT NOVERIMUS. QUOD SUPERIUS QUOQUE NOSTRIS VERSIBUS EXPEDITUR</head>
+            <head>QUINTI CICERONIS HI VERSUS EO PERTINENT UT QUOD SIGNUM QUO TEMPORE INLUSTRE SIT
+               NOVERIMUS. QUOD SUPERIUS QUOQUE NOSTRIS VERSIBUS EXPEDITUR</head>
             <l n="1">FLAMINA 1 verna cient obscuro lumine Pisces</l>
             <l n="2">curriculumque Aries aequat noctisque diique,</l>
             <l n="3">cornua quem condunt florum praenuntia Tauri,</l>
             <l n="4">aridaque aestatis Gemini primordia pandunt,</l>
             <l n="5">longaque iam munit praeclarus lumina Cancer, </l>
-            <pb n="v.1.p.202"/>
+            <pb n="v.1.p.202" />
             <l n="6">languificosque Leo proflat ferus ore calores.</l>
             <l n="7">post modium quatiens Virgo fugat orta vaporem:</l>
             <l n="8">autumni reserat portas aequatque diurna</l>
@@ -640,30 +642,27 @@
             <l n="14">tanta supra circaque viget vis flammea 2 mundi.</l>
             <l n="15">at dextra laevaque ciet rota fulgida Solis </l>
             <l n="16">mobile curriculum et Lunae simulacra feruntur.</l>
-            <gap reason="omitted"/>
+            <gap reason="omitted" />
             <l n="17">squama sub aeterno conspectu torta Draconis</l>
             <l n="18">eminet, hunc infra fulgentes Arcera septem</l>
             <l n="19">magna quatit stellas: quam servans serus in alta</l>
             <l n="20">conditur oceani ripa cum luce Bootes.3 </l>
          </div>
          <div n="26" type="poem">
-            <head>
-                   HIC VERSUS SINE AUCTORE EST. QUO DIE QUID DEMI DE CORPORE OPORTEAT
-                   <lg>
+            <head> HIC VERSUS SINE AUCTORE EST. QUO DIE QUID DEMI DE CORPORE OPORTEAT <lg>
                   <l n="1">UNGUES Mercurio, barbam Iove, Cypride crines.</l>
-               </lg>
-                   Hoc sic refellendum
-               </head>
+               </lg> Hoc
+               sic refellendum </head>
             <l n="1">MERCURIUS furtis probat ungues semper acutos</l>
             <l n="2">articulisque aciem non sinit imminui.</l>
-            <pb n="v.1.p.204"/>
+            <pb n="v.1.p.204" />
             <l n="3">barba Iovi, crines Veneri decor: ergo necesse est,</l>
             <l n="4">ut nolint demi, quo sibi uterque placent.</l>
             <l n="5">Mavors imberbos et calvos, Luna, adamasti: </l>
             <l n="6">non prohibent comi tum caput atque genas.</l>
             <l n="7">Sol et Saturnus nil obstant unguibus: ergo</l>
             <l n="8">non placitum divis tolle monostichium.</l>
-            <pb n="v.1.p.206"/>
+            <pb n="v.1.p.206" />
          </div>
       </body>
    </text>

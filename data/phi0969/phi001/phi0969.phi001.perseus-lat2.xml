@@ -38,7 +38,9 @@
                      <date>1918</date>
                   </imprint>
                </monogr>
-               <ref target="https://archive.org/details/juvenalpersiuswi00juveuoft/page/308/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/juvenalpersiuswi00juveuoft/page/308/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
@@ -46,13 +48,15 @@
          <p>Keyboarding</p>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type]" n="chunk">
+                  <citeStructure unit="line" delim=":" match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -67,7 +71,7 @@
    </teiHeader>
    <text xml:lang="lat">
       <body xml:base="urn:cts:latinLit:phi0969.phi001.perseus-lat2">
-         <pb n="p.310"/>
+         <pb n="p.310" />
          <div n="pr" type="prologue">
             <head>Prologus</head>
             <l n="1">Nec fonte labra prolui caballino</l>
@@ -85,7 +89,7 @@
             <l n="13">corvos poetas et poetridas picas</l>
             <l n="14">cantare credas Pegaseium nectar.</l>
          </div>
-         <pb n="p.316"/>
+         <pb n="p.316" />
          <div n="1" type="satire">
             <l n="1">
                <q>O curas hominum, o quantum est in rebus inane!</q>
@@ -113,10 +117,12 @@
                <q rend="merge">castiges trutina, nec te quaesiveris extra,</q>
             </l>
             <l n="8">
-               <q rend="merge">nam Romae <note target="#n.316.1"/> quis non—ali, si fas dicere—sed fas</q>
+               <q rend="merge">nam Romae <note target="#n.316.1" /> quis non—ali, si fas dicere—sed
+                  fas</q>
             </l>
             <l n="9">
-               <q rend="merge">tunc cum ad canitiem et nostrum istud vivere <note target="#n.316.2"/> triste</q>
+               <q rend="merge">tunc cum ad canitiem et nostrum istud vivere <note target="#n.316.2" />
+                  triste</q>
             </l>
             <l n="10">
                <q rend="merge">aspexi ac nucibus facimus quaecumque relictis,</q>
@@ -127,9 +133,14 @@
             <l n="12">
                <q rend="merge">quid faciam? sed sum petulanti splene) cachinno.</q>
             </l>
-            <note xml:id="n.316.1" xml:lang="eng">The MSS. read <foreign xml:lang="lat">Romae est</foreign> or <foreign xml:lang="lat">Romaest</foreign> for <foreign xml:lang="lat">Romae</foreign>, and <emph>ae</emph> for <emph>a</emph> or <emph>ah</emph>.</note>
-            <note xml:id="n.316.2" xml:lang="eng">The use of the Infinitive as a Noun is a special characteristic of Persius. So <foreign xml:lang="lat">scire tuum</foreign> (l. 27), <foreign xml:lang="lat">ridere meum</foreign> (l. 122), <foreign xml:lang="lat">pappare minutum</foreign> (iii. 17), etc.</note>
-            <pb n="p.318"/>
+            <note xml:id="n.316.1" xml:lang="eng">The MSS. read <foreign xml:lang="lat">Romae est</foreign>
+               or <foreign xml:lang="lat">Romaest</foreign> for <foreign xml:lang="lat">Romae</foreign>,
+               and <emph>ae</emph> for <emph>a</emph> or <emph>ah</emph>.</note>
+            <note xml:id="n.316.2" xml:lang="eng">The use of the Infinitive as a Noun is a special
+               characteristic of Persius. So <foreign xml:lang="lat">scire tuum</foreign> (l. 27), <foreign
+                  xml:lang="lat">ridere meum</foreign> (l. 122), <foreign xml:lang="lat">pappare
+               minutum</foreign> (iii. 17), etc.</note>
+            <pb n="p.318" />
             <l n="13" rend="indent">
                <q rend="merge">Scribimus inclusi, numeros ille, hic pede liber,</q>
             </l>
@@ -161,7 +172,8 @@
                <q rend="merge">tun, vetule, auriculis alienis colligis escas,</q>
             </l>
             <l n="23">
-               <q rend="merge">auriculis, <note target="#n.318.1"/> quibus et dicas cute perditus <q>ohe</q>?</q>
+               <q rend="merge">auriculis, <note target="#n.318.1" /> quibus et dicas cute perditus <q>
+                  ohe</q>?</q>
             </l>
             <l n="24">
                <q>quo didicisse, nisi hoc fermentum et quae semel intus</q>
@@ -184,13 +196,18 @@
             </l>
             <l n="30">
                <q rend="merge">pro nihilo pendes?</q>
-               <note target="#n.318.2"/>
+               <note target="#n.318.2" />
                <q>ecce inter pocula quaerunt</q>
             </l>
-            <note xml:id="n.318.1" xml:lang="eng">Professor Housman adopts Madvig’s conjecture of <foreign xml:lang="lat">articulis</foreign> for <foreign xml:lang="lat">auriculis</foreign>, and translates <q type="translation">What? catering at your age for others’ ears with cates which you, disabled with gout and dropsy, must forgo?</q> (Classical Quarterly, Jan. 1913, p. 14. Subsequent references to Professor Housman are to be found in this article.)</note>
+            <note xml:id="n.318.1" xml:lang="eng">Professor Housman adopts Madvig’s conjecture of <foreign
+                  xml:lang="lat">articulis</foreign> for <foreign xml:lang="lat">auriculis</foreign>,
+               and translates <q type="translation">What? catering at your age for others’ ears with
+               cates which you, disabled with gout and dropsy, must forgo?</q> (Classical Quarterly,
+               Jan. 1913, p. 14. Subsequent references to Professor Housman are to be found in this
+               article.)</note>
             <note xml:id="n.318.2" xml:lang="eng">
                <foreign xml:lang="lat">pendas</foreign> aP<hi rend="superscript">2</hi>.</note>
-            <pb n="p.320"/>
+            <pb n="p.320" />
             <l n="31">
                <q rend="merge">Romulidae saturi, quid dia poemata narrent;</q>
             </l>
@@ -265,7 +282,7 @@
             <l n="54">
                <q rend="merge">scis comitem horridulum trita donare lacerna,</q>
             </l>
-            <pb n="p.322"/>
+            <pb n="p.322" />
             <l n="55">
                <q rend="merge">et <q>verum</q> inquis <q>amo, verum mihi dicite de me.</q>
                </q>
@@ -274,7 +291,8 @@
                <q rend="merge">qui pote? vis dicam? nugaris, cum tibi, calve,</q>
             </l>
             <l n="57">
-               <q rend="merge">pinguis aqualiculus propenso <note target="#n.322.1"/> sesquipede extet.</q>
+               <q rend="merge">pinguis aqualiculus propenso <note target="#n.322.1" /> sesquipede
+                  extet.</q>
             </l>
             <l n="58">
                <q rend="merge">o Iane, a tergo quem nulla ciconia pinsit,</q>
@@ -283,7 +301,7 @@
                <q rend="merge">nec manus auriculas imitari mobilis albas,</q>
             </l>
             <l n="60">
-               <q rend="merge">nec linguae quantum sitiat canis Apula tantum!<note target="#n.322.2"/>
+               <q rend="merge">nec linguae quantum sitiat canis Apula tantum!<note target="#n.322.2" />
                </q>
             </l>
             <l n="61">
@@ -312,7 +330,7 @@
                <q rend="merge">dicere, res grandes nostro dat Musa poetae.</q>
             </l>
             <l n="69">
-               <q>ecce modo heroas sensus adferre videmus <note target="#n.322.3"/>
+               <q>ecce modo heroas sensus adferre videmus <note target="#n.322.3" />
                </q>
             </l>
             <l n="70">
@@ -328,14 +346,19 @@
                <q rend="merge">unde Remus sulcoque terens dentalia, Quinti.</q>
             </l>
             <note xml:id="n.322.1" xml:lang="eng">
-               <foreign xml:lang="lat">propenso</foreign> PA<hi rend="superscript">2</hi>L: <foreign xml:lang="lat">protenso</foreign> E: <foreign xml:lang="lat">protento</foreign> Prisc.</note>
+               <foreign xml:lang="lat">propenso</foreign> PA<hi rend="superscript">2</hi>L: <foreign
+                  xml:lang="lat">protenso</foreign> E: <foreign xml:lang="lat">protento</foreign>
+               Prisc.</note>
             <note xml:id="n.322.2" xml:lang="eng">
-               <foreign xml:lang="lat">tantum</foreign> L<hi rend="superscript">2</hi>: <foreign xml:lang="lat">tante</foreign> EPL<hi rend="superscript">1</hi>.</note>
+               <foreign xml:lang="lat">tantum</foreign> L<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">tante</foreign> EPL<hi rend="superscript">1</hi>.</note>
             <note xml:id="n.322.3" xml:lang="eng">
-               <foreign xml:lang="lat">videmus</foreign> ABP<hi rend="superscript">2</hi>: <foreign xml:lang="lat">docemus</foreign> EP<hi rend="superscript">1</hi>.</note>
-            <pb n="p.324"/>
+               <foreign xml:lang="lat">videmus</foreign> ABP<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">docemus</foreign> EP<hi rend="superscript">1</hi>.</note>
+            <pb n="p.324" />
             <l n="74">
-               <q rend="merge">cum <note target="#n.324.1"/> trepida ante boves dictatorem induit uxor</q>
+               <q rend="merge">cum <note target="#n.324.1" /> trepida ante boves dictatorem induit
+                  uxor</q>
             </l>
             <l n="75">
                <q rend="merge">et tua aratra domum lictor tulit: euge poeta!</q>
@@ -394,8 +417,9 @@
                <q>Sed numeris decor est et iunctura addita crudis.</q>
             </l>
             <note xml:id="n.324.1" xml:lang="eng">
-               <foreign xml:lang="lat">cum</foreign> P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">quem</foreign> EaP<hi rend="superscript">2</hi>L.</note>
-            <pb n="p.326"/>
+               <foreign xml:lang="lat">cum</foreign> P<hi rend="superscript">1</hi>: <foreign
+                  xml:lang="lat">quem</foreign> EaP<hi rend="superscript">2</hi>L.</note>
+            <pb n="p.326" />
             <l n="93">
                <q rend="merge">claudere sic versum didicit <q>Berecyntia Attis</q>
                </q>
@@ -463,7 +487,7 @@
             <l n="111">
                <q rend="merge">nil moror: euge! omnes, omnes bene, mirae eritis res!</q>
             </l>
-            <pb n="p.328"/>
+            <pb n="p.328" />
             <l n="112">
                <q rend="merge">hoc iuvat? <q>hic</q> inquis <q>veto quisquam faxit oletum.</q>
                </q>
@@ -487,7 +511,8 @@
                <q rend="merge">callidus excusso populum suspendere naso:</q>
             </l>
             <l n="119">
-               <q rend="merge">men <note target="#n.328.1"/> muttire nefas? nec clam? nec cum scrobe? nusquam?</q>
+               <q rend="merge">men <note target="#n.328.1" /> muttire nefas? nec clam? nec cum
+                  scrobe? nusquam?</q>
             </l>
             <l n="120">
                <q rend="merge">hic tamen infodiam. vidi, vidi ipse, lihelle:</q>
@@ -518,16 +543,18 @@
                </q>
             </l>
             <l n="129">
-               <q rend="merge">sese <note target="#n.328.2"/> aliquem credens, Italo quod honore supinus</q>
+               <q rend="merge">sese <note target="#n.328.2" /> aliquem credens, Italo quod honore
+                  supinus</q>
             </l>
             <l n="130">
                <q rend="merge">fregerit heminas Arrcti aedilis iniquas,</q>
             </l>
             <note xml:id="n.328.1" xml:lang="eng">
-               <foreign xml:lang="lat">men</foreign> P<hi rend="superscript">2</hi>: <foreign xml:lang="lat">me</foreign> Büch.</note>
+               <foreign xml:lang="lat">men</foreign> P<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">me</foreign> Büch.</note>
             <note xml:id="n.328.2" xml:lang="eng">
                <foreign xml:lang="lat">sese</foreign> aL: <foreign xml:lang="lat">seque</foreign> P.</note>
-            <pb n="p.330"/>
+            <pb n="p.330" />
             <l n="131">
                <q rend="merge">nec qui abaco numeros et secto in pulvere metas</q>
             </l>
@@ -541,13 +568,13 @@
                <q rend="merge">his mane edictum, post prandia Calliroen do.</q>
             </l>
          </div>
-         <pb n="p.334"/>
+         <pb n="p.334" />
          <div n="2" type="satire">
             <l n="1">hunc, Macrine, diem numera meliore lapillo,</l>
             <l n="2">qui tibi labentis apponit candidus annos,</l>
             <l n="3">funde merum Genio, non tu prece poscis emaci</l>
             <l n="4">quae nisi seductis nequeas committere divis.</l>
-            <l n="5">at bona pars procerum tacita libabit <note target="#n.334.1"/> acerra;</l>
+            <l n="5">at bona pars procerum tacita libabit <note target="#n.334.1" /> acerra;</l>
             <l n="6">haut cuivis promptum est murmurque humilesque susurros</l>
             <l n="7">tollere de templis et aperto vivere voto.</l>
             <l n="8">
@@ -564,20 +591,25 @@
                <q rend="merge">Hercule! pupillumve utinam, quem proximus heres</q>
             </l>
             <l n="13">
-               <q rend="merge">inpello, expungam! namque est <note target="#n.334.2"/> scabiosus et acri</q>
+               <q rend="merge">inpello, expungam! namque est <note target="#n.334.2" /> scabiosus et
+                  acri</q>
             </l>
             <l n="14">
-               <q rend="merge">bile tumet. Nerio iam tertia conditur <note target="#n.334.3"/> uxor!</q>
+               <q rend="merge">bile tumet. Nerio iam tertia conditur <note target="#n.334.3" />
+                  uxor!</q>
             </l>
             <l n="15">haec sancte ut poscas, Tiberino in gurgite mergis</l>
             <l n="16">mane caput bis terque et noctem flumine purgas?</l>
             <note xml:id="n.334.1" xml:lang="eng">
                <foreign xml:lang="lat">libavit</foreign> P.</note>
             <note xml:id="n.334.2" xml:lang="eng">
-               <foreign xml:lang="lat">namque est</foreign> P<hi rend="superscript">2</hi>: <foreign xml:lang="lat">nam est</foreign> P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">nam et est</foreign> aL.</note>
+               <foreign xml:lang="lat">namque est</foreign> P<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">nam est</foreign> P<hi rend="superscript">1</hi>: <foreign
+                  xml:lang="lat">nam et est</foreign> aL.</note>
             <note xml:id="n.334.3" xml:lang="eng">
-               <foreign xml:lang="lat">ducitur</foreign> Servius <foreign xml:lang="lat">ap.</foreign> Virg. <title>Geo.</title> iv. 256; vulgo <foreign xml:lang="lat">conditur</foreign>.</note>
-            <pb n="p.336"/>
+               <foreign xml:lang="lat">ducitur</foreign> Servius <foreign xml:lang="lat">ap.</foreign>
+               Virg. <title>Geo.</title> iv. 256; vulgo <foreign xml:lang="lat">conditur</foreign>.</note>
+            <pb n="p.336" />
             <l n="17">Heus age, responde (minimum est quod scire laboro):</l>
             <l n="18">de Iove quid sentis? estne ut praeponere cures</l>
             <l n="19">hunc—<q>cuinam?</q> cuinam? vis Staio? an scilicet haeres?</l>
@@ -598,7 +630,7 @@
             <l n="33">infami digito et lustralibus ante salivis</l>
             <l n="34">expiat, urentis oculos inhibere petita;</l>
             <l n="35">tunc manibus quatit et spem macram supplice voto</l>
-            <pb n="p.338"/>
+            <pb n="p.338" />
             <l n="36">nunc Licini in campos, nunc Crassi mittit in aedis:</l>
             <l n="37">
                <q>hunc optent generum rex et regina; puellae</q>
@@ -607,7 +639,7 @@
                <q rend="merge">hunc rapiant; quidquid calcaverit hic, rosa fiat.</q>
             </l>
             <l n="39">ast ego nutrici non mando vota; negato,</l>
-            <l n="40">Iuppiter, haec illi, quamvis te albata rogarit!<note target="#n.338.1"/>
+            <l n="40">Iuppiter, haec illi, quamvis te albata rogarit!<note target="#n.338.1" />
             </l>
             <l n="41" rend="indent">Poscis opem nervis corpusque fidele senectae,</l>
             <l n="42">esto, age; sed grandes patinae tuccetaque crassa</l>
@@ -617,7 +649,7 @@
             </l>
             <l n="46">
                <q rend="merge">da pecus et gregibus fetum!</q> quo pessime, pacto,</l>
-            <l n="47">tot tibi cum in flammis <note target="#n.338.2"/> iunicum omenta liquescant?</l>
+            <l n="47">tot tibi cum in flammis <note target="#n.338.2" /> iunicum omenta liquescant?</l>
             <l n="48">et tamen hic extis et opimo vincere ferto</l>
             <l n="49">intendit: <q>iam crescit ager, iam crescit ovile,</q>
             </l>
@@ -630,10 +662,11 @@
             <l n="55">hinc illud subiit, auro sacras quod ovato</l>
             <l n="56">perducis facies; nam fratres inter aenos</l>
             <note xml:id="n.338.1" xml:lang="eng">
-               <foreign xml:lang="lat">rogarit</foreign> P: <foreign xml:lang="lat">rogabit</foreign> aL.</note>
+               <foreign xml:lang="lat">rogarit</foreign> P: <foreign xml:lang="lat">rogabit</foreign>
+               aL.</note>
             <note xml:id="n.338.2" xml:lang="eng">
                <foreign xml:lang="lat">flammas</foreign> aL.</note>
-            <pb n="p.340"/>
+            <pb n="p.340" />
             <l n="57">somnia pituita qui purgatissima mittunt</l>
             <l n="58">praecipui sunto sitque illis aurea barba,</l>
             <l n="59">aurum vasa Numae Saturniaque impulit aera</l>
@@ -654,7 +687,7 @@
             <l n="74">mentis et incoctum generoso pectus honesto.</l>
             <l n="75">haec cedo ut admoveam templis, et farre litabo.</l>
          </div>
-         <pb n="p.344"/>
+         <pb n="p.344" />
          <div n="3" type="satire">
             <l n="1">
                <q>nempe haec adsidue? iam clarum mane fenestras</q>
@@ -681,18 +714,19 @@
             <l n="9">findor ut Arcadiae pecuaria rudere credas,</l>
             <l n="10">iam liber et positis bicolor membrana capillis</l>
             <l n="11">inque manus chartae nodosaque venit harundo;</l>
-            <l n="12">tunc querimur <note target="#n.344.1"/> crassus calamo quod pendeat umor,</l>
-            <l n="13">nigra set infusa vanescit <note target="#n.344.2"/> sepia lympha;</l>
+            <l n="12">tunc querimur <note target="#n.344.1" /> crassus calamo quod pendeat umor,</l>
+            <l n="13">nigra set infusa vanescit <note target="#n.344.2" /> sepia lympha;</l>
             <l n="14">dilutas querimur geminet quod fistula guttas.</l>
             <l n="15" rend="indent">O miser inque dies ultra miser, hucine rerum</l>
             <l n="16">venimus? aut cur non potius teneroque columbo</l>
             <l n="17">et similis regum pueris pappare minutum</l>
             <l n="18">poscis et iratus mammae lallare recusas?</l>
             <note xml:id="n.344.1" xml:lang="eng">
-               <foreign xml:lang="lat">querimus</foreign> a; <foreign xml:lang="lat">queritur</foreign> L: <foreign xml:lang="lat">quaeritur</foreign> P<hi rend="superscript">2</hi>.</note>
+               <foreign xml:lang="lat">querimus</foreign> a; <foreign xml:lang="lat">queritur</foreign>
+               L: <foreign xml:lang="lat">quaeritur</foreign> P<hi rend="superscript">2</hi>.</note>
             <note xml:id="n.344.2" xml:lang="eng">
                <foreign xml:lang="lat">vanescat</foreign> aL.</note>
-            <pb n="p.346"/>
+            <pb n="p.346" />
             <l n="19">
                <q>An tali studeam calamo?</q> cui verba? quid istas</l>
             <l n="20">succinis ambages? tibi luditur. effluis amens,</l>
@@ -716,7 +750,7 @@
             <l n="38">virtutem videant intabescantque relicta,</l>
             <l n="39">anne magis Siculi gemuerunt aera iuvenci,</l>
             <l n="40">et magis auratis pendens laquearibus ensis</l>
-            <pb n="p.348"/>
+            <pb n="p.348" />
             <l n="41">purpureas subter cervices terruit, <q>imus</q>
             </l>
             <l n="42">
@@ -724,7 +758,7 @@
             <l n="43">palleat infelix quod proxima nesciat uxor?</l>
             <l n="44" rend="indent">Saepe oculos, memini, tangebam parvus olivo,</l>
             <l n="45">grandia si nollem morituri verba Catonis</l>
-            <l n="46">dicere <note target="#n.348.1"/> non sano multum laudanda magistro,</l>
+            <l n="46">dicere <note target="#n.348.1" /> non sano multum laudanda magistro,</l>
             <l n="47">quae pater adductis sudans audiret amicis,</l>
             <l n="48">iure etenim id summum, quid dexter senio ferret</l>
             <l n="49">scire erat in voto, damnosa canicula quantum</l>
@@ -734,19 +768,22 @@
             <l n="53">quaeque docet sapiens bracatis inlita Medis</l>
             <l n="54">porticus, insomnis quibus et detonsa iuventus</l>
             <l n="55">invigilat siliquis et grandi pasta polenta;</l>
-            <l n="56">et tibi, quae Samios diduxit <note target="#n.348.2"/> littera ramos,</l>
-            <l n="57">surgentem dextro monstravit limite callem; <note target="#n.348.3"/>
+            <l n="56">et tibi, quae Samios diduxit <note target="#n.348.2" /> littera ramos,</l>
+            <l n="57">surgentem dextro monstravit limite callem; <note target="#n.348.3" />
             </l>
             <l n="58">stertis adhuc? laxumque caput conpage soluta</l>
             <note xml:id="n.348.1" xml:lang="eng">
-               <foreign xml:lang="lat">dicere</foreign> P: <foreign xml:lang="lat">discere</foreign> aL.</note>
+               <foreign xml:lang="lat">dicere</foreign> P: <foreign xml:lang="lat">discere</foreign>
+               aL.</note>
             <note xml:id="n.348.2" xml:lang="eng">
                <foreign xml:lang="lat">deduxit</foreign> PaL.</note>
             <note xml:id="n.348.3" xml:lang="eng">
-               <foreign xml:lang="lat">callem</foreign> P<hi rend="superscript">2</hi>LA<hi rend="superscript">2</hi>: <foreign xml:lang="lat">collem</foreign> P<hi rend="superscript">1</hi>a.</note>
-            <pb n="p.350"/>
+               <foreign xml:lang="lat">callem</foreign> P<hi rend="superscript">2</hi>LA<hi
+                  rend="superscript">2</hi>: <foreign xml:lang="lat">collem</foreign> P<hi
+                  rend="superscript">1</hi>a.</note>
+            <pb n="p.350" />
             <l n="59">oscitat hesternum dissutis undique malis?</l>
-            <l n="60">est aliquid quo tendis, et in quod derigis <note target="#n.350.1"/> arcum?</l>
+            <l n="60">est aliquid quo tendis, et in quod derigis <note target="#n.350.1" /> arcum?</l>
             <l n="61">an passim sequeris corvos testaque lutoque,</l>
             <l n="62">securus quo pes ferat, atque ex tempore vivis?</l>
             <l n="63" rend="indent">Elleborum frustra, cum iam cutis aegra tumebit,</l>
@@ -761,7 +798,7 @@
             <l n="72">iussit et humana qua parte Iocatus es in re;</l>
             <l n="73">disce, nec invideas quod multa fidelia putet</l>
             <l n="74">in locuplete penu defensis pinguibus Vmbris,</l>
-            <l n="75">et piper et pernae, Marsi monumenta cluentis, <note target="#n.350.2"/>
+            <l n="75">et piper et pernae, Marsi monumenta cluentis, <note target="#n.350.2" />
             </l>
             <l n="76">maenaque quod prima nondum defecerit orca.</l>
             <l n="77" rend="indent">Hic aliquis de gente hircosa centurionum</l>
@@ -771,10 +808,13 @@
                <q rend="merge">esse quod Arcesilas aerumnosique Solones</q>
             </l>
             <note xml:id="n.350.1" xml:lang="eng">
-               <foreign xml:lang="lat">derigis</foreign> A<hi rend="superscript">2</hi>: <foreign xml:lang="lat">dirigis</foreign> P<hi rend="superscript">2</hi>: <foreign xml:lang="lat">dirigas</foreign> P.</note>
+               <foreign xml:lang="lat">derigis</foreign> A<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">dirigis</foreign> P<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">dirigas</foreign> P.</note>
             <note xml:id="n.350.2" xml:lang="eng">
-               <foreign xml:lang="lat">eluentis</foreign> P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">clientis</foreign> P<hi rend="superscript">2</hi>L.</note>
-            <pb n="p.352"/>
+               <foreign xml:lang="lat">eluentis</foreign> P<hi rend="superscript">1</hi>: <foreign
+                  xml:lang="lat">clientis</foreign> P<hi rend="superscript">2</hi>L.</note>
+            <pb n="p.352" />
             <l n="80">
                <q rend="merge">obstipo capite et figentes lumine terram,</q>
             </l>
@@ -804,7 +844,7 @@
             <l n="90">qui dicit medico, iussus requiescere, postquam</l>
             <l n="91">tertia conpositas vidit nox currere venas,</l>
             <l n="92">de maiore domo modice sitiente lagoena</l>
-            <l n="93">lenia loturo sibi Surrentina rogavit. <note target="#n.352.1"/>
+            <l n="93">lenia loturo sibi Surrentina rogavit. <note target="#n.352.1" />
             </l>
             <l n="94">
                <q>heus bone, tu palles.</q>
@@ -823,17 +863,18 @@
             </l>
             <l n="98">turgidus hic epulis atque albo ventre lavatur,</l>
             <l n="99">gutture sulpureas lente exhalante mefites.</l>
-            <l n="100">sed tremor inter vina subit calidumque trientem <note target="#n.352.2"/>
+            <l n="100">sed tremor inter vina subit calidumque trientem <note target="#n.352.2" />
             </l>
             <l n="101">excutit e manibus, dentes crepuere refecti,</l>
             <l n="102">uncta cadunt laxis tunc pulmentaria labris.</l>
             <l n="103">hinc tuba, candelae, tandemque beatulus alto</l>
             <note xml:id="n.352.1" xml:lang="eng">
-               <foreign xml:lang="lat">rogavit</foreign> P: <foreign xml:lang="lat">rogabit</foreign> P<hi rend="superscript">2</hi>: <foreign xml:lang="lat">rogabis</foreign> aL.</note>
+               <foreign xml:lang="lat">rogavit</foreign> P: <foreign xml:lang="lat">rogabit</foreign>
+               P<hi rend="superscript">2</hi>: <foreign xml:lang="lat">rogabis</foreign> aL.</note>
             <note xml:id="n.352.2" xml:lang="eng">
                <foreign xml:lang="lat">triental</foreign>
                <foreign xml:lang="grc">f</foreign>.</note>
-            <pb n="p.354"/>
+            <pb n="p.354" />
             <l n="104">conpositus lecto crassisque lutatus amomis</l>
             <l n="105">in portam rigidas calces extendit, at illum</l>
             <l n="106">hesterni capite induto subiere Quirites.</l>
@@ -855,7 +896,7 @@
             <l n="117">scintillant oculi, dicisque facisque quod ipse</l>
             <l n="118">non sani esse hominis non sanus iuret Orestes.</l>
          </div>
-         <pb n="p.358"/>
+         <pb n="p.358" />
          <div n="4" type="satire">
             <l n="1">
                <q>Rem populi tractas?</q> barbatum haec crede</l>
@@ -868,7 +909,8 @@
             <l n="8">maiestate manus, quid deinde loquere? <q>Quirites,</q>
             </l>
             <l n="9">
-               <q rend="merge">hoc puta <note target="#n.358.1"/> non iustum est; illud male,rectius illud.</q>
+               <q rend="merge">hoc puta <note target="#n.358.1" /> non iustum est; illud
+                  male,rectius illud.</q>
             </l>
             <l n="10">scis etenim iustum gemina suspendere lance</l>
             <l n="11">ancipitis librae, rectum discernis ubi inter</l>
@@ -878,8 +920,9 @@
             <l n="15">ante diem blando caudam iactare popello</l>
             <l n="16">desinis, Anticyras melior sorbere meracas?</l>
             <note xml:id="n.358.1" xml:lang="eng">
-               <foreign xml:lang="lat">puto</foreign> P<hi rend="superscript">2</hi>A<hi rend="superscript">2</hi>L.</note>
-            <pb n="p.360"/>
+               <foreign xml:lang="lat">puto</foreign> P<hi rend="superscript">2</hi>A<hi
+                  rend="superscript">2</hi>L.</note>
+            <pb n="p.360" />
             <l n="17" rend="indent">Quae tibi summa boni est? uncta vixisse patella</l>
             <l n="18">semper et adsiduo curata cuticula sole?</l>
             <l n="19">expecta, haut aliud respondeat haec anus. i nunc,</l>
@@ -888,7 +931,7 @@
             <l n="21">dum ne deterius sapiat pannucia Baucis,</l>
             <l n="22">cum bene discincto cantavcrit ocima vernae.</l>
             <l n="23" rend="indent">Vt nemo in sese temptat descendere, nemo,</l>
-            <l n="24">sed praecedenti <note target="#n.360.1"/> spectatur mantica tergo!</l>
+            <l n="24">sed praecedenti <note target="#n.360.1" /> spectatur mantica tergo!</l>
             <l n="25">quaesieris <q>nostin Vettidi praedia?</q>
                <q>cuius?</q>
             </l>
@@ -908,7 +951,8 @@
                <q rend="merge">ingemit <q>hoc bene sit</q> tunicatum cum sale mordens</q>
             </l>
             <l n="31">
-               <q rend="merge">caepe, et farrata <note target="#n.360.2"/> pueris plaudentibus olla <note target="#n.360.2"/>
+               <q rend="merge">caepe, et farrata <note target="#n.360.2" /> pueris plaudentibus olla <note
+                     target="#n.360.2" />
                </q>
             </l>
             <l n="32">
@@ -940,8 +984,9 @@
             <note xml:id="n.360.1" xml:lang="eng">
                <foreign xml:lang="lat">praecedentis</foreign> L.</note>
             <note xml:id="n.360.2" xml:lang="eng">
-               <foreign xml:lang="lat">farrata olle</foreign> PA<hi rend="superscript">2</hi>: <foreign xml:lang="lat">farratam ollam</foreign> L.</note>
-            <pb n="p.362"/>
+               <foreign xml:lang="lat">farrata olle</foreign> PA<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">farratam ollam</foreign> L.</note>
+            <pb n="p.362" />
             <l n="44">caecum vulnus habes, sed lato balteus auro</l>
             <l n="45">praetegit. ut mavis, da verba et decipe nervos,</l>
             <l n="46">si potes. <q>Egregium cum me vicinia dicat,</q>
@@ -954,7 +999,7 @@
             <l n="51">respue quod non es, tollat sua munera cerdo;</l>
             <l n="52">tecum habita: notis quam sit tibi curta supellex.</l>
          </div>
-         <pb n="p.368"/>
+         <pb n="p.368" />
          <div n="5" type="satire">
             <l n="1">Vatibus hic mos est, centum sibi poscere voces,</l>
             <l n="2">centum ora et linguas optare in carmina centum,</l>
@@ -987,7 +1032,7 @@
             <l n="13">
                <q rend="merge">nec seloppo tumidas intendis rumpere buccas.</q>
             </l>
-            <pb n="p.370"/>
+            <pb n="p.370" />
             <l n="14">
                <q rend="merge">verba togae sequeris iunctura callidus acri,</q>
             </l>
@@ -998,14 +1043,16 @@
                <q rend="merge">doctus et ingenuo culpam deligere ludo.</q>
             </l>
             <l n="17">
-               <q rend="merge">hinc trahe quae dicis <note target="#n.370.1"/> mensasque relinque Mycenis</q>
+               <q rend="merge">hinc trahe quae dicis <note target="#n.370.1" /> mensasque relinque
+                  Mycenis</q>
             </l>
             <l n="18">
                <q rend="merge">cum capite et pedibus plebemque prandia noris.</q>
             </l>
-            <l n="19" rend="indent">Non equidem hoc studeo, pullatis <note target="#n.370.2"/> ut mihi nugis</l>
+            <l n="19" rend="indent">Non equidem hoc studeo, pullatis <note target="#n.370.2" /> ut
+               mihi nugis</l>
             <l n="20">pagina turgescat dare pondus idonea fumo.</l>
-            <l n="21">secrete <note target="#n.370.3"/> loquimur, tibi nunc hortante Camena</l>
+            <l n="21">secrete <note target="#n.370.3" /> loquimur, tibi nunc hortante Camena</l>
             <l n="22">excutienda damus praecordia, quantaque nostrae</l>
             <l n="23">pars tua sit, Cornute, animae, tibi, dulcis amice,</l>
             <l n="24">ostendisse iuvat, pulsa dinoscere cautus</l>
@@ -1021,11 +1068,12 @@
             <l n="34">cumque iter ambiguum est et vitae nescius error</l>
             <note xml:id="n.370.1" xml:lang="eng">
                <foreign xml:lang="lat">dicas</foreign> L.</note>
-            <note xml:id="n.370.2" xml:lang="eng">Some MSS. have <foreign xml:lang="lat">bullatis</foreign>.</note>
+            <note xml:id="n.370.2" xml:lang="eng">Some MSS. have <foreign xml:lang="lat">bullatis</foreign>
+               .</note>
             <note xml:id="n.370.3" xml:lang="eng">
                <foreign xml:lang="lat">secreti</foreign> LA<hi rend="superscript">2</hi>.</note>
-            <pb n="p.372"/>
-            <l n="35">diducit <note target="#n.372.1"/> trepidas ramosa in compita mentes,</l>
+            <pb n="p.372" />
+            <l n="35">diducit <note target="#n.372.1" /> trepidas ramosa in compita mentes,</l>
             <l n="36">me tibi supposui. teneros tu suscipis annos</l>
             <l n="37">Socratico, Cornute, sinu. tunc fallere sollers</l>
             <l n="38">adposita intortos extendit regula mores</l>
@@ -1043,8 +1091,9 @@
             <l n="50">Saturnumque gravem nostro Iove frangimus una,</l>
             <l n="51">nescio quod certe est quod me tibi temperat astrum.</l>
             <note xml:id="n.372.1" xml:lang="eng">
-               <foreign xml:lang="lat">diducit</foreign> A<hi rend="superscript">2</hi> and others: <foreign xml:lang="lat">deducit</foreign> Pa Büch. 1893, Owen.</note>
-            <pb n="p.374"/>
+               <foreign xml:lang="lat">diducit</foreign> A<hi rend="superscript">2</hi> and others: <foreign
+                  xml:lang="lat">deducit</foreign> Pa Büch. 1893, Owen.</note>
+            <pb n="p.374" />
             <l n="52" rend="indent">Mille hominum species et rerum discolor usus;</l>
             <l n="53">velle suum cuique est, nec voto vivitur uno.</l>
             <l n="54">mercibus hic Italis mutat sub sole recenti</l>
@@ -1052,30 +1101,34 @@
             <l n="56">hic satur inriguo mavult turgescere somno,</l>
             <l n="57">hic campo indulget, hunc alea decoquit, ille</l>
             <l n="58">in venerem putris; set cum lapidosa cheragra</l>
-            <l n="59">fecerit <note target="#n.374.1"/> articulos veteris ramalia fagi,</l>
+            <l n="59">fecerit <note target="#n.374.1" /> articulos veteris ramalia fagi,</l>
             <l n="60">tunc crassos transisse dies lucemque palustrem</l>
-            <l n="61">et sibi iam seri vitam <note target="#n.374.2"/> ingemuere relictam. <note target="#n.374.2"/>
+            <l n="61">et sibi iam seri vitam <note target="#n.374.2" /> ingemuere relictam. <note
+                  target="#n.374.2" />
             </l>
             <l n="62" rend="indent">At te nocturnis iuvat inpallescere chartis;</l>
             <l n="63">cultor enim iuvenum purgatas inseris aures</l>
             <l n="64">fruge Cleanthea. petite hinc puerique senesque</l>
             <l n="65">finem animo certum miserisque viatica canis.</l>
             <l n="66">
-               <q>cras hoc fiet.</q> idem cras fiet. <note target="#n.374.3"/>
+               <q>cras hoc fiet.</q> idem cras fiet. <note target="#n.374.3" />
                <q>quid? quasi magnum</q>
             </l>
             <l n="67">
-               <q rend="merge">finem animo certum miserisque viatica canis.nempe diem donas?</q> sed cum lux altera venit,</l>
+               <q rend="merge">finem animo certum miserisque viatica canis.nempe diem donas?</q> sed
+               cum lux altera venit,</l>
             <l n="68">iam cras hesternum consumpsimus; ecce aliud cras</l>
             <l n="69">egerit bos annos et semper paulum erit ultra,</l>
             <l n="70">nam quamvis prope te, quamvis temone sub uno</l>
             <note xml:id="n.374.1" xml:lang="eng">
-               <foreign xml:lang="lat">fecerit</foreign> a Büch: <foreign xml:lang="lat">fregerit</foreign> PL Sch. Owen.</note>
+               <foreign xml:lang="lat">fecerit</foreign> a Büch: <foreign xml:lang="lat">fregerit</foreign>
+               PL Sch. Owen.</note>
             <note xml:id="n.374.2" xml:lang="eng">
-               <foreign xml:lang="lat">vitam relictam</foreign> aL Büch. 1893, Owen: <foreign xml:lang="lat">vita relicta</foreign> P (see iii. 38), Büch. 1910.</note>
+               <foreign xml:lang="lat">vitam relictam</foreign> aL Büch. 1893, Owen: <foreign
+                  xml:lang="lat">vita relicta</foreign> P (see iii. 38), Büch. 1910.</note>
             <note xml:id="n.374.3" xml:lang="eng">
                <foreign xml:lang="lat">cras fiat</foreign> a. So Housm.</note>
-            <pb n="p.376"/>
+            <pb n="p.376" />
             <l n="71">vertentem sese frustra sectabere canthum,</l>
             <l n="72">cum rota posterior curras et in axe secundo.</l>
             <l n="73" rend="indent">Libertate opus est. non hac, ut quisque Velina</l>
@@ -1101,7 +1154,7 @@
             <l n="87">
                <q>hoc reliqum accipio, <q>licet</q> illud et <q>ut volo</q> tolle.</q>
             </l>
-            <pb n="p.378"/>
+            <pb n="p.378" />
             <l n="88" rend="indent">
                <q>Vindicta postquam meus a praetore recessi,</q>
             </l>
@@ -1117,53 +1170,62 @@
             <l n="94">officia, atque usum rapidae permittere vitae;</l>
             <l n="95">sambucam citius caloni aptaveris alto.</l>
             <l n="96">stat contra ratio et secretam garrit in aurem,</l>
-            <l n="97">ne liceat facere id quod quis vitiabit <note target="#n.378.1"/> agendo,</l>
+            <l n="97">ne liceat facere id quod quis vitiabit <note target="#n.378.1" /> agendo,</l>
             <l n="98">publica lex hominum naturaque continet hoc fas,</l>
             <l n="99">ut teneat vetitos inscitia debilis actus,</l>
             <l n="100">diluis elleborum certo conpescere puncto</l>
             <l n="101">nescius examen: vetat hoc natura medendi.</l>
             <l n="102">navem si poscat sibi peronatus arator</l>
-            <l n="103">Luciferi rudis, exclamet <note target="#n.378.2"/> Melicerta perisse</l>
+            <l n="103">Luciferi rudis, exclamet <note target="#n.378.2" /> Melicerta perisse</l>
             <l n="104">frontem de rebus. Tibi recto vivere talo</l>
-            <l n="105">ars dedit et veri <note target="#n.378.3"/> speciem <note target="#n.378.4"/> dinoscere calles,</l>
+            <l n="105">ars dedit et veri <note target="#n.378.3" /> speciem <note target="#n.378.4" />
+               dinoscere calles,</l>
             <l n="106">nequa subaerato mendosum tinniat auro?</l>
             <note xml:id="n.378.1" xml:lang="eng">
-               <foreign xml:lang="lat">vitiabit</foreign> L<hi rend="superscript">2</hi> Sch.: <foreign xml:lang="lat">vitiavit</foreign> PaL<hi rend="superscript">1</hi>
+               <foreign xml:lang="lat">vitiabit</foreign> L<hi rend="superscript">2</hi> Sch.: <foreign
+                  xml:lang="lat">vitiavit</foreign> PaL<hi rend="superscript">1</hi>
             </note>
             <note xml:id="n.378.2" xml:lang="eng">
                <foreign xml:lang="lat">exclamat</foreign> P.</note>
             <note xml:id="n.378.3" xml:lang="eng">
-               <foreign xml:lang="lat">veri</foreign> aL Prisc.: <foreign xml:lang="lat">veris</foreign> P Büch. Owen.</note>
+               <foreign xml:lang="lat">veri</foreign> aL Prisc.: <foreign xml:lang="lat">veris</foreign>
+               P Büch. Owen.</note>
             <note xml:id="n.378.4" xml:lang="eng">
-               <foreign xml:lang="lat">speciem</foreign> P Prisc.: <foreign xml:lang="lat">specimen</foreign> aL.</note>
-            <pb n="p.380"/>
+               <foreign xml:lang="lat">speciem</foreign> P Prisc.: <foreign xml:lang="lat">specimen</foreign>
+               aL.</note>
+            <pb n="p.380" />
             <l n="107">quaeque sequenda forent quaeque evitanda vicissim,</l>
             <l n="108">illa prius creta, mox haec carbone notasti?</l>
             <l n="109">es modicus voti, presso lare, dulcis amicis?</l>
             <l n="110">iam nunc adstringas, iam nunc granaria laxes,</l>
             <l n="111">inque luto fixum possis transcendere nummum</l>
-            <l n="112">nec gluttu <note target="#n.380.1"/> sorbere salivam Mercurialem?</l>
+            <l n="112">nec gluttu <note target="#n.380.1" /> sorbere salivam Mercurialem?</l>
             <l n="113">
                <q> haec mea sunt, teneo</q> cum vere dixeris, esto</l>
             <l n="114">liberque ac sapiens praetoribus ac Iove dextro,</l>
             <l n="115">sin tu, cum fueris nostrae paulo ante farinae,</l>
             <l n="116">pelliculam veterem retines et fronte politus</l>
             <l n="117">astutam vapido servas in pectore volpem,</l>
-            <l n="118">quae dederam supra relego <note target="#n.380.2"/> funemque reduco:</l>
+            <l n="118">quae dederam supra relego <note target="#n.380.2" /> funemque reduco:</l>
             <l n="119">nil tibi concessit ratio; digitum exere, peccas,</l>
             <l n="120">et quid tam parvum est? sed nullo ture litabis,</l>
             <l n="121">haereat in stultis brevis ut semuncia recti,</l>
             <l n="122">haec miscere nefas; nec, cum sis cetera fossor,</l>
             <l n="123">tris tantum ad numeros satyrum moveare Bathylli.</l>
             <l n="124" rend="indent">
-               <q> Liber ego.</q> unde datum hoc sumis, <note target="#n.380.3"/> tot subdite rebus?</l>
+               <q> Liber ego.</q> unde datum hoc sumis, <note target="#n.380.3" /> tot subdite
+               rebus?</l>
             <l n="125">an dominum ignoras nisi quem vindicta relaxat?</l>
             <note xml:id="n.380.1" xml:lang="eng">
-               <foreign xml:lang="lat">gluttu</foreign> P: <foreign xml:lang="lat">glutto</foreign> aL.</note>
-            <note xml:id="n.380.2" xml:lang="eng">Some MSS. have <foreign xml:lang="lat">repeto</foreign>.</note>
+               <foreign xml:lang="lat">gluttu</foreign> P: <foreign xml:lang="lat">glutto</foreign>
+               aL.</note>
+            <note xml:id="n.380.2" xml:lang="eng">Some MSS. have <foreign xml:lang="lat">repeto</foreign>
+               .</note>
             <note xml:id="n.380.3" xml:lang="eng">
-               <foreign xml:lang="lat">sumis</foreign> PL<hi rend="superscript">2</hi>: <foreign xml:lang="lat">sentis</foreign> aL<hi rend="superscript">1</hi> (cf. Hor. <title>Sat.</title> II. ii. 31).</note>
-            <pb n="p.382"/>
+               <foreign xml:lang="lat">sumis</foreign> PL<hi rend="superscript">2</hi>: <foreign
+                  xml:lang="lat">sentis</foreign> aL<hi rend="superscript">1</hi> (cf. Hor. <title>
+               Sat.</title> II. ii. 31).</note>
+            <pb n="p.382" />
             <l n="126">
                <q>i puer et strigiles Crispini ad balnea defer!</q>
             </l>
@@ -1176,7 +1238,8 @@
             </l>
             <l n="133">
                <q rend="merge">surge.</q> negas, instat: <q>surge,</q> inquit, <q>non queo.</q>
-               <q>surge.</q>
+               <q>
+               surge.</q>
             </l>
             <l n="134">
                <q>et quid agam?</q>
@@ -1186,7 +1249,8 @@
                <q rend="merge">castoreum, stuppas, hebenum, tus, lubrica Coa;</q>
             </l>
             <l n="136">
-               <q rend="merge">tolle recens primus piper ex <note target="#n.382.1"/> sitiente camelo;</q>
+               <q rend="merge">tolle recens primus piper ex <note target="#n.382.1" /> sitiente
+                  camelo;</q>
             </l>
             <l n="137">
                <q rend="merge">verte aliquid; iura.</q>
@@ -1194,7 +1258,7 @@
                <q>eheu,</q>
             </l>
             <l n="138">
-               <q rend="merge">baro, <note target="#n.382.2"/> regustatum digito terebrare salinum</q>
+               <q rend="merge">baro, <note target="#n.382.2" /> regustatum digito terebrare salinum</q>
             </l>
             <l n="139">
                <q rend="merge">contentus perages, si vivere cum Iove tendis.</q>
@@ -1210,10 +1274,12 @@
             </l>
             <note xml:id="n.382.1" xml:lang="eng">
                <foreign xml:lang="lat">e</foreign>
-               <foreign xml:lang="grc">f</foreign>: <foreign xml:lang="lat">et</foreign> PaL; and so Housm.</note>
+               <foreign xml:lang="grc">f</foreign>: <foreign
+                  xml:lang="lat">et</foreign> PaL; and so Housm.</note>
             <note xml:id="n.382.2" xml:lang="eng">
-               <foreign xml:lang="lat">baro</foreign> P<hi rend="superscript">1</hi>a: varo P<hi rend="superscript">2</hi>A<hi rend="superscript">2</hi>L.</note>
-            <pb n="p.384"/>
+               <foreign xml:lang="lat">baro</foreign> P<hi rend="superscript">1</hi>a: varo P<hi
+                  rend="superscript">2</hi>A<hi rend="superscript">2</hi>L.</note>
+            <pb n="p.384" />
             <l n="145">
                <q rend="merge">intumuit, quam non extinxerit urna cicutae?</q>
             </l>
@@ -1224,13 +1290,13 @@
                <q rend="merge">cena sit in transtro Veientanumque rubellum</q>
             </l>
             <l n="148">
-               <q rend="merge">exhalet <note target="#n.384.1"/> vapida laesum pice sessilis obba?</q>
+               <q rend="merge">exhalet <note target="#n.384.1" /> vapida laesum pice sessilis obba?</q>
             </l>
             <l n="149">
                <q rend="merge">quid petis? ut nummi, quos hic quincunce modesto</q>
             </l>
             <l n="150">
-               <q rend="merge">nutrieras, peragant <note target="#n.384.2"/> avidos sudore deunces?</q>
+               <q rend="merge">nutrieras, peragant <note target="#n.384.2" /> avidos sudore deunces?</q>
             </l>
             <l n="151">
                <q rend="merge">indulge genio, carpamns dulcia, nostrum est</q>
@@ -1259,10 +1325,11 @@
                <q rend="merge">cognatis? an rem patriam rumore sinistro</q>
             </l>
             <note xml:id="n.384.1" xml:lang="eng">
-               <foreign xml:lang="lat">exalet</foreign> P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">exalat</foreign> P<hi rend="superscript">2</hi>.</note>
+               <foreign xml:lang="lat">exalet</foreign> P<hi rend="superscript">1</hi>: <foreign
+                  xml:lang="lat">exalat</foreign> P<hi rend="superscript">2</hi>.</note>
             <note xml:id="n.384.2" xml:lang="eng">
                <foreign xml:lang="lat">pergant</foreign> a.</note>
-            <pb n="p.386"/>
+            <pb n="p.386" />
             <l n="165">
                <q rend="merge">limen ad obscaenum frangam, dum Chrysidis udas</q>
             </l>
@@ -1287,7 +1354,8 @@
             </l>
             <l n="172">
                <q rend="merge">
-                  <q>quidnam igitur faciam? nec nunc, cum arcessat <note target="#n.386.1"/> et ultro</q>
+                  <q>quidnam igitur faciam? nec nunc, cum arcessat <note target="#n.386.1" /> et
+                     ultro</q>
                </q>
             </l>
             <l n="173">
@@ -1295,7 +1363,8 @@
                   <q rend="merge">supplicet, accedam?</q> si totus et integer illinc</q>
             </l>
             <l n="174">
-               <q rend="merge">exieras,<note target="#n.386.2"/> nec nunc.</q> hic hic quod quaerimus, hic est,</l>
+               <q rend="merge">exieras,<note target="#n.386.2" /> nec nunc.</q> hic hic quod
+               quaerimus, hic est,</l>
             <l n="175">non in festuca, lictor quam iactat ineptus.</l>
             <l n="176" rend="indent">Ius habet ille sui, palpo quem ducit hiantem</l>
             <l n="177">cretata ambitio? vigila et cicer ingere large</l>
@@ -1305,10 +1374,11 @@
             <l n="181">dispositae pinguem nebulam vomuere lucernae</l>
             <l n="182">portantes violas rubrumque amplexa catinum</l>
             <note xml:id="n.386.1" xml:lang="eng">
-               <foreign xml:lang="lat">accessor</foreign> a: <foreign xml:lang="lat">accersor</foreign> L.</note>
+               <foreign xml:lang="lat">accessor</foreign> a: <foreign xml:lang="lat">accersor</foreign>
+               L.</note>
             <note xml:id="n.386.2" xml:lang="eng">
                <foreign xml:lang="lat">exieris</foreign> L<hi rend="superscript">1</hi>.</note>
-            <pb n="p.388"/>
+            <pb n="p.388" />
             <l n="183">cauda natat thynni, tumet alba fidelia vino,</l>
             <l n="184">labra moves tacitus recutitaque sabbata palles.</l>
             <l n="185">tum nigri lemures ovoque pericula rupto,</l>
@@ -1319,26 +1389,30 @@
             <l n="190">continuo crassum ridet Pulfenius ingens</l>
             <l n="191">et centum Graecos curto centusse licetur.</l>
          </div>
-         <pb n="p.392"/>
+         <pb n="p.392" />
          <div n="6" type="satire">
             <l n="1" rend="indent">Admovit iam bruma foco te, Basse, Sabino?</l>
             <l n="2">iamne lyra et tetrico vivunt tibi pectine chordae?</l>
             <l n="3">mire opifex numeris veterum primordia vocum</l>
             <l n="4">atque marem strepitum fidis intendisse Latinae,</l>
             <l n="5">mox iuvenes agitare iocos et pollice honesto</l>
-            <l n="6">egregius <note target="#n.392.1"/> lusisse senex.<note target="#n.392.2"/> mihi nune Ligus ora</l>
-            <l n="7">intepet hibernatque <note target="#n.392.3"/> meum mare, qua latus ingens</l>
+            <l n="6">egregius <note target="#n.392.1" /> lusisse senex.<note target="#n.392.2" />
+               mihi nune Ligus ora</l>
+            <l n="7">intepet hibernatque <note target="#n.392.3" /> meum mare, qua latus ingens</l>
             <l n="8">dant scopuli et multa litus se valle receptat.</l>
             <l n="9">
                <q>Lunai portum, est operae, cognoscite, cives</q>:</l>
             <l n="10">cor iubet hoc Enni, postquam destertuit esse</l>
             <l n="11">Maeonides, quintus pavone ex Pythagoreo.</l>
             <note xml:id="n.392.1" xml:lang="eng">
-               <foreign xml:lang="lat">aegregius</foreign> a: <foreign xml:lang="lat">aegraecius</foreign> P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">aegregios</foreign> P<hi rend="superscript">2</hi>L.</note>
+               <foreign xml:lang="lat">aegregius</foreign> a: <foreign xml:lang="lat">aegraecius</foreign>
+               P<hi rend="superscript">1</hi>: <foreign xml:lang="lat">aegregios</foreign> P<hi
+                  rend="superscript">2</hi>L.</note>
             <note xml:id="n.392.2" xml:lang="eng">
                <foreign xml:lang="lat">senes</foreign> P<hi rend="superscript">2</hi>L.</note>
-            <note xml:id="n.392.3" xml:lang="eng">Housm. suggests <foreign xml:lang="lat">mite tepet vernatque</foreign> (l. c. pp. 26-7).</note>
-            <pb n="p.394"/>
+            <note xml:id="n.392.3" xml:lang="eng">Housm. suggests <foreign xml:lang="lat">mite tepet
+               vernatque</foreign> (l. c. pp. 26-7).</note>
+            <pb n="p.394" />
             <l n="12" rend="indent">Hic ego securus volgi et quid praeparet auster</l>
             <l n="13">infelix pecori securus et angulus ille</l>
             <l n="14">vieini nostro quia pinguior; et si adeo omnes</l>
@@ -1351,7 +1425,7 @@
             <l n="21">ipse sacrum inrorans patinae piper; hic bona dente</l>
             <l n="22">grandia magnanimus peragit puer. utar ego, utar,</l>
             <l n="23">nec rhombos ideo libertis ponere lautus,</l>
-            <l n="24">nec tenuis sollers turdarum <note target="#n.394.1"/> nosse salivas.</l>
+            <l n="24">nec tenuis sollers turdarum <note target="#n.394.1" /> nosse salivas.</l>
             <l n="25" rend="indent">Messe tenus propria vive et granaria, fas est,</l>
             <l n="26">emole. quid metuas? occa, et seges altera in herba est.</l>
             <l n="27">at vocat officium, trabe rupta Bruttia saxa</l>
@@ -1364,8 +1438,9 @@
             <l n="34">negleget iratus, quod rem curtaveris; urnae</l>
             <l n="35">ossa inodora dabit, seu spirent cinnama surdum</l>
             <note xml:id="n.394.1" xml:lang="eng">
-               <foreign xml:lang="lat">turdarum</foreign> P<hi rend="superscript">1</hi>Sch.: <foreign xml:lang="lat">turdorum</foreign> aP<hi rend="superscript">2</hi>L.</note>
-            <pb n="p.396"/>
+               <foreign xml:lang="lat">turdarum</foreign> P<hi rend="superscript">1</hi>Sch.: <foreign
+                  xml:lang="lat">turdorum</foreign> aP<hi rend="superscript">2</hi>L.</note>
+            <pb n="p.396" />
             <l n="36">seu ceraso peccent casiae, nescire paratus:</l>
             <l n="37">
                <q>tune bona incolumis minuas?</q> et Bestius urguet</l>
@@ -1388,7 +1463,7 @@
             <l n="49">egregie gestas induco. quis vetat? aude.</l>
             <l n="50">vae, nisi conives! oleum artocreasque popello</l>
             <l n="51">largior, an prohibes? dic clare <q>non adeo,</q> inquis,</l>
-            <pb n="p.398"/>
+            <pb n="p.398" />
             <l n="52">
                <q>exossatus ager iuxta est.</q> age, si mihi nulla</l>
             <l n="53">iam reliqua ex amitis, patruelis nulla, proneptis</l>
@@ -1397,7 +1472,7 @@
             <l n="56">clivumque ad Virbi, praesto est mihi Manius heres,</l>
             <l n="57">
                <q>progenies terrae?</q> quaere ex me quis mihi quartus</l>
-            <l n="58">sit pater: haut prompte, dicam tamen; adde etiam  unum,</l>
+            <l n="58">sit pater: haut prompte, dicam tamen; adde etiam unum,</l>
             <l n="59">unum etiam: terrae est iam filius, et mihi ritu</l>
             <l n="60">Manius hic generis prope maior avunculus exit.</l>
             <l n="61">qui prior es, cur me in decursu lampada poscis?</l>
@@ -1406,8 +1481,8 @@
             <l n="64">
                <q>dest aliquid summae.</q> minui mihi, sed tibi totum est</l>
             <l n="65">quidquid id est. ubi sit, fuge quaerere, quod mihi quondam</l>
-            <pb n="p.400"/>
-            <l n="66">legarat Tadius, neu dicta repone <note target="#n.400.1"/> paterna,</l>
+            <pb n="p.400" />
+            <l n="66">legarat Tadius, neu dicta repone <note target="#n.400.1" /> paterna,</l>
             <l n="67">
                <q>faenoris accedat merces, hinc exime sumptus.</q>
             </l>
@@ -1428,10 +1503,18 @@
                <q rend="merge">iam decies redit in rugam.</q> depunge ubi sistam:</l>
             <l n="80">inventus, Chrysippe, tui finitor acervi.</l>
             <note xml:id="n.400.1" xml:lang="eng">
-               <foreign xml:lang="lat">repone</foreign> L and old edd. Büch. has <foreign xml:lang="lat">neu dicta</foreign>
-               <quote xml:lang="lat">pone paterna  <gap reason="omitted"/> sumptus.</quote>
-               <quote xml:lang="lat">quid reliqum est?</quote> Housm. suggests <foreign xml:lang="lat">neu dic ita</foreign>, <quote xml:lang="lat">pone paterna  <gap reason="omitted"/> reliqum est.</quote>
-               <foreign xml:lang="lat">reliqum?</foreign> and explains, <quote>Do not say <q>state what you inherited, add interest, subtract expenditure, and see how much is left.</q> Left, quotha?</quote> (l.c. p. 31). <foreign xml:lang="lat">ita</foreign> then means <gloss>as follows.</gloss> Büch. takes <foreign xml:lang="lat">pone</foreign> to mean <gloss>invest.</gloss>
+               <foreign xml:lang="lat">repone</foreign> L and old edd. Büch. has <foreign
+                  xml:lang="lat">neu dicta</foreign>
+               <quote xml:lang="lat">pone paterna <gap
+                     reason="omitted" /> sumptus.</quote>
+               <quote xml:lang="lat">quid reliqum est?</quote>
+               Housm. suggests <foreign xml:lang="lat">neu dic ita</foreign>, <quote xml:lang="lat">pone
+               paterna <gap reason="omitted" /> reliqum est.</quote>
+               <foreign xml:lang="lat">reliqum?</foreign>
+               and explains, <quote>Do not say <q>state what you inherited, add interest, subtract
+               expenditure, and see how much is left.</q> Left, quotha?</quote> (l.c. p. 31). <foreign
+                  xml:lang="lat">ita</foreign> then means <gloss>as follows.</gloss> Büch. takes <foreign
+                  xml:lang="lat">pone</foreign> to mean <gloss>invest.</gloss>
             </note>
          </div>
       </body>

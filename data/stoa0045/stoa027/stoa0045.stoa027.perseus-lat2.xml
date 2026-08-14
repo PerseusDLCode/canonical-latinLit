@@ -40,23 +40,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/34/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/34/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type='section']" delim=":" unit="section"
+                  n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -74,7 +78,7 @@
             <l n="3">at nos aeternum cohibentes pectore cultum</l>
             <l n="4">intemeratorum vim continuamus honorum.</l>
             <l n="5">annua cura sacris, iugis reverentia nobis. </l>
-            <pb n="v.1.p.36"/>
+            <pb n="v.1.p.36" />
             <l n="6">Magne pater rerum, cui terra et pontus et aer</l>
             <l n="7">Tartaraque et picti servit plaga lactea caeli,</l>
             <l n="8">noxia quem scelerum plebis tremit almaque russum</l>
@@ -93,7 +97,7 @@
             <l n="21">pigra inmortali vegetaret membra lavacro,</l>
             <l n="22">trina fides auctore uno, spes certa salutis</l>
             <l n="22b">
-               <gap reason="lost"/>
+               <gap reason="lost" />
                <add>da veniam et praesta speratae munera vitae</add>
             </l>
             <l n="23">hunc numerum iunctis virtutibus amplectenti.</l>
@@ -103,7 +107,7 @@
             <l n="27">numine partitur regnum neque dividit unum,</l>
             <l n="28">omnia solus habens atque omnia dilargitus.</l>
             <l n="29">hos igitur nobis trina pietate vigentes,</l>
-            <pb n="v.1.p.38"/>
+            <pb n="v.1.p.38" />
             <l n="30">rectores terrae placidos caelique ministros, </l>
             <l n="31">Christe, aput aeternum placabilis adsere patrem.</l>
          </div>

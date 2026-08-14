@@ -41,23 +41,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/348/mode/2up?">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/348/mode/2up?">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type='section']" delim=":" unit="section"
+                  n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -65,14 +69,16 @@
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change who="Thibault Clerice" when="2015-12-04">Renumbered last section (1-&gt;19), to have continuous numbering</change>
+         <change who="Thibault Clerice" when="2015-12-04">Renumbered last section (1-&gt;19), to
+            have continuous numbering</change>
          <change when="2015-12-07" who="Thibault Clérice">Epidoc and CTS. URN updated accordingly</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa017.perseus-lat2">
          <div n="1" type="section">
-            <head>AUSONIUS HESPERIO FILIO SAL (Consulari Libro subiciendi quem ego ex cunctis Consulibus unum coegi. Gregorio ex Praef. )</head>
+            <head>AUSONIUS HESPERIO FILIO SAL (Consulari Libro subiciendi quem ego ex cunctis
+               Consulibus unum coegi. Gregorio ex Praef. )</head>
             <l n="1">IGNOTA aeternae ne sint tibi tempora Romae,</l>
             <l n="2">regibus et patrum ducta sub imperiis,</l>
             <l n="3">digessi fastos et nomina praepetis aevi,</l>
@@ -83,7 +89,7 @@
             <l n="8">ut mea digessit pagina praeteritos.</l>
             <l n="9">exemplum iam patris habes, ut protinus 3 et te</l>
             <l n="10">adgreget Ausoniis purpura consulibus. </l>
-            <pb n="v.1.p.350"/>
+            <pb n="v.1.p.350" />
          </div>
          <div n="2" type="section">
             <head>SUPPUTATIO AB URBE CONDITA IN CONSULATUM</head>
@@ -107,7 +113,7 @@
             <l n="22">consulis Ausonii nomen ad usque leges,</l>
             <l n="23">fors erit, ut, lustrum cum se cumulaverit istis, </l>
             <l n="24">confectam Proculus signet Olympiadam.</l>
-            <pb n="v.1.p.352"/>
+            <pb n="v.1.p.352" />
          </div>
       </body>
    </text>

@@ -40,25 +40,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/ausoniuswithengl02ausouoft/page/154/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/ausoniuswithengl02ausouoft/page/154/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n">
-                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n" n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
                </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-poem-line"/>
+            <catRef scheme="#perseus-genre" target="#verse-poem-line" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -94,7 +96,7 @@
             <l n="14">seu iubeat duris vermibus esse cibum,</l>
             <l n="15">huic ego. quod nobis superest ignobilis oti, </l>
             <l n="16">deputo, sive legat, quae dabo, sive tegat.</l>
-            <pb n="v.1.p.156"/>
+            <pb n="v.1.p.156" />
          </div>
          <div n="2" type="poem">
             <head> EXHORTATIO AD MODESTIAM</head>
@@ -129,7 +131,7 @@
             <head>IN EUNOMUM MEDICUM</head>
             <l n="1">LANGUENTEM Gaium moriturum dixerat olim</l>
             <l n="2">Eunomus. evasit fati ope, non medici.</l>
-            <pb n="v.1.p.158"/>
+            <pb n="v.1.p.158" />
             <l n="3">paulo post ipsum videt, aut vidisse putavit,</l>
             <l n="4">pallentem et multa mortis in effigie.</l>
             <l n="5">
@@ -158,7 +160,7 @@
             <l n="2">nomen qui proprium cum vitio loquitur?</l>
             <l n="3">auxilium te nempe vocas, inseite magister?</l>
             <l n="4">da rectum casum: iam solicismus eris.</l>
-            <pb n="v.1.p.160"/>
+            <pb n="v.1.p.160" />
          </div>
          <div n="7" type="poem">
             <head>DE PHILOMUSO GRAMMATICO</head>
@@ -208,7 +210,7 @@
                <q>Cur id ais?</q>
                <q>Semper saxeus ipse fuit.</q>
             </l>
-            <pb n="v.1.p.162"/>
+            <pb n="v.1.p.162" />
          </div>
          <div n="12" type="poem">
             <head>IDEM</head>
@@ -251,7 +253,7 @@
             </l>
             <l n="2">GRATIA, quae tarda est, ingrata est. gratia namque</l>
             <l n="3">cum fieri properat, gratia grata magis.</l>
-            <pb n="v.1.p.164"/>
+            <pb n="v.1.p.164" />
          </div>
          <div n="17" type="poem">
             <head>EX EODEM</head>
@@ -284,7 +286,7 @@
             <head>IDEM</head>
             <l n="1">
                <foreign xml:lang="grc">Δόδρα ποτὸν καὶ ἀρτθμός, ἔλω μέλι, οἶνον,
-                            ἔλαιον</foreign>.</l>
+                  ἔλαιον</foreign>.</l>
             <l n="2">
                <foreign xml:lang="grc">ἄρτου, ἅλας. βοτάνην, ξωμόν. ὕδωρ, πέπερι</foreign>.</l>
          </div>
@@ -292,7 +294,7 @@
             <head>AD MARCUM AMICUM DE DISCORDIA QUAM DARET CUM PUELLIS</head>
             <l n="1">“HANC amo quae me odit. contra illam quae me amat, odi.</l>
             <l n="2">compone inter nos, si potes, alma Venus!”</l>
-            <pb n="v.1.p.166"/>
+            <pb n="v.1.p.166" />
             <l n="3">“ Perfacile id faciam: mores mutabo et amores;</l>
             <l n="4">oderit haec, amet haec.” <q>Rursus idem patiar.</q>
             </l>
@@ -352,7 +354,7 @@
             <head> DE EO QUI TESTAM HOMINIS INMISERICORDITER DISSIPARE VOLUIT</head>
             <l n="1">ANIECTA in triviis inhumati glabra iaccbat</l>
             <l n="2">testa hominis, nudum iam cute calvitium.</l>
-            <pb n="v.1.p.168"/>
+            <pb n="v.1.p.168" />
             <l n="3">fleverunt alii: fletu non motus Aehilas,</l>
             <l n="4">insuper et silicis verbere dissicuit.</l>
             <l n="5">eminus ergo icto rediit lapis ultor ab osse</l>
@@ -383,7 +385,7 @@
             <l n="5">bellandi fandique potens Augustus honoiem </l>
             <l n="6">bis meret, ut geminet titulos, qui proelia Musis</l>
             <l n="7">temperat et Getieum moderatur Apolline Martem. </l>
-            <pb n="v.1.p.170"/>
+            <pb n="v.1.p.170" />
             <l n="8">arma inter Chunosque truces furtoque nocentes</l>
             <l n="9">Sauromatas, quantum cessat de tempore belli,</l>
             <l n="10">indulget Clariis tantum inter castra Camenis. </l>
@@ -413,7 +415,7 @@
             <head>AD FONTEM DVNUVII IUSSU VALENTINIANI AUGUSTI</head>
             <l n="1">Illyricis regnator aquis, tibi, Nile, secundus</l>
             <l n="2">Danuvius laetum pro fero fonte caput.</l>
-            <pb n="v.1.p.172"/>
+            <pb n="v.1.p.172" />
             <l n="3">salvere Augustus iubeo, natumque patremque,</l>
             <l n="4">armiferis alvi quos ego Pannoniis.</l>
             <l n="5">nuntius Euxiuo iam nunc volo currere ponto, </l>
@@ -441,7 +443,7 @@
             <l n="3">totus sub vestra iam dicione fluo:</l>
             <l n="4">qua gelidum fontem mediis effundo Suebis,</l>
             <l n="5">imperiis gravidas qua seco Pannonias,</l>
-            <pb n="v.1.p.174"/>
+            <pb n="v.1.p.174" />
             <l n="6">et qua dives aquis Scythico solvo ostia ponto, 5</l>
             <l n="7">omnia sub vestrum flumina mitto iugum.</l>
             <l n="8">Augusto dabitur sed proxima palma Valenti:</l>
@@ -470,7 +472,7 @@
             <l n="8">occipiti calvo es? ne tenear fugiens,</l>
             <l n="9">quae tibi iuncta comes? dicat tibi. dic rogo, quae sis.</l>
             <l n="10">sum dea, cui nomen nec Cicero ipse dedit. </l>
-            <pb n="v.1.p.176"/>
+            <pb n="v.1.p.176" />
             <l n="11">sum dea, quae factique et non facti exigo poenas,</l>
             <l n="12">nempe ut paeniteat, sic METANOEA vocor.</l>
             <l n="13">tu modo dic, quid agat tecum, quandoque volavi,</l>
@@ -495,7 +497,7 @@
             <l n="2">ante canes leporem caeruleus rapuit,</l>
             <l n="3">at lepus: “ In me omnis terrae pelagique rapina est,</l>
             <l n="4">forsitan et caeli; si canis astra tenet.”</l>
-            <pb n="v.1.p.178"/>
+            <pb n="v.1.p.178" />
          </div>
          <div n="36" type="poem">
             <head>DE PENGAMO SCRIPTORE FUGITINOQUI</head>
@@ -528,7 +530,7 @@
             <l n="10">sic est adorta callidum: </l>
             <l n="11">“Inepte, quid me, quod recusari, rogas?</l>
             <l n="12">patri negavi iam tuo.”</l>
-            <pb n="v.1.p.180"/>
+            <pb n="v.1.p.180" />
          </div>
          <div n="39" type="poem">
             <head>DE OPINIONE QUAM DE H.I.O HABEBNT</head>
@@ -561,7 +563,7 @@
             <l n="8">discendas artes nomina praeveniunt.</l>
             <l n="9">et tu sic Meroe, non quod sis atra colore,</l>
             <l n="10">ut quae Niliaea nascitur in Meroe; </l>
-            <pb n="v.1.p.182"/>
+            <pb n="v.1.p.182" />
             <l n="11">infusum sed quod vinum non diluis undis,</l>
             <l n="12">potare imnixtum sueta merumque merum.</l>
          </div>
@@ -590,7 +592,7 @@
             <l n="3">
                <q>Cum hoc,</q> inquit, <q>aut in hoc redi.</q>
             </l>
-            <pb n="v.1.p.184"/>
+            <pb n="v.1.p.184" />
          </div>
          <div n="45" type="poem">
             <head> IN DEGENEREM DIVITEM MOECHO I,EXITUM</head>
@@ -624,11 +626,11 @@
             <l n="3">dicere me novit verum, qui novit utrumque,</l>
             <l n="4">
                <foreign xml:lang="grc">καὶ θεὸν Ἀλκείδην, καὶ κύνα Διογένην</foreign>.</l>
-            <pb n="v.1.p.186"/>
+            <pb n="v.1.p.186" />
          </div>
          <div n="48" type="poem">
             <head>MIXOBARBARON LIBERI PATRIS SIGNO MARMOREO IN VILLA NOSTRA OMNIUM DEORUM
-                        ARGUMENTA HABENTI</head>
+               ARGUMENTA HABENTI</head>
             <l n="1">OGYGIDAE 1 me Bacchum vocant,</l>
             <l n="2">Osirin Aegypti putant,</l>
             <l n="3">Mysi Phanacen nominant,</l>
@@ -641,10 +643,10 @@
             <head>LIBERO PATRI </head>
             <l n="1">
                <foreign xml:lang="grc">Αἰγυπιίων μὲν Ὄσιρισ ἐγώ, Μυσῶν δὲ
-                        Φανάκησ</foreign>,</l>
+                  Φανάκησ</foreign>,</l>
             <l n="2">
                <foreign xml:lang="grc">Βάκχοσ ἐνὶ ζωοῖσιν, ἐνὶ φθιμένοισιν
-                        Ἀδωνεύσ</foreign>,</l>
+                  Ἀδωνεύσ</foreign>,</l>
             <l n="3">
                <foreign xml:lang="grc">πυρογενής, δίκερως, Τυτανολέτης, Διόνυσοσ</foreign>.</l>
          </div>
@@ -652,7 +654,7 @@
             <head>IN CORYDONEM MARMOREUM</head>
             <l n="1">
                <foreign xml:lang="grc">Αἲξ χίμαροσ πήδη ποιμὴν ῤαβδοῦχοσ ἐλαίη εἶσ λίθοσ ἐκ
-                            πάντων λιτὸσ ἐγὼ Κορυδών</foreign>.</l>
+                  πάντων λιτὸσ ἐγὼ Κορυδών</foreign>.</l>
          </div>
          <div n="51" type="poem">
             <head>IN SIMULACRUM SAPPNUS</head>
@@ -664,7 +666,7 @@
             <head> DEAE VENERI</head>
             <l n="1">ORTA salo, suscepta solo, patre edita Caelo,</l>
             <l n="2">Aeneadum genetrix, hic habito alma Venus.</l>
-            <pb n="v.1.p.188"/>
+            <pb n="v.1.p.188" />
          </div>
          <div n="53" type="poem">
             <head>NERSUS IN VESTE CONTENTI</head>
@@ -697,23 +699,24 @@
             <l n="6">illa voluptatis nil habet, haec nimium,</l>
             <l n="7">callida sed mediae Veneris milli venditet artem</l>
             <l n="8">femina, quae iungat, quod volo nolo vocant.</l>
-            <pb n="v.1.p.190"/>
+            <pb n="v.1.p.190" />
          </div>
          <div n="57" type="poem">
             <head> DE DUOBUS FRATRIBUS</head>
             <l n="1">
                <foreign xml:lang="grc">Χρῆστος, Ἀκίνδυνος, αὐτοαδελφεοί, οἰκτρὰ δὲ,
-                            τέκνα</foreign>,</l>
+                  τέκνα</foreign>,</l>
             <l n="2">moribus umbo malis nomina falsa gerunt:</l>
             <l n="3">
                <foreign xml:lang="grc">οὐδ' οὗτοσ χρηδτός, οὐδ' οὗτοσ ἀκίνδυνόσ
-                        ἐδτιν</foreign>.</l>
+                  ἐδτιν</foreign>.</l>
             <l n="4">una potest ambos littera corrigere.</l>
             <l n="5">
                <foreign xml:lang="grc">αἴ κεν Χρῆδτός, ἔχῃ παρ' ἀδελφοῦ Ἀκινδύνου
-                            ἄλφα</foreign>,</l>
+                  ἄλφα</foreign>,</l>
             <l n="6">
-               <foreign xml:lang="grc">κίνδυνοσ</foreign> hic fiet, <foreign xml:lang="grc">ἄχρηδτοσ</foreign> erit.</l>
+               <foreign xml:lang="grc">κίνδυνοσ</foreign> hic fiet, <foreign xml:lang="grc">ἄχρηδτοσ</foreign>
+               erit.</l>
          </div>
          <div n="58" type="poem">
             <head>DE. CURESTO ET ACINDYNO QUIBUS FUERAT</head>
@@ -736,7 +739,7 @@
             <l n="1">EST LATINUM</l>
             <l n="2">QUI REMINISCO putat se dicere posse latine</l>
             <l n="3">hic ubi en scriptum est, faceret cor, si cor haberet.</l>
-            <pb n="v.1.p.192"/>
+            <pb n="v.1.p.192" />
          </div>
          <div n="61" type="poem">
             <head>DE VERBIS RUFI</head>
@@ -774,7 +777,7 @@
             </l>
             <l n="4">cui Venus: “ Armatam tu me, temeraria, temnis,</l>
             <l n="5">quae, quo te vici tempore, nuda fui?”</l>
-            <pb n="v.1.p.194"/>
+            <pb n="v.1.p.194" />
          </div>
          <div n="65" type="poem">
             <head>DE LAIDE DICANTE VENERI SPECULUM SUUM</head>
@@ -809,7 +812,7 @@
             <l n="2">aerea: nec factam me puto, sed genitam.</l>
             <l n="3">sic me taurus init, sic proxima bucula mugit.</l>
             <l n="4">sic vitulus sitiens ubera nostra petit.</l>
-            <pb n="v.1.p.196"/>
+            <pb n="v.1.p.196" />
             <l n="5">miraris, quod fallo gregem? gregis ipse magister 5</l>
             <l n="6">inter pascentes me numerare solet.</l>
          </div>
@@ -841,7 +844,7 @@
             <l n="2">sed dea proflatam transtulit huc animam,</l>
             <l n="3">et modo sum duplex: pars aerea, pars animata.</l>
             <l n="4">haec manus artificis dicitur, illa deae.</l>
-            <pb n="v.1.p.198"/>
+            <pb n="v.1.p.198" />
          </div>
          <div n="73" type="poem">
             <head>AN TAURUM DE EADEM BUCULA</head>
@@ -879,7 +882,7 @@
             <l n="10">ambiguoque fuit corpore Tiresias.</l>
             <l n="11">vidit semivirum fons Salmacis Hermaphroditum</l>
             <l n="12">vidit nubentem Plinius Androgynum.</l>
-            <pb n="v.1.p.200"/>
+            <pb n="v.1.p.200" />
             <l n="13">nec satis antiquum, quod Campana in Benevento</l>
             <l n="14">unus epheborum virgo repente fuit.</l>
             <l n="15">nolo tamen veteris documenta arcessere famae. </l>
@@ -910,7 +913,7 @@
             <l n="1">PRAETER legitimi genialia foedera coetus</l>
             <l n="2">repperit obscenas veneres vitiosa libido:</l>
             <l n="3">Herculis heredi quam Lemnia suasit egestas,</l>
-            <pb n="v.1.p.202"/>
+            <pb n="v.1.p.202" />
             <l n="4">quam toga facundi scaenis agitavit Afrani</l>
             <l n="5">et quam Nolanis capitalis luxus inussit. </l>
             <l n="6">Crispa tamen cunetas exercet corpore in uno:</l>
@@ -939,10 +942,9 @@
             <l n="2">dicetis hanc mediam lambere, non molere.</l>
             <l n="3">perspice, ne mercis fallant te nomina, vel ne</l>
             <l n="4">aere Seplasiae decipiare cave,</l>
-            <l n="5">dum <foreign xml:lang="grc">κύσθον κόστον</foreign> que putas communis
-                        odoris </l>
+            <l n="5">dum <foreign xml:lang="grc">κύσθον κόστον</foreign> que putas communis odoris </l>
             <l n="6">el nardium ac sardas esse sapore pari.</l>
-            <pb n="v.1.p.204"/>
+            <pb n="v.1.p.204" />
          </div>
          <div n="83" type="poem">
             <head>&lt;IN EUNDEM EUNUM&gt;</head>
@@ -976,13 +978,10 @@
             <l n="4">triquetro coactu .<foreign xml:lang="grc">Δ</foreign>. litteram ducit.</l>
             <l n="5">de valle femorum altrinsecus pares rugas </l>
             <l n="6">mediumque, fissi rima qua patet, callem</l>
-            <l n="7">.<foreign xml:lang="grc">Ψ</foreign>. dicit esse: nam trifissilis forma
-                        est.</l>
-            <l n="8">cui ipse linguam cum dedit suam, .<foreign xml:lang="grc">Λ</foreign>.
-                        est:</l>
-            <pb n="v.1.p.206"/>
-            <l n="9">veramque in illis esse .<foreign xml:lang="grc">Φ</foreign>. notam
-                        .sentit.</l>
+            <l n="7">.<foreign xml:lang="grc">Ψ</foreign>. dicit esse: nam trifissilis forma est.</l>
+            <l n="8">cui ipse linguam cum dedit suam, .<foreign xml:lang="grc">Λ</foreign>. est:</l>
+            <pb n="v.1.p.206" />
+            <l n="9">veramque in illis esse .<foreign xml:lang="grc">Φ</foreign>. notam .sentit.</l>
             <l n="10">quid, imperite, P. putas ibi scriptum, </l>
             <l n="11">ubi locari .I. convenit longum?</l>
             <l n="12">miselle doctor, 8. tibi sit obsceno,</l>
@@ -1016,7 +1015,7 @@
             <head>An Dionen de Amore suo</head>
             <l n="1">Aut restingue ignem, quo torreor, alma Dione,</l>
             <l n="2">aut transire iube: vel fac utrimque parem.</l>
-            <pb n="v.1.p.208"/>
+            <pb n="v.1.p.208" />
          </div>
          <div n="92" type="poem">
             <head> DE IMIS CONSULTO QUI UXOREM HABEBAT</head>
@@ -1050,7 +1049,7 @@
             <head>PULCHRUM DEI RESPONSUM</head>
             <l n="1">Doctus Hylas caestu, Phegeus catus arte palaestrae,</l>
             <l n="2">clarus Olympiacis et Lycus in stadiis,</l>
-            <pb n="v.1.p.210"/>
+            <pb n="v.1.p.210" />
             <l n="3">an possent omnes venturo vincere agone,</l>
             <l n="4">Hammonem Libyae consuluere deum.</l>
             <l n="5">sed deus, ut sapiens: “ Dabitur victoria vobis</l>
@@ -1081,7 +1080,7 @@
             <head>AD NARCISSUM QUI SUI IPSIUS AMORE CAPTUS ERAT</head>
             <l n="1">Si cuperes alium, posses. Narcisso, potiri,</l>
             <l n="2">nunc tibi amoris adest copia, fructus abest.</l>
-            <pb n="v.1.p.212"/>
+            <pb n="v.1.p.212" />
          </div>
          <div n="100" type="poem">
             <head>DE EODEM</head>
@@ -1114,7 +1113,7 @@
             <head>AN APOLLINEM DE DAPHNE FTGIENTE</head>
             <l n="1">PONE arcum, Paean, celeresque reconde sagittas:</l>
             <l n="2">non te virgo fugit, sed tua tela timet.</l>
-            <pb n="v.1.p.214"/>
+            <pb n="v.1.p.214" />
          </div>
          <div n="105" type="poem">
             <head>DE DAPHNE TECTA COUTICE</head>
@@ -1148,7 +1147,7 @@
             <head>DE QUODAM SILVIO PONO QUI EUNT BURRO</head>
             <l n="1">SILVIUS ille Bonus, qui carmina nostra Incessit,</l>
             <l n="2">nostra magis meruit disticha, Brito bonus.</l>
-            <pb n="v.1.p.216"/>
+            <pb n="v.1.p.216" />
          </div>
          <div n="108" type="poem">
             <head>IDEM</head>
@@ -1176,7 +1175,7 @@
             <head>IDEM</head>
             <l n="1">SILVI, Brito Bonus: quamvis homo non bonus esse</l>
             <l n="2">fertis nec &lt;se quit&gt; iungere Brito Bono.</l>
-            <pb n="v.1.p.218"/>
+            <pb n="v.1.p.218" />
          </div>
       </body>
    </text>

@@ -42,23 +42,25 @@
                   </imprint>
                   <biblScope unit="volume">3</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/operaovid01oviduoft/page/102/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/operaovid01oviduoft/page/102/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl>
-            <refState unit="line"/>
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@xml:id" match="pb" n="chunk" />
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage default="false">
             <language ident="lat">Latin </language>
@@ -67,9 +69,9 @@
    </teiHeader>
    <text xml:id="stoa0045.stoa0">
       <body xml:base="urn:cts:latinLit:phi0959.phi010.perseus-lat2">
-         <pb xml:id="p.103"/>
+         <pb xml:id="p.103" />
          <l n="1">
-            <milestone unit="alt" n="1"/>Tempus ad hoc ; lustris bis iam mihi quinque peractis , </l>
+            <milestone unit="alt" n="1" />Tempus ad hoc ; lustris bis iam mihi quinque peractis , </l>
          <l n="2">Omne fuit Musae carmen inerme meae; </l>
          <l n="3">Nullaque ; quae possit ; scriptis tot milibus , extat</l>
          <l n="4">Littera Nasonis sanguinolenta legi: </l>
@@ -77,7 +79,7 @@
          <l n="6">Artificis periit cum caput Arte sua . </l>
          <l n="7">Unus — et hoc ipsum est iniuria magna — perennem </l>
          <l n="8">Candoris titulum non sinit esse mei . </l>
-         <l n="9">Quisquis is est , — nam nomen adhuc utcumque  tacebo — </l>
+         <l n="9">Quisquis is est , — nam nomen adhuc utcumque tacebo — </l>
          <l n="10"> Cogit inassuetas sumere tela manus . </l>
          <l n="11">Ille relegatum gelidos aquilonis ad ortus </l>
          <l n="12">Non sinit exilio delituisse meo ; </l>
@@ -90,9 +92,9 @@
          <l n="19">Et qui debuerat subitas extinguere flammas, </l>
          <l n="20"> Hic praedam medio raptor ab igne petit. </l>
          <l n="21">
-            <milestone unit="alt" n="2"/>Nititur , ut profugae desint alimenta senectae .  </l>
+            <milestone unit="alt" n="2" />Nititur , ut profugae desint alimenta senectae . </l>
          <l n="22">Heu ! quanto est nostris dignior ipse malis ! </l>
-         <pb xml:id="p.104"/>
+         <pb xml:id="p.104" />
          <l n="23">Di melius ; quorum longe mihi maximus ille est, </l>
          <l n="24">Qui nostras inopes noluit esse vias. </l>
          <l n="25"> Huic igitur meritas grates , ubicumque licebit, </l>
@@ -112,7 +114,7 @@
          <l n="39">Quam mihi sit tecum positis, quae sumpsimus, armis </l>
          <l n="40"> Gratia , commissis , improbe , rupta tuis . </l>
          <l n="43">
-            <milestone unit="alt" n="3"/> Pax erit haec nobis, donec mihi vita manebit,  </l>
+            <milestone unit="alt" n="3" /> Pax erit haec nobis, donec mihi vita manebit, </l>
          <l n="44">Cum pecore infirmo quae solet esse lupis. </l>
          <l n="45"> Prima quidem coepto committam proelia versu , </l>
          <l n="46">Non soleant quamvis hoc pede bella geri : </l>
@@ -130,13 +132,13 @@
          <l n="58">Non soleam quamvis hoc genus ipse sequi. </l>
          <l n="59">Illius ambages imitatus in Ibide dicar </l>
          <l n="60"> Oblitus moris iudiciique mei. </l>
-         <pb xml:id="p.105"/>
+         <pb xml:id="p.105" />
          <l n="61">Et quoniam ; qui sis , nondum quaerentibus edo , </l>
          <l n="62">Ibidis interea tu quoque nomen habe ; </l>
          <l n="63">Utque mei versus aliquantum noctis habebunt, </l>
          <l n="64">Sic vitae series tota sit atra tuae . </l>
          <l n="65">
-            <milestone unit="alt" n="4"/> Haec tibi natali facito, Ianique kalendis  </l>
+            <milestone unit="alt" n="4" /> Haec tibi natali facito, Ianique kalendis </l>
          <l n="66">Non mentituro quilibet ore legat. </l>
          <l n="67">Di maris et terrae , quique his meliora tenetis </l>
          <l n="68">Inter diversos cum Iove regna polos , </l>
@@ -159,7 +161,7 @@
          <l n="85"> Carmina dum capiti male fido dira canuntur </l>
          <l n="86">Et peragunt partes ira dolorque suas . </l>
          <l n="87">
-            <milestone unit="alt" n="5"/>Adnuite optatis omnes ex ordine nostris,  </l>
+            <milestone unit="alt" n="5" />Adnuite optatis omnes ex ordine nostris, </l>
          <l n="88">Et pars sit voti nulla caduca mei . </l>
          <l n="89">Quaeque precor , fiant : ut non mea dicta , sed illa </l>
          <l n="90"> Pasiphaes generi verba fuisse putet . </l>
@@ -169,7 +171,7 @@
          <l n="94">Vota , minus magnos commoveantve deos : </l>
          <l n="95"> Illum ego devoveo , quem mens intellegit , Ibin , </l>
          <l n="96">Qui scit se factis has meruisse preces . </l>
-         <pb xml:id="p.106"/>
+         <pb xml:id="p.106" />
          <l n="97">Nulla mora est in me : peragam rata vota sacerdos . </l>
          <l n="98">Quisquis ades sacris , ore favete , meis ; </l>
          <l n="99">Quisquis ades sacris , lugubria dicite verba, </l>
@@ -183,7 +185,7 @@
          <l n="107">Terra tibi fruges , amnis tibi deneget undas . </l>
          <l n="108">Deneget afflatus ventus et aura suos . </l>
          <l n="109">
-            <milestone unit="alt" n="6"/>Nec tibi sol calidus , nec sit tibi lucida Phoebe,  </l>
+            <milestone unit="alt" n="6" />Nec tibi sol calidus , nec sit tibi lucida Phoebe, </l>
          <l n="110"> Destituant oculos sidera clara tuos . </l>
          <l n="111">Nec se Vulcanus , nec se tibi praebeat aer, </l>
          <l n="112">Nec tibi det tellus nec tibi pontus iter . </l>
@@ -213,8 +215,9 @@
          <l n="132">
             <del>Auferet illa dies , quae mihi sera venit ,</del>
          </l>
-         <l n="133">&gt;<milestone unit="alt" n="7"/>Quam dolor hic umquam spatio evanescere possit,</l>
-         <pb xml:id="p.107"/>
+         <l n="133">&gt;<milestone unit="alt" n="7" />Quam dolor hic umquam spatio evanescere
+            possit,</l>
+         <pb xml:id="p.107" />
          <l n="134">Leniat aut odium tempus et hora meum . </l>
          <l n="135"> Pugnabunt arcu dum Thraces , Iazyges hasta , </l>
          <l n="136">Dum tepidus Ganges , frigidus Hister erit ; </l>
@@ -237,7 +240,7 @@
          <l n="153">Quidquid ero , Stygiis erumpere nitar ab oris , </l>
          <l n="154">Et tendam gelidas ultor in ora manus . </l>
          <l n="155">
-            <milestone unit="alt" n="8"/> Me vigilans cernes , tacitis ego noctis in umbris  </l>
+            <milestone unit="alt" n="8" /> Me vigilans cernes , tacitis ego noctis in umbris </l>
          <l n="156">Excutiam somnos visus adesse tuos . </l>
          <l n="157">Denique quidquid ages , ante os oculosque volabo </l>
          <l n="158">Et querar , et nulla sede quietus eris . </l>
@@ -253,7 +256,7 @@
          <l n="168">Respuet invisum iusta cadaver humus. </l>
          <l n="169">Unguibus et rostro crudus trahet ilia vultur </l>
          <l n="170"> Et scindent avidi perfida corda canes. </l>
-         <pb xml:id="p.108"/>
+         <pb xml:id="p.108" />
          <l n="171">Deque tuo fiet — licet hac sis laude superbus — </l>
          <l n="172">Insatiabilibus corpore rixa lupis . </l>
          <l n="173">In loca ab Elysiis diversa vocabere campis, </l>
@@ -261,7 +264,7 @@
          <l n="175"> Sisyphus est illic saxum volvensque petensque , </l>
          <l n="176">Quique agitur rapidae vinctus ab orbe rotae, </l>
          <l n="177">
-            <milestone unit="alt" n="9"/>Quaeque gerunt umeris perituras Belides undas, </l>
+            <milestone unit="alt" n="9" />Quaeque gerunt umeris perituras Belides undas, </l>
          <l n="178">Exulis Aegypti , turba cruenta , nurus . </l>
          <l n="179">Poma pater Pelopis praesentia quaerit , et idem </l>
          <l n="180"> Semper eget , liquidis semper abundat aquis ; </l>
@@ -284,7 +287,7 @@
          <l n="197">Inde ego pauca canam , frondes ut siquis ab Ida </l>
          <l n="198">Aut summam Libyco de mare carpat aquam . </l>
          <l n="199">
-            <milestone unit="alt" n="10"/>Nam neque quot flores Sicula nascantur in Hybla,  </l>
+            <milestone unit="alt" n="10" />Nam neque quot flores Sicula nascantur in Hybla, </l>
          <l n="200"> Quotve ferat , dicam , terra Cilissa crocos , </l>
          <l n="201">Nec cum tristis hiems Aquilonis inhorruit alis, </l>
          <l n="202">Quam multa fiat grandine canus Athos; </l>
@@ -293,7 +296,7 @@
          <l n="205"> Tot tibi vae ! misero venient talesque ruinae , </l>
          <l n="206">Ut cogi in lacrimas me quoque posse putem. </l>
          <l n="207">Illae me lacrimae facient sine fine beatum : </l>
-         <pb xml:id="p.109"/>
+         <pb xml:id="p.109" />
          <l n="208">Dulcior hic risu tunc mihi fletus erit. </l>
          <l n="209">Natus es infelix , — ita di voluere — nec ulla </l>
          <l n="210"> Commoda nascenti stella levisve fuit . </l>
@@ -308,7 +311,7 @@
          <l n="219">Haec est , in fastis cui dat gravis Allia nomen , </l>
          <l n="220"> Quaeque dies Ibin , publica damna , tulit . </l>
          <l n="221">
-            <milestone unit="alt" n="11"/>Qui simul impurae matris prolapsus ab alvo </l>
+            <milestone unit="alt" n="11" />Qui simul impurae matris prolapsus ab alvo </l>
          <l n="222">Cinyphiam foedo corpore pressit humum, </l>
          <l n="223">Sedit in adverso nocturnus culmine bubo, </l>
          <l n="224">Funereoque graves edidit ore sonos . </l>
@@ -331,9 +334,9 @@
          <l n="241">‘Tempus in inmensum lacrimas tibi movimus istas, </l>
          <l n="242">Quae semper causa sufficiente cadent.’</l>
          <l n="243">
-            <milestone unit="alt" n="12"/>Dixerat . at Clotho iussit promissa valere ,  </l>
+            <milestone unit="alt" n="12" />Dixerat . at Clotho iussit promissa valere , </l>
          <l n="244">Nevit et infesta stamina pulla manu ; </l>
-         <pb xml:id="p.110"/>
+         <pb xml:id="p.110" />
          <l n="245"> Et ne longa suo praesagia diceret ore , </l>
          <l n="246">
             <q>Fata canet vales qui tua</q>, dixit <q>erit.</q>
@@ -357,7 +360,7 @@
          <l n="263">Qualis erat , postquam est iudex de lite iocosa </l>
          <l n="264">Sumptus , Apollinea clarus in arte senex : </l>
          <l n="265">
-            <milestone unit="alt" n="13"/> Qualis et ille fuit , quo praecipiente columba  </l>
+            <milestone unit="alt" n="13" /> Qualis et ille fuit , quo praecipiente columba </l>
          <l n="266">Est data Palladiae praevia duxque rati : </l>
          <l n="267">Quique oculis caruit, per quos male viderat aurum, </l>
          <l n="268">Inferias nato quos dedit orba parens : </l>
@@ -374,14 +377,14 @@
          <l n="279">Vel tua , ne poenae genus hoc cognoverit unus, </l>
          <l n="280"> Viscera diversis scissa ferantur equis : </l>
          <l n="281">Vel quae qui redemi Romano turpe putavit, </l>
-         <pb xml:id="p.111"/>
+         <pb xml:id="p.111" />
          <l n="282">A duce Puniceo pertulit , ipse feras . </l>
          <l n="283">Nec tibi subsidio praesens sit numen , ut illi , </l>
          <l n="284">Cui nil Rhoetei profuit ara Iovis . </l>
          <l n="285"> Utque dedit saltus de summa Thessalus Ossa, </l>
          <l n="286">Tu quoque saxoso praecipitere iugo . </l>
          <l n="287">
-            <milestone unit="alt" n="14"/>— Aut velut Eurylochi , qui sceptrum cepit ab illo ;  </l>
+            <milestone unit="alt" n="14" />— Aut velut Eurylochi , qui sceptrum cepit ab illo ; </l>
          <l n="288">Sint artus avidis anguibus esca tui . </l>
          <l n="289">Vel tua maturet , sicut Minoia fata, </l>
          <l n="290"> Per caput infusae fervidus umor aquae . </l>
@@ -404,7 +407,7 @@
          <l n="307">Utque nepos dicti nostro modo carmine regis , </l>
          <l n="308">Cantharidum sucos dante parente bibas . </l>
          <l n="309">
-            <milestone unit="alt" n="15"/>Aut pia te caeso dicatur adultera , sicut  </l>
+            <milestone unit="alt" n="15" />Aut pia te caeso dicatur adultera , sicut </l>
          <l n="310"> Qua cecidit Leucon vindice , dicta pia est . </l>
          <l n="311">Inque pyram tecum carissima corpora mittas, </l>
          <l n="312">Quem finem vitae Sardanapallus habet. </l>
@@ -414,7 +417,7 @@
          <l n="316">Sic tua subsidens devoret ora cinis . </l>
          <l n="317">Aut ut olivifera quondam Sicyone profecto, </l>
          <l n="318">Sit frigus mortis causa famesque tuae . </l>
-         <pb xml:id="p.112"/>
+         <pb xml:id="p.112" />
          <l n="319">Aut ut Atarnites , insutus pelle iuvenci </l>
          <l n="320"> Turpiter ad dominum praeda ferare tuum . </l>
          <l n="321">Inque tuo thalamo ritu iugulere Pheraei, </l>
@@ -428,7 +431,7 @@
          <l n="329">— Aut ut Amastriacis quondam Lenaeus ab oris, </l>
          <l n="330"> Nudus Achillea destituaris humo . </l>
          <l n="331">
-            <milestone unit="alt" n="16"/>Utque vel Eurydamas ter circum busta Thrasylli  </l>
+            <milestone unit="alt" n="16" />Utque vel Eurydamas ter circum busta Thrasylli </l>
          <l n="332">Est Larisaeis raptus ab hoste rotis, </l>
          <l n="333">Vel qui , quae fuerat tutatus moenia saepe , </l>
          <l n="334">Corpore lustravit non diuturna suo , </l>
@@ -451,10 +454,10 @@
          <l n="351">Quaeque sui Venerem iunxit cum fratre mariti, </l>
          <l n="352">Locris in ancillae dissimulata nece . </l>
          <l n="353">
-            <milestone unit="alt" n="17"/>Tam quoque , di faciant , possis gaudere fideli  </l>
+            <milestone unit="alt" n="17" />Tam quoque , di faciant , possis gaudere fideli </l>
          <l n="354">Coniuge , quam Talai Tyndareique gener : </l>
          <l n="355"> Quaeque parare suis letum patruelibus ausae </l>
-         <pb xml:id="p.113"/>
+         <pb xml:id="p.113" />
          <l n="356">Belides assidua colla premuntur aqua. </l>
          <l n="357">Byblidos et Canaces , si cui facis , ardeat igne , </l>
          <l n="358">Nec nisi per crimen sit tibi fida soror. </l>
@@ -477,7 +480,7 @@
             <del>Intrarunt caecae non redeunda domus .</del>
          </l>
          <l n="375">
-            <milestone unit="alt" n="18"/> Ut quorum Aeacides misit violentus in altum  </l>
+            <milestone unit="alt" n="18" /> Ut quorum Aeacides misit violentus in altum </l>
          <l n="376">Corpora cum senis altera sena rogum . </l>
          <l n="377">Ut quos , obscuri victos ambagibus oris , </l>
          <l n="378">Legimus infandae Sphinga dedisse neci : </l>
@@ -495,7 +498,7 @@
          <l n="390"> Et iacto canas pulvere fecit aquas . </l>
          <l n="391">Sex bis ut Icaridos famulae periere procique, </l>
          <l n="392">Inque caput domini qui dabat arma procis: </l>
-         <pb xml:id="p.114"/>
+         <pb xml:id="p.114" />
          <l n="393">Ut iacet Aonio luctator ab hospite fusus, </l>
          <l n="394">Qui , mirum , victor , cum cecidisset , erat: </l>
          <l n="395"> Ut quos Antaei fortes pressere lacerti : </l>
@@ -503,7 +506,7 @@
             <del>Quosque ferae morti Lemnia turba dedit :</del>
          </l>
          <l n="397">
-            <milestone unit="alt" n="19"/>Ut qui post longum , sacri monstrator iniqui ,  </l>
+            <milestone unit="alt" n="19" />Ut qui post longum , sacri monstrator iniqui , </l>
          <l n="398">Elicuit pluvias victima caesus aquas : </l>
          <l n="399">Frater ut Antaei quo sanguine debuit , aras </l>
          <l n="400"> Tinxit , et exemplis occidit ipse suis : </l>
@@ -528,7 +531,7 @@
             <del>Quique tenent pontem , quae tibi maior erit .</del>
          </l>
          <l n="419">
-            <milestone unit="alt" n="20"/>Filius et Cereris frustra tibi semper ametur,  </l>
+            <milestone unit="alt" n="20" />Filius et Cereris frustra tibi semper ametur, </l>
          <l n="420"> Destituatque tuas usque petitus opes : </l>
          <l n="421">Utque per alternos unda labente recursus </l>
          <l n="422">Subtrahitur presso mollis harena pedi, </l>
@@ -539,7 +542,7 @@
          <l n="427">Nec dapis humanae tibi sint fastidia . quaque </l>
          <l n="428">Parte potes , Tydeus temporis huius eris . </l>
          <l n="429">Atque aliquid facias , a vespere Solis ad ortus </l>
-         <pb xml:id="p.115"/>
+         <pb xml:id="p.115" />
          <l n="430"> Cur externati rursus agantur equi. </l>
          <l n="431">Foeda Lycaoniae repetes convivia mensae, </l>
          <l n="432">Temptabisque cibi fallere fraude Iovem . </l>
@@ -552,7 +555,7 @@
          <l n="439">Utque ferox Phalaris , lingua prius ense resecta </l>
          <l n="440"> More bovis Paphio clausus in aere gemas. </l>
          <l n="441">
-            <milestone unit="alt" n="21"/>Dumque redire voles aevi melioris in annos,  </l>
+            <milestone unit="alt" n="21" />Dumque redire voles aevi melioris in annos, </l>
          <l n="442">Ut vetus Admeti decipiare socer . </l>
          <l n="443">Aut eques in medii mergare voragine caeni, </l>
          <l n="444">Dummodo sint fati nomina nulla tui . </l>
@@ -575,11 +578,11 @@
          <l n="461">Aut ut Cassandreus , domino non mitior illo </l>
          <l n="462">Saucius ingesta contumuleris humo . </l>
          <l n="463">
-            <milestone unit="alt" n="22"/>Aut ut Abantiades , aut ut Cygneius heros ,  </l>
+            <milestone unit="alt" n="22" />Aut ut Abantiades , aut ut Cygneius heros , </l>
          <l n="464">Clausus in aequoreas praecipiteris aquas . </l>
          <l n="465"> Victima vel Phoebo sacras macteris ad aras, </l>
          <l n="466">Quam tulit a saevo Theudotus hoste necem . </l>
-         <pb xml:id="p.116"/>
+         <pb xml:id="p.116" />
          <l n="467">Aut te devoveat certis Abdera diebus, </l>
          <l n="468">Saxaque devotum grandine plura petant. </l>
          <l n="469">Aut Iovis infesti telo feriare trisulco , </l>
@@ -599,7 +602,7 @@
          <l n="483">Quam puer Hypsipyles, quam qui cava primus acuta </l>
          <l n="484">Cuspide suspecti robora fixit equi. </l>
          <l n="485">
-            <milestone unit="alt" n="23"/> Neve gradus adeas Elpenore caulius altos,  </l>
+            <milestone unit="alt" n="23" /> Neve gradus adeas Elpenore caulius altos, </l>
          <l n="486">Vimque feras vini quo tulit ille modo . </l>
          <l n="487">Tamque cadas domitus , quam quisquis ad arma vocantem </l>
          <l n="488">Iuvit inhumanum Thiodamanta Dryops : </l>
@@ -621,7 +624,7 @@
          <l n="500"> Dixerat invito quae mala verba deo . </l>
          <l n="501">Feta tibi occurrat patrio popularis in arvo, </l>
          <l n="502">Sitque Phalaeceae causa leaena necis . </l>
-         <pb xml:id="p.117"/>
+         <pb xml:id="p.117" />
          <l n="503">Quique Lycurgiden letavit , et arbore natum ; </l>
          <l n="504">Idmonaque audacem ; te quoque rumpat aper . </l>
          <l n="505"> Isque vel exanimis faciat tibi vulnus ; ut illi, </l>
@@ -631,7 +634,7 @@
             <del>Phryx et venator sis Berecyntiades .</del>
          </l>
          <l n="509">
-            <milestone unit="alt" n="24"/>Si tua contigerit Minoas puppis harenas,  </l>
+            <milestone unit="alt" n="24" />Si tua contigerit Minoas puppis harenas, </l>
          <l n="510"> Te Corcyraeum Cressia turba putet . </l>
          <l n="511">Lapsuramque domum subeas ; ut sanguis Aleuae ; </l>
          <l n="512">Sella Leoprepidae cum ruit absque viro . </l>
@@ -654,7 +657,7 @@
          <l n="529">Sit tibi coniugii nox prima novissima vitae : </l>
          <l n="530"> Eupolis hoc periit et nova nupta modo . </l>
          <l n="531">
-            <milestone unit="alt" n="25"/>Utque cothurnatum cecidisse Lycophrona narrant,  </l>
+            <milestone unit="alt" n="25" />Utque cothurnatum cecidisse Lycophrona narrant, </l>
          <l n="532">Haereat in fibris fixa sagitta tuis . </l>
          <l n="533">Aut Iacer in silva manibus spargare tuorum, </l>
          <l n="534">Sparsus ut est Thebis angue creatus avo . </l>
@@ -665,7 +668,7 @@
          <l n="539">
             <del>Conditor ut tardae ; Blaesus cognomine , Cyrae , </del>
          </l>
-         <pb xml:id="p.118"/>
+         <pb xml:id="p.118" />
          <l n="540">
             <del>Orbis in innumeris inveniare locis .</del>
          </l>
@@ -692,7 +695,7 @@
             <del>Inque maris salias , Glaucus ut alter , aquas .</del>
          </l>
          <l n="557">
-            <milestone unit="alt" n="26"/>
+            <milestone unit="alt" n="26" />
             <del>Utque duobus idem dictis modo nomen habenti,</del>
          </l>
          <l n="558">
@@ -716,13 +719,13 @@
          <l n="574">Tartara , quod natae fecerat ille suae . </l>
          <l n="575"> Inque tuos ea pestis eat , quam dextra Coroebi </l>
          <l n="576">Vicit , opem miseris Argolisinque tulit. </l>
-         <pb xml:id="p.119"/>
+         <pb xml:id="p.119" />
          <l n="577">Utque nepos Aethrae , Veneris moriturus ob iram , </l>
          <l n="578">Exul ab altonitis excutiaris equis. </l>
          <l n="579">Propter opes magnas ut perdidit hospes alumnum, </l>
          <l n="580"> Perdat ob exiguas te tuus hospes opes . </l>
          <l n="581">
-            <milestone unit="alt" n="27"/>Utque ferunt caesos sex cum Damasichthone fratres ,  </l>
+            <milestone unit="alt" n="27" />Utque ferunt caesos sex cum Damasichthone fratres , </l>
          <l n="582">Intereat tecum sic genus omne tuum . </l>
          <l n="583">Addidit ut fidicen miseris sua funera natis, </l>
          <l n="584">Sic tibi sint vitae taedia iusta tuae . </l>
@@ -745,7 +748,7 @@
          <l n="601">Natus ut Althaeae flammis absentibus arsit, </l>
          <l n="602">Sic tuus ardescat stipitis igne rogus . </l>
          <l n="603">
-            <milestone unit="alt" n="28"/>Ut nova Phasiaca comprensa est nupta corona,  </l>
+            <milestone unit="alt" n="28" />Ut nova Phasiaca comprensa est nupta corona, </l>
          <l n="604">Utque pater nuptae , cumque parente domus ; </l>
          <l n="605"> Ut cruor Herculeos abiit diffusus in artus ; </l>
          <l n="606">Corpora pestiferum sic tua virus edat. </l>
@@ -755,7 +758,7 @@
          <l n="610"> Nec possis captas inde referre manus . </l>
          <l n="611">Muneribusque tuis laedaris , ut Icarus , in quem </l>
          <l n="612">Intulit armatas ebria turba manus . </l>
-         <pb xml:id="p.120"/>
+         <pb xml:id="p.120" />
          <l n="613">Quodque dolore necis patriae pia filia fecit, </l>
          <l n="614">Vincula per laquei fac tibi guttur eat . </l>
          <l n="615"> Obstructoque famem patiaris limine tecti, </l>
@@ -769,7 +772,7 @@
          <l n="623">Utque Melanthea tenebris a caede latentem </l>
          <l n="624">Prodidit officio luminis ipsa parens: </l>
          <l n="625">
-            <milestone unit="alt" n="29"/> Sic tua coniectis fodiantur pectora telis,  </l>
+            <milestone unit="alt" n="29" /> Sic tua coniectis fodiantur pectora telis, </l>
          <l n="626">Sic precor auxiliis impediare tuis. </l>
          <l n="627">Qualis equos pacto , quos fortis agebat Achilles , </l>
          <l n="628">Acta Phrygi timido , nox tibi talis eat . </l>

@@ -40,23 +40,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/310/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/310/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type='section']" delim=":" unit="section"
+                  n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -89,7 +93,7 @@
             <l n="16">adponet docti quae mihi lima viri.</l>
             <l n="17">interea arbitrii subiturus pondera tanti</l>
             <l n="18">optabo, ut placeam; si minus, ut lateam.</l>
-            <pb n="v.1.p.312"/>
+            <pb n="v.1.p.312" />
          </div>
          <div n="2" type="section">
             <head>Prologus</head>
@@ -113,7 +117,7 @@
             <l n="36">nomen perenne crediderunt, si semel</l>
             <l n="37">constructa moles saxeo fundamine</l>
             <l n="38">in omne tempus conderet ludis locum:</l>
-            <pb n="v.1.p.314"/>
+            <pb n="v.1.p.314" />
             <l n="39">cuneata crevit haec theatri inmanitas:</l>
             <l n="40">Pompeius hanc et Balbus et Caesar dedit </l>
             <l n="41">Octavianus concertantes sumptibus.</l>
@@ -145,14 +149,15 @@
             <l n="62">Bias Prieneus dixit <foreign xml:lang="grc">οἱ πλεῖστοι κακοί</foreign>,</l>
             <l n="63">quod est Latinum, plures hominum sunt mali;</l>
             <l n="64">set inperitos scito, quos dixit malos.</l>
-            <pb n="v.1.p.316"/>
+            <pb n="v.1.p.316" />
             <l n="65">
                <foreign xml:lang="grc">μελέτη τὸ πᾶν</foreign>, Periandri id est Corinthii, </l>
             <l n="66">meditationem posse totum qui putat.</l>
             <l n="67">
                <foreign xml:lang="grc">ἄριστον μέτρον</foreign> esse dicit Lindius</l>
             <l n="68">Cleobulus: hoc est, optimus cunctis modus.</l>
-            <l n="69">Thales set <foreign xml:lang="grc">ἐγγύα</foreign>, <foreign xml:lang="grc">πάρα δ</foreign>' <foreign xml:lang="grc">ἄτα</foreign> protulit,</l>
+            <l n="69">Thales set <foreign xml:lang="grc">ἐγγύα</foreign>, <foreign xml:lang="grc">πάρα
+               δ</foreign>' <foreign xml:lang="grc">ἄτα</foreign> protulit,</l>
             <l n="70">spondere qui nos, noxa quia praes est, vetat. </l>
             <l n="71">hoc nos monere faeneratis non placet.</l>
             <l n="72">Dixi: recedam, legifer venit Solon.</l>
@@ -177,7 +182,7 @@
             <l n="88">proinde miseros aut beatos dicere</l>
             <l n="89">evita, quod sunt semper ancipiti in statu.</l>
             <l n="90">id adeo sic est. si queam, paucis loquar. </l>
-            <pb n="v.1.p.318"/>
+            <pb n="v.1.p.318" />
             <l n="91">Rex an tyrannus Lydiae, Croesus, fuit</l>
             <l n="92">his in beatis, dives insanum in modum,</l>
             <l n="93">lateribus aureis templa qui divis dabat,</l>
@@ -217,7 +222,7 @@
             <l n="121">seriem per omnem cuncta regi edisserit.</l>
             <l n="122">miseratur ille vimque fortunae videns</l>
             <l n="123">laudat Solonem: Croesum inde in amicis habet</l>
-            <pb n="v.1.p.320"/>
+            <pb n="v.1.p.320" />
             <l n="124">vinctumque pedicis aureis secum iubet,</l>
             <l n="125">reliquum quod esset vitae, totum degere. </l>
             <l n="126">ego duorum regum testimonio</l>
@@ -244,7 +249,7 @@
             <l n="144">officia cuncta, pudor, honor, constantia</l>
             <l n="145">in hoc, et ulla spreta nobis gloria. </l>
             <l n="146">Dixi: valete memores, plausum non moror.</l>
-            <pb n="v.1.p.322"/>
+            <pb n="v.1.p.322" />
          </div>
          <div n="6" type="section">
             <head>CLEOBULUS</head>
@@ -277,7 +282,7 @@
             <l n="165">dedere piscatores extractum mari; </l>
             <l n="166">namque hi iubente Delio me legerant,</l>
             <l n="167">quod ille munus hoc sapienti miserat.</l>
-            <pb n="v.1.p.324"/>
+            <pb n="v.1.p.324" />
             <l n="168">ego recusans non recepi et reddidi</l>
             <l n="169">ferendum ad alios, quos priores crederem.</l>
             <l n="170">dein per omnes septem sapientes viros </l>
@@ -290,7 +295,8 @@
             <l n="177">adsertor ut sententiae fierem meae.</l>
             <l n="178">ea displicebit, non tamen prudentibus,</l>
             <l n="179">quos docuit usus et peritos reddidit.</l>
-            <l n="180">' en <foreign xml:lang="grc">ἐγγύα</foreign>, <foreign xml:lang="grc">πάρα δ</foreign>' <foreign xml:lang="grc">ἄτα</foreign>, graece dicimus: </l>
+            <l n="180">' en <foreign xml:lang="grc">ἐγγύα</foreign>, <foreign xml:lang="grc">πάρα δ</foreign>
+               ' <foreign xml:lang="grc">ἄτα</foreign>, graece dicimus: </l>
             <l n="181">Latinum est, sponde, noxa set praesto tibi.</l>
             <l n="182">per mille possem currere exempla, ut probem</l>
             <l n="183">praedes vadesque paenitudinis reos.</l>
@@ -302,14 +308,15 @@
          </div>
          <div n="8" type="section">
             <head>BIAS</head>
-            <l n="189">BIAS Prieneus <add>quod 1</add> dixi o<foreign xml:lang="grc">ἱ πλεῖστοι κακοι</foreign>,</l>
+            <l n="189">BIAS Prieneus <add>quod 1</add> dixi o<foreign xml:lang="grc">ἱ πλεῖστοι
+                  κακοι</foreign>,</l>
             <l n="190">Latine dictum suspicor: plures mali. </l>
             <l n="191">dixisse nollem; veritas odium parit.2</l>
             <l n="192">malos sed imperitos dixi et barbaros,</l>
             <l n="193">qui ius et aequum et sacros mores neglegunt.</l>
             <l n="194">nam populus iste, quo theatrum cingitur,</l>
             <l n="195">totus bonorum est. hostium tellus habet, </l>
-            <pb n="v.1.p.326"/>
+            <pb n="v.1.p.326" />
             <l n="196">dixisse quos me creditis, plures malos,</l>
             <l n="197">sed nemo quisquam tam malus iudex fuat,</l>
             <l n="198">quin iam bonorum partibus se copulet,</l>
@@ -341,7 +348,7 @@
             <l n="216">meditationis esse, quod recte geras.</l>
             <l n="217">is quippe solus rei gerendae est efficax,</l>
             <l n="218">meditatur omne qui prius negotium.</l>
-            <pb n="v.1.p.328"/>
+            <pb n="v.1.p.328" />
             <l n="219">adversa rerum vel secunda praedicat</l>
             <l n="220">meditanda cunctis comicus Terentius. 1 </l>
             <l n="221">locare sedes, bellum gerere aut ponere,</l>
@@ -354,7 +361,7 @@
             <l n="228">incogitantes fors, non consilium regit.</l>
             <l n="229">Sed ego me ad partes iam recipio, plaudite,</l>
             <l n="230">meditando et vestram rem curetis publicam. </l>
-            <pb n="v.1.p.330"/>
+            <pb n="v.1.p.330" />
          </div>
       </body>
    </text>

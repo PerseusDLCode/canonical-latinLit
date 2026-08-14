@@ -30,8 +30,9 @@
                <monogr>
                   <author xml:lang="lat">P. Ovidius Naso</author>
                   <title xml:lang="lat">P. Ovidius Naso</title>
-                  <title type="sub" xml:lang="lat">Amores, Epistulae, Medicamina faciei femineae, Ars amatoria, Remedia
-				                 amoris</title>
+                  <title type="sub" xml:lang="lat">Amores, Epistulae, Medicamina faciei femineae,
+                     Ars amatoria, Remedia
+                     amoris</title>
                   <editor>
                      <persName>
                         <name>Rudolf Ehwald</name>
@@ -44,23 +45,24 @@
                   </imprint>
                   <biblScope unit="volume">1</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/operaovid03oviduoft/page/n293/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/operaovid03oviduoft/page/n293/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl>
-            <refState unit="line"/>
+            <refState unit="line" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
-            <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+            <citeStructure match="/TEI/text/body" use="@xml:base" n="chunk">
+               <citeStructure unit="line" delim=":" match="l" use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage default="false">
             <language ident="lat">Latin </language>
@@ -113,7 +115,8 @@
          <l n="37">His lacrimis contentus eris sine crimine mortis;</l>
          <l n="38" rend="indent">Non tua fax avidos digna subire rogos.'</l>
          <l n="39">Haec ego: movit Amor gemmatas aureus alas,</l>
-         <l n="40" rend="indent">Et mihi 'propositum perfice' dixit 'opus.' <milestone ed="p" n="41" rend="indent" unit="carte"/>
+         <l n="40" rend="indent">Et mihi 'propositum perfice' dixit 'opus.' <milestone ed="p" n="41"
+               rend="indent" unit="carte" />
          </l>
          <l n="41">Ad mea, decepti iuvenes, praecepta venite,</l>
          <l n="42" rend="indent">Quos suus ex omni parte fefellit amor.</l>
@@ -152,7 +155,8 @@
          <l n="75">Te precor incipiens, adsit tua laurea nobis,</l>
          <l n="76" rend="indent">Carminis et medicae, Phoebe, repertor opis.</l>
          <l n="77">Tu pariter vati, pariter succurre medenti:</l>
-         <l n="78" rend="indent">Utraque tutelae subdita cura tua est. <milestone ed="p" n="79" rend="indent" unit="carte"/>
+         <l n="78" rend="indent">Utraque tutelae subdita cura tua est. <milestone ed="p" n="79"
+               rend="indent" unit="carte" />
          </l>
          <l n="79">Dum licet, et modici tangunt praecordia motus,</l>
          <l n="80" rend="indent">Si piget, in primo limine siste pedem.</l>
@@ -191,7 +195,8 @@
          <l n="113">Post tamen hic multos sanatus creditur annos</l>
          <l n="114" rend="indent">Supremam bellis imposuisse manum.</l>
          <l n="115">Qui modo nascentes properabam pellere morbos,</l>
-         <l n="116" rend="indent">Admoveo tardam nunc tibi lentus opem. <milestone ed="p" n="117" rend="indent" unit="carte"/>
+         <l n="116" rend="indent">Admoveo tardam nunc tibi lentus opem. <milestone ed="p" n="117"
+               rend="indent" unit="carte" />
          </l>
          <l n="117">Aut nova, si possis, sedare incendia temptes,</l>
          <l n="118" rend="indent">Aut ubi per vires procubuere suas:</l>
@@ -244,7 +249,8 @@
          <l n="165">Sive operam bellis vellet dare, nulla gerebat:</l>
          <l n="166" rend="indent">Sive foro, vacuum litibus Argos erat.</l>
          <l n="167">Quod potuit, ne nil illic ageretur, amavit.</l>
-         <l n="168" rend="indent">Sic venit ille puer, sic puer ille manet. <milestone ed="p" n="169" rend="indent" unit="carte"/>
+         <l n="168" rend="indent">Sic venit ille puer, sic puer ille manet. <milestone ed="p"
+               n="169" rend="indent" unit="carte" />
          </l>
          <l n="169">Rura quoque oblectant animos studiumque colendi:</l>
          <l n="170" rend="indent">Quaelibet huic curae cedere cura potest. </l>
@@ -289,7 +295,8 @@
          <l n="209">Vel, quae piscis edax avido male devoret ore,</l>
          <l n="210" rend="indent">Abdere sub parvis aera recurva cibis.</l>
          <l n="211">Aut his aut aliis, donec dediscis amare,</l>
-         <l n="212" rend="indent">Ipse tibi furtim decipiendus eris. <milestone ed="p" n="213" rend="indent" unit="carte"/>
+         <l n="212" rend="indent">Ipse tibi furtim decipiendus eris. <milestone ed="p" n="213"
+               rend="indent" unit="carte" />
          </l>
          <l n="213">Tu tantum quamvis firmis retinebere vinclis,</l>
          <l n="214" rend="indent">I procul, et longas carpere perge vias;</l>
@@ -326,7 +333,8 @@
          <l n="245">Quod nisi firmata properaris mente reverti,</l>
          <l n="246" rend="indent">Inferet arma tibi saeva rebellis Amor.</l>
          <l n="247">Quidquid et afueris, avidus sitiensque redibis,</l>
-         <l n="248" rend="indent">Et spatium damno cesserit omne tuo. <milestone ed="p" n="249" rend="indent" unit="carte"/>
+         <l n="248" rend="indent">Et spatium damno cesserit omne tuo. <milestone ed="p" n="249"
+               rend="indent" unit="carte" />
          </l>
          <l n="249">Viderit, Haemoniae siquis mala pabula terrae</l>
          <l n="250" rend="indent">Et magicas artes posse iuvare putat.</l>
@@ -369,7 +377,8 @@
          <l n="287">Ardet et adsuetas Circe decurrit ad artes,</l>
          <l n="288" rend="indent">Nec tamen est illis adtenuatus amor.</l>
          <l n="289">Ergo quisquis opem nostra tibi poscis ab arte,</l>
-         <l n="290" rend="indent">Deme veneficiis carminibusque fidem. <milestone ed="p" n="291" rend="indent" unit="carte"/>
+         <l n="290" rend="indent">Deme veneficiis carminibusque fidem. <milestone ed="p" n="291"
+               rend="indent" unit="carte" />
          </l>
          <l n="291">Si te causa potens domina retinebit in Urbe,</l>
          <l n="292" rend="indent">Accipe, consilium quod sit in Urbe meum.</l>
@@ -390,7 +399,8 @@
          <l n="307">Haec tibi per totos inacescant omnia sensus:</l>
          <l n="308" rend="indent">Haec refer, hinc odii semina quaere tui.</l>
          <l n="309">Atque utinam possis etiam facundus in illis</l>
-         <l n="310" rend="indent">Esse! dole tantum, sponte disertus eris. <milestone ed="p" n="311" rend="indent" unit="carte"/>
+         <l n="310" rend="indent">Esse! dole tantum, sponte disertus eris. <milestone ed="p" n="311"
+               rend="indent" unit="carte" />
          </l>
          <l n="311">Haeserat in quadam nuper mea cura puella:</l>
          <l n="312" rend="indent">Conveniens animo non erat illa meo:</l>
@@ -437,7 +447,8 @@
          <l n="353">Pyxidas invenies et rerum mille colores,</l>
          <l n="354" rend="indent">Et fluere in tepidos oesypa lapsa sinus.</l>
          <l n="355">Illa tuas redolent, Phineu, medicamina mensas:</l>
-         <l n="356" rend="indent">Non semel hinc stomacho nausea facta meo est. <milestone ed="p" n="357" rend="indent" unit="carte"/>
+         <l n="356" rend="indent">Non semel hinc stomacho nausea facta meo est. <milestone ed="p"
+               n="357" rend="indent" unit="carte" />
          </l>
          <l n="357">Nunc tibi, quae medio veneris praestemus in usu,</l>
          <l n="358" rend="indent">Eloquar: ex omni est parte fugandus amor.</l>
@@ -488,7 +499,8 @@
          <l n="403">Quamlibet invenias, in qua tua prima voluptas</l>
          <l n="404" rend="indent">Desinat: a prima proxima segnis erit.</l>
          <l n="405">Sustentata venus gratissima; frigore soles,</l>
-         <l n="406" rend="indent">Sole iuvant umbrae, grata fit unda siti. <milestone ed="p" n="407" rend="indent" unit="carte"/>
+         <l n="406" rend="indent">Sole iuvant umbrae, grata fit unda siti. <milestone ed="p" n="407"
+               rend="indent" unit="carte" />
          </l>
          <l n="407">Et pudet, et dicam: venerem quoque iunge figura,</l>
          <l n="408" rend="indent">Qua minime iungi quamque decere putas.</l>
@@ -523,7 +535,8 @@
          <l n="437">Quid, qui clam latuit reddente obscena puella,</l>
          <l n="438" rend="indent">Et vidit, quae mos ipse videre vetat?</l>
          <l n="439">Di melius, quam nos moneamus talia quemquam!</l>
-         <l n="440" rend="indent">Ut prosint, non sunt expedienda tamen. <milestone ed="p" n="441" rend="indent" unit="carte"/>
+         <l n="440" rend="indent">Ut prosint, non sunt expedienda tamen. <milestone ed="p" n="441"
+               rend="indent" unit="carte" />
          </l>
          <l n="441">Hortor et, ut pariter binas habeatis amicas</l>
          <l n="442" rend="indent">(Fortior est, plures siquis habere potest):</l>
@@ -570,7 +583,8 @@
          <l n="483">Dixit, et hanc habuit solacia magna prioris,</l>
          <l n="484" rend="indent">Et posita est cura cura repulsa nova.</l>
          <l n="485">Ergo adsume novas auctore Agamemnone flammas,</l>
-         <l n="486" rend="indent">Ut tuus in bivio distineatur amor. <milestone ed="p" n="487" rend="indent" unit="carte"/>
+         <l n="486" rend="indent">Ut tuus in bivio distineatur amor. <milestone ed="p" n="487"
+               rend="indent" unit="carte" />
          </l>
          <l n="487">Quaeris, ubi invenias? artes tu perlege nostras:</l>
          <l n="488" rend="indent">Plena puellarum iam tibi navis erit.</l>
@@ -627,7 +641,8 @@
          <l n="539">Taedia quaere mali: faciunt et taedia finem.</l>
          <l n="540" rend="indent">Iam quoque, cum credes posse carere, mane,</l>
          <l n="541">Dum bene te cumules et copia tollat amorem,</l>
-         <l n="542" rend="indent">Et fastidita non iuvet esse domo. <milestone ed="p" n="543" rend="indent" unit="carte"/>
+         <l n="542" rend="indent">Et fastidita non iuvet esse domo. <milestone ed="p" n="543"
+               rend="indent" unit="carte" />
          </l>
          <l n="543">Fit quoque longus amor, quem diffidentia nutrit:</l>
          <l n="544" rend="indent">Hunc tu si quaeres ponere, pone metum.</l>
@@ -664,7 +679,8 @@
          <l n="575">Plura loquebatur: placidum puerilis imago</l>
          <l n="576" rend="indent">Destituit somnum, si modo somnus erat.</l>
          <l n="577">Quid faciam? media navem Palinurus in unda</l>
-         <l n="578" rend="indent">Deserit; ignotas cogor inire vias. <milestone ed="p" n="579" rend="indent" unit="carte"/>
+         <l n="578" rend="indent">Deserit; ignotas cogor inire vias. <milestone ed="p" n="579"
+               rend="indent" unit="carte" />
          </l>
          <l n="579">Quisquis amas, loca sola nocent, loca sola caveto!</l>
          <l n="580" rend="indent">Quo fugis? in populo tutior esse potes.</l>
@@ -695,7 +711,8 @@
          <l n="605">Sithoni, tum certe vellem non sola fuisses:</l>
          <l n="606" rend="indent">Non flesset positis Phyllida silva comis.</l>
          <l n="607">Phyllidis exemplo nimium secreta timete,</l>
-         <l n="608" rend="indent">Laese vir a domina, laesa puella viro. <milestone ed="p" n="609" rend="indent" unit="carte"/>
+         <l n="608" rend="indent">Laese vir a domina, laesa puella viro. <milestone ed="p" n="609"
+               rend="indent" unit="carte" />
          </l>
          <l n="609">Praestiterat iuvenis quidquid mea Musa iubebat,</l>
          <l n="610" rend="indent">Inque suae portu paene salutis erat:</l>
@@ -742,7 +759,8 @@
          <l n="651">Flumine perpetuo torrens solet altior ire:</l>
          <l n="652" rend="indent">Sed tamen haec brevis est, illa perennis aqua. </l>
          <l n="653">Fallat, et in tenues evanidus exeat auras,</l>
-         <l n="654" rend="indent">Perque gradus molles emoriatur amor. <milestone ed="p" n="655" rend="indent" unit="carte"/>
+         <l n="654" rend="indent">Perque gradus molles emoriatur amor. <milestone ed="p" n="655"
+               rend="indent" unit="carte" />
          </l>
          <l n="655">Sed modo dilectam scelus est odisse puellam:</l>
          <l n="656" rend="indent">Exitus ingeniis convenit iste feris.</l>
@@ -787,7 +805,8 @@
          <l n="695">Nec peccata refer, ne diluat: ipse favebis,</l>
          <l n="696" rend="indent">Ut melior causa causa sit illa tua.</l>
          <l n="697">Qui silet, est firmus; qui dicit multa puellae</l>
-         <l n="698" rend="indent">Probra, satisfieri postulat ille sibi. <milestone ed="p" n="699" rend="indent" unit="carte"/>
+         <l n="698" rend="indent">Probra, satisfieri postulat ille sibi. <milestone ed="p" n="699"
+               rend="indent" unit="carte" />
          </l>
          <l n="699">Non ego Dulichio furari more sagittas,</l>
          <l n="700" rend="indent">Nec raptas ausim tinguere in amne faces:</l>
@@ -804,7 +823,8 @@
          <l n="711">Utraque formosae Paridi potuere videri,</l>
          <l n="712" rend="indent">Sed sibi conlatam vicit utramque Venus.</l>
          <l n="713">Nec solam faciem, mores quoque confer et artes:</l>
-         <l n="714" rend="indent">Tantum iudicio ne tuus obsit amor. <milestone ed="p" n="715" rend="indent" unit="carte"/>
+         <l n="714" rend="indent">Tantum iudicio ne tuus obsit amor. <milestone ed="p" n="715"
+               rend="indent" unit="carte" />
          </l>
          <l n="715">Exiguum est, quod deinde canam; sed profuit illud</l>
          <l n="716" rend="indent">Exiguum multis: in quibus ipse fui.</l>
@@ -841,7 +861,8 @@
          <l n="747">Cur nemo est, Hecalen, nulla est, quae ceperit Iron?</l>
          <l n="748" rend="indent">Nempe quod alter egens, altera pauper erat.</l>
          <l n="749">Non habet, unde suum paupertas pascat amorem:</l>
-         <l n="750" rend="indent">Non tamen hoc tanti est, pauper ut esse velis. <milestone ed="p" n="751" rend="indent" unit="carte"/>
+         <l n="750" rend="indent">Non tamen hoc tanti est, pauper ut esse velis. <milestone ed="p"
+               n="751" rend="indent" unit="carte" />
          </l>
          <l n="751">At tanti tibi sit non indulgere theatris,</l>
          <l n="752" rend="indent">Dum bene de vacuo pectore cedat amor.</l>
@@ -876,7 +897,8 @@
          <l n="781">Certe ego fecissem, nec sum sapientior illo:</l>
          <l n="782" rend="indent">Invidiae fructus maximus ille fuit.</l>
          <l n="783">Nam sibi quod numquam tactam Briseida iurat</l>
-         <l n="784" rend="indent">Per sceptrum, sceptrum non putat esse deos. <milestone ed="p" n="785" rend="indent" unit="carte"/>
+         <l n="784" rend="indent">Per sceptrum, sceptrum non putat esse deos. <milestone ed="p"
+               n="785" rend="indent" unit="carte" />
          </l>
          <l n="785">Di faciant, possis dominae transire relictae</l>
          <l n="786" rend="indent">Limina, proposito sufficiantque pedes.</l>

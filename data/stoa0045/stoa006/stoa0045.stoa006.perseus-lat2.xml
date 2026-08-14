@@ -40,23 +40,25 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/32/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/32/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"
+                  n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -70,9 +72,11 @@
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa006.perseus-lat2">
          <div n="1" type="section">
-            <head>DE  HEREDIOLO</head>
+            <head>DE HEREDIOLO</head>
             <p n="pr">
-                        Cum de palatio post multos annos honoratissimus, quippe iam consul, redisset ad patriam, villulam, quam pater reliquerat, introgressus his versibus lusit Luciliano stilo:</p>
+               Cum de palatio post multos annos honoratissimus, quippe iam consul, redisset ad
+               patriam, villulam, quam pater reliquerat, introgressus his versibus lusit Luciliano
+               stilo:</p>
             <l n="1">Salve, herediolum, maiorum regna meorum,</l>
             <l n="2">quod proavus, quod avus, quod pater excoluit,</l>
             <l n="3">quod mihi iam senior properata morte reliquit:</l>
@@ -85,7 +89,7 @@
             <l n="10">parva umquam aequanimis, adde etiam unanimis. </l>
             <l n="11">ex animo rem stare aequum puto, non animum ex re.</l>
             <l n="12">cuncta cupit Croesus, Diogenes nihilum:</l>
-            <pb n="v.1.p.34"/>
+            <pb n="v.1.p.34" />
             <l n="13">spargit Aristippus mediis in Syrtibus aurum,</l>
             <l n="14">aurea non satis est Lydia tota Midae.</l>
             <l n="15">cui nullus finis cupiendi, est nullus habendi: </l>

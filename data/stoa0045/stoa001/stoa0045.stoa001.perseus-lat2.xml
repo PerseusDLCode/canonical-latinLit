@@ -40,23 +40,25 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/216/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/216/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"
+                  n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -71,18 +73,19 @@
       <body xml:base="urn:cts:latinLit:stoa0045.stoa001.perseus-lat2">
          <div n="pr" type="section">
             <head>Ausonius Paulo suo S. D.</head>
-            <p n="1">
-                        Pervincis tandem <note n="1"/> et operta musarum mearum, quae initiorum velabat obscuritas, quamquam non profanus, irrumpis, Paule carissime, 
-                        quamvis enim te non eius vulgi existimem, quod Horatius <note n="2"/> arcet ingressu, tamen sua cuique sacra, neque idem Cereri, quod Libero, 
-                        etiam sub isdem cultoribus, poematia, quae in alumnam meam luseram rudia et incohata ad domesticae solacium cantilenae, cum sine metu 
-                        <add>laterent </add>
-               <note n="3"/> et arcana securitate fruerentur, proferre ad lucem caligantia coegisti. verecundiae meae scilicet spolium 
-                        concupisti, aut, quantum tibi in me iuris esset, ab invito indicari. ne tu Alexandri Macedonis pervicaciam supergressus, qui, fatalis iugi lora
-                        <pb n="v.1.p.218"/>
-                        cum solvere non posset, abscidit et Pythiae specum, quo die fas non erat patere, penetravit. Utere igitur ut tuis, pari iure, sed fiducia dispari: 
-                        quippe tua possunt populum non timere; meis etiam intra me erubesco, vale.
-                        
-                    </p>
+            <p n="1"> Pervincis tandem <note n="1" /> et operta musarum mearum, quae initiorum
+               velabat obscuritas, quamquam non profanus, irrumpis, Paule carissime, quamvis enim te
+               non eius vulgi existimem, quod Horatius <note n="2" /> arcet ingressu, tamen sua
+               cuique sacra, neque idem Cereri, quod Libero, etiam sub isdem cultoribus, poematia,
+               quae in alumnam meam luseram rudia et incohata ad domesticae solacium cantilenae, cum
+               sine metu <add>laterent </add>
+               <note n="3" /> et arcana securitate fruerentur,
+               proferre ad lucem caligantia coegisti. verecundiae meae scilicet spolium concupisti,
+               aut, quantum tibi in me iuris esset, ab invito indicari. ne tu Alexandri Macedonis
+               pervicaciam supergressus, qui, fatalis iugi lora <pb n="v.1.p.218" /> cum solvere non
+               posset, abscidit et Pythiae specum, quo die fas non erat patere, penetravit. Utere
+               igitur ut tuis, pari iure, sed fiducia dispari: quippe tua possunt populum non
+               timere; meis etiam intra me erubesco, vale. </p>
          </div>
          <div n="1" type="section">
             <head>PRAEFATIO</head>
@@ -90,7 +93,7 @@
             <l n="2">lusimus quos in Suebae gratiam virgunculae,</l>
             <l n="3">otium magis foventes, quam studentes gloriae,</l>
             <l n="4">tu molestus flagitator lege molesta carmina,</l>
-            <l n="5">tibi, quod intristi, exedendum est <note n="1"/>: sic vetus verbum iubet, </l>
+            <l n="5">tibi, quod intristi, exedendum est <note n="1" />: sic vetus verbum iubet, </l>
             <l n="6">compedes, quas ipse fecit, ipsus ut gestet faber.</l>
          </div>
          <div n="2" type="section">
@@ -105,7 +108,7 @@
             <l n="8">legerit, hic sapiet.</l>
             <l n="9">sed magis hic sapiet, si dormiet et putet ista</l>
             <l n="10">somnia missa sibi. </l>
-            <pb n="v.1.p.220"/>
+            <pb n="v.1.p.220" />
          </div>
          <div n="3" type="section">
             <head>UBI NATA SIT BISSULA ET QUOMODO IN MANUS DOMINI VENERIT</head>
@@ -115,7 +118,7 @@
             <l n="4">deliciis, cuius bellica praeda fuit.</l>
             <l n="5">matre carens, nutricis egens, <add>quae</add> nescit herai </l>
             <l n="6">imperium, <add>domini quae regit ipsa domum,</add>
-               <note n="1"/>
+               <note n="1" />
             </l>
             <l n="7">fortunae ac patriae quae nulla obprobria sensit,</l>
             <l n="8">illico inexperto libera servitio,</l>
@@ -139,14 +142,14 @@
             <l n="4">temperiem hanc vultus nescit manus, ergo age, pictor,</l>
             <l n="5">puniceas confunde rosas et lilia misce, </l>
             <l n="6">quique erit ex illis color aeris, ipse sit oris.</l>
-            <pb n="v.1.p.222"/>
+            <pb n="v.1.p.222" />
          </div>
          <div n="6" type="section">
             <head>AD PICTOREM DE BISSULA PINGENDA</head>
             <l n="1">PINGERE si nostram, pictor, meditaris alumnam,</l>
             <l n="2">aemula Cecropias ars imitetur apes.</l>
-            <gap reason="lost"/>
-            <pb n="v.1.p.224"/>
+            <gap reason="lost" />
+            <pb n="v.1.p.224" />
          </div>
       </body>
    </text>

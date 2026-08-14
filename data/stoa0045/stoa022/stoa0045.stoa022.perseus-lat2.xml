@@ -40,23 +40,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="http://www.archive.org/stream/deciausonius01ausouoft#page/56/mode/2up">Internet Archive</ref>
+               <ref target="http://www.archive.org/stream/deciausonius01ausouoft#page/56/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type='section']" delim=":" unit="section"
+                  n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -71,13 +75,20 @@
       <body xml:base="urn:cts:latinLit:stoa0045.stoa022.perseus-lat2">
          <div n="pr1" type="section">
             <head>Praefatio in prosa</head>
-            <p n="1">Scio versiculis meis evenire, ut fastidiose legantur: quippe sic meritum est eorum, sed quosdam solet commendare materia et aliquotiens fortasse lectorem solum lemma sollicitat tituli, ut festivitate persuasus et ineptiam ferre contentus sit. hoc opusculum nec materia amoenum est nec appellatione iucundum, habet maestam religionem, qua carorum meorum obitus tristi adfectione commemoro. titulus libelli est Parentalia. antiquae appellationis hic dies et iam inde ab Numa cognatorum inferiis institutus: nec quidquam sanctius habet reverentia superstitum, quam ut amissos venerabiliter recordetur.</p>
+            <p n="1">Scio versiculis meis evenire, ut fastidiose legantur: quippe sic meritum est
+               eorum, sed quosdam solet commendare materia et aliquotiens fortasse lectorem solum
+               lemma sollicitat tituli, ut festivitate persuasus et ineptiam ferre contentus sit.
+               hoc opusculum nec materia amoenum est nec appellatione iucundum, habet maestam
+               religionem, qua carorum meorum obitus tristi adfectione commemoro. titulus libelli
+               est Parentalia. antiquae appellationis hic dies et iam inde ab Numa cognatorum
+               inferiis institutus: nec quidquam sanctius habet reverentia superstitum, quam ut
+               amissos venerabiliter recordetur.</p>
          </div>
          <div n="pr2" type="section">
             <head>Item praefatio versibus adnotata</head>
             <l n="1">Nomina carorum iam condita funere iusto,</l>
             <l n="2">fleta prius lacrimis, nunc memorabo modis,</l>
-            <pb n="v.1.p.58"/>
+            <pb n="v.1.p.58" />
             <l n="3">nuda, sine ornatu fandique carentia cultu:</l>
             <l n="4">sufficit inferiis exequialis honos,</l>
             <l n="5">nenia, funereis satis officiosa querellis, </l>
@@ -105,7 +116,7 @@
             <l n="6">optavit quidquid, contigit, ut voluit,</l>
             <l n="7">non quia fatorum nimia indulgentia, sed quod</l>
             <l n="8">tam moderata illi vota fuere viro.</l>
-            <pb n="v.1.p.60"/>
+            <pb n="v.1.p.60" />
             <l n="9">quem sua contendit septem sapientibus aetas,</l>
             <l n="10">quorum doctrinam moribus excoluit, </l>
             <l n="11">viveret ut potius quam diceret, arte sophorum,</l>
@@ -137,11 +148,11 @@
             <l n="5">temperies adhibenda, <add>et proximus ille vocandus1</add>
             </l>
             <l n="6">ante alios, quamquam patre secundus erit.</l>
-            <pb n="v.1.p.62"/>
+            <pb n="v.1.p.62" />
             <l n="7">tu frater genetricis et unanimis genitori,</l>
             <l n="8">et mihi qui fueris, quod pater et genetrix,</l>
             <l n="9">qui me lactantem, puerum iuvenemque virumque</l>
-            <l n="10">artibus ornasti, quas didicisse iuvat —  </l>
+            <l n="10">artibus ornasti, quas didicisse iuvat — </l>
             <l n="11">te sibi Palladiae antetulit toga docta Tolosae,</l>
             <l n="12">te Narbonensis Gallia praeposuit,</l>
             <l n="13">ornasti cuius Latio sermone tribunal</l>
@@ -165,7 +176,7 @@
             <l n="4">conplexum multas nobilitate domus,</l>
             <l n="5">qua Lugdunensis provincia quaque potentes </l>
             <l n="6">Haedues, Alpino quaque Vienna iugo.</l>
-            <pb n="v.1.p.64"/>
+            <pb n="v.1.p.64" />
             <l n="7">invida set nimium generique opibusque superbis</l>
             <l n="8">aerumna incubuit; namque avus et genitor</l>
             <l n="9">proscripti, regnum cum Victorinus haberet</l>
@@ -192,7 +203,7 @@
             <l n="30">fata tui certe nota nepotis habes.</l>
             <l n="31">sentis, quod quaestor, quod te praefectus et idem</l>
             <l n="32">consul honorifico munere conmemoro.</l>
-            <pb n="v.1.p.66"/>
+            <pb n="v.1.p.66" />
          </div>
          <div n="5" type="section">
             <head>AEMILIA CORINTHIA MAURA AVIA</head>
@@ -221,7 +232,7 @@
             <l n="8">crevit devotae virginitatis amor.</l>
             <l n="9">quae tibi septenos novies est culta per annos</l>
             <l n="10">quique aevi finis, ipse pudicitiae. </l>
-            <pb n="v.1.p.68"/>
+            <pb n="v.1.p.68" />
             <l n="11">haec, quia uti mater monitis et amore fovebas,</l>
             <l n="12">supremis reddo filius exequiis.</l>
          </div>
@@ -252,7 +263,7 @@
             <l n="5">pulcher honore oris, tranquillo pectore comis,<note n="marg"> 5</note>
             </l>
             <l n="6">facundo quamvis maior ab ingenio:</l>
-            <pb n="v.1.p.70"/>
+            <pb n="v.1.p.70" />
             <l n="7">venatu et ruris cultu victusque nitore</l>
             <l n="8">omne aevum peragens, publica despiciens:</l>
             <l n="9">nosci inter primos cupiens, prior esse recusans,</l>
@@ -280,7 +291,7 @@
             <l n="10">semper crudescit nam mihi paene recens. </l>
             <l n="11">admittunt alii solacia temporis aegri:</l>
             <l n="12">haec graviora facit vulnera longa dies.</l>
-            <pb n="v.1.p.72"/>
+            <pb n="v.1.p.72" />
             <l n="13">torqueo deceptos ego vita caelibe canos,</l>
             <l n="14">quoque magis solus, hoc mage maestus ago.</l>
             <l n="15">vulnus alit, quod muta domus silet et torus alget, </l>
@@ -305,17 +316,17 @@
             <l n="1">NON ego te infletum memori fraudabo querella,</l>
             <l n="2">primus, nate, meo nomine dicte puer:</l>
             <l n="3">murmura quem primis meditantem absolvere verbis</l>
-            <l n="4">indolis et plenae, planximus exequiis.<note n="1"/>
+            <l n="4">indolis et plenae, planximus exequiis.<note n="1" />
             </l>
             <l n="5">tu gremio in proavi funus commune Iocatus, </l>
             <l n="6">invidiam tumuli ne paterere tui.</l>
-            <pb n="v.1.p.74"/>
+            <pb n="v.1.p.74" />
          </div>
          <div n="11" type="section">
             <head>PASTOR NEPOS EX FILIO</head>
             <l n="1">TU quoque maturos, puer inmature, dolores</l>
             <l n="2">interrupisti luctus acerbus avi,</l>
-            <l n="3">Pastor care nepos, spes cuius certa fuisses, <note n="1"/>
+            <l n="3">Pastor care nepos, spes cuius certa fuisses, <note n="1" />
             </l>
             <l n="4">Hesperii patris tertia progenies,</l>
             <l n="5">nomen, quod casus dederat (quia fistula primum </l>
@@ -341,7 +352,7 @@
             <l n="6">docta bonos mores ipsa suosque docens,</l>
             <l n="7">et verum vita cui carius unaque cura</l>
             <l n="8">nosse deum et fratrem diligere ante alios.</l>
-            <pb n="v.1.p.76"/>
+            <pb n="v.1.p.76" />
             <l n="9">coniuge adhuc iuvenis caruit, sed seria vitans</l>
             <l n="10">moribus austeras aequiperavit anus </l>
             <l n="11">produxitque hilarem per sena decennia vitam,</l>
@@ -357,7 +368,7 @@
             <l n="6">aevique supra puberis</l>
             <l n="7">exire metas vetuit infesta Atropos.</l>
             <l n="8">heu quem dolorem sociis!</l>
-            <l n="9">heu quanta vitae decora, quem cultum spei,<note n="1"/>
+            <l n="9">heu quanta vitae decora, quem cultum spei,<note n="1" />
             </l>
             <l n="10">germane, pubes deseris, </l>
             <l n="11">germane carnis lege et ortu sanguinis,</l>
@@ -373,7 +384,7 @@
             <l n="6">unde genus clarae nobilitatis erat,</l>
             <l n="7">ore decens, bonus ingenio, facundus et omni</l>
             <l n="8">dexteritate vigens praecipuusque fide.</l>
-            <pb n="v.1.p.78"/>
+            <pb n="v.1.p.78" />
             <l n="9">hoc praefecturae sedes, hoc Illyris ora</l>
             <l n="10">praeside te experta est, fiscus et ipse cliens. </l>
             <l n="11">nil aevi brevitate tamen tibi laudis ademptum:</l>
@@ -400,11 +411,11 @@
             <head>VERIA LICERIA UXOR ARBORII SORORIS FILII</head>
             <l n="1">TU quoque sive nurus mihi nomine, vel vice natae,</l>
             <l n="2">Veria, supremi carmen honoris habe.</l>
-            <pb n="v.1.p.80"/>
+            <pb n="v.1.p.80" />
             <l n="3">cuius si probitas, si forma et fama fidesque</l>
             <l n="4">morigerae uxoris lanificaeque manus</l>
             <l n="5">nunc laudanda forent, procul et de manibus imis </l>
-            <l n="6">accersenda foret vox <note n="1"/> proavi Eusebii.</l>
+            <l n="6">accersenda foret vox <note n="1" /> proavi Eusebii.</l>
             <l n="7">qui quoniam functo iam pridem conditus aevo</l>
             <l n="8">transcripsit partes in mea verba suas,</l>
             <l n="9">accipe funereas, neptis defleta, querellas,</l>
@@ -433,7 +444,7 @@
             <l n="13">mentem bonus, ingenio ingens,</l>
             <l n="14">volucer pede, corpore pulcher,</l>
             <l n="15">lingua catus, ore canorus. </l>
-            <pb n="v.1.p.82"/>
+            <pb n="v.1.p.82" />
             <l n="16">cape munera tristia patrum,</l>
             <l n="17">lacrimabilis orsa querellae,</l>
             <l n="18">quae funereo modulatu</l>
@@ -464,7 +475,7 @@
             <l n="6">rexit opes proprias otia agente viro:</l>
             <l n="7">non ideo exprobrans aut fronte obducta marito,</l>
             <l n="8">quod gereret totam femina sola domum.</l>
-            <pb n="v.1.p.84"/>
+            <pb n="v.1.p.84" />
             <l n="9">heu nimium iuvenis, sed laeta superstate nato</l>
             <l n="10">atque viro, patiens fata suprema obiit: </l>
             <l n="11">unanimis nostrae et quondam germana Sabinae</l>
@@ -491,7 +502,7 @@
             <l n="6">stringamus maesti carminis obsequio,</l>
             <l n="7">quamvis Santonica procul in tellure iacentes</l>
             <l n="8">pervenit ad manes exequialis honor.</l>
-            <pb n="v.1.p.86"/>
+            <pb n="v.1.p.86" />
          </div>
          <div n="22" type="section">
             <head>SEVERUS CENSOR IULIANUS CONSOCER</head>
@@ -518,7 +529,7 @@
             <l n="2">amissi specimen qui genitoris eras;</l>
             <l n="3">propter quem luctus miserae decedere matris</l>
             <l n="4">coeperat, offerret cum tua forma patrem,</l>
-            <pb n="v.1.p.88"/>
+            <pb n="v.1.p.88" />
             <l n="5">redderet et mores et moribus adderet illud, </l>
             <l n="6">Paulinus caruit quo pater, eloquium:</l>
             <l n="7">eriperis laetis et pubescentibus annis</l>
@@ -533,7 +544,7 @@
             <l n="16">nondum purpureas cinctus ephebe genas!</l>
             <l n="17">quattuor ediderat nunc functa puerpera partus,</l>
             <l n="18">funera set tumulis iam geminata dedit.</l>
-            <l n="19">Sit satis hoc, Pauline pater; divisio facta est:<note n="1"/>
+            <l n="19">Sit satis hoc, Pauline pater; divisio facta est:<note n="1" />
             </l>
             <l n="20">debetur matri cetera progenies.</l>
          </div>
@@ -547,7 +558,7 @@
             <l n="6">indeptus thalamo: sic mihi paene gener,</l>
             <l n="7">stirpis Aquitanae mater tibi: nam genitori</l>
             <l n="8">Cossio Vasatum, municipale genus.</l>
-            <pb n="v.1.p.90"/>
+            <pb n="v.1.p.90" />
             <l n="9">scrinia praefecti meritus, rationibus inde</l>
             <l n="10">praepositus Libycis praemia opima capis. </l>
             <l n="11">nam correcturae tibi Tarraco Hibera tribunal</l>
@@ -578,7 +589,7 @@
             <l n="2">Musa, Cataphroniam.</l>
             <l n="3">innuba devotae quae virginitatis amorem</l>
             <l n="4">parcaque anus coluit:</l>
-            <pb n="v.1.p.92"/>
+            <pb n="v.1.p.92" />
             <l n="5">et mihi, quod potuit, quamvis de paupere summa, </l>
             <l n="6">mater uti, adtribuit.</l>
             <l n="7">ergo commemorata have maestumque vocata</l>
@@ -611,14 +622,14 @@
             <l n="6">tempora et ad manes funera acerba dedit,</l>
             <l n="7">praemissa ergo vale manesque verere parentum,</l>
             <l n="8">qui maiore aevo quique minore venit.</l>
-            <pb n="v.1.p.94"/>
+            <pb n="v.1.p.94" />
          </div>
          <div n="30" type="section">
             <head>POMPONIA URBICA CONSOCRUS UXOR IULIANI CENSORIS</head>
             <l n="1">UT generis clari, veterum sic femina morum,</l>
             <l n="2">Urbica, Censoris nobilitata toro;</l>
             <l n="3">ingenitis pollens virtutibus auctaque et illis,</l>
-            <l n="4">quas docuit coniunx, quas pater et genetrix —  quas</l>
+            <l n="4">quas docuit coniunx, quas pater et genetrix — quas</l>
             <l n="5">habuit Tanaquil, quas Pythagorea Theano </l>
             <l n="6">quaeque sine exemplo in nece functa viri.</l>
             <l n="7">et tibi si fatum sic permutare dedisset,</l>

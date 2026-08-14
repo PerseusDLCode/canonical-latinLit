@@ -40,23 +40,26 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft?view=theater#page/96/mode/2up">Internet Archive</ref>
+               <ref
+                  target="https://archive.org/details/deciausonius01ausouoft?view=theater#page/96/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" n="chunk"
+                  use="@n" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -69,7 +72,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa004.perseus-lat2">
-         <pb n="v.1.p.96"/>
+         <pb n="v.1.p.96" />
          <div n="praef" type="section">
             <head>Praefatio</head>
             <l n="1">Vos etiam, quos nulla mihi cognatio iunxit,</l>
@@ -91,7 +94,7 @@
             <l n="8">non sit Burdigalae dum cathedra inferior,</l>
             <l n="9">mille foro dedit hic iuvenes, bis mille senatus</l>
             <l n="10">adiecit numero purpureisque togis; </l>
-            <pb n="v.1.p.98"/>
+            <pb n="v.1.p.98" />
             <l n="11">me quoque: set quoniam multa est praetexta, silebo</l>
             <l n="12">teque canam de te, non ab honore meo.</l>
             <l n="13">sive panegyricis placeat contendere libris,</l>
@@ -118,7 +121,7 @@
             <l n="34">nec nolit Frugi Piso vocare suam:</l>
             <l n="35">nonnumquam pollens natalibus et dape festa, </l>
             <l n="36">non tamen angustas ut tenuaret opes.</l>
-            <pb n="v.1.p.100"/>
+            <pb n="v.1.p.100" />
             <l n="37">quamquam heredis egens, bis sex quinquennia functus,</l>
             <l n="38">fletus es a nobis ut pater et iuvenis.</l>
             <l n="39">Et nunc, sive aliquid post fata extrema superfit,</l>
@@ -151,7 +154,7 @@
             <l n="20">quos tu sacrae famae dabas </l>
             <l n="21">et Iulianum tu magis famae dabis</l>
             <l n="22">quam sceptra, quae tenuit brevi.</l>
-            <pb n="v.1.p.102"/>
+            <pb n="v.1.p.102" />
             <l n="23">Sallustio plus conferent libri tui,</l>
             <l n="24">quam consulatus addidit,</l>
             <l n="25">morum tuorum, decoris et facundiae </l>
@@ -186,7 +189,7 @@
             <head>ATTIUS PATERA <add>PATER</add> RHETOR</head>
             <l n="1">AETATE quamquam viceris dictos prius,</l>
             <l n="2">Patera, fandi nobilis;</l>
-            <pb n="v.1.p.104"/>
+            <pb n="v.1.p.104" />
             <l n="3">tamen, quod aevo floruisti proximo</l>
             <l n="4">iuvenisque te vidi senem,</l>
             <l n="5">honore maestae non carebis neniae, </l>
@@ -218,7 +221,7 @@
             <l n="6">dei poeta nobilis,</l>
             <l n="7">sertum coronae praeferens Olympiae,</l>
             <l n="8">puer celebrasti Iovem:</l>
-            <pb n="v.1.p.106"/>
+            <pb n="v.1.p.106" />
             <l n="9">mox inde cursim more torrentis freti</l>
             <l n="10">epos ligasti metricum, </l>
             <l n="11">ut nullus aequa lege liber carminum</l>
@@ -249,7 +252,7 @@
             <l n="36">medio quod aevi raptus es,</l>
             <l n="37">errore quod non deviantis filiae</l>
             <l n="38">poenaque laesus coniugis.</l>
-            <pb n="v.1.p.108"/>
+            <pb n="v.1.p.108" />
          </div>
          <div n="6" type="section">
             <head>ALETHIO MINERVIO FILIO RHETORI</head>
@@ -307,10 +310,10 @@
             <l n="52">versus Horati:</l>
             <l n="53">“Nil est ab omni</l>
             <l n="54">parte beatum.”</l>
-            <pb n="v.1.p.110"/>
+            <pb n="v.1.p.110" />
          </div>
          <div n="7" type="section">
-            <head>LEONTIUS GRAMMATICUS COGNOMENTO LASCIVUS <note n="1"/>
+            <head>LEONTIUS GRAMMATICUS COGNOMENTO LASCIVUS <note n="1" />
             </head>
             <l n="1">QUI colis laetos hilarosque mores,</l>
             <l n="2">qui dies festos, ioca, vota, ludum,</l>
@@ -339,7 +342,7 @@
             <l n="2">anne Sperchei pariterque nati</l>
             <l n="3">Atticas musas memorem Menesthei</l>
             <l n="4">grammaticorum?</l>
-            <pb n="v.1.p.112"/>
+            <pb n="v.1.p.112" />
             <l n="5">sedulum cunctis studium docendi, </l>
             <l n="6">fructus exilis tenuisque sermo:</l>
             <l n="7">set, quia nostro docuere in aevo,</l>
@@ -365,15 +368,13 @@
             <l n="4">Iucunde, hoc ipso care magis studio:</l>
             <l n="5">quod, quamvis impar, nomen tam nobile amasti, </l>
             <l n="6">es meritos inter commemorande viros.</l>
-            <pb n="v.1.p.114"/>
+            <pb n="v.1.p.114" />
          </div>
          <div n="10" type="section">
-            <head>
-                    GRAMMATICIS LATINIS BURDIGALENSI BOS PHILOLOGIS 
-                    <add>MACRINO SUCURONI CONCORDIO PHOEBICIO <note n="1"/>
-               </add>
-                    Ammonio Anastasio Grammatico Pictaviorum
-               </head>
+            <head> GRAMMATICIS LATINIS BURDIGALENSI BOS PHILOLOGIS <add>MACRINO SUCURONI CONCORDIO
+               PHOEBICIO <note n="1" />
+               </add> Ammonio Anastasio Grammatico
+               Pictaviorum </head>
             <l n="1">NUNC ut quemque mihi</l>
             <l n="2">flebilis officii</l>
             <l n="3">relligiosus honor</l>
@@ -416,7 +417,7 @@
             <l n="39">moribus inplacidis:</l>
             <l n="40">proinde, ut erat meritum, </l>
             <l n="41">famam habuit tenuem.</l>
-            <pb n="v.1.p.116"/>
+            <pb n="v.1.p.116" />
             <l n="42">Pange et ANASTASIO</l>
             <l n="43">flebile, Musa, melum</l>
             <l n="44">et memora tenuem</l>
@@ -451,7 +452,7 @@
             <l n="2">parvulus audivi, vix etiam memini,</l>
             <l n="3">qua forma aut merito fueris, qua stirpe parentum,</l>
             <l n="4">aetas nil de te posterior celebrat.</l>
-            <pb n="v.1.p.118"/>
+            <pb n="v.1.p.118" />
             <l n="5">grammaticum iuvenem tantum te fama ferebat, </l>
             <l n="6">tum quoque tam tenuis, quam modo nulla manet.</l>
             <l n="7">set quicumque tamen, nostro quia doctor in aevo</l>
@@ -480,7 +481,7 @@
             <l n="4">dilatus nobis, non et omissus eras.</l>
             <l n="5">quocumque in numero, tristi memorabere threno: 5</l>
             <l n="6">unus honos tumuli, serus et ante datus.</l>
-            <pb n="v.1.p.120"/>
+            <pb n="v.1.p.120" />
             <l n="7">tam generis tibi celsus apex, quam gloria fandi,</l>
             <l n="8">gloria Athenaei cognita sede loci:</l>
             <l n="9">Nazario et claro quondam delata Paterae</l>
@@ -505,7 +506,7 @@
             <l n="12">Scaurum Probumque corde callens intimo</l>
             <l n="13">et Epirote Cinea memor magis:</l>
             <l n="14">sodalis et convictor, hospes iugiter:</l>
-            <pb n="v.1.p.122"/>
+            <pb n="v.1.p.122" />
             <l n="15">parum quod hospes, mentis agitator meae. </l>
             <l n="16">consilia nullus mente tam pura dedit</l>
             <l n="17">vel altiore conditu texit data.</l>
@@ -532,7 +533,7 @@
             <l n="14">Constantinopolim fama tui pepulit,</l>
             <l n="15">illic dives opum doctoque ibi Caesare honorus </l>
             <l n="16">occumbis patribus, Magne, superstitibus.</l>
-            <pb n="v.1.p.124"/>
+            <pb n="v.1.p.124" />
             <l n="17">in patriam sed te sedem ac monumenta tuorum</l>
             <l n="18">principis Augusti restituit pietas,</l>
             <l n="19">hinc renovat causam lacrimis et flebile munus</l>
@@ -557,7 +558,7 @@
             <l n="15">tempora praedives finisti sede Cadurca. </l>
             <l n="16">sed patriae te iura vocant et origo parentum.</l>
             <l n="17">Burdigalae ut rursum nomen de rhetore reddas.</l>
-            <pb n="v.1.p.126"/>
+            <pb n="v.1.p.126" />
          </div>
          <div n="18" type="section">
             <head>MARCELLO MARCELLI FILIO GRAMMATICO NARBONENSI</head>
@@ -586,7 +587,7 @@
             <l n="6">et fama, magno qualis est par rhetori.</l>
             <l n="7">quamvis externa tamen a regione reducit</l>
             <l n="8">te patria et civem morte obita repetit,</l>
-            <pb n="v.1.p.128"/>
+            <pb n="v.1.p.128" />
             <l n="9">cumque vagantem operam divisae impenderis urbi,</l>
             <l n="10">arbitrium de te sumit origo suum. </l>
             <l n="11">et tua nunc suboles morem sectata parentis</l>
@@ -611,7 +612,7 @@
             <l n="12">nec cunctator erat, nec properator erat.</l>
             <l n="13">pulchra senecta, nitens habitus, procul ira dolorque;</l>
             <l n="14">et placidae vitae congrua meta fuit.</l>
-            <pb n="v.1.p.130"/>
+            <pb n="v.1.p.130" />
          </div>
          <div n="21" type="section">
             <head>CRISPUS ET URBICUS GRAMMATICI LATINI ET GRAECI</head>
@@ -643,7 +644,7 @@
             <l n="26">callentes mython plasmata et historiam,</l>
             <l n="27">liberti ambo genus, sed quos meruisse deceret</l>
             <l n="28">nancisci, ut cluerent patribus ingenuis.</l>
-            <pb n="v.1.p.132"/>
+            <pb n="v.1.p.132" />
          </div>
          <div n="22" type="section">
             <head>VICTORIO SUBDOCTORI SIVE PROSCHOLO</head>
@@ -669,7 +670,7 @@
             <l n="20">ad quas de Siculo litore transieras. </l>
             <l n="21">sed modo nobilium memoratus in agmine gaude,</l>
             <l n="22">pervenit ad manes si pia cura tuos.</l>
-            <pb n="v.1.p.134"/>
+            <pb n="v.1.p.134" />
          </div>
          <div n="23" type="section">
             <head>DYNAMIO BURDIGALENSI QUI IN HISPANIA DOCUIT ET OBIIT</head>
@@ -698,7 +699,7 @@
             <l n="4">Glabrio Acilini, 1 Dardana progenies.</l>
             <l n="5">tu quondam puero conpar mihi, discipulus mox, </l>
             <l n="6">meque dehinc facto rhetore grammaticus,</l>
-            <pb n="v.1.p.136"/>
+            <pb n="v.1.p.136" />
             <l n="7">inque foro tutela reis et cultor in agris,</l>
             <l n="8">digne, diu partis qui fruerere bonis:</l>
             <l n="9">commode, laete, benigne, abstemie, tam bone dandis</l>
@@ -722,7 +723,7 @@
             <l n="8">eloquium ne tu quaere, set officium,</l>
             <l n="9">quo claris doctisque viris pia cura parentat,</l>
             <l n="10">dum decora egregiae commeminit patriae. </l>
-            <pb n="v.1.p.138"/>
+            <pb n="v.1.p.138" />
          </div>
          <div n="26" type="section">
             <head>POETA</head>
@@ -740,7 +741,7 @@
             <l n="12">memoria vivat nominum,</l>
             <l n="13">dum remeat illud, iudicis dono dei,</l>
             <l n="14">commune cunctis saeculum.</l>
-            <pb n="v.1.p.140"/>
+            <pb n="v.1.p.140" />
          </div>
       </body>
    </text>

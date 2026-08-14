@@ -40,20 +40,18 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/stream/ausonius02evelgoog#page/n14/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/ausonius02evelgoog#page/n14/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
-                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
-                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
-                  </citeStructure>
+               <citeStructure unit="book" delim=":" match="div[@type='letter']" use="@n" n="chunk">
                </citeStructure>
             </citeStructure>
          </refsDecl>
@@ -61,9 +59,9 @@
       <profileDesc>
          <textClass>
             <catRef scheme="#perseus-genre"
-                    target="#prose-standard"
-                    cert="low"
-                    resp="#corpus-tools"/>
+               target="#prose-standard"
+               cert="low"
+               resp="#corpus-tools" />
          </textClass>
          <langUsage>
             <language ident="eng">English</language>
@@ -77,126 +75,116 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa011.perseus-lat2">
-         <pb n="v.2.p.2"/>
+         <pb n="v.2.p.2" />
          <div n="1" type="letter">
             <head>SYMMACHUS AUSONIO</head>
-            <p n="1"> MERUM mihi gaudium eruditionis tuae scripta tribuerunt, quae Capuae Iocatus accepi,
-                        erat quippe in his oblita Tulliano melle festivitas et sermonis mei non tam vera, quam
-                        blanda laudatio, quid igitur magis mirer, sententiae incertus addubito, ornamenta oris an
-                        pectoris tui. quippe ita facundia antistas ceteris, ut sit formido rescribere: ita benigne
-                        nostra conprobas, ut libeat non tacere, si plura de te praedicem, videbor mutuum scabere et
-                        magis imitator tui esse adloquii quam probator, simul quod ipse nihil ostentandi gratia
-                        facis, verendum est genuina in te bona tamquam adfectata laudare, unum hoc tamen a nobis
-                        indubitata veritate cognosce, neminem esse mortalium quem prae te diligam; sic vadatum me
-                        honorabili amore tenuisti. </p>
+            <p n="1"> MERUM mihi gaudium eruditionis tuae scripta tribuerunt, quae Capuae Iocatus
+               accepi,
+               erat quippe in his oblita Tulliano melle festivitas et sermonis mei non tam vera,
+               quam
+               blanda laudatio, quid igitur magis mirer, sententiae incertus addubito, ornamenta
+               oris an
+               pectoris tui. quippe ita facundia antistas ceteris, ut sit formido rescribere: ita
+               benigne
+               nostra conprobas, ut libeat non tacere, si plura de te praedicem, videbor mutuum
+               scabere et
+               magis imitator tui esse adloquii quam probator, simul quod ipse nihil ostentandi
+               gratia
+               facis, verendum est genuina in te bona tamquam adfectata laudare, unum hoc tamen a
+               nobis
+               indubitata veritate cognosce, neminem esse mortalium quem prae te diligam; sic
+               vadatum me
+               honorabili amore tenuisti. </p>
             <p n="2">
-               <pb n="v.2.p.4"/> Set in eo mihi verecundus nimio plus videre, quod libelli tui arguis
-                        proditorem, nam facilius est ardentes favillas ore comprimere quam luculenti operis servare
-                        secretum. eum semel a te profectum carmen est, ius omne posuisti: oratio publicata res
-                        libera est. an vereris aemuli venena lectoris. Ne libellus tuus admorsu duri dentis uratur?
-                        tibi uni ad hoc locorum nihil gratia praestitit aut dempsit invidia, ingratis scaevo cuique
-                        proboque laudabilis es. proinde cassas dehinc seelude formidines et indulge stilo, ut saepe
-                        prodaris. certe aliquod didascalicum seu protrepticum nostro quoque nomini carmen adiudica.
-                        fac periculum silentii mei, quod etsi tibi exhibere opto, tamen spondere non audeo, novi
-                        ego. quae sit prurigo emuttiendi operis, quod probaris, nam quodam pacto societatem laudis
-                        adfectat, qui aliena bene dicta primus enuntiat. Ea propter in comoediis summatim quidem
-                        gloriam scriptores tulerunt, Roscio tamen atque Ambivio ceterisque actoribus fama non
-                        defuit.</p>
-            <p n="3"> Ergo tali negotio expcnde otium tuum et novis voluminibus ieiunia nostra sustenta,
-                        quod si iactantiae fugax garrulum iudicem pertimescis, praesta etiam tu silentium mihi, ut
-                        tuto simulem nostra esse, quae scripseris, vale.</p>
-            <pb n="v.2.p.6"/>
+               <pb n="v.2.p.4" /> Set in eo mihi verecundus nimio plus videre, quod libelli tui
+               arguis proditorem, nam facilius est ardentes favillas ore comprimere quam luculenti
+               operis servare secretum. eum semel a te profectum carmen est, ius omne posuisti:
+               oratio publicata res libera est. an vereris aemuli venena lectoris. Ne libellus tuus
+               admorsu duri dentis uratur? tibi uni ad hoc locorum nihil gratia praestitit aut
+               dempsit invidia, ingratis scaevo cuique proboque laudabilis es. proinde cassas dehinc
+               seelude formidines et indulge stilo, ut saepe prodaris. certe aliquod didascalicum
+               seu protrepticum nostro quoque nomini carmen adiudica. fac periculum silentii mei,
+               quod etsi tibi exhibere opto, tamen spondere non audeo, novi ego. quae sit prurigo
+               emuttiendi operis, quod probaris, nam quodam pacto societatem laudis adfectat, qui
+               aliena bene dicta primus enuntiat. Ea propter in comoediis summatim quidem gloriam
+               scriptores tulerunt, Roscio tamen atque Ambivio ceterisque actoribus fama non defuit.</p>
+            <p n="3"> Ergo tali negotio expcnde otium tuum et novis voluminibus ieiunia nostra
+               sustenta,
+               quod si iactantiae fugax garrulum iudicem pertimescis, praesta etiam tu silentium
+               mihi, ut
+               tuto simulem nostra esse, quae scripseris, vale.</p>
+            <pb n="v.2.p.6" />
          </div>
          <div n="2" type="letter">
             <head>AUSONIUS SYMMACHO</head>
-            <p n="1">
-                        MODO intellego, quam mellea res sit oratio; quam
-                        delinifica et quam suada facundia. persuasisti mihi,
-                        quod epistulae meae aput Capuam tibi redditae concinnatio
-                        inhumana non esset; set hoc non diutius,
-                        quam dum epistulam tuam legi, quae me blanditiis
-                        inhiantem tuis velut suco nectaris delibuta perducit.
-                        ubi enim chartulam pono et me ipsum interrogo,
-                        tum absinthium meum resipit et circumlita melle
-                        tuo pocula deprehendo. si vero, id quod saepe facio,
-                        ad epistulam tuam redii, rursus inlicior: et rursum
-                        ille suavissimus, ille floridus tui sermonis adflatus
-                        deposita lectione vanescit et testimonii pondus prohibet
-                        inesse dulcedini. hoc me velut aerius bratteae
-                        fucus aut picta nebula non longius, quam dum videtur,
-                        oblectat chamaeleontis bestiolae vice, quae de
-                        subiectis sumit colorem, aliud sentio ex epistula
-                        tua, aliud ex conscientia mea. et tu me audes facundissimorum
-                        hominum laude dignari: tu, inquam,
-                        mihi ista, qui te ultra emendationem omnium protulisti?
-                        quisquamne ita nitet, ut conparatus tibi
-                        non sordeat? quis ita Aesopi venustatem, quis sophisticas
-                        Isocratis conclusiones, quis ad cnthymemata
-                        Demosthenis aut opulentiam Tullianam aut
-                        proprietatem nostri Maronis accedat? quis ita adfectet
-                        singula, ut tu imples omnia? quid enim aliud
-                        <pb n="v.2.p.8"/>
-                        es, quam ex omni bonarum artium ingenio collecta
-                        perfectio?
-                    </p>
+            <p n="1"> MODO intellego, quam mellea res sit oratio; quam delinifica et quam suada
+               facundia. persuasisti mihi, quod epistulae meae aput Capuam tibi redditae concinnatio
+               inhumana non esset; set hoc non diutius, quam dum epistulam tuam legi, quae me
+               blanditiis inhiantem tuis velut suco nectaris delibuta perducit. ubi enim chartulam
+               pono et me ipsum interrogo, tum absinthium meum resipit et circumlita melle tuo
+               pocula deprehendo. si vero, id quod saepe facio, ad epistulam tuam redii, rursus
+               inlicior: et rursum ille suavissimus, ille floridus tui sermonis adflatus deposita
+               lectione vanescit et testimonii pondus prohibet inesse dulcedini. hoc me velut aerius
+               bratteae fucus aut picta nebula non longius, quam dum videtur, oblectat chamaeleontis
+               bestiolae vice, quae de subiectis sumit colorem, aliud sentio ex epistula tua, aliud
+               ex conscientia mea. et tu me audes facundissimorum hominum laude dignari: tu, inquam,
+               mihi ista, qui te ultra emendationem omnium protulisti? quisquamne ita nitet, ut
+               conparatus tibi non sordeat? quis ita Aesopi venustatem, quis sophisticas Isocratis
+               conclusiones, quis ad cnthymemata Demosthenis aut opulentiam Tullianam aut
+               proprietatem nostri Maronis accedat? quis ita adfectet singula, ut tu imples omnia?
+               quid enim aliud <pb n="v.2.p.8" /> es, quam ex omni bonarum artium ingenio collecta
+               perfectio? </p>
             <p n="2">
-                        Haec, domine mi fili Symmache, non vereor, ne
-                        in te blandius dicta videantur esse quam verius, et
-                        expertus es (idem meam mentis atque dictorum,
-                        dum in comitatu (legimus ambo aevo dispari, ubi tu
-                        veteris militiae praemia tiro meruisti, ego tiroeinium
-                        iam veteranus exercui. in comitatu tibi verus fui,
-                        nedum me peregre existimes conposita fabulari. In
-                        comitatu, inquam, qui frontes hominum aperit, mentes
-                        tegit, ibi me et parentem et amicum et, si quid
-                        utroque carius est, cariorem fuisse sensisti, set abeamus
-                        ab his: ne ista haec conmemoratio ad illam
-                        Sosiae formidinem videatur accedere.
-                    </p>
-            <p n="3">
-                        Illud, quod paene praeterii, qua adfectatione addidisti,
-                        ut ad te didascalieum aliquod opuseulum aut
-                        sermonem protreptieum mitterem? ego te docebo
-                        doeendus adhuc, si essem id aetatis, ut discerem?
-                        aut ego te vegetum atque alacrem commonebo?
-                        eadem opera et Musas hortabor, ut canant, et maria,
-                        ut effluant, et auras, ut vigeant, et ignes, ut caleant.
-                        admonebo: et, si quid invitis quoque nobis natura
-                        fit, superfluus instigator agitabo. sat est unius erroris
-                        quod aliquid meorum me paenitente vulgatum
-                        est, quod bona fortuna in manus amicorum incidit,
-                        nam si contra id evenisset, nec tu mihi persuaderes
-                        placere me posse.
-                        <pb n="v.2.p.10"/>
+               Haec, domine mi fili Symmache, non vereor, ne
+               in te blandius dicta videantur esse quam verius, et
+               expertus es (idem meam mentis atque dictorum,
+               dum in comitatu (legimus ambo aevo dispari, ubi tu
+               veteris militiae praemia tiro meruisti, ego tiroeinium
+               iam veteranus exercui. in comitatu tibi verus fui,
+               nedum me peregre existimes conposita fabulari. In
+               comitatu, inquam, qui frontes hominum aperit, mentes
+               tegit, ibi me et parentem et amicum et, si quid
+               utroque carius est, cariorem fuisse sensisti, set abeamus
+               ab his: ne ista haec conmemoratio ad illam
+               Sosiae formidinem videatur accedere.
+            </p>
+            <p n="3"> Illud, quod paene praeterii, qua adfectatione addidisti, ut ad te didascalieum
+               aliquod opuseulum aut sermonem protreptieum mitterem? ego te docebo doeendus adhuc,
+               si essem id aetatis, ut discerem? aut ego te vegetum atque alacrem commonebo? eadem
+               opera et Musas hortabor, ut canant, et maria, ut effluant, et auras, ut vigeant, et
+               ignes, ut caleant. admonebo: et, si quid invitis quoque nobis natura fit, superfluus
+               instigator agitabo. sat est unius erroris quod aliquid meorum me paenitente vulgatum
+               est, quod bona fortuna in manus amicorum incidit, nam si contra id evenisset, nec tu
+               mihi persuaderes placere me posse. <pb n="v.2.p.10" />
             </p>
             <p n="4">
-                        Haec ad litteras tuas responsa sint: cetera, quae
-                        noscere aves, conpendi faciam; sic quoque iam longa
-                        est epistula. Iulianum tamen familiarem domus
-                        vestrae, si quid de nobis percontandum arbitraris,
-                        adlego; simul admoneo, ut, eum causam adventus
-                        eius agnoveris. iuves studium, quod ex parte fovisti.
-                        vale.
-                    </p>
+               Haec ad litteras tuas responsa sint: cetera, quae
+               noscere aves, conpendi faciam; sic quoque iam longa
+               est epistula. Iulianum tamen familiarem domus
+               vestrae, si quid de nobis percontandum arbitraris,
+               adlego; simul admoneo, ut, eum causam adventus
+               eius agnoveris. iuves studium, quod ex parte fovisti.
+               vale.
+            </p>
          </div>
          <div n="3" type="letter">
             <head>SYMMACHUS AUSONIO</head>
             <p n="1">
-                        ETSI plerumque vera est aput parentes praedicatio
-                        filiorum, nescio quo tamen pacto detrimentum
-                        meriti sui patiatur, dum personarum spectare gratiam
-                        iudicatur, quaero igitur incertus animi, quae mihi
-                        nunc potissimum super viro honorabili Thalassio
-                        genero tuo verba sumenda sint. si parce decora
-                        morum eius adtingam. liventi similis existimabor:
-                        si iuste persequar, ero proximus blandienti. Imitabor
-                        igitur Sallustiani testimonii castigationem. Habes
-                        virum dignum te et per te familia consulari, quem
-                        fortuna honoris parti maiorem beneficiis suis repperit,
-                        emendatio animi et sanctitas potioribus iam
-                        paravit. vale.
-                    </p>
-            <pb n="v.2.p.12"/>
+               ETSI plerumque vera est aput parentes praedicatio
+               filiorum, nescio quo tamen pacto detrimentum
+               meriti sui patiatur, dum personarum spectare gratiam
+               iudicatur, quaero igitur incertus animi, quae mihi
+               nunc potissimum super viro honorabili Thalassio
+               genero tuo verba sumenda sint. si parce decora
+               morum eius adtingam. liventi similis existimabor:
+               si iuste persequar, ero proximus blandienti. Imitabor
+               igitur Sallustiani testimonii castigationem. Habes
+               virum dignum te et per te familia consulari, quem
+               fortuna honoris parti maiorem beneficiis suis repperit,
+               emendatio animi et sanctitas potioribus iam
+               paravit. vale.
+            </p>
+            <pb n="v.2.p.12" />
          </div>
          <div n="4" type="letter">
             <head>AUSONIUS AXIO PAULO RUETORI sal.</head>
@@ -227,7 +215,7 @@
             <l n="8">nutrit secretus conclusae uliginis umor,</l>
             <l n="9">enumcrare iubes, vetus o mihi Paule sodalis,</l>
             <l n="10">adsuefacte meis ioculari carmine nngis. </l>
-            <pb n="v.2.p.14"/>
+            <pb n="v.2.p.14" />
             <l n="11">adgrediar; quamvis curam non ista senilem</l>
             <l n="12">sollicitent frugique viro dignanda putentur.</l>
             <l n="13">nam mihi non Saliare epulum, non aura dapalis,</l>
@@ -255,7 +243,7 @@
             <l n="35">Sunt et Aremorici qui laudent ostrea ponti, </l>
             <l n="36">et quae Pictonici legit accola litoris, et piae</l>
             <l n="37">mira Caledoniis nonnunquam detegit aestus.</l>
-            <pb n="v.2.p.16"/>
+            <pb n="v.2.p.16" />
             <l n="38">accedunt, quae fama recens Byzantia subter</l>
             <l n="39">litora et insana generata Propontidis acta</l>
             <l n="40">promoti celebrata ducis de nomine laudat. </l>
@@ -281,7 +269,7 @@
             <l n="6">Tartesiorum regulus:</l>
             <l n="7">intemerata tibi maneant promissa, memento.</l>
             <l n="8">Phoebus iubet verum loqui:</l>
-            <pb n="v.2.p.18"/>
+            <pb n="v.2.p.18" />
             <l n="9">etsi Pierias patitur Ii rare sorores.</l>
             <l n="10">numquam ipse torquet <foreign xml:lang="grc">αὔλακα</foreign>. </l>
             <l n="11">te quoque ne pigeat consponsi foederis: et iam</l>
@@ -314,43 +302,43 @@
             <l n="36">veni Camenarum citus:</l>
             <l n="37">dactylicos. elegos, choriambum carmen, epodos,</l>
             <l n="38">socci et coturni musicam</l>
-            <pb n="v.2.p.20"/>
+            <pb n="v.2.p.20" />
             <l n="39">carpentis impone tuis: nam tota supellex</l>
             <l n="40">vatum piorum chartea est. </l>
-            <l n="41">nobiscum invenies <foreign xml:lang="grc">κατ' ἐναντία</foreign>, si
-                        libet uti</l>
+            <l n="41">nobiscum invenies <foreign xml:lang="grc">κατ' ἐναντία</foreign>, si libet uti</l>
             <l n="42">non Poena 1 sed Graeca fide.</l>
          </div>
          <div n="7" type="letter">
             <head>RESCRIPTUM PAULO SI O</head>
-            <p n="1">VERSUS meos utili et conscio sibi pudore celatos carmine tuo et sermone praemissis dum putas
-                        eliei, repressisti. nam qui ipse facundus et musicus editionis alienae prolectat audaciam,
-                        consilio, quo suadet, exterret, tegat oportet auditor doctrinam suam, qui volet ad dicendum
-                        sollicitare trepidantem, nec emerita adversum tirunculos arma concutiat veterana calliditas.
-                        sensit hoc Venus de pulchritudiuis palma diu ambiguo ampliata iudicio. pudenter enim ut apud
-                        patrem velata certaverat nec deterrebat aemulas ornatus aequalis; at postquam in pastoris
-                        examen deducta est lis dearum, qualis emerserat mari aut eum Marte convenerat, et
-                        consternavit arbitrum et contendentium certamen oppressit, ergo nisi Delirus tuus in re
-                        tenui non tenuiter laboratus opuscula mea, quae promi studucras, retardasset, iam dudum ego
-                        ut palmes audacior in hibernas adhue auras improbum germen egissem, periculum iudicii gravis
-                        <pb n="v.2.p.22"/> inconsulta festinatione subiturus. denique pisonem, quem tollenonem
-                        existimo proprie a philologis appellatum, adhibere, ut iubebas, recenti versuum tuorum
-                        lectione non ausus, ea quae tibi iam cursim fuerant recitata, transmisi. etenim hoc
-                        poposcisti atque id ego malui, tu ut tua culpa ad eundem lapidem bis offenderes, ego autem,
-                        quaecumque fortuna esset, semel erubescerem.</p>
-            <p n="2"> Vide, mi Paule, quam ineptum lacessieris in verbis rudem, in eloquendo hiulcum, a propositis
-                        discrepantem, in versibus concinnationis expertem, in ea villando nec natura venustum nec
-                        arte conditum, diluti salis, fellis ignavi, nec de mimo planipedem nec de comoediis
-                        histrionem, ac nisi haec a nobis missa ipse lecturus esses, etiam de pronuntiatione rideres.
-                        nunc commodiore fato sunt, quod, licet apud nos genuina, aput te erunt adoptiva.
-                        <lg>
+            <p n="1">VERSUS meos utili et conscio sibi pudore celatos carmine tuo et sermone
+               praemissis dum putas eliei, repressisti. nam qui ipse facundus et musicus editionis
+               alienae prolectat audaciam, consilio, quo suadet, exterret, tegat oportet auditor
+               doctrinam suam, qui volet ad dicendum sollicitare trepidantem, nec emerita adversum
+               tirunculos arma concutiat veterana calliditas. sensit hoc Venus de pulchritudiuis
+               palma diu ambiguo ampliata iudicio. pudenter enim ut apud patrem velata certaverat
+               nec deterrebat aemulas ornatus aequalis; at postquam in pastoris examen deducta est
+               lis dearum, qualis emerserat mari aut eum Marte convenerat, et consternavit arbitrum
+               et contendentium certamen oppressit, ergo nisi Delirus tuus in re tenui non tenuiter
+               laboratus opuscula mea, quae promi studucras, retardasset, iam dudum ego ut palmes
+               audacior in hibernas adhue auras improbum germen egissem, periculum iudicii gravis <pb
+                  n="v.2.p.22" /> inconsulta festinatione subiturus. denique pisonem, quem
+               tollenonem existimo proprie a philologis appellatum, adhibere, ut iubebas, recenti
+               versuum tuorum lectione non ausus, ea quae tibi iam cursim fuerant recitata,
+               transmisi. etenim hoc poposcisti atque id ego malui, tu ut tua culpa ad eundem
+               lapidem bis offenderes, ego autem, quaecumque fortuna esset, semel erubescerem.</p>
+            <p n="2"> Vide, mi Paule, quam ineptum lacessieris in verbis rudem, in eloquendo
+               hiulcum, a propositis discrepantem, in versibus concinnationis expertem, in ea
+               villando nec natura venustum nec arte conditum, diluti salis, fellis ignavi, nec de
+               mimo planipedem nec de comoediis histrionem, ac nisi haec a nobis missa ipse lecturus
+               esses, etiam de pronuntiatione rideres. nunc commodiore fato sunt, quod, licet apud
+               nos genuina, aput te erunt adoptiva. <lg>
                   <l>Vinum eum biiugo parabo plaustro</l>
                   <l>primo tempore Santonos vehendum,</l>
                   <l>ovum tu quoque - passeris marini,</l>
                   <l>quod nunc promus ait procul relictum</l>
                   <l>in fundo patriae Bigerritanae.</l>
                </lg>
-               <pb n="v.2.p.24"/>
+               <pb n="v.2.p.24" />
             </p>
          </div>
          <div n="8" type="letter">
@@ -358,46 +346,46 @@
                <foreign xml:lang="grc">ΑΥΣΟΝΙΟΣ ΠΑΥΛΩΙ</foreign>
             </head>
             <l n="1">
-               <foreign xml:lang="grc">Ἑλλαδικῆσ μέτοχον μούσησ</foreign> Latiacque
-                        camenae</l>
+               <foreign xml:lang="grc">Ἑλλαδικῆσ μέτοχον μούσησ</foreign> Latiacque camenae</l>
             <l n="2">
-               <foreign xml:lang="grc">Ἄξιον Αὐσόνιοσ</foreign> sermone adludo
-                        bilingni.</l>
+               <foreign xml:lang="grc">Ἄξιον Αὐσόνιοσ</foreign> sermone adludo bilingni.</l>
             <l n="3">Musae. quid facimus? <foreign xml:lang="grc">τί κεναῖσιν ἐφ' ἑλπίσιν</foreign>
             </l>
             <l n="4">Indimus <foreign xml:lang="grc">ἀφρυδίῃδιν ἐν ἤματι</foreign>
             </l>
             <l n="5">
                <foreign xml:lang="grc">Σαντονικοῖσ κάμποισιν, ὅποι κρύοσ ἄξενόν</foreign>. </l>
-            <l n="6">erramus gelido <foreign xml:lang="grc">τρομεροὶ καὶ</foreign>
-                        frigdopetae.</l>
+            <l n="6">erramus gelido <foreign xml:lang="grc">τρομεροὶ καὶ</foreign> frigdopetae.</l>
             <l n="7">
-               <foreign xml:lang="grc">Πιερίδων τενεροπλοκάμων θεράποντεσ</foreign>
-                        inertes.</l>
+               <foreign xml:lang="grc">Πιερίδων τενεροπλοκάμων θεράποντεσ</foreign> inertes.</l>
             <l n="8">
-               <foreign xml:lang="grc">πάντα δ' ἔχει παγετόσ τε</foreign> pedum <foreign xml:lang="grc">καὶ κρουσμὸσ ὀδόντων,</foreign>
+               <foreign xml:lang="grc">πάντα δ' ἔχει παγετόσ τε</foreign> pedum <foreign
+                  xml:lang="grc">καὶ κρουσμὸσ ὀδόντων,</foreign>
             </l>
             <l n="9">
-               <foreign xml:lang="grc">θαλπωρὴ</foreign> quia nulla <foreign xml:lang="grc">φοκοῦ χιονώδει χώρῃ</foreign>
+               <foreign xml:lang="grc">θαλπωρὴ</foreign> quia nulla <foreign xml:lang="grc">φοκοῦ
+               χιονώδει χώρῃ</foreign>
             </l>
-            <l n="10">et duplicant frigus <foreign xml:lang="grc">ψυχρὰ</foreign> carmina
-                            <foreign xml:lang="grc">μητιόωντεσ</foreign>. </l>
+            <l n="10">et duplicant frigus <foreign xml:lang="grc">ψυχρὰ</foreign> carmina <foreign
+                  xml:lang="grc">μητιόωντεσ</foreign>. </l>
             <l n="11">
-               <foreign xml:lang="grc">ἀρχόμενοσ δ' ἄρα μηνὶ νέῳ Ιανοῦ τε</foreign>
-                        calend <foreign xml:lang="grc">αισ</foreign>
+               <foreign xml:lang="grc">ἀρχόμενοσ δ' ἄρα μηνὶ νέῳ Ιανοῦ τε</foreign> calend <foreign
+                  xml:lang="grc">αισ</foreign>
             </l>
             <l n="12">primitias Panlo nostrae <foreign xml:lang="grc">πέμψωμεν</foreign>
             </l>
             <l n="13">
-               <foreign xml:lang="grc">Μνημοσύνησ κρηδεμνοκόμου πολν</foreign> cantica
-                            <foreign xml:lang="grc">τέκνα,</foreign>
+               <foreign xml:lang="grc">Μνημοσύνησ κρηδεμνοκόμου πολν</foreign> cantica <foreign
+                  xml:lang="grc">τέκνα,</foreign>
             </l>
             <l n="14">
-               <foreign xml:lang="grc">ἐννέα</foreign> Verbosae <foreign xml:lang="grc">κριννοστέφανοί τε</foreign> puellae,</l>
+               <foreign xml:lang="grc">ἐννέα</foreign> Verbosae <foreign xml:lang="grc">κριννοστέφανοί
+               τε</foreign> puellae,</l>
             <l n="15">
-               <foreign xml:lang="grc">ἔνθ' ἄγε μοι πολυ</foreign> risa <foreign xml:lang="grc">ἔπη, σκουρώδεα μολπήν</foreign>.</l>
-            <l n="16">frontibus <foreign xml:lang="grc">ὑμετέραισ πτέρινον</foreign>
-                        praeferte triumphum</l>
+               <foreign xml:lang="grc">ἔνθ' ἄγε μοι πολυ</foreign> risa <foreign xml:lang="grc">ἔπη,
+               σκουρώδεα μολπήν</foreign>.</l>
+            <l n="16">frontibus <foreign xml:lang="grc">ὑμετέραισ πτέρινον</foreign> praeferte
+               triumphum</l>
             <l n="17">
                <foreign xml:lang="grc">ὑμᾶσ γὰρ καλέω σκαιὸσ Διονυσοπουητήσ </foreign>
             </l>
@@ -405,70 +393,72 @@
                <foreign xml:lang="grc">Παύλῳ ἐφαρμόσσαιτε μεμιγμενοβάρβαρον</foreign>
             </l>
             <l n="19">
-               <foreign xml:lang="grc">οὐ γάρ μοι θέμισ ἐστὶν</foreign> in hac regione
-                            <foreign xml:lang="grc">μένοντι</foreign>
+               <foreign xml:lang="grc">οὐ γάρ μοι θέμισ ἐστὶν</foreign> in hac regione <foreign
+                  xml:lang="grc">μένοντι</foreign>
             </l>
             <l n="20">
-               <foreign xml:lang="grc">Ἄξιον</foreign> abnostris <foreign xml:lang="grc">ἐπιδεύεα εἶνε καμήναις:</foreign>
+               <foreign xml:lang="grc">Ἄξιον</foreign> abnostris <foreign xml:lang="grc">ἐπιδεύεα
+               εἶνε καμήναις:</foreign>
             </l>
             <l n="21">
-               <foreign xml:lang="grc">κεῖνοσ ἐμοὶ πάντων μέτοχοσ</foreign>. qui seria
-                        nostra.</l>
-            <l n="22">qui ioca <foreign xml:lang="grc">παντοδαπῇ</foreign> novit tractare
-                            <foreign xml:lang="grc">παλαίστρῃ.</foreign>
+               <foreign xml:lang="grc">κεῖνοσ ἐμοὶ πάντων μέτοχοσ</foreign>. qui seria nostra.</l>
+            <l n="22">qui ioca <foreign xml:lang="grc">παντοδαπῇ</foreign> novit tractare <foreign
+                  xml:lang="grc">παλαίστρῃ.</foreign>
             </l>
             <l n="23">
-               <foreign xml:lang="grc">καὶ νῦν</foreign> sepositus <foreign xml:lang="grc">μοναχῷ ἐνὶ</foreign> rnre <foreign xml:lang="grc">Κρεβέννου</foreign>
+               <foreign xml:lang="grc">καὶ νῦν</foreign> sepositus <foreign xml:lang="grc">μοναχῷ
+               ἐνὶ</foreign> rnre <foreign xml:lang="grc">Κρεβέννου</foreign>
             </l>
             <l n="24">
-               <foreign xml:lang="grc">ἀσταφύλῳ ἐνὶ χώρῳ</foreign> habet <foreign xml:lang="grc">θυμαλγέα λέσχην</foreign>
+               <foreign xml:lang="grc">ἀσταφύλῳ ἐνὶ χώρῳ</foreign> habet <foreign xml:lang="grc">θυμαλγέα
+               λέσχην</foreign>
             </l>
             <l n="25">
-               <foreign xml:lang="grc">οὔτε φίλοισ ἑτάροισ</foreign> nec mensae
-                        accommodus ulli. </l>
-            <l n="26">otia <foreign xml:lang="grc">θελξινόοισ</foreign> aeger <foreign xml:lang="grc">σνμμέμφεται Μούσαισ</foreign>. </l>
-            <pb n="v.2.p.26"/>
+               <foreign xml:lang="grc">οὔτε φίλοισ ἑτάροισ</foreign> nec mensae accommodus ulli. </l>
+            <l n="26">otia <foreign xml:lang="grc">θελξινόοισ</foreign> aeger <foreign
+                  xml:lang="grc">σνμμέμφεται Μούσαισ</foreign>. </l>
+            <pb n="v.2.p.26" />
             <l n="27">Iam satis, <foreign xml:lang="grc">ο φίλε Παῦλε, πόνου</foreign>
             </l>
             <l n="28">
-               <foreign xml:lang="grc">ἔν τε</foreign> for <foreign xml:lang="grc">ῳ</foreign> caus <foreign xml:lang="grc">αισ τε καὶ</foreign> ingrat
-                            <foreign xml:lang="grc">αισι καθέδραισ</foreign>.</l>
+               <foreign xml:lang="grc">ἔν τε</foreign> for <foreign xml:lang="grc">ῳ</foreign> caus <foreign
+                  xml:lang="grc">αισ τε καὶ</foreign> ingrat <foreign xml:lang="grc">αισι καθέδραισ</foreign>
+               .</l>
             <l n="29">
                <foreign xml:lang="grc">ῤητορικοῖσ λουδοῖσι, καὶ ἔπλετο οὐδὲν</foreign>
             </l>
             <l n="30">
-               <foreign xml:lang="grc">ἄλλ' ἤδη κεῖνοσ μὲν ἅπασ</foreign> iuvenalios
-                            <foreign xml:lang="grc">ἱδρὼσ</foreign>
+               <foreign xml:lang="grc">ἄλλ' ἤδη κεῖνοσ μὲν ἅπασ</foreign> iuvenalios <foreign
+                  xml:lang="grc">ἱδρὼσ</foreign>
             </l>
             <l n="31">
-               <foreign xml:lang="grc">ἐκκέχυται μελέων, τρομερὴ δὲ πάρεστι</foreign>
-                        senectus</l>
+               <foreign xml:lang="grc">ἐκκέχυται μελέων, τρομερὴ δὲ πάρεστι</foreign> senectus</l>
             <l n="32">
-               <foreign xml:lang="grc">καὶ</foreign> minus in sumptum <foreign xml:lang="grc">δαπάνασ</foreign> lenis arca ministrat.</l>
+               <foreign xml:lang="grc">καὶ</foreign> minus in sumptum <foreign xml:lang="grc">
+               δαπάνασ</foreign> lenis arca ministrat.</l>
             <l n="33">
-               <foreign xml:lang="grc">Οὐ γὰρ ἔχει ἀπάλαμνοσ ἀνὴρ</foreign> lucr <foreign xml:lang="grc">ον</foreign>,</l>
+               <foreign xml:lang="grc">Οὐ γὰρ ἔχει ἀπάλαμνοσ ἀνὴρ</foreign> lucr <foreign
+                  xml:lang="grc">ον</foreign>,</l>
             <l n="34">
                <foreign xml:lang="grc">κλεινικὸσ οὔτε γέρων χρυσέην ἐργάζετ'</foreign>.</l>
-            <l n="35">Aequanimus quod si fueris et <foreign xml:lang="grc">πάντα</foreign>
-                        vel <foreign xml:lang="grc">αἰνεῖν</foreign>
+            <l n="35">Aequanimus quod si fueris et <foreign xml:lang="grc">πάντα</foreign> vel <foreign
+                  xml:lang="grc">αἰνεῖν</foreign>
             </l>
             <l n="36">malueris, <foreign xml:lang="grc">λήθη πόνου ἔσσεται ἠδὲ</foreign>.</l>
             <l n="37">
-               <foreign xml:lang="grc">Κεῖνο δὲ παγκάλλιστον</foreign>, ut omnibus
-                        undique Musis</l>
+               <foreign xml:lang="grc">Κεῖνο δὲ παγκάλλιστον</foreign>, ut omnibus undique Musis</l>
             <l n="38">
-               <foreign xml:lang="grc">σὺν φιάλῃ</foreign>que <foreign xml:lang="grc">οἴνῳ</foreign>que <foreign xml:lang="grc">ἐτεῶν συνοπάονι</foreign>,</l>
+               <foreign xml:lang="grc">σὺν φιάλῃ</foreign>que <foreign xml:lang="grc">οἴνῳ</foreign>
+               que <foreign xml:lang="grc">ἐτεῶν συνοπάονι</foreign>,</l>
             <l n="39">
-               <foreign xml:lang="grc">θυμοῦ άλῃχεμένου</foreign> solacia blanda
-                        requiras.</l>
-            <l n="40">hic crit et fructus <foreign xml:lang="grc">Δημητέρος                            ἀγλαοκάρπου</foreign>, </l>
+               <foreign xml:lang="grc">θυμοῦ άλῃχεμένου</foreign> solacia blanda requiras.</l>
+            <l n="40">hic crit et fructus <foreign xml:lang="grc">Δημητέρος ἀγλαοκάρπου</foreign>, </l>
             <l n="41">
-               <foreign xml:lang="grc">ἔνθα σύεσ θαλεροί, πολυχανδέα</foreign> pocula
-                            <foreign xml:lang="grc">ἔνθα</foreign>,</l>
+               <foreign xml:lang="grc">ἔνθα σύεσ θαλεροί, πολυχανδέα</foreign> pocula <foreign
+                  xml:lang="grc">ἔνθα</foreign>,</l>
             <l n="42">
                <foreign xml:lang="grc">κιρνᾶν εἴ κε θέλοισ νέκταρ οὐίνοιο</foreign>.</l>
-            <l n="43">Ambo igitur nostrae <foreign xml:lang="grc">παραθέλξομεν</foreign> otia
-                        vitae.</l>
+            <l n="43">Ambo igitur nostrae <foreign xml:lang="grc">παραθέλξομεν</foreign> otia vitae.</l>
             <l n="44">Dum res et aetas et sororum</l>
             <l n="45">
                <foreign xml:lang="grc">νήματα πορφύρεα πολέκηται</foreign>. </l>
@@ -479,14 +469,14 @@
             <l n="1">
                <foreign xml:lang="grc">Ῥωμαίων ὕπατοσ ἀρεταλόγῳ ἠδὲ</foreign>,</l>
             <l n="2">
-               <foreign xml:lang="grc">Αὐσόνιοσ Παύλῳ: σπεῦδε φίλους                            ἰδέειν</foreign>.</l>
+               <foreign xml:lang="grc">Αὐσόνιοσ Παύλῳ: σπεῦδε φίλους ἰδέειν</foreign>.</l>
          </div>
          <div n="10" type="letter">
             <l n="1">Aequoream liqui te propter, amice, Garumnam.</l>
             <l n="2">te propter campos incolo Santonicos;</l>
             <l n="3">congressus igitur nostros pete. si tibi cura.</l>
             <l n="4">quae mihi, conspectu iam potiere meo.</l>
-            <pb n="v.2.p.28"/>
+            <pb n="v.2.p.28" />
             <l n="5">sed tantum adpropera, quantum pote corpore et aevo;</l>
             <l n="6">ut salvum videam, sat cito te video.</l>
             <l n="7">si post infaustas vigor integratus habenas</l>
@@ -518,7 +508,7 @@
                <foreign xml:lang="grc">σωταδικόν τε κίναιδον, ἰωνικὸν</foreign>.</l>
             <l n="30">
                <foreign xml:lang="grc">Ῥυθμῶν Πινδαρικῶν ἔννομον</foreign>.</l>
-            <pb n="v.2.p.30"/>
+            <pb n="v.2.p.30" />
             <l n="31">
                <foreign xml:lang="grc">εὶλιπόδην σκάζοντα καὶ οὐ σκάζοντα</foreign>.</l>
             <l n="32">
@@ -527,8 +517,8 @@
                <foreign xml:lang="grc">Ῥητορικῶν θάημα, σοφῶν ἐρικυδέα</foreign>,</l>
             <l n="34">
                <foreign xml:lang="grc">πάντα μάλ' ὅσσ' ἐθέλεις, καὶ πλέον, εἴ κε</foreign>.</l>
-            <l n="35">Hoc tibi de nostris <foreign xml:lang="grc">ἀσπαστικὸν</foreign>
-                        offero libris.</l>
+            <l n="35">Hoc tibi de nostris <foreign xml:lang="grc">ἀσπαστικὸν</foreign> offero
+               libris.</l>
             <l n="36">vale; valere si voles me, iam veni.</l>
          </div>
          <div n="11" type="letter">
@@ -555,7 +545,7 @@
             <l n="20">necessitatem pristinae, </l>
             <l n="21">quondam docendi munere adstrictum gravi</l>
             <l n="22">Iculisma cum te absconderet,</l>
-            <pb n="v.2.p.32"/>
+            <pb n="v.2.p.32" />
             <l n="23">et invidebam devio ac solo loco</l>
             <l n="24">opus camenarum tegi.</l>
             <l n="25">at nunc — frequentes atque claros nec procul </l>
@@ -576,22 +566,22 @@
          <div n="12" type="letter">
             <head>AUSONIUS PROBO PRAEFECTO PRAETORIO S.</head>
             <p n="pr1"> oblata per antiquarios mora scio promissi mei gratiam expectatione
-                        consumptam, Probe, vir optime; in secundis tamen habeo non fefellisse,
-                        apologos Titiani et Nepotis chronica quasi alios apologos (nam et ipsa
-                        instar sunt fabularum) ad nobilitatem tuam misi. gaudens atque etiam
-                        glorians fore aliquid, quod ad institutionem tuorum sedulitatis meae studio
-                        conteratur.</p>
+               consumptam, Probe, vir optime; in secundis tamen habeo non fefellisse,
+               apologos Titiani et Nepotis chronica quasi alios apologos (nam et ipsa
+               instar sunt fabularum) ad nobilitatem tuam misi. gaudens atque etiam
+               glorians fore aliquid, quod ad institutionem tuorum sedulitatis meae studio
+               conteratur.</p>
             <p n="pr2">Libello tamen apologorum antetuli paucos epodos. studio in te observantiae
-                        meae impudentissimo. <pb n="v.2.p.34"/> paucos quidem, ut ego loquax iudico;
-                        verum tu, cum legens, etiam nimium multos putabis, adiuro benevolentiam
-                        tuam, verecundiae meae testem, eos mihi subita persuasione duxisse, nam quis
-                        hos diu cogitaret? quod sane ipsi per se probabunt, fors fuat, ut si milli
-                        vita suppetet, aliquid rerum tuarum quamvis incultus expoliam: quod tu etsi
-                        lectum non probes, scriptum boni consules, eumque ego imitatus sim vesaniam
-                        Choerili, tu ignoscas magnanimitate Alexandri.</p>
+               meae impudentissimo. <pb n="v.2.p.34" /> paucos quidem, ut ego loquax iudico; verum
+               tu, cum legens, etiam nimium multos putabis, adiuro benevolentiam tuam, verecundiae
+               meae testem, eos mihi subita persuasione duxisse, nam quis hos diu cogitaret? quod
+               sane ipsi per se probabunt, fors fuat, ut si milli vita suppetet, aliquid rerum
+               tuarum quamvis incultus expoliam: quod tu etsi lectum non probes, scriptum boni
+               consules, eumque ego imitatus sim vesaniam Choerili, tu ignoscas magnanimitate
+               Alexandri.</p>
             <p n="pr3">Hi igitur, ut Plautus ait, interim erunt antelogium fabularum, garruli et
-                        deceptores. qui compositi ad honorificentiae obsequium, ad aurium convicium
-                        concurrerunt, vale et me dilige.</p>
+               deceptores. qui compositi ad honorificentiae obsequium, ad aurium convicium
+               concurrerunt, vale et me dilige.</p>
             <l n="1">Perge, o libelle, Sirmium</l>
             <l n="2">et dic ero meo ac tuo</l>
             <l n="3">have atque salve plurimum.</l>
@@ -608,7 +598,7 @@
             <l n="14">et mel fluentem Nestora</l>
             <l n="15">concinnat ore Tulli; </l>
             <l n="16">qui solus exceptis tribus</l>
-            <pb n="v.2.p.36"/>
+            <pb n="v.2.p.36" />
             <l n="17">eris erorum primus est</l>
             <l n="18">praetorioque maximus.</l>
             <l n="19">dico hune senati praesulem,</l>
@@ -643,7 +633,7 @@
             <l n="48">mundi supremus arbiter,</l>
             <l n="49">qualem creavit moribus,</l>
             <l n="50">iussit vocari nomine? ”</l>
-            <pb n="v.2.p.38"/>
+            <pb n="v.2.p.38" />
             <l n="51">Nomen datum praeconiis</l>
             <l n="52">vitaeque testimonio,</l>
             <l n="53">libelle felix, quem sinu</l>
@@ -678,7 +668,7 @@
             <l n="82">ut hinc avi ac patris decus,</l>
             <l n="83">mixto resurgens sanguine,</l>
             <l n="84">probiano itemque Anicio,</l>
-            <pb n="v.2.p.40"/>
+            <pb n="v.2.p.40" />
             <l n="85">ut quondam in Albae moenibus </l>
             <l n="86">supremus Aenea satus</l>
             <l n="87">Silvios lulis miscuit,</l>
@@ -703,12 +693,12 @@
          </div>
          <div n="13" type="letter">
             <head>AD UNSULUM GRAMMATICUM TREVIRORUM CUI STRENAS KALENDIS IANUARIIS AB
-                        IMPERATORE NON DATAS REDDI FECIT</head>
+               IMPERATORE NON DATAS REDDI FECIT</head>
             <l n="1">PRIMUS iucundi foret 1 hic tibi fructus honoris</l>
             <l n="2">Augustae faustum munus habere manus:</l>
             <l n="3">proximus ex longo gradus est quaestoris amici</l>
             <l n="4">curam pro strenis excubuisse tuis.</l>
-            <pb n="v.2.p.42"/>
+            <pb n="v.2.p.42" />
             <l n="5">ergo interceptos regale nomisma Philippos </l>
             <l n="6">accipe tot numero, quot duo Geryones;</l>
             <l n="7">quot terni biiuges demptoque triente Camenae</l>
@@ -729,7 +719,7 @@
             <l n="22">qui solus totidem congeminatus habet,</l>
             <l n="23">quot faciunt iuneti subterque supraque locati;</l>
             <l n="24">qui numerant Hyadas Pleiadasque simul.</l>
-            <pb n="v.2.p.44"/>
+            <pb n="v.2.p.44" />
             <l n="25">
                <add>Tot numero auratos pro strenis accipe nummos 1</add>
             </l>
@@ -756,7 +746,7 @@
             <l n="11">inspirant vacuos aliena mente poetas?</l>
             <l n="12">iure quidem: nam quis malit sua carmina dici,</l>
             <l n="13">qui te securo possit proscindcre risu?</l>
-            <pb n="v.2.p.46"/>
+            <pb n="v.2.p.46" />
             <l n="14">haec quoque ne nostrum possint urgere pudorem,</l>
             <l n="15">tu recita, et vere poterunt tua dicta videri. </l>
             <l n="16">Quam tamen exerces Medulorum in litore vitam?</l>
@@ -784,7 +774,7 @@
             <l n="38">taurinusque ipsum priscis heroibus aequalis,</l>
             <l n="39">qualis in Olcnio victor Calydonius apro</l>
             <l n="40">aut Erymantheo1 pubes fuit Attica monstro. </l>
-            <pb n="v.2.p.48"/>
+            <pb n="v.2.p.48" />
             <l n="41">Set tu parce feris venatibus et fuge nota</l>
             <l n="42">crimina silvarum, ne sis Cinyreia proles</l>
             <l n="43">accedasque iterum Veneri plorandus Adonis,</l>
@@ -810,7 +800,7 @@
             <l n="63">An te carminibus iuvat incestare canoras</l>
             <l n="64">Mnemosyncs natas, aut tris aut octo sorores?</l>
             <l n="65">et quoniam huc ventum, si vis agnoscere, quid sit </l>
-            <pb n="v.2.p.50"/>
+            <pb n="v.2.p.50" />
             <l n="66">inter doctrinam deridendasque camenas,</l>
             <l n="67">accipe congestas, mysteria frivola, nugas,</l>
             <l n="68">quas tamen explicitis nequeas deprendere chartis,</l>
@@ -835,7 +825,7 @@
             <l n="87">et post semipedem duos iambos.</l>
             <l n="88">sunt quos hexametri creant revulsi,</l>
             <l n="89">ut penthemimeres prior locetur,</l>
-            <pb n="v.2.p.52"/>
+            <pb n="v.2.p.52" />
             <l n="90">tum quod bucolice tome relinquit. </l>
             <l n="91">sunt et quos generat puella Sappho:</l>
             <l n="92">quos primus regit hippius secundus,</l>
@@ -854,15 +844,15 @@
          </div>
          <div n="15" type="letter">
             <head>AUSONIUS THEONI CUM EI TRIGINTA OSTREA GRANDIA QUIDEM SET TAM PAUCA
-                        MISISSET</head>
+               MISISSET</head>
             <p n="pr">expectaveram, ut rescriberes ad ea, quae dudum ioculariter luseram de
-                        cessatione tua valde impia et mea efflagitatione, cuius rei munus reciprocum
-                        quoniam in me colendo fastidisti, inventa inter tineas epistula vetere, quam
-                        de ostreis et musculis adfectata obscuritate condideram, quae adulescens
-                        temere fuderam, iam senior retractavi. set in eundem modum instaurata est
-                        satirica et ridicula conciunatio, saltem ut nunc respondeas novissimae
-                        cantilenae, qui illam noviciam silentio condemnasti.</p>
-            <pb n="v.2.p.54"/>
+               cessatione tua valde impia et mea efflagitatione, cuius rei munus reciprocum
+               quoniam in me colendo fastidisti, inventa inter tineas epistula vetere, quam
+               de ostreis et musculis adfectata obscuritate condideram, quae adulescens
+               temere fuderam, iam senior retractavi. set in eundem modum instaurata est
+               satirica et ridicula conciunatio, saltem ut nunc respondeas novissimae
+               cantilenae, qui illam noviciam silentio condemnasti.</p>
+            <pb n="v.2.p.54" />
             <lg>
                <l n="1">Ostrea Baianis certantia, quae Medulorum</l>
                <l n="2">dulcibus in stagnis reflui maris aestus opimat.</l>
@@ -897,7 +887,7 @@
                <l n="25">vel bis quinque, dehinc decem decemque, </l>
                <l n="26">vel senas quater et bis adde ternas;</l>
                <l n="27">septenis quater adde et unum et unum, </l>
-               <pb n="v.2.p.56"/>
+               <pb n="v.2.p.56" />
                <l n="29">aut ter quattuor adde bis novenis;</l>
                <l n="28">duc binas decies semelque denas;</l>
                <l n="30">octonas quater, hinc duae recedant;</l>
@@ -935,7 +925,7 @@
             <head>AUSONIUS THEONI</head>
             <l n="1">AUSONIUS salve caro mihi dico Theoni,</l>
             <l n="2">versibus expediens, quod volo quodve queror.</l>
-            <pb n="v.2.p.58"/>
+            <pb n="v.2.p.58" />
             <l n="3">Tertia fissipedes renovavit Luna iuvencas,</l>
             <l n="4">ut fugitas nostram, dulcis amice, domum,</l>
             <l n="5">nonaginta dies sine te, carissime, traxi; </l>
@@ -962,7 +952,7 @@
             <l n="26">conspicer ora viri. pauperis usque licet.</l>
             <l n="27">Puppe citus propera sinuosaque lintea veli</l>
             <l n="28">pande: Medullini te feret aura 1 noti</l>
-            <pb n="v.2.p.60"/>
+            <pb n="v.2.p.60" />
             <l n="29">expositum subter paradas lectoque iacentem,</l>
             <l n="30">corporis ut tanti non moveatur onus. </l>
             <l n="31">unus Dumnitoni te litore perferet aestus</l>
@@ -992,7 +982,7 @@
             <l n="2">clunes opimat cereas</l>
             <l n="3">vel qui lucentcs rapuit de vitibus uvas,</l>
             <l n="4">pendetque nexus retibus,</l>
-            <pb n="v.2.p.62"/>
+            <pb n="v.2.p.62" />
             <l n="5">quae vespertinis fluitant nebulosa sub horis</l>
             <l n="6">vel mane tenta roscido:</l>
             <l n="7">tales hibernis ad te de saepibus, ipsos</l>
@@ -1023,7 +1013,7 @@
             <l n="8">nomine te gemini iam genitoris amo. </l>
             <l n="11">quippe tibi aequatus videor, quia parvulus isto</l>
             <l n="12">nomine honoratum me quoque nobilitat:</l>
-            <pb n="v.2.p.64"/>
+            <pb n="v.2.p.64" />
             <l n="13">non aetas quia nostra eadem: nam subparis aevi</l>
             <l n="14">sum tibi ego et possum fratris habere vicem,</l>
             <l n="15">nec tantum nostris spatium interponitur annis, </l>
@@ -1052,13 +1042,13 @@
             <l n="38">deque nepote suo fiat avus proavus,</l>
             <l n="39">largius et poterunt producere fata senectam:</l>
             <l n="40">set rata vota reor, quae moderata, magis. </l>
-            <pb n="v.2.p.66"/>
+            <pb n="v.2.p.66" />
          </div>
          <div n="20" type="letter">
             <head>PATER AD FILIUM CUM TEMPORIBUS TYRANNICIS IPSE TREVERIS REMANSISSET ET
-                        FILIUS AD PNTHIAM PROFECTUS ESSET. Hoc INCOHATUM NEQUE INPLETUM SIC DE
-                        LITURARIIS SCRIPTUM</head>
-            <gap reason="omitted"/>
+               FILIUS AD PNTHIAM PROFECTUS ESSET. Hoc INCOHATUM NEQUE INPLETUM SIC DE
+               LITURARIIS SCRIPTUM</head>
+            <gap reason="omitted" />
             <l n="1">debeo et hanc nostris, fili dulcissime, curis</l>
             <l n="2">historiam: quamquam titulo non digna sereno</l>
             <l n="3">anxia maestarum fuerit querimonia rerum.</l>
@@ -1082,13 +1072,13 @@
             <l n="21">hac ego condicione licet vel morte paciscar,</l>
             <l n="22">dum decores suprema patris tu, nate, superstes.</l>
          </div>
-         <pb n="v.2.p.80"/>
+         <pb n="v.2.p.80" />
          <div n="23" type="letter">
             <head>AUSONIUS PONTIO PAULINO FILIO CUM ILLE MISISSET POEMATIUM VERSIBUS
-                        PLURIMIS DE REGIBUS EX TRANQUILLO COLLECTIS</head>
+               PLURIMIS DE REGIBUS EX TRANQUILLO COLLECTIS</head>
             <l n="1">Condiderat iam Solis equos Tartesia Calpe</l>
             <l n="2">stridebatque freto Titan iam segnis Hibero:</l>
-            <pb n="v.2.p.82"/>
+            <pb n="v.2.p.82" />
             <l n="3">iam succedentes quatiebat Luna inveneas,</l>
             <l n="4">vinceret ut tenebras radiis velut aemula fratris;</l>
             <l n="5">iam volucres hominumque genus superabile curis </l>
@@ -1098,12 +1088,12 @@
             <l n="9">et nonas decimas ab se Nox longa Kalendas</l>
             <l n="10">iugiter acciri celebranda ad festa iubebat. </l>
             <p n="11">Nescis, puto, quid velim tot versibus dicere, medius fidius neque ego
-                        bene intellego: tamen suspieor. iam prima nox erat ante diem nonum decimum
-                        kal. Iam, eum redditae sunt mihi litterae tuae oppido quam litteratae. his
-                        longe iucundissimum poema subdideras, quod de tribus Suetonii libris, quos
-                        ille de regibus dedit, in epitomen coegisti tanta elegantia, solus ut mihi
-                        videare adsecutus, quod contra rerum naturam est, brevitas ut obscura non
-                        esset, in his versibus ego ista collegi:</p>
+               bene intellego: tamen suspieor. iam prima nox erat ante diem nonum decimum
+               kal. Iam, eum redditae sunt mihi litterae tuae oppido quam litteratae. his
+               longe iucundissimum poema subdideras, quod de tribus Suetonii libris, quos
+               ille de regibus dedit, in epitomen coegisti tanta elegantia, solus ut mihi
+               videare adsecutus, quod contra rerum naturam est, brevitas ut obscura non
+               esset, in his versibus ego ista collegi:</p>
             <l n="21">Europamque Asiamque duo vel maxima terrae</l>
             <l n="22">membra, quibus Libyam dubie Sallustius addit</l>
             <l n="23">Europae adiunctam, possit cum tertia dici,</l>
@@ -1111,28 +1101,27 @@
             <l n="25">barbara Romanae non tradunt nomina linguae — </l>
             <l n="26">Illibanum Numidamque Avelim Parthumque Vononem</l>
             <l n="27">et Cara num, Pellaea dedit qui nomina regum,</l>
-            <pb n="v.2.p.84"/>
+            <pb n="v.2.p.84" />
             <l n="28">quique magos docuit mysteria vana Nechepsos</l>
-            <l n="29">et qui regnavit sine nomine moxque Sesostris <gap reason="omitted"/>
+            <l n="29">et qui regnavit sine nomine moxque Sesostris <gap reason="omitted" />
             </l>
             <p n="30">Haec tu quam perite et concinne, quam modulate et dulciter, ita iuxta
-                        naturam Romanorum accentuum enuntiasti, ut tamen veris et primigenis vocibus
-                        sua fastigia non perirent, iam quid de eloquentia dicam? liquido adinrare
-                        possum nullum tibi ad poeti eam facundiam Romanae iuventutis aequari: certe
-                        ita mihi videri, si erro, pater sum, fer me et noli exigere iudicium
-                        obstante pietate, verum ego cum pie diligam, sineere et severe iudieo.
-                        adfice me, oro, tali munere frequenter, quo et oblector et honoror. accessit
-                        tibi ad artem poetieam mellea adulatio, quid enim aliud agunt:</p>
+               naturam Romanorum accentuum enuntiasti, ut tamen veris et primigenis vocibus
+               sua fastigia non perirent, iam quid de eloquentia dicam? liquido adinrare
+               possum nullum tibi ad poeti eam facundiam Romanae iuventutis aequari: certe
+               ita mihi videri, si erro, pater sum, fer me et noli exigere iudicium
+               obstante pietate, verum ego cum pie diligam, sineere et severe iudieo.
+               adfice me, oro, tali munere frequenter, quo et oblector et honoror. accessit
+               tibi ad artem poetieam mellea adulatio, quid enim aliud agunt:</p>
             <l n="43">Audax Icario qui fecit nomina ponto</l>
             <l n="44">et qui Chalcidicas moderate enavit ad arces,</l>
-            <p n="45">nisi ut tu vegetam et sublimem alacritatem tuam temeritatem voces, me
-                        vero, et consultum et quem filius debeat imitari, salutari prudentia
-                        praeditum dicas? quod equidem contra est. nam tu summa sic adpetis, ut non
-                        decidas: senectus mea satis habet, si consistat. haec ad te breviter et
-                        illico vesperis illius secuto mane dictavi; ita enim tabellarius tuus, ut
-                        epistulam <pb n="v.2.p.86"/> referret, instabat, nam si mihi otium fuerit,
-                        oblectabile negotium erit ad te prolixius delirare, te ut eliciam, mihi ut
-                        satisfaciam. vale.</p>
+            <p n="45">nisi ut tu vegetam et sublimem alacritatem tuam temeritatem voces, me vero, et
+               consultum et quem filius debeat imitari, salutari prudentia praeditum dicas? quod
+               equidem contra est. nam tu summa sic adpetis, ut non decidas: senectus mea satis
+               habet, si consistat. haec ad te breviter et illico vesperis illius secuto mane
+               dictavi; ita enim tabellarius tuus, ut epistulam <pb n="v.2.p.86" /> referret,
+               instabat, nam si mihi otium fuerit, oblectabile negotium erit ad te prolixius
+               delirare, te ut eliciam, mihi ut satisfaciam. vale.</p>
          </div>
          <div n="24" type="letter">
             <head>AUSONIUS PAULINO sal. PL. D.</head>
@@ -1154,29 +1143,28 @@
          <div n="25" type="letter">
             <head>AUSONIUS PAULINO SUO sal. PL. D.</head>
             <p n="pr"> Quanto me adfecit beneficio non delata equidem, sed suscepta mea querimonia,
-                        Pauline fili! veritus displicuisse oleum, quod miseras, munus iterasti,
-                        addito etiam Barcinonensis muriae condimento cumulatius <pb n="v.2.p.88"/>
-                        praestitisti, scis autem me id nomen muriae. quod in usu vulgi est, nec
-                        solere nec posse dicere, cum scientissimi veterum et Graeca vocabula
-                        fastidientes Latinum in gari appellatione non habeant, sed ego, quocumque
-                        nomine liquor iste sociorum vocatur, <quote rend="blockquote">
+               Pauline fili! veritus displicuisse oleum, quod miseras, munus iterasti, addito etiam
+               Barcinonensis muriae condimento cumulatius <pb n="v.2.p.88" /> praestitisti, scis
+               autem me id nomen muriae. quod in usu vulgi est, nec solere nec posse dicere, cum
+               scientissimi veterum et Graeca vocabula fastidientes Latinum in gari appellatione non
+               habeant, sed ego, quocumque nomine liquor iste sociorum vocatur, <quote
+                  rend="blockquote">
                   <l n="1">Iam patinas implebo meas, ut parcior ille</l>
                   <l n="2">maiorum mensis applaria sucus inundet.</l>
-               </quote> Quid autem tam amabile tamque hospitale, quam quod tu, ut me
-                        participes, delicias tuas in ipsa primitiarum novitate defrudas? o melle
-                        dulcior, o Gratiarum venustate festivior, o ab omnibus patrio stringende
-                        complexu! sed haec atque alia huius modi documenta liberalis animi aliquis
-                        fortasse et aliquando, quamvis rarus: illud de epistularum tuarum
-                        eruditione, de poematis iucunditate, de inventione et concinnatione iuro
-                        omnia nulli umquam imitabile futurum, etsi fateatur mutandum, de quo
-                        opusculo, ut iubes, faciam, exquisitim universa limabo et quamvis per te
-                        manus summa contigerit, caelum superfluae expolitionis adhibebo, magis ut
-                        tibi paream, quam ut perfectis aliquid adiciam. Interea tamen, ne sine
-                        corollario poetico tabellarius tuus rediret, paucis iambicis praeludendum
-                            <pb n="v.2.p.90"/> putavi, dum illud, quod a me heroico metro desideras,
-                        incohatur. isti tamen, ita te et Hesperium salvos habeam, quod spatio
-                        lucubratiunculae unius effusi, quamquam hoc ipsi de se probabunt, tamen
-                        nihil diligentiae ulterioris habuerunt, vale.</p>
+               </quote> Quid
+               autem tam amabile tamque hospitale, quam quod tu, ut me participes, delicias tuas in
+               ipsa primitiarum novitate defrudas? o melle dulcior, o Gratiarum venustate festivior,
+               o ab omnibus patrio stringende complexu! sed haec atque alia huius modi documenta
+               liberalis animi aliquis fortasse et aliquando, quamvis rarus: illud de epistularum
+               tuarum eruditione, de poematis iucunditate, de inventione et concinnatione iuro omnia
+               nulli umquam imitabile futurum, etsi fateatur mutandum, de quo opusculo, ut iubes,
+               faciam, exquisitim universa limabo et quamvis per te manus summa contigerit, caelum
+               superfluae expolitionis adhibebo, magis ut tibi paream, quam ut perfectis aliquid
+               adiciam. Interea tamen, ne sine corollario poetico tabellarius tuus rediret, paucis
+               iambicis praeludendum <pb n="v.2.p.90" /> putavi, dum illud, quod a me heroico metro
+               desideras, incohatur. isti tamen, ita te et Hesperium salvos habeam, quod spatio
+               lucubratiunculae unius effusi, quamquam hoc ipsi de se probabunt, tamen nihil
+               diligentiae ulterioris habuerunt, vale.</p>
             <l n="1">Iambe Parthis et Cydonum spiculis,</l>
             <l n="2">iambe pinnis alitum velocior,</l>
             <l n="3">Padi mentis impetu torrentior,</l>
@@ -1201,7 +1189,7 @@
             <l n="22">supervolavit tutus igne proximo,</l>
             <l n="23">dic <q>te valere,</q> dic: “salvere te iubet</l>
             <l n="24">amicus et vicinus et fautor tuus,</l>
-            <pb n="v.2.p.92"/>
+            <pb n="v.2.p.92" />
             <l n="25">honoris auctor, altor ingenii tui.” </l>
             <l n="26">dic et magister, dic parens, dic omnia</l>
             <l n="27">blanda atque sancta caritatis nomina,</l>
@@ -1228,27 +1216,25 @@
          <div n="26" type="letter">
             <head>AUSONIUS PAULINO SUO sal. PL. D.</head>
             <p n="pr1"> multas et frequentes mihi gratiae tuae causas et occasio subinde nata
-                        concinnat et naturae tuae facilitas benigna conciliat, Pauline fili. nam
-                        quia nihil <pb n="v.2.p.94"/> poscente me abnuis, magis acuis procaciam quam
-                        retundis: ut nunc quoque in causa Philonis procuratoris quondam mei
-                        experiere, qui apud Hebroniagmn conditis mercibus, quas per agros diversos
-                        coemit, concesso ab hominibus tuis usus hospitio, inmature periclitatur
-                        expelli, quod nisi indulseris rogante me, ut et mora habitandi ad commodum
-                        suum utatur et nauso aliave qua navi usque ad oppidum praebita frugis
-                        aliquantum nostrae advehi possit, Lucaniacus ut inopia liberetur mature:
-                        tota illa familia hominis litterati non ad Tullii frumentariam, sed ad
-                        Cureulionem Plauti pertinebit.</p>
+               concinnat et naturae tuae facilitas benigna conciliat, Pauline fili. nam quia nihil <pb
+                  n="v.2.p.94" /> poscente me abnuis, magis acuis procaciam quam retundis: ut nunc
+               quoque in causa Philonis procuratoris quondam mei experiere, qui apud Hebroniagmn
+               conditis mercibus, quas per agros diversos coemit, concesso ab hominibus tuis usus
+               hospitio, inmature periclitatur expelli, quod nisi indulseris rogante me, ut et mora
+               habitandi ad commodum suum utatur et nauso aliave qua navi usque ad oppidum praebita
+               frugis aliquantum nostrae advehi possit, Lucaniacus ut inopia liberetur mature: tota
+               illa familia hominis litterati non ad Tullii frumentariam, sed ad Cureulionem Plauti
+               pertinebit.</p>
             <p n="pr2">Hoc quo facilius impetrarem, aut quo maiorem verereris molestiam, si negares,
-                        concinnatam iambis signatamque ad te epistulam misi, ne subornatum diceres
-                        tabellarium, si ad te sine signi fide veniret, signavi autem, non, ut
-                        Plautus ait, <quote rend="blockquote">Per ceram et linum 1 litterasque interpretes;</quote> sed per
-                        poeticum characterem: magis notam inustam, quam signum impressum iudicares. 
-                    </p>
+               concinnatam iambis signatamque ad te epistulam misi, ne subornatum diceres
+               tabellarium, si ad te sine signi fide veniret, signavi autem, non, ut Plautus ait, <quote
+                  rend="blockquote">Per ceram et linum 1 litterasque interpretes;</quote> sed per
+               poeticum characterem: magis notam inustam, quam signum impressum iudicares. </p>
             <l n="1">Philon, meis qui vilicatus praediis,</l>
             <l n="2">ut ipse vult, <foreign xml:lang="grc">ἐπίτροποσ</foreign>,</l>
             <l n="3">(nam gloriosum Graeculus nomen putat.</l>
             <l n="4">quod sermo fucat Dorius)</l>
-            <pb n="v.2.p.96"/>
+            <pb n="v.2.p.96" />
             <l n="5">suis querellis adserit nostras preces, </l>
             <l n="6">quas ipse lentus prosequor. </l>
             <l n="7">videbis ipsum, qualis adstet comminus,</l>
@@ -1277,7 +1263,7 @@
             <l n="30">soli et sali commercio; </l>
             <l n="31">acatis, phaselis, lintribus, stlattis, rate</l>
             <l n="32">Tarnim et Garumnam permeat</l>
-            <pb n="v.2.p.98"/>
+            <pb n="v.2.p.98" />
             <l n="33">ac lucra damnis, damna mutans fraudibus</l>
             <l n="34">se ditat et me pauperat.</l>
             <l n="35">Is nunc ad usque vectus Hebromagum tuam .</l>
@@ -1302,14 +1288,14 @@
          </div>
          <div n="27" type="letter">
             <head>AN EUNDEM CUM ILLE AD ALIA MAGIS RESPONDERET NEQUE SE VENTURUM
-                        POL1.ICERETUR</head>
+               POL1.ICERETUR</head>
             <l n="1">discutimus, Pauline, iugum, quod nota fovebat</l>
             <l n="2">temperies, leve quod positu et venerabile iunctis</l>
             <l n="3">tractabat paribus Concordia mitis habenis;</l>
             <l n="4">quod per tam longam seriem volventibus annis</l>
             <l n="5">fabula non umquam, numquam qucrimonia movit, </l>
             <l n="6">nulla querella loco pepulit, non ira nec error </l>
-            <pb n="v.2.p.100"/>
+            <pb n="v.2.p.100" />
             <l n="7">nec quae conpositis male suadac credula causis</l>
             <l n="8">concinnat veri similes suspicio culpas;</l>
             <l n="9">tam placidum, tam mite iugum, quod utrique parentes</l>
@@ -1339,7 +1325,7 @@
             <l n="33">restituant profugum, solacia cassa, sodalem.</l>
             <l n="34">Inpie, Pirithoo disiungere Thesea posses</l>
             <l n="35">Euryalumque suo socium secernere Niso; </l>
-            <pb n="v.2.p.102"/>
+            <pb n="v.2.p.102" />
             <l n="36">te suadente fugam Pylades liquissct Oresten</l>
             <l n="37">nec custodisset Siculus vadimonia Damon.</l>
             <l n="38">quantum obleetamen populi, quae vota bonorum</l>
@@ -1365,7 +1351,7 @@
             <l n="58">Quae tibi Romulidas proceres vexare libido est?</l>
             <l n="59">in Medos Arabasque tuos per nubila et atrum</l>
             <l n="60">perge chaos: Romana procul tibi nomina sunto. </l>
-            <pb n="v.2.p.104"/>
+            <pb n="v.2.p.104" />
             <l n="61">illic quaere alios oppugnatum sodales,</l>
             <l n="62">livor ubi iste tuus ferrugineumque venenum</l>
             <l n="63">opportuna tuis inimicat pectora fucis.</l>
@@ -1377,7 +1363,7 @@
             <l n="69">Barcino, me bimaris iuga ninguida Pyrenaei.</l>
             <l n="69a">
                <add>
-                        laedis et ipse tuos qui deseris ultro, relictis</add>
+                  laedis et ipse tuos qui deseris ultro, relictis</add>
                <note>supplied by the translator:</note>
             </l>
             <l n="70">moenibus et patrio forsan quoque vestis et oris </l>
@@ -1399,7 +1385,7 @@
             <l n="82">Narbonemque pari spatio sibi conserit, et mox</l>
             <l n="83">quinquiplicem socias tibi, Martie Narbo, Tolosam.</l>
             <l n="84">hoc mihi si spatium vicinis moenibus esset,</l>
-            <pb n="v.2.p.106"/>
+            <pb n="v.2.p.106" />
             <l n="85">tunc ego te ut nostris aptum conplectcrer uluis</l>
             <l n="86">adflaretque tuas aures nostrae aura loquellae.</l>
             <l n="87">Nunc tibi trans Alpes et marmoream Pyrenen</l>
@@ -1425,7 +1411,7 @@
             <l n="107">si tendi facilis cuiquam fuit arcus Ulixei</l>
             <l n="108">aut praeter dominum vibrabilis ornus Achilli,</l>
             <l n="109">nos quoque tam longo Rhamnusia foedere solvet.</l>
-            <pb n="v.2.p.108"/>
+            <pb n="v.2.p.108" />
             <l n="110">Set cur tam maesto sero tristia carmina versu </l>
             <l n="111">et non in meliora animus se vota propinquat?</l>
             <l n="112">sit procul iste metus, certa est fiducia nobis,</l>
@@ -1449,7 +1435,7 @@
             <l n="130">totum occursantis populi praevertitur agmen </l>
             <l n="131">et sua praeteriens iam iam tua limina pulsat.”</l>
             <l n="132">Credimus an, qui amant, ipsi sibi somnia fingunt?</l>
-            <pb n="v.2.p.110"/>
+            <pb n="v.2.p.110" />
          </div>
          <div n="28" type="letter">
             <head>AD EUNDEM PONTIUM PAULINUM EPISTULA SUBINDE SCRIPTA</head>
@@ -1477,7 +1463,7 @@
             <l n="22">semper inaspicuas; prodentur scripta favillis.</l>
             <l n="23">vel Laccdaemoniam scytalen imitare, libelli</l>
             <l n="24">segmina Pergamei tereti circumdata ligno</l>
-            <pb n="v.2.p.112"/>
+            <pb n="v.2.p.112" />
             <l n="25">perpetuo inscribens versu, «pii deinde solutus, </l>
             <l n="26">non respondentes sparso dabit ordine formas,</l>
             <l n="27">donec consimilis ligni replicetur in orbem.</l>
@@ -1492,7 +1478,7 @@
          </div>
          <div n="29" type="letter">
             <head>CUM PONTIUS PAULINUS IUNIOR QUARTIS IAM LITTERIS NON RESPONDISSET SIC AD
-                        EUM SCRIPTUM EST</head>
+               EUM SCRIPTUM EST</head>
             <l n="1">quarta tibi haec notos detexit epistula questus,</l>
             <l n="2">Pauline, et blando residem sermone lacessit.</l>
             <l n="3">officium set nulla pium mihi pagina reddit,</l>
@@ -1503,7 +1489,7 @@
             <l n="8">accipit et Salve mediis intervenit armis,</l>
             <l n="9">respondent et saxa homini et percussus ab antris</l>
             <l n="10">sermo redit, redit et nemorum vocalis imago; </l>
-            <pb n="v.2.p.114"/>
+            <pb n="v.2.p.114" />
             <l n="11">litorei clamant scopuli, dant murmura rivi,</l>
             <l n="12">Hyblacis apibus saepes depasta susurrat.</l>
             <l n="13">est et harundineis modulatio musica ripis</l>
@@ -1529,7 +1515,7 @@
             <l n="33">scribere felicesque notas mandare libellis?</l>
             <l n="34">non ego, longinquos ut texat pagina versus,</l>
             <l n="35">postulo multiplicique oneret sermone tabellas. </l>
-            <pb n="v.2.p.116"/>
+            <pb n="v.2.p.116" />
             <l n="36">una fuit tantum, qua respondere Lacones</l>
             <l n="37">littera, et irato regi placuere negantes,</l>
             <l n="38">est etenim comis brevitas: sic fama renatum</l>
@@ -1557,7 +1543,7 @@
             <l n="60">hic trabeam, Pauline, tuam Latiamque curulem </l>
             <l n="61">constituis, patriosque istic sepelibis honores?</l>
             <l n="62">Quis tamen iste tibi tam longa silentia suasit</l>
-            <pb n="v.2.p.118"/>
+            <pb n="v.2.p.118" />
             <l n="63">impius? ut nullos hie vocem vertat in usus,</l>
             <l n="64">gaudia non illum vegetent, non dulcia vatum</l>
             <l n="65">carmina, non blandae modulatio flexa querellae, </l>
@@ -1586,7 +1572,7 @@
             <l n="11">conmaculata mihi est; ipso te laedere vultu</l>
             <l n="12">semper et incauta timui violare figura;</l>
             <l n="13">eumque tua accessi, venerans mea cautius ora</l>
-            <pb n="v.2.p.120"/>
+            <pb n="v.2.p.120" />
             <l n="14">conposui et laeto formavi lumine frontem,</l>
             <l n="15">ne qua vel a tacito contractam pectore nubem </l>
             <l n="16">duceret in sanctum suspicio falsa parentem.</l>
@@ -1613,7 +1599,7 @@
             <l n="37">castaneis corulos; aequas viburna cupressis:</l>
             <l n="38">me conpone tibi: vix Tullius et Maio tecum</l>
             <l n="39">sustineant aequale iugum, si iungar amore,</l>
-            <pb n="v.2.p.122"/>
+            <pb n="v.2.p.122" />
             <l n="40">hoc tantum tibi me iactare audebo iugalem,</l>
             <l n="41">quo modicus sociis magno contendit habenis.</l>
             <l n="42">dulcis amicitia aeterno mihi foedere tecum</l>
@@ -1644,7 +1630,7 @@
             <l n="67">et ut mori, sic oblivisci non capit,</l>
             <l n="68">perenne vivax et memor.</l>
             <l n="69">Vale domine illustris.</l>
-            <pb n="v.2.p.124"/>
+            <pb n="v.2.p.124" />
          </div>
          <div n="31" type="letter">
             <head>AUSONIO PAULINUS</head>
@@ -1666,7 +1652,7 @@
             <l n="16">disere to referens mutua verba pede.</l>
             <l n="17">Nunc elegi salvere iubent dictaque salute,</l>
             <l n="18">ut fecere aliis orsa gradumque, silent.</l>
-            <milestone unit="section"/>
+            <milestone unit="section" />
             <label>Ausonio Paulinus</label>
             <l n="19">Quid abdicatas in meam curam, pater,</l>
             <l n="20">redire Musas praecipis? </l>
@@ -1674,7 +1660,7 @@
             <l n="22">dicata Christo pectora,</l>
             <l n="23">fuit ista quondam non ope, sed studio pari</l>
             <l n="24">tecum mihi concordia,</l>
-            <pb n="v.2.p.126"/>
+            <pb n="v.2.p.126" />
             <l n="25">ciere surdum Delphica Phoebum specu, </l>
             <l n="26">vocare Musas numina, </l>
             <l n="27">fandique munus munere indultum dei</l>
@@ -1709,7 +1695,7 @@
             <l n="56">in utrumque se commercia,</l>
             <l n="57">hic ergo nostris ut suum praecordiis</l>
             <l n="58">vibraverit eaelo iubar,</l>
-            <pb n="v.2.p.128"/>
+            <pb n="v.2.p.128" />
             <l n="59">abstergit aegrum corporis pigri situm</l>
             <l n="60">habitumque mentis innovat: </l>
             <l n="61">exhaurit omne, quod iuvabat antea,</l>
@@ -1744,7 +1730,7 @@
             <l n="90">non exhibere, id est patri, </l>
             <l n="91">cui cuncta sancta iura, cara nomina</l>
             <l n="92">debere me voluit deus?</l>
-            <pb n="v.2.p.130"/>
+            <pb n="v.2.p.130" />
             <l n="93">tibi disciplinas, dignitatem, litteras,</l>
             <l n="94">linguae, togae, famae decus</l>
             <l n="95">provectus, altus, institutus debeo, </l>
@@ -1755,7 +1741,7 @@
             <l n="100">veniale, quidquid horum, erit. </l>
             <l n="101">ignosce amanti, si geram quod expedit;</l>
             <l n="102">gratare, si vivam, ut libet.</l>
-            <milestone unit="section"/>
+            <milestone unit="section" />
             <label>Ausonio Paulinus</label>
             <l n="103">defore me patriis tota trieteride terris</l>
             <l n="104">atque alium legisse vagis erroribus orbem,</l>
@@ -1773,7 +1759,7 @@
             <l n="116">inrita ventosae rapiunt haec vota procellae,</l>
             <l n="117">quae non missa deo vacuis in nubibus haerent</l>
             <l n="118">nec penetrant superi stelantem regis in aulam.</l>
-            <pb n="v.2.p.132"/>
+            <pb n="v.2.p.132" />
             <l n="119">Si tibi eum mei reditus, illum adspice et ora,</l>
             <l n="120">qui tonitru summi quatit ignea culmina caeli, </l>
             <l n="121">qui trifido igne micat nec inania murmura miscet</l>
@@ -1800,7 +1786,7 @@
             <l n="142">mens nova mi,fateor, means nonmea: non meaquondam,</l>
             <l n="143">set mea nunc auctore deo, qui, si quid in actu</l>
             <l n="144">ingeniove meo sua dignum ad munia vidit,</l>
-            <pb n="v.2.p.134"/>
+            <pb n="v.2.p.134" />
             <l n="145">gratia prima tibi, tibi gloria debita cedit, </l>
             <l n="146">cuius praeceptis partum est, quod Christus amaret.</l>
             <l n="147">Quare gratandum magis est tibi, quam queritandum,</l>
@@ -1828,7 +1814,7 @@
             <l n="169">speque fideque deum sponsa mercede sequuntur,</l>
             <l n="170">quam referet certus non desperantibus auctor, </l>
             <l n="171">si modo non vincant vacuis praesentia rebus,</l>
-            <pb n="v.2.p.136"/>
+            <pb n="v.2.p.136" />
             <l n="172">quaeque videt spernat, quae non videt ut mereatur</l>
             <l n="173">secreta ignitus penetrans caelestia sensus.</l>
             <l n="174">namque caduca patent nostris, aeterna negantur</l>
@@ -1855,7 +1841,7 @@
             <l n="195">hic vere memor est caeli, crede ergo, pater, nos </l>
             <l n="196">nec caeli inmemores nec vivere mentis egentes,</l>
             <l n="197">humanisque agitare locis, studia ipsa piorum</l>
-            <pb n="v.2.p.138"/>
+            <pb n="v.2.p.138" />
             <l n="198">testantur mores hominum; nec enim impia summum</l>
             <l n="199">gens poterit novisse deum: sint multa locorum,</l>
             <l n="200">multa hominum studiis inculta, expertia legum, </l>
@@ -1883,7 +1869,7 @@
             <l n="222">urbibus et deserta tuo legis oppida versu</l>
             <l n="223">montanamque milli Calagorrim et Birbilim acutis</l>
             <l n="224">pendentem scopulis eodemque iacentis Hilerdac</l>
-            <pb n="v.2.p.140"/>
+            <pb n="v.2.p.140" />
             <l n="225">exprobras, velut his habitem laris exul et urbis </l>
             <l n="226">extra hominum tecta atque vias; — an credis Hiberae</l>
             <l n="227">has telluris opes, Hispani nescius orbis,</l>
@@ -1910,7 +1896,7 @@
             <l n="248">consul, arenosas non dedignare Vasatas?</l>
             <l n="249">vel quia Pictonicis tibi fertile rus viret arvis,</l>
             <l n="250">Raraunum Ausonias heu devenisse curules </l>
-            <pb n="v.2.p.142"/>
+            <pb n="v.2.p.142" />
             <l n="251">conquerar, et trabeam veteri sordescere fano;</l>
             <l n="252">quae tamen augusta Latiaris in urbe Quirini</l>
             <l n="253">Caesareas inter parili titulo palmatas</l>
@@ -1938,7 +1924,7 @@
             <l n="275">in mala perversi: blandum licet ira parentem </l>
             <l n="276">excitet, ut lapsum rectis instauret amicum</l>
             <l n="277">moribus et monitu reparet meliora severo.</l>
-            <pb n="v.2.p.144"/>
+            <pb n="v.2.p.144" />
             <l n="278">At si forte itidem, quod legi et quod sequor, audis,</l>
             <l n="279">corda pio vovisse deo venerabile Christi</l>
             <l n="280">imperium docili pro credulitate sequentem, </l>
@@ -1966,7 +1952,7 @@
             <l n="302">credo equidem et metuens studio properante laboro,</l>
             <l n="303">si qua datur, ne morte prius quam crimine solvar.</l>
             <l n="304">Huius in adventum trepidis mihi credula fibris</l>
-            <pb n="v.2.p.146"/>
+            <pb n="v.2.p.146" />
             <l n="305">corda tremunt gestitque anima id iam cauta futuri, </l>
             <l n="306">praemetuens, ne vineta aegris pro corpore curis</l>
             <l n="307">ponderibusque gravis rerum, si forte recluso</l>
@@ -1995,7 +1981,7 @@
             <l n="330">Si placet hoc, gratare tui spe divite amici: </l>
             <l n="331">si contra est, Christo tantum me Inique probari.</l>
          </div>
-         <pb n="v.2.p.148"/>
+         <pb n="v.2.p.148" />
          <div n="32" type="letter">
             <head>ORATIO PAULINI</head>
             <l n="1">Omnipotens genitor rerum, cui summa potestas,</l>
@@ -2020,17 +2006,15 @@
          </div>
          <div n="33" type="letter">
             <head>
-               <add>PAULINUS GESTIDIO</add> Domino merito suspiciendo Gestidio
-                        Paulinus.</head>
-            <p n="pr">Iniuria quidem est patri familias maritimis deliciis abundanti
-                        terrenum aliquid et agreste praebere; sed ego, ut et causa mihi esset aput
-                        unanimitatem <pb n="v.2.p.150"/> tuam aliquid conloquendi et aliquod sermoni
-                        huic obsequium viderer adiungere, panculas de paucissimis, quas pueruli
-                        vespere inferunt, ficedulas misi. quarum eum erubescerem paucitatem, plura
-                        etiam versiculis verba subtexui, quasi vero numerum loquacitate facturus.
-                        sed quia utraque culpabilia sunt, tu utrisque benigne ae familiariter
-                        ignoscendo facies, ut nec inhumana videatur paucitas nec odiosa
-                        garrulitas.</p>
+               <add>PAULINUS GESTIDIO</add> Domino merito suspiciendo Gestidio Paulinus.</head>
+            <p n="pr">Iniuria quidem est patri familias maritimis deliciis abundanti terrenum
+               aliquid et agreste praebere; sed ego, ut et causa mihi esset aput unanimitatem <pb
+                  n="v.2.p.150" /> tuam aliquid conloquendi et aliquod sermoni huic obsequium
+               viderer adiungere, panculas de paucissimis, quas pueruli vespere inferunt, ficedulas
+               misi. quarum eum erubescerem paucitatem, plura etiam versiculis verba subtexui, quasi
+               vero numerum loquacitate facturus. sed quia utraque culpabilia sunt, tu utrisque
+               benigne ae familiariter ignoscendo facies, ut nec inhumana videatur paucitas nec
+               odiosa garrulitas.</p>
             <l n="1">Sume igitur pastas dumoso in rure volucres,</l>
             <l n="2">quas latitans filicis sub tegmine callidus anceps,</l>
             <l n="3">dum simili mentitur aves fallitque susurro,</l>
@@ -2049,7 +2033,7 @@
             <l n="4">quos tibi vicinum locupleti gurgite litus</l>
             <l n="5">suppeditat miros specie formaque diremptos? </l>
             <l n="6">at mihi vix alto vada per saxosa profundo</l>
-            <pb n="v.2.p.152"/>
+            <pb n="v.2.p.152" />
             <l n="7">rarus in obscura generatur sphondylus alga.</l>
             <l n="8">hinc te participans bis quinque et bis tibi ternas</l>
             <l n="9">transmisi aequoreo redolentes nectare testas,</l>
@@ -2062,7 +2046,7 @@
             <l n="1"> Pedite sursum flumina!</l>
             <l n="2"> investigatum ferre dolo leporem.</l>
             <l n="3"> quae tantae tenuere morae rumore sub omni?</l>
-            <pb n="v.2.p.154"/>
+            <pb n="v.2.p.154" />
          </div>
       </body>
    </text>

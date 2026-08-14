@@ -41,23 +41,25 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/ausoniuswithengl02ausouoft/page/70/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/ausoniuswithengl02ausouoft/page/70/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"
+                  n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -70,30 +72,29 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa016.perseus-lat2">
-         <pb n="v.2.p.2"/>
+         <pb n="v.2.p.2" />
          <div n="22" type="section">
             <head>LIBER PROTREPTICUS AD NEPOTEM</head>
             <div n="pr" type="subsection">
                <head>Ausonius Hesperio Filio</head>
                <p n="1">libellum, quem ad nepotulum meum, sororis tuae lilium, instar protreptici
-                            luseram, venturus ipse praemisi legendum. hoc enim malui quam ipse
-                            recitare, esset ut tibi censura liberior, quae duabus causis impediri
-                            solet: quod aures nostras audita velocius quam lecta praetereunt et quod
-                            sinceritas iudicandi praesentia recitantis oneratur, nunc tibi utrumque
-                            integrum est, quia et legenti libera mora est et iudicaturo non obstat
-                            nostri verecundia. Set heus tu, fili dulcissime, habeo quod admoneam, si
-                            qua tibi in his versiculis videbuntur (nam vereor, ut multa sint)
-                            fucatius concinnata quam verius et plus coloris quam suci habere, ipse
-                            sciens <pb n="v.2.p.72"/> fluere permisi, venustula ut essent magis,
-                            quam forticula, instar virginum, <quote rend="blockquote">
-                     <lb/>quas matres student <lb/>demissis umeris esse, vineto pectore,
-                                ut graciles sient.</quote> nosti cetera.</p>
-               <p n="2">Superest igitur, ut dicas: quid moraris iudicationem meam de eo, quod
-                            ipse pronuntias esse mendosum? dicam scilicet me huiusmodi versibus
-                            foris erubescere, set intra nos minus verecundari; namque ego haec annis
-                            illius magis quam meis scripsi aut fortasse et meis: <foreign xml:lang="grc">δὶσ παῖδεσ οἱ γέροντεσ</foreign>. ad summam valeat
-                            austeritas tua: mihi eum infante <add>ratio est</add>. Vale, fili
-                            dulcissime.</p>
+                  luseram, venturus ipse praemisi legendum. hoc enim malui quam ipse recitare, esset
+                  ut tibi censura liberior, quae duabus causis impediri solet: quod aures nostras
+                  audita velocius quam lecta praetereunt et quod sinceritas iudicandi praesentia
+                  recitantis oneratur, nunc tibi utrumque integrum est, quia et legenti libera mora
+                  est et iudicaturo non obstat nostri verecundia. Set heus tu, fili dulcissime,
+                  habeo quod admoneam, si qua tibi in his versiculis videbuntur (nam vereor, ut
+                  multa sint) fucatius concinnata quam verius et plus coloris quam suci habere, ipse
+                  sciens <pb n="v.2.p.72" /> fluere permisi, venustula ut essent magis, quam
+                  forticula, instar virginum, <quote rend="blockquote">
+                     <lb />quas matres student <lb />demissis umeris esse, vineto pectore, ut
+                  graciles sient.</quote> nosti cetera.</p>
+               <p n="2">Superest igitur, ut dicas: quid moraris iudicationem meam de eo, quod ipse
+                  pronuntias esse mendosum? dicam scilicet me huiusmodi versibus foris erubescere,
+                  set intra nos minus verecundari; namque ego haec annis illius magis quam meis
+                  scripsi aut fortasse et meis: <foreign xml:lang="grc">δὶσ παῖδεσ οἱ γέροντεσ</foreign>.
+                  ad summam valeat austeritas tua: mihi eum infante <add>ratio est</add>. Vale, fili
+                  dulcissime.</p>
             </div>
             <div n="po" type="subsection">
                <head>Ad Nepotem Ausonium</head>
@@ -109,7 +110,7 @@
                <l n="10">intervalla damus, studium puerile fatiscit, </l>
                <l n="11">laeta nisi austeris varientur, festa profestis.</l>
                <l n="12">disce libens, tetrici nec praeceptoris habenas</l>
-               <pb n="v.2.p.74"/>
+               <pb n="v.2.p.74" />
                <l n="13">detesterc, nepos, numquam horrida forma magistri.</l>
                <l n="14">ille lieet tristis senio nec voce serenus</l>
                <l n="15">aspera contractae minitetur iurgia frontis, </l>
@@ -137,7 +138,7 @@
                <l n="37">prime nepos, vel re vel spe mihi porge fruendum.</l>
                <l n="38">nunc ego te puerum, mox in iuvenalibus annis</l>
                <l n="39">iamque virum cernam, si fors ita iusserit; aut si</l>
-               <pb n="v.2.p.76"/>
+               <pb n="v.2.p.76" />
                <l n="40">invidia est, sperabo tamen, nec vota fatiscent, </l>
                <l n="41">ut patris utque mei non inmemor ardua semper</l>
                <l n="42">praemia musarum cupias facundus et olim</l>
@@ -158,7 +159,7 @@
                <l n="57">altisonumque iterum fas est didicisse Maronem.</l>
                <l n="58">tu «pioque, qui Latium lecto sermone, Terenti,</l>
                <l n="59">comis et adstricto pereurris pulpita socco,</l>
-               <pb n="v.2.p.78"/>
+               <pb n="v.2.p.78" />
                <l n="60">ad nova vix memorem diverbia coge senectam. </l>
                <l n="61">iam facinus, Catilina, tuum Lepidique tumultum,</l>
                <l n="62">ab Lepido et Catulo iam res et tempora Romae</l>
@@ -185,7 +186,7 @@
                <l n="83">accirer varioque accingerer auctus honore,</l>
                <l n="84">aurea cum parere mihi palatia iussum,</l>
                <l n="85">absistat Nemesis, ferat et fortuna iocantem: </l>
-               <pb n="v.2.p.80"/>
+               <pb n="v.2.p.80" />
                <l n="86">praesedi imperio, dum praetextatus in ostro</l>
                <l n="87">et seeptro et solio praefert sibi iura magistri</l>
                <l n="88">maioresque putat nostros Augustus honores.</l>

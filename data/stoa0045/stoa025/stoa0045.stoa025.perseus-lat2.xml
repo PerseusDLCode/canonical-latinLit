@@ -40,23 +40,27 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/details/deciausonius01ausouoft/page/2/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/details/deciausonius01ausouoft/page/2/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure use="@n" match="div[@type='section']" delim=":" unit="section"
+                  n="chunk">
+                  <citeStructure unit="line" delim="." match="l" use="@n" />
+               </citeStructure>
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -68,7 +72,7 @@
    </teiHeader>
    <text>
       <body xml:base="urn:cts:latinLit:stoa0045.stoa025.perseus-lat2">
-         <pb n="v.1.p.2"/>
+         <pb n="v.1.p.2" />
          <div n="1" type="section">
             <head>AUSONIUS LECTORI SALUTEM</head>
             <l n="1">Ausonius genitor nobis, ego nomine eodem:</l>
@@ -85,7 +89,7 @@
             <l n="12">et non cognati, sed genetiva, placent,</l>
             <l n="13">set redeo ad seriem. genitor studuit medicinae,</l>
             <l n="14">disciplinarum quae dedit una deum.</l>
-            <pb n="v.1.p.4"/>
+            <pb n="v.1.p.4" />
             <l n="15">nos ad grammaticen studium convertimus et mox </l>
             <l n="16">rhetorices etiam, quod satis, attigimus.</l>
             <l n="17">nec fora non celebrata mihi, set cura docendi</l>
@@ -108,7 +112,7 @@
             <l n="34">at meus hic toto regnat in orbe suo.</l>
             <l n="35">cuius ego comes et quaestor et, culmen honorum, </l>
             <l n="36">praefectus Gallis et Libyae et Latio</l>
-            <pb n="v.1.p.6"/>
+            <pb n="v.1.p.6" />
             <l n="37">et, prior indeptus fasces Latiamque curulem,</l>
             <l n="38">consul, collega posteriore, fui.</l>
             <l n="39">Hic ergo Ausonius: sed tu ne temne, quod ultro</l>
@@ -126,22 +130,20 @@
             <p n="1">
                <label n="opener">
                   <add>Theodosius Augustus Ausonio parenti salutem.</add>
-               </label> 
-                        Amor meus qui in te est et admiratio ingenii atque eruditionis tuae, quae
-                        multo maxima sunt, fecit, parens iucundissime, ut morem principibus aliis
-                        solitum sequestrarem familiaremque sermonem autographum ad te transmitterem,
-                        postulans pro iure non equidem regio, sed illius privatae inter nos
-                        caritatis, ne fraudari me scriptorum tuorum lectione patiaris, quae olim
-                        mihi cognita et iam per tempus oblita rursum desidero, non solum ut, quae
-                        sunt nota, recolantur, sed etiam ut ea, quae fama celebri adiecta
-                        memorantur, accipiam, quae tu de promptuario scriniorum tuorum, qui me amas,
-                        libens imperties, secutus exempla auctorum optimorum, quibus par esse
-                        meruisti: qui Octaviano Augusto rerum potienti certatim opera sua tradebant,
-                        nullo fine in eius honorem multa condentes. qui illos haut sciam an
-                        aequaliter atque ego te admiratus sit, certe non amplius diligebat, vale
-                        parens.</p>
+               </label>
+               Amor meus qui in te est et admiratio ingenii atque eruditionis tuae, quae multo
+               maxima sunt, fecit, parens iucundissime, ut morem principibus aliis solitum
+               sequestrarem familiaremque sermonem autographum ad te transmitterem, postulans pro
+               iure non equidem regio, sed illius privatae inter nos caritatis, ne fraudari me
+               scriptorum tuorum lectione patiaris, quae olim mihi cognita et iam per tempus oblita
+               rursum desidero, non solum ut, quae sunt nota, recolantur, sed etiam ut ea, quae fama
+               celebri adiecta memorantur, accipiam, quae tu de promptuario scriniorum tuorum, qui
+               me amas, libens imperties, secutus exempla auctorum optimorum, quibus par esse
+               meruisti: qui Octaviano Augusto rerum potienti certatim opera sua tradebant, nullo
+               fine in eius honorem multa condentes. qui illos haut sciam an aequaliter atque ego te
+               admiratus sit, certe non amplius diligebat, vale parens.</p>
          </div>
-         <pb n="v.1.p.8"/>
+         <pb n="v.1.p.8" />
          <div n="4" type="section">
             <head>DOMINO MEO ET OMNIUM THEODOSIO AUGUSTO AUSONIUS TUUS</head>
             <l n="1">agricolam si flava Ceres dare semina terrae,</l>
@@ -158,7 +160,7 @@
             <l n="12">cur me posse negem, posse quod ille putat?</l>
             <l n="13">invalidas vires ipse excitat et iuvat idem,</l>
             <l n="14">qui iubet: obsequium sufficit esse meum.</l>
-            <pb n="v.1.p.10"/>
+            <pb n="v.1.p.10" />
             <l n="15">non tutum renuisse deo. laudata pudoris </l>
             <l n="16">saepe mora est, quotiens contra parem dubites.</l>
             <l n="17">Quin etiam non iussa parant erumpere dudum</l>

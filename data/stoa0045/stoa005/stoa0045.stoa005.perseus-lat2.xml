@@ -40,23 +40,25 @@
                <series>
                   <title>Loeb Classical Library</title>
                </series>
-               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/208/mode/2up">Internet Archive</ref>
+               <ref target="https://archive.org/stream/deciausonius01ausouoft#page/208/mode/2up">Internet
+                  Archive</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <refsDecl n="TEI.2">
-            <refState unit="card"/>
+            <refState unit="card" />
          </refsDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="line" delim=":" match="l" use="@n"/>
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"
+                  n="chunk" />
             </citeStructure>
          </refsDecl>
       </encodingDesc>
       <profileDesc>
          <textClass>
-            <catRef scheme="#perseus-genre" target="#verse-stichic"/>
+            <catRef scheme="#perseus-genre" target="#verse-stichic" />
          </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
@@ -71,9 +73,18 @@
       <body xml:base="urn:cts:latinLit:stoa0045.stoa005.perseus-lat2">
          <div n="praef" type="section">
             <head>Ausonius Gregorio filio sal.</head>
-            <p n="pr">En umquam vidisti tabulam 1 pictam in pariete? vidisti utique et meministi. Treveris quippe in triclinio Zoili fucata est pictura haec: Cupidinem cruci adfigunt mulieres amatrices, non istae de nostro saeculo, quae sponte peccant, sed illae heroicae, quae sibi ignoscunt et plectunt deum. quarum partem in lugentibus campis Maro noster enumerat. hanc ego imaginem specie et argumento miratus sum. Deinde mirandi stuporem transtuli ad ineptiam poetandi. mihi praeter lemma nihil placet; sed commendo tibi errorem meum: naevos nostros et cicatrices amamus, nec soli nostro vitio peccasse contenti, adfectamus ut amentur. verum quid ego huic eclogae studiose patrocinor? certus sum, quodcumque meum scieris, amabis; quod magis spero, quam ut laudes, vale et dilige parentem.</p>
+            <p n="pr">En umquam vidisti tabulam 1 pictam in pariete? vidisti utique et meministi.
+               Treveris quippe in triclinio Zoili fucata est pictura haec: Cupidinem cruci adfigunt
+               mulieres amatrices, non istae de nostro saeculo, quae sponte peccant, sed illae
+               heroicae, quae sibi ignoscunt et plectunt deum. quarum partem in lugentibus campis
+               Maro noster enumerat. hanc ego imaginem specie et argumento miratus sum. Deinde
+               mirandi stuporem transtuli ad ineptiam poetandi. mihi praeter lemma nihil placet; sed
+               commendo tibi errorem meum: naevos nostros et cicatrices amamus, nec soli nostro
+               vitio peccasse contenti, adfectamus ut amentur. verum quid ego huic eclogae studiose
+               patrocinor? certus sum, quodcumque meum scieris, amabis; quod magis spero, quam ut
+               laudes, vale et dilige parentem.</p>
          </div>
-         <pb n="v.1.p.208"/>
+         <pb n="v.1.p.208" />
          <div n="1" type="section">
             <head>Cupido Cruciatur</head>
             <l n="1">AERIS in campis, memorat quos musa Maronis, 1</l>
@@ -100,7 +111,7 @@
             <l n="22">diligit et percussa manum, fert fumida testae</l>
             <l n="23">lumina Sestiaca praeceps de turre puella,</l>
             <l n="24">et de nimboso saltum Leucate minatur</l>
-            <pb n="v.1.p.210"/>
+            <pb n="v.1.p.210" />
             <l n="25">
                <add>mascula Lesbiacis Sappho peritura sagittis. 1</add>
             </l>
@@ -128,7 +139,7 @@
             <l n="47">agnovere omnes puerum memorique recursu</l>
             <l n="48">communem sensere reum, quamquam umida circum</l>
             <l n="49">nubila et auratis fulgentia cingula bullis</l>
-            <pb n="v.1.p.212"/>
+            <pb n="v.1.p.212" />
             <l n="50">et pharetram et rutilae fuscarent lampados ignem. </l>
             <l n="51">agnoscunt tamen et vanum vibrare vigorem</l>
             <l n="52">occipiunt hostemque unum loca non sua nanctum,</l>
@@ -158,7 +169,7 @@
             <l n="76">sola volunt, stilus ut tenuis sub acumine puncti</l>
             <l n="77">eliciat tenerum, de quo rosa nata, cruorem</l>
             <l n="78">aut pubi admoveant petulantia lumina lychni.</l>
-            <pb n="v.1.p.214"/>
+            <pb n="v.1.p.214" />
             <l n="79">ipsa etiam simili genetrix obnoxia culpae</l>
             <l n="80">alma Venus tantos penetrat secura tumultus. </l>
             <l n="81">nec circumvento properans suffragia nato</l>
@@ -184,7 +195,7 @@
             <l n="101">quae postquam multa perpessus nocte Cupido</l>
             <l n="102">effugit, pulsa tandem caligine somni</l>
             <l n="103">evolat ad superos portaque evadit eburna.</l>
-            <pb n="v.1.p.216"/>
+            <pb n="v.1.p.216" />
          </div>
       </body>
    </text>
