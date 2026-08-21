@@ -47,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -59,7 +65,7 @@
   </teiHeader>
 
 
-  <text n="copa" id="phi0692.phi005.perseus.lat1"><body>
+  <text n="copa" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi005.perseus-lat1">
     <head>Copa</head><p>
 <lb n="1"/>Copa Surisca caput Graeca redimita mitella,
 <lb n="2"/>crispum sub crotalo docta mouere latus,

@@ -38,6 +38,13 @@
             <state n="chunk" unit="chapter"/>
             <state unit="section"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk">
+            <citeStructure match="div2[@type='section']" use="@n" unit="section" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -46,8 +53,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text lang="la" n="Dial">
-      <body>
+   <text n="Dial" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1351.phi003.perseus-lat1">
          <head>Dialogus de Oratoribus</head>
          <div1 type="chapter" n="1">
             <div2 type="section" n="1">

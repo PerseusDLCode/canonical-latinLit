@@ -49,6 +49,11 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -57,8 +62,8 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text>
-      <body>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi1212.phi002.perseus-eng1">
          <pb id="p.1"/>
          <div1 type="book" n="praef">
             <head>THE PREFACE OF THE AUTHOR TO HIS SON FAUSTINUS AND UNTO THE READERS OF THIS BOOK</head>

@@ -50,6 +50,11 @@
          <refsDecl doctype="TEI.2">
             <state n="chunk" unit="chapter"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -57,8 +62,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text>
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi1351.phi001.perseus-eng2">
          <div1 type="book">
             <head>THE LIFE OF CNÆUS JULIUS 
 AGRICOLA</head>

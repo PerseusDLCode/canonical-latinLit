@@ -48,6 +48,13 @@
             <state unit="book" delim="."/>
             <state unit="poem"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match="div2[@type='poem']" use="@n" unit="poem" delim="." n="chunk"/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -56,8 +63,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa008.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa008.perseus-eng1">
          <pb id="v.1.p.139" TEIform="pb"/>
          <div1 type="book" n="1" org="uniform" sample="complete" part="N">
             <p>

@@ -47,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -59,7 +65,7 @@
   </teiHeader>
 
 
-  <text n="moretum" id="phi0692.phi011.perseus.lat1"><body>
+  <text n="moretum" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi011.perseus-lat1">
     <head>Moretum</head><p>
 <lb n="1"/>Iam nox hibernas bis quinque peregerat horas
 <lb n="2"/>excubitorque diem cantu praedixerat ales,

@@ -50,6 +50,11 @@
          <refsDecl doctype="TEI.2">
             <state n="chunk" unit="chapter"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -58,8 +63,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text>
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi1351.phi002.perseus-eng1">
          <head>GERMANY AND ITS TRIBES</head>
          <div1 type="chapter" n="1">
             <p>

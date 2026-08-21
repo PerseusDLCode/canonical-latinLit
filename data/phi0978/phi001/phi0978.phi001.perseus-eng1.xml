@@ -43,6 +43,13 @@
             <state unit="book"/>
             <state unit="chapter"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+                  <citeStructure match="div2[@type='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -65,8 +72,8 @@
          </change>
       </revisionDesc>
    </teiHeader>
-   <text lang="en">
-      <body>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:phi0978.phi001.perseus-eng1">
          <pb n="1001"/>
          <!-- head>NATURAL HISTORY OF PLINY.</head -->
          <div1 type="book" n="1">
@@ -21566,7 +21573,7 @@ should enter the world with the head first, and be carried to
 the tomb in a contrary fashion.
 </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7a">
                <head>CHAP. 7. (9.)—OF THOSE WHO HAVE BEEN CUT OUT OF THE WOMB.</head>
                <p>Those children, whose birth has cost the mother her life, are
 evidently born under more favourable auspices; for such was
@@ -22113,7 +22120,7 @@ Lucius, who is there described; but he would appear to be a different person fro
                   <pb n="2158"/>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7b">
                <head>CHAP. 7.—CHILDREN REMARKABLE FOR THEIR PRECOCITY.</head>
                <p>We find it stated by the historians, that the son of Euthymenes of Salamis had grown to be three cubits in height, at
 the age of three years; that he was slow of gait and dull of
@@ -50768,7 +50775,7 @@ crop but once in two years; this is the case with the beech
 more particularly.
 </p>
             </div2>
-            <div2 type="chapter" n="8">
+            <div2 type="chapter" n="8a">
                <head>CHAP. 8.—THE OTHER ACORNS-WOOD FOR FUEL.</head>
                <p>The other trees that bear acorns, properly so called, are the
 
@@ -52719,7 +52726,7 @@ only at a cost of considerable labour, while Tarracina abounds
 with whole woods of it.
 </p>
             </div2>
-            <div2 type="chapter" n="60">
+            <div2 type="chapter" n="60a">
                <head>CHAP. 60. (33.)—THE CYPRESS.</head>
                <p>The cypress<note anchored="yes" place="foot">The Cupressus sempervirens of Linnæus, the Cupressus fastigiata of
 Decandolle.</note> is an exotic, and has been reckoned one of the
@@ -53023,7 +53030,7 @@ turns. Branches, too, shoot occasionally from the stem, being
 themselves reeds of diminutive growth.
 </p>
             </div2>
-            <div2 type="chapter" n="60">
+            <div2 type="chapter" n="60b">
                <head>CHAP. 60.—FLUTE REEDS: TET REEDOF ORCHOMENTFS; REEDS
 USED FOR FOWLING AND FISHING.</head>
                <p>The varieties of the reed are numerous. Some are more
@@ -53886,7 +53893,7 @@ employed in the construction of chariots; it depends entirely on the punctuation
 it not that its weight is so much against it.
 </p>
             </div2>
-            <div2 type="chapter" n="8">
+            <div2 type="chapter" n="8b">
                <head>CHAP. 8.—VENEERING.</head>
                <p>The wood, too, of the beech is easily worked, although it is
 brittle and soft. Cut into thin layers of veneer, it is very
@@ -87213,7 +87220,7 @@ also, for gout, burns, and wounds, as it tends to arrest the flow
 of blood.
 </p>
             </div2>
-            <div2 type="chapter" n="11">
+            <div2 type="chapter" n="11a">
                <head>CHAP. 11.—AMBROSIA, BOTRYS, OR ARTEMISTA: THREE REMEDIES.</head>
                <p>Ambrosia is a vague name, which has fluctuated between
 various plants: there is one,<note anchored="yes" place="foot">Identified with the Ambrosia maritima of Linnæus, the Sea ambrosia.</note> however, which has been more
@@ -88970,7 +88977,7 @@ months: after removing it, barley-meal should be applied.
 Telephion is healing, also, for wounds and fistulas.
 </p>
             </div2>
-            <div2 type="chapter" n="11">
+            <div2 type="chapter" n="11b">
                <head>CHAP. 11.—THE TRICHOMANES: FIVE REMEDIES.</head>
                <p>The trichomanes<note anchored="yes" place="foot">The same plant as the Callitrichos of B. xxv. c. 86.</note> is a plant that resembles the adiantum,<note anchored="yes" place="foot">See B. xxii. c. 30.</note> except that it is more slender and of a darker colour; the leaves
 of it, which are similar to those of the lentil, lie close together,
@@ -105015,7 +105022,7 @@ weighed one pound. See B. xxxiii. c. 13, and the Introduction to Vol. III.
 as. Thus much concerning the natural qualities of this metal.
 </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3a">
                <head>CHAP. 3.—THE CORINTHIAN BRASS.</head>
                <p>The other kinds are made artificially, all of which will be
 described in the appropriate places, the more celebrated kinds
@@ -107037,7 +107044,7 @@ It is also useful for malignant ulcers of a serpiginous nature.
 It is calcined upon charcoal, like chalcitis.
 </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3b">
                <head>CHAP. 3—MISY: THIRTEEN REMEDIES.</head>
                <p>Some persons have stated, that misy<note anchored="yes" place="foot">See Note 15 above. Hardouin calls this substance "yellow copperas," or "Roman vitriol."</note> is formed by the calcination
 of the mineral, in trenches;<note anchored="yes" place="foot">"In scrobibus." The mineral alluded to is Chalcitis, mentioned in

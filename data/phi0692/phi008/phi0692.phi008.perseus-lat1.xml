@@ -47,6 +47,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
+            <citeStructure match="lb" use="@n" unit="line" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -57,7 +65,7 @@
     </profileDesc>
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
- <text n="priapea" id="phi0692.phi008.perseus.lat1"><body>
+ <text n="priapea" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi008.perseus-lat1">
    <head>Priapea</head>
 <div1 type="poem" n="1"><p>
 <lb n="1"/>vere rosa, autumno pomis, aestate frequentor

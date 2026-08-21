@@ -47,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -58,7 +64,7 @@
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
 
-<text n="lydia" id="phi0692.phi002.perseus.lat1"><body>
+<text n="lydia" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi002.perseus-lat1">
   <head>Lydia</head><p>
 <lb n="1"/>invideo uobis agri, formosaque prata,
 <lb n="2"/><milestone unit="thruline" n="105"/>hoc formosa magis, mea quod formosa puella 

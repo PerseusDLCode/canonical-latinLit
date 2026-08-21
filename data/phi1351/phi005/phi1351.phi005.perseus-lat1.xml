@@ -40,6 +40,13 @@
             <state unit="book"/>
             <state n="chunk" unit="chapter"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match="milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -50,8 +57,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text lang="la">
-      <body>
+   <text xml:lang="lat"><body xml:base="urn:cts:latinLit:phi1351.phi005.perseus-lat1">
          <div1 type="book" n="1">
             <head>LIBER I</head>
             <milestone n="1" unit="chapter"/>

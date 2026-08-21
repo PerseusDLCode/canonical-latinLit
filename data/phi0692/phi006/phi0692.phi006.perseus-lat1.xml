@@ -47,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -60,7 +66,7 @@
 
 
 
-  <text n="maecenas" id="phi0692.phi006.perseus.lat1"><body>
+  <text n="maecenas" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi006.perseus-lat1">
     <head>Elegiae in Maecenatem</head><p>
 <lb n="1"/>defleram iuuenis tristi modo carmine fata.
 <lb n="2"/>sunt etiam merito carmina danda seni:

@@ -47,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -59,7 +65,7 @@
   </teiHeader>
 
 
-  <text n="est et non" id="phi0692.phi013.perseus.lat1"><body>
+  <text n="est et non" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi013.perseus-lat1">
     
     <head>De Est et Non</head><p>
 <lb n="1"/>Est et Non cuncti monosyllaba nota frequentant.
