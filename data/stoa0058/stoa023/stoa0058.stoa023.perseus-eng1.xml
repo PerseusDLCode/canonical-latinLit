@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -55,7 +55,9 @@
             <state unit="section"/>
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+         <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure match="div[@type='work']" use="@n" unit="work" delim=":" n="chunk"/>
+         </citeStructure>
       </refsDecl>
       </encodingDesc>
       <profileDesc>
@@ -65,7 +67,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa023.perseus-eng1">
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa023.perseus-eng1"><div type="work" n="1">
          <pb id="p.73"/>
          <head>A TREATISE AGAINST EUTYCHES AND NESTORIUS BY ANICIUS MANLIUS SEVERINUS BOETHIUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONSULS, PATRICIAN TO HIS SAINTLY MASTER AND REVEREND FATHER JOHN THE DEACON HIS SON BOETHIUS</head>
          <p>
@@ -234,6 +236,7 @@ the food he took, fall asleep, and perform all the other functions which always 
 </p>
          <p>So much have I written to you concerning what I believe should be believed. In which matter if 1 have said aught amiss, I am not so well pleased with myself as to try to press my effusions in the face of wiser judgment. For if there is no good thing in us there is nothing we should fancy in our opinions. But if all things are good as coming from Him who alone is good, that rather must be thought good which the Unchangeable Good and Cause of all Good indites.
 </p>
+      </div>
       </body>
    </text>
 </TEI>

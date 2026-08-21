@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -55,7 +55,9 @@
             <state unit="section"/>
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+         <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure match="div[@type='work']" use="@n" unit="work" delim=":" n="chunk"/>
+         </citeStructure>
       </refsDecl>
       </encodingDesc>
       <profileDesc>
@@ -65,7 +67,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-eng1">
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-eng1"><div type="work" n="1">
          <pb id="p.39"/>
          <head>FROM THE SAME TO THE SAME HOW SUBSTANCES CAN BE GOOD IN VIRTUE OF THEIR EXISTENCE WITHOUT BEING ABSOLUTE GOODS</head>
          <p>
@@ -109,6 +111,7 @@ from the Prime Good. This process leads me to perceive that their Goodness and t
 <pb id="p.51"/>
 ance with the will of the Good that they should be good through the tact that they exist; but it is not in accordance with the will of one who is not white that a thing have a certain property making it white in virtue of its Being; for it was not the will of One who is white that gave them Being. And so they are white simply because One who was not white willed them to be white; but they are good through the fact that they exist because One who was good willed them to be good. Ought, then, by parity of reason, all things to be just because He is just who willed them to be? That is not so either. For to be good involves Being, to be just involves an act. For Him being and action are identical; to be good an d to be just are one and the same for Hi m. But being and action are not identical for us, tor we are not simple. For us, then, goodness is not the same thing as justice, but we all have the same sort of Being in virtue of our existence. Therefore all things are good, but all things are not just. Finally, good is a general, but just is a species, and this species does not apply to all. Wherefore some things are just, others are something else, but all things are good.
 </p>
+      </div>
       </body>
    </text>
 </TEI>

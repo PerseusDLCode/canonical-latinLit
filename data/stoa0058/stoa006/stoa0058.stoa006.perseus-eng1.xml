@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -47,7 +47,9 @@
             <state unit="section"/>
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+         <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure match="div[@type='work']" use="@n" unit="work" delim=":" n="chunk"/>
+         </citeStructure>
       </refsDecl>
       </encodingDesc>
       <profileDesc>
@@ -57,7 +59,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa006.perseus-eng1">
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa006.perseus-eng1"><div type="work" n="1">
          <pb id="p.53"/>
          <head>On the Catholic Faith</head>
          <p>
@@ -103,6 +105,7 @@ tion of the world; He ascended into heaven whence we know that He was never abse
 <pb id="p.71"/>
 with the gift of resurrection, enter upon misery. And this is a firm principle of our religion. to believe not only that men s souls do not perish, but that their very bodies, which the coming of death had destroyed, recover their first state by the bliss that is to be. This Catholic church, then, spread throughout the world, is known by three particular marks: whatever is believed and taught in it has the authority of the Scriptures, or of universal tradition, or at least of its own and proper usage. And this authority is binding on the whole Church as is also the universal tradition of the Fathers, while each separate church exists and is governed by its private constitution and its proper rites according to difference of locality and the good judgment of each. All, therefore, that the faithful now expect is that the end of the world will conic, that all corruptible things shall pass away, that men shall rise tor future judgement, that each shall receive reward according to his deserts and abide in the lot assigned to him for ever and for aye; and the sole reward of bliss will be the contemplation of the Almighty, so far, that is, as the creature may look on the Creator, to the end that the number of the angels may be made up from these and the heavenly city filled where the Virgin's Son is King and where will be everlasting Joy, delight, food, labour, and unending praise of the Creator,
 </p>
+      </div>
       </body>
    </text>
 </TEI>

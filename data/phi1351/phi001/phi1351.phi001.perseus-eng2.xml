@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text" status="new">
       <fileDesc>
          <titleStmt>
@@ -52,7 +52,9 @@
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
         <citeStructure match="/TEI/text/body" use="@xml:base">
-          <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk"/>
+          <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match="div2[@type='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+          </citeStructure>
         </citeStructure>
       </refsDecl>
       </encodingDesc>
@@ -63,8 +65,8 @@
       </profileDesc>
    </teiHeader>
    <text xml:lang="eng"><body xml:base="urn:cts:latinLit:phi1351.phi001.perseus-eng2">
-         <div1 type="book">
-            <head>THE LIFE OF CNÆUS JULIUS 
+         <div1 type="book" n="1">
+            <head>THE LIFE OF CNÆUS JULIUS
 AGRICOLA</head>
             <div2 type="chapter" n="1">
                <p>To bequeath to posterity a 

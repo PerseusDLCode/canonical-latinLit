@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -40,7 +40,9 @@
             <state unit="section"/>
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+         <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure match="div[@type='work']" use="@n" unit="work" delim=":" n="chunk"/>
+         </citeStructure>
       </refsDecl>
       </encodingDesc>
       <profileDesc>
@@ -50,7 +52,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa025.perseus-eng1">
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa025.perseus-eng1"><div type="work" n="1">
          <pb id="p.3"/>
          <head>THE TRINITY IS ONE GOD NOT THREE GODS A TREATISE BY ANICIUS MANLIUS SEVERINUS BOETHIUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONSULS, PATRICIAN TO HIS FATHER-IN-LAW, QUINTUS AURELIUS MEMMIUS SYMMACHUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONSULS, PATRICIAN</head>
          <p>
@@ -163,6 +165,7 @@ category of relation, then. has nothing to do with the essence of the subject; i
 </p>
          <p>I have now finished the investigation which I proposed. The exactness of my reasoning awaits the standard of your judgment; your authority will pronounce whether I have seen a straight path to the goal. If, God helping me, I have furnished some support in argument to an article which stands by itself on the firm foundation of Faith, I shall render joyous praise for the finished work to Him from whom the invitation comes. Hut if human nature has failed to reach beyond its limits, whatever is lost through my infirmity must be made good by my intention.
 </p>
+      </div>
       </body>
    </text>
 </TEI>

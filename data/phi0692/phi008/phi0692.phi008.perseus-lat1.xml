@@ -1,4 +1,4 @@
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -50,7 +50,7 @@
       <refsDecl n="CTS" xml:id="CTS">
         <citeStructure match="/TEI/text/body" use="@xml:base">
           <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
-            <citeStructure match="lb" use="@n" unit="line" delim="."/>
+            <citeStructure match=".//lb" use="@n" unit="line" delim="."/>
           </citeStructure>
         </citeStructure>
       </refsDecl>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -55,7 +55,9 @@
             <state unit="section"/>
          </refsDecl>
       <refsDecl n="CTS" xml:id="CTS">
-         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+         <citeStructure match="/TEI/text/body" use="@xml:base">
+            <citeStructure match="div[@type='work']" use="@n" unit="work" delim=":" n="chunk"/>
+         </citeStructure>
       </refsDecl>
       </encodingDesc>
       <profileDesc>
@@ -65,7 +67,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa028.perseus-eng1">
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa028.perseus-eng1"><div type="work" n="1">
          <pb id="p.33"/>
          <head>ANICIUS MANLIUS SEVERINUS BOETHIUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONULS, PATRICIAN TO JOHN THE DEACON WHETHER FATHER, SON, AND HOLY SPIRIT MAY BE SUBSTANTIALLY PREDICATED OF THE DIVINITY</head>
          <p>
@@ -85,6 +87,7 @@ up of various parts, combined into one: it is simply one. Everything, therefore,
 </p>
          <p>If I am right and speak in accordance with the Faith, I pray you confirm me. But if you are in any point of another opinion, examine carefully what I have said, and if possible, reconcile faith and reason. c
 </p>
+      </div>
       </body>
    </text>
 </TEI>
