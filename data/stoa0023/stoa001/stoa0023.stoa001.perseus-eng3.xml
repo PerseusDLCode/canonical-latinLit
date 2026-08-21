@@ -48,6 +48,15 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+                  <citeStructure match="div2[@type='chapter']" use="@n" unit="chapter" delim=".">
+                     <citeStructure match="p/milestone[@unit='section']" use="@n" unit="section" delim="." n="chunk"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -56,8 +65,8 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0023.stoa001.perseus-eng2">
-      <body>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:stoa0023.stoa001.perseus-eng3">
          <div1 type="bookinfo">
             <head>BOHN'S CLASSICAL LIBRARY</head>
             <head>AMMIANUS MARCELLINUS</head>

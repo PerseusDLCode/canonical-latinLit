@@ -46,6 +46,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='letter']" use="@n" unit="letter" delim=":" n="chunk">
+            <citeStructure match="div2[@type='section']" use="@n" unit="section" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -56,10 +64,10 @@
     </profileDesc>
   </teiHeader>
 
-<text><body>
+<text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0040.stoa011.perseus-eng1">
 <pb id="p.3"/>
 
-<div1 type="section" n="1"><head>(Ep. II) (A.D. 386)</head>
+<div1 type="letter" n="1"><head>(Ep. II) (A.D. 386)</head>
 <head>AUGUSTINE TO ZENOBIUS a</head>
 <div2 type="section" n="1"><p>We are quite agreed. I think, that everything that is the object of our bodily senses is incapable of 
 remaining a single moment in the same state, but is in motion and transition and possesses no actuality, that is, in plain language, has no real existence. In consequence, true, divine philosophy admonishes us to check and mitigate our affection for such things, as being very baneful and productive of detriment, so that even while in control of this mortal body, the soul may with intensity and fervour pursue those things that are ever the same and satisfy with no transient charm. Although this is true and although my mind envisages you in your simple and unalloyed character, as an individual who may be loved without disquietude, still I must confess that when you are absent in body and distant in space, I miss the pleasure of meeting and seeing you, and desire it. when it can be had, for the brethren. This fault, if I know you aright, you are glad to find in me. and. although you pray for every good thing for your dearest and closest
@@ -68,7 +76,7 @@ friends, you are reluctant to see them cured of it. But if you have attained suc
 
 </p></div2></div1>
 
-<div1 type="section" n="2"><head>(Ep. IV) (A.D. 387)</head>
+<div1 type="letter" n="2"><head>(Ep. IV) (A.D. 387)</head>
 <head>AUGUSTINE TO NEBRIDIUS b</head>
 <div2 type="section" n="1"><p>It is quite curious how surprised I am to discover, 
 on inquiring what letters of yours I have still to answer, that I am in your debt for only one. In it you ask me to tell you what progress I have made, with the abundant leisure you think I have or wish, as
@@ -83,7 +91,7 @@ to assume that, through the vigour of a more robust understanding. I have attain
 
 </p></div2></div1>
 
-<div1 type="section" n="3"><head>(Ep. X) (A.D. 389)</head>
+<div1 type="letter" n="3"><head>(Ep. X) (A.D. 389)</head>
 <head>AUGUSTINE TO NEBRIDIUS a</head>
 <div2 type="section" n="1"><p>Never has any of your problems kept me so 
 troubled in mind as the remark you made in your last letter, reproaching me for failing to plan how we may live together. A serious charge, and were it not untrue, very threatening to our friendship. But since quite satisfactory reasons seem to show that we can lead our ideal life here better than at Carthage or in the country, I am altogether in doubt how I should deal with you, Nebridius. Am I to send you our most suitable conveyance? Our friend Lucinianus tells me that you can now ride in a sedan chair without any harm. But then your mother comes to my mind: if she cannot endure your absence when you are well, she will endure it much less when you are ill. Am I to come to you myself? But there are people here who cannot come with me and whom I think it criminal to leave behind. For you can be happily at home with your own mind, while these others are only striving towards that attainment. Am I to make frequent journeys back and forward, living with you part of the time and the other part with them? But that is neither living together nor living the ideal life. The
@@ -101,7 +109,7 @@ life, why does that calmness of spirit ever befall us? Why does it befall us mor
 
 </p></div2></div1>
 
-<div1 type="section" n="4"><head>(Ep. XV) (A.D. 390) AUGUSTINE TO ROMANIANUS a</head>
+<div1 type="letter" n="4"><head>(Ep. XV) (A.D. 390) AUGUSTINE TO ROMANIANUS a</head>
 <div2 type="section" n="1"><p>Does this letter not show that, if we are short of 
 papyrus, we have at least abundance of parchment? The ivory tablets I possess I have sent to your uncle with a letter; you will the more easily forgive this
 <pb id="p.15"/>
@@ -117,7 +125,7 @@ said by the mouth of Truth Himself: If ye have not been faithful in that which i
 
 </p></div2></div1>
 
-<div1 type="section" n="5"><head>(Ep. XVI) (A.D. 390)</head>
+<div1 type="letter" n="5"><head>(Ep. XVI) (A.D. 390)</head>
 <head>MAXIMUS b THE GRAMMARIAN TO AUGUSTINE</head>
 <div2 type="section" n="1"><p>I find interest and pleasure in frequent talk 
 with you and in your provocative conversation, so, since you recently attacked me without unpleasantness and without disturbing our friendly relations, I make haste to give you back as good as you gave: otherwise you might have thought my silence implied a change of mind. But I beg you, if you consider my reply shows the stiffness of old age, to attend to it with a kindly ear. There is no sure evidence for the Greek fable that Mount Olympus is the dwelling-place of the gods, but we see and feel sure that the market-place of our own town is occupied by a crowd of beneficent deities. And indeed, who is so foolish, so mentally astray, as to deny the very certain truth that there is one supreme god, without beginning, without natural offspring, like a great and splendid father? His powers that permeate the universe he has made we call upon by many names, since to all of us his right name is of course unknown. For god is a name
@@ -145,7 +153,7 @@ any further contest and gladly give my adherence to that sentiment of the eloque
 
 </p></div2></div1>
 
-<div1 type="section" n="6"><head>(Ep. XVII) (A.D. 390)</head>
+<div1 type="letter" n="6"><head>(Ep. XVII) (A.D. 390)</head>
 <head>AUGUSTINE TO MAXIMUS THE GRAMMARIAN</head>
 <div2 type="section" n="1"><p>Is it a serious discussion we are engaged in. or 
 do you want only to be amused? The tone of your letter leaves me wondering whether your preference for humorous remarks to studied arguments is the
@@ -184,7 +192,7 @@ and others which I think it better to pass over for the present, why should I ma
 <pb id="p.33"/>
 </p></div2></div1>
 
-<div1 type="section" n="7"><head>(Ep. XXI) (A.D. 391)</head>
+<div1 type="letter" n="7"><head>(Ep. XXI) (A.D. 391)</head>
 <head>TO BISHOP VALERIUS, a MY LORD MOST SAINTLY AND VENERABLE, MY FATHER WARMLY CHERISHED BEFORE THE LORD WITH SINCERE AFFECTION, AUGUSTINE, PRIEST, SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>First and foremost, I beg your wise Holiness to 
 consider that there is nothing in this life, and especially in our own day. more easy and pleasant and acceptable to men than the office of a bishop or priest or deacon, if its duties be discharged in a mechanical and sycophantic way. but nothing more worthless and deplorable and meet for chastisement in the sight of God; and, on the other hand, that there is nothing in this life, and especially in our own day, more difficult, toilsome and hazardous than the office of a bishop or priest or deacon, but nothing more blessed in the sight of God. if our service be in accordance with our Captain's orders. b But how that is to be done I learned neither in my boyhood nor in my youth, and just as I had begun to learn. I was compelled by reason of my sins to assume the second place at the helm, although 1 did not know how to hold an oar.
@@ -218,7 +226,7 @@ you by the goodness and severity of Christ, by His mercy and judgement, by Him w
 
 </p></div2></div1>
 
-<div1 type="section" n="8"><head>(Ep. XXII) (A.D. 392)</head>
+<div1 type="letter" n="8"><head>(Ep. XXII) (A.D. 392)</head>
 <head>TO BISHOP AURELIUS a FROM AUGUSTINE, PRIEST</head>
 <div2 type="section" n="1"><p>I. After long hesitation I have not discovered how 
 most gratefully to reply to your Holiness's letter, for all my efforts were thwarted by my heartfelt emotion, which rising of its own accord was much more warmly stirred by the reading of your letter. But I east myself upon God that He might work in me according to my strength, so that I should reply to you as befitted our mutual zeal in the Lord and our care for His church, you in your exalted station and I in my subordinate post. And, first, so far from declining your assurance that you believe my prayers avail for you, I gladly welcome it, for in this way the Lord will hear and answer me. if not through my own prayers, then certainly through yours. I am more grateful to you than I can well express for your kindly approval of brother Alypius's action in remaining a member of our fellowship, as an example to the brethren who
@@ -271,7 +279,7 @@ spiritually-minded man will be little, if any, different from what I might have 
 <pb id="p.57"/>
 </p></div2></div1>
 
-<div1 type="section" n="9"><head>(Ep. XXVIII) (A.D. 394 or 395)</head>
+<div1 type="letter" n="9"><head>(Ep. XXVIII) (A.D. 394 or 395)</head>
 <head>AUGUSTINE TO JEROME, MY BELOVED LORD, MY BROTHER AND FELLOW-PRIEST, WORTHY OF ESTEEM AND HONOUR AND DEVOTED AFFECTION a</head>
 <div2 type="section" n="1"><p>I. Never did any man know another's features 
 as well as I have come to know what peaceful joy you find in your studies in the Lord and what truly noble application you give to them. My desire for thorough acquaintance with you is of the strongest, yet I lack only one small portion of you. namely your bodily presence. But, I can assure you, even that has been to a large extent imprinted on my mind by the account given me by brother Alypius. now a much revered bishop, but even then, when he saw you, well worthy of that office. I saw him on his return, but even before then, while he was seeing you there, I too saw you. though with his eyes. For anyone who knows us both would say that he and I are distinct individuals in body only, not in mind; I mean in our harmoniousness and trusty friendship, not in merit, in which he far outstrips me. So it is not presumptuous of me, as if I were a stranger to you, since you already cherish affection for me from the unity of spirit, first of all, that makes us strive for one common end and then, from what Alypius has told you of me. to commend to your fraternal kindness our brother Profuturus b; it is my hope that through my efforts on his behalf and then
@@ -310,7 +318,7 @@ carries with him some of my writings, to which, if you have the condescension to
 
 </p></div2></div1>
 
-<div1 type="section" n="10"><head>(Ep. XXIX) (A.D. 395)</head>
+<div1 type="letter" n="10"><head>(Ep. XXIX) (A.D. 395)</head>
 <head>A LETTER FROM THE PRIEST OF HIPPO REGIUS TO ALYPIUS, BISHOP OF TAGASTE, CONCERNING THE ANNIVERSARY OF THE BIRTH OF LEONTIUS,b FORMERLY BISHOP OF HIPPO</head>
 <div2 type="section" n="1"><p>In the absence of brother Macarius,c I can give 
 you no definite news meanwhile about that affair, which cannot fail to concern me. He is said to be returning soon, and what God's help will enable me to carry through, shall be carried through. Although the brethren, our fellow-townsmen, who were with you, could assure you of our zeal on their behalf, still a piece of news deserving of that epistolary con-
@@ -385,7 +393,7 @@ daily evening service a was held and we retired with the bishop, while the breth
 <pb id="p.93"/>
 </p></div2></div1>
 
-<div1 type="section" n="11"><head>(Ep. XXXIV) (A.D. 396)</head>
+<div1 type="letter" n="11"><head>(Ep. XXXIV) (A.D. 396)</head>
 <head>AUGUSTINE TO BROTHER EUSEBIUS, MY DISTINGUISHED LORD, WORTHY OF ALL ESTEEM AND HONOUR</head>
 <div2 type="section" n="1"><p>God knows (for to Him the secrets of the human 
 heart are manifest) that, as I love Christian peace, so I am disturbed by the profane deeds of those who basely and impiously persist in dissenting from it; He knows too that my indignation springs from a desire for peace and that my object is not to drive anyone into the Catholic communion against his will, but to have the naked truth made known to all who are astray and revealed by God's help through my ministry, commending itself so well that they may embrace and follow it.
@@ -420,7 +428,7 @@ with me. If it is my learning in liberal studies,a in which he perhaps is uninst
 
 </p></div2></div1>
 
-<div1 type="section" n="12"><head>(Ep. XXXVII) (A.D. 397)</head>
+<div1 type="letter" n="12"><head>(Ep. XXXVII) (A.D. 397)</head>
 <head>TO MY DEAR LORD AND FATHER SIMPLICIANUS,c WHOM I CHERISH WITH REVERENCE AND VERY GENUINE DEVOTION, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Your letter has reached me, containing the good 
 <pb id="p.103"/>
@@ -438,7 +446,7 @@ the critical attitude of a reviewer, to any works of mine that happen to come in
 
 </p></div2></div1>
 
-<div1 type="section" n="13"><head>(Ep. XXXVIII) (A.D. 397)</head>
+<div1 type="letter" n="13"><head>(Ep. XXXVIII) (A.D. 397)</head>
 <head>AUGUSTINE TO BROTHER PROFUTURUS a</head>
 <div2 type="section" n="1"><p>In spirit I am well, so far as it is the Lord's good 
 pleasure and as He deigns to grant me strength; in body, I am confined to bed. I can neither walk nor stand nor sit down because of the pain and swelling of piles or tumours. b Yet even so, since that is the Lord's good pleasure, what else should I say than that I am well? If we do not like what pleases Him, we ourselves are rather to assume the blame than to imagine that He is wrong in what He either does or allows. This is all familiar to you, but since you are my second self, what can I say to you with more pleasure than what I say to myself? To your holy prayers then I commend both my nights and my days; pray for me, that I may not squander my days and that I may endure my nights with patience; pray that even if I walk in the valley of the shadow of death, the Lord may be with me that I may fear no evil. c
@@ -456,7 +464,7 @@ company. I should perhaps be writing to them too, if the bearer's haste allowed 
 
 </p></div2></div1>
 
-<div1 type="section" n="14"><head>(Ep. XLII) (A.D. 397)</head>
+<div1 type="letter" n="14"><head>(Ep. XLII) (A.D. 397)</head>
 <head>TO PAULINUS AND THERASIA,e MY HOLY BROTHER AND SISTER IN CHRIST, WORTHY OF HONOUR AND PRAISE, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Who could have expected or anticipated that I 
 <pb id="p.111"/>
@@ -465,7 +473,7 @@ should be demanding by brother Severus the replies that you, my dear friends, ha
 
 </p></div2></div1>
 
-<div1 type="section" n="15"><head>(Ep. XLVIII) (A.D. 398)</head>
+<div1 type="letter" n="15"><head>(Ep. XLVIII) (A.D. 398)</head>
 <head>TO MY BELOVED LORD AND MOST LONGED FOR BROTHER AND FELLOW-PRIEST, EUDOXIUS,a AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>When we think of the peace that you enjoy in 
 </p><p>Christ, we too, though harassed by manifold irksome tasks, find peace in your affection. For we are one
@@ -490,7 +498,7 @@ wishing to have converse with you even by letter. I have given you these admonis
 
 </p></div2></div1>
 
-<div1 type="section" n="16"><head>(Ep. L) (A.D. 399)</head>
+<div1 type="letter" n="16"><head>(Ep. L) (A.D. 399)</head>
 <head>BISHOP AUGUSTINE TO THE LEADERS AND MAGISTRATES OR ELDERS OF THE COLONY OF SUFES d</head>
 <div2 type="section" n="1"><p>Earth quakes and the heavens shake at the most 
 <pb id="p.119"/>
@@ -498,7 +506,7 @@ glaring criminality and shocking barbarity of your fiendish conduct, winch has m
 
 </p></div2></div1>
 
-<div1 type="section" n="17"><head>(Ep. LX) (A.D. 401)</head>
+<div1 type="letter" n="17"><head>(Ep. LX) (A.D. 401)</head>
 <head>TO FATHER AURELIUS, MY LORD MOST BLESSED AND WITH DUE RESPECT REVERED, MY BROTHER AND COLLEAGUE, MOST SINCERELY BELOVED, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Since we parted from each other in body, I have 
 <pb id="p.121"/>
@@ -512,7 +520,7 @@ their vocation, notwithstanding the most strenuous efforts I could make to oppos
 
 </p></div2></div1>
 
-<div1 type="section" n="18"><head>(Ep. LXV) (A.D. 402)</head>
+<div1 type="letter" n="18"><head>(Ep. LXV) (A.D. 402)</head>
 <head>TO THE SENIOR XANTHIPPUS,b MY SAINTLY LORD AND REVERENTLY CHERISHED FATHER AND FELLOW-PRIEST, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I greet your Honour with the respect due to your 
 merits and earnestly commend myself to your prayers. I have to report to your Wisdom that a man by the name of Abundantius was ordained priest on the manor of Strabonian. c which belongs to my diocese, but, as he did not walk in the paths of God's servants, he began to acquire a bad reputation. This alarmed me, but yet I did not lightly give it any credence; yet, my worry clearly increasing, I made an effort to reach, if it were at all possible, some incontrovertible proofs of his evil conduct. And my first discovery was that he had embezzled money
@@ -527,7 +535,7 @@ was decided. And if he thinks fit to take some action and fails to present his c
 <pb id="p.129"/>
 </p></div2></div1>
 
-<div1 type="section" n="19"><head>(Ep. LXVI) (A.D. 402)</head>
+<div1 type="letter" n="19"><head>(Ep. LXVI) (A.D. 402)</head>
 <head>[THE BEGINNING OF THE NOTE OF ST. AUGUSTINE, CATHOLIC BISHOP, AGAINST CRISPINUS a THE SCHISMATIC]</head>
 <div2 type="section" n="1"><p>You should have feared God at least, but since 
 it was your desire to be feared like a man in your re-baptizing of the Mappalians, why is a royal command of no avail in the province, if a provincial command has been of such avail on a private property? If you compare the persons concerned, you are the possessor, he is emperor; if you compare the positions of both, you are on an estate, he is on a throne; if you compare the motives of both, he aims at mending what is rent, you at rending what is one whole. But we are not seeking to make you afraid of a man, for we could make you pay up ten pounds of gold, according to the imperial decrees. Or perhaps you have no money with which to pay the fine imposed on those who re-baptize, after your great expenses in bribing people to accept re-baptism? But, as I said, we are not seeking to make you afraid of a man; let Christ rather make you afraid. I want to know what answer you would make to Him, if He were to say to you: <q> Crispinus, was it a high price you paid for the fear of the Mappalians, and was my death a small price to pay for the love of all the nations? Was the money that was counted out from your purse of greater value for the re-baptizing of your serfs than the blood which flowed from my side for the baptizing of my nations?</q> I know that if you were to give ear to Christ, you could
@@ -542,7 +550,7 @@ you must beware of the wrath of God both here and hereafter. I adjure you by Chr
 
 </p></div2></div1>
 
-<div1 type="section" n="20"><head>(Ep. LXVII) (A.D. 402)</head>
+<div1 type="letter" n="20"><head>(Ep. LXVII) (A.D. 402)</head>
 <head>TO JEROME, MY LORD DEARLY BELOVED AND MUCH LONGED FOR, AND MY HONOURED BROTHER IN CHRIST AND FELLOW-PRIEST, AUGUSTINE SENDS GREETING IN THE LORD a</head>
 <div2 type="section" n="1"><p>I have heard that my letter has safely reached you, 
 but I would by no means make it a charge against your affection that as yet I have not been favoured with a reply; no doubt something has come in your way. So I recognize that I must rather beseech the Lord to provide the opportunity of carrying out your intention to send the answer you have written, since He has already provided that of writing it, for you can very easily do so when you feel so disposed.
@@ -560,7 +568,7 @@ converse in the Lord with you; if not by living with you, at least by living nea
 
 </p></div2></div1>
 
-<div1 type="section" n="21"><head>(Ep. LXXXIII) (A.D. 405)</head>
+<div1 type="letter" n="21"><head>(Ep. LXXXIII) (A.D. 405)</head>
 <head>TO ALYPIUS, MY SAINTLY LORD, MY BROTHER AND FELLOW - BISHOP, CHERISHED WITH MUCH REVERENCE AND LONGING, AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>The sorrow of the church at Thiava b prevents 
 <pb id="p.137"/>
@@ -596,7 +604,7 @@ recall the proposal you made when we parted, that the brethren at Tagaste should
 
 </p></div2></div1>
 
-<div1 type="section" n="22"><head>(Ep. LXXXIV) (A.D. 405)</head>
+<div1 type="letter" n="22"><head>(Ep. LXXXIV) (A.D. 405)</head>
 <head>TO MY SAINTLY AND REVERED LORD AND LONGED FOR BROTHER AND FELLOW-PRIEST, NOVATUS a AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I myself feel how hard-hearted I must appear, 
 and I can scarcely excuse myself for not sending and lending to your Holiness my son the deacon Lucilius, your brother. But when you yourself begin to surrender some of the very dearest and sweetest of those you have nurtured to the needs of churches situated far from you, then you will understand the pangs of regret that stab me at losing the bodily com-
@@ -611,7 +619,7 @@ language is in general use, do you think it is our duty so to provide, for the w
 
 </p></div2></div1>
 
-<div1 type="section" n="23"><head>(Ep. LXXXVI) (A.D. 413)</head>
+<div1 type="letter" n="23"><head>(Ep. LXXXVI) (A.D. 413)</head>
 <head>TO MY DISTINGUISHED LORD, CAECTLIANUS,a MY SON TRULY AND DESERVEDLY HONOURED AND CHERISHED IN CHRIST'S LOVE, BISHOP AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>The purity of your administration and your virtuous reputation, as well as the praiseworthy zeal and genuine sincerity of your Christian devotion—gifts of God that you rejoice to have bestowed upon you by Him whose promise makes you hope for still better things—have stimulated me to share with your 
 <pb id="p.151"/>
@@ -619,7 +627,7 @@ language is in general use, do you think it is our duty so to provide, for the w
 
 </p></div2></div1>
 
-<div1 type="section" n="24"><head>(Ep. XCI) (A.D. 408)</head>
+<div1 type="letter" n="24"><head>(Ep. XCI) (A.D. 408)</head>
 <head>AUGUSTINE TO MY DISTINGUISHED AND DESERVEDLY HONOURED BROTHER, NECTARIUS a</head>
 <div2 type="section" n="1"><p>I find it admirable but not surprising that, though 
 age is beginning to chill your limbs, your heart still
@@ -682,7 +690,7 @@ stinacy or to praying that others may imitate their repentance. The losses that 
 
 </p></div2></div1>
 
-<div1 type="section" n="25"><head>(Ep. XCVII) (A.D. 408)</head>
+<div1 type="letter" n="25"><head>(Ep. XCVII) (A.D. 408)</head>
 <head>TO OLYMPIUS,a MY EXCELLENT AND JUSTLY DISTINGUISHED LORD AND SON WORTHY OF MUCH HONOUR IN THE LOVE OF CHRIST, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>As soon as we heard of your well-deserved promotion, 
 although the report that reached us was still very indefinite, we were confident that your attitude towards the Church of God, of which we rejoice that you are truly a son, is no other than what you have now revealed in your letter. Nevertheless, I write to you, my excellent and justly distinguished lord and
@@ -707,7 +715,7 @@ firm and steadfast faith of some, and they are not a few, who were converted to 
 <pb id="p.179"/>
 </p></div2></div1>
 
-<div1 type="section" n="26"><head>(Ep. XCIX) (A.D. 409)</head>
+<div1 type="letter" n="26"><head>(Ep. XCIX) (A.D. 409)</head>
 <head>TO THE VERY DEVOUT HANDMAID OF GOD, ITALICA,a DESERVEDLY AND PIOUSLY PRAISED AMONG THE MEMBERS OF CHRIST, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Three letters from your Grace have reached me up 
 to the moment of my writing this reply; the first still demanded a letter from me, the second intimated that you had by then received it, and the third contained the assurance of your most kind solicitude on my behalf, especially in the matter of the house belonging to that illustrious and distinguished young man, Julian, which adjoins my own walls. On receiving it I lost no time in replying promptly, since your Excellency's agent wrote that he was in a position to send to Rome at an early date. His letter caused me grievous disappointment, in that he did not take the trouble to let me know what is happening in and around Rome, so that we might know for certain what we were reluctant to believe on uncertain rumour. The letters of the brethren that were sent to us before his, conveyed news that was vexatious and affecting enough, but still none too serious, but I was more surprised than I can tell you that my brethren, the holy bishops, did not seize such an excellent opportunity to write to me as that provided by your bearers, and that your letters gave me no news at all about the great trials that you are passing through, though they are ours too by reason of our heart-felt affection. But perhaps you decided not to mention them, because you thought it would do no
@@ -726,7 +734,7 @@ confidence in writing to me, especially since you have had a quite acceptable ex
 
 </p></div2></div1>
 
-<div1 type="section" n="27"><head>(Ep. C) (A.D. 409)</head>
+<div1 type="letter" n="27"><head>(Ep. C) (A.D. 409)</head>
 <head>TO DONATUS,b MY EXCELLENT LORD, WORTHY OF ALL HONOUR, AND EMINENTLY PRAISEWORTHY SON, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I should wish indeed that the African Church were 
 not placed in such afflictions as to require the aid of any earthly power, but since, as the Apostle says, <q> there is no power but of God,</q> c it is true that when you, a very whole-hearted son of our Catholic Mother, come to her aid, <q> our help is in the name of the Lord, Who made heaven and earth.</q>d For amid such grievous afflictions who does not realize, my excellent lord, worthy of all honour, and eminently
@@ -743,7 +751,7 @@ and righteousness; but allow them, when this is requested from you, to be convin
 
 </p></div2></div1>
 
-<div1 type="section" n="28"><head>(Ep. CI) (A.D. 409)</head>
+<div1 type="letter" n="28"><head>(Ep. CI) (A.D. 409)</head>
 <head>TO MY LORD MOST BLESSED AND REVERENTLY CHERISHED AND SINCERE, MEMORIUS,a MY BROTHER AND FELLOW-BISHOP MOST LONGED FOR, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I should not now write any letter to your holy 
 </p><p>Charity without sending those books that you demanded from me by the most urgent right of holy affection, that by this act of obedience at least I might make reply to those letters of yours with which you were good enough to burden me rather than to honour me. Yet where I am bent low by the burden, even there I am raised up by your love. For it is no ordinary person that loves me, upraises me and makes me feel a picked man, but he can do so, that priest of the Lord, whom I feel to be so
@@ -773,7 +781,7 @@ place a of the Most High,</q> you who <q>in one house dwell together in oneness 
 
 </p></div2></div1>
 
-<div1 type="section" n="29"><head>(Ep. CX) (A.D. 409)</head>
+<div1 type="letter" n="29"><head>(Ep. CX) (A.D. 409)</head>
 <head>TO MY BLESSED AND DEAREST LORD, MY VENERABLE AND MUCH DESIRED BROTHER AND FELLOW-PRIEST, SEVERUS,c AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>This letter from me, which has been brought to you 
 by my very dear son and fellow-deacon, Timothy,d was ready for his departure, when my sons Quodvultdeus and Gaudentius e reached us with a letter from you. That is the reason why Timothy, who was departing forthwith, did not bring a reply from me, since after their arrival he waited with us here only a very short time and was apparently on the point of departure at any minute. But even if I had sent a reply by him, I should still be in your debt, for even now, though I seem to have replied, I am in your debt, I do not mean for affection, for the more we have paid of that, the more we owe (we are always in debt for it, as the Apostle's words show, <q> Owe
@@ -808,7 +816,7 @@ letter, I do indeed owe you that, I must confess; I surely do owe that to your s
 <pb id="p.209"/>
 </p></div2></div1>
 
-<div1 type="section" n="30"><head>(Ep. CXV) (A.D. 410)</head>
+<div1 type="letter" n="30"><head>(Ep. CXV) (A.D. 410)</head>
 <head>TO MY SAINTLY LORD AND REVERENTLY CHERISHED BROTHER AND FELLOW - PRIEST, FORTUNATUS a AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Your Holiness is well acquainted with Faventius,b the tenant of the estate at Paratianis. c Being apprehensive of something or other at the hands of the proprietor of that same estate, he fled for refuge to the Church of Hippo, where he remained, as those who seek sanctuary d usually do, waiting to see if by my interposition he could bring the affair to a satisfactory end. Becoming, as each day passed, less and less vigilant—a usual occurrence—and lulled to security by the delusion that his enemy was growing remiss, he was leaving a friend's house after supper when he was suddenly seized and abducted by one Florentinus, said to be an officer of the Count,e aided by what they thought to be for the purpose a  
 suffi-
@@ -819,7 +827,7 @@ of the same case; and let him postpone the hearing of his case, since I do not k
 
 </p></div2></div1>
 
-<div1 type="section" n="31"><head>(Ep. CXXII) (A.D. 410)</head>
+<div1 type="letter" n="31"><head>(Ep. CXXII) (A.D. 410)</head>
 <head>TO HIS DEARLY BELOVED BRETHREN, THE CLERGY, AND ALL THE LAITY AUGUSTINE SENDS GREETING IN THE LORD a</head>
 <div2 type="section" n="1"><p>I particularly beg you, my friends, and beseech 
 you for Jesus' sake, not to be grieved that I am absent from you in the body, for I believe you are confident that in no wise could I depart from you in spirit and heart-felt affection. Y"et I am more grieved than perhaps you are yourselves that in the weak state of my health I cannot adequately cope with all the attentions required from me by the members of Christ, whom love and fear of Him compel me to serve. For you are well aware, my dear friends, that I have never been absent because of any selfish desire for a free time, but because of the obligations imposed on me by my servitude, which has often compelled my holy brethren and colleagues to undertake tasks on the sea and over the sea,
@@ -834,7 +842,7 @@ your habit of clothing the poor; to that work of mercy I exhorted you when I was
 <pb id="p.219"/>
 </p></div2></div1>
 
-<div1 type="section" n="32"><head>(Ep. CXXIV) (A.D. 411)</head>
+<div1 type="letter" n="32"><head>(Ep. CXXIV) (A.D. 411)</head>
 <head>TO ALBINA, PINIANUS, AND MELANIA,a HONOURED IN THE LORD, CHERISHED IN HOLINESS AND LONGED FOR IN BROTHERLY AFFECTION, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Although from the state of my health, or from my 
 natural constitution, I cannot endure cold, still I have never had a chance of suffering greater feverishness than I have done this dreadful winter because of my inability—I shall not say to go, but to fly, to you (for to see you I would have flown across the seas) now that you are settled so near, after coming so far to visit us. And perhaps you will think, my godly friends, that this same severity of the winter was the only cause of my affliction; far be it from me, beloved! For what difficulty or trouble or even danger lies in those storms that I would not have undergone and endured in order to be with you, our great comfort in our great troubles, who in this crooked and perverse generation are lights kindled into such brightness by the Light supreme, and are the loftier for the humility you have taken upon you and the more illustrious for the lustre you have scorned? At the same time I should have too such great spiritual enjoyment in my earthly birthplace, since it has had
@@ -849,7 +857,7 @@ gladly pardon, especially since you would perhaps find no heavier punishment, if
 
 </p></div2></div1>
 
-<div1 type="section" n="33"><head>(Ep. CXXVI) (A.D. 411)</head>
+<div1 type="letter" n="33"><head>(Ep. CXXVI) (A.D. 411)</head>
 <head>TO THE HOLY LADY AND THE REVERED HANDMAID OF GOD, ALBINA,a AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>It is right that I should assuage, and not augment, 
 the grief of your spirit, which you describe in your letter as inexpressible; in this way I may, if possible, heal your suspicions and not add to the agitation of your heart, so venerable and so devoted to God, by indignantly repudiating them for my own sake. The people of Hippo did nothing to make our holy brother, your son Pinianus, apprehensive of death, even though he himself perhaps entertained some fear of it. We ourselves, indeed, were afraid that some of the ruffians who often mix with a crowd from some
@@ -935,7 +943,7 @@ of the weak brethren be healed, so that this notable precedent may not encourage
 
 </p></div2></div1>
 
-<div1 type="section" n="34"><head>(Ep. CXXXIII) (A.D. 411)</head>
+<div1 type="letter" n="34"><head>(Ep. CXXXIII) (A.D. 411)</head>
 <head>TO MY NOBLE AND JUSTLY DISTINGUISHED LORD AND DEAREST SON, MARCELLINUS,a BISHOP AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Those Circumcellions and clergy of the Donatist 
 <pb id="p.253"/>
@@ -957,7 +965,7 @@ are sons of the Church, and at the same time the moderation of your Holy Mother.
 
 </p></div2></div1>
 
-<div1 type="section" n="35"><head>(Ep. CXLIV) (A.D. 412)</head>
+<div1 type="letter" n="35"><head>(Ep. CXLIV) (A.D. 412)</head>
 <head>BISHOP AUGUSTINE TO MY HONOURABLE AND JUSTLY ESTEEMED LORDS, MY DEAREST AND MUCH LONGED FOR BRETHREN, THE PEOPLE OF CIRTA a OF ALL RANKS</head>
 <div2 type="section" n="1"><p>If that which greatly distressed me in your city 
 has been removed, if the hardness of the human heart, resisting the most evident and, as one might say, the most notorious truth, has been overcome by the power of that same truth, if there is relish for the sweet savour of peace, and the brotherly love that springs from unity no longer dazzles aching eyes, but fills with light and vigour eyes that are sound, this is not my doing, but God's; I would not in the least attribute it to human resources, even if the conversion of so great a multitude had taken place when I was among you, in response to my own addresses and exhortations. That is His doing, His achievement, Who uses his ministers to draw attention to the external signs of things, but teaches men by things themselves within, through none but Himself. Yet
@@ -981,14 +989,14 @@ at all that you will be good enough to recognize that it is so.
 
 </p></div2></div1>
 
-<div1 type="section" n="36"><head>(Ep. CXLVI) (A.D. 413)</head>
+<div1 type="letter" n="36"><head>(Ep. CXLVI) (A.D. 413)</head>
 <head>TO PELAGIUS,a MY LORD GREATLY BELOVED AND MY MUCH LONGED FOR BROTHER, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I am very grateful for your kindness in cheering me by a letter from you and in giving me news of your welfare. The Lord recompense you, my greatly beloved lord and much longed for brother, with such blessings that you may be ever blessed and may live eternally with Him Who is eternal. Although I do not recognize myself in those encomiums of me contained in your Benevolence's letter, yet I cannot be ungrateful for your goodwill towards one so insignificant as I. At the same time I urge you rather to pray for me, that the Lord may make me what you imagine I already am. 
 [In another hand] May you abide in safety and be well-pleasing unto the Lord, my greatly beloved lord and much longed for brother. Forget us not!
 <pb id="p.269"/>
 </p></div2></div1>
 
-<div1 type="section" n="37"><head>(Ep. CL) (A.D. 413)</head>
+<div1 type="letter" n="37"><head>(Ep. CL) (A.D. 413)</head>
 <head>TO THE LADIES PROBA AND JULIANA,a MOST NOBLE IN RANK, DAUGHTERS JUSTLY DISTINGUISHED AND EMINENT, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>You have filled my heart with joy, the more delightful because of your affection, and the more welcome because of your promptitude.For while the consecration of a daughter 
 of your house to the life of virginity is being proclaimed by busy rumour wherever your fame is known, and that is everywhere, you outstripped its speediest flight by the surer and more trustworthy information in your letter and made us exult at the news of so very excellent a blessing before we had time to doubt the rumour of it. What words are adequate to tell, what commendation worthy to commemorate, how incomparably greater is the glory and the gain, that Christ should have women from your family dedicated to virginity than that the world should have men from it elevated to the consulship? For if it is a great and notable thing to leave the mark of an honoured name upon the scrolls of time, how much greater and more notable it is by unsullied innocence of mind and body to rise above them! So let this maiden, noble in
@@ -999,7 +1007,7 @@ outstanding in holiness. We have been very glad to receive the gift a commemorat
 
 </p></div2></div1>
 
-<div1 type="section" n="38"><head>(Ep. CLIX) (A.D. 415)</head>
+<div1 type="letter" n="38"><head>(Ep. CLIX) (A.D. 415)</head>
 <head>TO MY MOST SAINTLY LORD, MY VENERABLE AND LONGED FOR BROTHER AND FELLOW-PRIEST, EVODIUS b AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>The brother who brings this, Barbarus by name, 
 is a servant of God who has been settled for a long time now at Hippo and is an eager and diligent hearer of the word of God. He besought this letter from me to your Holiness, in which I commend him to you in the Lord and through him offer you my due greetings. To reply to your Holiness's letter, into which you have woven big questions, is a very considerable undertaking even for men of leisure, possessing much more skill in argument and greater acuteness of understanding than I do. Of the two letters from you, containing many extensive queries,
@@ -1032,7 +1040,7 @@ him tell, if he can, but if he cannot, why is he so hasty to pronounce a kind of
 
 </p></div2></div1>
 
-<div1 type="section" n="39"><head>(Ep. CLXXIII) (A.D. 416)</head>
+<div1 type="letter" n="39"><head>(Ep. CLXXIII) (A.D. 416)</head>
 <head>TO DONATUS,a PRIEST OF THE DONATIST PARTY, AUGUSTINE, BISHOP OF THE CATHOLIC CHURCH</head>
 <div2 type="section" n="1"><p>If you could see my heart-felt grief and anxiety for 
 your salvation, you would perhaps <q>have pity on your own soul, doing what is pleasing unto God</q> b by giving ear to the injunction which is not ours, but His, and you would not impress His Scriptures on your memory only to close your heart against them. You
@@ -1095,7 +1103,7 @@ lord said, ' Go out into the highways and hedges and compel them to come in.'</q
 
 </p></div2></div1>
 
-<div1 type="section" n="40"><head>(Ep. CLXXIV) (A.D. 416)</head>
+<div1 type="letter" n="40"><head>(Ep. CLXXIV) (A.D. 416)</head>
 <head>TO MY SAINTLY LORD, REVERED WITH VERY GENUINE LOVE, MY HOLY BROTHER AND FELLOW-PRIEST, POPE AURELIUS,a AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I was young when I began my work on the Trinity,b the supreme, true God; I am old now when it is published. I had indeed abandoned the task, after learning that someone had stolen it from me or at least stolen a march on me before I could finish and revise it and give it the final touch I had intended. For I had decided not to publish the books separately but all together, for the reason that the later books are linked up with the earlier in a progressive inquiry. 
 <pb id="p.305"/>
@@ -1103,7 +1111,7 @@ lord said, ' Go out into the highways and hedges and compel them to come in.'</q
 <pb id="p.307"/>
 </p></div2></div1>
 
-<div1 type="section" n="41"><head>(Ep. CLXXIX) (A.D. 416)</head>
+<div1 type="letter" n="41"><head>(Ep. CLXXIX) (A.D. 416)</head>
 <head>TO MY SAINTLY LORD AND DESERVEDLY REVERED BROTHER, AND FELLOW - BISHOP, JOHN,a AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I would not for anything venture to cherish resentment 
 that I have not been honoured with letters from your Holiness; for it is better for me to believe that you, my saintly lord and deservedly revered brother, were without anyone to convey them, than to harbour the suspicion that your Grace was scorning me. But now, as I have learned that Luke, the servant of God by whom I am sending this letter to you, is going to return very shortly, I shall give hearty thanks to the Lord and to your Benignity, if you have the kindness to visit me by letter. As for Pelagius, our brother and your son, to whom I hear you show much affection, I suggest that the affection you show him be such that the people who know him and have carefully listened to him may not imagine that your Holiness is being deceived by him.
@@ -1161,7 +1169,7 @@ ambiguous statement. For the rest we care not overmuch whether those perverted a
 
 </p></div2></div1>
 
-<div1 type="section" n="42"><head>(Ep. CLXXXIX) (A.D. 418)</head>
+<div1 type="letter" n="42"><head>(Ep. CLXXXIX) (A.D. 418)</head>
 <head>TO BONIFACE,a MY NOBLE LORD AND JUSTLY DISTINGUISHED AND HONOURABLE SON, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I had already written my reply to your Charity, 
 but when I was looking for an opportunity of transmitting my letter, my beloved son Faustus arrived on his way to your Excellency. After receiving the letter which I had already composed for conveyance to your Benevolence, he intimated to me your strong desire that I should write something to you that would build you up unto that eternal salvation of which your confidence is in Christ Jesus our Lord. And although I was busily occupied, he urged me with that instancy which, as you know, is proportioned to his affection for you, not to postpone the writing of it. To meet his haste, then, I have chosen rather to write something in haste than to keep your holy desire in suspense, my noble and justly distinguished lord and honourable son.
@@ -1207,7 +1215,7 @@ upon it. This letter, then, may rather serve as a mirror to you, in which you ca
 <pb id="p.335"/>
 </p></div2></div1>
 
-<div1 type="section" n="43"><head>(Ep. CXCI) (A.D. 418)</head>
+<div1 type="letter" n="43"><head>(Ep. CXCI) (A.D. 418)</head>
 <head>TO SIXTUS,a MY VENERABLE LORD AND HOLY BROTHER AND FELLOW-PRIEST, WORTHY TO BE CHERISHED IN THE LOVE OF CHRIST, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>Since the letter your Grace sent by the hands of 
 our holy brother, the priest Firmus, reached Hippo during my absence, and on my return I had the chance to read it only after the bearer of it had taken his departure, this first opportunity of replying (and it is a very welcome one too) is afforded by our well-beloved son, the acolyte Albinus. b Your letter, addressed to Alypius and myself together, came at a time when we were not together, so in consequence you receive a letter from each of us, not one in the common name of us both, for the bearer of this letter, having left me, will on his way pass by my revered brother and fellow-bishop, Alypius, so that he may write one for himself in reply to your Holiness; that letter of yours, after reading it, I sent on to him by the same bearer. As for the great joy with which your letter filled me, why should one attempt to utter feelings that defy utterance? Indeed, I am not sure that
@@ -1224,7 +1232,7 @@ through the Lord's assistance to understand and love His grace, they may by thei
 
 </p></div2></div1>
 
-<div1 type="section" n="44"><head>(Ep. CXCII) (A.D. 418)</head>
+<div1 type="letter" n="44"><head>(Ep. CXCII) (A.D. 418)</head>
 <head>TO CELESTINE,a MY REVERED LORD, MY HOLY BROTHER AND FELLOW-DEACON GREATLY LONGED FOR, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I was far away when the clerk Projectus brought the 
 letters your Holiness sent to me at Hippo, yet as soon as I returned and read them and realized that I was in your debt, I was awaiting a chance of paying my debt, when lo! the unexpected departure from us of our well-beloved brother, the acolyte Albinus, has provided a most welcome opportunity. Rejoicing, therefore, in your good health, which is the object of my earnest desire, I return your Holiness the salutation I was owing you. But I always owe you love, the only debt which, after being repaid, still keeps one a debtor. For it is repaid when it is expended, but is still owing even if it has been repaid, since there is no time when it does not require to be expended. Nor is it lost when it is repaid, but rather by repayment it is multiplied, for it is repaid by retaining it, not by getting quit of it. And since it cannot be repaid unless it be retained, so it cannot be retained unless it be repaid—nay rather, when a man repays it,
@@ -1240,7 +1248,7 @@ through His apostle and bids us <q>owe no man anything but to love one another.<
 
 </p></div2></div1>
 
-<div1 type="section" n="45"><head>(Ep. CC) (A.D. 418)</head>
+<div1 type="letter" n="45"><head>(Ep. CC) (A.D. 418)</head>
 <head>TO VALERIUS,b MY DISTINGUISHED AND JUSTLY RENOWNED LORD AND SON WELL-BELOVED IN THE LOVE OF CHRIST, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I have long been disappointed that, after writing 
 several times, I have not had the honour of receiving any reply from your Excellency. Now quite unexpectedly I have received three letters from your Benignity, one of them, not exclusively to me, by the hands of my fellow-bishop Vindemialis,c and not long afterwards two by the hands of my fellow-priest Firmus. d That holy man, with whom I have ties of the most intimate and affectionate nature, as you may have heard from him, talked at length to me about your Excellency and gave me such a true conception of you, as he found you in <q>the tender mercies of Christ,</q>e that he outdid not only the letters brought to me by the afore-mentioned bishop or by himself, but even those I was complaining of not receiving. And his account of you was all the more pleasant in that he told me
@@ -1258,7 +1266,7 @@ information could I have to be in a position to praise and love that too in you,
 
 </p></div2></div1>
 
-<div1 type="section" n="46"><head>(Ep. CCIII) (A.D. 420)</head>
+<div1 type="letter" n="46"><head>(Ep. CCIII) (A.D. 420)</head>
 <head>TO MY NOBLE AND MOST DISTINGUISHED LORD, LARGUS,b MY SON MUCH LONGED FOR, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I have received your Excellency's letter, in which you ask me to write to you. This you would not desire, did you not believe that what you thought I would write to you would be acceptable and pleasant  
 <pb id="p.351"/>
@@ -1268,7 +1276,7 @@ should not wish you to endure henceforward such sufferings as you have endured i
 
 </p></div2></div1>
 
-<div1 type="section" n="47"><head>(Ep. CCIX) (A.D. 423)</head>
+<div1 type="letter" n="47"><head>(Ep. CCIX) (A.D. 423)</head>
 <head>TO CELESTINE,a MY LORD MOST SAINTLY AND HOLY FATHER b REVERED WITH ALL DUE AFFECTION, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>First of all I pay my tribute of congratulation to 
 your merits that the Lord our God has placed you in that apostolic chair with (as we are informed) no division among His people. In the next place, I lay before your Holiness the state of affairs with us,-so that you may come to our assistance not only by praying for us, but also by giving us your counsel and assistance,c for I am writing to your Holiness under deep affliction: by my lack of foresight and caution I have brought a great disaster upon certain members of Christ in our neighbourhood, though I had intended only their benefit.
@@ -1326,7 +1334,7 @@ at the same time comfort my old age by administering justice tempered with mercy
 
 </p></div2></div1>
 
-<div1 type="section" n="48"><head>(Ep. CCX) (A.D. 423)</head>
+<div1 type="letter" n="48"><head>(Ep. CCX) (A.D. 423)</head>
 <head>TO THE WELL-BELOVED AND SAINTLY MOTHER FELICITAS a AND BROTHER RUSTICUS AND THE SISTERS WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>The Lord is good 0 and everywhere His mercy is 
 shed abroad, which comforts us with your love in Him. How greatly He loves those who believe and hope in Him and who love both Him and one another, and what blessings He stores up for them to enjoy hereafter, He shows most of all by this, that upon the unbelieving and the abandoned and the perverse, whom He threatens with eternal fire in company with the devil if they persist in their evil disposition unto the end,c He nevertheless in this present world bestows so many benefits, making <q>His sun to rise on the evil and on the good and sending rain on the just and on the unjust.</q> d That is a brief sentence, meant to suggest further thoughts to the mind, for who can count up how many benefits and unearned
@@ -1341,7 +1349,7 @@ case he go down to death in false security? It is a usual experience and a commo
 <pb id="p.375"/>
 </p></div2></div1>
 
-<div1 type="section" n="49"><head>(Ep. CCXI) a (A.D. 423)</head>
+<div1 type="letter" n="49"><head>(Ep. CCXI) a (A.D. 423)</head>
 <div2 type="section" n="1"><p>Just as severity is ready to punish the sins it discovers, 
 so love is anxious not to discover sins to punish. That was the motive which withheld me from coming to you, when you besought my presence, not to rejoice in your peacefulness, but to increase your strife. For how could I have made light of your wrangling or left it unpunished, if even in my presence it had arisen to the same pitch as that which in my absence, though it was hidden from my eyes, yet assailed my ears with your clamour? Perhaps your rebelliousness would have been even greater in my presence, which it was necessary for me to withhold from you since you were demanding, to the detriment of sound discipline, things inexpedient for you and furnishing a most dangerous precedent. Thus I should not have found you such as I desire, and you would have found me such as you did not desire.
 </p></div2>
@@ -1437,7 +1445,7 @@ you once each week, and when you find yourselves practising the things written i
 
 </p></div2></div1>
 
-<div1 type="section" n="50"><head>(Ep. CCXIV) (A.D. 426 or 427)</head>
+<div1 type="letter" n="50"><head>(Ep. CCXIV) (A.D. 426 or 427)</head>
 <head>TO VALENTINUS,b MY WELL-BELOVED LORD AND BROTHER, HONOURED IN THE MEMBERS OF CHRIST, AND TO THE BRETHREN WHO ARE WITH YOU, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>There have come to me two young men, Cresconius 
 and Felix, declaring themselves members of your community, who have reported to me that there is some disturbance and dissension in your monastery because certain brethren are extolling grace to such an extent that they deny the freedom of the human will and, what is more serious, assert that on the day of judgement God will not render to every man according to
@@ -1477,7 +1485,7 @@ stand now, ye simple among the people; and ye fools, at length be wise.</q> a Fr
 
 </p></div2></div1>
 
-<div1 type="section" n="51"><head>(Ep. CCXX) (A.D. 427)</head>
+<div1 type="letter" n="51"><head>(Ep. CCXX) (A.D. 427)</head>
 <head>TO MY LORD BONIFACE,e MY SON WHOM I COMMEND TO THE PROTECTION AND GUIDANCE OF GOD'S MERCY FOR PRESENT AND ETERNAL SALVATION, AUGUSTINE SENDS GREETING</head>
 <div2 type="section" n="1"><p>I could never find a more trustworthy man or one 
 <pb id="p.417"/>
@@ -1550,7 +1558,7 @@ men's lives, but of conquering <q>principalities and powers and spiritual wicked
 <pb id="p.439"/>
 </p></div2></div1>
 
-<div1 type="section" n="52"><head>(Ep. CCXXVII) (A.D. 428 or 429)</head>
+<div1 type="letter" n="52"><head>(Ep. CCXXVII) (A.D. 428 or 429)</head>
 <head>[TO THE SENIOR ALYPIUS FROM AUGUSTINE, ABOUT THE CONVERSION OF DIOSCURUS a]</head>
 <div2 type="section" n="1"><p>Brother Paul has arrived back safely; he reports that his affairs have been considered favourably;  
 the Lord will grant that this may be the last of them. He sends you hearty greetings and gives us the joyful news about Gavinianus, that having secured deliverance, by God's mercy, from that case of his, he is now not only a Christian but has become a very admirable member of the Church,b having received baptism last Easter, and professing in his heart and with his mouth c the grace that was bestowed on him. I could never express the greatness of my longing for him, but you know how dear he is to me. The town physician,d Dioscurus, has also become a Christian and joined the Church, having received grace at the same time. I must tell you how it came about, for one so stiff-necked and sharp-tongued could have been subjugated only by a miracle.
@@ -1562,7 +1570,7 @@ seizure he had learned the Creed and still retained it in his memory. And thus w
 
 </p></div2></div1>
 
-<div1 type="section" n="53"><head>(Ep. CCXXIX) (A.D. 429)</head>
+<div1 type="letter" n="53"><head>(Ep. CCXXIX) (A.D. 429)</head>
 <head>AUGUSTINE TO DARIUS,b MY DESERVEDLY ILLUSTRIOUS AND MOST DISTINGUISHED LORD AND SON WARMLY CHERISHED IN CHRIST</head>
 <div2 type="section" n="1"><p>From my holy brethren and fellow-bishops Urbanus 
 and Novatus c I have learned of your character and high position; one of them had the good fortune to make your acquaintance in the town of Hilari near Carthage and recently at Sicca, the other at Sitifis. Through them it has been brought about that I too
@@ -1577,7 +1585,7 @@ are what you are and that you have undertaken the task it is yours to accomplish
 
 </p></div2></div1>
 
-<div1 type="section" n="54"><head>(Ep. CCXXXI) (A.D. 429)</head>
+<div1 type="letter" n="54"><head>(Ep. CCXXXI) (A.D. 429)</head>
 <head>AUGUSTINE, SERVANT OF CHRIST AND OF THE MEMBERS OF CHRIST, TO DARIUS,c MY SON, A MEMBER OF CHRIST, GREETING IN HIM</head>
 <div2 type="section" n="1"><p>You wanted a reply from me as evidence that I 
 have received your letter with joy, so, see, I send you one. And yet in a reply, be it this one or any other, it is impossible for me, whether writing briefly or at great length, to make that evident, for neither a few words nor many can be evidence of
@@ -1623,7 +1631,7 @@ not ask for them; I did not want to do only what you asked and nothing more. The
 
 </p></div2></div1>
 
-<div1 type="section" n="55"><head>(Ep. CCXXXII)</head>
+<div1 type="letter" n="55"><head>(Ep. CCXXXII)</head>
 <head>AUGUSTINE TO MY PRAISEWORTHY LORDS AND WELL-BELOVED BRETHREN OF MADAURA, WHOSE LETTER I RECEIVED BY THE HANDS OF BROTHER FLORENTIUS e</head>
 <div2 type="section" n="1"><p>If perchance those who are Catholic Christians 
 among you have sent me a letter of this kind, my
@@ -1667,7 +1675,7 @@ vanity of pride to humility, so that rising thence we may acquire real exaltatio
 <pb id="p.479"/>
 </p></div2></div1>
 
-<div1 type="section" n="56"><head>(Ep. CCXLV)</head>
+<div1 type="letter" n="56"><head>(Ep. CCXLV)</head>
 <head>TO MY WELL-BELOVED LORD AND VENERABLE BROTHER AND FELLOW-PRIEST, POSSIDIUS,a AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>What you are to do with those who refuse to 
 comply requires more consideration than how you can show them that what they are doing is unlawful. But at present the letter of your Holiness has found me extremely busy and at the same time the bearer's great haste to return has not allowed me either to make no reply to you or to give an adequate answer to the problems on which you asked my advice. Still, I should not like you to make any over-hasty decision about the forbidding of ornaments of gold or finery, except that those who are neither married nor desirous of being married ought to be thinking how they may please God. For that class of people think of worldly things, how they may, if they are husbands, please their wives, or if wives, please their husbands b; the one exception is that it is not becoming in women, even in those who are married, to uncover their hair, since the apostle bids them cover the whole head. c But as for painting the face d so that it may appear ruddier or fairer, this is immoral deceit.
@@ -1683,7 +1691,7 @@ among which must be reckoned also the earrings b that men wear on the top part o
 
 </p></div2></div1>
 
-<div1 type="section" n="57"><head>(Ep. CCXLVI)</head>
+<div1 type="letter" n="57"><head>(Ep. CCXLVI)</head>
 <head>AUGUSTINE TO LAMPADIUS a</head>
 <div2 type="section" n="1"><p>On the problem of Fate and Chance, which is seriously 
 perturbing your mind, as I noticed when I was with you and am now assured in a more gratifying and definite manner by your letter, I ought to reply to you at considerable length; the Lord will enable me to furnish you with such an explanation as He knows will be best suited for you and for your spiritual welfare. For it is no slight evil that perverted opinions not only induce men by the allurement of pleasure to commit sin, but lead them away from the remedy of confession to a defence of their sin.
@@ -1703,7 +1711,7 @@ is condemned, let him come to himself again and observe this same principle in d
 <pb id="p.489"/>
 </p></div2></div1>
 
-<div1 type="section" n="58"><head>(Ep. CCLIV)</head>
+<div1 type="letter" n="58"><head>(Ep. CCLIV)</head>
 <head>TO BENENATUS,a MY SAINTLY AND REVERED LORD AND LONGED FOR BROTHER AND FELLOW-PRIEST, AND THE BRETHREN WHO ARE WITH YOU, AUGUSTINE AND THE BRETHREN WHO ARE WITH ME SEND GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>The girl about whom your Holiness wrote to me is so minded, that if she were once of full age,  
 <pb id="p.491"/>
@@ -1711,7 +1719,7 @@ wise nor ought I to do otherwise), so far was he from being reluctant to agree t
 
 </p></div2></div1>
 
-<div1 type="section" n="59"><head>(Ep, CCLVIII)</head>
+<div1 type="letter" n="59"><head>(Ep, CCLVIII)</head>
 <head>TO MARCIANUS,a MY LORD DESERVEDLY HONOURED AND BROTHER CHERISHED IN CHRIST AND LONGED FOR, AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>I have torn myself away from my many preoccupations 
 (or rather have slipped away and, so to
@@ -1747,7 +1755,7 @@ this would become one of your age a and be appropriate, in my opinion, to your c
 <pb id="p.501"/>
 </p></div2></div1>
 
-<div1 type="section" n="60"><head>(Ep. CCLXII)</head>
+<div1 type="letter" n="60"><head>(Ep. CCLXII)</head>
 <head>TO THE MOST DEVOUT LADY, MY DAUGHTER ECDICIA,a AUGUSTINE SENDS GREETING IN THE LORD</head>
 <div2 type="section" n="1"><p>After reading your Reverence's letter and asking 
 its bearer the questions that remained to be asked, I have been very greatly grieved that you chose so to act towards your husband that the edifice of chastity which had already begun to be built up in him has, through his failure to persevere, toppled to the pitiful downfall of adultery. If after making to God a vow of chastity and already undertaking its observance in deed and in disposition, he had returned to his wife's body, his case would have been deplorable enough; but how much more deplorable is it now that he has plunged to deeper destruction, with such precipitate collapse into adultery, furious towards you, injurious to himself, as if his rage at you would be the more violent if he accomplished his own ruin! This great mischief has come about because you failed to treat him with the moderation you ought, for although by agreement you were no longer coming together in carnal intercourse, vet in all other things you ought to have shown the subjection of a wife to your husband in compliance with the marriage-bond, especially as you were both members of the body of Christ. b Indeed, if you, a believer, had had a husband who was an unbeliever, it would have been your duty to conduct yourself with submissiveness, as the Apostles enjoined, so as to win him to the Lord.
@@ -1811,7 +1819,7 @@ trained, as you would have him, in the wisdom of God, it is essential for him to
 
 </p></div2></div1>
 
-<div1 type="section" n="61"><head>(Ep. CCLXVIII)</head>
+<div1 type="letter" n="61"><head>(Ep. CCLXVIII)</head>
 <head>TO THE MEMBERS OF CHRIST, MY WELL BELOVED AND MUCH LONGED FOR LORDS OF THE HOLY CONGREGATION TO WHICH I MINISTER, AUGUSTINE SENDS GREETINGS IN THE LORD a</head>
 <div2 type="section" n="1"><p>Your devotion, my holy brethren, to our Lord Jesus 
 </p><p>Christ, well known to me and often tested, has given me, though absent, reason to place reliance in that wherein I have been wont to rejoice when present: in spirit I am always with you, not only because the great sweetness of the grace of our Lord Jesus Christ ever continueth its fragrance, but also because you do not suffer me, who am your servant in the Gospel, to endure any hardship. Now, our brother Fascius was being pressed for payment of a debt of seventeen solidi b by the tribute-gatherers and found for the moment no way of escape from his entanglement; wherefore, so as not to suffer bodily injury, he fled to the protection of Holy Church. c And as those tax-collectors were compelled to take their departure and so were unable to grant him a respite, they heaped on me the most grievous abuse, declaring that I ought to hand him over to them or to furnish the means where from they could receive the debt which they proved was owing them. I made the offer to Fascius to speak to
@@ -1832,7 +1840,7 @@ you from all evil, both in this world and in the world to come, my well-beloved 
 
 </p></div2></div1>
 
-<div1 type="section" n="62"><head>(Ep. CCLXIX)</head>
+<div1 type="letter" n="62"><head>(Ep. CCLXIX)</head>
 <head>AUGUSTINE TO MY SAINTLY AND REVERED BROTHER AND FELLOW-PRIEST, NOBILIUS a</head>
 <div2 type="section" n="1"><p>So important is the ceremony to which your brotherly affection invites me, that I should drag my poor body to you with willingness, were it not detained by weakness. I might have come, had it not been winter; I might have scorned the winter, had I been young; for either the glow of youth would have endured the rigour of the season, or else the glow of summer would have allayed the chill of age. As it is, my saintly lord, my holy and revered brother and fellow-priest, in winter I cannot bear so lengthy a journey since I must bear with me the frigidity of great age. I return the greeting that I owe to your merits: my own welfare I commend to your supplications, while beseeching the Lord myself that peace and prosperity may follow upon the dedication of so great a building. 
 </p></div2></div1></body></text></TEI.2>

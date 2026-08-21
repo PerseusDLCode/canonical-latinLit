@@ -44,6 +44,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
+            <citeStructure match="l | div2[@type='section']" use="@n" unit="line" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -54,7 +62,7 @@
     </profileDesc>
   </teiHeader>
 
-<text id="stoa0045.stoa0"><body>
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:stoa0261.stoa0001.perseus-lat1">
 <div1 type="poem" n="1"><head>Praefatio panegyrici dicti Anthemio Augusto bis consuli</head>
 
 <l n="1">Cum iuvenem super astra Iovem natura locaret</l>
@@ -3556,9 +3564,9 @@
 <div1 type="poem" n="14"><head>Sidonius Polemio suo salutem </head>
 
 
-<l n="1">1. Dum post profectionem tuam, mi Polemi, frater amantissime, mecum granditer reputo quatenus in votis tuis philosophi Fescennina cantarem, obrepsit materia, qua decursa facile dinosci valet magis me doctrinae quam causae tuae habuisse rationem, omissa itaque epithalamii teneritudine per asper-rimas philosophiae et salebrosissimas regulas 1 stilum traxi; quarum talis ordo est ut sine plurimis novis verbis, quae praefata pace reliquorum eloquentum specialiter tibi et Complatonicis tuis nota sunt, nugae ipsae non valuerint expediri. 2. videris, utrum aures quorundam per imperitiam temere mentionem centri, proportionis, diastematum, climatum vel myrarum epithalamio conducibilem non putent, illud certe consulari viro vere Magno, quaestorio viro Domnulo, spectabili viro Leone ducibus audacter adfirmo, musicam et astrologiam, quae sunt infra arithmeticam consequentia membra philosophiae, nullatenus posse sine hisce nominibus indicari; quae si quispiam ut Graeca, sicut sunt, et peregrina verba contempserit, noverit sibi aut semper 2 huiuscemodi artis mentione supersedendum aut nihil omnino se aut certe non ad assem Latiari lingua hinc posse disserere. 3. quod si aliqui 3 secus atque assero rem se habere censuerint, do quidem absens obtrectatoribus manus; sed noverint sententiam meam discrepantia sentientes sine Marco <pb id="p.220"/> Varrone, sine Sereno, non Septimio, sed Sammonico, sine Censorino, qui de die natali volumen illustre confecit, non posse damnari. 4. lecturus es hic etiam novum verbum, id est essentiam; sed scias hoc ipsum dixisse Ciceronem; nam essentiam nec non et indoloriam nominavit, addens: <q> licet enim novis rebus nova nomina imponere </q>; et recte dixit. nam sicut ab eo quod est verbi gratia sapere et intellegere sapientiam et intellegentiam nominamus, regulariter et ab eo quod est esse essentiam non tacemus. igitur, quoniam tui amoris studio inductus homo Gallus scholae sophisticae intromisi materiam, vel te potissimum facti mei deprecatorem requiro. illi Venus vel Amorum commenticia pigmenta tribuantur cui defuerit sic posse laudari, vale.</l>
+<div2 type="section" n="1"><p>1. Dum post profectionem tuam, mi Polemi, frater amantissime, mecum granditer reputo quatenus in votis tuis philosophi Fescennina cantarem, obrepsit materia, qua decursa facile dinosci valet magis me doctrinae quam causae tuae habuisse rationem, omissa itaque epithalamii teneritudine per asper-rimas philosophiae et salebrosissimas regulas 1 stilum traxi; quarum talis ordo est ut sine plurimis novis verbis, quae praefata pace reliquorum eloquentum specialiter tibi et Complatonicis tuis nota sunt, nugae ipsae non valuerint expediri. 2. videris, utrum aures quorundam per imperitiam temere mentionem centri, proportionis, diastematum, climatum vel myrarum epithalamio conducibilem non putent, illud certe consulari viro vere Magno, quaestorio viro Domnulo, spectabili viro Leone ducibus audacter adfirmo, musicam et astrologiam, quae sunt infra arithmeticam consequentia membra philosophiae, nullatenus posse sine hisce nominibus indicari; quae si quispiam ut Graeca, sicut sunt, et peregrina verba contempserit, noverit sibi aut semper 2 huiuscemodi artis mentione supersedendum aut nihil omnino se aut certe non ad assem Latiari lingua hinc posse disserere. 3. quod si aliqui 3 secus atque assero rem se habere censuerint, do quidem absens obtrectatoribus manus; sed noverint sententiam meam discrepantia sentientes sine Marco <pb id="p.220"/> Varrone, sine Sereno, non Septimio, sed Sammonico, sine Censorino, qui de die natali volumen illustre confecit, non posse damnari. 4. lecturus es hic etiam novum verbum, id est essentiam; sed scias hoc ipsum dixisse Ciceronem; nam essentiam nec non et indoloriam nominavit, addens: <q> licet enim novis rebus nova nomina imponere </q>; et recte dixit. nam sicut ab eo quod est verbi gratia sapere et intellegere sapientiam et intellegentiam nominamus, regulariter et ab eo quod est esse essentiam non tacemus. igitur, quoniam tui amoris studio inductus homo Gallus scholae sophisticae intromisi materiam, vel te potissimum facti mei deprecatorem requiro. illi Venus vel Amorum commenticia pigmenta tribuantur cui defuerit sic posse laudari, vale.</p></div2>
 <pb id="p.218"/>
-<div2 type="section"><head>Praefatio epithalamii dicti Polemio et Araneolae</head>
+<div2 type="section" n="2"><head>Praefatio epithalamii dicti Polemio et Araneolae</head>
 <l n="1">Prosper conubio dies coruscat,</l>
 <l n="2">quem Clotho niveis benigna pensis, </l>
 <pb id="p.222"/>

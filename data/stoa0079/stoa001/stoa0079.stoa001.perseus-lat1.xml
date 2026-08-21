@@ -49,6 +49,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='chapter']" use="@n" unit="chapter" delim=":" n="chunk">
+            <citeStructure match="milestone[@unit='section']" use="@n" unit="section" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -59,11 +67,11 @@
     </profileDesc>
   </teiHeader>
 
- <text id="stoa0079.stoa001.perseus-lat1"><body>
+ <text xml:lang="lat"><body xml:base="urn:cts:latinLit:stoa0079.stoa001.perseus-lat1">
 
 
 <pb id="p.9"/>
-<div1 type="chapter" n="1"><p>
+<div1 type="chapter" n="preface"><p>
 Est interdum praestare mercaturis rem quaerere, nisi
 tam periculosum sit, et item fenerari, si tam honestum
 sit. maiores nostri sic habuerunt et ita in legibus posiverunt,

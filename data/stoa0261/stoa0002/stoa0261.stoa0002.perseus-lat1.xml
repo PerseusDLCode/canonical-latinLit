@@ -46,6 +46,16 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match="div2[@type='letter']" use="@n" unit="letter" delim="." n="chunk">
+              <citeStructure match="div3[@type='section'] | milestone[@unit='section']" use="@n" unit="section" delim="."/>
+            </citeStructure>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -57,10 +67,10 @@
   </teiHeader>
 
 
-<text id="stoa0045.stoa0"><body><pb id="v.1.p.330"/>
+<text xml:lang="lat"><body xml:base="urn:cts:latinLit:stoa0261.stoa0002.perseus-lat1"><pb id="v.1.p.330"/>
 <div1 type="book" n="1">
 
-<div2 type="poem" n="1"><head>Sidonius Constantio suo salutem</head><p>
+<div2 type="letter" n="1"><head>Sidonius Constantio suo salutem</head><p>
 
 
 <milestone unit="section" n="1"/>Diu praecipis, domine maior, summa suadendi auctoritate, sicuti es in his quae deliberabuntur consiliosissimus, ut, si quae mihi1 litterae paulo politiores varia occasione fluxerint, prout eas causa persona tempus elicuit, omnes retractatis exemplaribus enucleatisque uno volumine includam, Quinti Symmachi rotunditatem, Gai Plinii disciplinam maturitatemque vestigiis praesumptuosis insecuturus.
@@ -71,7 +81,7 @@
 <pb id="v.1.p.334"/>
 genuinum molarem invidia non fixerit, actutum tibi a nobis volumina numerosiora percopiosis scaturientia sermocinationibus multiplicabuntur, vale.</p></div2>
 
-<div2 type="poem" n="2"><head>Sidonius Agricolae suo salutem</head><p>
+<div2 type="letter" n="2"><head>Sidonius Agricolae suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Saepenumero postulavisti ut, quia Theudorici regis Gothorum commendat populis fama civilitatem, litteris tibi formae suae quantitas, vitae qualitas significaretur. pareo libens, in quantum epistularis pagina sinit, laudans in te tam delicatae sollicitudinis ingenuitatem. igitur vir est et illis dignus agnosci qui eum minus familiariter intuentur: ita personam suam deus arbiter et ratio naturae consummatae felicitatis dote sociata cumulaverunt; mores autem huiuscemodi, ut laudibus eorum nihil ne regni quidem defrudet invidia. 
 <milestone unit="section" n="2"/>si forma quaeratur: corpore exacto, longissimis brevior, procerior eminentiorque mediocribus, capitis apex rotundus, in quo paululum a planitie frontis in verticem caesaries refuga crispatur. cervix non sedet enervis sed stat nervis. 1 geminos orbes hispidus superciliorum
@@ -96,7 +106,7 @@ summoventes; ubique litigiosus fremit ambitus, qui tractus in vesperam cena regi
 <pb id="v.1.p.346"/>
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Philomathio suo salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Philomathio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>I nunc et legibus me ambitus interrogatum senatu move, cur adipiscendae dignitati hereditariae curis pervigilibus incumbam; cui pater socer avus proavus praefecturis urbanis praetorianisque, magisteriis Palatinis militaribusque micuerunt. 
 <milestone unit="section" n="2"/>et ecce Gaudentius meus, hactenus tantum tribunicius, oscitantem nostrorum civium desidiam vicariano apice transcendit. mussitat quidem iuvenum nostrorum calcata generositas, sed qui transiit derogantes in hoc solum movetur, ut gaudeat, igitur venerantur hucusque contemptum ac subitae stupentes dona
@@ -106,7 +116,7 @@ fortunae quem consessu despiciebant, sede suspiciunt. ille obiter stertentum obl
 
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Gaudentio suo salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Gaudentio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Macte esto, vir amplissime, fascibus partis dote meritorum; quorum ut titulis apicibusque potiare non maternos reditus, non avitas largitiones, non uxorias gemmas, non paternas pecunias numeravisti, quia tibi e contrario apud principis domum inspecta sinceritas, spectata sedulitas, admissa sodalitas laudi fuere, o terque quaterque beatum te, de cuius
 <pb id="v.1.p.350"/>
@@ -119,7 +129,7 @@ culmine datur amicis laetitia, lividis poena, posteris gloria, tum praeterea veg
 <pb id="v.1.p.352"/>
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Heronio1 suo salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Heronio1 suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Litteras tuas Romae positus accepi, quibus an secundum commune consilium sese peregrinationis meae coepta promoveant, sollicitus inquiris, viam etiam qualem qualiterque confecerim, quos aut fluvios viderim poetarum carminibus inlustres aut urbes moenium situ inclitas aut montes numinum opinione vulgatos aut campos proeliorum replicatione monstrabiles, quia voluptuosum censeas quae lectione compereris eorum qui inspexerint fideliore didicisse memoratu, quocirca gaudeo te quid agam cupere cognoscere; namque huiuscemodi studium de adfectu interiore proficiscitur, ilicet, etsi secus quaepiam, sub ope tamen dei ordiar a secundis, quibus primordiis maiores nostri etiam sinisteritatum suarum relationes evolvere auspicabantur. 
 <milestone unit="section" n="2"/>egresso mihi Rhodanusiae nostrae moenibus publicus cursus usui fuit utpote sacris apicibus accito, et quidem per domicilia sodalium propinquorumque; ubi sane vianti moram non veredorum paucitas sed amicorum multitudo faciebat, quae mihi arto implicita complexu itum reditumque felicem certantibus votis
@@ -145,7 +155,7 @@ tamen vel consummata sollemnitas aliquando terminaverit istam totius civitatis o
 
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Eutropio suo salutem</head><p>
+<div2 type="letter" n="6"><head> Sidonius Eutropio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Olim quidem scribere tibi concupiscebam, sed nunc vel maxime impellor, id est cum mihi ducens in urbem Christo propitiante via carpitur, scribendi causa vel sola vel maxima, quo te scilicet a profundo domesticae quietis extractum ad capessenda militiae Palatinae munia vocem. . . . 
 <milestone unit="section" n="2"/>his additur quod munere dei tibi congruit aevi corporis animi vigor integer; dein quod equis, armis, veste sumptu famulicio instructus solum, nisi fallimur, incipere formidas et, cum sis alacer domi, in aggredienda peregrinatione trepidum te iners desperatio facit; si tamen senatorii seminis homo, qui cotidie trabeatis proavorum imaginibus ingeritur, iuste dicere potest semet peregrinatum, si semel et in iuventa viderit domicilium legum, gymnasium litterarum, curiam dignitatum, verticem mundi, patriam libertatis, in
@@ -159,7 +169,7 @@ esset indignum si vestigia nostra sequerentur videris dolens antecessisse?
 
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Vincentio suo salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Vincentio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Angit me casus Arvandi nec dissimulo quin angat. namque hic quoque cumulus accedit laudibus imperatoris, quod amari palam licet et capite damnatos, amicus homini fui supra quam morum eius facilitas varietasque patiebantur, testatur hoc propter ipsum nuper mihi invidia conflata, cuius me paulo incautiorem flamma detorruit. 
 <milestone unit="section" n="2"/>sed quod in amicitia steti, mihi debui, porro autem in natura ille non habuit diligentiam perseverandi: libere queror, non insultatorie, quia fidelium consilia despiciens fortunae ludibrium per omnia fuit.
@@ -193,7 +203,7 @@ ergastulo inferri?
 <pb id="v.1.p.380"/>
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Candidiano suo salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Candidiano suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Morari me Romae congratularis; id tamen quasi facete et fatigationum salibus admixtis: ais enim gaudere te quod aliquando necessarius tuus videam solem, quem utique perraro bibitor Araricus inspexerim. nebulas enim mihi meorum Lugdunensium exprobras et diem quereris nobis matutina caligine obstructum vix meridiano fervore reserari. 
 <milestone unit="section" n="2"/>et tu istaec mihi Caesenatis fumi potius quam oppidi verna deblateras? de cuius natalis tibi soli vel iucunditate vel commodo quid etiam ipse sentires, dum migras iudicavisti; 1 ita tamen quod te Ravennae felicius exsulantem auribus Padano culice perfossis municipalium ranarum loquax turba circumsilit. in qua palude indesinenter rerum omnium lege perversa muri cadunt aquae stant, turres fluunt naves sedent, aegri deambulant medici iacent, algent balnea domicilia conflagrant, sitiunt vivi natant sepulti, vigilant fures dormiunt potestates,
@@ -203,7 +213,7 @@ faenerantur clerici Syri psallunt, negotiatores militant milites 1 negotiantur, 
 
 </p></div2>
 
-<div2 type="poem" n="9"><head> Sidonius Heronio 2 suo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Heronio 2 suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Post nuptias patricii Ricimeris, id est post imperii utriusque opes eventilatas, tandem reditum
 <pb id="v.1.p.384"/>
@@ -224,14 +234,14 @@ ac si me in comitio vel inter rostra contionante ad sophos meum non modo lati cl
 <pb id="v.1.p.392"/>
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Campaniano suo salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Campaniano suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Accepi per praefectum annonae litteras tuas, quibus eum tibi sodalem veterem mihi insinuas iudici novo. gratias ago magnas illi, maximas tibi, quod statuistis de amicitia mea vel praesumere tuta vel inlaesa credere, ego vero notitiam viri familiaritatemque non solum volens sed et avidus amplector, quippe qui noverim nostram quoque gratiam hoc obsequio meo fore copulatiorem. 
 <milestone unit="section" n="2"/>sed et tu vigilantiae suae me, id est famae meae statum causamque commenda, vereor autem ne famem populi Romani theatralis caveae fragor insonet et infortunio meo publica deputetur esuries. sane hunc ipsum e vestigio ad portum mittere paro, quia comperi naves quinque Brundisio profectas cum speciebus tritici ac mellis ostia Tiberina tetigisse; quarum onera exspectationi plebis, si quid strenue gerit, raptim faciet offerri, commendaturus se mihi, me populo, utrumque tibi. vale.
 <pb id="v.1.p.394"/>
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Montio suo salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Montio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Petis tibi, vir disertissime, Sequanos tuos expetituro satiram nescio quam, si sit a nobis perscripta, transmitti. quod quidem te postulasse demiror; non enim sanctum est ut de moribus amici cito perperam sentias, huic eram themati scilicet incubaturus id iam agens otii idque habens aevi, quod iuvenem militantemque dictasse praesumptiosum fuisset, publicasse autem periculosum? cui namque grammaticum vel salutanti Calaber ille non dixit:
 <q> si mala condiderit in quem quis carmina, ius est iudiciumque </q>?
@@ -273,7 +283,7 @@ etenim sufficere debere, quod satirae obiectio famam mihi parasset, sed sibi inf
 <milestone unit="section" n="17"/>in summa perculi1 quidem, domine maior, non assertorem calumniae tantum quantum murmuratorem; sed cum mihi sic satisfactum est ut pectori meo pro reatu eius tot potestatum dignitatumque culmina et iura summitterentur, fateor exordium contumeliae talis tanti fuisse, cui finis gloria fuit. vale.</p></div2></div1>
 
 <div1 type="book" n="2">
-<div2 type="poem" n="1"><head> Sidonius Ecdicio suo salutem</head><p>
+<div2 type="letter" n="1"><head> Sidonius Ecdicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Duo nunc pariter mala sustinent Arverni tui. <q>quaenam?</q> inquis, praesentiam Seronati et absentiam tuam. Seronati, inquam: de cuius ut primum etiam nomine loquar, sic mihi videtur quasi praescia futurorum lusisse fortuna, sicuti ex adverso maiores nostri proelia, quibus nihil est foedius, bella dixerunt; quique etiam pari contrarietate fata, quia non parcerent, Parcas vocitavere.
 <pb id="v.1.p.414"/>
@@ -286,7 +296,7 @@ exsultans Gothis insultansque Romanis, inludens praefectis conludensque numerari
 
 </p></div2>
 
-<div2 type="poem" n="2"><head> Sidonius Domitio suo salutem</head><p>
+<div2 type="letter" n="2"><head> Sidonius Domitio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Ruri me esse causaris, cum mihi potius queri suppetat te nunc urbe retineri, iam ver decedit aestati et per lineas sol altatus extremas in axem Scythicum radio peregrinante porrigitur, hic quid de regionis nostrae climate loquar? cuius spatia
 <pb id="v.1.p.418"/>
@@ -331,14 +341,14 @@ semper dulcibus aquis amaritudo.
 <pb id="v.1.p.436"/>
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Felici suo salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Felici suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Gaudeo te, domine maior, amplissimae dignitatis infulas consecutum, sed id mihi ob hoc solum destinato tabellario nuntiatum non minus gaudeo; nam licet in praesentiarum sis potissimus magistratus et in lares Philagrianos patricius apex tantis post saeculis tua tantum felicitate remeaverit, invenis tamen, vir amicitiarum servantissime, qualiter honorum tuorum crescat communione fastigium, raroque genere exempli altitudinem tuam humilitate sublimas. 
 <milestone unit="section" n="2"/>sic quondam Quintum Fabium magistrum equitum dictatorio rigori et Papirianae superbiae favor publicus praetulit; sic et Gnaeum Pompeium super aemulos extulit numquam fastidita popularitas; sic invidiam Tiberianam pressit universitatis amore Germanicus, quocirca nolo sibi de successibus tuis principalia beneficia plurimum blandiantur, quae nihil tibi amplius conferre potuerunt quam ut, si id noluissemus, transiremur inviti. illud peculiare tuum est, illud gratiae singularis, quod tam qui te aemulentur non habes quam non invenis qui sequantur, vale.
 <pb id="v.1.p.438"/>
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Sagittario suo salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Sagittario suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Vir clarissimus Proiectus, domi nobilis et patre patruoque spectabilibus, avo etiam praestantissimo sacerdote conspicuus, amicitiarum tuarum, nisi respuis, avidissime sinibus infertur, et cum illi familiae splendor probitas morum, patrimonii facultas iuventutis alacritas in omne decus pari lance conquadrent, ita demum sibi tamen videbitur ad arcem fastigatissimae felicitatis e vectus, si gratiae tuae sodalitate potiatur. 
 <milestone unit="section" n="2"/>Optantii clarissimi viri nuper vita functi filiam, quod deo prosperante succedat, licet a matre pupillae in coniugium petierit obtinueritque, parum tamen votorum suorum promotum censet effectum, nisi assensum tuum super his omnibus seu sedulitate sua seu precatu nostrae intercessionis adipiscatur. namque ipse, quantum ad institutionem spectat puellae, in locum mortui patris curarum participatione succedis, conferendo virgini parentis adfectum, patroni auctoritatem, tutoris officium. 
@@ -348,7 +358,7 @@ bonarum partium viros, benignitate responsi proci supplicis verecundiam munerare
 
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Petronio suo salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Petronio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Iohannes familiaris meus inextricabilem labyrinthum negotii multiplicis incurrit et donec suarum merita chartarum vel vestra scientia vel si qua est vestrae (si tamen est ulla) similis inspexerit, quid respuat, quid optet ignorat. ita se quodammodo bipertitae litis forma confundit,ut propositio sua quem actionis ordinem propugnatura, quem sit impugnatura, non noverit. 
 <milestone unit="section" n="2"/>pro quo precem sedulam fundo, ut perspectus chartulis suis si quid iure competit instruatis, quae qualiterve sint obicienda. quae refellenda monstrantes. non enim verebimur quod causae istius cursus, si de vestri manaverit fonte consilii, ulla contrastantum derivatione tenuetur. vale.
@@ -356,14 +366,14 @@ bonarum partium viros, benignitate responsi proci supplicis verecundiam munerare
 THE LETTERS OF SIDONIUS
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Pegasio suo salutem</head><p>
+<div2 type="letter" n="6"><head> Sidonius Pegasio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Proverbialiter celebre est saepe moram esse meliorem, sicuti et nunc experti sumus. Menstruanus amicus tuus longo istic tempore inspectus meruit inter personas nobis quoque caras devinctasque censeri, opportunus elegans, verecundus sobrius, parcus religiosus et his morum dotibus praeditus ut, quotiens in boni cuiusque adscitur amicitias, non amplius consequatur beneficii ipse quam tribuat. 
 <milestone unit="section" n="2"/>haec tibi non ut ignoranti, sed ut iudicio meo satisfacerem, scripsi, quam ob rem triplex causa laetandi: tibi prima, cui amicos sic aut instituere aut eligere contingit; Arvernis secunda, quibus hoc in eo placuisse confirmo, quod te probasse non ambigo; illi tertia, de quo boni quique bona quaeque iudicaverunt, vale.
 
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Explicio suo salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Explicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quia iustitia vestra iure fit universitati per complura recti experimenta venerabilis, idcirco singulas quasque personas id ipsum efflagitantes
 <pb id="v.1.p.444"/>
@@ -372,7 +382,7 @@ in examen vestrum libens et avidus emitto, quam primum ambiens me discussionis, 
 <pb id="v.1.p.446"/>
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Desiderato suo salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Desiderato suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Maestissimus haec tibi nuntio, decessit nudius tertius non absque iustitio matrona Philomathia. morigera coniunx domina clemens, utilis mater pia filia, cui debuerit domi forisque persona minor obsequium, maior officium, aequalis adfectum, haec cum esset unica iam diu matris amissae, facile diversis blandimentorum generibus effecerat ne patri adhuc iuveni subolis sexus alterius desideraretur. nunc autem per subita suprema virum caelibatu, patrem orbitate confodit. his additur quod quinque liberum parens inmaturo exitu reddidit infortunatam fecunditatem. qui parvuli si matre sospite perdidissent iam diu debilem patrem, minus pupilli existimarentur. 
 <milestone unit="section" n="2"/>hanc tamen, si quis haud incassum honor cadaveribus impenditur, non vispillonum sandapilari-orumque ministeria ominosa tumulavere; sed cum libitinam ipsam flentes omnes, externi quoque, prensitarent remorarentur exoscularentur, sacerdotum propinquorumque manibus excepta perpetuis sedibus dormienti similior inlata est. post quae precatu parentis orbati neniam funebrem non per
@@ -403,7 +413,7 @@ umquam tibi redhibeatur. vale.</p>
 <pb id="v.1.p.450"/>
 </div2>
 
-<div2 type="poem" n="9"><head> Sidonius Donido suo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Donido suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quaeris cur ipse iampridem Nemausum profectus vestra serum ob adventum desideria producam, reddo causas reditus tardioris nec moras meas prodere moror, quia quae mihi dulcia sunt tibi quoque, inter agros amoenissimos, humanissimos dominos, Ferreolum et Apollinarem, tempus voluptuosissimum exegi. praediorum his iura contermina, domicilia vicina, quibus interiecta gestatio peditem lassat neque sufficit equitaturo. colles aedibus superiores exercentur vinitori et olivitori: Aracynthum et Nysam, celebrata poetarum carminibus iuga, censeas, uni domui in plana patentiaque, alteri in nemora prospectus; sed nihilo minus dissimilis situs similiter oblectat. 
 <milestone unit="section" n="2"/>quamquam de praediorum quid nunc amplius positione, cum restat hospitalitatis ordo reserandus? iam primum sagacissimis in hoc exploratoribus destinatis, qui reditus nostri iter aucuparentur, domus utraque non solum tramites aggerum publicorum verum etiam calles compendiis tortuosos atque pastoria deverticula insedit, ne quo casu dispositis officiorum insidiis elaberemur. quas incidimus, fateor, sed minime
@@ -428,7 +438,7 @@ solidabamur: siquidem domibus medius it Vardo fluvius, nisi cum deflua nive past
 
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Hesperio suo salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Hesperio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Amo in te quod litteras amas et usquequaque praeconiis cumulatissimis excolere 1 contendo tantae diligentiae generositatem, per quam nobis non solum initia tua verum etiam studia nostra com-
 <pb id="v.1.p.462"/>
@@ -478,7 +488,7 @@ miniscere quod saepe versum Corinna cum suo Nasone complevit, Lesbia cum Catullo
 
 </div2>
 
-<div2 type="poem" n="11"><head> Sidonius Rustico suo salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Rustico suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Si nobis pro situ spatiisque regionum vicinaremur nec a se praesentia mutua vasti itineris longinquitate discriminaretur, nihil apicum raritati licere in coeptae familiaritatis officia permitterem neque iam semel missa fundamenta certantis amicitiae diversis honorum generibus exstruere cessarem. sed animorum coniunctioni separata utrique porrecti-oribus terminis obsistit habitatio, equidem semel devinctis parum nocitura pectoribus. 
 <milestone unit="section" n="2"/>sed tamen ex ipsa communium municipiorum discretione procedit quod, cum amicissimi simus, raritatem collo-quii de prolixa terrarum interiectione venientem
@@ -487,7 +497,7 @@ in reatum volumus transferre communem, cum de naturalium rerum difficultate nec 
 
 </p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Agricolae suo salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Agricolae suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Misisti tu quidem lembum mobilem solidum lecti capacem iamque cum piscibus; tum praeterea gubernatorem longe peritum, remiges etiam robustos expeditosque, qui scilicet ea rapiditate praetervolant amnis adversi terga qua deflui. sed dabis veniam quod invitanti tibi in piscationem comes venire dissimulo; namque me multo decumbentibus nostris validiora maeroris retia tenent, quae sunt amicis quaeque et externis indolescenda. unde te quoque puto, si rite germano movens adfectu, quo temporis puncto paginam hanc sumpseris, de reditu potius cogitaturum. 
 <milestone unit="section" n="2"/>Severiana, sollicitudo communis, inquietata primum lentae tussis impulsu febribus quoque iam fatigatur, hisque per noctes ingravescentibus; propter quod optat exire in suburbanum; litteras tuas denique cum sumeremus,
@@ -497,7 +507,7 @@ egredi ad villulam iam parabamus. quocirca tu seu venias seu moreris, preces nos
 
 </p></div2>
 
-<div2 type="poem" n="13"><head> Sidonius Serrano suo salutem</head><p>
+<div2 type="letter" n="13"><head> Sidonius Serrano suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Epistulam tuam nobis Marcellinus togatus exhibuit, homo peritus virque amicorum, quae
 <pb id="v.1.p.474"/>
@@ -518,7 +528,7 @@ videbatur in iugulum purpurati iam iamque ruiturus; nam filo equinae saetae liga
 
 </p></div2>
 
-<div2 type="poem" n="14"><head> Sidonius Maurusio suo Salutem.</head><p>
+<div2 type="letter" n="14"><head> Sidonius Maurusio suo Salutem.</head><p>
 
 
 <milestone unit="section" n="1"/>Audio industriae tuae votisque communibus uberiore proventu, quam minabatur sterilis annus, respondere vindemiam. unde et in pago Vialoscensi, qui Martialis aetate citeriore vocitatus est propter hiberna legionum Iulianarum, suspicor diuturnius
@@ -528,7 +538,7 @@ te moraturum; quo loci tibi cum ferax vinea est, tum praeter ipsam praedium magn
 
 <pb id="v.2.p.2"/>
 <div1 type="book" n="3">
-<div2 type="poem" n="1"><head>Sidonius Avito suo salutem</head><p>
+<div2 type="letter" n="1"><head>Sidonius Avito suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Multis quidem vinculis caritatis ab ineunte pueritia quicquid venimus in iuventutem gratiae sese mutuae cura nexuerat, primum quia matribus nostris summa sanguinis iuncti necessitudo, dein quod ipsi isdem temporibus nati magistris usi, artibus instituti lusibus otiati, principibus evecti stipendiis perfuncti sumus; et, quod est ad amicitias ampliandas his validius efficaciusque, in singulis quibusque personis vel expetendis aequaliter vel cavendis iudicii parilitate certavimus. 
 <milestone unit="section" n="2"/>propter
@@ -544,7 +554,7 @@ iam solvent. Nicetiana namque, si nescis, hereditas Cuticiaci supernum pretium f
 <pb id="v.2.p.8"/>
 </p></div2>
 
-<div2 type="poem" n="2"><head> Sidonius Constantio suo salutem</head><p>
+<div2 type="letter" n="2"><head> Sidonius Constantio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Salutat populus Arvernus, cuius parva tuguria magnus hospes implesti, non ambitiosus comitatu sed ambiendus adfectu, deus bone, quod gaudium fuit laboriosis cum tu sanctum pedem semirutis moenibus intulisti! quam tu ab omni ordine sexu aetate stipatissimus ambiebare! quae salsi erga singulos libra sermonis! quam te blandum pueri, comem iuvenes, gravem senes metiebantur! quas tu lacrimas ut parens omnium super aedes incendio prorutas et domicilia semiusta fudisti! quantum doluisti campos sepultos ossibus insepultis! quae tua deinceps exhortatio, quae reparationem suadentis 1 animositas! 
 <milestone unit="section" n="2"/>his adicitur quod, cum inveneris civitatem non minus civica simultate quam barbarica incursione vacuatam, pacem omnibus suadens caritatem illis, illos patriae reddidisti. quibus tuo monitu non minus in unum consilium quam in unum oppidum revertentibus muri tibi debent plebem
@@ -555,7 +565,7 @@ reductam, plebs reducta concordiam, quocirca satis te toti suum, satis se toti t
 <pb id="v.2.p.12"/>
 </p></div2>
 
-<div2 type="poem" n="3"><head>
+<div2 type="letter" n="3"><head>
  Sidonius Ecdicio suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Si quando, nunc maxume Arvernis meis deside-raris, quibus dilectio tui immane dominatur, et quidem multiplicatus ex causis: primum quod summas in adfectu partes iure sibi usurpat terra quae genuit, dein quod saeculo tuo solus ferme mortalium es qui patriae non minus desiderii nasciturus quam gaudii natus feceris; astipulantur assertis materni quondam puerperii tempora, quae proficiente conceptu concordantibus civium votis numerabantur. 
@@ -577,7 +587,7 @@ te aliquot superventibus cuneos mactasse turmales e numero tuorum vix binis temi
 quo magis crederes votis tuorum, quorum exspectationi aegrescenti nulla salubrius ociusque quam tui adventus remedia medicabuntur? igitur, si quid nostratium precatibus adquiescis, actutum in patriam receptui canere festina et adsiduitatem tuam periculosae regum familiaritati celer exime, quorum consuetudinem expertissimus 1 quisque flammarum naturae bene comparat, quae sicut paululum a se remota inluminant, ita satis sibi admota comburunt. vale.
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Felici suo salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Felici suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Gozolas natione Iudaeus, cliens culminis tui, cuius mihi quoque esset persona cordi, si non esset secta despectui, defert litteras meas, quas granditer anxius exaravi, oppidum siquidem nostrum quasi quandam sui limitis obicem circumfusarum nobis gentium arma terrificant. sic aemulorum sibi in medio positi lacrimabilis praeda populorum, suspecti Burgundionibus, proximi Gothis, nec impugnantum
 <pb id="v.2.p.22"/>
@@ -585,7 +595,7 @@ ira nec propugnantum caremus invidia.
 <milestone unit="section" n="2"/>sed istinc alias, interea, si vel penes vos recta sunt, bene est. neque enim huiusmodi pectore sumus, ut, licet apertis ipsi poenis propter criminum occulta plectamur, non agi prospere vel ubicumque velimus, nam certum est non minus vitiorum quam hostium esse captivum, qui non etiam inter mala tempora bona vota servaverit, vale.
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Hypatio suo salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Hypatio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Si vir spectabilis morumque vestrorum suspector admiratorque Donidius solam rationem domesticae utilitatis habuisset, satis abundeque sufficeret fides vestra commodis suis, etsi nullus intercessor accederet, sed amore meo ductus est, ut, quod ipse per se impetraverat, me faceret postulare, itaque nunc honori vestro hic quoque cumulus accrescit, quod duo efficimur debitores, cum tamen unus e nobis beneficium consequatur. 
 <milestone unit="section" n="2"/>Eborolacensis praedii etiam ante barbaros desolatam medietatem, quae domus patriciae iura modo respicit, suffragio vestro
@@ -595,7 +605,7 @@ iuri 1 suo optat adiungi. neque ad hanc nundinationem stimulo cupiditatis sed re
 <pb id="v.2.p.26"/>
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Eutropio suo Salutem.</head><p>
+<div2 type="letter" n="6"><head> Sidonius Eutropio suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Si veteris commilitii, si deinceps innovatae per dies gratiae bene in praesentiarum fides vestra reminiscitur, profecto intellegitis ut vos ad dignitatum sic nos ad desideriorum culmina ascendere. ita namque fascibus vestris gratamur omnes, ut erectam per illos non magis vestram domum quam nostram amicitiam censeamus. testis est ille tractatus in quo exhortationis meae non minimum incitamenta valuerunt. 
 <milestone unit="section" n="2"/>quibus vix potuistis adduci ut praefecturam philosophiae iungeretis, cum vos consectanei vestri Plotini dogmatibus inhaerentes ad profundum intempestivae quietis otium Platonicorum palaestra rapuisset, cuius disciplinae tunc fore adstruxi liberam professionem, cum nil familiae debuisses. 1 porro autem desidiae vicinior putabatur contemptus ille militiae, ad quam iactitant Ii vidi bonarum partium viros non posse potius quam nolle conscendere. 
@@ -604,7 +614,7 @@ iuri 1 suo optat adiungi. neque ad hanc nundinationem stimulo cupiditatis sed re
 est, agimus gratias uberes Christo, qui statum celsitudinis tuae ut hactenus parentum nobilitate decorabat, ita iam nunc titulorum parilitate fastigat; simul et animorum spebus erectis fas est de cetero sperare meliora, certe creber provincialium sermo est annum bonum de magnis non tam fructibus quam potestatibus existimandum. qua de re vestrum est, domine maior, exspectationem nostram competentibus dispositionibus munerari. nam memor originis tuae nobilium sibi persuasit universitas, quamdiu nos Sabini familia rexerit, Sabmiani familiam non timendam. vale.
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Felici suo salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Felici suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Longum a litteris temperatis. igitur utrique nostrum mos suus agitur: ego garrio, vos tacetis. unde etiam, vir ad reliqua fidei officia insignis, genus reor esse virtutis tanto te otio non posse lassari. ecquid numquamne 1 respectu movebere familiaritatis antiquae, ut tandem a continuandi 2 silentii proposito pedem referas? aut 3 nescis quia
 <pb id="v.2.p.30"/>
@@ -616,7 +626,7 @@ garrulo non respondere convicium est? tu retices vel bybliothecarum medius vel t
 bus excubiis non dies ninguidus, non-nox inlunis et turbida receptui canere persuadent; quia, etsi barbarus in hiberna concedat, mage differunt quam relinquant 1 semel radicatam corda formidinem, palpate nos prosperis, quia nostra non tam procul est a vobis causa quam patria, vale.
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Eucherio suo salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Eucherio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Veneror antiquos, non tamen ita ut qui aequaevorurn 2 meorum virtutes aut merita postponam. neque si Romana respublica in haec miseriarum extrema defluxit, ut studiosos sui numquam remuneretur, non idcirco Brutos Torquatosque non pariunt saecula mea. <q>quorsum istaec?</q> inquis, de te mihi ad te sermo est, vir efficacissime, cui debet respublica quod supra dictis solutum laudat historia. 
 <milestone unit="section" n="2"/>quapropter ignari rerum temeraria
@@ -624,7 +634,7 @@ bus excubiis non dies ninguidus, non-nox inlunis et turbida receptui canere pers
 iudicia suspendant nec perseverent satis aut suspicere praeteritos aut despicere praesentes; quandoquidem facile clarescit rempublicam morari beneficia vos mereri, quamquam mirandum granditer non sit, natione foederatorum 1 non solum inciviliter Romanas vires administrante verum etiam fundamentaliter eruente, si nobilium virorum militarium-que et supra vel spem nostrae vel opinionem partis adversae bellicosorum non tam defuerint 2 facta quam praemia, vale.
 </p></div2>
 
-<div2 type="poem" n="9"><head> Sidonius Riothamo suo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Riothamo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Servatur nostri consuetudo sermonis; namque miscemus cum salutatione querimoniam, non omnino huic rei studentes, ut stilus noster sit officiosus in titulis, asper in paginis, sed quod ea semper eveniunt de quibus loci mei aut ordinis hominem constat
 <pb id="v.2.p.36"/>
@@ -632,7 +642,7 @@ inconciliari, si loquatur, peccare, si taceat, sed et ipsi sarcinam vestri pudor
 <milestone unit="section" n="2"/>gerulus epistularum humilis obscurus despicabilisque etiam usque ad damnum innocentis ignaviae mancipia sua Britannis clam sollicitantibus abducta deplorat. incertum mihi est an sit certa causatio; sed si inter coram positos aequanimiter obiecta discingitis,1 arbitror hunc laboriosum posse probare quod obicit, si tamen inter argutos armatos tumultuosos, virtute numero contubernio contumacem poterit ex aequo et bono solus inermis, abiectus rusticus, peregrinus pauper audiri, vale,
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Tetradio suo salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Tetradio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Plurimum laudis iuvenes nostri moribus suis applicant quotiens de negotiorum 2 meritis ambi-gentes ad peritorum consilia decurrunt, sicuti nunc vir clarissimus Theodorus, domi quidem nobilis, sed modestissimae conversationis opinione generosior, qui per litteras meas ad tuas litteras, id est ad
 <pb id="v.2.p.38"/>
@@ -640,7 +650,7 @@ meracissimum scientiae fontem laudabili aviditate proficiscitur, non modo repert
 <milestone unit="section" n="2"/>cui contra potentes factiososque, si vestra peritia non abundanter opitularetur, prudentia consulta sufficeret, respondete, obsecramus, nisi vobis tamen utriusque nostrum sociae preces oneri fastidiove reputabuntur, iudicio suo, testimonio meo et substantiam causamque supplicis fluctuantem medicabilis responsi salubritate fulcite. vale.
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Simplicio suo salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Simplicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Etsi desiderium nostrum sinisteritas tanta comitatur ut etiam nunc nostris invidearis obtutibus, non idcirco is es, virorum optime, de cuius nos moribus lateant celsa memoratu: ita cuncti nostrates idemque summates viri optimarum te exactissimarumque partium praestantissimum patremfamilias consono praeconio prosequuntur. 
 <milestone unit="section" n="2"/>adstipulatur huic de te sententiae bonorum vel sic electus gener vel educta sic filia; in quorum copula tam felicem tibi controversiam vota pepererunt ut ambigas utrum
@@ -648,7 +658,7 @@ meracissimum scientiae fontem laudabili aviditate proficiscitur, non modo repert
 iudicio an institutione superaveris. sed tamen hinc vel maxume, parentes ambo venerabiles, este securi: idcirco ceteros vincitis, quod vos filii transierunt, igitur dona venia litteras primas, quas ut necdum mittere desidia fuerat, ita vereor ne sit misisse garrulitas. carebit sane nostrum naevo loquacitatis officium si exemplo recursantis alloquii impudentiam paginae praesentis absolveris. vale.
 </p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Secundo suo salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Secundo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Avi mei, proavi tui tumulum hesterno (pro dolor!) die paene manus profana temeraverat; sed deus adfuit, ne nefas tantum perpetraretur. campus autem ipse dudum refertus tam bustualibus favillis quam cadaveribus nullam iam diu scrobem recipiebat; sed tamen 1 tellus, humatis quae superducitur, redierat in pristinam distenta planitiem pondere nivali seu diuturno imbrium fluxu sidentibus acervis: quae fuit causa ut locum auderent tamquam vacantem corporum baiuli rastris funebribus impiare. 
 <milestone unit="section" n="2"/>quid plura? iam niger caespes ex viridi, iam supra anti-
@@ -685,7 +695,7 @@ meo sumptu resurgat in molem sparsa congeries, quam levigata pagina tegat, ego v
 
 <milestone unit="section" n="6"/>Novi quidem auctoris nostri non respondere doctrinae epitaphii qualitatem, sed anima perita musicas non refutat inferias, tibi quoque non decet 1 tardum videri quod heres tertius quartusque dependimus, cum tot annorum gyro voluto magnum Alexandrum parentasse manibus Achillis et Iulium Caesarem Hectori ut suo iusta solvisse didicerimus. vale.</p></div2>
 
-<div2 type="poem" n="13"><head> Sidonius Apollinari suo salutem</head><p>
+<div2 type="letter" n="13"><head> Sidonius Apollinari suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Unice probo gaudeo admiror, quod castitatis adfectu contubernia fugis impudicorurn, praesertim
 <pb id="v.2.p.48"/>
@@ -711,7 +721,7 @@ patronorum est praecipue cavendus arcanis, quorum est laudator in prosperis, del
 <pb id="v.2.p.58"/>
 </p></div2>
 
-<div2 type="poem" n="14"><head>
+<div2 type="letter" n="14"><head>
  Sidonius Placido suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Quamquam te tua tenet Gratianopolis, comperi tamen hospitum veterum fido relatu quod meas nugas sive confectas opere prosario seu poetarum stilo cantilenosas plus voluminum lectione dignere repositorum. gaudeo hoc ipso, quod recognovi chartulis occupari nostris otium tuum; sed probe intellego quod moribus tuis hanc voluptatem non operis effectus excudit sed auctoris adfectus, ideoque plus debeo, quia gloriae punctum, quod dictioni negares, das amicitiae. 
@@ -720,7 +730,7 @@ patronorum est praecipue cavendus arcanis, quorum est laudator in prosperis, del
 </p></div2></div1>
 
 <div1 type="book" n="4">
-<div2 type="poem" n="1"><head> Sidonius Probo suo salutem</head><p>
+<div2 type="letter" n="1"><head> Sidonius Probo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Soror mihi quae uxor tibi: hinc inter nos summa et principalis necessitudo, et ea quidem patruelis, non germana fraternitas, quae plerumque se purius fortius meracius amat. nam facultatum inter germanos prius lite sopita iam qui nascuntur ex fratribus nihil invicem controversantur, et hinc saepe caritas in patruelibus maior, quia desistit simultas a divisione nec cessat affectus a semine, secundus nobis animorum nexus accessit de studiorum parilitate, quia idem sentimus culpamus laudamus in litteris et aeque nobis quaelibet dictio placet improbaturque. 
 <milestone unit="section" n="2"/>quamquam mihi nimis arrogo iudicium meum conterens tuo. quis enim iuvenum nesciat seniorum-que te mihi magistrum fuisse proprium, cum videremur habere communem, et si quid heroicus arduum comicus lepidum, lyricus cantilenosum orator decla-
@@ -733,7 +743,7 @@ Alanos aut ad equimulgas Gelonos, bestialium rigidarumque nationum corda cornea 
 <milestone unit="section" n="5"/>igitur quia nos ut affinitas, ita studia iunxerunt, precor, quoquo loci es, amicitiae iura inconcussa custodias longumque tibi etsi sede absumus, adsimus affectu: cuius in-temeratae partes, quantum spectat ad vos, a nobis 1 in aevum, si quod est vitae reliquum, perennabuntur. vale.
 </p></div2>
 
-<div2 type="poem" n="2"><head> Claudianus Sidonio Papae salutem</head><p>
+<div2 type="letter" n="2"><head> Claudianus Sidonio Papae salutem</head><p>
 
 <milestone unit="section" n="1"/>Si possibile factu esset, ut te, dominum meum, vel aliquotiens aliquantulum convenirem, non undeunde quarumpiam personarum aut voluntates aut necessitates anquirerem, 2 quae 3 in rem debiti mei usui mihi esse possent, quippe revisionis potestas
 <pb id="v.2.p.66"/>
@@ -745,7 +755,7 @@ multis modis et miseris perinde causis intercluditur. enimvero scribendi faculta
 formam euangelici largitoris quod non das amico esurienti dabis improbo pulsatori. porro si etiamnum solito 1 obdurueris, faxim egomet quod tete paenitebit, quoniam, si peccabis 2 ultra reticendo, ego protinus ulciscar scribendo, porro enim ambiguo caret tam te puniendum scripto meo, quam punior egomet silentio tuo. vale.
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Claudiano suo salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Claudiano suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Committi, domine maior, in necessitudinis iura pronuntias, cur quod ad salve tibi debitum spectat a stilo et pugillaribus diu temperem quodque deinceps nullas viantum volas mea papyrus oneraverit, quae vos cultu sedulae sospitatis 3 impertiat. praeter aequum ista coniectas, si reare mortalium quempiam, cui tamen sermocinari Latialiter cordi est, non pavere, cum in examen aurium tuarum quippe scriptus adducitur; tuarum, inquam, aurium, quarum peritiae, si me decursorum ad hoc aevi temporum praerogativa non obruat, nec Frontonianae
 <pb id="v.2.p.70"/>
@@ -769,7 +779,7 @@ copiosus, dulcis elatus, et quoslibet lyricos dithyrambos amoenitate poetica et 
 aliquantisper mei meminens arentem venulam rarius flumini tuo misceo, tuam tubam totus qua patet 1 orbis iure venerabitur, quam constat geminata felicitate cecinisse, quando nec aemulum repperit nec aequalem, cum pridem aures et ora populorum me etiam circumferente pervagaretur. nobis autem grandis audacia, si vel apud municipales et cathedrarios oratores aut forenses rabulas garriamus, qui etiam cum perorant, salva pace potiorum, turba numerosior illitteratissimis litteris vacant, nam te, cui, seu liberum seu ligatum placeat alternare sermonem, intonare ambifariam suppetit, pauci, quos aequus amavit, mutabuntur, vale.
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Simplicio et Apollinari Suis salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Simplicio et Apollinari Suis salutem</head><p>
 
 <milestone unit="section" n="1"/>Eccum vel tandem adest promissio mea, expectatio vestra, Faustinus, pater familias domi nobilis et inter maxima patriae iam mihi sibique communis ornamenta numerandus. hic meus frater natalium parilitate, amicus animorum similitudine; saepe
 <pb id="v.2.p.80"/>
@@ -780,13 +790,13 @@ cum hoc seria, saepe etiam ioca miscui; cumque abhinc retro iuvenes eramus, in p
 
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Felici suo salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Felici suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Iterat portitorem salutationis iteratio: Gozolas vester, deus tribuat ut noster, apicum meorum secundo gerulus efficitur, igitur verecundiam utrique eximite communem; nam si etiamnum silere meditemini, omnes et me cui et illum per quem scribere debebas 1 indignum arbitrabuntur. 
 <milestone unit="section" n="2"/>de temporum statu iam nihil ut prius consulo, ne sit moribus tuis oneri, si adversa significes, cum prospera non sequantur, nam cum te non deceat falsa mandare atque item desint 2 votiva memoratu, fugio quicquid illud mali est per bonorum indicia cognoscere, vale.
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Apollinari suo salutem</head><p>
+<div2 type="letter" n="6"><head> Sidonius Apollinari suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Per Faustinum antistitem non minus mihi veteris contubernii sodalitate quam novae pro-
 <pb id="v.2.p.84"/>
@@ -798,7 +808,7 @@ album calculum minime apponam, cuius temeritas absolvi nequit nisi beneficio fel
 <milestone unit="section" n="4"/>interim ad praesens apicum oblator damna sibi quaepiam per Genesium vestrum inflicta suspirat, si perspicis a vero non discrepare querimoniam, tribue, quaeso, convincenti reformationem, peregrino celeritatem, si vero calumniam plectibili sufflammat invidia, in eo iam praecessit vindicta pulsati, quod procax petitor sumptu et itinere confectus temere propositae litis exsudat incommoda, atque hoc in maximo hiemis accentu summisque cumulis nivium crustisque glacierum; quod tempus, quantum ad sectatores litium spectat, breve quidem saepe est audientiae sed diuturnum semper iniuriae, vale,
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Simplicio suo salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Simplicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Solet dicere <q>currentem mones</q> qui rogatum ut faciat quod facturus fuerat etiam non rogatus.
 <pb id="v.2.p.88"/>
@@ -809,7 +819,7 @@ percontere forsitan, quo spectet ista praemitti, baiulus apicum sedulo precatur,
 quamquam huiuscemodi saepe personae despicabiles ferme sunt, in sodalibus tamen per litteras ex-colendis dispendii multum caritas sustinet, si ab usu frequentioris alloquii portitorum vilitate revocetur. vale.
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Evodio suo salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Evodio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Cum tabellarius mihi litteras tuas reddidit, quae te Tolosam rege mandante mox profecturum certis amicis confitebantur, nos quoque ex oppido longe remotum rus petebamus, me quidem mane primo remoratum 1 vix e tenaci caterva prosecutorum paginae tuae occasio excussit, ut satisfacere mandato saltim viator, saltim eques possem. 
 <milestone unit="section" n="2"/>ceterum diluculo familia praecesserat ad duodeviginti milia passuum fixura tentorium, quo quidem loci sarcinulis relaxandis multa succedunt conducibilia, fons gelidus in colle nemoroso, subditus ager herbis abundans, fluvius ante oculos avibus ac pisce multo refertus, praeter haec iunctam habens ripae domum novam vetus amicus, cuius inmensae humanitati nec si adquiescas nec si recuses modum ponas. 
@@ -840,7 +850,7 @@ si tantum amore nostro teneris, ut scribere has nugas non erubescas, occule auct
 <pb id="v.2.p.96"/>
 </div2>
 
-<div2 type="poem" n="9"><head> Sidonius Industrio suo Salutem.</head><p>
+<div2 type="letter" n="9"><head> Sidonius Industrio suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Interveni proxime Vettio 1 inlustri viro et actiones eius cotidianas penitissime et veluti ex otio inspexi. quas quoniam dignas cognitu inveni, non indignas relatu existimavi, primore loco, quod iure ceteris laudibus anteponemus, servat inlaesam domino domus par pudicitiam; servi utiles: rustici morigeri, urbani amici oboedientes patronoque contenti; mensa non minus pascens hospitem quam clientem; humanitas grandis grandiorque sobrietas. 
 <milestone unit="section" n="2"/>illa leviora, quod ipse, quem loquimur, in equis canibus accipitribus instituendis spectandas circumferendis nulli secundus; summus nitor in vestibus, cultus in cingulis, splendor in phaleris; pomposus incessus, animus serius (iste publicam fidem, ille privatam asserit dignitatem); remissio non vitians, correptio non cruentans, et severitas eius temperamenti, quae non sit taetra sed tetrica. 
@@ -852,7 +862,7 @@ crebrius cantat; novoque genere vivendi monachum complet non sub palliolo sed su
 <pb id="v.2.p.100"/>
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Industrio suo Salutem.</head><p>
+<div2 type="letter" n="10"><head> Sidonius Industrio suo Salutem.</head><p>
 
 
 <milestone unit="section" n="1"/>Erumpo in salutationem licet seram, domine meus, annis ipse iam multis insalutatus, frequentiam veteris officii servare non audens, postquam me soli patrii finibus eliminatum peregrinationis adversa fregerunt, quapropter vos quoque ignoscere decet erubescentibus, siquidem convenit humiliatos humilia sectari neque cum illis parem familiaritatis tenere constantiam, quibus forte sit improbum plus amoris quam reverentiae impendere, propter hoc denique iam diu taceo vosque tacuisse, cum filius meus Heliodorus huc venit, magis toleranter quam libenter accepi. 
@@ -861,7 +871,7 @@ crebrius cantat; novoque genere vivendi monachum complet non sub palliolo sed su
 morem pristino colloquiorum cursui reddis, et nos vetustae loquacitatis orbitas recurremus, praeter haec avide praevio Christo, sicubi locorum 1 fueritis, modo redux patronus indulgeat, advolaturi, ut rebus amicitia vegetetur, quae verbis infrequentata torpuerat. vale.
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Petreio suo salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Petreio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Angit me nimis damnum saeculi mei nuper erepto avunculo tuo Claudiano oculis nostris, ambigo an quempiam deinceps parem conspicaturis. vir siquidem fuit providus prudens, doctus eloquens, acer et hominum aevi loci populi sui ingeniosissimus quique indesinenter salva religione philosopharetur; et licet crinem barbamque non pasceret, pallium et clavam nunc inrideret, nunc etiam execraretur, a collegio tamen conplatonicorum solo habitu ac fide dissociabatur. 
 <milestone unit="section" n="2"/>deus bone, quid erat illud, quotiens ad eum sola 2 consultationis gratia conveniebamus!
@@ -907,7 +917,7 @@ replicare superforaneum statuo. nam merita sua, quibus divitem conscientiam cens
 <pb id="v.2.p.110"/>
 dum forte meditarer, lacrimis habenas anima parturiens laxavi fecique ad epitaphium quod alii fecerunt ad sepulchrum, haec ergo scripsimus tibi, ne forsitan arbitrarere solam nos colere vivorum sodalitatem reique tuo iudicio essemus, nisi amicorum vita carentum semper aeque ut incolumium reminisceremur. namque et ex hoc, quod vix reservatur imaginaria fides vel superstitibus, non praeter aequum opinabere, si perpaucos esse conicias, qui mortuos ament. vale.</p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Simplicio et Apollinari Suis salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Simplicio et Apollinari Suis salutem</head><p>
 
 <milestone unit="section" n="1"/>Deus bone, quantum naufragioso pelago conformis est motus animorum, quippe cum nuntiorum turbinibus adversis quasi propria tempestate confunditur!1 nuper ego filiusque communis Terentianae Hecyrae sales ruminabamus; studenti assidebam naturae meminens et professionis oblitus quoque absolutius rhythmos comicos incitata docilitate sequeretur, ipse etiam fabulam similis argumenti id est Epitrepontem Menandri in manibus habebam. 
 <milestone unit="section" n="2"/>legebamus pariter laudabamus iocabamurque et, quae vota communia sunt, illum lectio, me ille
@@ -917,7 +927,7 @@ capiebat, cum repente puer familiaris adstitit vultuosus. cui nos: <q>quid ita?<
 <pb id="v.2.p.114"/>
 </p></div2>
 
-<div2 type="poem" n="13"><head>
+<div2 type="letter" n="13"><head>
  Sidonius Vectio suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Nuper rogatu Germanici spectabilis viri Cantillensem ecclesiam inspexi. est ipse loco sitorum 2 facile primus quique post tergum cum iam duodecim lustra transmittat, cotidie tamen habitu cultuque conspicuo non iuvenescit solum sed quodammodo repuerascit. enimvero vestis adstricta, tensus coturnus, crinis in rotae specimen accisus barba intra rugarum latebras mersis ad cutem secta forcipibus,
@@ -930,7 +940,7 @@ incolumitati, sed tandem professione religionis arrepta viribus potius resurgent
 <milestone unit="section" n="4"/>et quoniam nemo ferme est, qui plectibilibus careat occultis, ipse super his, quae clam commissa reminiscitur, palam fusa satisfactione solvatur, nam sacerdotis pater filiusque pontificis, nisi sanctus est, rubo similis efficitur, quem de rosis natum rosasque parientem et genitis gignentibusque floribus medium pungentibus comparanda peccatis dumorum vallat asperitas. vale.
 </p></div2>
 
-<div2 type="poem" n="14"><head> Sidonius Polemio suo salutem</head><p>
+<div2 type="letter" n="14"><head> Sidonius Polemio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Gaius Tacitus unus e maioribus tuis, Ulpianorum temporum consularis, sub verbis cuiuspiam Germanici ducis in historia sua rettulit dicens: <q>cum Vespasiano mihi vetus amicitia; et, dum privatus esset, amici vocabamur.</q> <q>quo respicit,</q> ais, <q>ista praefari?</q> ut scilicet memineris eo. tempore, quo personam publicam portas, gratiae te privatae memorem semper esse oportere, biennium prope clauditur, quod te praefectum praetorio Galliarum
 <pb id="v.2.p.118"/>
@@ -942,7 +952,7 @@ vestris nimis reum pronuntiari cuius causa plus spectat tribunal alienum.
 <milestone unit="section" n="4"/>quapropter imminentem querellam nostri doloris nequaquam valebis ulterius effundere,1 quia, succedentibus prosperis sive obliviscare seu neglegas gratiam antiquam, iuxta est acerbum, proinde si futura magni pensitas, scribe clerico, si praesentia, scribe collegae; et hanc in te ipse virtutem, si naturalis est, excole, si minus, ut insiticiam appone, qua sodales vetustos numquam pro consequentum novitate fastidias. porro autem videbere sic amicis uti quasi floribus, tamdiu gratis, donec recentibus, vale.
 </p></div2>
 
-<div2 type="poem" n="15"><head> Sidonius Elaphio suo salutem</head><p>
+<div2 type="letter" n="15"><head> Sidonius Elaphio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Epulum multiplex et capacissima lectisternia para: plurimis viis, pluribus turbis (ita bonorum contubernio sedit 2) ad te venitur, quippe postquam omnibus tempus futurae dedicationis inclaruit. nam baptisterium, quod olim fabricabamini, scribitis posse iam consecrari. ad quae festa vos voti nos ministerii, officii multos fidei totos causa sollicitat; siquidem res est grandis exempli eo tempore a vobis nova
 <pb id="v.2.p.122"/>
@@ -953,14 +963,14 @@ ecclesiarum culmina strui, quo vix alius auderet vetusta sarcire.
 
 </p></div2>
 
-<div2 type="poem" n="16"><head> Sidonius Ruricio suo salutem</head><p>
+<div2 type="letter" n="16"><head> Sidonius Ruricio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Accepi per Paterninum paginam vestram, quae plus mellis an salis habeat incertum est. ceterum eloquii copiam hanc praefert, hos olet flores, ut bene appareat non vos manifesta modo verum furtiva quoque lectione proficere, quamquam et hoc furtum quod deprecans exemplati libelli non venia tam debeat respicere quam gloria, quid tu enim facias absque virtute, qui nec ipsa peccata sine laude committis? 
 <milestone unit="section" n="2"/>ego vero quicquid impositum est fraudis mihi, utpote absenti, libens audio principalique pro munere amplector, quod 1 quodammodo damnum indemne toleravi. neque enim quod tuo accessit usui, decessit hoc nostrae proprietati aut ad incrementa scientiae vestrae per detrimenta venistis alienae, quin potius ipse 2 iure abhinc uberi praeconio non carebis,3 qui magis igneo ingenio naturam decenter ignis imitatus es 4 de quo si quid demere velis, remanet totus totusque transfertur, unde iam parce trepidare deque moribus amici plusculum recto secus credere, namque in hoc facto nos magis vulnus polluit culpae, si feriat ictus invidiae, vale.
 <pb id="v.2.p.126"/>
 </p></div2>
 
-<div2 type="poem" n="17"><head> Sidonius Aruogasti suo Salutem.</head><p>
+<div2 type="letter" n="17"><head> Sidonius Aruogasti suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Eminentius amicus tuus, domine maior, obtulit mihi quas ipse dictasti litteras litteratas et gratiae trifariam renidentis 2 cultu refertas. quarum utique virtutum caritas prima est, quae te coegit in nobis vel peregrinis vel iam latere cupientibus humilia dignari; tum verecundia, cuius instinctu dum in-merito trepidas, merito praedicans; tertia urbanitas, qua te ineptire facetissime allegas et Quirinalis impletus fonte facundiae potor Mosellae Tiberim ructas, sic barbarorum familiaris, quod tamen nescius barbarismorum, par ducibus antiquis lingua manuque, sed quorum dextera solebat non stilum minus tractare quam gladium. 
 <milestone unit="section" n="2"/>quocirca sermonis pompa Romani, si qua adhuc uspiam est, Belgicis olim sive Rhenanis abolita terris in te resedit, quo vel incolumi vel perorante, etsi apud limitem [ipsum] 3
@@ -970,7 +980,7 @@ Latina iura ceciderunt, verba non titubant. quapropter alternum salve rependens 
 <pb id="v.2.p.130"/>
 </p></div2>
 
-<div2 type="poem" n="18"><head>
+<div2 type="letter" n="18"><head>
  Sidonius Lucontio suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Oblivisceris quod rogans eque contrario, si quid iniungas, ex asse meministi, repetere perlongum est de cito reditu quae tu tuique promiseritis mihi meisque, quorum omnium non sunt vel minima completa. quin potius, cum fugam a nobis machinaremini, quo reversuros ad sacrum pascha vos putaremus, nullae graves sarcinae ad praedium ex oppido ductae, nulla serraca, nulla esseda subvehendis oneribus adtrahebantur. 
@@ -1008,13 +1018,13 @@ oportere, annuo iniunctis, quia dignus es, ut talia legas; nam carmen ipsum, quo
 <pb id="v.2.p.136"/>
 
 
-<div2 type="poem" n="19"><head>
+<div2 type="letter" n="19"><head>
  Sidonius Florentino suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Et moras nostras et silentium accusas, utrumque purgabile est; namque et venimus et scribimus, vale.
 </p></div2>
 
-<div2 type="poem" n="20"><head> Sidonius Domnicio 1 suo salutem</head><p>
+<div2 type="letter" n="20"><head> Sidonius Domnicio 1 suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Tu, cui frequenter arma et armatos 2 inspicere iucundum est, quam voluptatem, putamus, mente conceperas,3 si Sigismerem regium iuvenem ritu atque cultu gentilicio ornatum, utpote sponsum seu petitorem, praetorium soceri expetere vidisses! illum equus quidem phaleris comptus, immo equi radiantibus gemmis onusti antecedebant vel etiam subsequebantur, cum tamen magis hoc ibi decorum conspiciebatur,4 quod cursoribus 5 suis sive pedisequis pedes et ipse medius incessit, flammeus cocco rutilus auro lacteus serico, tum cultui tanto coma rubore 6 cute concolor. 
 <milestone unit="section" n="2"/>regulorum autem sociorumque
@@ -1023,7 +1033,7 @@ comitantum forma et in pace terribilis; quorum pedes primi perone saetoso talos 
 <milestone unit="section" n="3"/>eo quo comebantur ornatu muniebantur; lanceis uncatis securibusque missibilibus 1 dextrae refertae clipeis laevam partem adumbrantibus, quorum lux in orbibus nivea, fulva in umbonibus ita censum prodebat ut studium, cuncta prorsus huiusmodi, ut in actione thalamorum non appareret minor Martis pompa quam Veneris, sed quid haec pluribus? spectaculo tali sola praesentia tua defuit, nam cum viderem quae tibi pulchra sunt non te 2 videre, ipsam eo tempore desiderii tui inpatientiam desideravi, vale.
 </p></div2>
 
-<div2 type="poem" n="21"><head> Sidonius Apro suo salutem</head><p>
+<div2 type="letter" n="21"><head> Sidonius Apro suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Est quidem princeps in genere monstrando partis paternae praerogativa, sed tamen multum est,
 <pb id="v.2.p.140"/>
@@ -1039,7 +1049,7 @@ Fronto, blandus tibi sibi severus, qui exemplo esse potuisset his, quos habemus 
 ipsam tui semper sic amantissimam, ut soli 1 nobilium contubernio praeferre nil debeas, cui tu manu iniecta feliciter raptus inserebare; sicque omnes praesentiae vestrae voluptas, quod tamen nullum satias cepit, iam quid istic de re familiari tua dicam, cuius hic status est, ut tuam expensam hoc sit facinus tolera-tura, quo crebrius? nam dominus agricola, si larem hic foveat, sic facit sumptum quod auget et 2 reditum.</q> haec unus tibi omnium civium, certe bonorum, voto petitu vice garrio; qui cum tanto honore te poscant, tanto amore desiderent, intellegi datur gaudii plus te, dum tribuis quod rogaris, assecuturum. vale.
 </p></div2>
 
-<div2 type="poem" n="22"><head> Sidonius Leoni suo salutem</head><p>
+<div2 type="letter" n="22"><head> Sidonius Leoni suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Vir magnificus Hesperius, gemma amicorum litterarumque, nuper urbe cum rediit e Tolosatium, praecipere te dixit, ut epistularum curam iam terminals libris earum converteremus ad stilum historiae, reverentia summa, summo et 3 affectu talem atque tantam sententiam amplector; idoneum quippe pronuntias ad opera maiora quem mediocria
 <pb id="v.2.p.146"/>
@@ -1055,7 +1065,7 @@ habet vel supprimere verum vel concinnare mendacium?
 proveniunt, clericis si aliquid dictetur auctoribus; qui colubrinis oblatratorum molaribus fixi, si quid simpliciter edamus, insani, si quid exacte, praesuinptiosi vocamur. at si tu ipse, cui datum est saltibus gloriae proterere posse 1 cervices vituperonum seu supercurrere, materiae istius libens provinciam sortiare, nemo te Celsius scripserit, nemo et antiquius, etiamsi placeat recentia loqui; quandoquidem sermonum copia impletus ante, nunc rerum, non reliquisti, cur venenato morsu secere. atque ideo te in posterum consuli utilitas, audiri voluptas, legi auctoritas erit. vale.
 </p></div2>
 
-<div2 type="poem" n="23"><head> Sidonius Proculo suo salutem</head><p>
+<div2 type="letter" n="23"><head> Sidonius Proculo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Filius tuus, immo communis ad me cucurrit, qui te relicto deliquisse se maeret, obrutus paenitendi pudore transfugii. igitur audito culpae tenore corripui latitabundum verbis amans vultu minaci et mea quidem voce sed vice tua dignum abdicatione
 <pb id="v.2.p.152"/>
@@ -1067,7 +1077,7 @@ tinus, et revertentem non domo solum sed et pectore admittas. deus magne, quam l
 <pb id="v.2.p.156"/>
 </p></div2>
 
-<div2 type="poem" n="24"><head> Sidonius Turno suo salutem</head><p>
+<div2 type="letter" n="24"><head> Sidonius Turno suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Bene nomini, bene negotio tuo congruit Mantuani illud:
 Turne, quod optanti divum promittere nemo
@@ -1090,7 +1100,7 @@ per otium facultatem convalescendi.
 divisio est; avarius me constat esse tractatum quam coheredes; frater ac soror sub annis adhuc tute-laribus agunt; sorori necdum maritus, fratri necdum curator, curatori necdum satisdator inventus est.</q> quod quidem totum creditoribus bene, sed malis dicitur; at cum habet talis persona contractum, quae velit medium relaxare, cum totum possit exigere, si moram patitur, quicquid propter misericordiam concesserat pie, iuste reposcit propter iniuriam, vale.
 </p></div2>
 
-<div2 type="poem" n="25"><head> Sidonius Domnulo suo salutem</head><p>
+<div2 type="letter" n="25"><head> Sidonius Domnulo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Nequeo differre, quin grandis communione te gaudii festinus inpertiam, nimirum nosse cupientem, quid pater noster in Christo pariter et pontifex Patiens Cabillonum profectus more religionis, more constantiae suae fecerit, cum venisset in oppidum suprascriptum provincialium sacerdotum praevio partim, partim comitante collegio, scilicet ut municipio summus aliquis antistes ordinaretur, cuius
 <pb id="v.2.p.166"/>
@@ -1105,7 +1115,7 @@ primum, sic minister altaris, idque ab infantia, post laborum temporumque proces
 </p></div2></div1>
 
 <div1 type="book" n="5">
-<div2 type="poem" n="1"><head> Sidonius Petronio suo salutem</head><p>
+<div2 type="letter" n="1"><head> Sidonius Petronio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Audio, quod lectitandis epistulis meis voluptuosam patientiam inpendas. magnum hoc est et litterarum viro convenientissimum, cum studiis ipse maxumis polleas, ea in aliis etiam minima complecti, sed ex hoc ipso consummatissima tibi gloria reponderatur; nam satis eminet meritis ingenii proprii qui fuerit fautor alieni. 
 <milestone unit="section" n="2"/>commendo Vindicium necessarium meum, virum religiosum et leviticae dignitati, quam nuper indeptus est, accommodatissimum. cui meis e pugillaribus transferre quae iusseras non vacans proquam provincia 1 fuit, hic vobis aliquid neniarum munusculi vice detuli; 2 quamquam, quae tua sanctitas, semper grandia litteras nostras praemia putes. 
@@ -1114,7 +1124,7 @@ primum, sic minister altaris, idque ab infantia, post laborum temporumque proces
 portitoris insinuo, quem traxit isto negotii oborti bipertita condicio, siquidem hac definitione perrexit, ut aut ineat litem aut adeat hereditatem. nam patrueli paterno caelibi intestatoque defuncto per agnationis praerogativam succedere parat, nisi tamen coeptis factiosa vis obviet. contra quas tamen cunctas difficultates solus post opem Christi supplici tuo sufficis, cuius confido quod, si meruerit persona gratiam, consequetur causa victoriam, vale.
 </p></div2>
 
-<div2 type="poem" n="2"><head> Sidonius Nymphidio suo salutem</head><p>
+<div2 type="letter" n="2"><head> Sidonius Nymphidio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Librum de statu animae tribus voluminibus inlustrem Mamertus Claudianus peritissimus Christianorum philosophus et quorumlibet primus erudi-torum totis sectatae 1 philosophiae membris artibus partibusque comere et excolere curavit, novem quas vocant Musas disciplinas aperiens esse, non feminas. namque in paginis eius vigilax lector inveniet veriora nomina Camenarum, quae propriam de se sibi pariunt nuncupationem. illic enim et grammatica dividit et oratoria declamat et arithmetica numerat et geometrica metitur et musica ponderat et dia-
 <pb id="v.2.p.174"/>
@@ -1122,7 +1132,7 @@ lectica disputat et astrologia 1 praenoscit et architectonica struit et metrica 
 <milestone unit="section" n="2"/>huius lectionis novitate laetatus excitatusque maturitate raptim recensendam transferendamque, ut videras, petisti, ut petieras, impetrasti sub sponsione citae redhibitionis. nec me falli nec te fallere decet. tempus est commodata restitui, quia liber ipse, si placuit, debuit exhibere satietatem, si displicuit, debuit movere fastidium, tu autem, quicquid illud est, fidem tuam celeriter absolve, ne si repetitum libellum serius reddere paras, membranas potius videaris amare quam literas. vale.
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Apollinari suo salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Apollinari suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Par erat quidem garrulitatem nostram silentii vestri talione frenari. sed quoniam perfecta dilectio non tam debet recolere, quid officiorum solvat, quam meminisse, quid debeat, etiam nunc laxatis verecundiae habenis obsequium alloquii impudentis iteramus. cuius improbitas vel hinc maxime dinoscitur, quod tacetis. ergone quid tempore hostilitatis
 <pb id="v.2.p.176"/>
@@ -1134,7 +1144,7 @@ ageretis, frater, nosse non merui? dissimulastis trepido pro vobis amico vel sec
 velut Atticas 1 leges ita aeri 2 credite incisum, nos sub ope Christi numquam admissuros amoris terminum, cuius studuimus fundare principium, vale.
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Simplicio suo salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Simplicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quod non recepi scripta qui miseram, imputo amicitiae, sed deputo plus pudori, nam, nisi praeter aequum autumo, ut salutatio mihi debita dissimularetur, non illud contumacia sed verecundia fuit. at si ulterius paginae garrienti forem claudis, pessulum opponis, quieti quidem tuae non invitus indulgeo, sed non procul a te reos meos inventurum me esse denuntio. 
 <milestone unit="section" n="2"/>nam totam silentii vestri invidiam verti non iniurium est ad superbiam filiorum, qui se diligi sentientes quoddam patiuntur de nostra sedulitate fastidium, quos monere pro
@@ -1142,7 +1152,7 @@ velut Atticas 1 leges ita aeri 2 credite incisum, nos sub ope Christi numquam ad
 patria auctoritate debebitis, ut contractae apud nos offensae amaritudinem politis affatibus dulcare non desinant. vale.
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Syagrio suo salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Syagrio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Cum sis consulis pronepos idque per virilem successionem (quamquam id ad causam subiciendam minus attinet), cum sis igitur e semine poetae, cui procul dubio statuas dederant litterae, si trabeae non dedissent (quod etiam nunc auctoris culta versibus verba testantur), a quo studia posterorum ne parum quidem, quippe in hac parte, degeneraverunt, immane narratu est, quantum stupeam sermonis te Germanici notitiam tanta facilitate rapuisse. 
 <milestone unit="section" n="2"/>atqui pueritiam tuam competenter scholis liberalibus memini imbutam et saepenumero acriter eloquenterque declamasse coram oratore satis habeo compertum, atque haec cum ita sint, velim dicas, unde subito hauserunt pectora tua euphoniam gentis alienae, ut modo mihi post ferulas lectionis Maronianae postque desudatam varicosi Arpinatis opu-
@@ -1153,7 +1163,7 @@ entiam loquacitatemque quasi de harilao 1 vetere novus falco 2 prorumpas?
 <pb id="v.2.p.184"/>
 </p></div2>
 
-<div2 type="poem" n="6"><head>
+<div2 type="letter" n="6"><head>
  Sidonius Apollinari suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Cum primum aestas decessit autumno et Arvernorum timor potuit aliquantisper ratione temporis temperari, Viennam veni, ubi Thaumastum, germanum tuum, quem pro iure vel sanguinis vel aetatis reverenda 1 familiaritate complector, maestissimum inveni, qui quamquam recenti caelibatu granditer afficiebatur, pro te tamen parum minus anxius erat: timebat enim verebaturque, ne quam tibi calumniam turbo barbaricus aut militaris concinnaret improbitas. 
@@ -1162,7 +1172,7 @@ entiam loquacitatemque quasi de harilao 1 vetere novus falco 2 prorumpas?
 tudinis aut praesentiae meae opportunitas pereat, curae mihi peculiariter erit, si quid tamen cavendum existimabis, ut te faciat aut gratia impetrata securum aut explorata iracundia cautiorem. vale.
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Thaumasto suo salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Thaumasto suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Indagavimus tandem, qui apud tetrarcham nostrum germani tui et e diverso partium novi principis amicitias criminarentur, si tamen fidam sodalium sagacitatem clandestina delatorum non fefellere vestigia, hi nimirum sunt, ut idem coram positus audisti, quos se iamdudum perpeti inter clementiores barbaros Gallia gemit, hi sunt, quos timent etiam qui timentur. hi sunt, quos haec
 <pb id="v.2.p.188"/>
@@ -1181,7 +1191,7 @@ in praetoriis leones, in castris lepores, timent foedera, ne discutiantur, bella
 tis, temperat Lucumonem nostrum Tanaquil sua et aures mariti virosa susurronum faece completas opportunitate salsi sermonis eruderat. cuius studio [factum 1] scire vos par est nihil interim quieti fratrum communium apud animum communis patroni iuniorum Cibyratarum venena nocuisse neque quicquam deo propitiante nocitura, si modo, quamdiu praesens potestas Lugdunensem Germaniam regit, nostrum suumque Germanicum praesens Agrippina moderetur. vale.
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Secundino suo salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Secundino suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Diu quidem est, quod te hexametris familiarius inservientem stupentes praedicantesque lectita-bamus. erat siquidem materia iucunda, seu nupti-
 <pb id="v.2.p.196"/>
@@ -1194,7 +1204,7 @@ quia scilicet praedictus Augustus isdem fere temporibus extinxerat coniugem Faus
 vitiis proficientibus tyrannopolitarum 1 locupletabuntur. non enim tam mediocriter intumescunt quos nostra iudicia saeculi 2 culpa 3 fortunatos putant, ut de nominibus ipsorum quandoque reminiscendis sit posteritas laboratura: namque improborum probra aeque ut praeconia bonorum inmortalia manent, vale.
 </p></div2>
 
-<div2 type="poem" n="9"><head> Sidonius Aquilino suo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Aquilino suo salutem</head><p>
 
 <milestone unit="section" n="1"/>In meo aere duco, vir omnium virtutum capacissime, si dignum tu quoque putas, ut quantas habemus amicitiarum causas, tantas habeamus ipsi amicitias, avitum est quod reposco; testes mihi in praesentiarum avi nostri super hoc negotio Apollinaris et Rusticus advocabuntur, quos laudabili familiaritate
 <pb id="v.2.p.200"/>
@@ -1206,7 +1216,7 @@ que 1 non minus iuncta quam patria; unus nos exercuit ludus, magister instituit;
 <milestone unit="section" n="4"/>de cetero, si deus annuit, in annis iam senectutis initia pulsantibus, simus, nisi respuis, animae duae, animus unus, imbuamusque liberos invicem diligentes 2 idem velle nolle, refugere sectari, hoc patrum vero iam supra vota, si per Rusticum Apollinaremque proavorum praedicabilium tam reformentur corda quam nomina, vale,
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Sapaudo suo salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Sapaudo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Si quid omnino Pragmatius illustris, hoc inter reliquas animi virtutes optime facit, quod amore studiorum te singulariter amat, in quo solo vel maxume animum advertit veteris peritiae diligentiaeque resedisse vestigia, equidem non iniuria tibi fautor est; nam debetur ab eo percopiosus litteris honor. 
 <milestone unit="section" n="2"/>hunc olim perorantem et rhetorica sedilia plausibili oratione frangentem socer
@@ -1218,7 +1228,7 @@ hyperbolico rhetorum catalogo blanditus quippiam gratificatusque, solam tibi acr
 <milestone unit="section" n="4"/>quapropter si quis post vos Latiae favet eruditioni, huic amicitiae gratias agit et sodalitati vestrae, si quid hominis habet, tertius optat adhiberi, quamquam, quod est gravius, non sit satis ambitus iste fastidium vobis excitaturus, quia pauci studia nunc honorant, simul et naturali vitio fixum est radicatumque pectoribus humanis, ut qui non intellegunt artes non mirentur artifices, vale.
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Potenti No suo salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Potenti No suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Multum te amamus; et quidem huiusce dilectionis non est erroneus aut fortuitus affectus. namque ut sodalis tibi devinctior fierem, iudicavi, est enim consuetudinis meae, ut eligam ante, post
 <pb id="v.2.p.208"/>
@@ -1227,7 +1237,7 @@ diligam, quaenam,1 inquis, in me tibi probanda placuere?
 <milestone unit="section" n="3"/>haec omnia exempla vivendi iam hinc ab annis puberibus meus Apollinaris si sequitur, gaudeo; certe ut sequatur, admoneo, in quo docendo instituendoque, modo sub ope Christi disposita succedant, plurimum laetor maximam me formulam vitae de moribus tuis mutuaturum. vale.
 </p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Calminio suo salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Calminio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quod rarius ad vos a nobis pagina meat, non nostra superbia sed aliena impotentia facit, neque super his quicquam planius quaeras, quippe cum
 <pb id="v.2.p.210"/>
@@ -1237,7 +1247,7 @@ silentii huius necessitatem par apud vos metus interpretetur, hoc solum tamen li
 
 </p></div2>
 
-<div2 type="poem" n="13"><head> Sidonius Pannychio suo salutem</head><p>
+<div2 type="letter" n="13"><head> Sidonius Pannychio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Seronatum Tolosa nosti redire? si nondum, et credo quod nondum, vel per haec disce, iam Clausetiam pergit Euanthius iamque contractas operas cogit cruderare, si quid forte deiectu caducae frondis agger insorduit. certe si quid voraginosum est, ipse humo advecta scrobibus oppletis trepidus exaequat, utpote beluam suam de valle Tarnis ducaliter antecessurus, musculis similis inter saxosa vel brevia ballaenarum corpulentiam praeguber-nantibus. 
 <milestone unit="section" n="2"/>at ille sic ira celer, quod-piger mole, ceu draco e specu vix evolutus iam metu exdnguibus Gabalitanis e proximo infertur; quos singulos sparsos inoppidatos nunc inauditis indictionum generibus exhaurit, nunc flexuosa calumniarum fraude circumretit, ne tum quidem domum laboriosos redire permittens, cum tributum annuum datavere. 
@@ -1247,7 +1257,7 @@ signum et hoc certum est imminentis adventus, quod catervatim, quo se cumque con
 <pb id="v.2.p.216"/>
 </p></div2>
 
-<div2 type="poem" n="14"><head> Sidonius Apro suo Salutem.</head><p>
+<div2 type="letter" n="14"><head> Sidonius Apro suo Salutem.</head><p>
 
 <milestone unit="section" n="1"/>Calentes 1 nunc te Baiae et scabris cavernatim ructata pumicibus aqua sulpuris atque iecorosis ac phthisiscentibus languidis medicabilis piscina delectat? an fortasse montana sedes circum castella et in eligenda sede perfugii quandam pateris ex munitionum frequentia difficultatem? quicquid illud est, quod vel otio vel negotio vacas, in urbem tamen, nisi fallimur, rogationum contemplatione revocabere. 
 <milestone unit="section" n="2"/>quarum nobis sollemnitatem primus Mamertus pater et pontifex reverentissimo 2 exemplo, utilissimo experimento invenit instituit invexit. erant quidem prius, quod salva fidei pace sit dictum,
@@ -1256,7 +1266,7 @@ vagae tepentes infrequentesque utque sic dixerim oscitabundae supplicationes, qu
 <milestone unit="section" n="3"/>in his autem, quas suprafatus summus sacerdos nobis et protulit pariter et contulit, ieiunatur oratur, psallitur fletur. ad haec te festa cervicum humiliatarum et sternacium civium suspiriosa contubernia peto; et, si spiritalem animum tuum bene metior, modo citius venies, quando non ad epulas sed ad lacrimas evocaris. vale.
 </p></div2>
 
-<div2 type="poem" n="15"><head> Sidonius Ruricio suo salutem</head><p>
+<div2 type="letter" n="15"><head> Sidonius Ruricio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Officii sermone praefato bybliopolam nostrum 1 non gratiose sed iudicialiter expertus insinuo, cuius ut fidem in pectore, sic in opere celeritatem circa dominum te 2 mihi sibique communem satis abunde probavi, librum igitur hic ipse deportat heptateuchi, scriptum velocitate summa, summo nitore, quamquam et a nobis relectum et retractatum. defert
 <pb id="v.2.p.220"/>
@@ -1264,7 +1274,7 @@ volumen et prophetarum, licet me absente decursum, sua tamen cura manuque de sup
 <milestone unit="section" n="2"/>restat, ut exhortatio vestra seu sponsio famulum sic vel studentem placere vel meritum gratia competenti remuneretur; quae utique pro tali labore si solvitur, incipiet ad vestram respicere mercedem, sed cum hoc ego de sola gratia precer, vos quid mereatur aspicite quem constat affectum domini magis ambire quam praemium, vale.
 </p></div2>
 
-<div2 type="poem" n="16"><head> Sidonius Papianillae Suae salutem</head><p>
+<div2 type="letter" n="16"><head> Sidonius Papianillae Suae salutem</head><p>
 
 <milestone unit="section" n="1"/>Ravenna veniens quaestor Licinianus, cum primum tetigit Alpe transmissa Galliae solum, litteras adventus sui praevias misit, quibus indicat esse se gerulum codicillorum, quorum in adventu
 <pb id="v.2.p.222"/>
@@ -1279,7 +1289,7 @@ participas, sic honore laetatam, quia, licet sis uxor bona, soror optima es. qua
 nutritur. qua tamen tenerum non infirmatur aevum sed informatur ingenium, vale.
 </p></div2>
 
-<div2 type="poem" n="17"><head> Sidonius Eriphio suo salutem</head><p>
+<div2 type="letter" n="17"><head> Sidonius Eriphio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Es, Eriphi meus, ipse qui semper numquamque te tantum venatio civitas ager avocat, ut non obiter litterarum voluptate teneare; fitque eo studio, ut nec nostra fastidias, qui tibi, ut scribis, Musas olemus. quae sententia tamen large probatur vero carere, quamque 1 et 2 apparet aut ex ioco venire, si laetus es, aut ex amore, si serius, ceterum a iusto longe resultat, cum mihi assignas 3 quae vix Maroni vix 4 aut Homero competenter accommodarentur. 
 <milestone unit="section" n="2"/>haec relinquamus idque, unde causa, sermocinemur. dirigi ad te praecipis versus, quos viri amplissimi, soceri tui, precibus indulsi; qui contubernio mixtus aequalium vivit moribus ad iubendum obsequendum-que iuxta paratis, sed quia scire desideras et locum et causam, quo facilius intellegas rem perexiguam, tibi potius vitio verte, quod loquacior erit opere praefatio. 
@@ -1315,14 +1325,14 @@ Epiphanius noster vix suprascripta peraraverat, et nuntiatum est hora monente pr
 <milestone unit="section" n="11"/>da postulatae tu veniam cantilenae. illud autem ambo, quod maius est quodque me nuper in quendam dies bonos male ferentem parabolice seu figurate dictare iussistis quodque expeditum cras dirigetur, clam recensete; et, si placet, edentes fovete; si displicet, delentes ignoscitote. vale.
 </p></div2>
 
-<div2 type="poem" n="18"><head> Sidonius Attalo suo salutem</head><p>
+<div2 type="letter" n="18"><head> Sidonius Attalo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Haeduae civitati te praesidere coepisse libens atque cum gaudio accepi, laetitiae causa quadri-pertita est: prima, quod amicus; secunda, quod iustus es; tertia, quod severus; quarta, quod proximus, quo fit, ut nostris nostrorumque con-
 <pb id="v.2.p.238"/>
 tractibus plurimum 1 velis debeas possis opitulari, igitur amplectens in familiari vetusto novum ius potestatis indeptae materiam beneficiis tuis iam diu quaero, quibus me tantum fidere agnosce, ut, etsi non invenio quae poscam, quaesiturus mihi videaris ipse quae tribuas. vale.
 </p></div2>
 
-<div2 type="poem" n="19"><head> Sidonius Pudenti suo salutem</head><p>
+<div2 type="letter" n="19"><head> Sidonius Pudenti suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Nutricis meae filiam filius tuae rapuit: facinus indignum quodque nos vosque inimicasset, nisi protinus scissem te nescisse faciendum, sed conscientiae tuae purgatione praelata 2 petere dignaris culpae calentis impunitatem, sub condicione concedo: si stupratorem pro domino iam patronus originali solvas inquilinatu. 
 <milestone unit="section" n="2"/>mulier autem illa iam libera est; quae tum demum videbitur non ludibrio addicta sed assumpta coniugio, si reus noster, pro quo precaris, mox cliens factus e tributario plebeiam potius incipiat habere personam quam colonariam. nam meam haec sola seu compositio
@@ -1330,7 +1340,7 @@ tractibus plurimum 1 velis debeas possis opitulari, igitur amplectens in familia
 seu satisfactio vel 1 mediocriter contumeliam emendat; qui tuis votis atque amicitiis hoc adquiesco, si laxat libertas maritum, ne constringat poena raptorem. vale.
 </p></div2>
 
-<div2 type="poem" n="20"><head> Sidonius Pastori suo salutem</head><p>
+<div2 type="letter" n="20"><head> Sidonius Pastori suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quod die hesterno tractatui civitatis in concilio defuisti, ex industria factum pars melior accepit, quae suspicata est id te cavere, ne tuis umeris onus futurae legationis imponeretur, gratulor tibi, quod istis moribus vivis, ut necesse habeas electionem tui timere; laudo efficaciam, suspicio prudentiam, prosequor laude felicitatem; opto denique aequalia his, quos aequaliter amo. 
 <milestone unit="section" n="2"/>multi frequenter, quos
@@ -1342,14 +1352,14 @@ execrabilis popularitas agit, civium maximos manu prensant deque consessu public
 actorem, vineam messem olivetum, tectum quoque ipsum, vel dum praeterveharis, inspicere res commodi est. quapropter, missus a nobis, et tibi per-venis; namque erit talis viae tuae causaeque nostrae condicio, ni fallor, atque opportunitas, ut pro beneficio civitati posse imputare quandocumque 1 videaris, quod tuos videris, vale.
 </p></div2>
 
-<div2 type="poem" n="21"><head> Sidonius Sacerdoti et Iustino Suis salutem</head><p>
+<div2 type="letter" n="21"><head> Sidonius Sacerdoti et Iustino Suis salutem</head><p>
 
 <milestone unit="section" n="1"/>Victorius patruus vester, vir, ut egregius, sic undecumque doctissimus, cum cetera potenter, tum potentissime condidit versus, mihi quoque semper a parvo cura Musarum; nunc vos parenti venitis heredes, quam iure, tam merito: ilicet ego poetae proximus fio professione, vos semine, ergo iustissimum est, ut diem functo 2 sic quisque nostrum succedat, ut iungitur, ideoque patrimonia tenete, date carmina, valete.
 <pb id="v.2.p.246"/>
 </p></div2></div1>
 
 <div1 type="book" n="6">
-<div2 type="poem" n="1"><head> Sidonius Domino Papae Lupo salutem</head><p>
+<div2 type="letter" n="1"><head> Sidonius Domino Papae Lupo salutem</head><p>
 
 <milestone unit="section" n="1"/>Benedicitur 1 spiritus sanctus et pater dei omnipotentis, quod tu, pater patrum et episcopus episcoporum et alter saeculi tui Iacobus, de quadam specula caritatis nec de inferiore Hierusalem tota ecclesiae dei nostri membra superinspicis, dignus qui omnes consoleris infirmos quique merito ab omnibus consularis, et quid nunc ego dignum dignationi huic, putris et fetida reatu terra, respondeam? 
 <milestone unit="section" n="2"/>colloquii salutaris tui et indigentiam patiens et timorem recordatione vitae plectibilis adducor, ut clamem tibi quod dixit domino tuus ille collega: exi a me, quia homo peccator sum, domine, sed si
@@ -1365,7 +1375,7 @@ cotidie cogor dictare sententiam.
 <milestone unit="section" n="6"/>sed si tu inter me et illum, cui concrucifigeris, dominum nostrum pro scelerum meorum populo, iunior mage quam minor Moyses, intercessor assistas,1 non ulterius descendemus in infernum viventes nec per carnalium vitiorum incentiva flammati ad altare domini ignem diutius accendemus alienum; quia quamquam nos utpote reos gloriae libra non respicit, satis tamen superque gaudebimus, si precatu tuo levare valeamus interioris hominis nostri etsi non integrum ad remunerationem, certe vel cicatricatum pectus ad veniam, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="2"><head> Sidonius Domino Papae Pragmatio salutem</head><p>
+<div2 type="letter" n="2"><head> Sidonius Domino Papae Pragmatio salutem</head><p>
 
 <milestone unit="section" n="1"/>Venerabilis Eutropia matrona, quod ad nos spectat, singularis exempli, quae parsimonia et humanitate certantibus non minus se ieiuniis quam cibis pauperes pascit et in Christi cultu pervigil sola in se compellit peccata dormire, maeroribus orbitatis
 <pb id="v.2.p.254"/>
@@ -1377,7 +1387,7 @@ necessitate litis adiecta in remedium mali duplicis perfectionem vestrae consola
 vadimonio meo creditis, victoriam computat, si vel post damna non litiget. unde et suspicor vobis unam pronuntiandam domum discordiosam, licet inveniatis utramque discordem, memor nostri esse dignare, domine para.
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Domino Papae Leontio salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Domino Papae Leontio salutem</head><p>
 
 <milestone unit="section" n="1"/>Etsi nullis hortatibus 1 primordia nostrae pro-fessionis animatis neque sitim ignorantiae hactenus saecularis ullo supernae rigatis imbre doctrinae, non ego tamen tantum mei memineris non sum, ut a meis <add>ac tuis</add> 2 praesumam partibus aequali officiorum lance certandum, nam cum nostra mediocritas aetate vitae, tempore dignitatis, privilegio loci, laude scientiae, dono conscientiae vestrae facile vincatur, nullum meremur, si par expectamus alloquium. 
 <milestone unit="section" n="2"/>igitur non incusantes silentium vestrum sed loquacitatem nostram potius excusare nitentes
@@ -1385,7 +1395,7 @@ vadimonio meo creditis, victoriam computat, si vel post damna non litiget. unde 
 commendamus apicum portitorem, cuius si peregrinationem prompto favore foveatis, grandis actionibus illius portus securitatis aperitur, negotium huic testamentarium est. latent eum propriarum merita chartarum: togatorum illic perorantum peritiam consulere perrexit, pro victoria computaturus, si se intellexerit iure superari, modo ne sibi suisque desidiae vitio perperam cavisse culpetur. hunc eatenus commendare praesumo, ut, si eum instruere dignanter advocatio consulta fastidit, auctoritas coronae tuae dissimulantibus studeat excudere responsi celeritatem, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Domino Papae Lupo salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Domino Papae Lupo salutem</head><p>
 
 <milestone unit="section" n="1"/>Praeter officium, quod incomparabiliter eminenti apostolatui tuo sine fine debetur, etsi absque intermissione solvatur, commendo supplicum baiulorum pro nova necessitudine vetustam necessitatem,1 qui in Arvernam regionem longum iter, his quippe
 <pb id="v.2.p.260"/>
@@ -1396,14 +1406,14 @@ temporibus, emensi casso labore venerunt, namque unam feminam de affectibus suis
 indemni compositione istorum dolori, illorum periculo subvenire et quodam salubris sententiae temperamento hanc partem minus afflictam, illam minus ream et utramque plus facere securam; ne iurgii status, ut sese fert temporis locique qualitas, 1 talem descendat 2 ad terminum, quale coepit habere principium, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Domino Papae Theoplasto salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Domino Papae Theoplasto salutem</head><p>
 
 <milestone unit="section" n="1"/>Causam meam nesciens agit qui ad vos a me litteras portat; nam, dum votivi mihi fit genitus opportunus officii, beneficium praestat, quod se arbitratur accipere, sicuti nunc venerabilis Donidius dignus inter spectatissimos quosque numerari, cuius clientem puerosque commendo, profectos seu in patroni necessitate seu in domini, laborem
 <pb id="v.2.p.264"/>
 peregrinantum qua potestis ope humanitate intercessione tutamini; ac, si in aliquo amicus ipse per imperitiam novitatemque publicae conversationis videbitur minus efficax, vos hoc potius aspicite, quid absentis causa, non quid praesentis persona mereatur. memor nostri esse dignare, domine papa,
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Domino Papae Eutropio salutem</head><p>
+<div2 type="letter" n="6"><head> Sidonius Domino Papae Eutropio salutem</head><p>
 
 <milestone unit="section" n="1"/>Postquam foedifragam gentem redisse in sedes suas comperi neque quicquam viantibus insidiarum parare, nefas credidi ulterius officiorum 1 differre sermonem, ne vester affectus quandam vitio meo duceret ut gladius inpolitus de curae raritate robiginem. unde misso in hoc solum negotii gerulo litterarum, quam vobis sit corpusculi status in solido quamve ex animi sententia res agantur, sollicitus inquiro, sperans, ne semel mihi amor vester indultus aut interiecti itineris longitudine aut absentiae com-
 <pb id="v.2.p.266"/>
@@ -1411,7 +1421,7 @@ munis diuturnitate tenuetur, quia bonitas conditoris habitationem potius hominum
 <milestone unit="section" n="2"/>restat, ut vestra beatitudo conpunctorii salubritate sermonis avidam nostrae ignorantiae pascat esuriem. est enim tibi nimis usui, ut exhortationibus tuis interioris hominis maciem saepenumero mysticus adeps et spiritalis arvina distendat. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Domino Papae Fonteio salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Domino Papae Fonteio salutem</head><p>
 
 <milestone unit="section" n="1"/>Si aliquid ad inchoandam gratiam compendii posteris tribuit necessitudo praemissa seniorum, ego quoque ad apostolatus tui notitiam pleniorem cum praerogativa domesticae familiaritatis accedo, nam sic te familiae meae validissimum in Christo semper patronum fuisse reminiscor, ut amicitias tuas non tam expetendas mihi quam repetendas putem, his adicitur, quod indignissimo mihi impositum sacerdotalis nomen officii confligere me ad precum vestrarum praesidia compellit, ut adhuc ulcerosae conscientiae nimis hiulca vulnera vestro saltim cicatricentur oratu. 
 <milestone unit="section" n="2"/>quapropter me meosque commendans et excusans litteras seriores granditer obsecro, ut
@@ -1419,7 +1429,7 @@ munis diuturnitate tenuetur, quia bonitas conditoris habitationem potius hominum
 intercessione consueta, cuius viribus immane polletis, clericalis tirocinii in nobis reptantia rudimenta tueamini, ut, si quid dignabitur de morum pravitate nostrorum immutabilis dei mutare clementia, totum id suffragiorum vestrorum patrocinio debeamus, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Domino Papae Graeco salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Domino Papae Graeco salutem</head><p>
 
 <milestone unit="section" n="1"/>Apicum oblator pauperem vitam sola mercandi actione sustentat; non illi est opificium quaestui, militia commodo, cultura compendio; <add>ob</add> 1 hoc ipsum, quod mercennariis prosecutionibus et locaticia fatigatione cognoscitur, fama quidem sua sed facultas crescit aliena, sed tamen quoniam illi fides magna est, etsi parva substantia, quotiens cum pecuniis quorumpiam catapli recentis nundinas adit, creditoribus bene credulis sola deponit morum experimenta pro pignore. 
 <milestone unit="section" n="2"/>inter dictandum mihi ista suggesta sunt, nec ob hoc dubito audita fidenter asserere, quia non parum mihi intumos agunt 2 quibus est ipse satis intumus. huius igitur teneram frontem, dura
@@ -1427,7 +1437,7 @@ intercessione consueta, cuius viribus immane polletis, clericalis tirocinii in n
 rudimenta commendo; et, quia nomen eiusdem lectorum nuper albus accepit, agnoscitis profecturo civi me epistulam, clerico debuisse formatam; quem propediem non iniuria reor mercatorem splendidum fore, si hinc ad vestra obsequia festinans frigoribus fontium civicorum sapientiae fontem meracioris 1 anteferat. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="9"><head> Sidonius Domino Papae Lupo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Domino Papae Lupo salutem</head><p>
 
 <milestone unit="section" n="1"/>Vir iam honestus Gallus, quia iussus ad coniugem redire non distulit, litterarum mearum obsequium, vestrarum reportat effectum, cui cum pagina, quam miseratis, reseraretur, actutum compunctus ingemuit destinatamque non ad me epistulam sed in se sententiam iudicavit, itaque confestim iter in patriam spopondit adornavit arripuit, quem
 <pb id="v.2.p.272"/>
@@ -1438,7 +1448,7 @@ nos propter hanc ipsam paenitudinis celeritatem non increparive sed consolatorie
 
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Domino Papae Censorio salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Domino Papae Censorio salutem</head><p>
 
 <milestone unit="section" n="1"/>Gerulum litterarum levitici ordinis honestat officium, hic cum familia sua depraedationis Gothicae turbinem vitans in territorium vestrum delatus est ipso, ut sic dixerim, pondere fugae; ubi in re ecclesiae, cui sanctitas tua praesidet, parvam sementem semiconfecto caespiti advena ieiunus iniecit, cuius ex solido colligendae fieri sibi copiam exorat. 
 <milestone unit="section" n="2"/>quem si domesticis fidei deputata humanitate foveatis, id est, ut debitum glaebae cano-nem non petatur, tantum lucelli praestitum sibi computat (peregrini hominis ut census, sic animus angustus), ac si in patrio solo rusticaretur. huic si legitimam, ut mos est, solutionem perexiguae segetis indulgeas, tamquam opipare viaticatus cum gratiarum actione remeabit. per quem si me stilo solitae dignationis impertias, mihi fraternitatique istic sitae pagina tua veluti polo lapsa reputabitur, memor nostri esse dignare, domine papa.
@@ -1446,13 +1456,13 @@ nos propter hanc ipsam paenitudinis celeritatem non increparive sed consolatorie
 
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Domino Papae Eleutherio salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Domino Papae Eleutherio salutem</head><p>
 
 <milestone unit="section" n="1"/>Iudaeum praesens charta commendat, non quod mihi placeat error, per quem pereunt involuti, sed quia neminem ipsorum nos decet ex asse damnabilem pronuntiare, dum vivit; in spe enim adhuc absolutionis est cui suppetit posse converti. 
 <milestone unit="section" n="2"/>quae sit vero negotii sui series, ipse rectius praesentanea coram narratione patefaciet. nam prudentiae satis obviat epistulari formulae debitam concinnitatem plurifario sermone porrigere. sane quia secundum vel negotia vel iudicia terrena solent huiuscemodi homines honestas habere causas, tu quoque potes huius laboriosi, etsi impugnas perfidiam, propugnare personam, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Domino Papae Patienti salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Domino Papae Patienti salutem</head><p>
 
 <milestone unit="section" n="1"/>Aliquis aliquem, ego illum praecipue puto suo vivere bono, qui vivit alieno quique fidelium calamitates indigentiamque miseratus facit in terris opera
 <pb id="v.2.p.278"/>
@@ -1476,7 +1486,7 @@ latam, Arverni tamen oppidi ego nomine uberes perquam gratias ago, cui ut succur
 </p></div2></div1>
 
 <div1 type="book" n="7">
-<div2 type="poem" n="1"><head> Sidonius Domino Papae Mamerto salutem</head><p>
+<div2 type="letter" n="1"><head> Sidonius Domino Papae Mamerto salutem</head><p>
 
 <milestone unit="section" n="1"/>Rumor est Gothos in Romanum solum castra movisse: huic semper irruptioni nos miseri Arverni ianua sumus, namque odiis inimicorum hinc peculiaria fomenta subministramus, quia, quod necdum terminos suos ab Oceano in Rhodanum Ligeris alveo limitaverunt, solam sub ope Christi moram de nostra tantum obice patiuntur, circumiectarum vero spatia tractumque regionum iam pridem regni minacis importuna devoravit impressio. 
 <milestone unit="section" n="2"/>sed animositati nostrae tam temerariae tamque periculosae non nos aut ambustam murorum faciem 1 aut putrem sudium cratem aut propugnacula vigilum trita pectoribus confidimus opitulatura; solo tantum 2 invectarum te auctore rogationum palpamur auxilio, quibus inchoandis instituendisque populus Arvernus,
@@ -1493,7 +1503,7 @@ his paucis iudicis ieiunia interdicis flagitia, supplicia praedicis remedia prom
 Ferreoli solida translatio adiecto nostri capite Iuliam, quod istinc turbulento quondam persecutori manus rettulit cruenta carnificis, non iniurium est, quod pro compensatione deposcimus, ut nobis inde veniat pars patrocinii, quia vobis hinc rediit pars patroni, memor nostri esse dignare, domine papa,
 </p></div2>
 
-<div2 type="poem" n="2"><head> Sidonius Domino Papae Graeco salutem</head><p>
+<div2 type="letter" n="2"><head> Sidonius Domino Papae Graeco salutem</head><p>
 
 <milestone unit="section" n="1"/>Oneras, consummatissime pontificum, verecundiam meam, multifaria laude cumulando si quid stilo rusticante peraravero. atque utinam reatu careat, quod apicum primore congressu quamquam circumscriptus veritati resultantia tamen et diversa conexui; ignorantiae siquidem meae callidus viator imposuit, nam dum solum mercatoris praetendit officium, litteras meas ad formatae vicem, scilicet ut lector, elicuit, sed quas aliquam gratiarum actionem continere decuisset. namque, ut post comperi, plus
 <pb id="v.2.p.294"/>
@@ -1517,7 +1527,7 @@ repetundarum velle proponere et tunc demum de mancipiorum sponsaliciae donationi
 non debeat, si non tam eloquentes epistulas recipit quam loquaces. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="3"><head> Sidonius Domino Papae Megethio salutem</head><p>
+<div2 type="letter" n="3"><head> Sidonius Domino Papae Megethio salutem</head><p>
 
 <milestone unit="section" n="1"/>Diu multumque deliberavi, quamquam mihi animus affectu 1 studioque 2 parendi sollicitaretur, 3 an destinarem, sicuti iniungis, contestatiunculas, quas ipse dictavi, vicit ad ultimum sententia, quae tibi obsequendum definiebat. igitur petita transmisi: et quid modo dicemus? grandisne haec oboedientia? puto, grandis est; grandior impudentia tamen, hac enim fronte possemus fluminibus aquas, silvis ligna transmittere; hac [enim] 4 temeritate Apellen peniculo, caelo Phidian, 5 malleo Polyclitum muneraremur. 6 
 <milestone unit="section" n="2"/>dabis ergo veniam praesumptioni, papa sancte facunde venerabilis, quae
@@ -1525,7 +1535,7 @@ non debeat, si non tam eloquentes epistulas recipit quam loquaces. memor nostri 
 doctissimo examini tuo naturali garrulitate deblaterat. habet consuetudo nostra pro ritu, ut etsi pauca edit, multa conscribat, veluti est canibus innatum, ut, etsi non latrant, tamen hirriant. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="4"><head> Sidonius Domino Papae Fonteio salutem</head><p>
+<div2 type="letter" n="4"><head> Sidonius Domino Papae Fonteio salutem</head><p>
 
 <milestone unit="section" n="1"/>Insinuare quoscumque iam paveo, quia commendatis nos damus verba, vos munera; tamquam non principalitas sit censenda beneficii, quod a me peccatore digressis sanctae communionis portio patet, testis horum est Vindicius noster, qui segnius domum pro munificentiae vestrae fasce remeavit, quoquo loco est, constanter affirmans, cum sitis opinione magni, gradu maximi, non tamen esse vos amplius dignitate quam dignatione laudandos. 
 <milestone unit="section" n="2"/>praedicat melleas sanctas et floridas, quae procedunt de temperata communione, blanditias; nec tamen ex hoc quicquam pontificali deperire personae, quod sacerdotii fastigium non frangitis comitate, sed flectitis. quibus agnitis sic inardesco, ut tum me sim felicissimum iudicaturus, cum mihi coram posito sub divina ope contigerit tam securum de deo suo pectus licet praesumptiosis, artis tamen fovere
@@ -1537,7 +1547,7 @@ complexibus.
 
 </p></div2>
 
-<div2 type="poem" n="5"><head> Sidonius Domino Papae Agroecio salutem</head><p>
+<div2 type="letter" n="5"><head> Sidonius Domino Papae Agroecio salutem</head><p>
 
 <milestone unit="section" n="1"/>Biturigas decreto civium petitus adveni: causa fuit evocationis titubans ecclesiae status, quae nuper summo viduata pontifice utriusque professionis ordinibus ambiendi sacerdotii quoddam classicum cecinit, fremit populus per studia divisus; pauci alteros, multi sese non offerunt solum sed inferunt, si aliquid pro virili portione secundum deum consulas veritatemque, omnia occurrunt levia varia fucata, et (quid dicam?) sola est illic simplex impudentia. 
 <milestone unit="section" n="2"/>et nisi me immerito queri iudicaretis, dicere auderem tam praecipitis animi esse plerosque tamque periculosi, ut sacrosanctam sedem dignitatemque affectare pretio oblato non reformident, remque iam dudum in nundinam mitti auctionemque potuisse, si quam paratus invenitur emptor, venditor tam desperatus inveniretur. proin quaeso, ut officii mei novitatem pudorem necessitatem exspecta-
@@ -1551,7 +1561,7 @@ et 1 cum in locum statumque pontificis quisque sufficitur, ut a vobis praeceptum
 
 </p></div2>
 
-<div2 type="poem" n="6"><head> Sidonius Domino Papae Basilio salutem</head><p>
+<div2 type="letter" n="6"><head> Sidonius Domino Papae Basilio salutem</head><p>
 
 <milestone unit="section" n="1"/>Sunt nobis munere dei novo nostrorum temporum exemplo amicitiarum vetera iura, diuque est quod invicem diligimus ex aequo, porro autem, quod ad communem conscientiam pertinet, tu patronus: quamquam hoc ipsum praesumptiose arroganterque loquar; 2 namque iniquitas mea tanta est, ut mederi de lapsuum eius assiduitate vix etiam tuae supplicationis efficacia queat. 
 <milestone unit="section" n="2"/>igitur,
@@ -1577,7 +1587,7 @@ exilii cruciat poena dissimilis, namque unus ipsorum dolet se non videre quo red
 
 </p></div2>
 
-<div2 type="poem" n="7"><head> Sidonius Domino Papae Graeco salutem</head><p>
+<div2 type="letter" n="7"><head> Sidonius Domino Papae Graeco salutem</head><p>
 
 <milestone unit="section" n="1"/>Ecce iterum Amantius, nugigerulus noster, Massiliam suam repetit, aliquid, ut moris est, de manubiis civitatis domum reportaturus, si tamen . . . aut 1 cataplus arriserit. per quem ioculariter plura garrirem, si pariter unus idemque valeret animus exercere laeta et tristia sustinere, siquidem nostri hic nunc est infelicis anguli status, cuius, ut fama confirmat <add>misera</add> minus 2 fuit sub bello quam sub pace condicio. 
 <milestone unit="section" n="2"/>facta est servitus nostra pretium securitatis alienae. Arvernorum, pro dolor,
@@ -1593,7 +1603,7 @@ obtineri, invenisse vos certum est quid barbarum suaderetis 1 ignavi.
 <milestone unit="section" n="6"/>sed cur dolori nimio frena laxamus? quin potius ignoscite afflictis nec imputate maerentibus. namque alia regio tradita servitium sperat, Arverna supplicium, sane si medicari nostris ultimis non valetis, saltem hoc efficite prece sedula, ut sanguis vivat, quorum est moritura libertas; parate exulibus terram, capiendis redemptionem, viaticum peregrinaturis. si murus noster aperitur hostibus, non sit clausus vester hospitibus, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="8"><head> Sidonius Domino Papae Euphronio salutem</head><p>
+<div2 type="letter" n="8"><head> Sidonius Domino Papae Euphronio salutem</head><p>
 
 <milestone unit="section" n="1"/>Quandoquidem me clericalis officii vincula ligant, felicissimum mediocritatis meae statum pronuntiarem, si nobis haberentur quam territoria vicina tam moenia, de minimis videlicet rebus coronam tuam maximisque consulerem, fieretque
 <pb id="v.2.p.332"/>
@@ -1605,7 +1615,7 @@ quippiam nominato, licet necdum nostrae professions, inlicitum opponi, animum ad
 <milestone unit="section" n="4"/>sed cur ego istaec 1 ineptus adieci, tamquam darem consilium qui poposci? quin potius omnia ex vestro nutu arbitrio litterisque disponentur sacerdotibus, popularibus manifestabuntur. neque enim ita desipimus in totum, ut evocandum te primum, si venire possibile est, deinde, si quid sequius, 2 certe consulendum decerneremus, nisi in omnibus obsecuturi. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="9"><head> Sidonius Domino Papae Perpetuo salutem</head><p>
+<div2 type="letter" n="9"><head> Sidonius Domino Papae Perpetuo salutem</head><p>
 
 <milestone unit="section" n="1"/>Desiderio spiritalium lectionum, quarum 3 tibi tam per authenticos quam per disputatores byblio-theca fidei catholicae 4 perfamiliaris est, etiam illa, quae maxume 5 tuarum scilicet aurium minime digna
 <pb id="v.2.p.336"/>
@@ -1660,7 +1670,7 @@ in commilitio, multos in contractu multos in tractatu, multos in sua multos in n
 vestrae summum sacerdotem fieri debere pronuntio. vos autem de viro, quo 1 loquimur, si novam sententiam meam sequimini, secundum vestram veterem consonate.
 </p></div2>
 
-<div2 type="poem" n="10"><head> Sidonius Domino Papae Graeco salutem</head><p>
+<div2 type="letter" n="10"><head> Sidonius Domino Papae Graeco salutem</head><p>
 
 <milestone unit="section" n="1"/>Invideo felicitati consuetudinarii portitoris, a quo contigit 2 saepius vos videri, sed quid de Amantio loquar, cum ipsas quoque litteras meas aemuler, quae sacrosanctis reserabuntur digitis, inspicientur obtutibus? et ego istic inter semiustas muri fragilis clausus angustias belli terrore contigui desiderio de vobis meo nequaquam satisfacere permittor. atque utinam haec esset Arvernae forma vel causa regionis, ut minus excusabiles excusaremur.3 
 <milestone unit="section" n="2"/>sed, quod est durius, per iniustitiae nostrae merita conficitur, ut excusatio nobis iusta non desit, quocirca salutatione praefata, sicut mos poscit officii, magno opere deposco, ut interim remittatis occursionis debitum
@@ -1668,7 +1678,7 @@ vestrae summum sacerdotem fieri debere pronuntio. vos autem de viro, quo 1 loqui
 vel verba solventi. nam si commeandi libertas pace revocetur, illud magis verebor, ne adsiduitas praesentiae meae sit potius futura fastidio, memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="11"><head> Sidonius Domino Papae Auspicio salutem</head><p>
+<div2 type="letter" n="11"><head> Sidonius Domino Papae Auspicio salutem</head><p>
 
 <milestone unit="section" n="1"/>Si ratio temporum regionumque pateretur, non per sola officia verborum amicitias semel initas excolere curarem, sed quoniam fraternae quietis voto satis obstrepit conflictantium procella regnorum, saltim inter discretos separatosque litteram consuetudo sermonis iure retinebitur, quae iam pridem caritatis obtentu merito inducta veteribus annuit 1 exemplis, superest, ut sollicito veneratori culpam rarae occursionis indulgeas, qui 2 quo minus assidue conspectus tui sacrosancta contemplatione potiatur, nunc periculum de vicinis timet, nunc invidiam de
 <pb id="v.2.p.362"/>
@@ -1676,7 +1686,7 @@ patronis, sed de his ista: haec etiam 1 multa sunt.
 <milestone unit="section" n="2"/>interim Petrum, tribunicium virum, portitorem nostri sermonis, insinuo, qui id ipsum sedulo exposcit, quique quid negotii ferat praesentaneo conpendiosius potest intimare memoratu, cui, precor, quod in vobis opis est, intuitu paginae praesentis accedat, manente respectu nihilominus aequitatis, contra quam nec magis fami Uarium causas commendare consuevi. memor nostri esse dignare, domine papa.
 </p></div2>
 
-<div2 type="poem" n="12"><head> Sidonius Ferreolo suo salutem</head><p>
+<div2 type="letter" n="12"><head> Sidonius Ferreolo suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Si amicitiae nostrae potius affinitatisque quam personae tuae tempus ordinem statum cogitaremus, iure vobis in hoc opere, quantulumcumque. est, primae titulorum rubricae, prima sermonum officia
 <pb id="v.2.p.364"/>
@@ -1690,7 +1700,7 @@ Aetium Ligeris liberatorem sola te dispositionum salubritate tolerasse, propterq
 
 </p></div2>
 
-<div2 type="poem" n="13"><head> Sidonius Sulpicio suo salutem</head><p>
+<div2 type="letter" n="13"><head> Sidonius Sulpicio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Himerius antistes, filius tuus, notus mihi hactenus parum vultu, satis opinione, quae quidem in bonam partem porrigebatur, Lugdunum nuper a Tricassibus venit, quo loci mihi raptim ac breviter inspectus sanctum episcopum Lupum, facile principem pontificum Gallicanorum, suae tam professionis magistrum quam dignitatis auctorem, morum nobis imitatione restituit. 
 <milestone unit="section" n="2"/>deus bone, quae viro censura cum venustate, si quid vel 1 deliberet forte vel suadeat! abundat animi sale, cum consulitur, melle, cum consulit, summa homini cura de litteris, sed maxime religiosis, in quibus eum magis occupat medulla sensuum quam spuma verborum, tota illi
@@ -1703,7 +1713,7 @@ actionum suarum intentio celeritas mora Christus est. quodque mirere vel laudes,
 mentis pudicissimam teneritudinem iucunda similitudine exscripsit. quapropter quantum volueris deinceps frui secreto, indulgere secessui, licebit indulgeas; quandoquidem nos in fratre meo Himerio avum nomine, patrem facie, utrumque prudentia iam tenemus. vale.
 </p></div2>
 
-<div2 type="poem" n="14"><head> Sidonius Philagrio suo salutem</head><p>
+<div2 type="letter" n="14"><head> Sidonius Philagrio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Proxime inter summates viros (erat et frequens ordo) vestri mentio fuit. omnes de te boni in commune senserunt omnia bona, cum tamen singuli quique varia virtutum genera dixissent, sane cum sibi quipiam de praesentia tua, quasi te magis nossent, praeter aequum gloriarentur, incandui, quippe cum dici non aequanimiter admitterem virum omnium litterarum vicinantibus rusticis quam institutis fieri remotioribus notiorem. 
 <milestone unit="section" n="2"/>processit in ulteriora contentio; et cum aliqui super hoc errore pervicaciter controversarentur (idiotarum siquidem est, sicut facile convinci, ita difficile compesci), con-
@@ -1729,7 +1739,7 @@ torum; ego turbam quamlibet magnam litterariae artis expertem maxumam solitudine
 <milestone unit="section" n="12"/>ieiunandum alternis putas? non piget sequi, prandendum? non pudet praevenire, de cetero, si vos a me videri Christi munere datur, ita gaudeam tamquam cui de te nec minora subtracta sint. porro autem quae sint in te maiora iam satis novi. propter quae fieri facilius potest, ut et si quandoque faciem tuam coram positus inspexero, aliqua de te recens mihi laetitia potius quam sententia accedat, vale.
 </p></div2>
 
-<div2 type="poem" n="15"><head> Sidonius Salonio suo salutem</head><p>
+<div2 type="letter" n="15"><head> Sidonius Salonio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>Quotiens Viennam venio, emptum maximo velim, ut te fratremque communem colonum civitatis
 <pb id="v.2.p.384"/>
@@ -1737,7 +1747,7 @@ habitatio plus haberet, qui mihi non amore solum verum etiam professione sociami
 <pb id="v.2.p.386"/>
 </p></div2>
 
-<div2 type="poem" n="16"><head> Sidonius Chariobaudo 1 Abbati salutem</head><p>
+<div2 type="letter" n="16"><head> Sidonius Chariobaudo 1 Abbati salutem</head><p>
 
 <milestone unit="section" n="1"/>Facis, unice in Christo patrone, rem tui pariter et amoris et moris, quod peregrini curas amici litteris mitigas consolatoriis. atque utinam mei semper sic recorderis, ut sollicitudines ipsas angore 2 succiduo concatenatas, qui exhortator attenuas, intercessor incidas! 
 <milestone unit="section" n="2"/>de cetero, libertos tuos causis quas iniunxeras expeditis reverti puto, quos ita strenue constat rem peregisse, ut nec eguerint adiuvari. per quos nocturnalem cucullum, quo membra confecta ieiuniis inter orandum cubandumque dignanter tegare, transmisi, quamquam non opportune species villosa mittatur hieme finita iamque temporibus aestatis appropinquantibus. vale.
@@ -1745,7 +1755,7 @@ habitatio plus haberet, qui mihi non amore solum verum etiam professione sociami
 
 </p></div2>
 
-<div2 type="poem" n="17"><head> Sidonius Volusiano Fratri salutem</head><p>
+<div2 type="letter" n="17"><head> Sidonius Volusiano Fratri salutem</head><p>
 
 <milestone unit="section" n="1"/>Iubes me, domine frater, lege amicitiae, quam nefas laedi, iam diu desides digitos incudibus officinae veteris imponere et sancto Abrahae diem functo neniam sepulchralem luctuosis carminibus inscribere. celeriter iniunctis obsecundabo, cum tua tractus auctoritate, tum principaliter amplissimi viri Victorii comitis devotione praeventus, quem iure saeculari patronum, iure ecclesiastico filium excolo ut cliens, ut pater diligo; qui satis docuit, quae sibi aut qualis erga famulos Christi cura ferveret, cum torum circa decumbentis antistitis, non dignitatem minus quam membra curvatus ac supra vultum propinqua morte pallentem dolore concolor factus, quid viro vellet lacrimis indicibus ostenderet. 
 <milestone unit="section" n="2"/>et quia sibi maximas humandi funeris partes ipse praeripuit, totum apparatum 1 supercurrentis impendii
@@ -1790,7 +1800,7 @@ quod funerando sacerdoti competeret impertiens, saltim ad obsequium quae remanse
 fratrum destitutorum secundum statuta Lirinensium patrum vel Grinincensium festinus informa; cuius disciplinae si qui rebelles, ipse castiga; si qui sequaces, ipse conlauda. 
 <milestone unit="section" n="4"/>praepositus illis quidem videtur sanctus Auxanius, qui vir, ut nosti, plusculum iusto et corpore infirmus et verecundus ingenio eoque parendi quam imperandi promptior exigit te rogari, ut tuo ipse sub magisterio monasterii magister accedat et, si quis illum de iunioribus spreverit tamquam imperitum vel pusillanimem, per te unum sentiat utrumque non impune contemni, quid multa? vis ut paucis quid velim agnoscas? quaeso, ut abbas sit frater Auxanius supra congregationem, tu vero et supra abbatem. vale.</p></div2>
 
-<div2 type="poem" n="18"><head> Sidonius Constantio suo salutem</head><p>
+<div2 type="letter" n="18"><head> Sidonius Constantio suo salutem</head><p>
 
 <milestone unit="section" n="1"/>A te principium, tibi desinet, nam petitum misimus opus raptim electis 1 exemplaribus, quae
 <pb id="v.2.p.396"/>
