@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI>
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -163,4 +163,4 @@ category of relation, then. has nothing to do with the essence of the subject; i
 </p>
       </body>
    </text>
-</TEI.2>
+</TEI>

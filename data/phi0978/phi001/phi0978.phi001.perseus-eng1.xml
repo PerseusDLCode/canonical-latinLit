@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI>
    <teiHeader status="new">
       <fileDesc>
          <titleStmt>
@@ -118189,4 +118189,4 @@ dedicated a work, on Precious Stones, to King Mithridates.</note>
          </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

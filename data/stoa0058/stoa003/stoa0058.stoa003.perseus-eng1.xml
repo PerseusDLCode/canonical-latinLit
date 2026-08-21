@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI>
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -109,4 +109,4 @@ ance with the will of the Good that they should be good through the tact that th
 </p>
       </body>
    </text>
-</TEI.2>
+</TEI>

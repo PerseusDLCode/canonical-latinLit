@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI>
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -234,4 +234,4 @@ the food he took, fall asleep, and perform all the other functions which always 
 </p>
       </body>
    </text>
-</TEI.2>
+</TEI>
