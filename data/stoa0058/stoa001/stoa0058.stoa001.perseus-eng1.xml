@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <TEI>
    <teiHeader>
       <fileDesc>
@@ -53,6 +52,13 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+                  <citeStructure match="div2[@type='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -61,11 +67,11 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text>
-      <body>
+   <text xml:lang="eng">
+      <body xml:base="urn:cts:latinLit:stoa0058.stoa001.perseus-eng1">
          <pb id="p.129"/>
          <div1 type="book" n="1">
-            <div2 type="chapter" n="praef">
+            <div2 type="chapter" n="praefm">
                <p>
 I THAT with youthful heat did verses write, Must now my woes in doleful tunes indite. My work is framed by Muses torn and rude, And my sad cheeks are with true tears bedewed: For these alone no terror could affray from being partners of my weary way. The art that was my young life's joy and glory Becomes my solace now i m old and sorry; Sorrow has filched my youth from me, the thief! My days are numbered not by time but Grief. a Untimely hoary hairs cover my head, And my loose skin quakes on my flesh half dead. o happy death, that spareth sweetest years, And comes in sorrow often called with tears. Alas, how deaf is he to wretch's cries; And loath he is to close up weeping eyes;
 <pb id="p.131"/>
@@ -73,7 +79,7 @@ While trustless chance me with vain favours crowned, that saddest hour my life h
 
 </p>
             </div2>
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1p">
                <p>While I ruminated these things with myself, and determined to set forth my woful complaint in writing, methought I saw a woman stand above my head, having a grave countenance, glistening clear eye, and of quicker sight than commonly Nature doth afford; her colour fresh and bespeaking unabated vigour, and yet discovering so many years, that she could not at all be thought to belong to our times; her stature uncertain and doubtful, for sometime she exceeded not the common height of men, and sometime she seemed to touch the heavens with her head, and if she lifted it up to the highest, she pierced the very heavens, so that she could not be seen by the beholders; her garments were made of most fine threads with cunning workmanship into an ever-during stuff, which (as I knew afterward by her own report) she had woven with her own hands. A certain duskishness caused by negligence and time had darkened their colour, as it is wont to happen when pictures stand in a smoky room. In the lower part of them was placed the Greek letter Π, and in the upper θ, a and betwixt the two letters, in the manner of stairs, there were certain degrees made, by which there was a passage from the lower to the higher letter: this her garment had been cut by the violence of some, who had taken away such pieces
 <pb id="p.133"/>
 as they could get. In her right hand she had certain books, and in her left hand she held a sceptre.</p>
@@ -82,7 +88,7 @@ That company being thus checked, overcome with grief, casting their eyes upon th
 <pb id="p.135"/>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Alas, how thy dull mind is headlong cast
@@ -97,14 +103,14 @@ run,
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2p">
                <p>
                   <q>But it is rather time,</q> saith she, <q> to apply remedies, than to make complaints.</q> And then looking wistfully upon me: <q> Art thou he,</q> saith she, <q> which, being long since nursed with our milk,
 <pb id="p.137"/>
 and brought up with our nourishments, wert come to man's estate? Hut we had given thee such weapons as, if thou hadst not east them away, would have made thee invincible. Dost thou not know me? Why dost thou not speak? Is it shame-fastness or insensibleness that makes thee silent? I had rather it were shamefastness, but I perceive thou art become insensible.</q> And seeing me not only silent but altogether mute and dumb, fair and easily she laid her hand upon my breast saying: <q>There is no danger; he is in a lethargy, the common disease of deceived minds; he hath a little forgot himself, but he will easily remember himself again, if he be brought to know us first. To which end, let us a little wipe his eyes, dimmed with the cloud of mortal things. And having thus said, with a corner of her garment she dried my eyes which were wet with tears.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Then fled the night and darkness did me leave,
@@ -120,14 +126,14 @@ and brought up with our nourishments, wert come to man's estate? Hut we had give
                   </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3p">
                <p>In like manner, the mists of sadness dissolved, I came to myself and recovered my judgment, so that I knew my Physician's face; wherefore casting mine eyes upon her somewhat stedfastly, I beheld my nurse Philosophy, in whose house I had remained from my youth, and I said: <q> O Mistress of all virtues, for what cause art thou come from heaven into this our solitary banishment? Art thou come to bear me company in being falsely accused?</q>
                   <q>Should I,</q> saith she, <q>forsake thee, my disciple, and not divide the burden, which thou bearest through hatred of my name, by partaking of thy labour? But Philosophy never thought it lawful to forsake the innocent in his trouble. Should I fear any accusations, as though this were any new matter? For dost thou think that this is the first time that Wisdom hath been exposed to danger by wicked men? Have we not in ancient times before our Plato s age had oftentimes great conflicts with the rashness of folly? And while he lived, had not his master Socrates the victory of an unjust death in my presence, whose inheritance, when afterward the mob of Epicures, Stoics, and others (every one for his own sect) endeavoured to usurp, and as it were in part of their prey, sought to draw me to them, exclaiming and striving against them; they tore the garment which I had woven with my own hands, and having gotten some little pieces of it, thinking me to be wholly in their possession, departed. Some of whom, because certain signs of my apparel appeared upon them, were rashly supposed to be my familiar friends, and condemned accordingly through the error of the profane multitude.
 <pb id="p.141"/>
 But if thou hast not heard of the flight of Anaxagoras, the poison of Soerates, nor the torments of Zeno, because they are foreign examples; yet thou mayst have heard of Canius, of Seneca, of Soranus, a whose memory is both fresh and famous, whom nothing else brought to their overthrow but that they had been instructed in our school and were altogether disliking to the humours of wicked men; wherefore thou hast no cause to marvel, if in the sea of this life we be tossed with boisterous storms, whose chiefest purpose is to displease the wicked; of which though there be an huge army, yet it is to be despised, because it is not governed by any captain, but is carried up and down by fantastical error without any order at all. And if at any time they assail us with great force, our captain retireth her band into a castle, b leaving them occupied in sacking unprofitable baggage. And from above we laugh them to scorn for seeking so greedily after most vile things, being safe from all their furious assault, and fortified with that defence which aspiring folly cannot prevail against.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Who mildly can his age dispose,
@@ -146,7 +152,7 @@ But if thou hast not heard of the flight of Anaxagoras, the poison of Soerates, 
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4p">
                <p>Understandest thou these things, saith she, <q>and do they make impression in thy mind? Art thou c like the ass, deaf to the lyre? Why weepest thou? Why sheddest thou so many tears? Speak out; hide not thy thoughts. a If thou expectest to be cured, thou must discover thy wound.</q>
 Then I, collecting the forces of my mind together, made her answer in these words: <q>
                      <p> Doth the cruelty of fortune s rage need further declaration, or doth it not sufficiently appear of itself? Doth not the very countenance of this place move thee? Is this the library which thou thyself hadst chosen to sit in at my house, in which thou hast oftentimes discoursed with me of the knowledge of divine and human things? Had I this attire or countenance when I searched the secrets of nature with thee, when thou describedst unto me the course of the stars with thy geometrical rod, when thou didst frame my conversation and the manner of my whole life according to the pattern of the celestial order? Are these the rewards which thy obedient servants have? But thou didst decree that sentence by the mouth of Plato: That commonwealths should be happy, if either the students of wisdom did govern them, or
@@ -175,7 +181,7 @@ manner of defence. Wherefore I may well exclaim:</p>
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Creator of the Sky,
@@ -215,7 +221,7 @@ manner of defence. Wherefore I may well exclaim:</p>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5p">
                <p>When I had uttered these speeches with continued grief, she, with an amiable countenance and nothing moved with my complaints, said: <q> When I first saw thee sad and weeping, I forthwith knew thee to be in misery and banishment. But I had not known how far off thou wert banished, if thy speech had not bewrayed it. O how far art thou gone from thy country, not being driven away, but wandering of thine own accord! Or if thou hadst rather be thought to have been driven out, it hath been only by thyself; for never could any other but thyself have done it; for it thou rememberest of what country thou art, it is not governed as Athens was wont to be, by the multitude, but 'one is its rider, one its king,'a who desires to have abundance of citizens, and not to have them driven away. To be governed by whose authority, and to be subject to her laws, is the greatest freedom that can be. Art thou ignorant of that most ancient law of thy city,
 <pb id="p.161"/>
 by which it is decreed that he may not be banished that hath made choice of it for his dwelling-place; a for lie that is within her fort or hold need not fear lest he deserve to be banished? But whosoever ceaseth to desire to dwell in it, ceaseth likewise to deserve so great a benefit. Wherefore the countenance of this place moveth me not so much as thy countenance doth. Neither do I much require thy library adorned with ivory adornments, and its crystal walls, as the seat of thy mind, in which I have not placed books, but that which makes books to be esteemed of, I mean the sentences of my books, which were written long since. And that which thou hast said of thy deserts to the common good, is true indeed, but little in respect of the many things which thou hast done. That which thou hast reported, either of the honesty or of the falseness of those things which are objected against thee, is known to all men. Thou didst well to touch but briefly the wickedness and deceit of thy accusers, for that the common people to whose notice they are come do more fitly and largely speak of them. Thou hast also sharply rebuked the unjust Senate's deed. Thou hast also grieved at our accusation, and hast bewailed the loss or diminishing of our good name; and lastly, thy sorrow raged against fortune, and thou complainedst that deserts were not equally rewarded. In the end of thy bitter verse, thou desiredst that the earth might be governed by that peace which heaven enjoyeth. But because thou art turmoiled with the multitude of affections, grief and anger drawing thee to divers parts, in the plight thou art now, the more forcible remedies cannot be applied unto thee; wherefore, for a while, we will use the more easy, that thy affections, which are, as it were, hardened
@@ -223,7 +229,7 @@ by which it is decreed that he may not be banished that hath made choice of it f
 and swollen with perturbations, may by gentle handling be mollified and disposed to receive the force of sharper medicines.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6m">
                <p>
                   <quote rend="blockquote">
                      <lb/>When hot with Phoebus' beams
@@ -252,7 +258,7 @@ and swollen with perturbations, may by gentle handling be mollified and disposed
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6p">
                <p>
                   <q>First, therefore, wilt thou let me touch and try the state of thy mind by asking thee a few questions, that I may understand how thou art to be cured?</q>
                   <pb id="p.165"/>
@@ -276,7 +282,7 @@ But I would have thee answer me to this also; dost thou remember that thou art a
 they cast away true opinions they are possessed with false, out of which the darkness of perturbations arising doth make them that they cannot discern things aright, I will endeavour to dissolve this cloud with gentle and moderate fomentations; that having removed the obscurity of deceitful affections, thou mayest behold the splendour of true light.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7m">
                <p>
                   <quote rend="blockquote">
                      <lb/>When stars are shrouded
@@ -310,7 +316,7 @@ they cast away true opinions they are possessed with false, out of which the dar
             </div2>
          </div1>
          <div1 type="book" n="2">
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1p">
                <p>After this she remained silent for a while; and, having by that her modesty made me attentive, began in this wise: <q>
                      <p>If I be rightly informed of the causes and condition of thy disease, thou languishest with the affection of thy former fortune, and the change of that alone, as thou imaginest, hath overthrown so much of thy mind, I know the manifold illusions of that monster, exercising most alluring familiarity with them whom she meaneth to deceive, to the end she may confound them with intolerable grief, by forsaking them upon the sudden, whose nature, customs, and desert, if thou rememberest, thou shalt know that thou neither didst possess nor hast lost anything of estimation in it; and, as I hope, I shall not need to labour much to bring these things to thy remembrance, for thou wert wont, when she was present, and flattered thee most, to assail her with manful words, and pursue her with sentences taken forth of our most hidden knowledge. But
 <pb id="p.175"/>
@@ -321,7 +327,7 @@ kept at our will, and maketh them miserable whom she at last leaveth, what else 
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1m">
                <p>
                   <quote rend="blockquote">
                      <lb/>The pride of fickle fortune spareth none,
@@ -338,7 +344,7 @@ kept at our will, and maketh them miserable whom she at last leaveth, what else 
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2p">
                <p>But I would urge thee a little with Fortune's own speeches. Wherefore consider thou if she asketh not reason. 'For what cause, O man, ehargest thou me with daily complaints? What injury have I done thee? What goods of thine have I taken from thee? Contend with me before any judge about the possession of riches and dignities; and if thou canst show that the propriety of any of these things belong to any mortal wight, I will forthwith willingly grant that those things which thou demandest were thine. When Nature produced thee out of thy mother's womb, I received thee naked and poor in all respects, cherished thee with my wealth, and (which maketh thee now to fall out with me) being forward to favour thee, I had most tender care for thy education, and adorned thee with the abundance and splendour of all things which are in my power. Now it pleaseth me to withdraw my hand, yield thanks, as one that hath had the use of that which was not his own. Thou hast no just cause to complain, as though thou hadst lost that which was fully thine own. Wherefore lamentest thou? I have offered thee no violence. Riches, honours, and the rest of that sort belong to me. They acknowledge me for their mistress, and themselves for my servants, they come with me, and when I go away they likewise depart. I may boldly affirm, if those things which thou complainest to be
 <pb id="p.181"/>
 taken from thee had been thine own, thou shouldst never have lost them. Must I only be forbidden to use my light. It is lawful for the heaven to bring forth fair days, and to hide them again in darksome nights. It is lawful for the year sometime to compass the face of the earth with flowers and fruits and sometime to cover it with clouds and cold, The sea hath right sometime to fawn with calms, and sometime to frown with storms and waves. And shall I the insatiable desire of men tie me to constancy so contrary to my custom? This is my force, this is the sport which I continually use. I turn about my wheel with speed, and take a pleasure to turn lings upside down. Ascend, if thou wilt, but with this condition, that thou thinkest it not an injury to descend when the course of my sport so requireth. Didst thou not know my fashion? Wert thou ignorant how Croesus, King of the Lydians, not long before a terror to Cyrus, within a while after came to such misery that he should have been burnt had he not been saved by a shower sent from heaven? a Hast thou forgotten how Paul piously bewailed the calamities of King Perses his prisoner? b What other thing doth the outcry of tragedies lament, but that fortune, having no respect, overturneth happy states? Didst thou not learn in thy youth that there lay two barrels, the one of good things and the other of bad, a at Jupiter s threshold t But what if thou hast tasted more abundantly of the good? What if I be not wholly gone from thee? What if this mutability of be a just cause for thee to hope for better?</p>
@@ -346,7 +352,7 @@ taken from thee had been thine own, thou shouldst never have lost them. Must I o
 <pb id="p.183"/>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2m">
                <p>
                   <quote rend="blockquote">
 back her hand, 
@@ -368,7 +374,7 @@ himself but poor.'
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3p">
                <p>Wherefore if fortune should plead with thee thus in her own defence, doubtless thou wouldst not have a word to answer her. But if there be anything which thou canst allege in thy own defence, thou must utter it. We will give thee full liberty to speak. Then I said: <q>These things make a fair show and, being set out with pleasant rhetoric and music, delight only so long as they arc heard. But those which are miserable have a deeper feeling of
 <pb id="p.185"/>
 their miseries, therefore, when the sound of these things is past, hidden sorrow oppresseth the mind.</q>
@@ -380,7 +386,7 @@ Thou obtainedst more at her hands than ever private man had before thee. Wilt th
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3m">
                <p>
                   <quote rend="blockquote">
                      <lb/>When Phoebus with his rosy team
@@ -406,7 +412,7 @@ Thou obtainedst more at her hands than ever private man had before thee. Wilt th
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4p">
                <p>To which I answered: <q>The things which thou reportest are true, O nurse of all virtues, and I cannot deny the most speedy course of my prosperity. But this is that which vexeth me most, when I remember it. For in all adversity of fortune it is the most unhappy kind of misfortune to have been happy.</q>
                   <q>But,</q> quoth she, <q>
                      <p>thou canst not justly impute to the things themselves that thou art punished for thy false opinion. for if this vain name of casual felicity moveth thee, let us make accompt with how many and how great things thou aboundest. Wherefore, if that which in all thy revenues of fortune thou esteemest most precious doth still by God s providence remain safe and untouched, canst thou, retaining the best, justly complain of misfortune?</p>
@@ -426,7 +432,7 @@ blessedness cannot consist in t lies c casual thin its, gather it thus. If bless
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Who with an heedful care
@@ -456,7 +462,7 @@ blessedness cannot consist in t lies c casual thin its, gather it thus. If bless
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5p">
                <p>But since the soothing of my reasons begins to sink into thee, I will use those which are somewhat more forcible. Go to then, if the gifts of fortune were not brittle and momentary, what is there in them which can either ever be made your own, or, well weighed and considered, seemeth not vile and of no accompt? Are riches precious in virtue either of their own nature or of yours? What part of them can be so esteemed of? The gold or the heaps of money? But these make a fairer show when they are spent than when they are kept. For covetousness alway maketh men odious, as liberality famous. And if a man cannot have that which is given to another, then money is precious when, bestowed upon others, by the use of liberality it is not possessed any longer.
 <pb id="p.199"/>
 But if .ill the money in the whole world were gathered into one man s custody, all other men should he poor. The voice at the same time wholly filleth the ears of many, but your riches cannot pass to many, except they be diminished, which being done, they must needs make them poor whom they leave. O scant and poor riches, which neither can be wholly possessed of many, and come to none without the impoverishment of others! Doth the glittering of jewels draw thy eyes after them? But if there be any great matter in this show, not men but the jewels shine, which I exceedingly marvel that men admire, for what is there wanting life and members that may justly seem beautiful to a nature not only endued with life but also with reason? Which, though by their maker's workmanship and their own variety they have some part of basest beauty, yet it is so far inferior to your excellency that it did in no sort deserve your admiration. Doth the pleasant prospect of the fields delight you? Why not? for it is a fair portion of a most fair work. So we are delighted with a calm sea, so we admire the sky, the stars, the sun, and the moon. Do any of these belong to thee? Darest thou boast of the beauty which any of them have? Art thou thyself adorned with May flowers? Or doth thy fertility teem with the fruits of summer? Why rejoieest thou vainly? Why embraeest thou outward goods as if they were thine own? Fortune will never make those things thine which by the appointment of Nature belong not to thee. The fruits of the earth are doubtless appointed for the sustenance of living creatures. But if thou wilt only satisfy want, which sufficeth Nature, there is no cause to require the superfluities of fortune. For Nature is contented with little and with the
@@ -469,7 +475,7 @@ a poor passenger, needest not be afraid, but mightest rejoice and sing even in t
 
 </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Too much the former age was blest. 
@@ -505,7 +511,7 @@ a poor passenger, needest not be afraid, but mightest rejoice and sing even in t
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6p">
                <p>Now, why should I discourse of dignities and power which you, not knowing what true dignity and power meaneth, exalt to the skies? And if they light upon wicked men, what Aetnas, belching names, or what deluge can cause so great harms? I suppose thou rememberest how your ancestors, by reason of the consuls arrogancy, desired to abolish that government which had been the beginning of their freedom, who before, for the same cause, had removed the government of kings from their city. And if sometime, which is very seldom, good men be preferred to honours, a what other thing can give contentment in them but the honesty of those which have them? So that virtues are not honoured by dignities, but dignities by virtue. But what is this excellent power which you esteemed so desirable? Consider you not, O earthly wights, whom you seem to excel? For if among mice thou shouldst see one claim jurisdiction and power to himself over the rest, to what a laughter it would move thee! And what, if thou respectest the body, canst thou find more weak than man, whom even the biting of little flies or the entering of creeping worms doth often kill? Now, how can any man exercise jurisdiction upon anybody except upon their bodies, and that which is inferior to their bodies, I mean their fortunes? Canst thou ever imperiously impose anything upon
 <pb id="p.209"/>
 a free mind? Canst thou remove a soul settled in firm reason from the quiet state which it possesseth? When a tyrant thought to compel a certain free man by torments to bewray his confederates of a conspiracy attempted against him, he bit off his tongue, and spit it out upon the cruel tyrant's face, a by that means wisely making those tortures, which the tyrant thought matter of cruelty, to be to him occasion of virtue. Now, what is there, that any can enforce upon another which he may not himself be enforced to sustain by another? We read that Busiris, wont to kill his guests, was himself slain by his guest Hercules. b Regulus had laid fetters upon many Africans taken in war, but ere long he found his own hands environed with his conqueror s chains. c Wherefore thinkest thou the power of that man to be anything worth, who cannot hinder another from doing that to him which he can do to another? Moreover, if dignities and power had any natural and proper good in them, they would never be bestowed upon the worst men, for one opposite useth not to accompany another; nature refuseth to have contraries joined. So that, since there is no doubt but that men of the worst sort often enjoy dignities, it is also manifest that they are not naturally good which may follow most naughty men. Which may more worthily be thought of all fortune's gifts which are more plentifully bestowed upon every lewd companion. Concerning which, I take that also to be worthy consideration, that no man doubteth him to be a valiant man in whom he seeth valour, and it is manifest that he which hath swiftness is swift. So,
@@ -514,7 +520,7 @@ likewise, music maketh musicians, physic physicians, and rhetoric rhetoricians. 
 
 </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6m">
                <p>
                   <quote rend="blockquote">
                      <lb/>We know what stirs he made
@@ -538,7 +544,7 @@ likewise, music maketh musicians, physic physicians, and rhetoric rhetoricians. 
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7p">
                <p>Then I said: <q>Thou thyself knowest that the ambition of mortal things hath borne as little sway with me as with any, but I desired matter of action, lest old age should come upon me ere I had done anything.</q> To which she answered; <q>
                      <p>This is the only thing which is able to entice such minds as, being well qualified by nature, are not yet fully brought to full excellence by the perfecting of virtues, I mean desire of glory, and fame of best deserts towards their commonwealth, which how slender it is, and void of all weight, consider this: thou hast learnt by astronomical demonstrations that the compass of the whole earth compared to the scope of heaven is no bigger than a pin's point, which is as much as to say that, if it be conferred with the greatness of the celestial sphere, it hath no bigness at all. And of this so small a region in the world only the fourth part is known to be inhabited by living creatures known to us, as Ptolemy a proveth. From which fourth part, if thou takest away in imagination the seas, the marsh grounds, and all other desert places, there will scarcely be left any room at all for men to inhabit. Wherefore, enclosed and shut up in this smallest point of that other point, do you think of
 <pb id="p.215"/>
@@ -551,7 +557,7 @@ enjoying heaven, rejoiceth to see herself exempted from earthly affairs?</p>
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7m">
                <p>
                   <quote rend="blockquote">
                      <lb/>He that to honour only seeks to mount
@@ -584,14 +590,14 @@ enjoying heaven, rejoiceth to see herself exempted from earthly affairs?</p>
                   </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="8">
+            <div2 type="chapter" n="8p">
                <p>Hut lest thou shouldst think that I am at implacable war with fortune, there is a time when this thy goddess ceasing to deceive deserveth of men, to wit, when she declareth herself, when she discovereth her face and showeth herself in lier own colours. Perhaps thou understandest not yet what I say. I would utter a wonderful thing, insomuch as I can scarcely explicate my mind in words. For I think that Fortune, when she is opposite, is more profitable to men than when she is favourable. For in prosperity, by a show of happiness and seeming to caress, she is ever false, but in adversity when she showeth herself inconstant by changing, she is ever true. In that she deeciveth, in this she instructeth; in that she imprisoneth the minds of men with falsely seeming goods, which they enjoy, in this she setteth them at liberty by discovering the uncertainty of them. Wherefore, in that thou shalt alway see her puffed up, and wavering, and blinded with a self-conceit of herself, in this thou shalt find her sober, settled, and, with the very exercise of adversity, wise. Finally, prosperity with her flatterings withdraweth men from true goodness, adversity recalleth and reclaimeth them many times by force a to true happiness. Dost thou esteem it a small benefit that this rough and harsh Fortune hath made known unto thee the minds of thy faithful friends? She hath severed thy assured from thy doubtful friends; prosperity at her departure took away with her those which were hers, and left thee thine. How dearly wouldst thou have bought this before thy fall, and when thou seemedst to thyself
 <pb id="p.223"/>
 fortunate! Now thou dost even lament thy lost riches; thou hast found friends, the most precious treasure in the world.
 
 </p>
             </div2>
-            <div2 type="chapter" n="8">
+            <div2 type="chapter" n="8m">
                <p>
                   <quote rend="blockquote">
                      <lb/>That this fair world in settled course her several
@@ -620,14 +626,14 @@ heavenly spheres doth guide!
             </div2>
          </div1>
          <div1 type="book" n="3">
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1p">
                <p>Though she had ended her verse, yet the sweetness of it made me remain astonished, attentive, and desirous to hear her longer. Wherefore, after a while, I said: <q> O most effectual refreshment of wearied minds, how have I been comforted with thy weighty sentences and pleasing music! Insomuch that I begin to think myself not unable to encounter the assaults of fortune. Wherefore, I am not now afraid, but rather earnestly desire to know those remedies, which before thou toldest me were too sharp.</q> To which she answered: <q> I perceived as much as thou sayest, when I saw thee hearken to my speeches with so great silence and attention, and I expected this disposition of thy mind, or rather more truly caused it myself. For the remedies which remain are of that sort that they are bitter to the taste, but being inwardly received wax sweet.
 <pb id="p.227"/>
 And whereas thou sayest that thou art desirous to hear; how much would this desire increase if thou knewest whither we go about to bring thee!</q>
                   <q>Whither?</q> quoth I. <q> To true felicity,</q> quoth she, <q> which thy mind also dreameth of, but thy sight is so dimmed with phantasies that thou canst not behold it as it is.</q> Then I beseeched her to explicate without delay wherein true happiness consisteth. To which she answered: <q> I will willingly do so for thy sake, but first I will endeavour to declare in words and to give shape to that which is better known unto thee, that, having thoroughly understood it, by reflecting of the contrary thou mayest discover the type of perfect blessedness.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1m">
                <p>
                   <quote rend="blockquote">
                      <lb/>He that a fruitful field will sow.
@@ -647,7 +653,7 @@ And whereas thou sayest that thou art desirous to hear; how much would this desi
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2p">
                <p>Then, for a while looking steadfastly upon the ground, and, as it were, retiring herself to the most
 <pb id="p.229"/>
 secret seat of her soul, she began in this manner: <q>
@@ -660,7 +666,7 @@ melancholy, or subject to grief and trouble, when even in smallest matters we de
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2m">
                <p>
                   <quote rend="blockquote">
                      <lb/>How the first reins of all things guided are
@@ -708,7 +714,7 @@ melancholy, or subject to grief and trouble, when even in smallest matters we de
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3p">
                <p>
                   <q>You also, O earthly creatures, though slightly and as it were in a dream acknowledge your beginning, and though not perspicuously yet in some sort behold that true end of happiness, so that the intention of nature leadeth you to the true good, and manifold error withdraweth you from it. For consider whether those things, by which men think to obtain happiness, can bring them to their desired end. For if either money, or honour, or any of the rest be of that quality that they want nothing which
 <pb id="p.237"/>
@@ -728,7 +734,7 @@ quoth I. <q>But he should not need that help, unless he had money which he might
                   <q>There is no doubt of that,</q> quoth I. <q> Now then the matter is fallen out quite contrary; for riches, which are thought to suffice of themselves, rather make men stand in need of other helps. And after what manner do riches expel penury? For are not rich men hungry? Are they not thirsty? Or doth much money make the owners senseless of cold in winter? But thou wilt say, wealthy men have wherewithal to satisfy their hunger, slake their thirst, and defend themselves from cold. But in this sort, though want may be somewhat relieved by wealth, yet it cannot altogether be taken away. For if ever gaping and craving it be satiated by riches, there must needs always remain something to be satiated. I omit, that to nature very little, to covetousness nothing is sufficient. Wherefore it riches can neither remove wants, and cause some themselves, why imagine you that they can cause sufficiency.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Although the rich man from his mines of gold
@@ -741,7 +747,7 @@ quoth I. <q>But he should not need that help, unless he had money which he might
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4p">
                <p>But dignities make him honourable and reverend on whom they light. Have offices that force to plant virtues and expel vices in the minds of those
 <pb id="p.241"/>
 who have them? But they are not wont to banish,
@@ -775,7 +781,7 @@ unto it sometime receiveth and sometime loseth bis value at the users discretion
 
 </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Though fierce and lustful Nero did adorn
@@ -789,7 +795,7 @@ unto it sometime receiveth and sometime loseth bis value at the users discretion
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5p">
                <p>But can kingdoms and the familiarity of kings make a man mighty? Why not, when their felicity lasteth always? But both former and present times
 <pb id="p.245"/>
 are full of examples that many kings have changed their happiness with misery. O excellent power,
@@ -799,7 +805,7 @@ could compass that which they desired. Wherefore what power is this that the pos
 
 </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Who would be powerful, must
@@ -818,14 +824,14 @@ could compass that which they desired. Wherefore what power is this that the pos
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6p">
                <p>As for glory, how deceitful it is oftentimes, and dishonest! For which cause the tragical poet deservedly exclaimeth: <q> O glory, glory, thou hast raised to honour and dignity myriads of worthless mortals!</q> a For many have often been much spoken of through the false opinions of the common people. Than which what can be imagined more vile? For
 <pb id="p.249"/>
 those who are falsely commended must needs blush at their own praises. Which glory though it be gotten by deserts, yet what adds it to a wise man s conscience who measureth his own good, not by popular rumours, but by his own certain knowledge? And if it seemeth a fair thing to have dilated our fame, consequently we must judge it a foul thing not to have it extended. But since, as I showed a little before, there must needs be many nations to which the fame of one man cannot arrive, it cometh to pass that he whom thou esteemeth glorious, in the greater part of the world seemeth to have no glory at all. And here now I think popular glory not worth the speaking of, which neither proceeded, from judgment, nor ever hath any firmness. Likewise, who seeth not what a vain and idle thing it is to be called noble? Which insofar as it concerneth fame, is not our own. For nobility seemeth to be a certain praise proceeding from our parents deserts. But if praising cause th fame, they must necessarily be famous who are praised. Wherefore the fame of others, if thou hast none of thine own, maketh not thee renowned. But if there be anything good in nobility, I judge it only to be this, that it imposeth a necessity upon those which are noble, not to suffer their nobility to degenerate from the virtue of their ancestors.
 
 </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6m">
                <p>The general race of men from a like birth is born. All things one Father have, Who doth them all adorn, Who gave the sun his rays, and the pale moon her horn,
 <pb id="p.251"/>
                   <quote rend="blockquote">
@@ -839,12 +845,12 @@ those who are falsely commended must needs blush at their own praises. Which glo
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7p">
                <p>Now what should I speak of bodily pleasures, the desire of which is full of anxiety, and the enjoying of them breeds repentance? How many diseases, how intolerable griefs bring they forth in the bodies of their possessors, as it were the fruits of their own wickedness! I know not what sweetness their beginnings have, but whosoever will remember his lusts shall understand that the cud of pleasure is sadness, Which if it be able to cause happiness, there is no reason why beasts should not be thought blessed, whose whole intention is bent to supply their corporal wants. That pleasure which proceedeth from wife and children should be most honest; but it was too naturally spoken, that some tormentor invented children, whose condition, whatsoever it be, how biting it is, I need not tell thee, who hast had experience heretofore, and art not now free from care. In which I approve the opinion of Euripides, who said that they which had no children are happy by being unfortunate. a
 <pb id="p.253"/>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7m">
                <p>
                   <quote rend="blockquote">
                      <lb/>All pleasure hath .this property,
@@ -857,14 +863,14 @@ those who are falsely commended must needs blush at their own praises. Which glo
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="8">
+            <div2 type="chapter" n="8p">
                <p>Wherefore there is no doubt but that these ways to happiness are only certain by-paths, which can never bring any man thither whither they promise to lead him. And with how great evils they are beset, I will briefly show. For what? Wilt thou endeavour to gather money? But thou shalt take it away from him who hath it. Wilt thou excel in dignities? Thou shalt crouch to the giver, and thou who desirest to surpass others in honour shalt become vile by thy baseness in begging. Wishest thou for power? ',non shalt be in danger of thy subjects treacheries. Seekest Ilion for glory? But, drawn into many dangers, thou shalt lose thy safety. Wilt thou live a voluptuous life? But who would not despise and neglect the service of so vile and frail a thing as his body? Now they who boast of the liabilities of their body, upon how unsteadfast a possession do they ground themselves! For can you be bigger than elephants, or stronger than bulls? Or swifter than tigers? Look upon the spice, firmness, and speed v motion of the heavens, and cease at length to have in admiration these base things. Which heavens are not more to be admired for these
 <pb id="p.255"/>
 qualities than for the manner of their government. As for the glittering of beauty, how soon and swiftly doth it vanish away! As suddenly decaying and changing as the frail flowers in the spring. And if, as Aristotle saith, men had Lynceus's eyes, that they could see through stone walls, would not they judge that body of Alcibiades, seeming outwardly most fair, to be most foul and ugly by discovering his entrails? Wherefore not thy nature but the weakness of the beholders' eyes maketh thee seem fair. But esteem the goods of the body as much as you will, so that yon acknowledge this, that whatsoever you admire may be dissolved with the burning of an ague of three days. Out of which we may briefly collect this sum; that these goods, which can neither perform that they promise, nor are perfect by having all that is good, do neither, as so many paths, lead men to happiness, nor make men happy of themselves.
 
 </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="8m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Alas, bow ignorance makes wretches stray
@@ -894,7 +900,7 @@ qualities than for the manner of their government. As for the glittering of beau
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="9">
+            <div2 type="chapter" n="9p">
                <p>
                   <q> Let it suffice that we have hitherto discovered the form of false felicity, which if thou hast plainly seen, order now requireth that we show thee in what true happiness consisteth.</q>
                   <q>I see,</q> quoth I, <q>that neither sufficiency by riches, nor power by kingdoms, nor respect by dignities, nor renown by glory, nor joy can be gotten by pleasures.</q>
@@ -937,7 +943,7 @@ which can truly perform any one of these because they are all one, I acknowledge
                   <q>Thou sayest rightly, quoth she, and withal sung in this sort.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="9">
+            <div2 type="chapter" n="9m">
                <p>b
 <quote rend="blockquote">
                      <lb/>O Thou, that dost the world in lasting order guide,
@@ -974,7 +980,7 @@ which can truly perform any one of these because they are all one, I acknowledge
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="10">
+            <div2 type="chapter" n="10p">
                <p>
                   <q>Wherefore since thou hast seen what is the form of perfect and imperfect good, now I think we must show in what this perfection of happiness is placed. And inquire first whether there can be any such good extant in the world, as thou hast defined; lest, contrary to truth, we be deceived with an empty show of thought. But it cannot be denied that there is some such thing extant which is as it were the fountain of all goodness. For all that is said to he imperfect is so termed for the want it hath of perfection. Whence it followeth that if in any kind we find something imperfect, there must needs he something perfect also in the same kind. For if we take away perfection we cannot so much as devise how there should be any imperfection. For the nature of things began not from that which is defective and not complete, but, proceeding from entire and absolute, falleth into that which is extreme and enfeebled. But as we showed before, there be a certain imperfect felicity of frail goods, it cannot be doubted but that there is some solid and perfect happiness also.</q>
                   <q>Thou hast,</q> quoth I, <q>concluded most firmly and most truly.</q>
@@ -1019,7 +1025,7 @@ behind.</q>
                   <q>It is so,</q> quoth I. <q>We may then securely conclude that the substance of God consisteth in nothing else but in goodness.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="10">
+            <div2 type="chapter" n="10m">
                <p>a
 <quote rend="blockquote">
                      <lb/>Come hither, all you that are bound, 
@@ -1045,7 +1051,7 @@ behind.</q>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="11">
+            <div2 type="chapter" n="11p">
                <p>
                   <q>I consent,</q> quoth I, <q>for all is grounded upon most firm reasons</q>
                   <q> But what account wilt thou make,</q> quoth she, <q> to know what goodness itself is?</q>
@@ -1100,7 +1106,7 @@ showed that unity is the same as goodness.</q>
                   <q>What is that?</q> quoth I. <q> What the end of all things is,</q> quoth she. <q> For certainly it is that which is desired of all things, which since we have concluded to be goodness, we must also confess that goodness is the end of all things.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="11">
+            <div2 type="chapter" n="11m">
                <p>
                   <quote rend="blockquote">
                      <lb/>He that would seek the truth with thoughts profound
@@ -1124,7 +1130,7 @@ showed that unity is the same as goodness.</q>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="12">
+            <div2 type="chapter" n="12p">
                <p>Then I said that I did very well like of Plato? doctrine, for thou dost bring these things to my remembrance now the second time, first, because I lost their memory by the contagion of my body, and after when I was oppressed with the burden of grief. <q>If,</q> quoth she, <q>thou reflectest upon that which heretofore hath been granted, thou wilt not be far from remembering that which in the beginning thou confessedst thyself to be ignorant of.</q>
                   <q>What?</q> quoth I. <q>By what government,</q> quoth she, <q>the world is ruled,</q>
                   <q>I remember,</q> quoth I, <q>that I did confess my ignorance, but though I foresee what thou wilt say, yet I desire to hear it more plainly from thyself.</q>
@@ -1169,7 +1175,7 @@ it doth roll about the moving orb of things, while it keepeth itself immovable. 
                   <pb id="p.295"/>
                </p>
             </div2>
-            <div2 type="chapter" n="12">
+            <div2 type="chapter" n="12m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Happy is be that can behold
@@ -1238,7 +1244,7 @@ it doth roll about the moving orb of things, while it keepeth itself immovable. 
             </div2>
          </div1>
          <div1 type="book" n="4">
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1p">
                <p>When Philosophy had sung these verses with s soil and sweet voice, observing due dignity and gravity in her countenance and gesture, I, not having altogether forgotten my inward grief, interrupted her speech which she was about to continue, and said: <q>O thou who bringest us to see true light, those things which hitherto thou hast treated of have manifestly appeared both to be divine when contemplated apart, and invincible when supported by thy reasons, and what thou hast uttered, though the force of grief had made me forget it of late, yet heretofore I was not altogether ignorant of it. But this is the chiefest cause of my sorrow, that since the governor of all things is so good, there can either be any evil at all, or that it pass unpunished. Which alone I beseech thee consider, how much admiration it deserveth. But there is another greater than
 <pb id="p.301"/>
 this; for wickedness bearing rule and sway, virtue is not only without reward, but lieth also trodden under the wicked's feet, and is punished instead of vice. That which things should be done in the kingdom of God, who knoweth all things, can do all things, but will do only that which is good, no man can sufficiently admire nor complain.</q>
@@ -1246,7 +1252,7 @@ To which she answered: <q>It were indeed infinitely strange, and surpassing all 
                   <pb id="p.303"/>
                </p>
             </div2>
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1m">
                <p>
                   <quote rend="blockquote">
                      <lb/>For I have swift and nimble wings which will ascend
@@ -1279,7 +1285,7 @@ order set.
                   </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2p">
                <p>a
 <q> Oh!</q> quoth I. <q> How great things dost thou promise! And I doubt not but thou canst perform them, wherefore stay me not now that thou hast stirred up my desires.</q>
                   <q>First then,</q> quoth she, <q>
@@ -1335,7 +1341,7 @@ any then,</q> quoth she, <q>that think that men can do all things?</q>
 <pb id="p.315"/>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2m">
                <p>
                   <quote rend="blockquote">
                      <lb/>The kings whom we behold
@@ -1362,7 +1368,7 @@ any then,</q> quoth she, <q>that think that men can do all things?</q>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3p">
                <p>Seest thou then in what mire wickedness wallows, and how clearly honesty shineth? By which it is manifest that the good are never without rewards, nor the evil without punishments. For in all things that are done that for which anything is done may deservedly seem the reward of that action, as to him that runneth a race, the crown for which he runneth is proposed as a reward. But we have showed that blessedness is the selfsame goodness for which all
 <pb id="p.317"/>
 things are done. Wherefore this goodness is proposed as a common reward for all human actions, and this cannot be separated from those who are good. For lie shall not rightly be any longer called good, who wanteth goodness; wherefore virtuous manners are not left without their due rewards. And how much so ever the evil do rage, yet the wise man s crown will not fade nor wither. For others wickedness depriveth not virtuous minds of their proper glory. But if he should rejoice at anything which he hath from others, either he who gave it, or any other might take it away. But because every man s virtue is the cause of it, then only he shall want his reward when he leaveth to be virtuous. Lastly, since every reward is therefore desired because it is thought to be good, who can judge him to be devoid of reward, which hath goodness for his possession? But what reward hath he? The most beautiful and the greatest that can be. For remember that corollarium a which I presented thee with a little before, as with a rare and precious jewel, and infer thus: Since that goodness itself is happiness, it is manifest that all good men even by being good are made happy. But we agreed that happy men are gods. Wherefore the reward of good men, which no time can waste, no man's power diminish, no man's wickedness obscure, is to become gods. Which things being so, no wise man can any way doubt of the inseparable punishment of the evil. For since goodness and evil, punishment and reward, are opposite the one to the other, those things which we see fall out in the reward of goodness must needs be answerable in a contrary manner in the punishment of evil. Wherefore as to honest men honesty itself is a reward, so
@@ -1374,7 +1380,7 @@ and unclean lusts? He is entangled in the pleasure of a stinking sow. So that he
 
 </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3m">
                <p>
                   <quote rend="blockquote">
                      <lb/>The sails which wise Ulysses bore,
@@ -1419,7 +1425,7 @@ and unclean lusts? He is entangled in the pleasure of a stinking sow. So that he
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4p">
                <p>Then said I, <q>I confess and perceive that thou affirmest not without cause that the vicious, though they keep the outward shape of men, are in their inward state of mind changed into brute beasts. But I would have had them whose cruel and wicked heart rageth to the harm of the good, restrained from executing their malice.</q>
                   <q>They are restrained,</q> quoth she, <q>as shall be proved in convenient place. But yet if this liberty which they seem to have be taken away, their punishment also is in great part released. For (which perhaps to some may seem incredible) evil men must necessarily be more unhappy when they have brought to pass their purposes than if they could not obtain what they desire. For if it be a miserable thing to desire that which is evil, it is more miserable to be able to perform it, without which the miserable will could
 <pb id="p.325"/>
@@ -1470,7 +1476,7 @@ quoth I. <q> Hence therefore, and for other causes grounded upon that principle 
                   <pb id="p.335"/>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Why should we strive to die so many ways,
@@ -1489,7 +1495,7 @@ wouldst thou give due desert to all?
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5p">
                <p>
                   <q> I see,</q> quoth I, <q> what felicity or misery is placed in the deserts of honest and dishonest men. But I consider that there is somewhat good or evil even in this popular fortune. For no wise man had rather live in banishment, poverty, and ignominy, than prosper in his own country, being rich, respected, and powerful. For in this manner Is the office of wisdom performed with more credit and renown, when the governors happiness is participated by the people about them; so chiefly because prisons, death, and other torments of legal punishments are rather due to pernicious subjects, for whom they were also ordained. Wherefore I much marvel why these things arc thus turned upside down, and the punishments of wickedness oppress the good, while
 <pb id="p.337"/>
@@ -1497,7 +1503,7 @@ evil men obtain the rewards of the good. And I desire to know of thee what may s
                   <q>It is no marvel,</q> quoth she, <q>if anything be thought temerarious and confused, when we know not the order it hath. Hut although thou beest ignorant of the causes why things be so disposed, yet because the world hath a governor, doubt not but all things are well done.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Who knows not bow the stars near to the poles do slide,
@@ -1524,7 +1530,7 @@ pass,
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6p">
                <p>
                   <q> It is true,</q> quoth I, <q> but since it is thy profession to explicate the causes of hidden things, and to unfold the reasons which are covered with darkness, I beseech thee vouchsafe to declare what conclusion thou drawest from these things, for this miracle troubleth me above all others.</q> Then she smiling a little said . <q>Thou invitest me to a matter which is most hardly found out, and can scarcely be sufficiently declared; for it is such that, one doubt being taken away, innumerable others, like the heads of Hydra, succeed, neither will they have any end unless a man repress them with the most lively fire of his mind, for in this matter are wont to be handled these questions: of the simplicity, of Providence; of the course of Fate; of sudden chances; of God's knowledge. and predestination. and of free will; which how weighty they are, thou thyself discerneth. But because it is part of thy cure to know these things also, though the time be short, yet we will endeavour to touch them briefly. But if the sweetness of verse delight thee, thou must forbear this pleasure for a while, until I propose unto thee some few arguments.</q>
                   <q> As it pleaseth thee,</q> quoth I.
@@ -1551,7 +1557,7 @@ wit or to explicate in speech all the frame of God's work. Be it sufficient that
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6m">
                <p>
                   <quote rend="blockquote">
                      <lb/>If thou would st see 
@@ -1624,7 +1630,7 @@ wit or to explicate in speech all the frame of God's work. Be it sufficient that
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7p">
                <p>
                   <q>Perceivest thou now what followeth of all that we have hitherto said?</q>
                   <q>What?</q> quoth I. <q>That,</q> quoth she, <q>all manner of fortune is good.</q>
@@ -1656,7 +1662,7 @@ rewrad of labour. For it is placed in your power to
 frame to yourselves what fortune you please. For all that seemeth unsavoury either exerciseth or correcteth or punisheth.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="7">
+            <div2 type="chapter" n="7m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Revengeful Atreus son did ten whole years employ
@@ -1692,7 +1698,7 @@ frame to yourselves what fortune you please. For all that seemeth unsavoury eith
             </div2>
          </div1>
          <div1 type="book" n="5">
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1p">
                <p>Having said thus, she began to turn her speech to treat and explicate certain other questions, when I interrupted her, saying: <q>Thy exhortation is very good, and well-seeming thy authority. .But I find it true by experience, as thou affirmedst, that the question of Providence is entangled with many other. For I desire to know whether thou thinkest chance to be anything at all, and what it is.</q>
                   <q>I make haste,</q> quoth she, <q>to perform my promise, and to show thee the way by which thou mayest return to thy country. But these other questions, though they be very profitable, yet they are somewhat from our purpose, and it is to be feared lest being wearied with digressions thou beest not able to finish thy direct journey.</q>
                   <q>There is no fear of that,</q> quoth I, <q>for it will be a great ease to me to understand
@@ -1724,7 +1730,7 @@ disposeth all things in their places and times.</p>
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="1">
+            <div2 type="chapter" n="1m">
                <p>
                   <quote rend="blockquote">
                      <lb/>In the Achaemenian rocks, where Parthians with their darts
@@ -1744,7 +1750,7 @@ disposeth all things in their places and times.</p>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2p">
                <p>
                   <q> I observe it,</q> quoth. I, <q>and I acknowledge it
 to be as thou sayest. But in this rank of coherent causes, have we any free-will, or doth the fatal chain fasten also the motions of men's minds?</q>
@@ -1756,7 +1762,7 @@ any by predestination disposeth of everything by
 their merits.</q>
                </p>
             </div2>
-            <div2 type="chapter" n="2">
+            <div2 type="chapter" n="2m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Sweet Homer a sings the praise
@@ -1779,7 +1785,7 @@ their merits.</q>
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3p">
                <p>Then I complained that I was now in a greater confusion and more doubtful difficulty than before. <q>What is that?</q> quoth she, <q>for I already con-
 <pb id="p.375"/>
 jecture what it is that troubleth thee.</q>
@@ -1801,7 +1807,7 @@ of things proceedeth from Providence, and human counsels can do nothing, it foll
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="3">
+            <div2 type="chapter" n="3m">
                <p>
                   <quote rend="blockquote">
                      <lb/>What cause of discord breaks the bands of love?
@@ -1839,7 +1845,7 @@ of things proceedeth from Providence, and human counsels can do nothing, it foll
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4p">
                <p>
                   <q> This,</q> quoth she, <q>
                      <p>is an ancient complaint of providence, vehemently pursued by Marcus Tullius in his Distribution of Divination, a and a thing which thou thyself hast made great and long search after. But hitherto none of you have used sufficient diligence and vigour in the explication thereof. The cause of which obscurity is for that the motion of human discourse cannot attain to the simplicity of the divine knowledge, which if by any means we could conceive, there would not remain any doubt at all; which I will endeavour to make manifest and plain when I have first explicated that which moveth thee. For I demand why thou thinkest their solution unsufficient, who think that free-will is not
@@ -1867,7 +1873,7 @@ universality, comprehendeth both imagination and sensible things without the use
                   </q>
                </p>
             </div2>
-            <div2 type="chapter" n="4">
+            <div2 type="chapter" n="4m">
                <p>
                   <quote rend="blockquote">
                      <lb/>Cloudy old prophets of the Porch a once taught.
@@ -1911,7 +1917,7 @@ universality, comprehendeth both imagination and sensible things without the use
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5p">
                <p>And if in sentient bodies, although the qualities of outward objects do move the organs of sense,
 <pb id="p.395"/>
 and the passion of the body goeth before the vigour of the active mind, provoking her action to itself and exciting the inward forms which before lay quiet; it, I say, in perceiving these corporal the mind taketh not her impression from passion, but by her own force judgeth of the passion itself, which is objected to the body; how much more do those powers exercise the action of their mind and not only follow the outward objects in their judgment, which are free; from all affections of the body. Wherefore in this sort have diverse and different substances knowledges of many kinds. For only sense destitute of all other means of knowledge is m those living creatures which are immovable, as some shell-fish and other which stick to stones and so are nourished; and imagination in movable beasts who seem to have some power to covet and fly. Hut reason belongeth only to mankind, as understanding to things divine. So that that knowledge is most
@@ -1923,7 +1929,7 @@ figures and shapes, and that we must give more credit to the firmer and more per
 
 </p>
             </div2>
-            <div2 type="chapter" n="5">
+            <div2 type="chapter" n="5m">
                <p>
                   <quote rend="blockquote">
                      <lb/>What several figures things that live upon the earth do keep! 
@@ -1953,7 +1959,7 @@ the sky,
 </quote>
                </p>
             </div2>
-            <div2 type="chapter" n="6">
+            <div2 type="chapter" n="6p">
                <p>
                   <q>Seeing, therefore, as bath been showed, all that is known is not comprehended by its own nature but by the power of him which comprehendeth if, let us see now, as much as we may, what is the state of the divine substance that we may also know what
 <pb id="p.401"/>

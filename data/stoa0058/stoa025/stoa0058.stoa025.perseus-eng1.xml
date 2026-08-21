@@ -39,6 +39,9 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -47,8 +50,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0058.stoa025.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa025.perseus-eng1">
          <pb id="p.3"/>
          <head>THE TRINITY IS ONE GOD NOT THREE GODS A TREATISE BY ANICIUS MANLIUS SEVERINUS BOETHIUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONSULS, PATRICIAN TO HIS FATHER-IN-LAW, QUINTUS AURELIUS MEMMIUS SYMMACHUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONSULS, PATRICIAN</head>
          <p>

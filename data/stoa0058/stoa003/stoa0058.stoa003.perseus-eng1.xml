@@ -54,6 +54,9 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -62,8 +65,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0058.stoa003.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-eng1">
          <pb id="p.39"/>
          <head>FROM THE SAME TO THE SAME HOW SUBSTANCES CAN BE GOOD IN VIRTUE OF THEIR EXISTENCE WITHOUT BEING ABSOLUTE GOODS</head>
          <p>

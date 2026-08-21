@@ -54,6 +54,9 @@
             <state unit="chapter" n="chunk"/>
             <state unit="section"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+         <citeStructure match="/TEI/text/body" use="@xml:base"/>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -62,8 +65,7 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0058.stoa028.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0058.stoa028.perseus-eng1">
          <pb id="p.33"/>
          <head>ANICIUS MANLIUS SEVERINUS BOETHIUS MOST HONOURABLE, OF THE ILLUSTRIOUS ORDER OF EX-CONULS, PATRICIAN TO JOHN THE DEACON WHETHER FATHER, SON, AND HOLY SPIRIT MAY BE SUBSTANTIALLY PREDICATED OF THE DIVINITY</head>
          <p>
