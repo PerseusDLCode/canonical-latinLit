@@ -76,7 +76,7 @@
 	<text>
 		<body>
 
-			<!--<div1 type="book" n="45">-->
+			<div type="book" n="45">
 
 			<pb n="vol.10.2.p.1"/>
 			<p><milestone unit="chapter" n="1"/><milestone unit="section" n="1"/>victoriae nuntii,
@@ -1943,7 +1943,7 @@
 				moratus circa urbem triginta haud amplius dies in regnum est profectus. <milestone
 					unit="section" n="21"/> actumque in Asia bellum <gap/>
 			</p>
-			<!--</div1>-->
+			</div>
 
 		</body>
 	</text>

@@ -86,7 +86,7 @@
          </editorialDecl>
          <refsDecl n="CTS" xml:id="CTS">
             <citeStructure match="/TEI/text/body" use="@xml:base">
-               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+               <citeStructure unit="book" delim=":" match=".//div[@type='book']" use="@n">
                   <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
                      <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
                   </citeStructure>
@@ -116,7 +116,7 @@
          <change when="2006-07-19" who="Gregory Crane">ed.</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:lang="lat">
       <body xml:base="urn:cts:latinLit:phi0914.phi001.perseus-lat2">
          <div n="1" type="part">
             <div type="index">

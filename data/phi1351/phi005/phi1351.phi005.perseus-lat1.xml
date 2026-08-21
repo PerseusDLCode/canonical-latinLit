@@ -43,7 +43,7 @@
       <refsDecl n="CTS" xml:id="CTS">
         <citeStructure match="/TEI/text/body" use="@xml:base">
           <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
-            <citeStructure match="milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+            <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
           </citeStructure>
         </citeStructure>
       </refsDecl>
