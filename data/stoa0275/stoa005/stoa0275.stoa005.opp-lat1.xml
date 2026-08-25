@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Adversus Judaeos Liber</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Adversus Judaeos Liber</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=344%3Bownerid=13510798896211811-362">HathiTrust</ref>
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa005.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.701"/>
-<head>ADVERSUS IUDAEOS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Proxime accidit, disputatio habita est Christiano et proselyto 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa005.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=344%3Bownerid=13510798896211811-362">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa005.opp-lat1">
+         <pb xml:id="v.2.p.701"/>
+         <head>ADVERSUS IUDAEOS.</head>
+         <div n="1" type="chapter">
+            <p>Proxime accidit, disputatio habita est Christiano et proselyto 
 Iudaeo. Alternis vicibus contentioso fune uterque diem in vesperam
 traxerunt. Obstrepentibus etiam quibusdam ex partibus singulorum
 nubilo quodam veritas obumbrabatur. Placuit ergo, quod
@@ -74,7 +77,7 @@ deputentur. Quamquam habeamus ipsum deum idoneum pollicitatorem <bibl n="Gen. XX
 et fidelem sponsorem, qui Abrahae promiserit quod in
 semine eius benedicerentur omnes nationes terrae, et quod ex
 <pb xml:id="v.2.p.702"/>
-<bibl n="Gen. XXV, 23."/> utero Rebeccae duo populi et duae gentes essent processurae, utique
+               <bibl n="Gen. XXV, 23."/> utero Rebeccae duo populi et duae gentes essent processurae, utique
 Iudaeorum, id est IsraÃ«lis, et gentium, id est nostrae.
 Uterque ergo populus et gens est appellatus, ne de nominis appellatione
 privilegium gratiae sibi quis audeat defendere. Duos etenim
@@ -107,12 +110,10 @@ conversus est quo IsraÃ«l, ut supra memoravimus, abscesserat.
 Sic namque populus minor, id est posterior, populum maiorem
 superavit, dum gratiam divinae dignationis consequitur, a qua
 IsraÃ«l est repudiatus.</p>
-<pb xml:id="v.2.p.703"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Igitur gradum conferamus, et summam quaestionis ipsius 
+            <pb xml:id="v.2.p.703"/>
+         </div>
+         <div n="2" type="chapter">
+            <p>Igitur gradum conferamus, et summam quaestionis ipsius 
 certis lineis determinemus. Cur etenim deus, universitatis conditor,
 mundi totius gubernator, hominis plasmator, universarum gentium
 sator, legem per Moysen uni populo dedisse credatur, et non
@@ -195,10 +196,9 @@ quoque, summi dei sacerdos, incircumcisus et non sabbatizans
 ad sacerdotium dei allectus est. Probat et Loth, frater
 Abrahae, quod pro meritis iustitiae sine legis observatione de Sodomitarum
 incendio sit liberatus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Sed Abraham, inquis, circumcisus est. Sed ante deo placuit 
+         </div>
+         <div n="3" type="chapter">
+            <p>Sed Abraham, inquis, circumcisus est. Sed ante deo placuit 
 quam circumcideretur, nec tamen sabbatizavit. Acceperat enim circumcisionem, <bibl n="Gen. XVII, 24."/>
 sed quae esset in signum temporis illius, non in
 salutis praerogativam. Denique sequentes patriarchae incircumcisi
@@ -288,12 +288,10 @@ Aegypti, dereliquit nos, et quid illi acciderit, nescimus. Et
 ideo nos, qui non populus dei retro, facti sumus populus eius
 accipiendo novam legem, supra dictam, et novam circumcisionem,
 ante praedictam.</p>
-<pb xml:id="v.2.p.708"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Sequitur itaque ut, quatenus circumcisionis carnalis et legis
+            <pb xml:id="v.2.p.708"/>
+         </div>
+         <div n="4" type="chapter">
+            <p> Sequitur itaque ut, quatenus circumcisionis carnalis et legis
 veteris abolitio expuncta suis temporibus demonstratur, ita sabbati
 quoque observatio temporaria fuisse demonstretur. Dicunt
 enim Iudaei quod a primordio sanctificaverit deus diem septimum,
@@ -349,10 +347,9 @@ sabbatorum meminerant esse praescriptum. Unde manifestum est
 ad tempus et praesentis causae necessitatem huiusmodi praecepta
 valuisse, et non ad perpetui temporis observationem huiusmodi
 legem eis deum ante dedisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Sic et sacrificia terrenarum oblationum et spiritalium sacrificiorum 
+         </div>
+         <div n="5" type="chapter">
+            <p>Sic et sacrificia terrenarum oblationum et spiritalium sacrificiorum 
 praedicata ostendimus, et quidem a primordio maioris filii,
 id est IsraÃ«l, terrena fuisse in Cain praeostensa sacrificia, et minoris
 filii Abel, id est populi nostri, sacrificia diversa demonstrata.
@@ -407,10 +404,9 @@ haec de manibus vestris? quoniam ab oriente sole usque in occidentem
 nomen meum clarificatum est in omnibus gentibus, dicit
 dominus. De spiritalibus vero sacrificiis addit dicens, Et in omni <bibl n="Mal. 1, 1(??)."/>
 loco sacrificia munda offerunt nomini meo, dicit dominus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Igitur cum manifestum sit et sabbatum temporale ostensum 
+         </div>
+         <div n="6" type="chapter">
+            <p>Igitur cum manifestum sit et sabbatum temporale ostensum 
 et sabbatum aeternum praedictum, circumcisionem quoque carnalem
 praedictam et circumcisionem spiritalem praeindicatam, legem
 quoque temporalem et legem aeternalem denuntiatam, sacrificia carnalia
@@ -442,10 +438,9 @@ comprimi legis veteris praecepta, et oriri debere novae legis exordia.
 Et in primis definiendum est non potuisse cessare legem
 antiquam et prophetas nisi venisset is qui per eandem legem et
 per eosdem prophetas venturus adnuntiabatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Igitur in isto gradum conseramus, an qui venturus adnuntiabatur
+         </div>
+         <div n="7" type="chapter">
+            <p> Igitur in isto gradum conseramus, an qui venturus adnuntiabatur
 Christus iam venerit, an venturus adhuc speretur. Quod
 ipsum ut probari possit, etiam tempora sunt nobis requirenda
 quando venturum Christum prophetae adnuntiaverunt, ut, si intra
@@ -513,10 +508,9 @@ aut natalium cuiusquam discreta merita; omnibus aequalis,
 
 omnibus rex, omnibus index, omnibus deus et dominus est. Nec
 dubites credere quod asseveramus, cum videas fieri.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Itaque requirenda tempora praedictae et futurae nativitatis 
+         </div>
+         <div n="8" type="chapter">
+            <p>Itaque requirenda tempora praedictae et futurae nativitatis 
 Christi et passionis eius et exterminii civitatis Hierusalem, id est
 vastationis eius. Dicit enim Daniel et civitatem sanctam et sanctum <bibl n="Dan. IX,26."/>
 exterminari cum duce venturo, et destrui pinnaculum usque ad
@@ -647,15 +641,13 @@ Martio, temporibus paschae, die VIII Calendarum Aprilium, die
 prima azymorum, quo agnum occiderunt ad vesperam, sicuti a
 Moyse fuerat praeceptum. Itaque omnis synagoga IsraÃ«l eum interfecit,
 <pb xml:id="v.2.p.720"/>
-
-<bibl n="Matth. XXVII. 25."/> dicentes ad Pilatum, cum vellet eum dimittere, Sanguis
+               <bibl n="Matth. XXVII. 25."/> dicentes ad Pilatum, cum vellet eum dimittere, Sanguis
 <bibl n="Io. XIX, 12."/> huius super nos et super filios nostros, et, Si hunc dimiseris,
 non es amicus Caesaris, ut adimpleri possent omnia quae de eo
 fuerant scripta.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Incipiamus igitur probare nativitatem Christi a prophetis esse
+         </div>
+         <div n="9" type="chapter">
+            <p> Incipiamus igitur probare nativitatem Christi a prophetis esse
 <bibl n="Ies. VII, 13 sqq. VIII, 4."/> nuntiatam. Sicut Esaias praedicat: Audite domus David, non pusillum
 vobis certamen cum hominibus, quoniam deus praestat
 agonem, propter hoc ipse deus dabit vobis signum. Ecce virgo
@@ -875,12 +867,10 @@ linguae solventur, et claudus saliet, velut cervus, et cetera.
 Quae operatum Christum nec vos diffitemini, utpote qui dicebatis
 <bibl n="Io. V, 18."/> quod propter opera eum non lapidaretis, sed quoniam ista sabbatis
 faciebat.</p>
-<pb xml:id="v.2.p.727"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>De exitu plane passionis eius ambigitis, negantes passionem 
+            <pb xml:id="v.2.p.727"/>
+         </div>
+         <div n="10" type="chapter">
+            <p>De exitu plane passionis eius ambigitis, negantes passionem 
 crucis in Christum praedicatam, et argumentantes insuper non
 esse credendum, ut ad id genus mortis exposuerit deus filium suum,
 quod ipse dixit: Maledictus omnis qui pependerit in ligno. Sed <bibl n="Deut. XXI, 23."/>
@@ -1024,10 +1014,9 @@ efficere, quae media die factae sunt, atque ita dies festos vestros
 convertit deus in luctum, et cantica vestra in lamentationem. Post
 passionem enim Christi etiam captivitas vobis et dispersio obvenit,
 praedicta ante per spiritum sanctum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Nam et pro istis meritis vestris cladem vestram futuram Ezechiel 
+         </div>
+         <div n="11" type="chapter">
+            <p>Nam et pro istis meritis vestris cladem vestram futuram Ezechiel 
 nuntiat, et non solum in isto saeculo, quae iam evenit, sed
 in die retributionis, quae subsequetur. Qua clade nemo liberabitur,
 nisi qui passione Christi, quem respuitis, fuerit obsignatus.
@@ -1098,10 +1087,9 @@ hoc quoque paria esse scripturis divinis negare non possint, ut
 quae post Christum futura praecanebantur adimpleta cognoscantur.
 Aut, nisi ille venisset post quem habebant expungi quae nuntiabantur,
 quae completa sunt etiam probarentur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Aspice universas nationes de voragine erroris humaui exinde 
+         </div>
+         <div n="12" type="chapter">
+            <p>Aspice universas nationes de voragine erroris humaui exinde 
 emergentes ad dominum deum creatorem et Christum eius, et si
 audes negare prophetatum, statim tibi promissio patris occurrit in
 psalmis, dicens: Filius meus es tu, ego hodie genui te; pete a me, <bibl n="Ps. II, 7sq."/>
@@ -1117,10 +1105,9 @@ liberare, et de domo carceris, id est mortis, sedentes in tenebris,
 
 ignorantiae scilicet. Quae si per Christum eveniunt, non in alium
 erunt prophetata quam per quem expuncta consideramus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Igitur quoniam filii IsraÃ«l adfirmant nos errare recipiendo Christum,
+         </div>
+         <div n="13" type="chapter">
+            <p> Igitur quoniam filii IsraÃ«l adfirmant nos errare recipiendo Christum,
 qui iam venit, praescribamus eis ex ipsis scripturis iam
 venisse Christum, qui praedicabatur. Quamvis ex temporibus Danielis
 praedicantis probaverimus iam venisse Christum, qui nuntiabatur.
@@ -1186,8 +1173,7 @@ qui de saeculi calamitatibus extracti, in quo commorabamur siti
 pereuntes, id est verbo divino privati, ligni passionis Christi
 aquam baptismatis potantes fide, quae est in eum, reviximus, a
 <pb xml:id="v.2.p.736"/>
-
-<bibl n="Ier. II, 10 sq."/> qua fide IsraÃ«l excidit, per Hieremiam dicentem: Mittite, et
+               <bibl n="Ier. II, 10 sq."/> qua fide IsraÃ«l excidit, per Hieremiam dicentem: Mittite, et
 interrogate nimis, si facta sunt talia, si mutabunt gentes deos
 suos, et isti non sunt dii; populus autem meus mutavit gloriam
 suam, ex que nihil proderit eis; expavit caelum super isto. Et
@@ -1295,10 +1281,9 @@ patientur. Et ubi tunc filia Sion relinquenda, quae nulla hodie
 est? ubi civitates exurendae, quae iam in tumulis exustae sunt? ubi
 dispersio gentis, quae iam extorris? Redde statum Iudaeae, quem
 Christus inveniat, et alium contende venire.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Discite nunc ex abundantia erroris vestri ducatum. Duos dicimus 
+         </div>
+         <div n="14" type="chapter">
+            <p>Discite nunc ex abundantia erroris vestri ducatum. Duos dicimus 
 Christi habitus a prophetis demonstratos totidem adventus eius
 praenotatos. Unum in humilitate, utique primum, cum tanquam
 ovis ad victimam duci habebat, et tanquam agnus ante tondentem
@@ -1395,10 +1380,8 @@ populi hodie ad Christum confugiunt, quem retro ignorabant. Non
 potes futurum contendere quod vides fieri. Haec aut prophetata
 nega, cum coram videntur, aut adimpleta, cum leguntur, aut si non
 negas utrumque, in eo erunt adimpleta in quem sunt prophetata.</p>
-<pb xml:id="v.2.p.742"/>
-</div>
-
-</div></body></text>
-
-
+            <pb xml:id="v.2.p.742"/>
+         </div>
+      </body>
+   </text>
 </TEI>

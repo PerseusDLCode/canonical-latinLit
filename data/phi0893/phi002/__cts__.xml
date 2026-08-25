@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0893" projid="latinLit:phi002" urn="urn:cts:latinLit:phi0893.phi002" xml:lang="lat">
   <ti:title xml:lang="lat">Carmen Saeculare</ti:title>
   
@@ -5,4 +6,4 @@
     <ti:label xml:lang="lat">Carmen Saeculare</ti:label>
     <ti:description xml:lang="eng">Horace, Odes and Epodes. Shorey, Paul,editor; Laing, Gordon Jennings, joint editor. Chicago: B.H. Sanborn and Company, 1919.</ti:description>
   </ti:edition>
-</ti:work>
+<ti:genre confidence="high">verse-stichic</ti:genre></ti:work>

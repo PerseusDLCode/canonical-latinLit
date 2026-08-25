@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Scorpiace</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Scorpiace</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=525%3Bownerid=13510798896211526-537">HathiTrust</ref>                                                                                                                                  
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa030.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.495"/>
-<head>DE SCORPIACE.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Magnum de modico malum scorpio terra suppurat. Tot 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa030.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=525%3Bownerid=13510798896211526-537">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa030.opp-lat1">
+         <pb xml:id="v.1.p.495"/>
+         <head>DE SCORPIACE.</head>
+         <div n="1" type="chapter">
+            <p>Magnum de modico malum scorpio terra suppurat. Tot 
 venena quot genera, tot pernicies quot et species, tot dolores quot
 et colores. Nicander scribit et pingit. Et tamen unus omnium
 <pb xml:id="v.1.p.496"/>
@@ -134,10 +137,9 @@ interpretantes tam dulce in amarum quam lucem in
 tenebras reformant, atque ita miserrimam hanc vitam illi beatissimae
 praevertendo tam amarum pro dulce quam tenebras pro
 luce supponunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Sed nondum de bono martyri, nisi de debito primum, nec ante 
+         </div>
+         <div n="2" type="chapter">
+            <p>Sed nondum de bono martyri, nisi de debito primum, nec ante 
 de utilitate eius, quam de necessitate discendum. Auctoritas divina
 praecedit, an tale quid voluerit atque mandaverit deus, ut qui negant
 bonum non suadeantur accommodum, nisi cum subacti fuerint.
@@ -231,10 +233,9 @@ habent nec vident, aures habent nec audiunt, nares habent nec <bibl n="CXV, 4 sq
 odorantur, os, nec loquuntur, manus, nec contrectant, pedes,
 nec ingrediuntur. Similes erunt illis qui ea faciunt et qui fidunt
 in illis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Nec putem disceptandum, an digne deus prohibeat nomen et 
+         </div>
+         <div n="3" type="chapter">
+            <p>Nec putem disceptandum, an digne deus prohibeat nomen et 
 honorem suum mendacio addici, an digne quos ab errore superstionis
 avulserit rursus in Aegyptum regredi nolit, an digne a se
 non patiatur absistere quos sibi adlegit. Ita nec illud expectabit
@@ -281,10 +282,9 @@ paene annales Critarum et deinceps Regum reservatis gentium
 circumcolarum viribus bello et captivitate et iugo Alloghylorum
 iram dispensavit Israël, quotienscumque ab illo maxime in idololatrian
 exorbitaverunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Hanc igitur si a primordio constal et prohibitam, de tot tantisque 
+         </div>
+         <div n="4" type="chapter">
+            <p>Hanc igitur si a primordio constal et prohibitam, de tot tantisque 
 praeceptis, et numquam inpune commissam, de tot tantisque
 documentis, nec ullum tam superbum crimen deputari apud
 deum, quam huiusmodi transgressionem, ultro intellegere debemus
@@ -318,12 +318,10 @@ sacramento militans ab hostibus provocor. Par sum illis, si illis
 manus dedero. Hoc defendendo depugno in acie, vulneror, concidor.
 occidor. Quis hunc militi suo exitum voluit, nisi qui tali
 eum sacramento consignavit?</p>
-<pb xml:id="v.1.p.507"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Habes igitur dei mei voluntatem. Occursum est huic plagae. 
+            <pb xml:id="v.1.p.507"/>
+         </div>
+         <div n="5" type="chapter">
+            <p>Habes igitur dei mei voluntatem. Occursum est huic plagae. 
 In alium ictum consideremus de voluntatis qualitate. Longum est,
 ut deum meum bonum ostendam, quod iam a nobis didicerunt
 Marcionitae. Deum interim sufficit dici, ut necesse sit bonum
@@ -390,10 +388,9 @@ et cum mori praecipit medicus ille, veternum mortis excludit. Quid
 gravatur nunc pati homo ex remedio quod non est tunc gravatus
 pati ex vitio? Displicet occidi in salutem cui non displicuit
 occidi in perditionem? Nauseabit ad antidotum qui hiavit ad venenum?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sed si certaminis nomine deus nobis martyria proposuisset, 
+         </div>
+         <div n="6" type="chapter">
+            <p>Sed si certaminis nomine deus nobis martyria proposuisset, 
 per quae cum adversario experiremur, ut, a quo libenter homo
 elisus est, eum iam constanter elidat, hic quoque liberalitas magis
 quam acerbitas dei praeest. Evulsum enim hominem de diaboli
@@ -465,10 +462,9 @@ Et tamen ausim dicere, si et homo regnum dei, si homo certam
 salutem, si et homo secundam regenerationem. Nulli compensatio
 invidiosa est in qua aut gratiae aut iniuriae communis
 est ratio.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Incutiat adhuc scorpius homicidam deum ventilans, horrebo
+         </div>
+         <div n="7" type="chapter">
+            <p> Incutiat adhuc scorpius homicidam deum ventilans, horrebo
 plane spurcum blasphemiae flatum de haeretico ore foetentem,
 <pb xml:id="v.1.p.513"/>
 
@@ -500,7 +496,7 @@ non sono solo sapiunt, sed et sensu, nec auribus tantummodo
 audienda sunt, sed et mentibus. Crudelem deum, qui non intellegit,
 credit. Quamquam et non intellegenti posita sententia est,
 quae temeritatem cohibeat aliter intellegendi. Quis enim, inquit, <bibl n="Rom. XI, 33."/>
-<pb xml:id="v.1.p.514"/>
+               <pb xml:id="v.1.p.514"/>
 
 cognovit sensum domini? aut quis illi consiliarius fuit, qui eum
 instruat, aut viam intellegentiae quis demonstravit illi? Sed enim
@@ -513,10 +509,9 @@ nomine martyria sibi depostulasset, quis illi exprobrasset funestam
 religionem et lugubres ritus et aram rogum et pollincterem
 sacerdotem, et non beatum amplius reputasset quem deus
 comedisset?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Unum igitur gradum insistimus et in hoc solum provocamus,
+         </div>
+         <div n="8" type="chapter">
+            <p> Unum igitur gradum insistimus et in hoc solum provocamus,
 an praecepta sint a deo martyria, ut credas ratione praecepta, si
 praecepta cognoveris, quia nihil deus non ratione praeceperit. Siquidem
 <bibl n="Ps. CXV, 5."/> honorata est apud illum mors religiosorum ipsius, ut canit
@@ -545,7 +540,7 @@ imaginis regiae urbem urgeret officio, non ignoraverunt quid
 fides, quae sola in illis captiva non fuerat, exigeret, moriendum
 scilicet adversus idololatrian. Meminerant enim et Hieremiae
 scribentis ad eos, quibus illa captivitas imminebat: Et nunc vide- <bibl n="Baruch. VI, 3 sq."/>
-<pb xml:id="v.1.p.516"/>
+               <pb xml:id="v.1.p.516"/>
 
 bitis deos Babyloniorum aureos et argenteos et ligneos portari
 super humeros ostentantes nationibus timorem. Cavete igitur, ne
@@ -569,10 +564,9 @@ et praesentibus tunc et posteris deinceps commendari veritatem
 oportebat, pro qua fidem diceret passio ipsorum defensorum eius,
 quia nemo voluisset occidi, nisi compos veritatis. Talia a primordio
 et praecepta et exempla debitricem martyrii fidem ostendunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Superest, ne antiquitas suum forte habuerit sacramentum,
+         </div>
+         <div n="9" type="chapter">
+            <p> Superest, ne antiquitas suum forte habuerit sacramentum,
 novitatem Christianam recensere, quasi et de deo aliam ac
 proinde disciplina quoque aemulam, cuius sophia filios suos iugulare
 non norit. Plane, alia in Christo et divinitas et voluntas
@@ -675,10 +669,9 @@ me confusus fuerit coram hominibus, et ego confundar eum coram
 patre meo, qui est in caelis. Sciebat enim a confusione vel
 maxime formari negationem; mentis statum in fronte consistere;
 priorem esse pudoris quam corporis plagam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Qui vero non hic, id est, non intra hunc ambitum terrae nec
+         </div>
+         <div n="10" type="chapter">
+            <p> Qui vero non hic, id est, non intra hunc ambitum terrae nec
 per hunc commeatum vitae nec apud homines huius communis
 naturae confessionem putant constitutam, quanta praesumptio est
 adversus omnem ordinem rerum in terris istis et in vita ista et
@@ -795,10 +788,9 @@ parentes, et mori eos faciant. Et qui sustinuerit in finem, iste
 sit salvus. Adeo totus hic ordo dominicae machaerae non in
 caelum missae, sed in terram, illic constituit etiam confessionem,
 quae in finem sustinendo passura est mortem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Eadem igitur forma cetera quoque ad martyrii statum pertinere 
+         </div>
+         <div n="11" type="chapter">
+            <p>Eadem igitur forma cetera quoque ad martyrii statum pertinere 
 defendimus. Qui pluris, inquit, fecerit etiam animam suam quam <bibl n="Luc. XIV, 26. Matth. X, 39."/>
 me, non est me dignus, id est qui maluerit vivere me negando
 quam mori confitendo, et, Qui animam suam invenerit, perdet
@@ -852,10 +844,9 @@ videri, cum evenerint, si aliter praedicantur, quam evenire
 habent. Et quomodo credentur quae non erunt praedicata quomodo
 eveniunt? Ita haeretici quae praedicantur non ut probata
 sunt credendo ea quae nec praedicata sunt credunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Quis nunc medullam scripturarum magis nosset, quam ipsa 
+         </div>
+         <div n="12" type="chapter">
+            <p>Quis nunc medullam scripturarum magis nosset, quam ipsa 
 Christi schola? quos et sibi discipulos dominus adoptavit omnia
 utique edocendos, et nobis magistros ordinavit omnia utique docturos.
 Cui potius figuram vocis suae declarasset, quam cui effigiem
@@ -863,8 +854,7 @@ gloriae suae revelavit, Petro, Iohanni, Iacobo et postea
 Paulo, quem paradisi quoque compotem fecit ante martyrium? An
 et illi aliter, quam sentiunt, scribunt, fallaciae magistri, non veri-
 <pb xml:id="v.1.p.528"/>
-
-<bibl n="I Petr. II, 20sq."/> tatis? Petrus quidem ad Ponticos, Quanta enim, inquit, gloria,
+               <bibl n="I Petr. II, 20sq."/> tatis? Petrus quidem ad Ponticos, Quanta enim, inquit, gloria,
 si non ut delinquentes puniamini sustinetis? Haec enim gratia est,
 in hoc et vocati estis, quoniam et Christus passus est pro nobis,
 relinquens vobis exemplum semetipsum, uti adsequamini vestigia
@@ -920,10 +910,9 @@ enim reprobos, immo ante omnes, timidi. Timidis autem, inquit,
 
 dehinc ceteris particula in stagno ignis et sulphuris. Sic timor,
 in epistola eius quem dilectio foras abicit, habet poenam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Paulus vero apostolus de persecutore, qui primus ecclesiae
+         </div>
+         <div n="13" type="chapter">
+            <p> Paulus vero apostolus de persecutore, qui primus ecclesiae
 sanguinem fudit, postea gladium stilo mutans et convertens machaeram
 in aratrum, lupus rapax Benianim, dehinc ipse adferens
 escam secundum Iacob, qualiter martyria iam et sibi optabilia commendat!
@@ -989,10 +978,9 @@ sanae mentis. Virtute enim patimur ex dilectione in deum, et sana
 mente, cum ob innocentiam patimur. Sed et sicubi tolerantiam
 praecipit, quibus magis eam quam passionibus prospicit? sicubi ab
 idololatria divellit, quid ei magis quam martyria praevellit?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Plane monet Romanos omnibus potestatibus subici, quia non
+         </div>
+         <div n="14" type="chapter">
+            <p> Plane monet Romanos omnibus potestatibus subici, quia non
 <bibl n="Rom, XIII, 1 sqq."/> sit potestas nisi a deo, et quia non sine causa gladium gestet,
 et quia ministerium sit dei, sed et ultrix, inquit, in iram ei
 qui malum fecerit. Nam et praemiserat: Principes enim non sunt
@@ -1012,10 +1000,9 @@ honorandum, ut tamen tunc rex honoretur, cum suis rebus
 insistit, cum a divinis honoribus longe est; quia et pater et mater
 diligentur cum deo, non comparabuntur. Ceterum super deum
 diligere nec animam licebit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Nunc ergo et apostolorum litterae nobiles. Et nos usquequaque 
+         </div>
+         <div n="15" type="chapter">
+            <p>Nunc ergo et apostolorum litterae nobiles. Et nos usquequaque 
 simplices animae, et solummodo columbae, libenter errantes?
 Credo vivendi cupiditate. Ita vero sit, ut recedant a litteris
 suis sensus. Quae tamen passos apostolos scimus, manifesta
@@ -1055,12 +1042,11 @@ audierat diabolus a domino: Recede satana, scandalum mihi es. <bibl n="Matth. XV
 Scriptum est Dominum deum tuum adorabis, et illi soli servies.
 Sed et nunc audire debebit, quatenus multo post venena ista suffudit,
 nulli infirmorum facile nec sic nocitura, si qui hanc
-nostram ex fide praebiberit vel etiam superbiberit potionem.</p></div>
-<pb xml:id="v.1.p.536"/>
-
-<pb xml:id="v.1.p.537"/>
-
-<pb xml:id="v.1.p.538"/>
-</div></body></text>
-
+nostram ex fide praebiberit vel etiam superbiberit potionem.</p>
+         </div>
+         <pb xml:id="v.1.p.536"/>
+         <pb xml:id="v.1.p.537"/>
+         <pb xml:id="v.1.p.538"/>
+      </body>
+   </text>
 </TEI>

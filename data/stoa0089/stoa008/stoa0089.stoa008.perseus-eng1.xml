@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Against Eutropius</title>
+            <title>Against Eutropius</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,12 +41,21 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="book" delim="."/>
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="book" delim="."/>
+            <state unit="poem"/>
+         </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match="div2[@type='poem']" use="@n" unit="poem" delim="." n="chunk"/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -54,11 +63,10 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa008.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa008.perseus-eng1">
          <pb id="v.1.p.139" TEIform="pb"/>
          <div1 type="book" n="1" org="uniform" sample="complete" part="N">
-         <p>
+            <p>
 Let the world cease to wonder at the births of
 creatures half human, half bestial, at monstrous
 babes that affright their own mothers, at the howling
@@ -81,16 +89,16 @@ Niphates 2 once more let through a host of eastern
 barbarians to ravage our lands? Does a pestilence
 threaten us? Or shall no harvest repay the farmer?
 </p>
-         <p>What victim can expiate divine anger such as this?
+            <p>What victim can expiate divine anger such as this?
 </p>
-         <p>What offering appease the cruel altars? The consul's
+            <p>What offering appease the cruel altars? The consul's
 <pb id="v.1.p.141"/>
 own blood must cleanse the consular insignia, the
 monster itself must be sacrificed. Whatever it be
 that fate prepares for us and shows forth by such an
 omen, let Eutropius' death, I pray, avert it all.
 </p>
-         <p>Fortune, is thy power so all-embracing? What
+            <p>Fortune, is thy power so all-embracing? What
 is this savage humour of thine? To what lengths
 wilt thou sport with us poor mortals? If it was thy
 will to disgrace the consul's chair with a servile
@@ -105,7 +113,7 @@ thou canst number Eutropius' masters. How many
 owners has he had, in how many sale-catalogues has
 he appeared, how often has he changed his name!
 </p>
-         <p>How often has he been stripped while buyer consulted
+            <p>How often has he been stripped while buyer consulted
 doctor whether there lurked any flaw by reason
 of some hidden disease! All repented having bought
 him and he always returned to the slave-market
@@ -119,7 +127,7 @@ submit his neck, this slave, old in years but ever
 new to the house; there was no end to his servitude
 though many beginnings.
 </p>
-         <p>He is destined from his very cradle to bloody
+            <p>He is destined from his very cradle to bloody
 tortures; straight from his mother's womb he is
 hurried away to be made a eunuch; no sooner born
 <pb id="v.1.p.143"/>
@@ -133,15 +141,15 @@ the name of husband. Eutropius lay doubtful of
 life, and the severed sinews drew a numbness deep
 down into his furthest brain.
 </p>
-         <p>Are we to praise the hand that robbed an enemy
+            <p>Are we to praise the hand that robbed an enemy
 of his strength? Or shall we rather blame the fates?
 </p>
-         <p>It would have been better had he remained a man;
+            <p>It would have been better had he remained a man;
 his very disgrace has proved a blessing to him. Had
 he had his full manly vigour he would still have been
 a slave.
 </p>
-         <p>After this he is dragged from one Assyrian mart
+            <p>After this he is dragged from one Assyrian mart
 to another; next in the train of a Galatian slave-
 merchant he stands for sale in many a market and
 knows many diverse houses. Who could tell the
@@ -215,7 +223,7 @@ threw herself upon her couch, there would stand
 this patrician fanning her with bright peacock
 feathers.
 </p>
-         <p>And now his skin had grown loose with age; his
+            <p>And now his skin had grown loose with age; his
 face, more wrinkled than a raisin, had fallen in by
 reason of the lines in his cheeks. Less deep the
 furrows cloven in the cornfield by the plough, the
@@ -249,17 +257,17 @@ chains up a dog and fattens him with milk while
 yet his strength avails to guard the flock and, ever
 watchful, to scare away wolves with his barking.
 </p>
-         <p>But when later this same dog grows old and dirty
+            <p>But when later this same dog grows old and dirty
 and droops his mangy ears he looses him, and, taking
 off his collar, at least saves that.
 </p>
-         <p>Universal contempt is sometimes a boon. Driven
+            <p>Universal contempt is sometimes a boon. Driven
 out by all, he could freely range amid every sort of
 crime, and open a way for destiny. Oh thou,
 whosoe'er thou art, that boldest sway in Olympus,
 was it thy humour to make such mockery of mankind?
 </p>
-         <p>He who was not suffered to perform the
+            <p>He who was not suffered to perform the
 duties of a slave is admitted to the administration
 of an empire; him whom a private house scorned
 as a servant, a palace tolerates as its lord. When
@@ -281,7 +289,7 @@ office to the highest honours. What a happy dispensation
 of providence it is that in this world the
 results of ill counsel fall first upon its instigators!
 </p>
-         <p>Thus the seer who advised Busiris to placate the
+            <p>Thus the seer who advised Busiris to placate the
 Thunderer's wrath, what time Nile's flood had long
 run dry, with a stranger's blood himself first stained
 that tyrant's altar with his own and fell a victim
@@ -297,7 +305,7 @@ none did he drive sooner into exile and thus, by the
 condemnation of his patron, was to thank for one
 righteous action.
 </p>
-         <p>When this half-man, worn out with age, had
+            <p>When this half-man, worn out with age, had
 been raised to that pinnacle of glory for which he
 never would have dared to pray, of which never to
 dream; when he had seen law at his feet, the heads
@@ -314,7 +322,7 @@ to the weeping of exiles; the desert rang with the
 punishment of men; the temple of Jupiter Ammon
 in Africa was stained with gentle blood.
 </p>
-         <p>Nothing is so cruel as a man raised from lowly
+            <p>Nothing is so cruel as a man raised from lowly
 station to prosperity; he strikes everything, for he
 fears everything; he vents his rage on all, that all
 may deem he has the power. No beast so fearful as
@@ -328,7 +336,7 @@ or children. All are moved to pity by those whose
 circumstances are like their own; similitude of ills
 is a close bond. Yet he is kind not even to eunuchs.
 </p>
-         <p>His passion for gold increases — the only passion
+            <p>His passion for gold increases — the only passion
 his mutilated body can indulge. Of what use was
 emasculation? The knife is powerless against
 reckless avarice. That hand so well practised in
@@ -348,16 +356,16 @@ prices: so much for Galatia, for Pontus so much,
 so much will buy one Lydia. Would you govern
 Lycia? Then lay down so many thousands. Phrygia?
 </p>
-         <p>A little more. He wishes everything to be marked
+            <p>A little more. He wishes everything to be marked
 with its price to console him for his own fortune and,
 himself so often sold, he wants to sell everything.
 </p>
-         <p>When two are rivals he suspends in the balance
+            <p>When two are rivals he suspends in the balance
 their opposed payment; along with the weight
 the judge inclines, and a province hangs wavering
 in a pair of scales.
 </p>
-         <p>Ye gods, are ye not ashamed that whole peoples
+            <p>Ye gods, are ye not ashamed that whole peoples
 are sold beneath the hammer? At least let it
 shame you of the seller, when a slave, a chattel the
 law counts dead, possesses so many kingdoms and
@@ -365,7 +373,7 @@ retails so many cities. Did Cyrus' victory oust
 mighty Croesus from his throne that Pactolus and
 Hermus should roll their waves for a eunuch?
 </p>
-         <p>Did Attains make you, Rome, his heir, was Antiochus
+            <p>Did Attains make you, Rome, his heir, was Antiochus
 confined within the appointed bounds of Taurus,
 did Servilius enjoy a triumph over the hitherto
 unconquered Isaurians, did Egypt fall before
@@ -374,7 +382,7 @@ Eutropius a sufficient income?1 Cilicia, Judaea,
 Sophene, all Rome's labours and Pompey's triumphs,
 are there to sell.
 </p>
-         <p>Why heap up these riches? Hast thou children
+            <p>Why heap up these riches? Hast thou children
 to succeed to them? Marry or be married, thou
 canst never be a mother or a father: the former
 nature hath denied thee, the latter the surgeon's
@@ -383,7 +391,7 @@ Arabia with her spices, China with her silks; none so
 needy, none so poverty-stricken as to wish to have
 Eutropius' fortune and therewith Eutropius' body.
 </p>
-         <p>And now his mind, forgetful of its true nature and
+            <p>And now his mind, forgetful of its true nature and
 <pb id="v.1.p.157"/>
 drunken with riches, makes sport of wretched law
 and the affairs of men. A eunuch is judge. Why
@@ -400,7 +408,7 @@ with arrows strung and flashing quiver the aged
 Amazon practises battle or hurries back as arbiter
 of peace and war to hold parley with the Getae.
 </p>
-         <p>Our enemies rejoiced at the sight and felt that at
+            <p>Our enemies rejoiced at the sight and felt that at
 last we were lacking in men. Towns were set ablaze;
 walls offered no security. The countryside was
 ravaged and brought to ruin. Mid-ocean alone
@@ -414,13 +422,13 @@ defence of the Tauric tribes, the youth of Syria are
 slaves. Too vast for the fierce barbarians are the
 spoils; glutted with booty they turn to slaughter.
 </p>
-         <p>Yet Eutropius (can a slave, an effeminate, feel
+            <p>Yet Eutropius (can a slave, an effeminate, feel
 shame? Could a blush grace such a countenance?),
 Eutropius returns in triumph. There follow companies
 of foot, squadrons like their general, maniples
 of eunuchs, an army worthy Priapus' standards.
 </p>
-         <p>His creatures meet him and embrace their saviour
+            <p>His creatures meet him and embrace their saviour
 on his return.2 Great is his self-esteem; he struggles
 <pb id="v.1.p.159"/>
 to swell out his pendulous cheeks and feigns a heavy
@@ -434,13 +442,13 @@ to envy and cannot stand up against the storms of
 jealousy and prays to be drowned in the foaming
 seas. Would God his prayer had been granted!
 </p>
-         <p>Thus speaking, he wipes away the silly tears,
+            <p>Thus speaking, he wipes away the silly tears,
 sighing and sobbing between each word; like a
 withered old dame travelled far to visit her son's
 daughter — scarce seated aweary and already she
 asks for wine.
 </p>
-         <p>Why busy thy foul self with wars? Why attempt
+            <p>Why busy thy foul self with wars? Why attempt
 battle on the bloody field? 'Tis to the arts of that
 other Minerva thou shouldst apply thyself. The
 distaff, not the dart should be thine; thine to spin
@@ -448,7 +456,7 @@ the thread, and, cunning craftsman that thou art,
 to urge on the spinning-maids when lazy; thine
 to wind the snowy wool for thy mistress' weaving.
 </p>
-         <p>Or, wouldst thou be a devotee, let Cybele, not Mars,
+            <p>Or, wouldst thou be a devotee, let Cybele, not Mars,
 be the object of thy worship. Learn to imitate the
 madness of the Corybantes to the accompaniment
 of rolling drums. Thou may est carry cymbals,
@@ -460,14 +468,14 @@ strife? Madman, remember thy former trade;
 'twere more fitting thou shouldst endeavour to
 reconcile them.
 </p>
-         <p>It is for deeds like this that Eutropius demands
+            <p>It is for deeds like this that Eutropius demands
 <pb id="v.1.p.161"/>
 this year of office, to ensure that by his efforts alone
 he leaves nothing not dishonoured, ruining the army
 as its general, the courts as their judge, the imperial
 fasti as a consul.
 </p>
-         <p>No portent so monstrous but time past has given
+            <p>No portent so monstrous but time past has given
 it birth and the labour of bygone centuries produced
 it. Legend tells us that Oedipus married his mother
 and Thyestes his daughter; Jocasta bare brothers
@@ -477,18 +485,18 @@ tale of Thebes and the baneful war of Troy. Tereus
 was changed into a bird, Cadmus into a snake; Scylla
 looked in amaze on the dogs that girt her waist.
 </p>
-         <p>Ancient story relates how one was transformed into
+            <p>Ancient story relates how one was transformed into
 a tree and thus attached to earth, how another grew
 wings and flew, how a third was clothed with scales
 and yet another melted into a river. But no country
 has ever had a eunuch for a consul or judge or general.
 </p>
-         <p>What in a man is honourable is disgraceful in an emasculate.
+            <p>What in a man is honourable is disgraceful in an emasculate.
 </p>
-         <p>Here is an example to surpass all that is most
+            <p>Here is an example to surpass all that is most
 laughable in comedy, most lamentable in tragedy.
 </p>
-         <p>A pleasant sight in truth to see him strain his
+            <p>A pleasant sight in truth to see him strain his
 sapless limbs beneath the weight of the toga, borne
 down by the wearing of his consular dress; the
 gold of his raiment rendered his decrepitude even
@@ -497,10 +505,10 @@ imitator, had been decked out in sport with precious
 silken garments by a boy who had left his back and
 quarters uncovered to amuse the guests at supper.
 </p>
-         <p>Thus richly dressed he walks upright and seems the
+            <p>Thus richly dressed he walks upright and seems the
 more loathsome by reason of his brilliant trappings.
 </p>
-         <p>Dressed in white the senate, perhaps even his
+            <p>Dressed in white the senate, perhaps even his
 master, 1 accompanies the dishonoured fasces. Behold
 a portent! A lictor more noble than the
 <pb id="v.1.p.163"/>
@@ -514,7 +522,7 @@ and waited till that emasculate Tiresias, that
 unmanned Melampus, could crawl back with oracles
 culled from farthest Nile.
 </p>
-         <p>Loud sang the prophetic birds in warning. The
+            <p>Loud sang the prophetic birds in warning. The
 year shuddered at the thought of bearing Eutropius'
 name, and Janus proclaimed the madness of the
 choice from his two mouths, forbidding a eunuch
@@ -552,7 +560,7 @@ the growth of the first down of manhood and forced
 their boys, kept boys by artifice, to serve their lusts
 by thus lengthening the years of youthful charm.
 </p>
-         <p>At first the rumour of Eutropius' consulship
+            <p>At first the rumour of Eutropius' consulship
 seemed false and invented as a jest. A vague story
 spread from city to city; the crime was laughed at
 as one would laugh to hear of a swan with black
@@ -566,8 +574,8 @@ Carmanians of India; I shall soon see ocean fit
 nursery for plants and the dolphin a denizen of the
 woods; beings half-men, half-snails and all the vain
 imaginings of India depicted on Jewish curtains.</q>
-         </p>
-         <p>Then another adds, jesting with a more wanton
+            </p>
+            <p>Then another adds, jesting with a more wanton
 wit: <q direct="unspecified">Dost thou wonder? Nothing great is there
 that Eutropius does not conceive in his heart. He
 ever loves novelty, ever size, and is quick to taste
@@ -584,8 +592,8 @@ performs the functions of all alike; his dignity loves
 to unbend. His meetings 1 and his deserving labours
 have won him this reward,2 and he receives the consul's
 robe in recompense for the work of his skilful hand.</q>
-         </p>
-         <p>When the rumour concerning this disgrace of the
+            </p>
+            <p>When the rumour concerning this disgrace of the
 eastern empire was known to be true and had
 impressed belief on Roman ears, Rome's goddess
 thus spake: <q direct="unspecified">Is Eutropius worthy of mine ire? Is
@@ -613,10 +621,10 @@ to be the terror of the farmsteads and the future
 king of beasts. Rome lays aside her veil of cloud and
 towers above the youthful warrior, then thus begins.
 <pb id="v.1.p.169"/>
-         </p>
-         <p>
-            <q direct="unspecified">
-               <p>Examples near at hand testify to the extent
+            </p>
+            <p>
+               <q direct="unspecified">
+                  <p>Examples near at hand testify to the extent
 of my power now thou art emperor. The Saxon
 is conquered and the seas safe; the Picts have
 been defeated and Britain is secure. I love to see
@@ -642,7 +650,7 @@ Alps, feel the defection of revolted Africa. Gildo, however,
 paid the penalty for his treason as Tabraca can
 witness. So perish all who take up arms against thee!
 </p>
-               <p>Lo! on a sudden from that same clime comes
+                  <p>Lo! on a sudden from that same clime comes
 another scourge, less terrible indeed but even more
 shameful, the consulship of Eutropius. I admit I
 have long learned to tolerate this unmanned tribe,
@@ -722,8 +730,8 @@ leader Eutropius. Fill the judgement-seat, not the
 bedchamber. Change your habits and learn to follow
 the consul's chair, not the woman's litter.
 <pb id="v.1.p.175"/>
-               </p>
-               <p>I would not cite examples from remote antiquity
+                  </p>
+                  <p>I would not cite examples from remote antiquity
 nor count the countless magistrates of past
 history whom he thus outrages. But think how the
 reverence due to all past ages will be impaired, on
@@ -736,10 +744,10 @@ ever been a curse to the world; behold I suffer
 from a worse than Pothinus and bear a wrong more
 flagrant than that of which Egypt was once the scene.
 </p>
-               <p>Pothinus' sword at Alexandria spilled the blood of a
+                  <p>Pothinus' sword at Alexandria spilled the blood of a
 single consul; 2 Eutropius brings dishonour on all.
 </p>
-               <p>If the fate of subjects cannot move thee, yet
+                  <p>If the fate of subjects cannot move thee, yet
 have thou regard for princes, for your common cause,
 and remove this stain on royalty. The consulship
 is the sole office the emperor deigns to accept;
@@ -760,8 +768,8 @@ determine laws, then let men card wool and live like
 the Amazons, confusion and licence dispossessing
 the order of nature.
 <pb id="v.1.p.177"/>
-               </p>
-               <p>What need of further words? Why, Stilicho, dost
+                  </p>
+                  <p>What need of further words? Why, Stilicho, dost
 thou delay to conquer because ashamed to fight?
 Knowest thou not that the viler a foe the greater
 the rejoicing at his overthrow? His defeat of the
@@ -781,14 +789,18 @@ country; with displayed whips they routed the armed
 ranks; back from its enterprise the familiar terror
 drove the servile mob, and at threat of the lash the
 bondsman's sword grew dull.</p>
-            </q>
-            <pb id="v.1.p.179"/>
-         </p>
-         <pb id="v.1.p.3" TEIform="pb"/>
+               </q>
+               <pb id="v.1.p.179"/>
+            </p>
+            <pb id="v.1.p.3" TEIform="pb"/>
          </div1>
-               <div1 type="book" n="2" org="uniform" sample="complete" part="N">
-                        <div2 type="poem" n="praef19" org="uniform" sample="complete" part="N">
-         <p>
+         <div1 type="book" n="2" org="uniform" sample="complete" part="N">
+            <div2 type="poem"
+                  n="praef19"
+                  org="uniform"
+                  sample="complete"
+                  part="N">
+               <p>
 
 The nobly born Eutropius who but lately wielded
 the reins of supreme power once more fears the
@@ -809,7 +821,7 @@ the consul. That name erased, our annals breathe
 once more, and better health is restored to the
 palace now that it has at last vomited forth its poison.
 </p>
-         <p>His friends deny him, his accomplices abandon him;
+               <p>His friends deny him, his accomplices abandon him;
 in his fall is involved all the eunuch band, overcome
 not in battle, subdued not by strife — they may not
 die a man's death. A mere stroke of the pen has
@@ -832,9 +844,9 @@ though he is and fouler in mind even than in face,
 yet the very anger they feel against him will make
 them pay; he is worth buying simply to punish.
 </p>
-         <p>What land or country wilt thou now visit, eunuch?
+               <p>What land or country wilt thou now visit, eunuch?
 </p>
-         <p>Here hate surrounds thee, there thy popularity is
+               <p>Here hate surrounds thee, there thy popularity is
 fled; both courts have uttered thy condemnation
 in either half of the world; never wert thou of the
 West, now the East repudiates thee too. I
@@ -843,7 +855,7 @@ fates of others, art silent about thine own. No
 longer does fallacious Nile interpret thy dreams; no
 longer, poor wretch, do thy prophets see visions.
 </p>
-         <p>What doth thy sister? Will she dare to embark with
+               <p>What doth thy sister? Will she dare to embark with
 thee and bear thee faithful company over the
 distant seas? Mayhap she scorns the couch of an
 impoverished eunuch, and now that she herself is rich
@@ -858,17 +870,17 @@ wealth thy son shall inherit? In no other way
 couldst thou have been father to an emperor.1 Why
 insatiably weary heaven with a woman's plaints?
 </p>
-         <p>A haven of refuge is prepared for thee on the shores
+               <p>A haven of refuge is prepared for thee on the shores
 of Cyprus. Thou hast plunged the world in war with
 barbary; the sea, believe me, is safer than the land.
 </p>
-         <p>No longer wilt thou strike terror into the Armenians
+               <p>No longer wilt thou strike terror into the Armenians
 with javelin and bow, no more scour the plain on thy
 fleet charger. The senate of Byzantium has been
 deprived of thy loved voice; uncertainty holds the
 august assembly that is now deprived of thy counsels.
 </p>
-         <p>Hang up thy toga, retired consul; hang up thy quiver,
+               <p>Hang up thy toga, retired consul; hang up thy quiver,
 veteran soldier; return to Venus' service; that is thy
 true calling. The pander's hand knows not to serve
 Mars featly; Cytherea will right gladly take back
@@ -883,17 +895,17 @@ hindered Gildo's flight may seek to drown thee in the
 sea. Tabraca owes its fame to the overthrow of the
 Moor; may Cyprus win prestige from thy shipwreck.
 </p>
-         <p>In vain will thy last breath be spent in calling on the
+               <p>In vain will thy last breath be spent in calling on the
 dolphin to carry thee to shore: his back bears only
 men. 2 Hereafter should any eunuch attempt to
 emulate thine actions let him turn his eye towards
 Cyprus and abate his pride.
 <pb id="v.1.p.185"/>
-         </p>
-         <pb id="v.1.p." TEIform="pb"/>
-                        </div2>            
-                        <div2 type="poem" n="20" org="uniform" sample="complete" part="N">
-         <p>
+               </p>
+               <pb id="v.1.p." TEIform="pb"/>
+            </div2>
+            <div2 type="poem" n="20" org="uniform" sample="complete" part="N">
+               <p>
 
 Ashes of Phrygia and you last remnants of the
 ruined East (if any such remain), the augury was but
@@ -909,14 +921,14 @@ due to unmoved fate remains fixed. Ere the
 deed was done you should have realized its horror;
 you should have erased the blot ere it had dried.
 </p>
-         <p>When the body is overwhelmed by long-standing
+               <p>When the body is overwhelmed by long-standing
 disease 'tis all in vain that thou makest use of healing
 medicines. When an ulcer has penetrated to the
 marrow of the bones the touch of a hand is useless,
 steel and fire must sane the place that the wound
 heal not on the surface, like any moment to re-open.
 </p>
-         <p>The flame must penetrate to the quick to make a
+               <p>The flame must penetrate to the quick to make a
 way for the foul humours to escape; in order that,
 once the veins are emptied of corrupted blood, the
 <pb id="v.1.p.187"/>
@@ -928,7 +940,7 @@ world avenged by the banishment of a eunuch? Can
 any ocean wash away that stain? any age bring
 forgetfulness of so great a crime?
 </p>
-         <p>Ere yet he had donned the consul's robe there
+               <p>Ere yet he had donned the consul's robe there
 came a rumbling from the bowels of the earth; a
 hidden madness shook the subterranean caverns and
 buildings crashed one on another. Chalcedon,
@@ -941,7 +953,7 @@ errant. Surely such presages were sent by the
 sister deities of Styx, rejoicing that under this consul
 at last all peoples were delivered into their hands.
 </p>
-         <p>Soon arose divers forms of ruin: here the fire-god
+               <p>Soon arose divers forms of ruin: here the fire-god
 spread his flames; there Nereus, god of the sea,
 brake his bounds. Here men's homes were burned,
 there flooded. Ye gods, what punishment do ye hold
@@ -951,7 +963,7 @@ with thy trident and overwhelm our defiled soil
 along with all the guilt. One city we yield to the
 Furies, a scapegoat for the sins of the world.
 </p>
-         <p>Once the way was open for portents, prodigies of
+               <p>Once the way was open for portents, prodigies of
 every sort hasted to disclose themselves. Rain of
 blood fell, children of weird form were born and
 offspring discordant with their breed. Statues wept,
@@ -961,7 +973,7 @@ braved an entrance into the city. Then seers raved
 strangely and frenzied hearts were everywhere
 ablaze, stirred by the fires of the dread god Phoebus.
 </p>
-         <p>Yet even had no god warned us, whose mind shall
+               <p>Yet even had no god warned us, whose mind shall
 be so dull as to doubt that the year of an emasculate
 consul must be fatal to those lands? Blind folly
 ever accompanies crime; of the future no account
@@ -976,10 +988,10 @@ it!), to yield it to whom were, for men, a disgrace,
 even though every oracle decreed it, and the insistent
 deities gave pledges of prosperity.
 </p>
-         <p>Look back in the annals of crime, read o'er all
+               <p>Look back in the annals of crime, read o'er all
 past history, unroll the volumes of Rome's story.
 </p>
-         <p>What can the Capri of Tiberius' old age, what can
+               <p>What can the Capri of Tiberius' old age, what can
 Nero's theatre offer like to this? 1 A eunuch, clad
 in the cloak of Romulus, sat within the house of
 the emperors; the staled palace lay open to the
@@ -989,7 +1001,7 @@ magistrates of every degree; all are fain to be the
 first to fall at his feet and to touch his hand; the
 prayer of all is to set kisses on those hideous wrinkles.
 </p>
-         <p>He is called defender of the laws, father of the
+               <p>He is called defender of the laws, father of the
 emperor, and the court deigns to acknowledge a
 slave as its overlord. Ye who come after, acknowledge
 that it is true! Men must needs erect monuments
@@ -1004,10 +1016,10 @@ eunuch's countenance. As though to rob virtue of
 any place where she might sojourn undefiled, men
 labour to befoul every street with this vile image.
 </p>
-         <p>May they rest for ever undisturbed, indisputable
+               <p>May they rest for ever undisturbed, indisputable
 proofs of our eternal shame; such is my prayer.
 </p>
-         <p>Beneath the statues one reads flattering titles and
+               <p>Beneath the statues one reads flattering titles and
 praises too great even for men. Do they tell of
 his noble race and lineage while his owners are still
 alive? What soldier brooks to read that singlehanded
@@ -1028,7 +1040,7 @@ palace, as one would of a stable or empty house. Is
 the guardianship of a mighty empire thus naught? Is
 it thus he makes a mockery of a world's obedience?
 </p>
-         <p>Winter, passing into spring, had now felt the
+               <p>Winter, passing into spring, had now felt the
 returning warmth of Zephyrus' breezes and the
 earliest flowers had oped their buds when, in the
 lap of peace, they were preparing the annual journey
@@ -1040,7 +1052,7 @@ journeys. But so magnificent was their return, you
 would have imagined they brought conquered Persia
 in their train and had drunk of the waters of Indus.
 </p>
-         <p>Look you! Mars, returning from the distant lands of
+               <p>Look you! Mars, returning from the distant lands of
 the yellow-haired Geloni, was re-seeking the lands
 of Thrace in his bloody chariot. Pangaeus subsided
 beneath his wheels, the mountain snows cried out
@@ -1053,7 +1065,7 @@ who, her raiment all stained with blood, was
 combing her snake-hair, fattened on the slaughter of
 Illyrians.
 </p>
-         <p>Sister, shall we never succeed in curing the East of
+               <p>Sister, shall we never succeed in curing the East of
 effeminacy? Will this corrupt age never learn true
 manliness? Argaeus yet reeks with those heaps of
 dead Cappadocians not yet cold; Orontes is still pale
@@ -1062,7 +1074,7 @@ they suffer it; give them a moment's respite and
 all their slaughter fades from their minds unfelt;
 little they reck of bloodshed that is past.
 </p>
-         <p>Seest thou this foul deed? Why veil thy face
+               <p>Seest thou this foul deed? Why veil thy face
 with thine hair? See what crimes a short spell of
 peace has wrought! what a curse has the sheathed
 sword proved! The year that has known no war has
@@ -1080,9 +1092,9 @@ fasces might retire; he has given us annals
 wherein, abandoning the East, an age polluted with
 servile stains might find a refuge.
 </p>
-         <p>
-            <q direct="unspecified">
-               <p>How like to its lord the inhabitants of the palace!
+               <p>
+                  <q direct="unspecified">
+                     <p>How like to its lord the inhabitants of the palace!
 Turn your eyes to the city walls. Surely they at
 least mutter disapprobation, though fear forbids
 them speak out? Do they not condemn him in
@@ -1096,7 +1108,7 @@ bear a sword! Has my descendants' robe of office
 sunk so low? Is Brutus' renown thus brought to
 scorn?
 </p>
-               <p>Romulus, forgive thy sire for coming so tardy
+                     <p>Romulus, forgive thy sire for coming so tardy
 an avenger of those outraged fasces. Right soon
 will I make them pay for this joy with liberal tears.
 Why delayest thou, Bellona, to sound the trumpet of
@@ -1118,9 +1130,9 @@ valour is numbed and they have learned to obey an
 unmanned master, let a stranger from the north
 avenge our outraged laws and barbarian arms
 bring relief to disgraced Rome.</p>
-            </q>
-         </p>
-         <p>So spake he and thundered with his shield nigh as
+                  </q>
+               </p>
+               <p>So spake he and thundered with his shield nigh as
 loud as the ruler of the gods when he shakes his
 aegis from out the lowering cloud. Athos replies,
 Haemus re-echoes; again and again shaken Rhodope
@@ -1137,7 +1149,7 @@ felt the shock; Hermus blessed with Dionysus' vines
 groaned thereat, Pactolus' golden urn shuddered,
 all Dindymus bent his forest fleece and wept.
 </p>
-         <p>Bellona, too, hastens forth with speed no less than
+               <p>Bellona, too, hastens forth with speed no less than
 that of Mars' whistling spear; a hundred ways of
 hurt she pondered and at last approached Tarbigilus,2
 fierce leader of the Getic squadron. It chanced he
@@ -1150,7 +1162,7 @@ breast. Taking upon her the similitude of his
 wife she comes to meet him; proudly she steps forth
 like the barbarian queen, clothed in linen raiment.
 </p>
-         <p>Close to her breast a brooch fastened her dress that
+               <p>Close to her breast a brooch fastened her dress that
 trailed behind her; she had bound her locks into a
 coil that a polished circlet confined, and bidden her
 green snakes turn to gold. She hastens to greet
@@ -1165,9 +1177,9 @@ at the eunuch's hands. At once she seized the
 favourable moment, and tearing her cheek with
 her nails, discloses her complaints.
 </p>
-         <p>
-            <q direct="unspecified">
-               <p>Go then, busy thyself with the plough, cleave the
+               <p>
+                  <q direct="unspecified">
+                     <p>Go then, busy thyself with the plough, cleave the
 soil, bid thy followers lay aside their swords and
 sweat o'er the harrow. The Gruthungi will make
 good farmers and will plant their vines in due
@@ -1190,7 +1202,7 @@ though thou bearest arms? Wilt thou weep unavenged,
 though so many cities open to thee their
 undefended gates?
 </p>
-               <p>Dost thou fear the consequences? Rome's old
+                     <p>Dost thou fear the consequences? Rome's old
 way was to reward merit and vent on rebels a hate
 that knew no bound. Now he who breaks a treaty
 wins riches, while he who observes one lives in want.
@@ -1214,14 +1226,14 @@ turn an object of terror, and let men marvel at
 thy crimes who despised thy virtues. Laden with
 booty and plunder thou shalt be a Roman when it
 pleases thee.</p>
-            </q>
-         </p>
-         <p>So saying she suddenly changed into an ill-omened
+                  </q>
+               </p>
+               <p>So saying she suddenly changed into an ill-omened
 bird, a loathsome sight with its hooked beak and
 plumage blacker than Hell's darkness, and perched,
 a sinister augury, on an old tomb.
 </p>
-         <p>So soon as repose from terror came to his freed
+               <p>So soon as repose from terror came to his freed
 <pb id="v.1.p.203"/>
 heart, and his stiffened hair sank down again, he
 made all haste to carry out the commands of the
@@ -1230,7 +1242,7 @@ and urged them to follow him. Rebellious Barbary
 had found a champion and openly threw off the
 Latin yoke.
 </p>
-         <p>That part of Phrygia which lies towards the north
+               <p>That part of Phrygia which lies towards the north
 beneath the cold constellation of the Wain borders
 on Bithynia; that towards the sunset on Ionia,
 and that towards the sunrise on Galatia. On two
@@ -1259,7 +1271,7 @@ whose flayed skin brought renown to the city of
 <pb id="v.1.p.205"/>
 Celaenae. Hence flow four broad auriferous rivers.
 </p>
-         <p>Small wonder that the waters in which King Midas
+               <p>Small wonder that the waters in which King Midas
 bathed so often glitter with the rare metal. Two flow
 north, two southwards. Dindymus gives birth to
 the river Sangarius, which, swollen by the clear
@@ -1269,23 +1281,23 @@ Marsyas and Meander make for the Icarian main
 and Mycale's strand. Marsyas flows fast and straight
 while his course is his own; mingled with thy waters.
 </p>
-         <p>Meander, he goes slowly — unlike the Saône whose
+               <p>Meander, he goes slowly — unlike the Saône whose
 waters are hastened by the Rhone's inflowing.
 </p>
-         <p>Between these rivers is a sun-kissed plain; kindly
+               <p>Between these rivers is a sun-kissed plain; kindly
 is it to the com, thick-set with vines and displaying
 the fruit of the grey-green olive; rich, too, in horses,
 fertile in flocks, and wealthy with the purple-veined
 marble that Synnada quarries.
 </p>
-         <p>Such was Phrygia then when the gods allowed it
+               <p>Such was Phrygia then when the gods allowed it
 to be ravaged by Getic brigands. The barbarian
 burst in upon those cities so peaceful, so easy of
 capture. There was no hope of safety, no chance
 of escape. Long and peaceful ages had made the
 crumbling stones of their battlements to fall.
 </p>
-         <p>Meanwhile Cybele was seated amid the hallowed
+               <p>Meanwhile Cybele was seated amid the hallowed
 rocks of cold Ida, watching, as is her wont, the
 dance, and inciting the joyous Curetes to brandish
 their swords at the sound of the drum, when, lo, the
@@ -1297,8 +1309,8 @@ this omen; general alarm checked their orgies
 and silenced their pipes. The mother of the gods
 wept; then spake thus in sorrow.
 <pb id="v.1.p.207"/>
-            <q direct="unspecified">
-               <p>This is the portent that agèd Lachesis foretold
+                  <q direct="unspecified">
+                     <p>This is the portent that agèd Lachesis foretold
 long years ago. My fallen crown assures me that
 Phrygia's final crisis is upon her. Alas for the blood
 that shall redden Sangarius' waves; for all the
@@ -1314,15 +1326,15 @@ ground and the bare earth. Farewell, dear rivers:
 never more shall I hold my inspired revels in your
 grottoes; no more shall my chariot leave the traces
 of its wheels on Berecynthus' heights.</p>
-            </q>
-         </p>
-         <p>So spake
+                  </q>
+               </p>
+               <p>So spake
 she, and turned her drums to strains of mourning.
 </p>
-         <p>Attis filled his devoted country with holy lamentations
+               <p>Attis filled his devoted country with holy lamentations
 and Cybele's tawny lions burst into tears.
 </p>
-         <p>Eutropius, although this terrible revolt could not
+               <p>Eutropius, although this terrible revolt could not
 be hid and although rumour had spread everywhere
 the dread news, none the less affects to ignore it and
 shuts his eyes to the empire's peril. 'Twas some
@@ -1346,7 +1358,7 @@ the gifts of fear have no charm; haughtily he
 disdains any rank,1 even the highest, for under
 such a consul what honour would not be disgrace?
 </p>
-         <p>When Eutropius saw that no prayers could move
+               <p>When Eutropius saw that no prayers could move
 him nor any gold win him over; when messenger
 after messenger returned, his mission unfulfilled, and
 all hopes of an alliance were at an end, he at last
@@ -1360,22 +1372,22 @@ with foods imported from overseas, the flesh of the
 many-eyed fowl of Juno,2 or of that coloured bird
 brought from farthest Ind that knows how to speak.
 </p>
-         <p>Not the Aegean, not deep Propontis, not Maeotis'
+               <p>Not the Aegean, not deep Propontis, not Maeotis'
 lake afar can sate their appetites with fish. Perfumed
 garments are their care, their pride to move
 foolish laughter with their silly jests. On their
 adornment and toilette they bestow a woman's care
 and find even the silk they wear too heavy a burden.
 </p>
-         <p>Should the Hun, the Sarmatian, strike at the city's
+               <p>Should the Hun, the Sarmatian, strike at the city's
 gates yet trouble they for nought but the theatre.
 </p>
-         <p>Rome they despise and reserve their admiration
+               <p>Rome they despise and reserve their admiration
 for their own houses — may Bosporus' waters overwhelm
 them! Skilful dancers they and clever judges
 of charioteers.
 </p>
-         <p>Some sprung from the dregs of the people are
+               <p>Some sprung from the dregs of the people are
 generals; some magistrates — though their legs and
 <pb id="v.1.p.211"/>
 ankles are still scarred and livid with their wearing
@@ -1394,7 +1406,7 @@ a slave though of a different kind. The one had
 been bought and sold a hundred times, the other
 brought up a dependant in a Spanish household.
 </p>
-         <p>When, therefore, the chief men were gathered
+               <p>When, therefore, the chief men were gathered
 together for consultation in this strait and to
 comfort the sickness of the state, forthwith they
 forget Phrygia and, setting aside the question of war,
@@ -1406,15 +1418,15 @@ floor with his drooping locks; who can most twist
 his flanks into a boneless arch; who can best suit
 his gestures to his words and his eyes to his character.
 </p>
-         <p>Some recite speeches from tragedy, others chant
+               <p>Some recite speeches from tragedy, others chant
 the play of Tereus, others again that of Agave,
 never before staged.
 </p>
-         <p>Eutropius chides them; the present moment,
+               <p>Eutropius chides them; the present moment,
 says he, demands other spectacles than these;
 it is war which now should claim all their care.
 </p>
-         <p>For his part (for he is an old man and a weary) it is
+               <p>For his part (for he is an old man and a weary) it is
 enough to defend the frontiers of Armenia; single-
 <pb id="v.1.p.213"/>
 handed he cannot cope with all these perils. They
@@ -1429,7 +1441,7 @@ wearied of their work they crush the threads in their
 hands and wipe away their gentle tears with the
 cloth.
 </p>
-         <p>Sudden from out that trembling throng upleaps
+               <p>Sudden from out that trembling throng upleaps
 bold Leo 1 with his vast bulk, he whose single prowess
 Cyclopean hunger could scarce match, whom starving
 Celaeno could not outvie. 'Tis to this fact that he
@@ -1460,8 +1472,8 @@ weight than a ball of wool, the faithless Gruthungi I
 will drive before me like a flock of wretched sheep;
 and when I have restored peace I will set the women
 of Phrygia once more beside their ancient spinning.</q>
-         </p>
-         <p>So saying he sat down again. Great clamour
+               </p>
+               <p>So saying he sat down again. Great clamour
 and applause filled the council-chamber, applause
 such as rises from the rows of spectators in the
 theatre when some curled youth impersonates
@@ -1482,7 +1494,7 @@ Hebrus for a draught. Changed is the leader
 and changed their character. Byzantium's luxury
 and Ancyra's pomp 1 have destroyed their vigour.
 </p>
-         <p>No longer does the cavalry ride ahead of the foot;
+               <p>No longer does the cavalry ride ahead of the foot;
 suitable ground is not chosen for camps; no constant
 change of sentries safeguards the ramparts, no
 scouts are sent forward to discover which roads to
@@ -1505,7 +1517,7 @@ the shallow water and knowing not how to return to
 the sea, pants and to no purpose dashes its gaping
 jaws against the rocks.
 </p>
-         <p>Tarbigilus feigns retreat and raises the presumptuous
+               <p>Tarbigilus feigns retreat and raises the presumptuous
 hopes of Leo, then suddenly he bursts all
 unexpected upon the wine-sodden army, as, overcome
 by the heavy feast, they brag over their cups
@@ -1513,15 +1525,15 @@ of leading the foe in chains. Some are slain as they
 lift their sluggish limbs from the couch, others
 know not any break between sleep and death.
 </p>
-         <p>Others rush pell-mell into a neighbouring swamp
+               <p>Others rush pell-mell into a neighbouring swamp
 and heap the marsh high with their dead bodies.
 </p>
-         <p>Leo himself, swifter than deer or antelope, fled
+               <p>Leo himself, swifter than deer or antelope, fled
 trembling on his foam-flecked horse, and it falling
 under his weight Leo sank in the mire and on all
 fours fought his way through the clinging slime.
 </p>
-         <p>Held up at first by the thick mud, his fat body
+               <p>Held up at first by the thick mud, his fat body
 gradually settles down panting like a common pig,
 which, destined to grace the coming feast, squeals
 when Hosius arms him with flashing knife, and
@@ -1534,11 +1546,11 @@ work of preparation goes on apace, Bosporus echoes
 to many a blow and the savoury smell envelops
 Chalcedon.
 </p>
-         <p>Suddenly a gentle breeze stirs the foliage behind
+               <p>Suddenly a gentle breeze stirs the foliage behind
 Leo's back. He thinks it an arrow, and terror,
 taking a missile's place, does duty for a wound.
 </p>
-         <p>Untouched and stricken only by fear he breathes
+               <p>Untouched and stricken only by fear he breathes
 his last. Degenerate Roman, by whose advice didst
 thou exchange the comb for the sword, thine
 ancestral calling for the field of battle? How
@@ -1549,7 +1561,7 @@ a wretched death; here, while thou soughtest to
 shirk thy spinning, the Fates have at last spun for
 thee the final thread.
 </p>
-         <p>Now spreading rumour shakes the palace, pale
+               <p>Now spreading rumour shakes the palace, pale
 with terror upon terror. It told how that the army
 was destroyed, the troops butchered, the plain of
 Maeonia red with slaughter, Pamphylia and Pisidia
@@ -1565,17 +1577,17 @@ far cities are seen ablaze, that the straits are aglow
 and that ashes driven by the wind catch in the sails
 of every ship at sea.
 </p>
-         <p>Amid all this confusion comes a yet more terrible
+               <p>Amid all this confusion comes a yet more terrible
 <pb id="v.1.p.221"/>
 rumour — that Babylon is again in arms and, under a
 new monarch, 1 threatens our Empire; the Parthians,
 long inactive, and now scorning slothful ease, seek
 to put an end to the peace imposed by Rome.
 </p>
-         <p>Rare among the Medes is the murder of a king, for
+               <p>Rare among the Medes is the murder of a king, for
 punishment falls on the regicide's whole family.
 </p>
-         <p>Thus equal obedience is offered to their overlords,
+               <p>Thus equal obedience is offered to their overlords,
 cruel as well as kind. But what would not the year
 of Eutropius' consulship dare? 'Tis that has stricken
 down our faithful ally Sapor and roused the Persians'
@@ -1584,14 +1596,14 @@ the torch of the Furies across the Euphrates, there
 to kindle rebellion, that no quarter of the globe
 may escape carnage.
 </p>
-         <p>Then indeed men's hearts failed them, their courage
+               <p>Then indeed men's hearts failed them, their courage
 ebbed away amid all these storms; surrounded
 as they were on every side by the din of war, at
 last they recognized the wrath of heaven and their
 consul's evil omen, learning too late — schooled by
 the stubborn issue — their now irrevocable doom.
 </p>
-         <p>They say that the twin sons of Iapetus formed our
+               <p>They say that the twin sons of Iapetus formed our
 first parents of the same materials but with unequal
 skill. Those whom Prometheus fashioned, and with
 whose clay he mingled abundant ether, foresee
@@ -1626,7 +1638,7 @@ help, call upon his name with useless cries and
 all to no purpose direct their gaze towards the
 shore.
 </p>
-         <p>All admit that they deserve punishment and
+               <p>All admit that they deserve punishment and
 death for deserting Stilicho and entrusting themselves
 to the governance of slaves. Long they stood
 dazed with altered thoughts, and as their senses
@@ -1645,11 +1657,11 @@ her flight towards powerful Italy, her hair no
 longer aureole-crowned and she no more bright of
 countenance nor clothed with the saffron of the dawn.
 </p>
-         <p>She stands wan with woe, even as when she buried
+               <p>She stands wan with woe, even as when she buried
 Memnon in his Phrygian grave. Stilicho recognized
 her and stayed, well knowing the reason of her visit.
 </p>
-         <p>Long time she clasped his victorious hand and at
+               <p>Long time she clasped his victorious hand and at
 length amid tears and sighs addressed him.
 <q direct="unspecified">Why art thou so wearied of the world whereon
 I shine? Leavest thou me thus to be the sport and
@@ -1741,10 +1753,10 @@ defence for both empires. Let both have the benefit
 of thine illustrious arms; let the same shield defend
 us and one hero work the salvation of a twofold
 world.</q>
-            <pb id="v.1.p.231"/>
-         </p>
-                                 </div2>
-                        </div1>
+                  <pb id="v.1.p.231"/>
+               </p>
+            </div2>
+         </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0119.phi005" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0119">
             <ti:title xml:lang="lat">Captivi</ti:title>
             <ti:translation xml:lang="eng" urn="urn:cts:latinLit:phi0119.phi005.perseus-eng2" workUrn="urn:cts:latinLit:phi0119.phi005">
@@ -8,4 +9,4 @@
               <ti:label xml:lang="lat">Captivi</ti:label>
             <ti:description xml:lang="mul">Plautus. Plauti Comoediae, Volume 1. Leo, Friedrich, editor. Berlin: Weidmann, 1895.</ti:description>
           </ti:edition>
-          </ti:work>
+          <ti:genre confidence="high">drama-line</ti:genre></ti:work>

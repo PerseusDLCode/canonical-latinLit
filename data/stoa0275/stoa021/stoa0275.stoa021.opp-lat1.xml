@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Paenitentia</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Paenitentia</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=673%3Bownerid=13510798896211526-697">HathiTrust</ref>                                                                      
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa021.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.643"/>
-<head>DE PAENITENTIA.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Paenitentiam hoc genus hominum, quod et ipsi retro fuimus, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa021.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=673%3Bownerid=13510798896211526-697">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa021.opp-lat1">
+         <pb xml:id="v.1.p.643"/>
+         <head>DE PAENITENTIA.</head>
+         <div n="1" type="chapter">
+            <p>Paenitentiam hoc genus hominum, quod et ipsi retro fuimus, 
 caeci, sine domini lumine, natura tenus norunt passionem animi
 <pb xml:id="v.1.p.644"/>
 quandam esse quae veniat de offensa sententiae peioris. Ceterum
@@ -79,10 +82,9 @@ optimis operibus irrogatur in corde figunt, meminisse curantes, ne
 quid boni rursus praestent; contra paenitentiae malorum levius
 incubant. Denique facilius per eandem delinquunt quam per
 eandem recte faciunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Quod si dei ac per hoc rationis quoque compotes agerent,
+         </div>
+         <div n="2" type="chapter">
+            <p> Quod si dei ac per hoc rationis quoque compotes agerent,
 merita primo paenitentiae expenderent, nec unquam eam ad
 <pb xml:id="v.1.p.645"/>
 
@@ -105,8 +107,7 @@ esset, praeire intinctionem paenitentiae iussit, si quos
 per gratiam vocaret ad promissionem semini Abraham destinatam
 per paenitentiae subsignationem ante componeret. Non tacet Ioannes,
 <pb xml:id="v.1.p.646"/>
-
-<bibl n="Matth. III, 2."/>  Paenitentiam initote, dicens, iam enim salus nationibus appropinquabit,
+               <bibl n="Matth. III, 2."/>  Paenitentiam initote, dicens, iam enim salus nationibus appropinquabit,
 dominus scilicet, afferens secundum dei promissum.
 Cui praeministrans paenitentiam destinabat purgandis mentibus
 praepositam, uti quicquid error vetus inquinasset, quicquid in
@@ -138,10 +139,9 @@ dici non meretur, nec quisquam benefaciendo delinquit. Quodsi
 non delinquit, cur paenitentiam invadit, delinquentium privatum?
 Cur malitiae officium bonitati suae imponit? Ita evenit, ut, cum
 aliquid ubi non oportet adhibetur, illic ubi oportet neglegatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Quorum ergo paenitentia iusta et debita videatur, id est quae 
+         </div>
+         <div n="3" type="chapter">
+            <p>Quorum ergo paenitentia iusta et debita videatur, id est quae 
 delicto deputanda sint, locus quidem expostulat denotare, sed otiosum
 videri potest. Domino enim cognito ultro spiritus a suo auctore
 respectus emergit ad notitiam veritatis, et admissus ad dominica
@@ -202,10 +202,9 @@ Nam si bonum concupisceres, perficere gestisses: porro sicut malum
 non perficis, nec concupiscere debueras. Quaqua te constitueris,
 crimine adstringeris, quia aut malum volueris, aut bonum
 non adimpleveris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Omnibus ergo delictis seu carne seu spiritu seu facto seu voluntate 
+         </div>
+         <div n="4" type="chapter">
+            <p>Omnibus ergo delictis seu carne seu spiritu seu facto seu voluntate 
 commissis qui poenam per iudicium destinavit, idem et
 veniam per paenitentiam spopondit, dicens ad populum, Paenitere, <bibl n="Ezech. XVIII. 21. 23. XXXIII, 11 sqq."/>
 et salvum faciam te. Et iterum, Vivo, inquit, dominus, et paenitentiam
@@ -242,10 +241,9 @@ humano more sub deieratione testatur, summa utique gravitate et
 aggredi et custodire debemus, ut in asseveratione divinae gratiae
 permanentes in fructu quoque eius et emolumento proinde perseverare
 possimus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Hoc enim dico, paenitentiam, quae per dei gratiam ostensa 
+         </div>
+         <div n="5" type="chapter">
+            <p>Hoc enim dico, paenitentiam, quae per dei gratiam ostensa 
 et indicta nobis in gratiam nos domino revocat, semel cognitam
 atque susceptam nunquam posthac iteratione delicti resignari oportere.
 Iam quidem nullum ignorantiae praetextum tibi patrocinatur,
@@ -288,10 +286,9 @@ nec revereatur omnino, si timor offendendi patrocinium est.
 Sed ista ingenia de semine hypocritarum pullulare consuerunt,
 quorum individua cum diabolo amicitia est, quorum paenitentia
 nunquam fidelis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Quicquid ergo mediocritas nostra ad paenitentiam semel capessendam
+         </div>
+         <div n="6" type="chapter">
+            <p> Quicquid ergo mediocritas nostra ad paenitentiam semel capessendam
 et perpetuo continendam suggerere conata est, omnes
 quidem deditos domino spectat, ut omnes salutis in promerendo
 deo petitores, sed praecipue novitiolis istis imminet, qui cum maxime
@@ -377,10 +374,9 @@ paenitentiam implevit, quia instrumento paenitentiae, id est metu,
 caruit. Praesumptio inverecundiae portio est: inflat petitorem,
 despicit datorem. Itaque decipit nonnunquam. Ante enim quam
 debeatur repromittit, quo semper is qui est praestaturus offenditur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Hucusque, Christe domine, de paenitentiae disciplina servis
+         </div>
+         <div n="7" type="chapter">
+            <p> Hucusque, Christe domine, de paenitentiae disciplina servis
 tuis discere vel audire contingat, quousque etiam delinquere non
 oportet audientibus, vel nihil iam de paenitentia noverint, nihil
 eius requirant. Piget secundae, immo iam ultimae spei subtexere
@@ -430,10 +426,9 @@ Neminem pudeat. Iteratae valetudinis iteranda medicina est.
 Gratus in dominum exstiteris, si quod tibi dominus offert non
 recusaveris. Offendisti, sed reconciliari adhuc potes. Habes cui
 satisfacias, et quidem volentem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Id si dubitas, evolve quae spiritus ecclesiis dicat. Desertam
+         </div>
+         <div n="8" type="chapter">
+            <p> Id si dubitas, evolve quae spiritus ecclesiis dicat. Desertam
 dilectionem Ephesiis imputat, stuprum et idolothytorum esum Thyatirenis
 exprobrat, Sardos non plenorum operum incusat, Pergamenos
 <bibl n="Apoc. II. III."/> docentes perversa reprehendit, Laodicenos fidentes divitiis
@@ -466,10 +461,9 @@ paternorum compares, si porcos immundum relinquas pecus, si
 patrem repetas vel offensum, Deliqui, dicens, pater, nec dignus <bibl n="Luc. XV, 21."/>
 ego iam vocari tuus. Tantum relevat confessio delictorum, quantum
 dissimulatio exaggerat. Confessio enim satisfactionis consilium est, dissimulatio contumaciae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Huius igitur paenitentiae secundae et unius quanto in arto 
+         </div>
+         <div n="9" type="chapter">
+            <p>Huius igitur paenitentiae secundae et unius quanto in arto 
 negotium est, tanto operosior probatio, ut non sola conscientia
 praeferatur, sed aliquo etiam actu administretur. Is actus, qui
 <pb xml:id="v.1.p.660"/>
@@ -496,10 +490,9 @@ relevat; cum squalidum facit, magis mundatum reddit; cum accusat,
 
 excusat; cum condemnat, absolvit. In quantum non peperceris tibi,
 in tantum tibi deus, crede, parcet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Plerosque tamen hoc opus, ut publicationem sui, aut suffugere 
+         </div>
+         <div n="10" type="chapter">
+            <p>Plerosque tamen hoc opus, ut publicationem sui, aut suffugere 
 aut de die in diem differre. Praesumo, pudoris magis memores
 quam salutis; velut illi qui in partibus verecundioribus corporis
 contracta vexatione conscientiam medentium vitant et ita cum
@@ -533,10 +526,9 @@ quia factum est salutare. Miserum est secari et cauterio exuri et
 pulveris alicuius mordacitate anxiari; tamen quae per insuavitatem
 medentur, et emolumento curationis offensam sui excusant et praesentem
 iniuriam superventurae utilitatis gratia commendant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Quid si praeter pudorem, quem potiorem putant, etiam incommoda
+         </div>
+         <div n="11" type="chapter">
+            <p> Quid si praeter pudorem, quem potiorem putant, etiam incommoda
 corporis reformident, quod inlotos, quod sordulentos,
 quod extra laetitiam oportet deversari in asperitudine sacci et horrore
 cineris et oris de ieiunio vanitate? Num ergo in coccino
@@ -564,10 +556,9 @@ victus atque cultus offenso domino praestare cessabimus, quae
 gentiles nemine omnino laeso sibi irrogant? Hi sunt de quibus
 scriptura commemorat: Vae illis qui delicta sua velut procero fune
 nectunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Si de exomologesi retractas, gehennam in corde considera, 
+         </div>
+         <div n="12" type="chapter">
+            <p>Si de exomologesi retractas, gehennam in corde considera, 
 quam tibi exomologesis extinguet, et poenae prius magnitudinem
 imaginare, ut de remedii adoptione non dubites. Quid illum
 thesaurum ignis aeterni aestimamus, cum fumariola quaedam eius
@@ -605,13 +596,11 @@ plancis, stili potius negotium quam officium conscientiae meae
 curans? Peccator enim omnium notarum cum sim, nec ulli rei nisi
 paenitentiae natus, non facile possum super illa tacere, quam ipse
 quoque et stirpis humanae et offensae in dominum princeps Adam,
-exomologesi restitutus in paradisum suum, non tacet.</p></div>
-<pb xml:id="v.1.p.666"/>
-
-<pb xml:id="v.1.p.667"/>
-
-<pb xml:id="v.1.p.668"/>
-</div></body></text>
-
-
+exomologesi restitutus in paradisum suum, non tacet.</p>
+         </div>
+         <pb xml:id="v.1.p.666"/>
+         <pb xml:id="v.1.p.667"/>
+         <pb xml:id="v.1.p.668"/>
+      </body>
+   </text>
 </TEI>

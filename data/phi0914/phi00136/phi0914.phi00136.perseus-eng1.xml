@@ -46,7 +46,14 @@
                 <refState unit="book"/>
                 <refState n="chunk" unit="chapter"/>
             </refsDecl>
-        </encodingDesc>
+              <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="la">Latin</language>
@@ -68,8 +75,8 @@
             <change who="Stella Dee" when="2014-10-09">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="en">
-        <body>
+    <text xml:lang="eng">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00136.perseus-eng1">
             <pb n="p.154"/>
             <div type="book" n="36" org="uniform" sample="complete" part="N">
                 <head>Liber XXXVI</head>

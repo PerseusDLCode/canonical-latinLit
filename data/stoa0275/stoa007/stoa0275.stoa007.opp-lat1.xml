@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Adversus Praxean</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Adversus Praxean</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=658%3Bownerid=13510798896211811-694">HathiTrust</ref>              
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa007.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.653"/>
-<head>ADVERSUS PRAXEAN.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Varie diabolus aemulatus est veritatem. Adfectavit illam aliquando 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa007.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=658%3Bownerid=13510798896211811-694">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa007.opp-lat1">
+         <pb xml:id="v.2.p.653"/>
+         <head>ADVERSUS PRAXEAN.</head>
+         <div n="1" type="chapter">
+            <p>Varie diabolus aemulatus est veritatem. Adfectavit illam aliquando 
 defendendo concutere. Unicum dominum vindicat, omnipotentem
 mundi conditorem, ut et de unico haeresim faciat. Ipsum
 dicit patrem descendisse in virginem, ipsum ex ea natum, ipsum
@@ -102,10 +104,9 @@ latitavit, et nunc denuo erupit. Sed et denuo eradicabitur,
 <bibl n="Matth. XIII, 30."/> si voluerit dominus, in isto commeatu; si quo minus, die suo colligentur
 omnes adulterae fruges, et cum ceteris scandalis igni
 inextinguibili cremabuntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Itaque post tempus pater natus et pater passus, ipse deus,
+         </div>
+         <div n="2" type="chapter">
+            <p> Itaque post tempus pater natus et pater passus, ipse deus,
 dominus omnipotens, Iesus Christus praedicatur. Nos vero et semper
 et nunc magis, ut instructiores per paracletum, deductorem
 scilicet omnis veritatis, unicum quidem deum credimus, sub hac
@@ -144,10 +145,9 @@ et formae et species in nomine patris et filii et spiritus sancti deputantur.
 
 Quomodo numerum sine divisione patiuntur procedentes
 tractatus demonstrabunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Simplices enim quique, ne dixerim imprudentes et idiotae,
+         </div>
+         <div n="3" type="chapter">
+            <p> Simplices enim quique, ne dixerim imprudentes et idiotae,
 quae maior semper credentium pars est, quoniam et ipsa regula
 fidei a pluribus diis saeculi ad unicum et verum deum transfert,
 non intellegentes unicum quidem, sed cum sua Î¿á¼°ÎºÎ¿Î½Î¿Î¼á½·á¾³ esse
@@ -191,10 +191,9 @@ proprii status ac per hoc aemula superducitur, cum alius deus infertur
 adversus creatorem, cum Marcione, cum plures, secundum
 Valentinos et Prodicos; tunc in monarchiae eversionem, cum in
 creatoris destructionem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Ceterum qui filium non aliunde deduco, sed de substantia 
+         </div>
+         <div n="4" type="chapter">
+            <p>Ceterum qui filium non aliunde deduco, sed de substantia 
 patris, nihil facientem sine patris voluntate, omnem a patre consecutum
 potestatem, quomodo possum de fide destruere monarchiam,
 quam a patre filio traditam in filio servo? Hoc mihi et in
@@ -208,8 +207,7 @@ et patri. Oportet enim eum regnare usque dum ponat inimicos
 eius deus sub pedes ipsius, scilicet secundum psalmum: Sede ad <bibl n="Ps. CX, 1."/>
 dexteram meam, donec ponam inimicos tuos scabellum pedum tuorum.
 <pb xml:id="v.2.p.658"/>
-
-<bibl n="I Cor. XV, 28."/> Cum autem subiecta erunt illi omnia absque eo qui ei subiecit
+               <bibl n="I Cor. XV, 28."/> Cum autem subiecta erunt illi omnia absque eo qui ei subiecit
 omnia, tunc et ipse subicietur illi qui ei subiecit omnia, ut
 sit deus omnia in omnibus. Videmus igitur non obesse monarchiae
 filium, etsi hodie apud filium est, quia et in suo statu est apud
@@ -220,10 +218,9 @@ capitulo epistulae spostolicae potuimus iam et patrem et filium
 ostendisse duos esse, praeterquam ex nominibus patris et filii;
 etiam ex eo, quod qui tradidit regnum et cui tradidit, item qui
 subiecit et cui subiecit, duo sint necesse est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Sed quia duos unum volunt esse, ut idem pater et filius habeatur,
+         </div>
+         <div n="5" type="chapter">
+            <p> Sed quia duos unum volunt esse, ut idem pater et filius habeatur,
 oportet et totum de filio examinari, an sit, et qui sit, et
 quomodo sit, et ita res ipsa formam suam scripturis et interpretationibus
 earum patrocinantibus vindicabit. Aiunt quidam et Genesim
@@ -267,10 +264,9 @@ Possum itaque non temere praestruxisse et tunc deum
 ante universitatis constitutionem solum non fuisse, habentem in
 semetipso proinde rationem et in ratione sermonem, quem secumdum
 a se faceret agitando intra se.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Haec vis et haec divini sensus dispositio apud scripturas etiam 
+         </div>
+         <div n="6" type="chapter">
+            <p>Haec vis et haec divini sensus dispositio apud scripturas etiam 
 in sophiae nomine ostenditur. Quid enim sapientius ratione dei
 sive sermone? Itaque sophiam quoque exaudi, ut secundam personam
 conditam. Primo dominus creavit me initium viarum in <bibl n="Prov. VIII, 22 sq."/>
@@ -290,10 +286,9 @@ suas rationem et sophiam, ut per ipsum fierent universa
 per quem erant cogitata atque disposita, immo et facta iam, quantum
 in dei sensu. Hoc enim eis deerat, ut coram quoque in suis
 speciebus atque substantiis cognoscerentur et tenerentur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Tunc igitur etiam ipse sermo speciem et ornatum suum sumit,
+         </div>
+         <div n="7" type="chapter">
+            <p> Tunc igitur etiam ipse sermo speciem et ornatum suum sumit,
 <bibl n="Gen. I, 3."/> sonum et vocem, cum dicit deus, Fiat lux. Haec est nativitas perfecta
 sermonis, dum ex deo procedit; conditus ab eo primum ad
 <bibl n="Prov. VIII, 22."/> cogitatum in nomine sophiae, Dominus condidit me initium viarum;
@@ -346,10 +341,9 @@ soli deo visibilia sunt, quanto magis quod ex ipsius substantia
 emissum est sin(??) substantia non erit? Quaecunque ergo substantia
 sermonis fuit, illam dico personam, et illi nomen filii vindico, et
 dum filium ag(??), secundum a patre defendo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Hoc ai qui putaverit me Ï&#x80;Ï&#x81;Î¿Î²Î¿Î»á½´Î½ aliquam introducere, 
+         </div>
+         <div n="8" type="chapter">
+            <p>Hoc ai qui putaverit me Ï&#x80;Ï&#x81;Î¿Î²Î¿Î»á½´Î½ aliquam introducere, 
 id est prolationem rei alterius ex altera, quod facit Valentinus,
 alium atque alium Aeonem de Aeone producens, primo quidem
 dicam tibi, non ideo non utatur et veritas vocabulo isto et re ac
@@ -366,7 +360,7 @@ et sinum patris ipse exposuit, et omnia apud patrem audivit et <bibl n="Io. I, 1
 vidit, et quae mandatus est a patre, ea et loquitur; nec suam, <bibl n="Io. VIII, 26."/>
 sed patris perfecit voluntatem, quam de proximo, immo de initio <bibl n="Io. VI, 33."/>
 noverat. Quis enim scit quae sint in deo nisi spiritus qui in ipso <bibl n="I Cor. II, 11."/>
-<pb xml:id="v.2.p.662"/>
+               <pb xml:id="v.2.p.662"/>
 
 est? Sermo autem spiritu structus est, et ut ita dixerim, sermonis
 corpus est spiritus. Sermo ergo et in patre semper, sicut
@@ -396,10 +390,9 @@ rivus ex flumine, et tertius a sole apex ex radio. Nihil tamen a
 matrice alienatur, a qua proprietates suas ducit. Ita trinitas per
 consertos et connexos gradus a patre decurrens et monarchiae
 nihil obstrepit et Î¿á¼°ÎºÎ¿Î½Î¿Î¼á½·Î±Ï&#x82; statum protegit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Hanc me regulam professum, qua inseparatos ab alterutro patrem
+         </div>
+         <div n="9" type="chapter">
+            <p> Hanc me regulam professum, qua inseparatos ab alterutro patrem
 et filium et spiritum testor, tene ubique, et ita quid quomodo
 dicatur agnosces. Ecce enim dico alium esse patrem, et alium
 filium, et alium spiritum. Male accepit idiotes quisque aut perversus
@@ -427,10 +420,9 @@ enim omnia quod vocantur, hoc erunt, et quod erunt, hoc vocabuntur,
 et permiscere se diversitas vocabulorum non potest omnino,
 quia nec rerum quarum erunt vocabula. Est, est, non, non; nam <bibl n="Matth. V, 37."/>
 quod amplius est, hoc a malo est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Ita aut pater aut filius est, et neque dies eadem et nox, neque 
+         </div>
+         <div n="10" type="chapter">
+            <p>Ita aut pater aut filius est, et neque dies eadem et nox, neque 
 pater idem et filius, ut sint ambo unus et utrumque alter,
 quod vanissimi isti Monarchiani volunt. Ipse se, inquiunt, filium sibi
 fecit. Atquin pater filium facit, et patrem filius. Et qui ex alterutro
@@ -483,10 +475,9 @@ enim posse velle est, et non posse nolle, quod autem voluit, et
 potuit et ostendit. Ergo quia, si voluit semetipsum sibi filium
 facere, potuit, et quia, si potuit, fecit, tunc probabis illum et
 potuisse et voluisse, si probaveris illum fecisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Probare autem tam aperte debebis ex scripturis, quam nos
+         </div>
+         <div n="11" type="chapter">
+            <p> Probare autem tam aperte debebis ex scripturis, quam nos
 probamus illum sibi filium fecisse sermonem suum. Si enim filium
 nominat, filius autem non alius erit quam qui ex ipso prodiit,
 <pb xml:id="v.2.p.665"/>
@@ -552,10 +543,9 @@ pronuntiat spiritus, et pater, ad quem pronuntiat, et filius, de quo
 pronuntiat. Sic et cetera, quae nunc ad patrem de filio vel ad filium,
 nunc ad filium de patre vel ad patrem, nunc ad spiritum pronuntiantur,
 unamquamque personam in sua proprietate constituunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Si te adhuc numerus scandalizat trinitatis quasi non connexae
+         </div>
+         <div n="12" type="chapter">
+            <p> Si te adhuc numerus scandalizat trinitatis quasi non connexae
 in unitate simplici, interrogo quomodo unicus et singularis pluraliter
 <bibl n="Gen. I, 25."/> loquitur, Faciamus hominem ad imaginem et similitudinem
 nostram, cum debuerit dixisse, Faciam hominem ad imaginem et
@@ -597,14 +587,13 @@ necessitate sensus eum qui iubet, et eum qui facit. Nam nec iuberet,
 si ipse faceret, dum iuberet fieri per eum. Tamen iubebat,
 haud sibi iussurus, si unus esset, aut sine iussu facturus, quia
 non expectasset ut sibi iuberet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Ergo, inquis, si deus dixit et deus fecit, sic alius deus dixit 
+         </div>
+         <div n="13" type="chapter">
+            <p>Ergo, inquis, si deus dixit et deus fecit, sic alius deus dixit 
 et alius fecit; duo dii praedicantur. Si tam durus es, puta interim;
 et ut adhuc amplius hoc putes, accipe et in psalmo duos deos
 dictos: Thronus tuus deus in aevum, virga regni tui: Dilexisti <bibl n="Ps. XLV, 7 sq."/>
-<pb xml:id="v.2.p.668"/>
+               <pb xml:id="v.2.p.668"/>
 
 iustitiam et odisti iniquitatem, propterea unxit te deus, deus tuus.
 Si ad deum loquitur, et unctum deum a deo affirmat, affirmasset
@@ -677,10 +666,9 @@ appellabo. Nam etsi soles duos non faciam, tamen et solem et
 radium eius tam duas res et duas species unius et indivisae substantiae
 numerabo, quam deum et sermonem eius, quam patrem
 et filium.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Adhuc et illa nobis regula adsistit duos vindicantibus, patrem
+         </div>
+         <div n="14" type="chapter">
+            <p> Adhuc et illa nobis regula adsistit duos vindicantibus, patrem
 et filium, quae invisibilem deum determinavit. Cum enim Moyses
 <bibl n="Exod. XXXIII, 13. 18. 20."/> in Aegypto desiderasset domini conspectum, dicens, Si ergo inveni
 gratiam coram te, manifesta mihi te, ut cognoscenter videam te,
@@ -756,10 +744,9 @@ spiritus est, merito spiritus, cuius personae erat, id est
 patris, eum faciem suam ex unitate scilicet pronuntiavit. Mira
 res plane, an facies filii pater accipi possit, qui est caput eius.
 <bibl n="I Cor. XI, (??)."/> Caput enim Christi deus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Si hunc articulum quaestionibus scripturae veteris non expediam,
+         </div>
+         <div n="15" type="chapter">
+            <p> Si hunc articulum quaestionibus scripturae veteris non expediam,
 de novo testamento sumam confirmationem nostrae interpretationis,
 ne quodcunque in filium reputo, in patrem proinde defendas.
 Ecce enim et in evangeliis et in apostolis visibilem et
@@ -863,10 +850,10 @@ nisi viderit patrem facientem, in sensu scilicet facientem. Pater
 enim sensu agit, filius vero qui in patris sensu est videns
 <bibl n="Io. I, 3."/> perficit. Sic omnia per filium facta sunt, et sine illo factum
 est nihil.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p><bibl n="Io. III, 35."/> Nec putes sola opera mundi per filium facta, sed et quae a
+         </div>
+         <div n="16" type="chapter">
+            <p>
+               <bibl n="Io. III, 35."/> Nec putes sola opera mundi per filium facta, sed et quae a
 deo exinde gesta sunt. Pater enim, qui diligit filium et omnia tradidit
 in sinu eius, utique a primordio diligit et a primordio tradidit.
 <bibl n="Io. I, 1."/> Ex quo, A primordio sermo erat apud deum, et deus erat
@@ -927,10 +914,9 @@ credunt patrem et visum et congressum et operatum et sitim et
 sitiet n(??)c esuriet omnino: quanto magis nec morietur nec sepelietur?),
 et ita unum deum semper egisse, id est patrem, quae per
 filium gesta sunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Facilius existimaverunt patrem in filii nomine egisse quam
+         </div>
+         <div n="17" type="chapter">
+            <p> Facilius existimaverunt patrem in filii nomine egisse quam
 <bibl n="Io. V, 43."/> filium in patris, dicente ipso domino, Ege veni in patris mei nomine;
 <bibl n="Io. XVII, 5."/> item ad ipsum patrem, Nomen tuum manifestavi hominibus;
 <bibl n="Ps. CXVIII, 26."/> condicente etiam scriptura: Benedictus qui venit in nomine domini,
@@ -956,10 +942,9 @@ omnipotens, et sicubi alibi dei omnipotentis appellationem non
 putant etiam filio convenire. Quasi qui venturus sit (??) omnipotens,
 cum et filius omnipotentis tam omnipotens sit quam deus
 dei filius.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>Sed hanc societatem neminum paternorum in filio ne facile 
+         </div>
+         <div n="18" type="chapter">
+            <p>Sed hanc societatem neminum paternorum in filio ne facile 
 perspiciant perturbat illos scriptura, si quando unicum deum statuit,
 quasi non eadem et deos et dominos duos proposuerit, ut supra
 ostendimus. Ergo quia duos et unum, inquiunt, invenimus, ideo
@@ -991,14 +976,12 @@ haereticos, qui, sicut nationes manibus, ita et ipsi verbis idola
 fabricantur, id est alium deum et alium Christum. Igitur et cum
 se unum pronuntiabat, filio pater procurabat, ne ab alio deo Christus
 venisse credatur, sed ab illo qui praedixerat, Ego deus et alius <bibl n="Ies. XLV, 5. 18. XLIV, 6."/>
-<pb xml:id="v.2.p.678"/>
-
-<bibl n="Ies. XLIV, 24."/> absque me non est, qui se unicum, sed cum filio, ostendit, cum
+               <pb xml:id="v.2.p.678"/>
+               <bibl n="Ies. XLIV, 24."/> absque me non est, qui se unicum, sed cum filio, ostendit, cum
 quo caelum solus extendit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p> Quin et hoc dictum eius in argumentum singularitatis arripient:
+         </div>
+         <div n="19" type="chapter">
+            <p> Quin et hoc dictum eius in argumentum singularitatis arripient:
 <bibl n="Ibid."/> Extendi, inquit, caelum solus. Quantum ad ceteras virtutes,
 solus, praestruens adversus coniecturas haereticorum, qui mundum
 ab angelis et potestatibus diversis volunt structum, qui et ipsum
@@ -1048,10 +1031,9 @@ individuum et inseparatum filium a patre pronuntiamus, nec statu,
 sed gradu alium, qui etsi deus dicatur, quando nominatur singularis,
 non ideo duos deos faciat, sed unum, hoc ipso, quod et
 deus ex unitate patris vocari habeat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Sed argumentationibus eorum adhuc retundendis opera praebenda 
+         </div>
+         <div n="20" type="chapter">
+            <p>Sed argumentationibus eorum adhuc retundendis opera praebenda 
 est, si quid de scripturis ad sententiam suam excerpent,
 cetera nolentes intueri, quae et ipsa regulam servant, et quidem
 salva unione divinitatis et monarchiae sonitu. Nam sicut in veteribus
@@ -1065,10 +1047,9 @@ Nam quia pauca sunt quae in silva inveniri possunt,
 pauca adversus plura defendunt, et posteriora adversus priora suscipiunt.
 Regula autem omni rei semper ab initio, constituta in
 prioribus et in posteriora praescribit, utique et in pauciora.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Aspice itaque quanta praescribant tibi etiam in evangelio ante 
+         </div>
+         <div n="21" type="chapter">
+            <p>Aspice itaque quanta praescribant tibi etiam in evangelio ante 
 Philippi consultationem et ante omnem argumentationem tuam. Et
 <pb xml:id="v.2.p.680"/>
 
@@ -1140,7 +1121,7 @@ quod me pater miserit; et qui me misit pater, ipse testimonium
 dixit de me. Subiungens autem, Neque vocem eius audistis unquam, <bibl n="Io. V, 37."/>
 neque formam eius vidistis, confirmat retro non patrem,
 sed filium fuisse, qui videbatur et audiebatur. Denique dicit, Ego <bibl n="Io. V, 43."/>
-<pb xml:id="v.2.p.682"/>
+               <pb xml:id="v.2.p.682"/>
 
 veni in patris mei nomine, et non me recepistis. Adeo semper
 filius erat in dei et regis et domini omnipotentis et altissimi nomine.
@@ -1159,10 +1140,9 @@ discedunt ab eo multi, et apostolis suis offert si velint discedere
 <bibl n="Io. VI, 66 sqq."/> et ipsi, quid respondit Simon Petrus? Quo discedimus? verba
 vitae habes, et nos credimus quod tu sis Christus. Patrem illum
 esse, an patris Christum?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Cuius autem doctrinam dicit, ad quam mirabantur? suam an
+         </div>
+         <div n="22" type="chapter">
+            <p> Cuius autem doctrinam dicit, ad quam mirabantur? suam an
 patris? Aeque ambigentibus inter se, ne ipse esset Christus, utique
 <bibl n="Io. VII, 28 sq."/> non pater, sed filius, Neque nescitis, inquit, unde sim, et non
 veni a me ipso, sed est verus qui me misit, quem vos non nostis;
@@ -1221,8 +1201,7 @@ in nomine patris, ipsa de me testimonium dicunt. Quod testimonium?
 ipsum scilicet esse de quo interrogabant, id est Christum
 dei. De ovibus etiam suis, quod nemo illas de manu eius eriperet,
 <pb xml:id="v.2.p.684"/>
-
-<bibl n="Io. X, 28 sqq."/> Pater, qui maior est omnibus, mihi dedit; et, Ego et pater unum
+               <bibl n="Io. X, 28 sqq."/> Pater, qui maior est omnibus, mihi dedit; et, Ego et pater unum
 sumus. Hic ergo iam gradum volunt figere stulti, immo caeci, qui
 non videant, primo, Ego et pater, duorum esse significationem;
 dehinc in novissimo, Sumus, non ex unius esse persona, quod
@@ -1248,10 +1227,10 @@ erit pater in filio, et filius in patre; et ita per opera intellegimus
 unum esse patrem. Adeo totum hoc perseverabat inducere, ut
 duo tamen crederentur in una virtute, quia aliter filius credi non
 posset nisi duo crederentur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p><bibl n="Io. XI, 27. Matth. XVI, 16"/> Post haec autem Martha filium dei eum confessa non magis
+         </div>
+         <div n="23" type="chapter">
+            <p>
+               <bibl n="Io. XI, 27. Matth. XVI, 16"/> Post haec autem Martha filium dei eum confessa non magis
 erravit quam Petrus et NathanaÃ«l; quamquam et si errasset, statim
 didicisset. Ecce enim ad suscitandum fratrem eius a mortuis ad
 <bibl n="Io. XI, 41 sq."/> caelum et ad patrem dominus suspiciens, Pater, inquit, utique
@@ -1295,9 +1274,8 @@ me, conspicit eum qui me misit. Quomodo? quoniam scilicet
 a memetipso non sum locutus, sed, qui me misit pater, ipse <bibl n="Io. XII, 49."/>
 mihi mandatum dedit, quid dicam, et quid loquar. Dominus enim
 dat mihi linguam disciplinae ad cognoscendum, quando oporteat <bibl n="Ies. L, 4."/>
-<pb xml:id="v.2.p.686"/>
-
-<bibl n="Io. XII, 50."/> dicere sermonem quem ego loquor. Sicut mihi pater dixit, ita et
+               <pb xml:id="v.2.p.686"/>
+               <bibl n="Io. XII, 50."/> dicere sermonem quem ego loquor. Sicut mihi pater dixit, ita et
 loquor. Haec quomodo dicta sint, evangelizator et utique tam carus
 discipulus Ioannes magis quam Praxeas noverat, ideoque ipse de
 <bibl n="Io. XIII, 1. 3."/> suo sensu, Ante autem sollemnitatem paschae, inquit, sciens Iesus
@@ -1313,10 +1291,9 @@ erat in filio hominis, id est in carne, in qua et glorificatus iam,
 virtute vero et sermone, et ante Iesus. Et deus, inquit, glorificabit illum in semetipso, id est pater filium, quem in semetipso
 habens, etsi porrectum ad terram, mox per resurrectionem
 morte devicta.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Erant plane qui et tunc non intellegerent. Quoniam et Thomas
+         </div>
+         <div n="24" type="chapter">
+            <p> Erant plane qui et tunc non intellegerent. Quoniam et Thomas
 <bibl n="Io. XIV, 5."/> aliquamdiu incredulus. Domine, inquit, non scimus quo eas,
 <bibl n="Io. XIV, 6 sq."/> et quomodo viam novimus? Et Iesus: Ego sum via, veritas et
 vita: nemo venit ad patrem nisi per me; si cognovissetis me, cognovissetis
@@ -1378,10 +1355,9 @@ manet, et per eum in quo manet, ex hoc ipso apparente proprietate
 <bibl n="Ibid."/> scriptum esse, sed, Quia ego in patre, et pater in me, si quo
 minus, vel propter opera credite, ea utique opera per quae pater
 in filio, non visu, sed sensu videbatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p> Post Philippum et totam substantiam quaestionis istius quae
+         </div>
+         <div n="25" type="chapter">
+            <p> Post Philippum et totam substantiam quaestionis istius quae
 in finem evangelii, perseverant in eodem genere sermonis, quo
 <bibl n="Io. XIV, 16."/> pater et filius in sua proprietate distinguuntur. Paracletum quoque
 a patre se postulaturum, cum ascendisset ad patrem, et missurum
@@ -1412,10 +1388,9 @@ Iesum Christum filium dei? Igitur quaecunque ex his putaveris ad
 demonstrationem eiusdem patris et filii proficere tibi posse, adversus
 definitivam evangelii sententiam niteris. Non ideo enim scripta
 sunt, ut patrem credas Iesum Christum, sed ut filium.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p>Propter unum Philippi sermonem et domini responsionem ad 
+         </div>
+         <div n="26" type="chapter">
+            <p>Propter unum Philippi sermonem et domini responsionem ad 
 eum videmur Ioannis evangelium decucurrisse, ne tot manifeste
 pronuntiata et ante et postea unus sermo subvertat, secundum
 omnia potius quam adversus omnia, etiam adversus suos sensus
@@ -1472,10 +1447,9 @@ et horam ultimam soli patri notam, disponens regnum discipulis,
 <bibl n="Matth. XXVIII, 19."/> patris, et novissime mandans ut tinguerent in patrem et filium et
 spiritum sanctum, non in unum. Nam nec semel, sed ter, ad
 singula nomina in personas singulas tinguimur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p> Et quid ego in tam manifestis morabor, cum ea aggredi
+         </div>
+         <div n="27" type="chapter">
+            <p> Et quid ego in tam manifestis morabor, cum ea aggredi
 debeam de quibus manifesta obumbrare quaerunt? Undique enim
 obducti de distinctione patris et filii, quam manente coniunctione
 disponimus, ut solis et radii et fontis et fluvii, per individuum
@@ -1563,10 +1537,9 @@ dei carnem interpretaris. exhibe qui sit filius hominis. Aut numquid
 spiritus erit? Sed spiritum patrem ipsum vis haberi, quia
 deus spiritus, quasi non et dei spiritus, sicut et sermo deus et
 dei sermo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p>Itaque Christum facis patrem, stultissime, qui nec ipsam vim 
+         </div>
+         <div n="28" type="chapter">
+            <p>Itaque Christum facis patrem, stultissime, qui nec ipsam vim 
 inspicias nominis huius, si tamen nomen est Christus, et non
 appellatio potius; unctus enim significatur. Unctus autem non
 magis nomen est quam vestitus, quam calceatus, accidens nomini
@@ -1620,10 +1593,9 @@ alius erit deus Christi Iesu, charismatum spiritalium largitor. Certe,
 et mortalia corpora nostra, iamque alius erit suscitator quam
 pater mortuus et pater suscitatus, si Christus, qui est mortuus,
 pater est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p> Obmutescat, obmutescat ista blasphemia. Sufficiat Christum
+         </div>
+         <div n="29" type="chapter">
+            <p> Obmutescat, obmutescat ista blasphemia. Sufficiat Christum
 filium dei mortuum dici, et hoc, quia ita scriptum est. Nam et
 apostolus non sine onere pronuntians Christum mortuum adicit,
 <bibl n="I Cor. XV, 3."/> Secundum scripturas, ut duritiam pronuntiationis scripturarum auctoritate
@@ -1671,10 +1643,9 @@ in carne. Aeque hoc retractatum. Nec quisquam negabit;
 quando nec nos pati pro deo possumus, nisi spiritus dei sit
 in nobis, qui et loquitur de nobis quae sunt confessionis, non
 ipse tamen patiens, sed pati posse praestans.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p> Alioquin si ultra pergas, potero tibi durius respondere, et te
+         </div>
+         <div n="30" type="chapter">
+            <p> Alioquin si ultra pergas, potero tibi durius respondere, et te
 cum ipsius domini pronuntiatione committere, uti dicam quid de
 <bibl n="Matth. XXVII, 46."/> isto quaeris? Habes ipsum exclamantem in passione, Deus meus,
 deus meus, ut quid me dereliquisti? Ergo aut filius patiebatur a
@@ -1704,10 +1675,9 @@ sed et Î¿á¼°ÎºÎ¿Î½Î¿Î¼á½·Î±Ï&#x82; interpretatorem, si quis
 prophetiae eius admiserit, et deductorem omnis veritatis,
 quae est in patre et filio et spiritu sancto secundum Christianum
 sacramentum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p>Ceterum Iudaicae fidei ista res, sic unum deum credere, ut 
+         </div>
+         <div n="31" type="chapter">
+            <p>Ceterum Iudaicae fidei ista res, sic unum deum credere, ut 
 filium adnumerare ei nolis, et post filium spiritum. Quid enim erit
 inter nos et illos nisi differentia ista? Quod opus evangelii, quae
 est substantia novi testamenti, statuens legem et prophetas usque
@@ -1723,14 +1693,11 @@ confessus
  fuerit Christum filium dei, non patrem, deus in illo manet,
 et ipse in deo. Non credimus testimonio dei, quo testatus
 est de filio suo. Qui filium non habet, nec vitam habet. Non habet <bibl n="I Io. V, 9. 12."/>
-autem filium, qui eum alium quam filium credit.</p></div>
-<pb xml:id="v.2.p.698"/>
-
-<pb xml:id="v.2.p.699"/>
-
-<pb xml:id="v.2.p.700"/>
-</div></body></text>
-
-
-
+autem filium, qui eum alium quam filium credit.</p>
+         </div>
+         <pb xml:id="v.2.p.698"/>
+         <pb xml:id="v.2.p.699"/>
+         <pb xml:id="v.2.p.700"/>
+      </body>
+   </text>
 </TEI>

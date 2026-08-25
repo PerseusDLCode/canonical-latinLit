@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Praescriptionibus Hereticorum</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Praescriptionibus Hereticorum</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=11%3Bownerid=13510798896211811-15">HathiTrust</ref>
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa024.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.3"/>
-<head>DE PRAESCRIPTIONE HAERETICORUM.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Condicio praesentium temporum etiam hanc admonitionem 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa024.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=11%3Bownerid=13510798896211811-15">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa024.opp-lat1">
+         <pb xml:id="v.2.p.3"/>
+         <head>DE PRAESCRIPTIONE HAERETICORUM.</head>
+         <div n="1" type="chapter">
+            <p>Condicio praesentium temporum etiam hanc admonitionem 
 provocat nostram, non oportere nos mirari super haereses istas,
 sive quia sunt, futurae enim praenuntiabantur, sive quia fidem quorundam <bibl n="Matth. VII, 15 sqq."/>
 subvertunt, ad hoc enim sunt, ut fides habendo temptationem <bibl n="XXIV, 4. 11, 24. I Cor. XI, 19."/>
@@ -69,10 +72,9 @@ plerique hoc ipso scandalizantur, quod tantum haereses valeant.
 Quantum, si non fuissent? Cum quid sortitum est ut omnimodo
 sit, causam accipit ob quam sit. Haec vim consequitur per
 quam sit, ne esse non possit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Febrem denique inter ceteros mortiferos et cruciarios exitus
+         </div>
+         <div n="2" type="chapter">
+            <p> Febrem denique inter ceteros mortiferos et cruciarios exitus
 erogando homini deputatam neque quia est miramur, est enim,
 neque quia erogat hominem, ad hoc enim est. Proinde haereses
 ad languorem et interitum fidei productas si expavescimus hoc
@@ -97,10 +99,9 @@ viribus fuit: adeo idem ille victor, bene valenti postea comparatus,
 etiam superatus recedit. Non aliter haereses de quorundam infirmitatibus
 habent quod valent, nihil valentes, si in bene valentem
 fidem incurrant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Solent quidem isti infirmiores etiam de quibusdam personis 
+         </div>
+         <div n="3" type="chapter">
+            <p>Solent quidem isti infirmiores etiam de quibusdam personis 
 ab haeresi captis aedificari in ruinam. Quare illa vel ille fidelisimi
 et prudentissimi et usitatissimi in ecclesia in illam partem
 transierunt? Quis hoc dicens non ipse sibi respondet neque prudentes
@@ -137,10 +138,9 @@ ecclesiis eius, si a quibusdam deseruntur, cum ea nos ostendunt
 <bibl n="I Ioan. II, 19."/> Christianos quae patimur ad exemplum ipsius Christi. Ex nobis,
 inquit, prodierunt, sed non fuerunt ex nobis. Si fuissent ex nobis,
 permansissent utique nobiscum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Quin potius memores simus tam dominicarum pronuntiationum
+         </div>
+         <div n="4" type="chapter">
+            <p> Quin potius memores simus tam dominicarum pronuntiationum
 quam apostolicarum litterarum, quae nobis et futuras haereses
 praenuntiaverunt et fugiendas praefinierunt, et sicut esse illas
 non expavescimus, ita et posse id, propter quod effugiendae sunt,
@@ -163,10 +163,9 @@ probabiles intellegi iuvat qui in haeresin fidem demutant;
 sicut ex diverso sibi interpretantur, quia dixerit alibi, Omnia <bibl n="I Thess. V, 21."/>
 examinate, quod bonum est tenete. Quasi non liceat omnibus
 male examinatis in electionem alicuius mali impingere per errorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Porro si dissensiones et schismata increpat, quae sine dubio 
+         </div>
+         <div n="5" type="chapter">
+            <p>Porro si dissensiones et schismata increpat, quae sine dubio 
 mala sunt, et in continenti haereses subiungit. Quod malis adiungat,
 malum utique profitetur, et quidem maius, cum ideo credidisse
 se dicat de schismatibus et dissensionibus, quia sciret <bibl n="I Cor. XI, 18 sq."/>
@@ -183,10 +182,9 @@ constituit in qua et schismata et dissensiones: ac per hoc
 non eos probabiles facit qui in haereses diverterint, cum maxime
 diverti ab eiusmodi obiurget, edocens unum omnes loqui et <bibl n="I Cor. I, 10."/>
 id ipsum sapere, quod etiam haereses non sinunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Nec diutius de isto, si idem est Paulus qui et alibi haereses 
+         </div>
+         <div n="6" type="chapter">
+            <p>Nec diutius de isto, si idem est Paulus qui et alibi haereses 
 inter carnalia crimina numerat scribens ad Galatas, et qui Tito <bibl n="Gal. V, 20. Tit. III, 10 sq."/>
 suggerit hominem haereticum post primam correptionem recusandum,
 quod perversus sit eiusmodi et delinquat, ut a semetipso
@@ -206,10 +204,10 @@ aliter evangelizaret, anathema diceretur a nobis. Providerat
 iam tunc spiritus sanctus futurum in virgin(??) quadam Philumene
 angelum seductionis, transfigurantem se in angelum lucis, cuius
 signis et praestigiis Apelles inductus novam haeresin induxit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p><bibl n="(??) Tim. IV, 3."/> Hac sunt doctrinae hominum et daemoniorum, prurientibus
+         </div>
+         <div n="7" type="chapter">
+            <p>
+               <bibl n="(??) Tim. IV, 3."/> Hac sunt doctrinae hominum et daemoniorum, prurientibus
 auribus natae de ingenio sapientise saecularis, quam dominus stultitiam
 <bibl n="I Cor. III, 11. I, 27"/> vocans stulta mundi in confusionem etiam philosophiae
 ipsius elegit. Ea est enim materia sapientiae saecularis, temeraria
@@ -250,10 +248,9 @@ protulerunt. Nobis curiositate opus non est post Christum
 Iesum, nec inquisitione post evangelium. Cum credimus,
 nihil desideramus ultra credere. Hoc enim prius credimus, non
 esse quod ultra credere debeamus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Venio itaque ad illum articulum quem et nostri praetendunt
+         </div>
+         <div n="8" type="chapter">
+            <p> Venio itaque ad illum articulum quem et nostri praetendunt
 ad ineundam curiositatem et haeretici inculcant ad importandam
 <bibl n="Matth. VII, 7."/> scrupulositatem. Scriptum est, inquiunt, Quaerite, et invenietis.
 Quando hanc vocem dominus emisit, recordemur. Puto in primitiis
@@ -293,10 +290,9 @@ et ipsis apostolis per spiritum sanctum. Omnia quidem domini
 dicta omnibus posita sunt; per aures Iudaeorum ad nos transierunt.
 Sed pleraque in personas directa non proprietatem admonitionis
 nobis constituerunt, sed exemplum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Cedo nunc sponte de gradu isto. Omnibus dictum sit, Quaerite 
+         </div>
+         <div n="9" type="chapter">
+            <p>Cedo nunc sponte de gradu isto. Omnibus dictum sit, Quaerite 
 et invenietis; tamen et hic expetit sensus certare cum interpretationis gubernaculo. Nulla vox divina ita dissoluta est et diffusa,
 ut verba tantum defendantur, et ratio verborum non constituatur.
 Sed in primis hoc propono, unum itaque et certum
@@ -315,10 +311,9 @@ Christo institutum est. Interim ex fiducia probationis praevenio,
 admonens quosdam nihil esse quaerendum ultra quae crediderunt
 id esse quod quaerere debuerunt, ne, Quaerite et invenietis, sine
 disciplina rationis interpretentur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Ratio autem dicti huius in tribus articulis constitit, in re, in
+         </div>
+         <div n="10" type="chapter">
+            <p> Ratio autem dicti huius in tribus articulis constitit, in re, in
 tempore, in modo. In re, ut quid sit quaerendum consideres,
 in tempore, ut quando, in modo, ut quousque. Igitur quaerendum
 est quod Christus instituit, utique quamdiu non invenis, utique
@@ -342,10 +337,9 @@ addicant. Ero itaque nusquam, dum ubique convenio, Quaerite
 et invenietis, et velut si nusquam; quasi qui nunquam apprehenderim
 illud quod Christus instituit, quod quaeri oportet,
 quod credi necesse est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Impune erratur, nisi delinquatur; quamvis et errare delinquere 
+         </div>
+         <div n="11" type="chapter">
+            <p>Impune erratur, nisi delinquatur; quamvis et errare delinquere 
 est. Impune, inquam, vagatur qui nihil deserit. At enim,
 si quod debui credere credidi, et aliud denuo puto requirendum,
 spero utique aliud esse inveniendum, nullo modo speraturus istud,
@@ -363,10 +357,9 @@ non invenit. Illic enim quaerit ubi non invenietur. Viderit qui
 semper pulsat, quia nunquam aperietur. Illuc enim pulsat ubi
 nemo est. Viderit qui semper petit, quia nunquam audietur. Ab
 eo enim petit qui non audit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Nobis etsi quaerendum est adhuc et semper, ubi tamen quaeri 
+         </div>
+         <div n="12" type="chapter">
+            <p>Nobis etsi quaerendum est adhuc et semper, ubi tamen quaeri 
 oportet? Apud haereticos, ubi omnia extranea et adversaria nostrae
 <pb xml:id="v.2.p.14"/>
 
@@ -380,10 +373,9 @@ durum, iudicem interpellabat. Nemo inde instrui potest unde destruitur;
 nemo ab eo inluminatur a quo contenebratur. Quaeramus
 ergo in nostro et a nostris et de nostro, idque dumtaxat quod
 salva regula fidei potest in quaestionem devenire.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Regula est autem fidei, ut iam hinc quid defendamus profiteamur, 
+         </div>
+         <div n="13" type="chapter">
+            <p> Regula est autem fidei, ut iam hinc quid defendamus profiteamur, 
 illa scilicet qua creditur unum omnino deum esse nec
 alium praeter mundi conditorem, qui universa de nihilo produxerit
 per verbum suum primo omnium demissum; id verbum filium
@@ -402,10 +394,9 @@ igni perpetuo, facta utriusque partis resuscitatione cum carnis
 restitutione. Haec regula a Christo, ut probabitur, instituta nullas
 habet apud nos quaestiones, nisi quas haereses inferunt et
 quae haereticos faciunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Celerum manente forma eius in suo ordine quantumlibet 
+         </div>
+         <div n="14" type="chapter">
+            <p>Celerum manente forma eius in suo ordine quantumlibet 
 quaeras et tractes et omnem libidinem curiositatis effundas, si quid
 tibi videtur vel ambiguitate pendere vel obscuritate obumbrari.
 Est utique frater aliqui doctor gratia scientiae donatus, est aliqui
@@ -441,10 +432,9 @@ veniunt, qualem fidem disputant? Cui veritati patrocinantur qui
 eam a mendacio inducunt? Sed ipsi de scripturis agunt, et
 de scripturis suadent! Aliunde scilicet loqui possent de rebus
 fidei, nisi ex litteris fidei?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Venimus igitur ad propositum. Hoc enim dirigebamus et
+         </div>
+         <div n="15" type="chapter">
+            <p> Venimus igitur ad propositum. Hoc enim dirigebamus et
 hoc praestruebamus allocutionis praefatione, ut iam hinc de eo
 congrediamur de quo adversarii provocant. Scripturas obtendunt,
 et hac sua audacia statim quosdam movent. In ipso vero congressu
@@ -454,10 +444,9 @@ admittendi eos ad ullam de scripturis disputationem. Si hae
 sunt illae vires eorum, uti eas habere possint, dispici debet,
 cui competat possessio scripturarum, ne is admittatur ad eas
 cui nullo modo competit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Hoc de consilio diffidentiae aut de studio aliter ineundae constitutionis
+         </div>
+         <div n="16" type="chapter">
+            <p> Hoc de consilio diffidentiae aut de studio aliter ineundae constitutionis
 induxerim, nisi ratio constiterit inprimis illa quod
 fides nostra obsequium apostolo debeat, prohibenti quaestiones
 <bibl n="1 Tim. VI, 3. Tit. III, 10."/> inire, novis vocibus aures accommodare, haereticum post unam
@@ -472,10 +461,9 @@ videretur, cum ob hoc sit castigandus propter quod non
 sit cum illo disputandum, dehinc quoniam nihil proficiat congressio
 scripturarum, nisi plane ut stomachi qua ineat eversionem
 aut cerebri.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Ista haeresis non recipit quasdam scripturas, et si quas recipit, 
+         </div>
+         <div n="17" type="chapter">
+            <p>Ista haeresis non recipit quasdam scripturas, et si quas recipit, 
 et adiectionibus et detractionibus ad dispositionem instituti
 sui intervertit, et si recipit, non recipit integras, et si aliquatenus
 integras praestat, nihilominus diversas expositiones commentata
@@ -487,10 +475,9 @@ exercitatissime scripturarum, cum si quid defenderis, negetur ex
 diverso, si quid negaveris, defendatur? Et tu quidem nihil perdes
 nisi vocem in contentione, nihil consequeris nisi bilem de
 blasphematione.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>Ille vero, si quis est cuius causa in congressum descendis 
+         </div>
+         <div n="18" type="chapter">
+            <p>Ille vero, si quis est cuius causa in congressum descendis 
 scripturarum, ut eum dubitantem confirmes, ad veritatem, an magis
 ad haereses deverget? Hoc ipso motus, quod te videat nihil
 promovisse, aequo gradu negandi et defendendi adversa parte,
@@ -501,10 +488,9 @@ haeresin iudicet. Haec utique et ipsi habent in nos retorquere.
 Necesse est enim et illos dicere a nobis potius adulteria scripturarum
 et expositionum mendacia inferri, qui proinde sibi defendant
 veritatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p> Ergo non ad scripturas provocandum est, nec in his constituendum
+         </div>
+         <div n="19" type="chapter">
+            <p> Ergo non ad scripturas provocandum est, nec in his constituendum
 certamen in quibus aut nulla aut incerta victoria est aut
 parum certa. Nam etsi non ita evaderet conlatio scripturarum,
 ut utramque partem parem sisteret, ordo rerum desiderabat illud
@@ -513,10 +499,9 @@ fides ipsa, cuius sint scripturae, a quo, et per quos, et quando,
 et quibus sit tradita disciplina qua fiunt Christiani. Ubi enim apparuerit
 esse veritatem disciplinae et fidei Christianae, illic erit
 veritas scripturarum et expositionum et omnium traditionum Christianarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Christus Iesus, dominus noster, permittat dicere interim,
+         </div>
+         <div n="20" type="chapter">
+            <p> Christus Iesus, dominus noster, permittat dicere interim,
 quisquis est, cuiuscunque dei filius, cuiuscunque materiae homo et
 deus, cuiuscunque fidei praeceptor, cuiuscunque mercedis repromissor,
 quid esset,quid fuisset, quam patris voluntatem administraret,
@@ -546,10 +531,9 @@ primae et omnes apostolicae, dum una omnes probant unitate
 communicatio pacis et appellatio fraternitatis et contesseratio hospitalitatis,
 quae iura non alia ratio regit quam eiusdem sacramenti
 una traditio.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Hinc igitur dirigimus praescriptionem, si dominus Christus 
+         </div>
+         <div n="21" type="chapter">
+            <p>Hinc igitur dirigimus praescriptionem, si dominus Christus 
 Iesus apostolos misit ad praedicandum, alios non esse recipiendos
 praedicatores quam Christus instituit, quia nec alius patrem novit <bibl n="Matth. XI, 27."/>
 nisi filius et cui filius revelavit, nec aliis videtur revelasse
@@ -571,10 +555,9 @@ edidimus, de apostolorum traditione censeatur, et ex hoc ipso,
 an ceterae de mendacio veniant. Communicamus cum ecclesiis
 apostolicis, quod nulla doctrina diversa. Hoc est testimonium
 veritatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Sed quoniam tam expedita probatio est, ut, si statim proferatur,
+         </div>
+         <div n="22" type="chapter">
+            <p> Sed quoniam tam expedita probatio est, ut, si statim proferatur,
 nihil iam sit retractandum, ac si prolata non sit a nobis,
 locum interim demus diversae parti, si quid putant ad infirmandam
 hanc praescriptionem movere se posse, solent dicere non
@@ -610,10 +593,9 @@ quando et quibus incunabulis institutum est hoc corpus probare
 non habent. Tanti est enim illis non habere probationes eorum
 quae defendunt, ne pariter admittantur traductiones eorum quae
 mentiuntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Proponunt ergo ad suggillandam ignorantiam aliquam apostolorum 
+         </div>
+         <div n="23" type="chapter">
+            <p>Proponunt ergo ad suggillandam ignorantiam aliquam apostolorum 
 quod Petrus et qui cum eo reprehensi sunt a Paulo. Adeo,
 inquiunt, aliquid eis defuit; ut ex hoc etiam illud struant, potuisse
 postea pleniorem scientiam supervenire, qualis obvenerit Paulo
@@ -643,10 +625,9 @@ quod cum convixisset ethnicis, postea se a convictu eorum separabat
 personarum respectu, utique conversationis fuit vitium, non
 praedicationis. Non enim ex hoc alius deus quam creator, et
 alius Christus quam ex Maria, et alia spes quam resurrectio annuntiabatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Non mihi tam bene est, immo non mihi tam male est, ut
+         </div>
+         <div n="24" type="chapter">
+            <p> Non mihi tam bene est, immo non mihi tam male est, ut
 apostolos committam. Sed quoniam perversissimi isti illam reprehensionem
 ad hoc obtendunt, ut suspectam faciant doctrinam superiorem,
 <bibl n="I Cer. IX, 20 sqq."/> respondebo quasi pro Petro, ipsum Paulum dixisse
@@ -667,10 +648,9 @@ manavit nescio quid illud, et hoc se aliqua haeresis
 sequi affirmat, aut Paulus secreti proditi reus est, aut et alius
 postea in paradisum ereptus debet ostendi, cui permissum sit eloqui
 quae Paulo mutire non licuit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Sed, ut diximus, eadem dementia est, cum confitentur quidem 
+         </div>
+         <div n="25" type="chapter">
+            <p>Sed, ut diximus, eadem dementia est, cum confitentur quidem 
 nihil apostolos ignorasse, nec diversa inter se praedicasse,
 non tamen omnia volunt illos omnibus revelasse, quaedam enim
 palam et universis, quaedam secreto et paucis demandasse, quia
@@ -688,17 +668,16 @@ alia praeter eam quam audierat ab ipso, et puto palam,
 Coram multis, inquit, testibus. Quos multos testes si nolunt ecclesiam <bibl n="II Tim. II,2."/>
 intellegi, nihil interest, quando nihil tacitum fuerit quod
 sub multis testibus proferebatur. Sed nec quia voluit illum haec <bibl n="II Tim. II, 2."/>
-<pb xml:id="v.2.p.24"/>
+               <pb xml:id="v.2.p.24"/>
 
 fidelibus hominibus demandare, qui idonei sint et alios docere, id
 quoque argumentum occulti alicuius evangelii interpretandum est.
 Nam cum dicit Haec, de eis dicit de quibus in praesenti scribebat.
 De occultis autem, ut de absentibus, apud conscientiam
 non Haec, sed Illa dixisset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p> Porro consequens erat, ut cui demandabat evangelii administrationem
+         </div>
+         <div n="26" type="chapter">
+            <p> Porro consequens erat, ut cui demandabat evangelii administrationem
 non passim nec inconsiderate administrandam, adiceret
 <bibl n="Matth. VII,6."/> secundum dominicam vocem, ne margaritam porcis et sanctum
 canibus iactaret. Dominus palam edixit, sine ulla significatione
@@ -730,10 +709,9 @@ essent schismata et dissensiones in ecclesia, quia sive Paulus
 sive alii eadem praedicarent. Alioquin meminerant, Sit sermo <bibl n="Matth. V, 37."/>
 vester: est, est, non, non, nam quod amplius, hoc a malo est,
 ne evangelium in diversitate tractarent.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p>Si ergo incredibile est vel ignorasse apostolos plenitudinem 
+         </div>
+         <div n="27" type="chapter">
+            <p>Si ergo incredibile est vel ignorasse apostolos plenitudinem 
 praedicationis vel non omnem ordinem regulae omnibus edidisse,
 videamus, ne forte apostoli quidem simpliciter et plene, ecclesiae
 autem suo vitio aliter acceperint quam apostoli proferebant. Omnia
@@ -749,10 +727,9 @@ ecclesias opponunt, credant emendatas. Sed et illas recognoscant
 de quarum fide et scientia et conversatione apostolus <bibl n="Rom. I, (??)."/>
 gaudet et deo gratias agit, quae tamen hodie cum illis correptis
 unius institutionis iura miscent.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p>Age nunc omnes erraverint; deceptus sit et apostolus de testimonio 
+         </div>
+         <div n="28" type="chapter">
+            <p>Age nunc omnes erraverint; deceptus sit et apostolus de testimonio 
 reddendo; nullam respexerit spiritus sanctus, uti eam in
 veritatem deduceret, ad hoc missus a Christo, ad hoc postulatus <bibl n="Ioan. XIV, 26."/>
 de patre, ut esset doctor veritatis; neglexerit officium dei vilicus, <bibl n="Ioan. XV, 26."/>
@@ -765,10 +742,9 @@ Ceterum quod apud multos unum invenitur, non est
 
 erratum, sed traditum. Audeat ergo aliquis dicere illos errasse
 qui tradiderunt?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p> Quoquo modo sit erratum, tam diu utique regnavit error
+         </div>
+         <div n="29" type="chapter">
+            <p> Quoquo modo sit erratum, tam diu utique regnavit error
 quam diu haereses non erant. Aliquos Marcionitas et Valentinianos
 liberanda veritas expectabat. Interea perperam evangelizabatur,
 perperam credebatur; tot milia milium perperam tincta, tot opera
@@ -784,10 +760,9 @@ quae futuras haereses cavendas praenuntiabat. Ad eius doctrinae
 ecclesiam scriptum est, immo ipsa doctrina ad ecclesiam
 <bibl n="Gal. I, 8."/> scribit, Et si angelus de caelo aliter evangelizaverit, citra quam
 nos, anathema sit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p> Ubi tunc Marcion, Ponticus nauclerus, Stoicae studiosus?
+         </div>
+         <div n="30" type="chapter">
+            <p> Ubi tunc Marcion, Ponticus nauclerus, Stoicae studiosus?
 Ubi tunc Valentinus, Platonicae sectator? Nam constat illos neque
 adeo olim fuisse, Antonini fere principatu, et in catholicae
 primo doctrinam credidisse apud ecclesiam Romanensem sub episcopatu
@@ -838,10 +813,9 @@ edendi quae et ipse. Volo igitur et virtutes eorum proferri;
 nisi quod agnosco maximam virtutem eorum qua apostolos in perversum
 aemulantur. Illi enim de mortuis vivos faciebant, isti de
 vivis mortuos faciunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p>Sed ab excessu revertar ad principalitatem veritatis et posteritatem
+         </div>
+         <div n="31" type="chapter">
+            <p>Sed ab excessu revertar ad principalitatem veritatis et posteritatem
 mendacitatis disputandam ex illius quoque parabolae patrocinio <bibl n="Matth. XIII, 37 sqq."/>
 quae bonum semen frumenti a domino seminatum in primore
 constituit, avenarum autem sterilis foeni adulterium ab inimico
@@ -852,10 +826,9 @@ sit prius traditum, id autem extraneum et falsum quod sit posterius
 inmissum. Ea sententia manebit adversus posteriores quasque haereses,
 quibus nulla constantia de conscientia competit ad defendendam
 sibi veritatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="32">
-<p>Ceterum si quae audent interserere se aetati apostolicae, ut 
+         </div>
+         <div n="32" type="chapter">
+            <p>Ceterum si quae audent interserere se aetati apostolicae, ut 
 ideo videantur ab apostolis traditae quia sub apostolis fuerunt,
 possumus dicere: Edant ergo origines ecclesiarum suarum, evolvant
 ordinem episcoporum suorum, ita per successionem ab initio
@@ -887,10 +860,9 @@ Sed adeo nec sunt nec probare possunt quod non sunt,
 nec recipiuntur in pacem et communicationem ab ecclesiis quoquo
 modo apostolicis, scilicet ob diversitatem sacramenti nullo
 modo apostolicae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="33">
-<p>Adhibeo super haec ipsarum doctrinarum recognitionem quae 
+         </div>
+         <div n="33" type="chapter">
+            <p>Adhibeo super haec ipsarum doctrinarum recognitionem quae 
 tunc sub apostolis fuerunt ab isdem apostolis et demonstratae et
 deieratae. Nam et sic facilius traducentur, dum aut iam tunc
 fuisse deprehenduntur, aut ex illis quae iam tunc fuerunt seminia
@@ -912,9 +884,8 @@ Aeones miris nominibus oriuntur in meram fabulam triginta Aeonum.
 Idem apostolus, cum improbat elementis servientes, aliquid
 Hermogenis ostendit, qui materiam non natam introducens deo non
 nato eam comparat, et ita matrem elementorum deam faciens
-<pb xml:id="v.2.p.32"/> 
-
-<bibl n="(??). II, 14."/> potest ei servire quam deo comparat. Ioannes vero in Apocalypsi
+<pb xml:id="v.2.p.32"/>
+               <bibl n="(??). II, 14."/> potest ei servire quam deo comparat. Ioannes vero in Apocalypsi
 idolothyta edentes et stupra committentes iubetur castigare. Sunt
 et nunc alii Nicolaitae. Gaiana haeresis dicitur. At in epistula
 eos maxime antichristos vocat qui Christum negarent in carnem
@@ -922,10 +893,9 @@ venisse, et qui non putarent Iesum esse filium dei. Illud Marcion,
 hoc Hebion vindicavit. Simonianae autem magiae disciplina angelis
 serviens utique et ipsa inter idololatrias deputabatur et a
 Petro apostolo in ipso Simone damnabatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="34">
-<p> Haec sunt, ut arbitror, genera doctrinarum adulterinarum,
+         </div>
+         <div n="34" type="chapter">
+            <p> Haec sunt, ut arbitror, genera doctrinarum adulterinarum,
 quae sub apostolis fuisse ab ipsis apostolis discimus. Et tamen
 nullam invenimus institutionem inter tot diversitates perversitatum
 quae de deo creatore universorum controversiam moverit. Nemo
@@ -955,10 +925,9 @@ etsi nihil de damnaticiis participarent, de aetate sola praciudicarentur,
 tanto magis adulterae quanto nec ab apostolis nominatae.
 Unde firmius constat has esse quae adhuc tunc nuntiabantur
 futurae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="35">
-<p>His definitionibus provocatae a nobis et revictae haereses omnes, 
+         </div>
+         <div n="35" type="chapter">
+            <p>His definitionibus provocatae a nobis et revictae haereses omnes, 
 sive quae posterae, sive quae coaetaneae apostolorum, dummodo
 diversae, sive generaliter, sive specialiter notatae ab eis, dummodo
 praedamnatae, audeant respondere et ipsae aliquas eiusmodi praescriptiones
@@ -971,10 +940,9 @@ veritatis ubique occupantis principatum: apostolis ubique
 non damnatur, immo defenditur, hoc erit indicium proprietatis.
 Quam enim non damnant qui extraneam quamque damnarunt,
 suam ostendunt, ideoque et defendunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="36">
-<p>Age iam, qui voles curiositatem melius exercere in negotio 
+         </div>
+         <div n="36" type="chapter">
+            <p>Age iam, qui voles curiositatem melius exercere in negotio 
 salutis tuae, percurre ecclesias apostolicas, apud quas ipsae adhuc
 cathedrae apostolorum suis locis praesident, apud quas ipsae
 authenticae litterae eorum recitantur, sonantes vocem et repraesentantes
@@ -1005,10 +973,9 @@ oritur, etiam de papavere ficus gratissimae et suavissimae ventosa
 et vana caprificus exsurgit. Ita et haereses de nostro
 frutice, non nostro genere, veritatis grano, sed mendacio
 silvestres.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="37">
-<p>Si haec ita se habent, ut veritas nobis adiudicetur, quicunque 
+         </div>
+         <div n="37" type="chapter">
+            <p>Si haec ita se habent, ut veritas nobis adiudicetur, quicunque 
 in ea regula incedimus, quam ecclesia ab apostolis, apostoli a
 Christo, Christus a deo tradidit, constat ratio propositi nostri, definientis
 non esse admittendos haereticos ad ineundam de scripturis
@@ -1029,10 +996,9 @@ certe exhaeredaverunt semper et abdicaverunt ut extraneos, ut inimicos.
 Unde autem extranei et inimici apostolis haeretici, nisi ex
 diversitate doctrinae, quam unusquisque de suo arbitrio adversus
 apostolos aut protulit aut recepit?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="38">
-<p>Illic igitur et scripturarum et expositionum adulteratio deputanda 
+         </div>
+         <div n="38" type="chapter">
+            <p>Illic igitur et scripturarum et expositionum adulteratio deputanda 
 <pb xml:id="v.2.p.36"/>
 
 est, ubi doctrinae diversitas invenitur. Quibus fuit propositum
@@ -1061,10 +1027,9 @@ non ad materiam scripturas, sed materiam ad scripturas excogitavit,
 et tamen plus abstulit et plus adiecit, auferens proprietates singulorum
 quoque verborum et adiciens dispositiones non comparentium
 rerum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="39">
-<p> Erant ingenia de spiritalibus nequitiae, cum quibus luctatio
+         </div>
+         <div n="39" type="chapter">
+            <p> Erant ingenia de spiritalibus nequitiae, cum quibus luctatio
 <pb xml:id="v.2.p.37"/>
 
 est nobis, fratres, merito contemplanda, fidei necessaria, ut electi
@@ -1084,9 +1049,9 @@ Nec periclitor dicere ipsas quoque scripturas sic esse ex
 dei voluntate dispositas ut haereticis materias subministrarent,
 cum legam oportere haereses esse, quae sine scripturis esse non
 possunt.</p>
-<pb xml:id="v.2.p.38"/>
-
-<bibl n="Cap. XL."/><p>Sequetur a quo intellectus interpretetur eorum quae ad haereses
+            <pb xml:id="v.2.p.38"/>
+            <bibl n="Cap. XL."/>
+            <p>Sequetur a quo intellectus interpretetur eorum quae ad haereses
 faciant? A diabolo scilicet, cuius sunt partes intervertendi
 veritatem, qui ipsas quoque res sacramentorum divinorum idolorum
 mysteriis aemulatur. Tingit et ipse quosdam, utique credentes
@@ -1114,10 +1079,9 @@ cuius et idololatria. Deum aut fingunt alium adversus creatorem,
 aut si unicum creatorem confitentur, aliter eum disserunt quam in
 vero est. Itaque omne mendacium quod de deo dicunt quodammodo
 genus est idololatriae.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="41">
-<p>Non omittam ipsius etiam conversationis haereticae descriptionem, 
+         </div>
+         <div n="41" type="chapter">
+            <p>Non omittam ipsius etiam conversationis haereticae descriptionem, 
 quam futilis, quam terrena, quam humana sit, sine gravitate,
 sine auctoritate, sine disciplina, ut fidei suae congruens. Inprimis
 quis catechumenus, quis fidelis, incertum est; pariter adeunt,
@@ -1137,9 +1101,9 @@ possunt. Nusquam facilius proficitur quam in castris rebellium, ubi
 ipsum esse illic promereri est. Itaque alius hodie episcopus, cras
 alius; hodie diaconus qui cras lector, hodie presbyter qui cras
 laicus. Nam et laicis sacerdotalia munera iniungunt.</p>
-<pb xml:id="v.2.p.40"/>
-
-<bibl n="Cap. XLII."/><p>De verbi autem administratione quid dicam, cum hoc sit
+            <pb xml:id="v.2.p.40"/>
+            <bibl n="Cap. XLII."/>
+            <p>De verbi autem administratione quid dicam, cum hoc sit
 negotium illis, non ethnicos convertendi, sed nostros evertendi?
 Hanc magis gloriam captant, si stantibus ruinam, non si iacentibus
 elevationem operentur. Quoniam et ipsum opus eorum non de sue
@@ -1162,10 +1126,9 @@ omnes in multis cum auctoribus suis dissentientes deprehenduntur.
 
 Plerique nec ecclesias habent; sine matre, sine sede, orbi fide,
 extorres, sua in vilitate vagantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="43">
-<p>Notata sunt etiam commercia haereticorum cum magis quam 
+         </div>
+         <div n="43" type="chapter">
+            <p>Notata sunt etiam commercia haereticorum cum magis quam 
 pluribus, cum circulatoribus, cum astrologis, cum philosophis,
 curiositati scilicet deditis. Quaerite et invenietis, ubique meminerunt.
 Adeo et de genere conversationis qualitas fidei aestimari
@@ -1178,9 +1141,9 @@ ibi gravitas, honesta et diligentia adtonita et cura sollicita et
 adlectio explorata et communicatio deliberata et promotio emorita
 et subiectio religiosa et apparitio devota et processio modesta
 et ecclesia unita et dei omnia.</p>
-<pb xml:id="v.2.p.42"/>
-
-<bibl n="Cap. XLIV."/><p>Proinde haec pressioris apud nos testimonia disciplinae ad
+            <pb xml:id="v.2.p.42"/>
+            <bibl n="Cap. XLIV."/>
+            <p>Proinde haec pressioris apud nos testimonia disciplinae ad
 probationem veritatis accedunt, a qua divertere nemini expedit qui
 meminerit futuri iudicii, quo omnes nos necesse est apud Christi
 tribunal adstare, reddentes rationem inprimis ipsius fidei. Quid
@@ -1215,12 +1178,11 @@ certis et iustis et necessariis praescriptionibus repellendas a conlatione
 scripturarum. De reliquo, si dei gratia adnuerit, etiam
 specialiter quibusdam respondebimus. Haec in fide veritatis
 cum otio perlegentibus pax et gratia dei nostri Iesu Christi in
-aeternum.</p></div>
-<pb xml:id="v.2.p.44"/>
-
-<pb xml:id="v.2.p.45"/>
-
-<pb xml:id="v.2.p.46"/>
-</div></body></text>
-
+aeternum.</p>
+         </div>
+         <pb xml:id="v.2.p.44"/>
+         <pb xml:id="v.2.p.45"/>
+         <pb xml:id="v.2.p.46"/>
+      </body>
+   </text>
 </TEI>

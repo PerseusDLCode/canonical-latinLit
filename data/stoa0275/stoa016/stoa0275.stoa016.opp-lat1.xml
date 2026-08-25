@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Fuga in Persecutione</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Fuga in Persecutione</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=491%3Bownerid=13510798896211526-503">HathiTrust</ref>                              
-        </biblStruct>       
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa016.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.461"/>
-<head>DE FUGA IN PERSECUTIONE.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Quaesisti proxime, Fabi frater, fugiendum necne sit in persecutione, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa016.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=491%3Bownerid=13510798896211526-503">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa016.opp-lat1">
+         <pb xml:id="v.1.p.461"/>
+         <head>DE FUGA IN PERSECUTIONE.</head>
+         <div n="1" type="chapter">
+            <p>Quaesisti proxime, Fabi frater, fugiendum necne sit in persecutione, 
 quod nescio quid annuntiaretur. Ibidem ego oblocutus
 aliquid pro loco ac tempore et quarundam personarum importunitate
 semitractatam materiam abstuli mecum plenius eam de
@@ -110,10 +112,9 @@ orationibus et humilitate, in alterutra diligentia et dilectione, in
 sanctitate et sobrietate. Non enim vacatur nisi timori et spei. Adeo
 et ex hoc ipso ostenditur nobis non posse diabolo deputari eam
 quae meliores efficit dei servos.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Si, quod iniquitas a deo non est, sed a diabolo, persecutio 
+         </div>
+         <div n="2" type="chapter">
+            <p>Si, quod iniquitas a deo non est, sed a diabolo, persecutio 
 <pb xml:id="v.1.p.464"/>
 
 autem ex iniquitate consistit (quid enim iniquius, quam veri dei
@@ -189,15 +190,14 @@ in infirmitate perfici possit. Nam et ipse apostolus Phygellum et
 Hermogenem tradidit satanae, uti emendentur, ne blasphement.
 Vides iam et a servis dei facilius diabolum accipere potestatem;
 tanto abest, ut eam ex proprietate possideat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Cum ergo et haec exempla magis in persecutionibus eveniant, 
+         </div>
+         <div n="3" type="chapter">
+            <p>Cum ergo et haec exempla magis in persecutionibus eveniant, 
 siquidem magis tunc probamur vel reprobamur, et magis tunc
 humiliamur vel emendamur, ab eo permittatur vel imperetur necesse
 est catholice fieri haec a quo et ex parte, scilicet ab illo
 qui dicit, Ego sum qui facio pacem et condo mala, id est bellum;<bibl n="Ies. XLV, 7."/>
-<pb xml:id="v.1.p.468"/>
+               <pb xml:id="v.1.p.468"/>
 
 hoc est enim contrarium paci. Nostrae autem paci quod est
 bellum quam persecutio? Si persecutionis vel maxime exitus aut
@@ -217,10 +217,9 @@ tunc persecutionem patieris, si vero noluerit, silebunt nationes.
 Credas utique, si tamen in eum deum credis, sine cuius voluntate
 nec passer unius assis cadit in terram. Nos autem, puto, multis
 passeribus antistamus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Igitur si constat a quo persecutio eventiat, possumus iam
+         </div>
+         <div n="4" type="chapter">
+            <p> Igitur si constat a quo persecutio eventiat, possumus iam
 consultationem tuam inducere et determinare ex hoc ipso praetractatu
 fugiendum in persecutione non esse. Si enim persecutio a
 deo evenit, nullo modo fugiendum erit, quod a deo evenit; sicut
@@ -260,10 +259,9 @@ non poterit evadi. Igitur qui putant fugiendum aut malum exprobrant
 deo, si persecutionem uti malum fugiunt (bonum enim nemo
 devitat), aut fortiores se deo existimant, qui putant se evadere
 posse, si deus tale aliquid voluerit evenire.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Sed quod meum est, inquit, fugio, ne peream, si negavero;
+         </div>
+         <div n="5" type="chapter">
+            <p> Sed quod meum est, inquit, fugio, ne peream, si negavero;
 illius est, si voluerit, etiam fugientem me reducere in medium.
 Hoc mihi prius responde: certus es te negaturum, si non fugeris,
 an incertus? Si enim certus, iam negasti, quia praesumendo te
@@ -295,10 +293,9 @@ pro fugae castigatione, dehinc ignibus datus passionem, quam vitarat,
 misericordiae dei retulit. Quid aliud voluit dominus nobis
 demonstrare hoc documento, quam fugiendum non esse, quia nihil
 fuga prosit, si deus nolit?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Immo, inquit, praeceptum adimplevit fugiens de civitate in 
+         </div>
+         <div n="6" type="chapter">
+            <p>Immo, inquit, praeceptum adimplevit fugiens de civitate in 
 civitatem. Sic enim voluit quidam, sed et ipse fugitivus, argumentari,
 et qui proinde nolunt intellegere sensum domini illius
 <pb xml:id="v.1.p.472"/>
@@ -364,10 +361,9 @@ praescriptorum, non potest apud nos perseverare, quod apud doctores
 nostros concessavit, etsi non proprie ad illos fuisset emissum,
 aut, si perseverare illud dominus voluit, deliquerunt apostoli,
 qui non usque in finem fugere curaverunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Videamus nunc, an et cetera domini edicta congruant perpetuo
+         </div>
+         <div n="7" type="chapter">
+            <p> Videamus nunc, an et cetera domini edicta congruant perpetuo
 fugae praecepto. Primo quidem, si a deo persecutio est, quale
 est, ut idem fugiendam eam mandet, qui et infert? Quam si evadi
 vellet, melius non immitteret, ne voluntatem suam alia voluntate
@@ -399,10 +395,9 @@ non est me dignus, et qui non tollit crucem suam et sequitur me,
 non potest esse meus discipulus. Postremo in Apocalypsi non
 fugam timidis offert, sed inter ceteros reprobos particulam in
 stagnum sulphuris et ignis, quod est mors secunda.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Refugit et ipse vim interdum, sed eadem ratione qua apostolis 
+         </div>
+         <div n="8" type="chapter">
+            <p>Refugit et ipse vim interdum, sed eadem ratione qua apostolis 
 fugere praeceperat, donec scilicet doctrinam suam impleret,
 qua consummata, non dico stetit, sed nec auxilium a patre angelorum
 exercituum desideravit, increpito etiam Petri gladio. Professus
@@ -425,10 +420,9 @@ ab illo calix passionis. Postula et tu, sed stans ut ille, sed
 volo, sed quod tu. Fugiens autem quomodo hoc postulabis, ipse
 tibi praestans calicis translationem, nec quod pater vult faciens,
 sed quod tu?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Omnia apostoli secundum deum utique docuerunt, omnia
+         </div>
+         <div n="9" type="chapter">
+            <p> Omnia apostoli secundum deum utique docuerunt, omnia
 evangelii revolverunt. Ubi illos ostendis praeceptum fugiendi de
 civitate in civitatem restaurasse? quia nec potuissent tale quid
 <pb xml:id="v.1.p.477"/>
@@ -468,10 +462,9 @@ producit in medium. Quid confunderis laudem ferens? Potestas fit,
 cum conspiceris ab hominibus. Sic et alibi: Nolite in lectulis nec
 in aborsibus et febribus mollibus optare exire, sed in martyriis,
 uti glorificetur qui est passus pro vobis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Sed omissis quidam divinis exhortationibus illum magis Graecum
+         </div>
+         <div n="10" type="chapter">
+            <p> Sed omissis quidam divinis exhortationibus illum magis Graecum
 versiculum saecularis sententiae sibi adhibent: Qui fugiebat,
 rursus proeliabitur; ut et rursus forsitan fugiat. Et quando vincet
 <pb xml:id="v.1.p.479"/>
@@ -504,10 +497,9 @@ in manu eius sum; faciat quod vult, non discedo, et si perire
 me volet, ipse me perdat, dum me ego servo illi. Malo invidiam
 ei facere per voluntatem ipsius pereundo, quam bilem per meam
 evadendo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Hoc sentire et facere omnem servum dei oportet, etiam minoris
+         </div>
+         <div n="11" type="chapter">
+            <p> Hoc sentire et facere omnem servum dei oportet, etiam minoris
 loci, ut maioris fieri possit, si quem gradum in persecutionis
 tolerantia ascenderit. Sed cum ipsi auctores, id est ipsi
 diaconi et presbyteri et episcopi fugiunt, quomodo laicus intellegere
@@ -542,10 +534,9 @@ in persecutione fugere non oportebit. Ceterum si grex
 fugere deberet, non deberet praepositus gregis stare, sine causa
 staturus ad tutelam gregis, quam grex non desideraret, ex licentia
 fugae scilicet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Quod pertineat, frater, ad tuum problema, habes sententiae
+         </div>
+         <div n="12" type="chapter">
+            <p> Quod pertineat, frater, ad tuum problema, habes sententiae
 nostrae responsionem et exhortationem. Porro qui quaerit, an
 persecutio fugienda sit, sequentem quaestionem quoque iam prospiciat
 necesse est, an, si fugienda non est, redimenda certe sit.
@@ -659,12 +650,10 @@ meum debeo, nunc vero in eo sum tempore, ut quod deo debeo
 expostuler, utique fraudem deo facio id agens, ne quod debeo
 solvam. Bene observavi praeceptum Caesari reddens quae sunt
 Caesaris, deo vero quae sunt dei abnegans.</p>
-<pb xml:id="v.1.p.488"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Sed et omni petenti me dabo in causa eleemesynae, non in
+            <pb xml:id="v.1.p.488"/>
+         </div>
+         <div n="13" type="chapter">
+            <p> Sed et omni petenti me dabo in causa eleemesynae, non in
 coneussurae. Petenti inquit. Porro qui concutit, non petit. Qui
 comminatur, si non acceperit, non postulat, sed exterquet. Non
 eleemesynam expectat qui non miserandus, sed timendus vanit.
@@ -710,12 +699,10 @@ providentius condiderunt, ut regno suo securi frui possent,
 sub obtentu procurandi(??)? Scilicet enim talem pacem Christus
 ad patrem regrediens mandavit a militibus per Saturnalia
 redimendam!</p>
-<pb xml:id="v.1.p.491"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Sed quomodo colligemus, inquis, quomodo dominica sollemnia 
+            <pb xml:id="v.1.p.491"/>
+         </div>
+         <div n="14" type="chapter">
+            <p>Sed quomodo colligemus, inquis, quomodo dominica sollemnia 
 celebrabimus? Utique quomodo et apostoli, fide, non pecunia tuti,
 quae fides si montem transferre potest, multo magis militem. Esto
 sapientia, non praemio cautus. Neque enim statim et a populo
@@ -738,10 +725,10 @@ latam viam sequi paratus sit, sed qui angustam. Et ideo paracletus
 necessarius, deductor omnium veritatum, exhortator omnium
 tolerantiarum. Quem qui receperunt, neque fugere persecutionem
 neque redimere noverunt, habentes ipsum qui pro nobis erit, sicut
-locuturas in interrogatione, ita iuvaturus in passione.</p></div>
-<pb xml:id="v.1.p.493"/>
-
-<pb xml:id="v.1.p.494"/>
-</div></body></text>
-
+locuturas in interrogatione, ita iuvaturus in passione.</p>
+         </div>
+         <pb xml:id="v.1.p.493"/>
+         <pb xml:id="v.1.p.494"/>
+      </body>
+   </text>
 </TEI>

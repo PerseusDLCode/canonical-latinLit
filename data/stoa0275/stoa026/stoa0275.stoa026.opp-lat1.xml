@@ -1,64 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader><fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Carnis Resurrectione</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Carnis Resurrectione</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=474%3Bownerid=13510798896211811-498">HathiTrust</ref>
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa026.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.467"/>
-<head>DE RESURRECTIONE CARNIS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Fiducia Christianorum resurrectio mortuorum. Illa credentes 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa026.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=474%3Bownerid=13510798896211811-498">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa026.opp-lat1">
+         <pb xml:id="v.2.p.467"/>
+         <head>DE RESURRECTIONE CARNIS.</head>
+         <div n="1" type="chapter">
+            <p>Fiducia Christianorum resurrectio mortuorum. Illa credentes 
 sumus. Hoc credere veritas cogit, veritatem deus aperit, sed
 vulgus inridet, existimans nihil superesse post mortem. Et tamen
 defunctis parentant, et quidem impensissimo officio pro moribus
@@ -80,10 +84,9 @@ in Pythagoram, Homerus in pavum recenseantur. Certe recidivatum
 animae corporalem pronuntiaverunt, tolerabilius mutata
 quam negata qualitate, pulsata saltem, licet non adita veritate.
 Ita saeculum resurrectionem mortuorum nec cum errat ignorat. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Si vero et apud deum aliqua secta est Epicureis magis adfinis
+         </div>
+         <div n="2" type="chapter">
+            <p> Si vero et apud deum aliqua secta est Epicureis magis adfinis
 quam prophetis, sciemus quid audiant a Christo Sadducaei.
 Christo enim servabatur omnia retro occulta nudare, dubitata dirigere,
 praelibata supplere, praedicata repraesentare, mortuorum
@@ -156,10 +159,9 @@ si qua et alibi pro causarum incursione praestricta distulimus.
 Nam ut quaedam praelibari sollemne est, ita et differri necesse
 est, dummodo et praelibata suppleantur suo corpore et dilata reddantur
 suo nomine. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Est quidem et do communibus sensibus sapere in dei rebus, 
+         </div>
+         <div n="3" type="chapter">
+            <p>Est quidem et do communibus sensibus sapere in dei rebus, 
 sed in testimonium veri, non in adiutorium falsi, quod sit secundum
 divinam, non contra divinam dispositionem. Quaedam enim
 et natura nota sunt, ut immortalitas animae penes plures, ut deus
@@ -190,10 +192,9 @@ sensus simplicitas ipsa commendat et compassio sententiarum et
 familiaritas opinionum, eoque fideliores existimantur, quia nuda et
 aperta et omnibus nota definiunt. Ratio autem divina in medulla
 est, non in superficie, et plerumque aemula manifestis. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Itaque haeretici inde statim incipiunt, et inde praestruunt, dehinc
+         </div>
+         <div n="4" type="chapter">
+            <p> Itaque haeretici inde statim incipiunt, et inde praestruunt, dehinc
 interstruunt, unde sciunt facile capi mentes, de communione favorabili sensuum. An aliud prius vel magis audias ab haeretico
 quam ab ethnico? et non protinus et non ubique convicium carnis,
 in originem, in materiam, in casum, in omnem exitum eius,
@@ -221,10 +222,9 @@ haec erunt vota carnis recuperandae, iterum cupere de ea
 evadere. Et nos quidem haec aliquanto honestius pro stili pudore.
 Ceterum quantum etiam spurciloquio liceat illorum in congressibus
 experire, tam ethnicorum quam haereticorum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Igitur quoniam et rudes quique de communibus adhuc sensibus 
+         </div>
+         <div n="5" type="chapter">
+            <p>Igitur quoniam et rudes quique de communibus adhuc sensibus 
 sapiunt, et dubii et simplices per eosdem sensus denuo inquietantur,
 et ubique primus iste in nos aries temperatur quo
 carnis condicio quassatur, necessario et a nobis carnis primum
@@ -268,10 +268,9 @@ Adeo homo figmentum primo, dehinc totus. Hoc eo commendarim.
 uti quioquid omnino homini a deo prospectum atque promissum
 est, non soli animae, verum et carni scias debitum, ut si non
 ex consortio generis, certe vel ex privilegio nominis. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Persequar itaque propositum, si tamen tantum possim carni
+         </div>
+         <div n="6" type="chapter">
+            <p> Persequar itaque propositum, si tamen tantum possim carni
 vindicare quantum contulit ille qui eam fecit, iam tunc gloriantem,
 quod illa pusillitas, limus, in manus dei quaecunque sunt pervenit,
 satis beatus etsi solummedo contactus. Quid enim, si nullo
@@ -311,10 +310,9 @@ et aurum terra, quia de terra; hactenus tamen terra, ex quo
 aurum, longe alia materia, splendidior atque nobilior de obsoletiore
 matrice. Ita et deo licuit carnis aurum de limi, quibus putas,
 sordibus excusato censu eliquasse. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Sed dilutior videatur auctoritas carnis, quia non et ipsam
+         </div>
+         <div n="7" type="chapter">
+            <p> Sed dilutior videatur auctoritas carnis, quia non et ipsam
 proprie manus divina tractavit, sicuti limum. Quando in hoc tractavit
 limum, ut postmodum caro fieret ex limo, carnis utique
 negotium gessit. Sed adhuc velim discas quando et quomodo
@@ -372,10 +370,9 @@ cuius et vivere. Porro si universa per carnem subiacent animae,
 carni quoque subiacent. Per quod utaris, cum eo utaris necasse
 est. Ita caro, dum ministra et famula animae deputatur, consors et
 cohaeres invenitur. Si temporalium, cur non et aeternorum? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Et haec quidem velut de publica forma humanae conditionis
+         </div>
+         <div n="8" type="chapter">
+            <p> Et haec quidem velut de publica forma humanae conditionis
 suffragia carni procuraverim. Videamus nunc de propria etiam
 Christiani nominis forma quanta huic substantiae frivolae ac sordidae
 apud deum praerogativa sit: etsi sufficeret illi quod nulla
@@ -405,10 +402,9 @@ quoque ingenia poenarum. Nae illa beatissima et gloriosissima
 quae potest apud Christum dominum parere debito tanto,
 ut hoc solum debeat ei quod ei debere desierit, hoc magis vincta
 quod absoluta. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Igitur ut retexam, quam deus manibus suis ad imaginem dei 
+         </div>
+         <div n="9" type="chapter">
+            <p>Igitur ut retexam, quam deus manibus suis ad imaginem dei 
 struxit, quam de suo adflatu ad similitudinem suae vivacitatis animavit,
 quam incolatui, fructui, dominatui totius suae operationis
 praeposuit, quam de sacramentis suis disciplinisque vestivit, cuius
@@ -432,10 +428,9 @@ percutiam et sanabo. Quid ea exprobras carni quae deum expectant,
 quae in deum sperant, quae honorantur ab illo, quibus
 subvenit? Ausim dicere, si haec carni non accidissent, benignitas,
 gratia, misericordia, omnis vis dei benefica vacuisset. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Tenes scripturas quibus caro infuscatur, tene etiam quibus
+         </div>
+         <div n="10" type="chapter">
+            <p> Tenes scripturas quibus caro infuscatur, tene etiam quibus
 inlustratur. Legis cum quando deprimitur, adige oculos et tum
 <bibl n="Ies. XL. 7."/> quando revelatur. Omnis caro foenum. Non hoc solum pronuntiavit
 <bibl n="Ies. XL, 5."/> Esaias, sed et, Omnis caro videbit salutare dei. Notatur in
@@ -456,10 +451,9 @@ carnis resurrectionem eius expellunt, cur non dignitates potius inducent?
 Quoniam deo magis congruit in salutem redigere quod
 reprobarit interdum, quam in perditionem dedere quod etiam
 aliquando probavit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Hucusque de praeconio carnis adversus inimicos et nihilominus
+         </div>
+         <div n="11" type="chapter">
+            <p> Hucusque de praeconio carnis adversus inimicos et nihilominus
 amicissimos eius. Nemo enim tam carnaliter vivit quam qui negant
 carnis resurrectionem. Negantes enim poenam despiciunt et disciplinam.
 De quibus luculenter et Paracletus per prophetidem
@@ -493,10 +487,9 @@ modulatus est alia, poterit et carnem quocunque dehaustam
 evocare de alio. Et utique idoneus est reficere qui fecit,
 quanto plus est fecisse quam refecisse, initium dedisse quam reddidisse.
 Ita restitutionem carnis faciliorem credas institutione. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Aspice nunc ad ipsa quoque exempla divinae potestatis. Dies 
+         </div>
+         <div n="12" type="chapter">
+            <p>Aspice nunc ad ipsa quoque exempla divinae potestatis. Dies 
 moritur in noctem et tenebris usquequaque sepelitur. Funestatur
 <pb xml:id="v.2.p.482"/>
 
@@ -533,10 +526,9 @@ deum carnis etiam resuscitatorem, quem omnium noris restitutorem.
 Et utique si omnia homini resurgunt, cui procurata sunt,
 porro non homini, nisi et carni, quale est ut ipsa depereat in totum,
 propter quam et cui nihil deperit? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Si parum universitas resurrectionem figurat, si nihil tale conditio 
+         </div>
+         <div n="13" type="chapter">
+            <p>Si parum universitas resurrectionem figurat, si nihil tale conditio 
 signat, quia singula eius non tam mori quam desinere dicantur,
 nec redanimari, sed reformari existimentur, accipe plenissimum
 atque firmissimum huius spei specimen, siquidem animalis
@@ -551,10 +543,9 @@ uti credas de ignibus quoque substantiam corporis exigi posse.
 Multis passeribus antestare nos dominus pronuntiavit; si non et <bibl n="Matth. X, 33."/>
 phoenicibus, nihil magnum, Sed homines semel interibunt, avibus
 Arabiae de resurrectione securis? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Talia interim divinarum virium liniamenta non minus parabolis 
+         </div>
+         <div n="14" type="chapter">
+            <p>Talia interim divinarum virium liniamenta non minus parabolis 
 operato deo quam locuto veniamus et ad ipsa edicta atque decreta
 <pb xml:id="v.2.p.484"/>
 
@@ -600,10 +591,9 @@ iudicari, qui nisi totus utique non vixerit: qualis ergo vixerit,
 talem iudicari, quia de eo quod vixerit habeat indicari. Vita est
 enim causa iudicii, per tot substantias dispungenda per quot et
 functa est. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Age iam scindant adversarii nostri carnis animaeque contextum 
+         </div>
+         <div n="15" type="chapter">
+            <p>Age iam scindant adversarii nostri carnis animaeque contextum 
 prius in vitae administratione, ut ita audeant scindere illud etiam
 in vitae remuneratione. Negent operarum societatem, ut merito
 possint etiam mercedem negare. Non sit particeps in sententia
@@ -638,10 +628,9 @@ cum humana censura eo perfectior habeatur quo etiam ministros
 facti cuiusque deposcit, nec parcens nec invidens illis,
 quominus cum auctoribus aut poenae aut gratiae communicent
 fruetum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Sed cum imperium animae, obsequium carni distribuimus,
+         </div>
+         <div n="16" type="chapter">
+            <p> Sed cum imperium animae, obsequium carni distribuimus,
 prospiciendum est ne et hoc alia argumentatione subvertant, ut
 velint carnem sic in officio animae collocare, non quasi ministram,
 ne ex hoc sociam cogantur agnoscere. Dicent enim ministros et
@@ -701,10 +690,9 @@ nec exprobratio competisset in alienam culpae nec adhortatio
 in extraneam gloriae; et exprobratio enim et exhortatio
 vacarent erga carnem, si vacaret et merces quae in resurrectione
 captatur. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Simplicior quisque fautor sententiae nostrae putabit carnem
+         </div>
+         <div n="17" type="chapter">
+            <p> Simplicior quisque fautor sententiae nostrae putabit carnem
 etiam idcirco repraesentandam esse iudicio, quia aliter anima non
 capiat passionem tormenti seu refrigerii, utpote incorporalis; hoc
 enim vulgus existimat. Nos autem animam corporalem et hic profitemur
@@ -740,10 +728,9 @@ Denique haec erit ratio in ultimum finem destinati iudicii, ut exhibitione
 carnis omnis divina censura perfici possit. Alioquin non
 sustineretur in finem quod et nunc animae decerpunt apud inferos,
 si solis animabus destinaretur. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>Hucusque praestructionibus egerim ad muniendos sensus omnium 
+         </div>
+         <div n="18" type="chapter">
+            <p>Hucusque praestructionibus egerim ad muniendos sensus omnium 
 scripturarum, quae carnis recidivatum pollicentur. Cui cum
 tot auctoritates iustorum patrociniorum procurent, honores dico
 substantiae ipsius, tum vires dei, tum exempla earum, tum
@@ -801,10 +788,9 @@ et humabo mortuum meum, carnem scilicet. Neque enim animae
 humandae spatium desiderasset, et si anima mortalis crederetur, et
 si Mortuus dici mereretur. Quodsi Mortuus corpus est, corporum
 erit resurrectio, cum dicitur mortuorum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Et haec itaque dispectio tituli et praeconii ipsius, fidem utique 
+         </div>
+         <div n="19" type="chapter">
+            <p>Et haec itaque dispectio tituli et praeconii ipsius, fidem utique 
 defendens vocabulorum, illuc proficere debebit, ut, si quid pars
 diversa turbat obtentu figurarum et aenigmatum, manifestiora quaeque
 praevaleant, et de incertis certiora praescribant. Nacti enim
@@ -833,10 +819,9 @@ vindicantes de sepulchro exire de saeculo evadere interpretantur,
 quia et saeculum mortuorum sit habitaculum, id est ignorantium
 deum, vel etiam de ipso corpore, quia et corpus vice sepulchri
 conclusam animam in saecularis vitae morte detineat. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Ob huiusmodi igitur coniecturas primam praestructionem eorum
+         </div>
+         <div n="20" type="chapter">
+            <p> Ob huiusmodi igitur coniecturas primam praestructionem eorum
 depellam, qua volunt omnia prophetas per imagines contionatos;
 quando, si ita esset, ne ipsae quidem imagines distingui
 potuissent, si non et veritates praedicatae fuissent, ex quibus
@@ -878,10 +863,9 @@ Quis haec interpretabitur magis quam recognoscet? Res in litteris
 tenentur ut litterae in rebus leguntur. Ita non semper
 nec in omnibus allegorica forma est prophetici eloquii, sed interdum
 et in quibusdam. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Si ergo interdum et in quibusdam, inquis, cur non et in edicto 
+         </div>
+         <div n="21" type="chapter">
+            <p>Si ergo interdum et in quibusdam, inquis, cur non et in edicto 
 resurrectionis spiritaliter intellegendae? Quoniam quidem plurima
 ratio intercedit. Primo enim quid facient tot ac talia instrumenta
 divina, ita aperte corporalem contestantia resurrectionem,
@@ -907,10 +891,9 @@ quae quanto maiora, tanto clariora esse deberent, ut maiora crederentur.
 Et puto deo nec livorem nec dolum nec inconstantiam
 nec lenocinium adscribi posse, per quae fere promulgatio maiorum
 cavillatur. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Post haec ad illas etiam scripturas respiciendum est quae non
+         </div>
+         <div n="22" type="chapter">
+            <p> Post haec ad illas etiam scripturas respiciendum est quae non
 sinunt resurrectionem secundum animales istos, ne dixerim spiritales,
 aut hic iam in veritatis agnitione praesumi aut ab excessu
 statim vitae vindicari. Cum enim et tempora totius spei fixa sint
@@ -966,10 +949,9 @@ viderant, secundum angelorum constitutum? Nulla ad hodiernum
 febribus et hulceribus obnoxius, et conculcavit iam inimicos,
 etiam nunc luctari habens cum mundi potentibus. Et utique iam
 <bibl n="Matth. XXII, 21."/> regnat, etiam nunc Caesari quae sunt Caesaris debens. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p> Docet quidem apostolus, Colossensibus scribens, mortuos
+         </div>
+         <div n="23" type="chapter">
+            <p> Docet quidem apostolus, Colossensibus scribens, mortuos
 fuisse nos aliquando alienatos et inimicos sensus domini, cum in
 operibus pessimis agebamus, dehinc consepultos Christo in baptismate,
 et conresuscitatos in eo per fidem efficaciae dei, qui illum
@@ -1018,15 +1000,13 @@ ad abolenda delicta vestra, uti tempora vobis superveniant refrigerii
 ex persona dei, et mittat praedesignatum vobis Christum,
 quem oportet accipere caelos ad usque tempora exhibitionis omnium
 quae Iocutus est deus ore sanctorum prophetarum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p>Quae haec tempora cum Thessalonicensibus disce. Legimus 
+         </div>
+         <div n="24" type="chapter">
+            <p>Quae haec tempora cum Thessalonicensibus disce. Legimus 
 enim: Qualiter conversi sitis ab idolis ad serviendum vivo et vero <bibl n="I Thess. 1, 9 sq."/>
 deo et ad expectandum e caelis filium eius, quem suscitavit ex
 <pb xml:id="v.2.p.498"/>
-
-<bibl n="I Thes. II, 19."/> mortuis, Iesum. Et rursus: Quae enim spes nostra vel gaudium
+               <bibl n="I Thes. II, 19."/> mortuis, Iesum. Et rursus: Quae enim spes nostra vel gaudium
 vel exultationis corona, quam ut et vos coram domino deo nostro
 <bibl n="I Thess. III, 13."/> Iesu Christo in adventu ipsius? Item: Coram deo et patre nostro
 in adventu domini nostri Iesu Christi, cum universis sanctis eius.
@@ -1075,10 +1055,9 @@ oris sui, et evacuabit apparentia adventus sui, cuius est adventus
 secundum operationem satane in omni virtute et signis
 atque portentis mendacii et in omni seductione iniustitiae eis qui
 pereunt. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Etiam in Apocalypsi Ioannis ordo temporum sternitur, quem <bibl n="Apoc. VI, 9. Apoc. XV, 7. XVI, 1."/>
+         </div>
+         <div n="25" type="chapter">
+            <p>Etiam in Apocalypsi Ioannis ordo temporum sternitur, quem <bibl n="Apoc. VI, 9. Apoc. XV, 7. XVI, 1."/>
 martyrum quoque animae sub altari ultionem et iudicium flagitantes
 sustinere didicerunt, ut prius et orbis de pateris angelorum plagas
 suas ebibat, et prostituta illa civitas a decem regibus dignos exitus <bibl n="Apoc. XVII, 9 sqq."/>
@@ -1104,10 +1083,9 @@ nunc eam deceret expungi sine ulla differentia temporum, aut tunc
 sub omni clausula temporum? Ita nobis magis competit etiam
 spiritalem defendere resurrectionem ab ingressu fidei, qui plenitudinem
 eius agnoscimus in exitu saeculi. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p> Unum adhuc respondebo ad propositionem priorem allegoricarum
+         </div>
+         <div n="26" type="chapter">
+            <p> Unum adhuc respondebo ad propositionem priorem allegoricarum
 scripturarum, licere et nobis corporalem resurrectionem de
 patrocinio figurati proinde eloquii prophetici vindicare. Ecce enim
 <bibl n="Gen. III, 19."/> divina in primordio sententia terram hominem pronuntiando, Terra
@@ -1166,10 +1144,9 @@ potius argumentari, quam et patrum dici capiat, Adae scilicet et
 Evae, proinde et in paradisum restitutio carni videbitur repromissa,
 quae eum incolare et custodire sortita est, ut talis illuc homo
 revocetur qualis inde pulsus est. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p> Habemus etiam vestimentorum in scripturis mentionem ad
+         </div>
+         <div n="27" type="chapter">
+            <p> Habemus etiam vestimentorum in scripturis mentionem ad
 <bibl n="Apoc. III, 4. XIV, 4."/> spem carnis allegorizare, quia et Apocalypsis Ioannis, Hi sunt, ait,
 qui vestimenta sua non coinquinaverunt cum mulieribus; virgines
 <bibl n="Matth. XIX, 12."/> scilicet significans, et qui semetipsos castraverunt propter regna
@@ -1195,11 +1172,10 @@ quod ait, Donec ira praetereat, quae extinguet antichristum, post
 iram ostendit processuram carnem de sepulchro. in quo ante
 iram fuerit inlata. Nam et de cellariis non aliud effertur quam
 quod infertur, et post antichristi eradicationem agitabitur resurrectio. </p>
-<pb xml:id="v.2.p.503"/>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p>Scimus autem sicut vocibus ita et rebus prophetatum. Tam 
+            <pb xml:id="v.2.p.503"/>
+         </div>
+         <div n="28" type="chapter">
+            <p>Scimus autem sicut vocibus ita et rebus prophetatum. Tam 
 dictis quam et factis praedicatur resurrectio, cum Moyses manum <bibl n="Exed. IV, 6 sq."/>
 in sinum condit et emortuam profert, et rursus insinuat et vividam
 explicat, nonne hoc de toto homine portendit, siquidem trina <bibl n="Ibid. v. 2-9."/>
@@ -1224,10 +1200,9 @@ caro itaque et vivificabitur per resurrectionem. Certe si occidere
 carni animam eripere est, vivificare, contrarium eius, carni animam
 referre est, caro resurgat necesse est, cui anima per occisionem
 erepta referenda est per vivificationem. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p>Igitur si et allegoricae scripturae et argumenta rerum et simplices 
+         </div>
+         <div n="29" type="chapter">
+            <p>Igitur si et allegoricae scripturae et argumenta rerum et simplices 
 voces resurrectionem carnis, quamquam sine nominatione
 ipsius substantiae, subradiant, quanto magis quae hanc spem in
 ipsas substantias corporales speciali mentione determinant non
@@ -1261,10 +1236,9 @@ dominus aperuerim sepulchra vestra et eduxerim vos de sepulchris
 vestris, populus meus, et dabo vobis spiritum, et vivetis et requiescetis
 in terra vestra, et cognoscetis quod ego dominus locutus
 sim et fecerim, dicit dominus. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p> Hanc quoque praedicationem scio qualiter concutiant in allegoriae
+         </div>
+         <div n="30" type="chapter">
+            <p> Hanc quoque praedicationem scio qualiter concutiant in allegoriae
 argumentationem, Quia dicendo, Ossa ista omnis domus
 IsraÃ«l est, imaginem ea fecerit IsraÃ«lis et a propria condicione
 transtulerit: atque ita figuratam esse non veram resurrectionis praedicationem;
@@ -1315,10 +1289,9 @@ qui non credebant resurrectura. Denique in clausula, Et
 cognoscetis, inquit, quod ego dominus locutus sim et fecerim, id
 utique facturus quod fuerat locutus. Ceterum non id facturus quod
 locutus, si aliter facturus quam locutus. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p> Plane si et populus allegorice mussitaret ossa sua arefacta
+         </div>
+         <div n="31" type="chapter">
+            <p> Plane si et populus allegorice mussitaret ossa sua arefacta
 et spem suam perditam, dispersionis exitu querulus, merito videretur
 et deus figuratam desperationem figurata promissione consolatus.
 Sed cum dispersionis quidem iniuria nondum populo accidisset.
@@ -1351,10 +1324,9 @@ et videbunt artus eorum qui impie egerunt, quoniam
 vermis illorum non decidet et ignis eorum non extinguetur, et
 erunt conspectui omni carni, scilicet quae resuscitata et egressa de
 sepulchris dominum pro hac gratia adorabit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="32">
-<p>Sed ne solummodo eorum corporum resurrectio videatur praedicari 
+         </div>
+         <div n="32" type="chapter">
+            <p>Sed ne solummodo eorum corporum resurrectio videatur praedicari 
 quae sepulchris demandantur, habes scriptum: Et mandabo <bibl n="Apoc. XX, 13."/>
 piscibus maris et eructabunt ossa quae sunt comesta, et faciam
 compaginem ad compaginem et os ad os. Ergo, inquis, et pisces
@@ -1390,10 +1362,9 @@ edicitur, omnia potius adseverant quam quod nominatur? Si corporalia
 parabolae, ergo et animalia; si non et animalia, ergo nec
 corporalia. Tam enim corpus homo quam et anima; ut non possit
 altera species admittere aenigmata, altera excludere. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="33">
-<p> Satis haec de prophetico instrumento. Ad evangelia nunc provoco;
+         </div>
+         <div n="33" type="chapter">
+            <p> Satis haec de prophetico instrumento. Ad evangelia nunc provoco;
 hic quoque occursurus prius eidem astutiae eorum qui proinde
 et dominum omnia in parabolis pronuntiasse contendunt, quia
 <bibl n="Matth. XIII, 34."/> scriptum est: Haec omnia locutus est Iesus in parabolis, et sine
@@ -1433,10 +1404,9 @@ et regni et iudicii et resurrectionis oporteat credi. Et nunc
 eo pergimus, uti corporalitatem carnalem proprie demonstremus a
 domino significari in omni resurrectionis mentione, salva animali,
 quam et ipsam pauci receperunt. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="34">
-<p>In primis cum ad hoc venisse se dicit, uti quod periit salvum <bibl n="Luc. XIX, 10."/>
+         </div>
+         <div n="34" type="chapter">
+            <p>In primis cum ad hoc venisse se dicit, uti quod periit salvum <bibl n="Luc. XIX, 10."/>
 faciat, quid dicis perisse? Hominem sine dubio. Totumne an ex
 parte? Utique totum. Siquidem transgressio, quae perditionis humanae
 causa est, tam animae instinctu ex concupiscentia quam et
@@ -1499,10 +1469,9 @@ carnis atque animae, multo magis nobis. Feliciores enim, inquit, <bibl n="Io. XX
 qui non viderunt et credunt, quando, et si illis negaretur carnis
 resurrectio, certe felicioribus competisset. Quomodo enim felices,
 si ex parte perituri? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="35">
-<p>Sed et praecipit eum potius timendum qui corpus et animam 
+         </div>
+         <div n="35" type="chapter">
+            <p>Sed et praecipit eum potius timendum qui corpus et animam 
 occidat in gehennam, id est dominum solum, non qui corpus occidant, <bibl n="Matth. X, 28."/>
 animae autem nihil nocere possint, id est humanas potestates.
 Adeo hic et anima immortalis natura recognoscitur, quae
@@ -1554,10 +1523,9 @@ surrexerit. Sic ergo et recumbere ipsum in dei regno, et sedere
 in thronis Christi, et adsistere tunc ad dexteram vel sinistram,
 et edere de ligno vitae, corporalis dispositionis fidelissima
 indicia sunt. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="36">
-<p> Videamus nunc an et Sadducaeorum versutiam elidens nostram
+         </div>
+         <div n="36" type="chapter">
+            <p> Videamus nunc an et Sadducaeorum versutiam elidens nostram
 <pb xml:id="v.2.p.513"/>
 
 magis sententiam erexerit. Causa, opinor, quaestionis fuit destructio
@@ -1587,10 +1555,9 @@ non eius vel maxime substantiae restitutio in dubium vocaretur
 quae proprie et morte et nuptiis fungitur, id est carnis. Habes
 igitur dominum confirmantem adversus haereticos Iudaeorum, quod
 et nunc negatur apud Sadducaeos Christianorum, solidam resurrectionem. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="37">
-<p>Sic et si carnem ait nihil prodesse, ex materia dicti dirigendus <bibl n="Io. VI. 63. Io. VI, 53 sqq."/>
+         </div>
+         <div n="37" type="chapter">
+            <p>Sic et si carnem ait nihil prodesse, ex materia dicti dirigendus <bibl n="Io. VI. 63. Io. VI, 53 sqq."/>
 est sensus. Nam quia durum et intolerabilem existimaverunt
 <pb xml:id="v.2.p.514"/>
 
@@ -1633,10 +1600,9 @@ id est mortui per ignorantiam dei, quos monumenta intellegendos
 argumentantur haeretici, de monumentis processuri in
 iudicium aperte praedicantur. Ceterum quomodo de monumentis
 monumenta procedent? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="38">
-<p>Post dicta domini facta etiam eius quid sapere credamus, de 
+         </div>
+         <div n="38" type="chapter">
+            <p>Post dicta domini facta etiam eius quid sapere credamus, de 
 capulis, de sepulchris mortuos resuscitantis? Cui rei istud? Si
 ad simplicem ostentationem potestatis, aut ad praesentem gratiam
 redanimationis, non adeo magnum illi denuo morituros suscitare.
@@ -1665,12 +1631,10 @@ quidem et carnis et animae resurrectionem ne cui
 substantiae negaretur hoc donum, qua tamen exempla, eo minus
 aliquid edebant (non enim in gloriam nec in incorruptibilitatem,
 sed in mortem aliam suscitabantur) quam ediderit Christus. </p>
-<pb xml:id="v.2.p.516"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="39">
-<p> Resurrectionem apostolica quoque instrumenta testantur. Nam
+            <pb xml:id="v.2.p.516"/>
+         </div>
+         <div n="39" type="chapter">
+            <p> Resurrectionem apostolica quoque instrumenta testantur. Nam
 et apostolis nullum aliud negotium fuit, duntaxat apud IsraÃ«lem,
 quam veteris testamenti resignandi et novi consignandi, et potius
 iam dei in Christo contionandi. Ita et de resurrectione nihil novi
@@ -1704,10 +1668,9 @@ fidem torquere coepit, tunc et apostolus per totum paene instrumentum
 fidem huius spei corroborare curavit, et esse eam
 ostendens et nondum transactam, et, de quo magis quaerebatur,
 corporalem et, quod insuper dubitabatur, non aliter corporalem. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="40">
-<p>Nihil autem mirum, si et ex ipsius instrumento captentur <bibl n="I Cor. XI, 19."/>
+         </div>
+         <div n="40" type="chapter">
+            <p>Nihil autem mirum, si et ex ipsius instrumento captentur <bibl n="I Cor. XI, 19."/>
 argumenta, cum oporteat haereses esse; quae esse non possent,
 si non et perperam scripturae intellegi possent. Nactae denique
 haereses duos homines ab apostolo editos, interiorem, id est animam,
@@ -1765,12 +1728,10 @@ non ut amittens resurrectionem, sed ut sustinens vexationem,
 corrumpi intellegetur ex hoc non sine interiore. Ita amborum
 erit etiam conglorificari, sicut et compati. Secundum collegia
 laborum consortia etiam decurrant necesse est praemiorum. </p>
-<pb xml:id="v.2.p.519"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="41">
-<p>Eandem adhuc sententiam exsequitur remunerationes vexationibus 
+            <pb xml:id="v.2.p.519"/>
+         </div>
+         <div n="41" type="chapter">
+            <p>Eandem adhuc sententiam exsequitur remunerationes vexationibus 
 praeferens. Scimus enim, inquit, quoniam etsi terrena <bibl n="II Cor. V, 1."/>
 domus nostri buius tabernaculi dissolvatur, habemus domum non
 manu factam aeternam in caelis, id est per hoc quod dissolvetur
@@ -1797,15 +1758,14 @@ expunctae concurrere cum resurgentibus, sicut Thessalonicensibus
 scribit: Hoc enim dicimus vobis in sermone domini, quod
 nos qui vivimus, qui remanemus in adventum domini, non praeveniemus
 eos qui dormierunt: Quoniam ipse dominus in iussu <bibl n="I Thess. IV, 13 sqq."/>
-<pb xml:id="v.2.p.520"/>
+               <pb xml:id="v.2.p.520"/>
 et in voce archangeli et in tuba dei descendet de caelo, et mortui
 in Christo resurgent primi: dehinc nos cum ipsis simul rapiemur
 in nubibus obviam domino in aera, et ita semper cum domino
 erimus. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="42">
-<p> Horum demutationem ad Corinthios reddit, dicens, Omnes
+         </div>
+         <div n="42" type="chapter">
+            <p> Horum demutationem ad Corinthios reddit, dicens, Omnes
 <bibl n="I Cor. XV, 51 sq."/> quidem resurgemus, non autem omnes demutabimur, in atomo, in
 momentaneo motu oculi, in novissima tuba; sed illi scilicet soli
 qui invenientur in carne. Et mortui, inquit, resurgent, nos demutabimur.
@@ -1863,10 +1823,9 @@ invenientur carne deposita vel ex parte discissa sive detrita (et hoc
 enim nuditas potest dici); dehinc recipient eam, ut redinduti
 carnem fieri possint etiam superinduti immortalitatem; superindui
 enim nisi vestito iam convenire non poterit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="43">
-<p> Proinde cum dicit, Itaque confisi semper et scientes quod,
+         </div>
+         <div n="43" type="chapter">
+            <p> Proinde cum dicit, Itaque confisi semper et scientes quod,
 <bibl n="II Cor. V, 6 sq."/> cum immoramur in corpore, peregrinamur a domino, per fidem
 enim incedimus, non per speciem, manifestum est hoc quoque non
 pertinere ad offuscationem carnis quasi separantis nos a domino.
@@ -1899,10 +1858,9 @@ corpus utique pensanda sunt, per quod et gesta sunt. Ita et totus
 hic a capite tractatus apostoli tali clausula detextus, qua carnis
 resurrectio ostenditur, secundum haec erit intellegendus quae cum
 clausula consonant. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="44">
-<p>Si enim adhuc ad superiora respectes, unde mentio hominis 
+         </div>
+         <div n="44" type="chapter">
+            <p>Si enim adhuc ad superiora respectes, unde mentio hominis 
 exterioris et interioris inducta est, nonne et dignitatem et spem
 carnis integram invenies? Cum enim de lumine quod illuxerit <bibl n="II Cor. IV, 5 sq."/>
 deus in cordibus nostris ad illuminationem agnitionis gloriae suae
@@ -1933,8 +1891,7 @@ corpore, sicut et Christus. Ne enim quis argumentetur nunc habere
 manifestari vitam Iesu in corpore nostro per disciplinam sanctitatis
 et patientiae et iustitiae et sapientiae, quibus domini vita
 <pb xml:id="v.2.p.524"/>
-
-<bibl n="II Cor. IV, 11."/> floruerit, providentissima apostoli intentio ingerit: Si enim nos, qui
+               <bibl n="II Cor. IV, 11."/> floruerit, providentissima apostoli intentio ingerit: Si enim nos, qui
 vivimus, in mortem tradimur propter Iesum, ut vita eius manifestetur
 in corpore nostro mortali. Adeo defunctis nobis hoc ait
 futurum in corpore nostro. Quodsi tunc, quomodo nisi resuscitato
@@ -1942,10 +1899,9 @@ futurum in corpore nostro. Quodsi tunc, quomodo nisi resuscitato
 Iesum, et nos suscitabit cum ipso, quia iam resurrexit a
 mortuis. Nisi quia Cum ipso Sicut ipsum sapit; si vero Sicut
 ipsum, non utique sine carne. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="45">
-<p> Sed et rursus alia caecitate in duos homines inpingunt, in
+         </div>
+         <div n="45" type="chapter">
+            <p> Sed et rursus alia caecitate in duos homines inpingunt, in
 <bibl n="Eph. IV, 22 sqq."/> veterem et in novum, monente apostolo deponere nos veterem hominem,
 qui corrumpitur per concupiscentiam seductionis, renovari
 autem spiritu sensus, et induere novum hominem, qui secundum
@@ -1999,16 +1955,14 @@ et veterem secundum pristinam conversationem, non
 secundum carnem, per interitum perpetuum. Ceterum carne tam
 salvum quam eundem, utpote vitiosam disciplinam, non corpulentiam,
 exutum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="46">
-<p>Talem ubique apostolum recognoscas, ita carnis opera damnantem, 
+         </div>
+         <div n="46" type="chapter">
+            <p>Talem ubique apostolum recognoscas, ita carnis opera damnantem, 
 ut carnem damnare videatur, sed ne ita quis existimet ex
 aliorum vel cohaerentium sensuum suggestu procurantem. Nam et
 dicens cos qui in carne sunt deo placere non posse statim de
 <pb xml:id="v.2.p.526"/>
-
-<bibl n="Rom. VIII, 8 sq."/> pravo intellectu ad integrum revocat, adiciens, Vos autem non estis
+               <bibl n="Rom. VIII, 8 sq."/> pravo intellectu ad integrum revocat, adiciens, Vos autem non estis
 in carne, sed in spiritu. Eos enim quos in carne esse constabat
 negando in carne esse in operibus carnis non esse monstrabat;
 atque ita illos demum deo placere non posse, non qui in carne
@@ -2060,10 +2014,9 @@ inquilina est carnis, mortificatae quidem, sed non suo, verum
 delinquentiae nomine. Nam et alibi, Quomodo, inquit, etiam nunc <bibl n="Col. II, 29."/>
 velut viventes in mundo sententiam fertis? non ad mortuos scribens,
 sed ad eos qui desinere deberent mundialiter vivere. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="47">
-<p>Haec enim erit vita mundialis, quam veterem hominem dicit <bibl n="Rom. VI, 6."/>
+         </div>
+         <div n="47" type="chapter">
+            <p>Haec enim erit vita mundialis, quam veterem hominem dicit <bibl n="Rom. VI, 6."/>
 confixum esse Christo, non corporalitatem, sed moralitatem. Ceterum
 si non ita accipimus, non est corporalitas nostra confixa,
 nec crucem Christi caro nostra perpessa est; sed quemadmodum
@@ -2079,7 +2032,7 @@ mortali delinquentia ad obaudiendum illi et ad exhibendum membra
 vestra arma iniustitiae delinquentiae: sed exhibete vosmet ipsos deo
 velut ex mortuis vivos, non velut vivos, sed velut ex mortuis vivos,
 et membra vestra arma iustitiae. Et rursus: Sicut exhibuistis <bibl n="Rom. VI, 19-23."/>
-<pb xml:id="v.2.p.528"/>
+               <pb xml:id="v.2.p.528"/>
 
 membra vestra famula immunditiae et iniquitatis ad iniquitatem,
 ita et nunc exhibete membra vestra famula iustitiae in sanctificium;
@@ -2136,10 +2089,9 @@ Sed sequitur: Et integrum corpus vestrum et anima et <bibl n="I Thess. V, 23."/>
 spiritus sine querela conserventur in praesentia domini. Habes
 omnem substantiam hominis saluti destinatam, nec alio tempore
 quam in adventu domini, qui clavis est resurrectionis. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="48">
-<p>Sed caro, inquis, et sanguis regnum dei haereditate possidere <bibl n="I Cor. XV, 50."/>
+         </div>
+         <div n="48" type="chapter">
+            <p>Sed caro, inquis, et sanguis regnum dei haereditate possidere <bibl n="I Cor. XV, 50."/>
 non possunt. Scimus hoc quoque scriptum, sed de industria
 distulimus hucusque, ut quod adversarii in prima statim acie obstruunt,
 in ultima congressione prosterneremus, omnibus quaestionibus
@@ -2150,7 +2102,7 @@ disciplinae summam et sui evangelii et fidei illorum in
 dominicae mortis et resurrectionis demandatione concluserat, ut et
 nostrae spei regulam inde deduceret unde constaret. Itaque subicit,
 Si autem Christus praedicatur quod a mortuis resurrexit, quomodo <bibl n="I Cor. XV, 12-18."/>
-<pb xml:id="v.2.p.530"/>
+               <pb xml:id="v.2.p.530"/>
 
 quidam dicunt in vobis resurrectionem mortuorum non esse? quae
 si non est, nec Christus resurrexit. Si autem Christus non resurrexit,
@@ -2203,10 +2155,9 @@ hic de qualitatibus corporum disserit, an eadem ipsa an alia resumantur.
 Sed cum eiusmodi quaestio posterior habeatur, sufficiet
 interim ex hoc quoque corporalem definiri resurrectionem, cum de
 qualitate corporum quaeritur. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="49">
-<p>Ventum est nunc ad carnem et sanguinem revera totius quaestionis; 
+         </div>
+         <div n="49" type="chapter">
+            <p>Ventum est nunc ad carnem et sanguinem revera totius quaestionis; 
 quas substantias quali conditione exhaeredaverit apostolus
 a dei regno aeque de antecedentibus discere est. Primus, inquit, <bibl n="I Cor. XV, 47."/>
 homo de terra choicus, id est limaceus, id est Adam, secundus
@@ -2273,10 +2224,9 @@ deditum, id est esui et potui, cuius sit dicere adversus fidem resurrectionis,
 Manducemus et bibamus, cras enim moriemur? Et <bibl n="I Cor. XV, 32."/>
 hoc enim infulciens apostolus carnem et sanguinem de fructibus
 ipsorum manducandi et bibendi suggillavit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="50">
-<p>Sed et omissis huiusmodi interpretationibus, carnis et sanguinis 
+         </div>
+         <div n="50" type="chapter">
+            <p>Sed et omissis huiusmodi interpretationibus, carnis et sanguinis 
 opera taxantibus, ipsas quoque substantias non aliter quam
 sunt intellectas licebit resurrectioni vindicare. Non enim resurrectio
 carni et sanguini directo denegatur, sed dei regnum, quod
@@ -2310,10 +2260,9 @@ et ille vetustati deputetur, et hoc titulo iam et alibi ab apostolo
 eum in nationibus statim non retulerit ad carnem et sanguinem,
 id est ad circumcisionem, id est ad Iudaismum, sicut ad
 Galatas scribit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="51">
-<p> Sed pro omnibus iam stabit quod in clausulam reservavimus,
+         </div>
+         <div n="51" type="chapter">
+            <p> Sed pro omnibus iam stabit quod in clausulam reservavimus,
 etiam pro apostolo ipso, revera maximae inconsiderantiae revincendo,
 si tam abrupte, ut quidam volunt, clausis, quod aiunt,
 oculis, sine distinctione, sine condicione, omnem passim carnem
@@ -2366,10 +2315,9 @@ patitur, aliud quod pati efficit. Ita quae patiuntur corruptelam et
 
 mortalitatem, caro scilicet et sanguis, ea necesse est patiantur et
 incorruptelam et immortalitatem. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="52">
-<p> Videamus iam nunc quo corpore venturos mortuos disputet.
+         </div>
+         <div n="52" type="chapter">
+            <p> Videamus iam nunc quo corpore venturos mortuos disputet.
 Et bene quod erupit statim ostendere, quasi quis eiusmodi quaerat.
 <bibl n="I Cor. XV, 36."/> Stulte, inquit, tu quod seminas non vivificatur nisi mortuum fuerit.
 Hoc ergo iam de exemplo seminis constet, non aliam vivificari
@@ -2436,14 +2384,13 @@ terram ibis; quia et de terra erat sumpta. Hinc et apostolus concepit
 seminari eam dicere, cum redhibetur in terram, quia et
 seminibus sequestratorium terra est, illic deponendis et inde
 repetendis. Ideoque et reconsignat imprimens: Sic enim scriptum <bibl n="I Cor. XV, 45."/>
-<pb xml:id="v.2.p.538"/>
+               <pb xml:id="v.2.p.538"/>
 
 est; ne aliud existimes esse seminari quam In terram ibis, ex qua
 es sumptus, sic ne alterius quam carnis; sic enim scriptum est. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="53">
-<p> Sed corpus animale animam quidam argumentantur, ut illum
+         </div>
+         <div n="53" type="chapter">
+            <p> Sed corpus animale animam quidam argumentantur, ut illum
 a carne avocent recidivatum Porro cum constet fixumque sit illud
 resurrecturum corpus quod fuerit seminatum,ad ipsius rei exhibitionem
 provocabuntur. Aut ostendant animam seminatam post
@@ -2505,8 +2452,7 @@ spiritum vivificantem distincti sint, aeque distinctio eorum carni
 distinctionem praeiudicavit; ut de carne sit dictum, Non primum <bibl n="Ibid."/>
 quod spiritale, sed quod animale, postea quod spiritale, atque ita
 <pb xml:id="v.2.p.540"/>
-
-<bibl n="I Cor. XV, 44 sq."/> eadem sit et supra intellegenda: Et quae seminetur corpus animale,
+               <bibl n="I Cor. XV, 44 sq."/> eadem sit et supra intellegenda: Et quae seminetur corpus animale,
 et quae resurgat corpus spiritale, quia non primum quod spiritale,
 sed quod animale, quia primus Adam in animam, novissimus
 Adam in spiritum. Totum de homine, totum de carne, quando de
@@ -2518,10 +2464,9 @@ maioris substantiae nomine animale corpus nuncupata est, in qua
 seminatur, futura proinde per plenitudinem spiritus insuper spiritale,
 in qua resuscitatur. Quid mirum, si magis inde vocitata est
 unde conferta est quam unde respersa est? </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="54">
-<p> Ita de vocabulorum occasionibus plurimum quaestiones subornantur,
+         </div>
+         <div n="54" type="chapter">
+            <p> Ita de vocabulorum occasionibus plurimum quaestiones subornantur,
 sicut et de verborum communionibus. Nam quia et illud
 <bibl n="II Cor. V, 4."/> apud apostolum positum est: Uti devoretur mortale a vita, caro
 scilicet, devorationem quoque ad perditionem scilicet carnis arripiunt,
@@ -2545,10 +2490,9 @@ et vita, mortis scilicet aemula, per contentionem devorabit
 <pb xml:id="v.2.p.541"/>
 
 in salutem quod per contentionem suam devoraverat mors in interitum. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="55">
-<p>Quamquam igitur resurrecturam carnem probantes hoc ipso 
+         </div>
+         <div n="55" type="chapter">
+            <p>Quamquam igitur resurrecturam carnem probantes hoc ipso 
 non aliam resurrecturam probemus quam de qua agitur, tamen singulae
 quaestiones et causae earum proprios quoque flagitant congressus,
 licet aliunde iam caesae. Interpretabimur itaque plenius
@@ -2581,8 +2525,7 @@ divina etiam documenta testantur. Mutatur Moysi manus, <bibl n="Exod. IV, 6 sq."
 et quidem ad instar emortuae, exsanguis et exalbida, frigida,
 sed et recepto calore et refuso colore eadem caro et sanguis est.
 <pb xml:id="v.2.p.542"/>
-
-<bibl n="Exod. XXXIV, 29. 35."/> Mutatur postea et facies eiusdem incontemplabili claritate. Sed
+               <bibl n="Exod. XXXIV, 29. 35."/> Mutatur postea et facies eiusdem incontemplabili claritate. Sed
 Moyses erat proinde qui non videbatur. Sic et Stephanus angelicum
 <bibl n="Act. App. VI, 15. VII, 59."/> iam fastigium induerat, sed non alia genua lapidationi
 <bibl n="Matth. XVII, 3 sqq."/> succiderant. Dominus quoque in secessu montis etiam vestimenta
@@ -2597,10 +2540,9 @@ ergo et Saul in alium virum conversus de corpore suo
 excessit, et ipse satanas cum in angelum lucis transfiguratur,
 qualitatem suam amittit. Non opinor. Ita et in resurrectionis
 eventum mutari, converti, reformari licebit cum salute substantiae. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="56">
-<p> Etenim quam absurdum, quam vero et iniquum, utrumque
+         </div>
+         <div n="56" type="chapter">
+            <p> Etenim quam absurdum, quam vero et iniquum, utrumque
 autem quam deo indignum, aliam substantiam operari, aliam mercede
 dispungi, ut haec quidem caro per martyria lanietur, alia vero
 coronetur, item e contrario haec quidem caro in spurcitiis volutetur,
@@ -2622,10 +2564,9 @@ et Christum induit et spem salutis seminavit, in alia nescio qua
 metat fructum? Nae illa gratiosissima caro cui gratis vita constabit.
 Quodsi non et anima mutabitur, iam nec animae resurrectio
 est; nec ipsa enim resurrexisse credetur, si non alia resurrexerit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="57">
-<p>Hinc iam illa vulgaris incredulitatis argutia est. Si, inquiunt, 
+         </div>
+         <div n="57" type="chapter">
+            <p>Hinc iam illa vulgaris incredulitatis argutia est. Si, inquiunt, 
 ipsa eademque substantia revocatur cum sua forma, linea, qualitate,
 ergo et cum insignibus suis reliquis. Itaque et caeci et claudi et
 paralytici, et ut quis insignis excesserit, ita et revertetur. Quid
@@ -2653,7 +2594,7 @@ Idoneus deus reficere quod fecit. Hanc suam et potestatem
 et liberalitatem satis iam in Christo spopondit, immo et
 ostendit non tantum resuscitatorem carnis, verum etiam redintegratorem.
 Atque adeo et apostolus, Et mortui, inquit, resurgent <bibl n="I Cor. XV, 52."/>
-<pb xml:id="v.2.p.544"/>
+               <pb xml:id="v.2.p.544"/>
 
 incorrupti. Quomodo, nisi integri, qui retro corrupti tam vitio
 valetudinis quam et senio sepulturae? Nam et supra utrumque
@@ -2682,10 +2623,9 @@ reformandi, dum et passiones auferuntur et munitiones conferuntur.
 Ita manebit quidem caro etiam post resurrectionem, eatenus passibilis,
 qua ipsa, qua eadem, ea tamen impassibilis, qua in hoc
 ipsum manumissa a domino, ne ultra pati possit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="58">
-<p> Iocunditas, inquit Esaias, aeterna super caput eorum. Nihil
+         </div>
+         <div n="58" type="chapter">
+            <p> Iocunditas, inquit Esaias, aeterna super caput eorum. Nihil
 <bibl n="Ies. XXXV, 10."/> aeternum nisi post resurrectionem. Aufugit, inquit, dolor et maeror
 <bibl n="Ibid. Apoc. VII, 17."/> et gemitus ab illis. Proinde et Ioanni angelus: Et delebit deus
 omnem lacrimam ab oculis eorum; utique ex iisdem oculis qui
@@ -2720,12 +2660,10 @@ Figurae enim nostrae fuerunt, apostolo auctore, quae <bibl n="Deut. XXIX, 5."/>
 scripta sunt ut et dominum potentiorem credamus omni corporum
 lege, et carnis magis utique conservatorem, cuius etiam vestimenta,
 etiam calciamenta protexit. </p>
-<pb xml:id="v.2.p.546"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="59">
-<p> Sed futurum, inquis, aevum alterius est dispositionis et aeternae;
+            <pb xml:id="v.2.p.546"/>
+         </div>
+         <div n="59" type="chapter">
+            <p> Sed futurum, inquis, aevum alterius est dispositionis et aeternae;
 igitur huius aevi substantiam non aeternam diversa possidere
 non posse. Plane, si homo propter dispositionem futuram, et non
 <bibl n="I Cor. III, 22."/> dispositio propter hominem. Sed enim apostolus scribens, Sive
@@ -2750,10 +2688,9 @@ alia erit forma nationum credentium nisi quae et non credentium,
 de carne, de anima. Sicut ergo easdem nationes non genere, sed
 sorte distinxit, ita et carnes, quae in ipsis nationibus una substantia
 est, non materia, sed mercede disiunxit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="60">
-<p> Ecce autem, ut adhuc controversiam exaggerent carni, carni
+         </div>
+         <div n="60" type="chapter">
+            <p> Ecce autem, ut adhuc controversiam exaggerent carni, carni
 maxime eidem, de officiis quoque membrorum argumentatur, aut
 <pb xml:id="v.2.p.547"/>
 
@@ -2799,10 +2736,9 @@ futura membrorum vacatione praescribere denuo esse non posse.
 Licet enim esse quid denuo et nihilominus vacare; nec potest
 autem dici vacare, si non sit. At enim si sit, poterit et non vacare;
 nihil enim apud deum vacabit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="61">
-<p> Sed accepisti, homo, os ad vorandum atque potandum: cur
+         </div>
+         <div n="61" type="chapter">
+            <p> Sed accepisti, homo, os ad vorandum atque potandum: cur
 non potius ad eloquendum, ut a ceteris animalibus distes? cur
 non potius ad praedicandum deum, ut etiam hominibus antistes?
 Denique Adam ante nomina animalibus enuntiavit quam de arbore
@@ -2835,10 +2771,9 @@ membrorum temporali vacatione, ut in temporali dispositione, nec
 homo tamen minus salvus est, proinde homine salvo, et quidem
 magis tunc, ut in aeterna dispositione, magis non desiderabimus
 quae iam hic non desiderare consuevimus. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="62">
-<p>Sed huic disceptationi finem dominica pronuntiatio imponit. 
+         </div>
+         <div n="62" type="chapter">
+            <p>Sed huic disceptationi finem dominica pronuntiatio imponit. 
 Erunt, inquit, tanquam angeli. Si non nubendo, quia nec moriendo, <bibl n="Matth. XXII, 30. Luc. XX, 36."/>
 utique nec ulli simili necessitati succidendo corporalis conditionis,
 quia et angeli aliquando tanquam homines fuerunt, edendo
@@ -2854,10 +2789,9 @@ non et in spiritu permanserint, quia non et in sollemnibus spiritus.
 Denique non dixit, Erunt angeli, ne homines negaret, sed,
 Tanquam angeli, ut homines conservaret. Non abstulit substantiam,
 cui similitudinem attribuit. </p>
-</div>
-
-<div type="textpart" subtype="chapter" n="63">
-<p>Resurget igitur caro, et quidem omnis, et quidem ipsa, et 
+         </div>
+         <div n="63" type="chapter">
+            <p>Resurget igitur caro, et quidem omnis, et quidem ipsa, et 
 quidem integra. In deposito est ubicunque apud deum per fidelissimum
 <pb xml:id="v.2.p.550"/>
 
@@ -2904,14 +2838,12 @@ ambiguitates et quas volunt parabolas aperta atque perspicua totius
 sacramenti praedicatione discussit per novam prophetiam de paracleto
 inundantem. Cuius si hauseris fontes, nullam poteris sitire
 doctrinam, nullus te ardor exuret quaestionum, resurrectionem
-quoque carnis usquequaque potando refrigerabis. </p></div>
-<pb xml:id="v.2.p.552"/>
-
-<pb xml:id="v.2.p.553"/>
-
-<pb xml:id="v.2.p.554"/>
-
-<pb xml:id="v.2.p.555"/>
-</div></body></text>
-
+quoque carnis usquequaque potando refrigerabis. </p>
+         </div>
+         <pb xml:id="v.2.p.552"/>
+         <pb xml:id="v.2.p.553"/>
+         <pb xml:id="v.2.p.554"/>
+         <pb xml:id="v.2.p.555"/>
+      </body>
+   </text>
 </TEI>

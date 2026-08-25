@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base" n="chunk">
+          <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -63,7 +64,7 @@
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
 
-  <text n="vir bonus" id="phi0692.phi012.perseus.lat1"><body>
+  <text n="vir bonus" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi012.perseus-lat1">
     <head>De Institutione Viri Boni</head>
     <p>
 <lb n="1"/>vir bonus et sapiens, qualem uix repperit unum
@@ -100,4 +101,4 @@
 
 </p></body></text>
 
-</TEI.2>
+</TEI>

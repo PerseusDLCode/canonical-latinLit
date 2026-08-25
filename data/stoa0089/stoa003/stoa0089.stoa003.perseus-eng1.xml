@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -41,10 +41,17 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
          <refsDecl doctype="TEI.2">
             <state unit="poem"/>
          </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
       </encodingDesc>
       <profileDesc>
          <langUsage>
@@ -53,12 +60,15 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa003.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa003.perseus-eng1">
          <pb id="v.2.p.125" TEIform="pb"/>
-         <div1 type="poem" n="praef" org="uniform" sample="complete" part="N">
-         <head>PREFACE</head>
-         <p>
+         <div1 type="poem"
+               n="praef"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>PREFACE</head>
+            <p>
 
 After years of sloth my Muse, as if startled from
 long slumber, rejoices to sing a Roman song to
@@ -87,9 +97,14 @@ fear. A gracious and more devoted hearing is
 secured for me, be it by the war's deserving or be it
 by Stilicho's love.
          </p>
-            </div1>
-<pb id="v.2.p.127"/>
-         <div1 type="poem" id="poem.26" org="uniform" sample="complete" part="N" n="1">
+         </div1>
+         <pb id="v.2.p.127"/>
+         <div1 type="poem"
+               id="poem.26"
+               org="uniform"
+               sample="complete"
+               part="N"
+               n="1">
             <p>
 When the intrepid Argo, passing between the
 clashing rocks that guarded its entrance, burst
@@ -192,7 +207,7 @@ never reached man's estate ; Otus, attempting
 to uproot Pelion, was stricken down by Phoebus,
 and Ephialtes as he died wearily let Ossa fall athwart
 his side.</p>
-<pb id="v.2.p.133"/>
+            <pb id="v.2.p.133"/>
             <p>
 Lift up thy head, Rome, and behold thine enemy ;
 see how, leading back in dishonour a shattered host,
@@ -231,7 +246,7 @@ forbid that the barbarian should outrage even with
 a glance Numa's shrine or Romulus' temple, or
 discover aught of the secrets of our empire.
             </p>
-<pb id="v.2.p.135"/>
+            <pb id="v.2.p.135"/>
             <p>
 And yet — if duly I recall ancient conflicts — then
 also when, fair liberty lending vigour, the senate
@@ -479,9 +494,10 @@ defeats of the two tyrants 1 have made the road
 notorious, nor has the foeman missed the wellknown
 track that was built for him by our civil strife.
 They have come a well-known way and Roman
-discord has opened the approach to barbaric war.</q></p>
-
-<p><q direct="unspecified">Past generations have known a like fate. Full
+discord has opened the approach to barbaric war.</q>
+            </p>
+            <p>
+               <q direct="unspecified">Past generations have known a like fate. Full
 often, we know, has Italy been attacked — but never
 without the enemy's paying dear. With their own
 blood did our country extinguish the fires lit by the
@@ -491,8 +507,9 @@ loaded with the chains of captivity. Of little value
 is that glory whose worth has not been augmented
 by previous hardship ; 'tis great dangers that beget
 great triumphs.</q>
-</p>
-            <p><q direct="unspecified">Do you meditate shameful flight and fix your
+            </p>
+            <p>
+               <q direct="unspecified">Do you meditate shameful flight and fix your
 <pb id="v.2.p.149"/>
 eyes on Gaul ? Would you leave Latium and
 establish on the banks of the Saône a camp of
@@ -514,9 +531,9 @@ Italy, know that my heart is set on bearing with
 thee whatsoever ills thou art called on to bear.
 Romans, hold your walls but for a short while till
 I return, bringing back to the sound of trumpets
-the flower of your host.</q></p>
-
-         <p>
+the flower of your host.</q>
+            </p>
+            <p>
 With these words he instilled courage into the
 fearful hearts of the citizens and checked any
 inclination towards flight in the Court. The dark
@@ -602,7 +619,7 @@ face of heaven when at Jove's frown the troubled
 sky is gathered into a murky cloud.
             </p>
             <p>
-<q direct="unspecified"> Put ye such faith,</q> he cried, <q direct="unspecified"> in Getic arms ?
+               <q direct="unspecified"> Put ye such faith,</q> he cried, <q direct="unspecified"> in Getic arms ?
 Is it they that swell your hearts with empty pride ?
 Fate has not brought Rome's name so low that she
 <pb id="v.2.p.155"/>
@@ -626,7 +643,8 @@ obeyed his orders, and Philip, intruding his feeble
 arms between mighty nations, was routed by a
 passing band and learned that it does not do to tempt
 the anger of powerful peoples even when they are
-in distress.</q></p>
+in distress.</q>
+            </p>
             <p>
 With this warning Stilicho alike checked the
 threatened war and won new allies for war, enrolling
@@ -781,7 +799,8 @@ with what vast outpourings of our blood he made
 the rivers of Greece run warm ; and thou hadst
 been killed had not treason in the guise of law
 and the goodwill of the Emperor of the East protected
-thee.</q></p>
+thee.</q>
+            </p>
             <p>
 While the elder spake thus Alaric, eyeing him
 <pb id="v.2.p.165"/>
@@ -822,7 +841,8 @@ year and thou shalt reach the city.' Thus far the
 <pb id="v.2.p.167"/>
 path is mine. Who so cowardly as to dally after
 this encouragement or to hesitate to obey the call
-of Heaven?</q></p>
+of Heaven?</q>
+            </p>
             <p>
 So he spake and made ready his army to take the
 road, exhorting them to combat. Prophecy serves
@@ -956,9 +976,9 @@ monument which records our double victory : <q direct="unspecified"> Here
 beneath the soil of Italy lie the bodies of brave
 Cimbri and Getae : their death they owed to our
 famous generals Marius and Stilicho. Learn, presumptuous
-peoples, not to despise Rome.</q></p>
-
-            </div1>
+peoples, not to despise Rome.</q>
+            </p>
+         </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

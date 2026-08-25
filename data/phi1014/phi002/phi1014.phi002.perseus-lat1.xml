@@ -1,89 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-<teiHeader>
-<fileDesc>
-<titleStmt>
- <title xml:lang="lat">Excerpta Controversiae</title> 
-    <author>Seneca the Elder</author>
- <editor>Adolf Gottlieb Kiessling</editor>
-    <sponsor>Perseus Project, Tufts University</sponsor>
-    <principal>Gregory Crane</principal>
-    <respStmt>
-        <resp>Prepared under the supervision of</resp>
-        <name>Bridget Almas</name>
-        <name>Lisa Cerrato</name>
-        <name>Rashmi Singhal</name>
-    </respStmt>
-    <respStmt>
-        <persName>Zach Himes</persName>
-        <orgName>Tufts University</orgName>
-        <resp>CTS and EpiDoc conversion</resp>
-    </respStmt>
-    <funder n="org:Mellon">The Mellon Foundation</funder>
-</titleStmt>
-    <publicationStmt>
-        <publisher>Trustees of Tufts University</publisher>
-        <pubPlace>Medford, MA</pubPlace>
-        <authority>Perseus Project</authority>
-        <date type="release">2011-04-14</date>
-    </publicationStmt>
-    <sourceDesc>
- <biblStruct>
-  <monogr>
-   <title xml:lang="lat">Annaei Senecae Oratorum et rhetorum sententiae divisiones colores</title>
-   <author>Seneca the Elder</author>
-   <editor>Adolf Gottlieb Kiessling</editor>
-   <imprint>
-    <publisher>Teubner</publisher>
-    <pubPlace>Leipzig</pubPlace>
-    <date>1872</date>
-   </imprint>
-  </monogr>
-     <ref target="https://archive.org/details/oratorumetrhetor00seneuoft/page/140/mode/2up">Internet Archive</ref>
- </biblStruct>
- 
- <list><item>Keyboarding</item></list></sourceDesc>
-</fileDesc>
-
-<encodingDesc>
-            <refsDecl n="CTS">
-                <cRefPattern n="chapter"
-                         matchPattern="(\w+).(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-                    <p>This pointer pattern extracts Book and Chapter</p>
-                </cRefPattern>
-                <cRefPattern n="book"
-                         matchPattern="(\w+)"
-                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <p>This pointer pattern extracts Book</p>
-                </cRefPattern>
-            </refsDecl>
-            <refsDecl>
-                <refState unit="book" delim="."/>
-                <refState unit="chapter" delim="."/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-<profileDesc>
-<langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-</langUsage>
-</profileDesc>
-<revisionDesc> 
-    <change who="Alison Babeu" when="2025-02-06">Updated header and metadata</change>
-    <change who="Zach Himes" when="2015-11-16">Converted to TEI P5 and EpiDoc</change>
-    <change who="Zach Himes" when="2022-11-03">Updated header and bibliographic description</change>
-</revisionDesc>
-</teiHeader>
-
-
-<text><body><div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi1014.phi002.perseus-lat1">
-<pb n="p.140"/><pb n="b.339"/>
-<div type="textpart" n="1" subtype="book"><head>excerpta controversiarum.
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Excerpta Controversiae</title>
+            <author>Seneca the Elder</author>
+            <editor>Adolf Gottlieb Kiessling</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <respStmt>
+               <persName>Zach Himes</persName>
+               <orgName>Tufts University</orgName>
+               <resp>CTS and EpiDoc conversion</resp>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-04-14</date>
+            <idno type="CTS">urn:cts:latinLit:phi1014.phi002.perseus-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Annaei Senecae Oratorum et rhetorum sententiae divisiones colores</title>
+                  <author>Seneca the Elder</author>
+                  <editor>Adolf Gottlieb Kiessling</editor>
+                  <imprint>
+                     <publisher>Teubner</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1872</date>
+                  </imprint>
+               </monogr>
+               <ref target="https://archive.org/details/oratorumetrhetor00seneuoft/page/140/mode/2up">Internet Archive</ref>
+            </biblStruct>
+            <list>
+               <item>Keyboarding</item>
+            </list>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="book" delim="."/>
+            <refState unit="chapter" delim="."/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-standard"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change who="Alison Babeu" when="2025-02-06">Updated header and metadata</change>
+         <change who="Zach Himes" when="2015-11-16">Converted to TEI P5 and EpiDoc</change>
+         <change who="Zach Himes" when="2022-11-03">Updated header and bibliographic description</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:phi1014.phi002.perseus-lat1">
+         <pb n="p.140"/>
+         <pb n="b.339"/>
+         <div n="1" type="book">
+            <head>excerpta controversiarum.
 liber primus.</head>
-<div type="textpart" n="1" subtype="chapter"><head>Patruus abdicans.</head><p>
+            <div n="1" type="chapter">
+               <head>Patruus abdicans.</head>
+               <p>
 Liberi parentes alant, aut uinciantur. Duo fratres
 inter se dissidebant; alteri filius erat. patruus
 in egestatem incidit; patre uetante adolescens
@@ -128,9 +133,13 @@ Extra controuersiam dicta. ALFIVS FLAVVS
 praetextatus apud CESTIVM controuersias
 declamabat. semper autem commendabat eloquentiam eius
 aliqua res extra eloquentiam; in puero lenocinium
-erat ingenii aetas. <pb n="b.341"/></p></div>
-<pb n="p.142"/>
-<div type="textpart" n="2" subtype="chapter"><head>Sacerdos Peostituta.</head><p>
+erat ingenii aetas. <pb n="b.341"/>
+               </p>
+            </div>
+            <pb n="p.142"/>
+            <div n="2" type="chapter">
+               <head>Sacerdos Peostituta.</head>
+               <p>
 Sacerdos casta e castis, pura e puris sit. Quaedam
 uirgo a piratis capta ueniit; emta a lenone et
 prostituta est. uenientes ad se exorabat stipem.
@@ -172,9 +181,11 @@ quicquid ad uiolandam adtulerat. Dicat diis
 pudicitiam quibus debet.
 Extra. Longe recedendum est ab omni
 obscoenitate et uerborum et sensuum. quaedam satius
-est causae detrimento tacere quam uerecundiae dicere.</p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>incesta de saxo.</head><p>
+est causae detrimento tacere quam uerecundiae dicere.</p>
+            </div>
+            <div n="3" type="chapter">
+               <head>incesta de saxo.</head>
+               <p>
 Incesta saxo deiciatur. Incesti damnata antequam
 deiceretur Vestam inuocauit; deiecta uixit.
 repetitur ad poenam.
@@ -194,9 +205,11 @@ Pars altera. Damnata deiecta est, absoluta
 descendit. Putares puellam non deici sed demitti.
 Lex sacerdotem non <pb n="b.343"/> ad saxum usque differret, nisi
 sententiam exspectaret deorum. Erat altitudo montis
-etiam secure despicientibus horrenda.</p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>Fortis sine manibus.</head><p>
+etiam secure despicientibus horrenda.</p>
+            </div>
+            <div n="4" type="chapter">
+               <head>Fortis sine manibus.</head>
+               <p>
 Adulterum cum adultera qui deprehenderit, dum
 utrumque corpus interficiat, sine fraude sit.
 Liceat adulterium in matre et filio uindicare.
@@ -233,9 +246,11 @@ potest, quamuis pater ipse militaris sit. Ipsam legem
 recita: “liceat marito, liceat et filio.” quare
 tam multos nominat, nisi quod putat esse aliquos
 qui non possint? Exierunt adulteri inter patrem
-debilem et filium stupentem.</p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Raptor duarum.</head><p>
+debilem et filium stupentem.</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Raptor duarum.</head>
+               <p>
 Rapta raptoris aut mortem aut indotatas nuptias
 optet. Vna nocte quidam duas rapuit. altera
 mortem optat, altera nuptias.
@@ -258,9 +273,11 @@ Pars altera. Inter pares sententias mitior uincat.
 Refer <pb n="b.345"/> Virginiam, dic Lucretiam: plures tamen
 Sabinae sunt. Contumeliosum mihi erit te dignam
 uideri in cuius honorem homo occidatur, me dignam
-non uideri in cuius honorem seruetur.</p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>Archipiratae filia.</head><p>
+non uideri in cuius honorem seruetur.</p>
+            </div>
+            <div n="6" type="chapter">
+               <head>Archipiratae filia.</head>
+               <p>
 Captus a piratis scripsit de redemptione; non
 redimebatur. archipiratae filia iurare eum coegit
 ut duceret se uxorem, si dimissus esset. iurauit.
@@ -284,9 +301,12 @@ hereditariae extulissent imagines, nemo Magnum
 dixisset. Seruium regem tulit Roma. Quid tibi
 uidentur illi ab aratro qui paupertate sua beatam
 fecere rempublicam ? Non possumus una felices esse:
-quod solemus, una infelices erimus. <pb n="b.346"/></p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>a piratis tyrannicida dimissus.</head><p>
+quod solemus, una infelices erimus. <pb n="b.346"/>
+               </p>
+            </div>
+            <div n="7" type="chapter">
+               <head>a piratis tyrannicida dimissus.</head>
+               <p>
 Liberi parentes alant aut uinciantur. Quidam
 alterum fratrem tyrannum, alterum in adulterio
 deprehensum deprecante patre interfecit. a piratis
@@ -333,11 +353,15 @@ instruis, quo adulteros facis? <milestone unit="para"/>
     color adprobandus est impetu; magna enim ui opus 
     est, ut aliquis accusando se miserabilem faciat. 
     Sparsum memini hominem inter scolasticos sanum, 
-    inter sanos scolasticum. </p></div>
-    <div type="textpart" n="8" subtype="chapter"><head>ter fortis.</head><p>
+    inter sanos scolasticum. </p>
+            </div>
+            <div n="8" type="chapter">
+               <head>ter fortis.</head>
+               <p>
         Qui ter fortiter fecerit, militia uacet. Ter fortem 
         pater in aciem quarto uolentem exire retinet; 
-        nolentem abdicat. <pb n="p.149"/><milestone unit="para"/>
+        nolentem abdicat. <pb n="p.149"/>
+                  <milestone unit="para"/>
         Quod patriae superest patri uindico. O me filio 
         pugnante iam lassum! Iam pro te nescio, quid etiam 
         lex timet. Miraris si quod legi satis est, patri nimis
@@ -363,11 +387,15 @@ instruis, quo adulteros facis? <milestone unit="para"/>
 
 
 
-</p></div></div>
-<pb n="p.230"/>
-<div type="textpart" n="2" subtype="book">
-<head>excerpta controversiarum: liber secundus</head>
-<div type="textpart" n="1" subtype="chapter"><head>adoptandus post tres abdicatos.</head><p>
+</p>
+            </div>
+         </div>
+         <pb n="p.230"/>
+         <div n="2" type="book">
+            <head>excerpta controversiarum: liber secundus</head>
+            <div n="1" type="chapter">
+               <head>adoptandus post tres abdicatos.</head>
+               <p>
 Diues tres filios abdicauit; petit a paupere unicum
 in adoptionem. pauper dare uult; nolentem
 ire abdicat. contradicit.
@@ -424,9 +452,11 @@ tantum in illis somniorum est. SYRIACVS contra
 Maximum Stertinium a quo premebatur, cum comes
 eius fuisset, dixit: per annos quindecim in officio
 tuo fui, dic quid peccauerim? sed haec est
-consuetudo uestra, iniuriam uocatis finem seruitutis.</p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>iusiurandum mariti et uxoris.</head><p>
+consuetudo uestra, iniuriam uocatis finem seruitutis.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>iusiurandum mariti et uxoris.</head>
+               <p>
 Vir et uxor iurauerunt, ut si quid alteri accidisset,
 alter moreretur. Vir peregre profectus est;
 misit nuntium uxori, qui diceret se decessisse.
@@ -457,7 +487,8 @@ nam Latronis admirator erat. Latro in praefatione
 quadam dixit: non uides ut immota fax torpeat et
 ignes exagitata restituat? mollit uiros otium, ferrum
 situ rubiginem ducit. Naso dixit:
-<quote rend="blockquote"><lb/>uidi ego iactatas mota face crescere flammas
+<quote rend="blockquote">
+                     <lb/>uidi ego iactatas mota face crescere flammas
 <lb/>et rursus nullo concutiente mori.</quote>
 hic autem dixit: quicquid laboris est in hoc est, ut
 uxori uirum et uxorem uiro diligere concedas. necesse
@@ -471,16 +502,21 @@ illi quos tolli uellent secreto, hic quos tutos esse
 uellet: in utrisque codicillis idem uersus erant, ex
 quibus primum fuisse narrabat ALBINOVANVS PEDO,
 qui inter arbitros fuerat:
-<quote rend="blockquote"><lb/>semibouemque uirum semiuirumque bouem,</quote>
+<quote rend="blockquote">
+                     <lb/>semibouemque uirum semiuirumque bouem,</quote>
 secundum:
-<quote rend="blockquote"><lb/>et gelidum Borean egelidumque Notum.</quote>
+<quote rend="blockquote">
+                     <lb/>et gelidum Borean egelidumque Notum.</quote>
 ex quo apparet summi ingenii uiro non iudicium
 defuisse ad conpescendam Ticentiam carminum
 <pb n="p.234"/>
 suorum; sed animum. aiebat interim decentiorem
-faciem esse, in qua aliquis naeuus esset. <pb n="b.352"/></p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>Raptor patrem non exorans.</head><p>
+faciem esse, in qua aliquis naeuus esset. <pb n="b.352"/>
+               </p>
+            </div>
+            <div n="3" type="chapter">
+               <head>Raptor patrem non exorans.</head>
+               <p>
 Raptor nisi et suum et raptae patrem intra
 tricesimum diem exorauerit, pereat. Raptor raptae
 patrem exorauit, suum non exorat. reum facit
@@ -514,9 +550,11 @@ Pars altera. Me miserum, pater! irae tuae
 detractum est nihil, tempori multum. Infelicior sum
 quam si neutrum exorassem. Si seruaturus es filium,
 iam tempus fuit, si occisurus, iam tempus est. Prior
-rogatus est qui magis timebatur.</p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>nepos ex meretrice susceptus.</head><p>
+rogatus est qui magis timebatur.</p>
+            </div>
+            <div n="4" type="chapter">
+               <head>nepos ex meretrice susceptus.</head>
+               <p>
 Abdicauit quidam filium; abdicatus se contulit ad
 meretricem et ex ea sustulit filium. aeger ad
 patrem misit: cum uenisset, commendauit ei
@@ -535,12 +573,15 @@ a fratre.
 Pars altera. Pater istius incertus est: bene cum
 isto ageretur, si et mater. Incidit in meretricem
 inter cetera mala et fecundam. Mulier nescio <add>an</add>
-<pb n="p.236"/>
+                  <pb n="p.236"/>
 aduersus patrem iniuriosior quod abstulisti illi
 heredem an quod dedisti. Adoptauit eius filium
-propter quam eiecerat suum. <pb n="b.354"/></p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Torta a tyranno pro marito.</head><p>
+propter quam eiecerat suum. <pb n="b.354"/>
+               </p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Torta a tyranno pro marito.</head>
+               <p>
 Torta a tyranno uxor, numquid de uiri tyrannicidio
 sciret, perseuerauit negare. postea maritus eius
 tyrannum occidit. intra quinquennium non
@@ -596,9 +637,13 @@ longa cogitatio illi praestatura erat, prima
 intentio animi dabat; ex tempore causas agebat, sed
 non desiderabat hanc commendationem, ut ex
 tempore agere uideretur. de hoc eleganter dixit diuus
-Augustus: L. VINICIVS ingenium in numerato habet. <pb n="b.356"/></p></div>
-<pb n="p.238"/>
-<div type="textpart" n="6" subtype="chapter"><head>pater et filius luxuriosi.</head><p>
+Augustus: L. VINICIVS ingenium in numerato habet. <pb n="b.356"/>
+               </p>
+            </div>
+            <pb n="p.238"/>
+            <div n="6" type="chapter">
+               <head>pater et filius luxuriosi.</head>
+               <p>
 Quidam luxuriante filio luxuriari coepit. Accusatur
 a filio dementiae. Contradicit.
 Accusator meus intra se contrarios adfectus
@@ -619,9 +664,12 @@ institutae domus lege, quae posset adulescentis formare
 mores et a uitiis aetatis abducere. Quodammodo
 ad luxuriam a patre praemissus sum. Madent
 unguento cani et commessator senex nulli nimis
-luxuriosus, sed parum sanus uidetur. <pb n="b.357"/></p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>peregrinus negotiator.</head><p>
+luxuriosus, sed parum sanus uidetur. <pb n="b.357"/>
+               </p>
+            </div>
+            <div n="7" type="chapter">
+               <head>peregrinus negotiator.</head>
+               <p>
 Quidam cum haberet formosam uxorem, peregre
 profectus est. in uiciniam mulieris peregrinus
 mercator migrauit; ter illam appellauit de
@@ -668,13 +716,16 @@ Pars altera. Formosa est: hoc natura peccauit.
 sine uiro fuit: hoc maritus peccauit. appellata est:
 hoc alius peccauit. negauit: hoc pudice. heres
 relicta est: hoc feliciter. hereditatem adiit: hoc
-consulto fecit.</p></div></div>
-<pb n="p.241"/>
-<pb n="b.359"/>
-<div type="textpart" n="3" subtype="book">
-<div type="textpart" n="pr" subtype="chaper">
-<p>ca Nouato, Senecae, Melae filiis salutem.</p>
-<div type="textpart" n="1" subtype="section"><p>Quosdam disertissimos agnoui uiros non
+consulto fecit.</p>
+            </div>
+         </div>
+         <pb n="p.241"/>
+         <pb n="b.359"/>
+         <div n="3" type="book">
+            <div n="pr" type="chaper">
+               <p>ca Nouato, Senecae, Melae filiis salutem.</p>
+               <div n="1" type="section">
+                  <p>Quosdam disertissimos agnoui uiros non
 respondentes famae suae cum declamarent, in foro maxima
 omnium admiratione dicentes, simul ad has
 domesticas exercitationes secesserant desertos ab
@@ -682,9 +733,10 @@ ingenio suo. quod accidere plerisque aeque mihi
 mirum quam certum est. Memini itaque me a Severo
 Cassio quaerere, quid esset cur in declamationibus
 eloquentia illi sua non responderet.
-</p></div>
-
-<div type="textpart" n="2" subtype="section"><p>In nullo enim
+</p>
+               </div>
+               <div n="2" type="section">
+                  <p>In nullo enim
 hoc fiebat notabilius. oratio eius erat ualens, culta,
 ingentibus plena sententiis; nemo minus passus est
 aliquid in actione sua otiosi esse; nulla pars erat
@@ -694,9 +746,10 @@ petentia; nemo magis in sua potestate habuit
 audientium affectus. Verum est quod de illo dicit GALLIO
 noster: “cum diceret rerum potiebatur, adeo omnes
 imperata faciebant;
-</p></div>
-
-<div type="textpart" n="3" subtype="section"><p> cum ille uoluerat, irascebantur.
+</p>
+               </div>
+               <div n="3" type="section">
+                  <p> cum ille uoluerat, irascebantur.
 nemo non illo dicente timebat ne desineret.” Non
 est quod illum ex his quae edidit aestimetis; sunt
 quidem et haec quibus eloquentia eius <add>agnoscatur;
@@ -711,9 +764,10 @@ uocis — quamuis haec inter se raro coeant, ut
 eadem uox et dulcis sit et solida — pronuntiatio
 quae histrionem posset producere, <add>nec</add> tamen quae
  histrionis posset uideri.
-</p></div>
-
-<div type="textpart" n="4" subtype="section"><p> nec enim quicquam magis
+</p>
+               </div>
+               <div n="4" type="section">
+                  <p> nec enim quicquam magis
 in illo mirareris quam quod grauitas quae deerat
 uitae, actioni supererat: quamdiu citra iocos se
 continebat, censoria oratio erat. Deinde ipsa quae
@@ -723,9 +777,10 @@ magis placebat in his quae inueniebat quam in his
 quae attulerat. Iam uero iratus commodius dicebat,
 et ideo diligentissime cauebant homines ne dicentem
  interpellarent.
-</p></div>
-
-<div type="textpart" n="5" subtype="section"><p> uni illi proderat excuti; melius
+</p>
+               </div>
+               <div n="5" type="section">
+                  <p> uni illi proderat excuti; melius
 semper fortuna quam cura de illo merebat. Numquam
 tamen haec felicitas illi persuasit
 neglegentiam. Vno die priuatas plures agebat et ita ut
@@ -734,9 +789,10 @@ meridiem; publicam uero numquam amplius quam unam
 uno die. Nec tamen scio quem reum illi defendere
 nisi se contigerit: adeo nusquam rerum ullam materiam
  dicendi nisi in periculis suis habuit.
-</p></div>
-
-<div type="textpart" n="6" subtype="section"><p> Sine
+</p>
+               </div>
+               <div n="6" type="section">
+                  <p> Sine
 commentario numquam dixit nec hoc commentario
 contentus erat in quo nudae res ponuntur, set
 maxima parte perscribebatur actio; illa quoque quae
@@ -748,9 +804,10 @@ antecedebat. Numquam non utilius erat illi deprehendi
 quam praeparari; sed magis illum suspiceres quod <pb n="b.361"/>
 diligentiam non relinquebat, cum illi tam bene
 temeritas cederet.
-</p></div>
-
-<div type="textpart" n="7" subtype="section"><p>Omnia ergo habebat quae illum
+</p>
+               </div>
+               <div n="7" type="section">
+                  <p>Omnia ergo habebat quae illum
 ut bene declamaret, instruerent: phrasin non
 uulgarem nec sordidam sed lectam, genus dicendi non
 remissum aut languidum sed ardens et concitatum,
@@ -760,9 +817,10 @@ maximum etiam mediocris ingenii subsidium. tamen non
 tantum infra se cum declamaret, sed infra multos
 erat: itaque raro declamabat et non nisi ab amicis
 coactus.
-</p></div>
-
-<div type="textpart" n="8" subtype="section"><p>Sed quaerenti mihi quare in
+</p>
+               </div>
+               <div n="8" type="section">
+                  <p>Sed quaerenti mihi quare in
 declamationibus impar sibi esset, haec aiebat: quod in me
 miraris paene omnibus euenit. magna quoque
 ingenia — a quibusmultum abesse me scio — quando plus
@@ -772,9 +830,10 @@ felicitas ingenii <add>in</add> oratione soluta reliquit;
 orationes Sallustii in honorem historiarum leguntur;
 eloquentissimi uiri Platonis oratio quae pro Socrate
 scripta <add>est</add> nec patrono nec reo digna est.
-</p></div>
-
-<div type="textpart" n="9" subtype="section"><p>Hoc
+</p>
+               </div>
+               <div n="9" type="section">
+                  <p>Hoc
 non ingeniis tantum, sed corporibus uideris
 accidere, quorum uires non ad omnia quae uiribus
 efficiuntur aptae sunt: illi nemo luctando par est; ille
@@ -786,9 +845,10 @@ Ad animalia ueni: alii ad aprum, alii ad ceruum
 canes faciunt; equorum non omnium, quamuis
 celerrimi sint, idonea curriculis uelocitas est; quidam
  melius equitem patiuntur, quidam iugum.
-</p></div>
-
-<div type="textpart" n="10" subtype="section"><p> Vt ad
+</p>
+               </div>
+               <div n="10" type="section">
+                  <p> Vt ad
 meum te morbum uocem, Pylades in comoedia,
 Bathyllus in tragoedia multum a se aberant;
 cognomini meo cum uelocitas pedum non concedatur
@@ -802,9 +862,10 @@ praeparat. PASSIENVS noster cum coepit dicere,
 secundum principium statim fuga fit, ad epilogum
 omnes reuertimur, media tantum quibus necesse est
  audiunt.
-</p></div>
-
-<div type="textpart" n="11" subtype="section"><p> Miraris eundem non aeque bene declamare
+</p>
+               </div>
+               <div n="11" type="section">
+                  <p> Miraris eundem non aeque bene declamare
 quam causas agere aut eundem non tam bene
 suasorias quam iudiciales controuersias dicere? SILO
 POMPEIVS sedens et facundus et literatus est et
@@ -814,9 +875,10 @@ numquam surgas. Magna et uaria res est eloquentia
 neque adhuc ulli sic indulsit ut tota contingeret;
 satis felix est qui in aliquam eius partem receptus
  est.
-</p></div>
-
-<div type="textpart" n="12" subtype="section"><p> Ego tamen et propriam causam uideor posse
+</p>
+               </div>
+               <div n="12" type="section">
+                  <p> Ego tamen et propriam causam uideor posse
 reddere: adsueui non auditorem spectare sed
 iudicem; adsueui non mihi respondere sed aduersario;
 non minus deuito superuacua dicere quam contraria.
@@ -827,9 +889,10 @@ in foro dico, aliquid ago; cum declamo, id quod
 bellissime CENSORINVS aiebat de his qui honores
 in municipiis ambitiose peterent: uideor mihi in
 somniis laborare. Deinde res ipsa diuersa est:
-</p></div>
-
-<div type="textpart" n="13" subtype="section"><p>
+</p>
+               </div>
+               <div n="13" type="section">
+                  <p>
 totum aliud est pugnare, aliud uentilare. Hoc ita
 semper arbitratum est, scolam quasi ludum esse,
 forum arenam; et ideo ille primum in foro uerba
@@ -839,18 +902,20 @@ mutabuntur; uelut adsueta clauso et delicatae umbrae
 corpora sub diuo stare non possunt, non imbrem ferre,
 non solem sciunt, uix se inuenient; adsuerunt enim
 suo arbitrio diserti esse.
-</p></div>
-
-<div type="textpart" n="14" subtype="section"><p>Non est quod oratorem in
+</p>
+               </div>
+               <div n="14" type="section">
+                  <p>Non est quod oratorem in
 hac puerili exercitatione spectes. quid si uelis
 gubernatorem in piscina aestimare? Diligentius me
 tibi excusarem tamquam huic rei non essem natus,
 nisi scirem et Pollionem Asinium et Messalam Coruinum
 et Passienum qui nunc primo loco stat
 minus bene audiri quam Cestium aut Latronem.
-</p></div>
-
-<div type="textpart" n="15" subtype="section"><p>Vtrum
+</p>
+               </div>
+               <div n="15" type="section">
+                  <p>Vtrum
 ergo putas hoc dicentium uitium esse an
 audientium? Non illi peius dicunt, sed hi corruptius
 iudicant, <add>qui</add> pueri fere aut iuuenes scolas frequentant;
@@ -861,9 +926,10 @@ tamen uno modo possunt praeferunt: huius enim
 <pb n="p.246"/>
 declamationes ediscunt, illius orationes non legunt
  nisi eas quibus Cestius rescripsit.
-</p></div>
-
-<div type="textpart" n="16" subtype="section"><p> Memini me
+</p>
+               </div>
+               <div n="16" type="section">
+                  <p> Memini me
 intrare scolam eius cum recitaturus esset in Milonem;
 CESTIVS ex consuetudine sua miratus dicebat: si
 Threx essem, Fusius essem; si pantomimus essem,
@@ -874,9 +940,10 @@ essem qui tam crassas ceruices haberem. Cestius
 Ciceroni responsurus mihi quod responderet <pb n="b.364"/> non
 inuenit, sed negauit se exsecuturum, nisi exissem de
 domo.
-</p></div>
-
-<div type="textpart" n="17" subtype="section"><p> ego negaui me de balneo publico exiturum,
+</p>
+               </div>
+               <div n="17" type="section">
+                  <p> ego negaui me de balneo publico exiturum,
 nisi lotus essem. Deinde libuit Ciceroni de Cestio
 in foro satisfacere. subinde nanctus eum in ius ad
 praetorem uoco et cum quantum uolebam iocorum
@@ -890,9 +957,10 @@ spectaculum concurrerant et rogantibus dixi molestum
 me amplius non futurum, si iurasset disertiorem
 esse Ciceronem quam se. nec hoc ut faceret uel
  ioco uel serio effici potuit.
-</p></div>
-
-<div type="textpart" n="18" subtype="section"><p> Hanc, inquit, tibi
+</p>
+               </div>
+               <div n="18" type="section">
+                  <p> Hanc, inquit, tibi
 fabellam retuli, ut scires in declamationibus tantum
 non aliud genus hominum esse. Si comparari illis
 uolo, non ingenio mihi maiore opus est, sed sensu
@@ -906,9 +974,13 @@ eam fecissent. conpositio aspera et quae uitaret
 conpositionem, sententiae uiuae. Iniquom tamen
 erit ex his eum aestimari quae statim subtexam:
 non enim haec ille optime dixit, sed haec ego
-optime teneo.</p></div></div>
-<pb n="b.365"/>
-<div type="textpart" n="1" subtype="chapter"><head>luxuriosus a sodalibus excaecatus.</head><p>
+optime teneo.</p>
+               </div>
+            </div>
+            <pb n="b.365"/>
+            <div n="1" type="chapter">
+               <head>luxuriosus a sodalibus excaecatus.</head>
+               <p>
 Caecus de publico mille denarios accipiat. Decem
 adulescentes cum bona comedissent, sortiti sunt,
 ut cuius nomen exisset ex pacto
@@ -938,8 +1010,11 @@ adprobauerunt; electus est qui sortiretur; sors huius quae
 exiret prima subiecta est. cum repugnaret, <pb n="b.366"/>
 excaecatus est. Si circumuentus, inquit, est, persequatur
 iniuriam, de ui agat, talionem petat. uidebimus;
-primum est ut habeat unde uiuat.</p></div>
-<div type="textpart" n="2" subtype="chapter"><head>parricida aequis sententiis absolutus.</head><p>
+primum est ut habeat unde uiuat.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>parricida aequis sententiis absolutus.</head>
+               <p>
 Quidam filium accusauit parricidii. Aequis
 sententiis absolutum abdicat.
 Minus est iam quod rogo; non peto ut me a
@@ -957,9 +1032,13 @@ non innocentiae debes. Absolutus, inquit, sum. Non
 abdico te propter parricidium, sed propter alia uitia
 quae te fecerunt tam credibilem parricidam.
 Pars altera. Manifestus adulescentis .color est,
-ut se dicat patris auctoritate oppressum. <pb n="b.367"/></p></div>
-<pb n="p.249"/>
-<div type="textpart" n="3" subtype="chapter"><head>abdicandus qui abdicatum fratrem adoptavit.</head><p>
+ut se dicat patris auctoritate oppressum. <pb n="b.367"/>
+               </p>
+            </div>
+            <pb n="p.249"/>
+            <div n="3" type="chapter">
+               <head>abdicandus qui abdicatum fratrem adoptavit.</head>
+               <p>
 Cum tricenario filio pater patrimonium diuidat.
 Quidam habuit filios frugi et luxuriosum. abdicauit
 luxuriosum. frugi peregre profectus est; a piratis
@@ -996,9 +1075,11 @@ rogasses. Nam quod ego non redemi, paupertatis
 fuit: nihil in medio comparebat; quicquid
 tricenarius reliquerat, abdicatus abstulerat. Quid facerem
 solus, senex, inops, cuius patrimonium alter diuiserat,
-alter absumpserat?</p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>Servatus a filio.</head><p>
+alter absumpserat?</p>
+            </div>
+            <div n="4" type="chapter">
+               <head>Servatus a filio.</head>
+               <p>
 Seruatus contra seruatorem ne quam habeat
 actionem. Seruatus a filio abdicat. ille praescribit.
 Licuisset perire, si loqui non licet. Seruatum
@@ -1024,9 +1105,11 @@ non ante patrem stetisti? Audite filii mei
 gloriam: parricidium non fecit; cum posset seruare,
 seruauit. <pb n="b.369"/>
 Pars altera. Hic me genuit; hic mihi spiritum,
-hic has manus quibus seruaretur dedit.</p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>pater raptam continens.</head><p>
+hic has manus quibus seruaretur dedit.</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>pater raptam continens.</head>
+               <p>
 Rapta raptoris aut mortem aut indotatas nuptias
 optet. Raptor postulat, ut rapta educatur. pater non uult.
 Iste raptor est, ego in ius educor. Non est tam
@@ -1058,8 +1141,11 @@ timeat, habet et quod sperare possit. In lege, inquid,
 non est scriptum quando. immo statim; quotiens
 tempus non adicitur, praesens intellegitur. Tam
 longum tibi ius in caput ciuis permittatur?
-Crudelius est quam mori, semper mortem timere.</p></div>
-<div type="textpart" n="6" subtype="chapter"><head>Domus cum tyranno incensa.</head><p>
+Crudelius est quam mori, semper mortem timere.</p>
+            </div>
+            <div n="6" type="chapter">
+               <head>Domus cum tyranno incensa.</head>
+               <p>
 Damni inlati actio sit. Quidam tyrannum ex arce
 fugientem cum persequeretur, in priuatam
 domum compulit. incendit domum: tyrannus cum
@@ -1090,9 +1176,11 @@ in eam quam potuit inrupit, cum ego in ea non
 essem. Nactus hic occasionem nocendi intrare
 noluit, sed tyrannicidium elegit dubium, lentum,
 periculosum urbi. accepit praemium maius sine dubio
-quasi damnum sarcire deberet.</p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>Venenum Furenti filio datum.</head><p>
+quasi damnum sarcire deberet.</p>
+            </div>
+            <div n="7" type="chapter">
+               <head>Venenum Furenti filio datum.</head>
+               <p>
 Filio furenti et membra sua lanianti pater uenenum
 dedit. accusatur ab uxore malae tractationis.
 Non mirum est quare uiuat quae filium perdidit:
@@ -1108,10 +1196,16 @@ inquid, te poetas studiose legere: iste sensus eius
 est qui hoc saeculum amatoriis non artibus tantum
 sed sententiis impleuit. Ouidius enim in libris
 metamorfoseon dicit:
-ipse suos artus lacero diuellere morsu <note><bibl>Ouid met. VIII, 877 sq.</bibl></note>
-coepit et infelix minuendo corpus alebat. <pb n="b.372"/></p></div>
-<pb n="p.254"/>
-<div type="textpart" n="8" subtype="chapter"><head>Olynthius pater reus concursus.</head><p>
+ipse suos artus lacero diuellere morsu <note>
+                     <bibl>Ouid met. VIII, 877 sq.</bibl>
+                  </note>
+coepit et infelix minuendo corpus alebat. <pb n="b.372"/>
+               </p>
+            </div>
+            <pb n="p.254"/>
+            <div n="8" type="chapter">
+               <head>Olynthius pater reus concursus.</head>
+               <p>
 Qui coetum et concursum fecerit, capital sit. Victa
 Olyntho cum filio adulescente Olynthius senex
 Athenas uenit. Athenienses omnibus ciuitatem
@@ -1153,9 +1247,11 @@ nec potui.
 Pars altera. Quid coetu opus est? sunt scriptae
 ad uindictam iniuriarum omnium leges. Mota
 semel multitudo modum non seruat. Ardere illo
-incendio ciuitas potuit.</p></div>
-
-<div type="textpart" n="9" subtype="chapter"><head>Crux servi venenum domino negantis.</head><p>
+incendio ciuitas potuit.</p>
+            </div>
+            <div n="9" type="chapter">
+               <head>Crux servi venenum domino negantis.</head>
+               <p>
 Aeger dominus petiit a seruo ut sibi uenenum daret.
 non dedit. cauit testamento ut ab heredibus
 crucifigeretur. appellat seruus tribunos.
@@ -1193,13 +1289,16 @@ erilis imperii non censor est, sed minister. Agitur
 de iure testamentorum, quorum interiit omnis
 potestas, si <add>serui</add> uiuorum imperia neglexerint,
 mortuorum tribuni. Itane, furcifer, tu non morieris
-domini arbitrio, morietur dominus tuo?</p></div></div>
-<pb n="p.257"/>
-<pb n="b.375"/>
-<div type="textpart" n="4" subtype="book">
-<p>Seneca Nouato, Senecae, Melae filiis salutem.</p>
-<div type="textpart" n="pr" subtype="chapter">
-<div type="textpart" n="1" subtype="section"><p>
+domini arbitrio, morietur dominus tuo?</p>
+            </div>
+         </div>
+         <pb n="p.257"/>
+         <pb n="b.375"/>
+         <div n="4" type="book">
+            <p>Seneca Nouato, Senecae, Melae filiis salutem.</p>
+            <div n="pr" type="chapter">
+               <div n="1" type="section">
+                  <p>
 Quod munerarii solent facere, qui ad
 exspectationem populi detinendam noua paria per omnes
 dies dispensant, ut sit quod populum et delectet et
@@ -1210,9 +1309,10 @@ sollicitet. Acrior est cupiditas ignota cognoscendi quam
 nota repetendi. hoc in histrionibus, in
 gladiatoribus, in oratoribus de quibus modo aliquid fama
 promisit, in omnibus denique rebus uidemus accidere:
-</p></div>
-
-<div type="textpart" n="2" subtype="section"><p> ad noua homines concurrunt, ad nota non ueniunt.
+</p>
+               </div>
+               <div n="2" type="section">
+                  <p> ad noua homines concurrunt, ad nota non ueniunt.
 Non tamen exspectationem uestram macerabo singulos
 producendo: liberaliter hodie et plena manu
 faciam. Pollio ASINIVS numquam admissa
@@ -1226,9 +1326,10 @@ parum in illis habuit fiduciam, siue — quod magis
 crediderim — tantus orator inferius id opus ingenio
 suo duxit, et exerceri quidem illo uolebat, gloriari
  fastidiebat.
-</p></div>
-
-<div type="textpart" n="3" subtype="section"><p> Audiui <pb n="b.376"/> autem illum et uiridem et
+</p>
+               </div>
+               <div n="3" type="section">
+                  <p> Audiui <pb n="b.376"/> autem illum et uiridem et
 postea iam senem cum Marcello Aesernino nepoti suo
 quasi praeciperet. audiebat illum dicentem et
 primum disputabat de illa parte quam Marcellus
@@ -1239,9 +1340,10 @@ quam in agendo: illud strictum eius et asperum et
 nimis iratum ingenio suo iudicium adeo cessabat,
 ut in multis illi uenia opus esset quae ab ipso uix
  inpetrabatur.
-</p></div>
-
-<div type="textpart" n="4" subtype="section"><p> Marcellus, quamuis puer, iam tantae
+</p>
+               </div>
+               <div n="4" type="section">
+                  <p> Marcellus, quamuis puer, iam tantae
 indolis erat, ut Pollio ad illum pertinere
 successionem eloquentiae suae crederet, cum filium Asinium
 Gallum relinqueret, magnum oratorem, nisi illum,
@@ -1250,9 +1352,10 @@ produceret sed obrueret. Memini intra quartum diem
 quam Herium filium amiserat declamare eum nobis,
 sed tanto uehementius quam umquam, ut appareret
 hominem natura contumacem cum fortuna sua rixari;
-</p></div>
-
-<div type="textpart" n="5" subtype="section"><p> nec quicquam ex ordine uitae solito remisit. itaque
+</p>
+               </div>
+               <div n="5" type="section">
+                  <p> nec quicquam ex ordine uitae solito remisit. itaque
 cum mortuo in Syria Gaio Caesare per codicillos
 questus esset diuus Augustus, ut erat mos illi clementissimo
 uiro, non ciuiliter tantum sed etiam
@@ -1262,9 +1365,10 @@ rescripsit Pollio: “eo die cenaui quo Herium filium
 amisi.” Quis exigeret maiorem ab amico dolorem
 <pb n="p.259"/>
 quam a patre?
-</p></div>
-
-<div type="textpart" n="6" subtype="section"><p>0 magnos uiros qui fortunae
+</p>
+               </div>
+               <div n="6" type="section">
+                  <p>0 magnos uiros qui fortunae
 succumbere nesciunt et aduersas res suas uirtutis
 experimenta faciunt! declamauit Pollio Asinius intra
 quartum diem quam filium amiserat: praeconium
@@ -1278,9 +1382,10 @@ abstractus iniuriarum agit, mediam dictionem fletu
 eius interrumpi; deinde tanto maiore impetu dixit,
 tanto miserabilius, ut appareret quam magna
 interim pars esset ingenii dolor.
-</p></div>
-
-<div type="textpart" n="7" subtype="section"><p>Declamabat autem
+</p>
+               </div>
+               <div n="7" type="section">
+                  <p>Declamabat autem
 Haterius admisso populo ex tempore: solus omnium
 Romanorum, quos modo ipse cognoui, in Latinam
 linguam transtulit Graecam facultatem. Tanta erat
@@ -1291,9 +1396,10 @@ uidebatur. nec uerborum illi tantum copia, sed etiam
 rerum erat: quotiens uelles eandem rem et quamdiu
 uelles diceret, abis totiens figuris, aliis
 tractationibus, ita ut regi posset nec consumi.
-</p></div>
-
-<div type="textpart" n="8" subtype="section"><p>Regi autem
+</p>
+               </div>
+               <div n="8" type="section">
+                  <p>Regi autem
 ab ipso non poterat; alioquin libertum habebat cui
 pareret; sic ibat quomodo ille aut concitauerat eum
 aut refraenauerat. iubebat illum transire cum
@@ -1301,9 +1407,10 @@ aliquamdiu locum dixerat: transibat; insistere iubebat
 eidem loco: permanebat; iubebat epilogum dicere:
 dicebat. in sua potestate habebat ingenium, in aliena
 modum.
-</p></div>
-
-<div type="textpart" n="9" subtype="section"><p>Diuidere controuersiam putabat ad rem 
+</p>
+               </div>
+               <div n="9" type="section">
+                  <p>Diuidere controuersiam putabat ad rem 
 <pb n="p.260"/>
 pertinere si illum interrogares, non putabat si
 audires. is illi erat ordo quem impetus dederat; non
@@ -1317,9 +1424,10 @@ Cicerone dicta, <add>a</add> ceteris deinde deserta dicebat, quae
 ne ille quidem orationis citatissimae cursus poterat
 abscondere. adeo quicquid insolitum est etiam in
  turba notabile est.
-</p></div>
-
-<div type="textpart" n="10" subtype="section"><p> Hoc exempto nemo erat
+</p>
+               </div>
+               <div n="10" type="section">
+                  <p> Hoc exempto nemo erat
 scolasticis nec aptior nec similior, sed dum nihil uult
 nisi culte, nisi splendide dicere, saepe incidebat in
 ea quae derisum effugere non possent. Memini
@@ -1329,9 +1437,10 @@ inpudicitia in ingenuo crimen est, in seruo necessitas,
 in liberto officium. Res in iocos abiit: “non facis
 mihi officium” et “multum ille huic in officiis uersatur.” ex eo inpudici et obsceni aliquamdiu officiosi
  uocitati sunt.
-</p></div>
-
-<div type="textpart" n="11" subtype="section"><p> Memini et illam contradictionem
+</p>
+               </div>
+               <div n="11" type="section">
+                  <p> Memini et illam contradictionem
 sic ab illo positam magnam materiam Pollionis
 Asinii et tunc Cassi Seueri iocis praebuisse: “at,
 inquit, inter pueriles condiscipulorum sinus lasciuiam
@@ -1340,9 +1449,14 @@ illi obiciebantur. Multa erant quae reprehenderes,
 multa quae suspiceres, cum torrentis modo magnus
 quidem sed turbidus flueret. redimebat tamen uitia
 uirtutibus et plus habebat quod laudares quam cui
-ignosceres, sicuti in ea in qua fleuit declamatione. <pb n="b.379"/></p></div></div>
-<pb n="p.261"/>
-<div type="textpart" n="1" subtype="chapter"><head>pater a sepulchris a luxurioso raptus.</head><p>
+ignosceres, sicuti in ea in qua fleuit declamatione. <pb n="b.379"/>
+                  </p>
+               </div>
+            </div>
+            <pb n="p.261"/>
+            <div n="1" type="chapter">
+               <head>pater a sepulchris a luxurioso raptus.</head>
+               <p>
 Amissis quidam tribus liberis cum adsideret sepulchro
 a luxurioso adolescente in uicinos hortos
 abductus est et detonsus coactus conuiuio
@@ -1379,9 +1493,11 @@ nemo amicus, nemo, inquam, propinquus est? Sed
 melius illi eius rabiem, ut uideo, nouerant. Festo
 die sodales amicique mecum, quorum unus: “quid
 hunc miserum perire patimur? nemo sibi ipse finem
-flendi facit; pudet illos desinere, cogi uolunt.” Consolarer te diutius nisi iam et accusare posses.</p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>Metellus Caecatus.</head><p>
+flendi facit; pudet illos desinere, cogi uolunt.” Consolarer te diutius nisi iam et accusare posses.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>Metellus Caecatus.</head>
+               <p>
 Sacerdos integer sit. Metellus pontifex cum arderet
 Vestae. templum, dum Palladium rapit, oculos
 perdidit. sacerdotium illi negatur.
@@ -1410,9 +1526,11 @@ quidem seruant.
 Extra. Hunc colorem GALLIO non probauit,
 summo cum honore Metelli adserens contra
 Metellum agendum ita ut cogatur cum iudicibus officio
-pontificum et ipse consulere.</p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>Exul raptae pater.</head><p>
+pontificum et ipse consulere.</p>
+            </div>
+            <div n="3" type="chapter">
+               <head>Exul raptae pater.</head>
+               <p>
 Inprudentis caedis damnatus quinquennio exulet.
 Rapta raptoris mortem aut indotatas nuptias
 optet. Cum haberet filiam et filium inprudentis
@@ -1458,9 +1576,12 @@ dicebat colorem in narratione ostendendum, in
 argumentis exsequendum. non prudenter facere eos
 qui in narratione omnia instrumenta coloris
 consumerent; nam et plus illos ponere quam narratio
-desiderasset et minus quam probatio. <pb n="b.383"/></p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>armis sepulchri victor.</head><p>
+desiderasset et minus quam probatio. <pb n="b.383"/>
+               </p>
+            </div>
+            <div n="4" type="chapter">
+               <head>armis sepulchri victor.</head>
+               <p>
 Sepulchri uiolati sit actio. Bellum cum esset in
 quadam ciuitate, uir fortis in acie armis amissis
 de sepulchro uiri fortis arma sustulit. fortiter
@@ -1493,9 +1614,11 @@ qui subripuit aliquid, licet reddiderit deprehensus.
 Non est hoc illi crimen propter <pb n="b.384"/> uirtutem donandum:
 iam gratiam uirtuti retulimus, praemium
 consecuta est. Aequos esse nos conuenit: unum uirum
-fortem honorauimus, alterum uindicemus.</p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Privignus medicus.</head><p>
+fortem honorauimus, alterum uindicemus.</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Privignus medicus.</head>
+               <p>
 Abdicauit quidam filium. abdicatus medicinae
 studuit. cum pater aegrotaret et medici negarent
 posse sanari, sanauit. reductus est. postea
@@ -1536,9 +1659,11 @@ poterat. Negant posse sanari. Nemo suscipit; nemo
 enim uult curationem filio praeripere.
 <pb n="p.267"/>
 Extra. Pollio dicebat: inter patres et filios id
-solum iudex putat licere quod oportet.</p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>indiscreti filius et privignus.</head><p>
+solum iudex putat licere quod oportet.</p>
+            </div>
+            <div n="6" type="chapter">
+               <head>indiscreti filius et privignus.</head>
+               <p>
 Quidam mortua uxore quae in partu perierat,
 alteram duxit; puerum rus misit. ex illa subinde
 filium sustulit. utrumque puerum ruri
@@ -1582,9 +1707,12 @@ uideatur indicare debere, si scit. Ipse autem hoc
 colore usus est quem aiebat simplicissimum: scio, sed
 non indico, quia pueris hoc utile est; et tuo filio:
 magis amaturus sum eum qui matrem uidebitur non
-habere. <pb n="b.387"/></p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>Tyrannicida adulter tyranni.</head><p>
+habere. <pb n="b.387"/>
+               </p>
+            </div>
+            <div n="7" type="chapter">
+               <head>Tyrannicida adulter tyranni.</head>
+               <p>
 Tyrannicidae praemium. In adulterio deprehensus
 a tyranno gladium extorsit tyranno et occidit
 eum. petit praemium. contradicitur.
@@ -1640,9 +1768,12 @@ periculosum erat, inuenire facile. Si tyrannum, inquam,
 inuenero, obuia quaelibet res telum erit. certe
 semper secum solet habere ferrum tyrannus. gladius
 inter duos fortioris est. Quam sollicitus adulter fui
-ne non deprehenderer! <pb n="b.389"/></p></div>
-
-<div type="textpart" n="8" subtype="chapter"><head>Patronus operas remissas repetens.</head><p>
+ne non deprehenderer! <pb n="b.389"/>
+               </p>
+            </div>
+            <div n="8" type="chapter">
+               <head>Patronus operas remissas repetens.</head>
+               <p>
 Per uim metumque gesta irrita sint. Bello ciuili
 patronus uictus et proscriptus ad libertum
 confugit. receptus est ab eo et rogatus ut operas
@@ -1683,11 +1814,14 @@ rem duram postulare, ubi contra honestam
 personam promissione iudex molliore fallendus est.
 Quid in hac persona ueremur et causa, nisi hoc
 unum quod ex hoc colore metuendum est, ne si
-uolumus hoc remittere et uoluisse uideamur?</p></div></div>
-<pb n="p.272"/>
-
-<div type="textpart" n="5" subtype="book">
-	<div type="textpart" n="1" subtype="chapter"><head>Laqueus Incisus.</head><p>
+uolumus hoc remittere et uoluisse uideamur?</p>
+            </div>
+         </div>
+         <pb n="p.272"/>
+         <div n="5" type="book">
+            <div n="1" type="chapter">
+               <head>Laqueus Incisus.</head>
+               <p>
 Inscripti maleficii sit actio. Quidam naufragio facto,
 amissis tribus liberis et uxore incendio domus,
 suspendit se. praecidit illi quidam ex
@@ -1734,9 +1868,11 @@ morior. Cui me uitae reseruas? ut aedificem? aspice
 incendium. ut <pb n="b.392"/> nauigem? aspice naufragium. ut
 educem? aspice sepulchrum. In tam calamitosa
 domo feliciores fuistis, uxor et liberi: uobis mori
-contigit.</p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>Gener inimici divitis.</head><p>
+contigit.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>Gener inimici divitis.</head>
+               <p>
 Pauper cum haberet filium et diuitem inimicum
 filiam habentem, peregre profectus est. rumor
 fuit de morte eius. filius cum diuite in
@@ -1766,9 +1902,12 @@ filium tuum, tu nec tuum.
 Extra. SENIANVS rem stultissimam dixit: diues
 me semper contempsit, numquam nisi pro mortuo
 habuit. Vt aliquid et ipse simile Seniano dicam,
-post hanc sententiam semper Senianum pro mortuo habui.</p></div>
-<pb n="p.275"/>
-<div type="textpart" n="3" subtype="chapter"><head>Fratres pancratiastae.</head><p>
+post hanc sententiam semper Senianum pro mortuo habui.</p>
+            </div>
+            <pb n="p.275"/>
+            <div n="3" type="chapter">
+               <head>Fratres pancratiastae.</head>
+               <p>
 Malae tractationis sit actio. Quidam duos filios
 pancratiastas instituit; eduxit ad Olympia. Cum
 conpositi essent ut simul pugnarent, accessit ad
@@ -1789,9 +1928,12 @@ Pars altera. Non facturus dixi et si facturus,
 pro gloria dixi. Non debeo in inuidia solus esse,
 cum luctus communis sit. Omnes aiebant fratres
 conlusuros. Minatus sum non ut filiis metum
-inponerem, sed ut populo satisfacerem. <pb n="b.394"/></p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>Damnatus parricidii alligans fratrem.</head><p>
+inponerem, sed ut populo satisfacerem. <pb n="b.394"/>
+               </p>
+            </div>
+            <div n="4" type="chapter">
+               <head>Damnatus parricidii alligans fratrem.</head>
+               <p>
 Qui falsum testimonium dixerit, uinciatur aput eum
 in quem dixerit. Ex duobus filiis profectus est
 cum uno pater; adolescens solus rediit.
@@ -1821,9 +1963,12 @@ Parricida sum, sicut obicitur, <add>si</add> huic leuiter
 irascor. Miraris si eum fratrem alligare possum qui
 me potuit occidere? Ingrata erat ipsa poenae meae
 dilatio: exspectare grauius uidebatur quam pati;
-imaginabar mihi culleum, serpentis, profundum. <pb n="b.395"/></p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Domus cum arboee exusta.</head><p>
+imaginabar mihi culleum, serpentis, profundum. <pb n="b.395"/>
+               </p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Domus cum arboee exusta.</head>
+               <p>
 Qui sciens damnum dederit, quadruplum soluat, qui
 inscius, simplum. Diues pauperem uicinum rogauit
 ut sibi arborem uenderet quam sibi
@@ -1879,9 +2024,12 @@ nihil tibi nocet arbor recisa, mihi plurimum non
 recisa. quid ad te illi rami pertinent qui extra
 domum sunt? Quasdam partes domus meae rami
 premebant; iam etiam quosdam parietes mouerant. scitis
-quanta uis sit arborum; muros discutiunt. <pb n="b.397"/></p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>Raptus in veste muliebri.</head><p>
+quanta uis sit arborum; muros discutiunt. <pb n="b.397"/>
+               </p>
+            </div>
+            <div n="6" type="chapter">
+               <head>Raptus in veste muliebri.</head>
+               <p>
 Inpudicus contione prohibeatur. Adolescens
 speciosus sponsionem fecit, muliebri ueste se exiturum
 in publicum. processit; raptus est ab
@@ -1909,9 +2057,12 @@ cum damnati essent qui rapuerunt.
 Pars altera. Constat semper grauem, semper
 serium fuisse; sed hoc iocis adolescentium factum est.
 Ceterum tam nota erat uerecundia eius, ut nemo
-iam sine sponsione crediderit. <pb n="b.398"/></p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>non recepti ab imperatore.</head><p>
+iam sine sponsione crediderit. <pb n="b.398"/>
+               </p>
+            </div>
+            <div n="7" type="chapter">
+               <head>non recepti ab imperatore.</head>
+               <p>
 Nocte in bello portas aperire ne liceat. Imperator
 in bello summam habeat potestatem. Trecenti
 ab hoste captiui ad portas nocte uenerunt,
@@ -1938,9 +2089,12 @@ Pars altera. Infestus trecentis fuit; iniquo
 conlocauit loco; hoc ne argui posset, non recepit. Capti
 sunt fortissimi duces, Regulus, Crassus. Haec
 postrema rogantium uox erat: mitte arma; <add>hoc</add> certe
-lex non uetat. <pb n="b.399"/></p></div>
-
-<div type="textpart" n="8" subtype="chapter"><head>Tyrannus post abolitionem candidatus.</head><p>
+lex non uetat. <pb n="b.399"/>
+               </p>
+            </div>
+            <div n="8" type="chapter">
+               <head>Tyrannus post abolitionem candidatus.</head>
+               <p>
 Conpetitori liceat in conpetitorem dicere. Tyrannus
 dominationem sub abolitione deposuit, ut si quis
 obiecisset tyrannidem, capite puniretur. petit
@@ -1961,10 +2115,15 @@ audire!
 Pars altera. Quicquid egi, quicquid gessi,
 reipublicae causa feci. Peto ne mihi lex pro me lata
 noceat, neu quid noceat quia non obicitur quod
-non noceret obiectum. <pb n="b.400"/></p></div></div>
-<pb n="p.282"/>
-<div type="textpart" n="6" subtype="book">
-	<div type="textpart" n="1" subtype="chapter"><head>chirografum cum abdicato.</head><p>
+non noceret obiectum. <pb n="b.400"/>
+               </p>
+            </div>
+         </div>
+         <pb n="p.282"/>
+         <div n="6" type="book">
+            <div n="1" type="chapter">
+               <head>chirografum cum abdicato.</head>
+               <p>
 Abdicato frater chirografum dedit dimidiam se
 partem daturum hereditatis, si non respondisset.
 ille tacuit. abdicatur alter a patre.
@@ -1991,9 +2150,11 @@ honeste, quod pie gerebamus, tam palam egimus, ut
 pater <pb n="b.401"/> sciret. Quid enim timebam? ne si rescisset
 pater moleste ferret filium suum hominem auarum
 non esse, fratrem pium esse? Ita mihi contingat
-patrem utrique nostrum placari.</p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>exul pater pundo prohibitus.</head><p>
+patrem utrique nostrum placari.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>exul pater pundo prohibitus.</head>
+               <p>
 Exulem tecto et cibo iuuare non liceat.
 Inprudentis caedis damnatus quinquennium exulet. Quidam
 cum filium et filiam haberet, inprudentis
@@ -2032,9 +2193,11 @@ non nosse leges. Non pro me timui, sed pro te:
 res in notitiam hominum peruenerat; captabaris;
 timui ne occidereris. Vis scire notum fuisse? soror
 est accusata. Malui seruum frugalissimum caedere
-quam patrem optimum amittere.</p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>mater nothi lecta pro parte.</head><p>
+quam patrem optimum amittere.</p>
+            </div>
+            <div n="3" type="chapter">
+               <head>mater nothi lecta pro parte.</head>
+               <p>
 Maior frater diuidat patrimonium, minor eligat.
 Liceat filium ex ancilla tollere. Quidam cum
 haberet legitimum filium, alium ex ancilla sustulit
@@ -2076,9 +2239,12 @@ ne in illam saeuirem? non expediebat mihi, cum in
 illa totum patrimonium habiturus essem. Nunc
 tantundem habes; habes enim partem quam uoluisti.
 ut tantundem haberes, nec pater uoluerat; ideo
-matrem tuam ancillam reliquid.</p></div>
-<pb n="b.404"/>
-<div type="textpart" n="4" subtype="chapter"><head>Potio ex parte mortifera.</head><p>
+matrem tuam ancillam reliquid.</p>
+            </div>
+            <pb n="b.404"/>
+            <div n="4" type="chapter">
+               <head>Potio ex parte mortifera.</head>
+               <p>
 Veneficii sit actio. Proscriptum uxor secuta est.
 quodam tempore secreto poculum tenentem
 <pb n="p.286"/>
@@ -2119,9 +2285,11 @@ uenenum bibam et uiuam? Venenum, inquam, est.
 <pb n="p.287"/>
 Hoc qui daturi sunt, dissimulant. Venenum Cato
 uendidit. Quaerite an proscripto licuerit emere quod
-licuit Catoni uendere.</p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Iphicrates reus.</head><p>
+licuit Catoni uendere.</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Iphicrates reus.</head>
+               <p>
 Qui uim in iudicio fecerit, capite puniatur. Missus
 Iphicrates aduersus Thracum regem, bis acie
 uictus foedus cum eo percussit et filiam eius
@@ -2150,9 +2318,11 @@ fuit. Miles pulsus saepius erat infelici proelio.
 <pb n="p.288"/>
 Barbaros circa iudicium fuisse non propter officium
 armatos, sed propter morem suum. Quid potestis,
-inquid, queri? quod uobis obsidem adduxi?</p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>Adultera Venefica.</head><p>
+inquid, queri? quod uobis obsidem adduxi?</p>
+            </div>
+            <div n="6" type="chapter">
+               <head>Adultera Venefica.</head>
+               <p>
 Veneficii sit actio. Quidam cum haberet uxorem et
 ex ea filiam nubilem, indicauit uxori, cui eam
 conlocaturus esset. illa dixit: celerius morietur
@@ -2187,9 +2357,11 @@ ueneficium ne ancilla quidem. Cum indignaretur se
 non rogatam, exciderunt illi uerba quae non minus
 quam <add>ille</add> filiam luget. At quare dixisti: “celerius
 morietur quam illi nubat?” Verba dolori parum
-considerata exciderunt. et est saepissime fortuita diuinatio.</p></div>
-
-<div type="textpart" n="7" subtype="chapter"><head>Demens qui filio cessit vxorem.</head><p>
+considerata exciderunt. et est saepissime fortuita diuinatio.</p>
+            </div>
+            <div n="7" type="chapter">
+               <head>Demens qui filio cessit vxorem.</head>
+               <p>
 Dementiae sit actio. Qui habebat duos filios duxit
 uxorem. alter ex adolescentibus cum aegrotaret
 et in ultimis esset, medici dixerunt animi
@@ -2218,11 +2390,14 @@ potius debuit frater quam sanari turpiter. quid enim
 si matrem, si sororem concupisset? Quaedam
 remedia grauiora ipsis periculis sunt. Omnia inter
 priuignum et nouercam conposita; simulatum morbum
-et derisum mimo turpissimo patrem.</p></div>
-
-<div type="textpart" n="8" subtype="chapter"><head>versus Virginis Vestalis.</head><p>
+et derisum mimo turpissimo patrem.</p>
+            </div>
+            <div n="8" type="chapter">
+               <head>versus Virginis Vestalis.</head>
+               <p>
 Virgo Vestalis scripsit hunc uersum:
-<quote rend="blockquote"><lb/>Felices nuptae! moriar nisi nubere dulce est.</quote>
+<quote rend="blockquote">
+                     <lb/>Felices nuptae! moriar nisi nubere dulce est.</quote>
 rea est incesti. “Felices nuptae” cupientis est; “peream nisi” adfirmantis est; “nubere dulce est:” aut experta iuras
 aut inexperta peieras; neutrum sacerdotis est. Tibi
 magistratus suos fasces submittunt, tibi consules
@@ -2253,11 +2428,16 @@ eius uobis confiteor: ingenium habet. Quidni
 inuideat Corneliae, quidni illi quae Catonem peperit,
 Extra. VARIVS GEMINVS aput Caesarem dixit:
 Caesar, qui apud te audent dicere, magnitudinem
-tuam ignorant, qui non audent, humanitatem.</p></div></div>
-<pb n="p.368"/>
-<pb n="b.410"/>
-<div type="textpart" n="7" subtype="book"><head>excerpta controversiarum</head>
-	<div type="textpart" n="1" subtype="chapter"><head>ab Archipirata filio dimissus.</head><p>
+tuam ignorant, qui non audent, humanitatem.</p>
+            </div>
+         </div>
+         <pb n="p.368"/>
+         <pb n="b.410"/>
+         <div n="7" type="book">
+            <head>excerpta controversiarum</head>
+            <div n="1" type="chapter">
+               <head>ab Archipirata filio dimissus.</head>
+               <p>
 Duobus filiis quidam superduxit nouercam. alterum
 domi parricidii damnauit; tradidit fratri
 puniendum. ille eum exarmato nauigio inposuit.
@@ -2336,9 +2516,12 @@ duro colore usus, hoc se tamquam grauius elegisse
 dixit supplicii genus: qui color prudentibus
 displicebat; quam enim spem habet absolutionis, si nec
 paruit nec pepercit?
-</p></div>
-<pb n="p.371"/>
-<div type="textpart" n="2" subtype="chapter"><head>Popilius ciceronis interpector.</head><p>De moribus sit actio. Popilium parricidii reum
+</p>
+            </div>
+            <pb n="p.371"/>
+            <div n="2" type="chapter">
+               <head>Popilius ciceronis interpector.</head>
+               <p>De moribus sit actio. Popilium parricidii reum
 Cicero defendit; absolutus est. proscriptum
 Tullium ab Antonio missus occidit; caput ad
 Antonium retulit. accusatur de moribus.
@@ -2376,9 +2559,12 @@ ego illi negare quicquam possem, cui nihil negare
 poterat respublica?
 Extra. Popilium pauci ex historicis tradiderunt
 interfectorem Ciceronis et hi quoque non parricidii
-reum a Cicerone defensum, sed in priuato iudicio. <pb n="b.414"/></p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>ter abdicatus venenum tenens.</head><p>
+reum a Cicerone defensum, sed in priuato iudicio. <pb n="b.414"/>
+               </p>
+            </div>
+            <div n="3" type="chapter">
+               <head>ter abdicatus venenum tenens.</head>
+               <p>
 Ter abdicatus, ter absolutus conprehensus est in
 secreta domus parte a patre medicamentum
 tenens. interrogatus quid esset, ait uenenum:
@@ -2417,9 +2603,11 @@ transeunti: recepissem te, nisi anguste sederem.
 Laberius ad Ciceronem remisit: adqui soles duabus
 sellis sedere. quia Cicero male audiebat tamquam
 nec Pompeio certus amicus nec Caesari, sed
-utriusque adulator.</p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>mater caeca filium retinens.</head><p>
+utriusque adulator.</p>
+            </div>
+            <div n="4" type="chapter">
+               <head>mater caeca filium retinens.</head>
+               <p>
 Liberi parentes alant aut uinciantur. Quidam
 habens uxorem et filium profectus in piratas
 incidit. scripsit utrique de redemtione. uxor
@@ -2449,8 +2637,11 @@ Extra. CALVVS, qui diu cum Cicerone
 iniquissimam litem de eloquentiae principatu habuit, usque
 eo concitatus actor fuit, ut in media oratione eius
 exclamaret Vatinius reus: rogo uos, iudices, num
-si iste dissertus est, ideo me dampnari oportet?</p></div>
-<div type="textpart" n="5" subtype="chapter"><head>quinquennis testis in procuratorem.</head><p>
+si iste dissertus est, ideo me dampnari oportet?</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>quinquennis testis in procuratorem.</head>
+               <p>
 Mortua quidam uxore ex qua filium habebat, duxit
 aliam; sustulit ex ea filium. habebat speciosum
 procuratorem. cum saepe iurgarent nouerca et
@@ -2479,8 +2670,11 @@ nec paries obstitit nee pater? Nihil est puero teste
 certius; nam et ad eos annos peruenit ut intellegat
 et non ad eos quibus fingat.
 Extra. VINICIVS, exactissimi uir ingenii, nec
-dicere res ineptas nec ferre poterat.</p></div>
-<div type="textpart" n="6" subtype="chapter"><head>demens qui servo filiam iunxit.</head><p>
+dicere res ineptas nec ferre poterat.</p>
+            </div>
+            <div n="6" type="chapter">
+               <head>demens qui servo filiam iunxit.</head>
+               <p>
 Tyrannus permisit seruis dominas suas rapere.
 profugerunt principes ciuitatis et simul qui filium
 habebat et filiam. cum omnes serui dominas
@@ -2522,9 +2716,13 @@ Filia non mariti petulantiam timebit, non uerborum
 contumeliam, non pelicem, non repudium. Neminem
 natura liberum fecit, neminem seruum; inposuit
 haec fortuna postea singulis nomina. Nuper et nos
-serui fuimus. Seruus rex fuit. <pb n="b.419"/></p></div>
-<pb n="p.377"/>
-<div type="textpart" n="7" subtype="chapter"><head>Cavete Proditorem.</head><p>
+serui fuimus. Seruus rex fuit. <pb n="b.419"/>
+               </p>
+            </div>
+            <pb n="p.377"/>
+            <div n="7" type="chapter">
+               <head>Cavete Proditorem.</head>
+               <p>
 Pater et filius imperium petebant; praelatus est
 filius. commisso bello captus est. missi sunt
 decem legati ad redimendum imperatorem.
@@ -2574,9 +2772,11 @@ Suspectus est, inquid, iudici qui plus quam se defendit.
 CESTIVS posita suasoria: “deliberat Alexander an
 Oceanum nauiget, cum exaudita uox esset:
 quousque, inuicte?” describenti discipulo late Alexandri
-uictorias gentesque perdomitas addentique: “quousque post ista?” exclamauit: “et tu quousque?” </p></div>
-
-<div type="textpart" n="8" subtype="chapter"><head>mutanda optio aptore convicto.</head><p>
+uictorias gentesque perdomitas addentique: “quousque post ista?” exclamauit: “et tu quousque?” </p>
+            </div>
+            <div n="8" type="chapter">
+               <head>mutanda optio aptore convicto.</head>
+               <p>
 Rapta <add>raptoris</add> aut mortem aut indotatas nuptias
 optet. Rapta producta nuptias optauit. iuuenis
 raptorem se negauit. conuictus est. illa mortem
@@ -2606,10 +2806,14 @@ iudicis sui clementiam nouit. Est quaedam proxima
 innocentiae uerecundia, praebere se legibus. Lex
 non adicit quotiens optet, sed ex quibus: aut hoc,
 inquid, aut illud; non adicit: ne amplius quam semel. <pb n="b.422"/>
-</p></div></div>
-<pb n="p.380"/>
-<div type="textpart" n="8" subtype="book">
-	<div type="textpart" n="1" subtype="chapter"><head>orbata post laqueum sacrilega.</head><p>
+               </p>
+            </div>
+         </div>
+         <pb n="p.380"/>
+         <div n="8" type="book">
+            <div n="1" type="chapter">
+               <head>orbata post laqueum sacrilega.</head>
+               <p>
 Magistratus de confessa sumat supplicium. Amisso
 quaedam uiro cum duobus liberis, suspendit se.
 incidit ei laqueum tertius filius. illa, cum
@@ -2659,9 +2863,13 @@ secreto mori posse? Omnia fecit ut taceret, quae ne
 confiteretur etiam mori uoluit. Si crimen
 quaeritis, factum est sacrilegium, si sacrilegum, fatetur.
 Facti quaeritis causam? si priusquam amitteret
-liberos, auara; si postquam amisit, irata. <pb n="b.424"/></p></div>
-<pb n="p.382"/>
-<div type="textpart" n="2" subtype="chapter"><head>Phidias amissis manibus.</head><p>
+liberos, auara; si postquam amisit, irata. <pb n="b.424"/>
+               </p>
+            </div>
+            <pb n="p.382"/>
+            <div n="2" type="chapter">
+               <head>Phidias amissis manibus.</head>
+               <p>
 Sacrilego manus praecidantur. Elii ab
 Atheniensibus Fidian acceperunt, ut his Iouem Olympium
 faceret, pacto interposito, ut aut Fidian aut
@@ -2696,9 +2904,11 @@ Pars altera. Habuimus aurum olim sacrum,
 habuimus ebur; sacrae materiae artificem quaesiuimus.
 disposueramus quidem ut aliis quoque templis
 simulacra Fidias faceret, sed non erat tam necesse
-ornare deos quam uindicare.</p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>infamis in nurum.</head><p>
+ornare deos quam uindicare.</p>
+            </div>
+            <div n="3" type="chapter">
+               <head>infamis in nurum.</head>
+               <p>
 Duorum iuuenum pater uni uxorem dedit, quo
 peregre profecto infamari coepit socer in nurum.
 maritus reuersus abduxit ancillam uxoris et
@@ -2720,9 +2930,13 @@ fratrem de me aliquid suspicatum.
 Pars altera. Obiecisti mihi ultimum nefas et
 quod qui tantum suspicatus est, noluit uiuere.
 Inpulsu tuo frater torsit ancillam et quia nihil
-repperit, falsas suspiciones morte expiauit. <pb n="b.426"/></p></div>
-<pb n="p.384"/>
-<div type="textpart" n="4" subtype="chapter"><head>homicida in se.</head><p>
+repperit, falsas suspiciones morte expiauit. <pb n="b.426"/>
+               </p>
+            </div>
+            <pb n="p.384"/>
+            <div n="4" type="chapter">
+               <head>homicida in se.</head>
+               <p>
 Homicida insepultus abiciatur. Quidam se occidit;
 petitur ut insepultus abiciatur. contradicitur.
 Adferre sibi coactus est manus assiduis malis.
@@ -2767,9 +2981,11 @@ cuius sibi criminis conscius confugit ad mortem,
 cuius inter scelera etiam hoc est, quod dampnari
 non potest. Contra hos inuentum est, ut aliquid
 post mortem timerent, <add>qui</add> non timent mortem.
-Nihil non ausurus fuit qui se potuit occidere.</p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Fortis nolens ad patrem fortem redire.</head><p>
+Nihil non ausurus fuit qui se potuit occidere.</p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Fortis nolens ad patrem fortem redire.</head>
+               <p>
 Abdicauit quidam filium; ille tacuit. fortiter fecit;
 petiit praemio ad patrem reditum; pater
 contradixit. postea pater fortiter fecit; petit ad
@@ -2799,9 +3015,12 @@ fortem nisi a patre coacto non recipi.
 Pars altera. Quid me captiuum ex libero cupis?
 quid ignominiae subicis uirum fortem? quid efficis
 ut possit abdicari? “Meus, inquid, es filius.” Quid
-opus est praemio, si tuus sum? <pb n="b.429"/></p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>Pauper naufragus divitis socer.</head><p>
+opus est praemio, si tuus sum? <pb n="b.429"/>
+               </p>
+            </div>
+            <div n="6" type="chapter">
+               <head>Pauper naufragus divitis socer.</head>
+               <p>
 Vitiata uitiatoris aut mortem aut indotatas nuptias
 petat. Diues pauperem de nuptiis filiae
 interpellauit tertio; ter pauper negauit; profectus
@@ -2874,13 +3093,15 @@ uitam daturus esset, etiam innocentiam reliquisset.
 Quaeritis, quid dum fleret fecerit? non negauit; et
 solebat negare, si nollet. Mortem optaturus est;
 non enim potest eas partes legis desiderare quas
-habet.</p></div></div>
-
-<pb n="p.447"/>
-<pb n="b.432"/>
-<div type="textpart" n="9" subtype="book">
-	<div type="textpart" n="1" subtype="chapter"><head>Cimon ingratus Calliae.</head>
-		<p>
+habet.</p>
+            </div>
+         </div>
+         <pb n="p.447"/>
+         <pb n="b.432"/>
+         <div n="9" type="book">
+            <div n="1" type="chapter">
+               <head>Cimon ingratus Calliae.</head>
+               <p>
 Adulterum cum adultera qui deprehenderit, dum
 utrumque interficiat, sine fraude sit. Ingrati
 sit actio. Miltiades peculatus dampnatus in
@@ -2953,9 +3174,11 @@ et tamquam corruptam dum transfertur obiceret
 Sallustio: nec amore Thucydidis facit, ut illum
 praeferat, sed laudat quem non timet <pb n="b.434"/> et facilius
 putat posse a se Sallustium uinci, si ante a
-Thucydide uincatur.</p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>Flamininus in cena reum puniens.</head><p>
+Thucydide uincatur.</p>
+            </div>
+            <div n="2" type="chapter">
+               <head>Flamininus in cena reum puniens.</head>
+               <p>
 Maiestatis laesae sit actio. Flamininus praetor inter
 cenam a meretrice rogatus, quae aiebat
 <pb n="p.450"/>
@@ -3022,9 +3245,12 @@ huius generis sententiis curamus ut numerus
 constet, non curamus ut sensus. Omnia autem
 <add>genera</add> corruptarum sententiarum de industria pono,
 quia facilius et quid imitandum et quid uitandum
-sit docemur exemplo.</p></div>
-<pb n="p.452"/>
-<div type="textpart" n="3" subtype="chapter"><head>expositum repetens ex duobus.</head><p>
+sit docemur exemplo.</p>
+            </div>
+            <pb n="p.452"/>
+            <div n="3" type="chapter">
+               <head>expositum repetens ex duobus.</head>
+               <p>
 Per uim metumque gesta non sint rata. Pacta
 conuenta legibus facta rata sint. Expositum
 qui cognouerit solutis alimentis recipiat.
@@ -3065,9 +3291,12 @@ numquam magnas mercedes accipere eos qui
 hermeneumata docent. MAECENAS dixit: <foreign xml:lang="grc">*tudei/dhn d' ou)k
 a)/n gnoi/hs pote/roisi metei/h</foreign>. CASSIVS SEVERVS
 ab auditione eius rediens, interrogatus quomodo
-dixisset, respondit: male <foreign xml:lang="grc">kai\ kakw=s</foreign>. <pb n="b.438"/></p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>a filio in arce pulsatus.</head><p>
+dixisset, respondit: male <foreign xml:lang="grc">kai\ kakw=s</foreign>. <pb n="b.438"/>
+               </p>
+            </div>
+            <div n="4" type="chapter">
+               <head>a filio in arce pulsatus.</head>
+               <p>
 Qui patrem pulsauerit manus ei praecidantur.
 Tyrannus patrem in arcem cum duobus filiis
 accersiit; imperauit adolescentibus ut patrem
@@ -3133,9 +3362,12 @@ non est, inquit, <add>quod</add> quemquam uestrum
 decipiat nomen ipsum lautumiae: illa enim minime
 lauta res est. Iocabatur in miseriis ac periculis
 suis, in quibus iocari eum non debuisse quis nescit
-potuisse quis credit? <pb n="b.440"/></p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>privignus ab avo raptus novercae.</head><p>
+potuisse quis credit? <pb n="b.440"/>
+               </p>
+            </div>
+            <div n="5" type="chapter">
+               <head>privignus ab avo raptus novercae.</head>
+               <p>
 De ui sit actio. Quidam duos filios sub nouerca
 amisit, dubiis signis cruditatis et ueneni.
 tertium filium auus maternus rapuit, qui ad
@@ -3179,18 +3411,23 @@ Propter hoc solebat SCAVRVS Montanum inter
 oratores Ouidium uocare; nam et Ouidius nescit quod
 bene cessit relinquere. Cum Polyxene esset adducta
 tumulo Achillis immolanda, Hecuba dixit:
-<quote rend="blockquote"><lb/>cinis ipse sepulti
+<quote rend="blockquote">
+                     <lb/>cinis ipse sepulti
 <lb/>In genus hoc pugnat.</quote>
 poterat esse contentus, adiecit:
-<quote rend="blockquote"><lb/>tumulo quoque sensimus hostem.</quote>
-<pb n="p.457"/>
+<quote rend="blockquote">
+                     <lb/>tumulo quoque sensimus hostem.</quote>
+                  <pb n="p.457"/>
 neque hoc contentus adiecit:
-<quote rend="blockquote"><lb/>Aeacidae fecunda fui.</quote>
+<quote rend="blockquote">
+                     <lb/>Aeacidae fecunda fui.</quote>
 Aiebat Scaurus non minus magnam uirtutem esse
-scire dicere quam scire desinere.</p></div>
-
-<pb n="b.442"/>
-<div type="textpart" n="6" subtype="chapter"><head>filia conscia in veneno privigni.</head><p>
+scire dicere quam scire desinere.</p>
+            </div>
+            <pb n="b.442"/>
+            <div n="6" type="chapter">
+               <head>filia conscia in veneno privigni.</head>
+               <p>
 Venefica torqueatur, donec conscios indicet. Quidam
 mortua uxore ex qua filium habebat duxit
 alteram et ex ea sustulit filiam. <add>decessit
@@ -3231,11 +3468,17 @@ sunt. Quid illa quae fratrem in moram sequentis
 patris sparsit? habes exemplum quod et sorori
 conueniat et uirgini. Nouerca in hoc priuigno dedit
 uenenum, ut filia sola heres esset; idcirco adhibuit
-et consciam. <pb n="b.444"/></p></div></div>
-<pb n="p.516"/>
-<pb n="b.445"/>
-<div type="textpart" n="10" subtype="book"><head>excerpta controversiarum</head>
-	<div type="textpart" n="1" subtype="chapter"><head>lugens divitem sequens filius pauperis.</head><p>
+et consciam. <pb n="b.444"/>
+               </p>
+            </div>
+         </div>
+         <pb n="p.516"/>
+         <pb n="b.445"/>
+         <div n="10" type="book">
+            <head>excerpta controversiarum</head>
+            <div n="1" type="chapter">
+               <head>lugens divitem sequens filius pauperis.</head>
+               <p>
 Iniuriarum sit actio. Quidam cum haberet filium
 et diuitem inimicum, occisus inspoliatus
 inuentus est. adolescens sordidatus sequi diuitem
@@ -3281,9 +3524,12 @@ inuentus est: non est cur accusem, sed est cur
 suspicer.
 Pars altera. Vt scias te inuidiam mihi facere,
 cum dixissem: “accusa me,” non negasti, sed
-respondisti: accusabo cum potero. <pb n="b.447"/></p></div>
-
-<div type="textpart" n="2" subtype="chapter"><head>fortis non cedens forti patri.</head><p>
+respondisti: accusabo cum potero. <pb n="b.447"/>
+               </p>
+            </div>
+            <div n="2" type="chapter">
+               <head>fortis non cedens forti patri.</head>
+               <p>
 Viro forti praemium. si plures erunt, iudicio
 contendant. Pater et filius fortiter fecerunt. petiit
 <pb n="p.518"/>
@@ -3311,9 +3557,12 @@ Pars altera. Nolo habitare cum aduersario meo.
 non capit idem contubernium uictum et uirum
 fortem. Statuas, inquid, tibi posui. immo ne possem
 umquam uictum me obliuisci, ignominiam meam in
-aes incidisti. <pb n="b.448"/></p></div>
-
-<div type="textpart" n="3" subtype="chapter"><head>demens quod mori coegerit filiam.</head><p>
+aes incidisti. <pb n="b.448"/>
+               </p>
+            </div>
+            <div n="3" type="chapter">
+               <head>demens quod mori coegerit filiam.</head>
+               <p>
 Dementiae sit actio. Bello ciuili quaedam uirum
 secuta est, cum in diuersa parte haberet patrem
 et fratrem. uictis partibus suis et occiso marito
@@ -3355,9 +3604,11 @@ satis facere debeat? Victor, inquid, cito exoratus
 est. Facilius est ignoscere bello quam parricidio.
 Etiam morte patri quaesiuit inuidiam. Perisse
 propter patrem dicitur mulier, quae unum habuit propter
-quem mori posset.</p></div>
-
-<div type="textpart" n="4" subtype="chapter"><head>Mendici debilitati.</head><p>
+quem mori posset.</p>
+            </div>
+            <div n="4" type="chapter">
+               <head>Mendici debilitati.</head>
+               <p>
 Reipublicae laesae sit actio. Quidam expositos
 educabat et debilitatos mendicare cogebat, ut sibi
 mercedem referrent. accusatur laesae reipublicae.
@@ -3432,9 +3683,12 @@ solitudine infantes auferat perituros nisi auferantur; non
 curatis quod solitudines suas isti beati ingenuorum
 ergastulis excolunt et miserrimorum iuuenum simplicitate
 decepta speciosissimum quemque ac maxime
-idoneum castris in ludum detrudunt. <pb n="b.452"/></p></div>
-
-<div type="textpart" n="5" subtype="chapter"><head>Parrhasius et Prometheus.</head><p>
+idoneum castris in ludum detrudunt. <pb n="b.452"/>
+               </p>
+            </div>
+            <div n="5" type="chapter">
+               <head>Parrhasius et Prometheus.</head>
+               <p>
 Reipublicae laesae sit actio. Parrhasius pictor Atheniensis,
 cum Philippus captiuos Olynthios
 uenderet, emit unum senem; Athenas perduxit,
@@ -3489,9 +3743,12 @@ recipiendo tabulam etiam sacerdotes. cur tamen
 non reciperent? deorum crimina in templis picta
 sunt. Multum semper artibus licuit: medici ut uim
 ignotam morbi cognoscerent, uiscera hominum
-resciderunt. <pb n="b.454"/></p></div>
-
-<div type="textpart" n="6" subtype="chapter"><head>fur accusator proditionis.</head><p>
+resciderunt. <pb n="b.454"/>
+               </p>
+            </div>
+            <div n="6" type="chapter">
+               <head>fur accusator proditionis.</head>
+               <p>
 Quidam cum diuitem proditionis accusasset,
 noctu parietem eius perfodit et scrinium in quo
 missae erant ab hostibus litterae sustulit.
@@ -3534,5 +3791,9 @@ ostendit et furem qui diuitem conpilare quam
 damnare mallet. Effregit domum suspensa manu;
 elusit illum. non tunc primum fecit; set sustulit
 non quod uoluit, sed quod potuit. Bono exemplo
-damnatus est proditor, malo inuentus.</p></div></div>
-</div></body></text></TEI>
+damnatus est proditor, malo inuentus.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Panegyric on the Third Consulship of the Emperor Honorius</title>
+            <title>Panegyric on the Third Consulship of the Emperor Honorius</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,11 +41,18 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="poem"/>
+         </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -53,12 +60,15 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa010.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa010.perseus-eng1">
          <pb id="v.1.p.269" TEIform="pb"/>
-         <div1 type="poem" n="praef" org="uniform" sample="complete" part="N">
-         <head>PREFACE</head>
-         <p>
+         <div1 type="poem"
+               n="praef"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>PREFACE</head>
+            <p>
 
 Eagles may not rear their young without the sun's
 permission and the goodwill of heaven. So soon as
@@ -81,12 +91,17 @@ have I won an emperor's ear, the entrance to an
 emperor's palace and the emperor himself as judge
 of my lyre's song.
 <pb id="v.1.p.271"/>
-         </p>
-         <pb id="v.1.p.3" TEIform="pb"/>
+            </p>
+            <pb id="v.1.p.3" TEIform="pb"/>
          </div1>
-         <div1 type="poem" n="1" id="poem.7" org="uniform" sample="complete" part="N">
-         <head>PANEGYRIC</head>
-         <p>
+         <div1 type="poem"
+               n="1"
+               id="poem.7"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>PANEGYRIC</head>
+            <p>
 
 Let the consular fasces of Romulus open a third
 year, and for the third time let the warlike procession
@@ -137,14 +152,14 @@ thus red with blood, his countenance thus roughened
 by the constant blasts and stained with the welcome
 dust of heroic combat, may he bring back to his
 happy father the arms of his conquered foes.</q>
-         </p>
-         <p>Soon when thou couldst stand upright and walk
+            </p>
+            <p>Soon when thou couldst stand upright and walk
 with firm step thy sire forbade thee enervating sloth,
 luxurious ease, time-wasting slumbers. He strengthened
 thy young limbs with hard toils and rude was the
 training wherewith he exercised thy tender powers.
 </p>
-         <p>Thou wert taught to bear winter's cruel cold, to
+            <p>Thou wert taught to bear winter's cruel cold, to
 shrink not before storm and tempest, to face the heat
 of summer, to swim across loud-roaring torrents, to
 <pb id="v.1.p.275"/>
@@ -165,26 +180,26 @@ southern sky he trod the wave-swept strand of either
 Ocean. Thus did he spur thy courage, thus sow
 the seeds of fame; these were the examples he gave.
 </p>
-         <p>Not more avidly did Achilles himself drink in the
+            <p>Not more avidly did Achilles himself drink in the
 Centaur's precepts when he learnt of him how to
 wield the spear or play the lyre or discern healing
 plants.
 </p>
-         <p>Meanwhile the world forgot its loyalty: the
+            <p>Meanwhile the world forgot its loyalty: the
 thunder of civil war sounded afresh and discord shook
 the tottering earth. O ye guilty gods! O shame
 everlasting! — a barbarian 2 exile had possessed himself
 of the cities of Italy and had entrusted the
 government of Rome to some low-born dependent.
 </p>
-         <p>But Theodosius was already afoot, rallying to his
+            <p>But Theodosius was already afoot, rallying to his
 standard the distant nations of the East, the dwellers
 on the banks of flooding Euphrates, clear Halys, and
 rich Orontes. The Arabs left their spicy groves, the
 Medes the waters of the Caspian Sea, the Armenians
 the river Phasis, the Parthians the Niphates.
 </p>
-         <p>What lust of battle then filled thy heart, what
+            <p>What lust of battle then filled thy heart, what
 longing to accompany thy father! What would not
 <pb id="v.1.p.277"/>
 thine eager spirit have given to hear the beloved
@@ -202,20 +217,20 @@ steer. But Theodosius said thee nay, and put
 the reins of government into thy hands, crowning
 thy head with the sacred diadem it wore so meetly.
 </p>
-         <p>And so did thy virtue show in earliest years, so did
+            <p>And so did thy virtue show in earliest years, so did
 thy soul out-range thy youth that all complained
 that to thee empire was granted late.
 </p>
-         <p>Swiftly beneath thy auspices was victory achieved.
+            <p>Swiftly beneath thy auspices was victory achieved.
 </p>
-         <p>Both fought for us — thou with thy happy influence,
+            <p>Both fought for us — thou with thy happy influence,
 thy father with his strong right arm. Thanks to thee
 the Alps lay open to our armies, nor did it avail
 the careful foe to cling to fortified posts. Their
 ramparts, and the trust they put therein, fell; the
 rocks were torn away and their hiding-places exposed.
 </p>
-         <p>Thanks to thine influence the wind of the frozen North
+            <p>Thanks to thine influence the wind of the frozen North
 overwhelmed the enemy's line with his mountain
 storms, hurled back their weapons upon the throwers
 and with the violence of his tempest drove back their
@@ -229,7 +244,7 @@ turned to blood, ran hot and steaming, and would
 have been choked with the heaps of corpses had not
 their own fast-flowing gore helped on its course.
 </p>
-         <p>Meanwhile Arbogast, the cause of this wicked
+            <p>Meanwhile Arbogast, the cause of this wicked
 war, had pierced his side deep not with a single
 blade: two swords 1 reeked with his blood, and his
 own hand, learning justice at last, had turned its
@@ -260,7 +275,7 @@ worships, bidding his waves flow gently to the sea;
 and Phaethon's leafy sisters, that ever weep their
 brother's death, check the flow of their dewy amber.
 </p>
-         <p>How many youths, how many matrons set modesty
+            <p>How many youths, how many matrons set modesty
 aside in eagerness to behold thee! Austere grey-
 <pb id="v.1.p.281"/>
 beards struggle with boys for places whence to see
@@ -268,7 +283,7 @@ thee in the tender embraces of thy sire, borne
 through the midst of Rome on a triumphal chariot
 decked but with the shade of a simple laurel branch.
 </p>
-         <p>Who did not then think that he beheld the morning-
+            <p>Who did not then think that he beheld the morning-
 star together with the rosy sun, or the Thunderer
 shine in concert with Bacchus? On every side
 stretches the host of plumed warriors, each hymning
@@ -284,7 +299,7 @@ roused to angry life by the breath of the wind which,
 as it blows them this way and that, causes them
 to rustle with a sound like the hiss of a living snake.
 </p>
-         <p>When they reached the palace the emperor bade
+            <p>When they reached the palace the emperor bade
 all depart and thus unbidden addressed his son-in-law:
 <q direct="unspecified">Victorious Stilicho, of whose courage in
 war, of whose loyalty in peace I have made proof
@@ -312,8 +327,8 @@ them. Even should Typhoeus rend away the rocks
 and leap forth, should Tityus free his captive limbs,
 should Enceladus, hurling Etna from him, roar in
 rage — each and all will fall before Stilicho's attack.</q>
-         </p>
-         <p>He spake no more but still in human form clove
+            </p>
+            <p>He spake no more but still in human form clove
 a furrow of light through the clouds; he passes
 to Luna's globe, leaves Mercury's threshold and
 hastens to the gentle airs of Venus. Hence he traverses
@@ -322,7 +337,7 @@ quiet quarters, and stands upon the very crown of
 the sky, cold Saturn's frozen zone. Heaven's fabric
 opens, unbidden the shining doors swing back.
 </p>
-         <p>Boötes prepares a place in the vault of the northern
+            <p>Boötes prepares a place in the vault of the northern
 sky, sword-girt Orion unbars the portals of the south;
 they offer welcome to the new star, uncertain
 each in turn to what region he will betake himself,
@@ -343,10 +358,10 @@ peoples, who once again fashion the ages from a
 nobler ore. Avarice is left to weep in Stygian
 chains, mad Ambition and his gold banished afar.
 </p>
-         <p>Wealth does not hold sway; sense-corrupting gifts
+            <p>Wealth does not hold sway; sense-corrupting gifts
 are of no avail; virtue alone can purchase power.
 </p>
-         <p>Brothers twain, with the heart of one, brothers to
+            <p>Brothers twain, with the heart of one, brothers to
 whose rule fate has entrusted sea and land, if there
 is aught that has escaped your grandsire's conquering
 hand, aught your father has left unsubdued, even
@@ -372,11 +387,11 @@ surprise Nile's hidden spring; pass the Pillars of
 Hercules, the bourne, too, whence Bacchus returned;
 whatever heaven enfolds shall own your dominion.
 </p>
-         <p>To you the Red Sea shall give precious shells, India
+            <p>To you the Red Sea shall give precious shells, India
 her ivory, Panchaia perfumes, and China silk.
 <pb id="v.1.p.287"/>
-         </p>
-                  </div1>
+            </p>
+         </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

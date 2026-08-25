@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0134.phi005" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0134">
             <ti:title xml:lang="lat">Hecyra</ti:title>
             <ti:edition urn="urn:cts:latinLit:phi0134.phi005.perseus-lat2" workUrn="urn:cts:latinLit:phi0134.phi005">
@@ -10,4 +11,4 @@
             <ti:description xml:lang="eng">Terence. The Comedies of Terence. Riley, Henry Thomas; Colman, George, translators. New York:
               Harper and Brothers, 1872.</ti:description>
           </ti:translation>
-          </ti:work>
+          <ti:genre confidence="high">drama-line</ti:genre></ti:work>

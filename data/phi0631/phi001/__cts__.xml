@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0631.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0631">
   <ti:title xml:lang="lat">Catilinae Coniuratio</ti:title>
   <ti:edition urn="urn:cts:latinLit:phi0631.phi001.perseus-lat3" workUrn="urn:cts:latinLit:phi0631.phi001">
@@ -13,4 +14,4 @@
     <ti:label xml:lang="lat">Catilinae Coniuratio</ti:label>
   <ti:description xml:lang="mul">Sallust. Catilinae Coniuratio. (No bibliographic information found).</ti:description>
   </ti:edition>
-</ti:work>
+<ti:genre confidence="high">prose-chapter-section</ti:genre></ti:work>

@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base" n="chunk">
+          <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -63,7 +64,7 @@
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
 
-<text n="lydia" id="phi0692.phi002.perseus.lat1"><body>
+<text n="lydia" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi002.perseus-lat1">
   <head>Lydia</head><p>
 <lb n="1"/>invideo uobis agri, formosaque prata,
 <lb n="2"/><milestone unit="thruline" n="105"/>hoc formosa magis, mea quod formosa puella 
@@ -107,7 +108,7 @@
 <lb n="34"/>siue libet campis : tecum tua laeta capella est.
 <lb n="35"/> et mas quodcumque est, illi sua femina iuncta 
 <lb n="36"/>interpellatos numquam plorauit amores.
-<lb n="37"/><milestone unit="thruline" n="140"/>cur non et nobis facilis natura &dagger;fuisset? 
+<lb n="37"/><milestone unit="thruline" n="140"/>cur non et nobis facilis natura †fuisset? 
 <lb n="38"/>cur ego crudelem patior tam saepe dolorem?
 <lb n="39"/>sidera per uiridem redeunt cum pallida mundum,
 <lb n="40"/> inque uicem Phoebae coiens atque aureus orbis, 
@@ -121,7 +122,7 @@
 
 <lb n="46"/>aut insparsa uidet mundo: quae dicere longum est.
 <lb n="47"/><milestone unit="thruline" n="150"/>aurea quin etiam cum saecula uoluebantur, 
-<lb n="48"/>condicio similisque &dagger;foret mortalibus illis,
+<lb n="48"/>condicio similisque †foret mortalibus illis,
 <lb n="49"/>haec quoque praetereo: notum Minoidos astrum,
 <lb n="50"/> quaeque uirum uirgo, sicut captiua, secuta est. 
 <lb n="51"/>laedere, caelicolae, potuit uos nostra quid aetas,
@@ -144,7 +145,7 @@
 
 <lb n="66"/>et moechum tenera gauisa est laedere in herba
 <lb n="67"/><milestone unit="thruline" n="170"/>purpureos flores, quos insuper accumbebat, 
-<lb n="68"/>clam dea formoso supponens &dagger;gaudia&dagger; collo.
+<lb n="68"/>clam dea formoso supponens †gaudia† collo.
 <lb n="69"/>tum credo fuerat Mauors distentus in armis:
 <lb n="70"/> nam certe Vulcanus opus faciebat, et illi 
 <lb n="71"/>tristi turpabat malam fuligine barba.
@@ -163,4 +164,4 @@
 
 
 </p></body></text>
-</TEI.2>
+</TEI>

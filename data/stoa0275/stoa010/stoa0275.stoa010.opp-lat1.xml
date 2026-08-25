@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Anima</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Anima</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1854</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=560%3Bownerid=13510798896211811-584">HathiTrust</ref>                        
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa010.opp-lat1" xml:lang="lat">
-<pb xml:id="v.2.p.556"/>
-<head>DE ANIMA.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>De solo censu animae congressus Hermogeni, quatenus et 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa010.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1854</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015028766650?urlappend=%3Bseq=560%3Bownerid=13510798896211811-584">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa010.opp-lat1">
+         <pb xml:id="v.2.p.556"/>
+         <head>DE ANIMA.</head>
+         <div n="1" type="chapter">
+            <p>De solo censu animae congressus Hermogeni, quatenus et 
 istum ex materiae potius suggestu quam ex dei flatu constitisse
 praesumpsit, nunc ad reliquas conversus quaestiones plurimum videbor
 cum philosophis dimicaturus. Etiam in carcere Socratis de
@@ -114,10 +117,9 @@ A deo discas quod a deo habeas, aut nec ab alio, si nec a deo.
 Quis enim revelabit quod deus texit? Inde sciscitandum est unde
 et ignorare tutissimum est. Praestat per deum nescire, quia non
 revelaverit, quam per hominem scire, quia ipse praesumpserit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Plane non negabimus aliquando philosophos iuxta nostra sensisse.
+         </div>
+         <div n="2" type="chapter">
+            <p> Plane non negabimus aliquando philosophos iuxta nostra sensisse.
 Testimonium est veritatis eventus ipsius. Nonnunquam et
 in procella confusis vestigiis caeli et freti aliqui portus offenditur
 prospero errore, nonnunquam et in tenebris aditus quidam et exitus
@@ -185,10 +187,10 @@ in paucis, et amplius illi quaerere non licet quam quod inveniri
 <bibl n="I Tim. I, 4."/> licet; infinitas enim quaestiones apostolus prohibet. Porro non
 amplius inveniri licet quam quod a deo discitur; quod autem a deo
 discitur, totum est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p><bibl n="I Cor. XI. 19."/> Atque utinam nullas haereses oportuisset existere, ut probabiles
+         </div>
+         <div n="3" type="chapter">
+            <p>
+               <bibl n="I Cor. XI. 19."/> Atque utinam nullas haereses oportuisset existere, ut probabiles
 quique emicarent. Nihil omnino cum philosophis super anima
 quoque experiremur, patriarchis, ut ita dixerim, haereticorum.
 <bibl n="Col. II, 8."/> Siquidem et ab apostolo iam tunc philosophia concussio veritatis
@@ -218,10 +220,9 @@ inobscurabili regula, Et flavit, inquit, deus flatum vitae in <bibl n="Geu. II, 
 faciem hominis, et factus est homo in animam vivam, utique ex dei
 flatu, de isto nihil amplius revolvendum. Habet suum titulum et
 suum haereticum. Ceteris hinc exordium inducam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Post definitionem census quaestionem status patitur. Consequens 
+         </div>
+         <div n="4" type="chapter">
+            <p>Post definitionem census quaestionem status patitur. Consequens 
 enim est ut ex dei flatu animam professi initium ei deputemus.
 Hoc Plato excludit, innatam et infectam animam volens.
 Et natam autem docemus et factam ex initii constitutione. Nec
@@ -235,10 +236,9 @@ ipse parens facti potest dici; sic et Plato utitur. Igitur quantum
 
 ad fidem nostram factae nataeve animae, depulsa est philosophi
 opinio auctoritate prophetiae quoque.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Accerserit Eubulum aliquem et Critolaum et Xenocratem, et
+         </div>
+         <div n="5" type="chapter">
+            <p> Accerserit Eubulum aliquem et Critolaum et Xenocratem, et
 isto in loco amicum Platonis Aristotelem. Fortassean exstruentur
 magis ad auferendam animae corpulentiam, si non alios e contrario
 inspexerint, et quidem plures, corpus animae vindicantes. Nec illos
@@ -272,10 +272,9 @@ contingantur ab eis (unde et Lucretius, Tangere enim et tangi
 nisi corpus nulla potest res), derelicto autem corpore ab anima
 affici morte. Igitur corpus anima, quae nisi corporalis corpus
 non derelinqueret.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Haec Platonici subtilitate potius quam veritate conturbant. 
+         </div>
+         <div n="6" type="chapter">
+            <p>Haec Platonici subtilitate potius quam veritate conturbant. 
 Omne, inquiunt, corpus aut animale sit necesse est aut inanimale.
 Et si quidem inanimale est, extrinsecus movebitur, si vero animale,
 intrinsecus. Anima autem nec extrinsecus movebitur, ut quae non
@@ -352,10 +351,9 @@ fuit. Universa conditio testabitur corpora de corporibus processura
 iam illic esse unde procedunt. Secundum sit necesse est
 quod ex alio est. Nihil porro ex alio est nisi dum gignitur;
 sed tunc duo sunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Quantum ad philosophos satis haec, quia quantum ad nostros, <bibl n="Luc. XVI, 23 sqq."/>
+         </div>
+         <div n="7" type="chapter">
+            <p>Quantum ad philosophos satis haec, quia quantum ad nostros, <bibl n="Luc. XVI, 23 sqq."/>
 ex abundanti; quibus corporalitas animae in ipso evangelio relucebit.
 Dolet apud inferos anima cuiusdam, et punitur in flamma, et
 <pb xml:id="v.2.p.566"/>
@@ -379,10 +377,9 @@ probata erit corporalitas animae. Incorporalitas enim nihil
 patitur, non habens per quod pati possit, aut si habet, hoc erit
 corpus. In quantum enim omne corporale passibile est, in tantum
 quod passibile est corporale est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Abruptum alioquin et absurdum idcirco quid de corporalium
+         </div>
+         <div n="8" type="chapter">
+            <p> Abruptum alioquin et absurdum idcirco quid de corporalium
 eximere ceusu quia ceteris corporalibus exemplis non adaequet.
 Et ubi proprietatum privata discrimina, per quae magnificentia
 auctoris ex operum eorundem diversitate signatur, ut sint tam
@@ -414,10 +411,9 @@ sed quod aquila confiteatur, neget noctua, non tamen praeiudicans
 aquilae. Tantundem et animae corpus invisibile carni, si forte,
 spiritui vero visibile est. Sic Ioannes in spiritu dei factus animas <bibl n="Apoc. VI, 9."/>
 martyrum conspicit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Cum animae corpus asserimus propriae qualitatis et sui generis, 
+         </div>
+         <div n="9" type="chapter">
+            <p>Cum animae corpus asserimus propriae qualitatis et sui generis, 
 iam haec condicio proprietatis de ceteris accidentibus corpulentiae
 praeiudicabit et haec adesse ei, quam corpus ostendimus,
 sed et ipsa sui generis pro corporis proprietate, aut etsi
@@ -490,10 +486,9 @@ artus, per quos et in cogitatibus utitur et in somniis fungitur.
 A primordio enim in Adam concreta et configurata
 corpori anima, ut totius substantiae, ita et conditionis istius semen
 effecit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Pertinet ad statum fidei simplicem animam determinare secundum
+         </div>
+         <div n="10" type="chapter">
+            <p> Pertinet ad statum fidei simplicem animam determinare secundum
 Platonem, id est uniformem, duntaxat substantiae nomine.
 Viderint artes et disciplinae, viderint et effigies. Quidam enim
 volunt aliam illi substantiam naturalem inesse spiritum, quasi aliud
@@ -566,10 +561,9 @@ erunt et alia genera lucis, ut ex ignium ministerio. Erunt enim
 et aliae spiritus species, ut ex deo, ut ex diabolo. Ita cum de
 anima et spiritu agitur, ipsa erit anima spiritus, sicut ipsa dies
 lux. Ipsum est enim quid per quod est quid.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Sed ut animam spiritum dicam praesentis quaestionis ratio
+         </div>
+         <div n="11" type="chapter">
+            <p> Sed ut animam spiritum dicam praesentis quaestionis ratio
 compellit, quia spirare alii substantiae adscribitur. Hoc dum animae
 vindicamus, quam uniformem et simplicem agnoscimus, spiritum
 necesse est certa condicione dicamus, non status nomine, sed
@@ -617,10 +611,9 @@ spiritus ex nativitate conseritur animae, solam eam constat ante
 eventum spiritus utriusque; si solam, et simplicem et uniformem
 substantiae nomine, atque ita non aliunde spirantem quam ex substantiae
 suae sorte.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Proinde et animum, sive mens est, Î&#x9d;Î&#x9f;Î¥Î£ apud Graecos, 
+         </div>
+         <div n="12" type="chapter">
+            <p>Proinde et animum, sive mens est, Î&#x9d;Î&#x9f;Î¥Î£ apud Graecos, 
 non aliud quid intellegimus quam suggestum animae ingenitum et
 insitum et nativitus proprium, quo agit, quo sapit, quem secum
 <pb xml:id="v.2.p.574"/>
@@ -662,10 +655,9 @@ et Democritus obtinebit differentiam tollens, et quaeretur quomodo
 unum utrumque, ex duarum substantiarum confusione, an ex unius
 dispositione. Nos autem animum ita dicimus animae concretum,
 non ut substantia alium, sed ut substantiae officium.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Ad hoc dispicere superest principalitas ubi sit, id est quid 
+         </div>
+         <div n="13" type="chapter">
+            <p>Ad hoc dispicere superest principalitas ubi sit, id est quid 
 cui praeest, ut cuius principalitas apparuerit, illa sit substantiae
 massa, id autem, cui massa substantiae praeerit, in officium naturale
 substantiae deputetur. Enimvero quis non animae dabit summam
@@ -684,10 +676,9 @@ illam pluris fieri vetat, illam et ipse bonus pastor pro pecudibus
 suis ponit. Habes animae principalitatem, habes in illa et substantiae
 unionem, cuius intellegas instrumentum esse animum,
 non patrocinium.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Singularis alioquin et simplex et de suo tota est non magis 
+         </div>
+         <div n="14" type="chapter">
+            <p>Singularis alioquin et simplex et de suo tota est non magis 
 instructilis aliunde quam divisibilis ex se, quia nec dissolubilis. Si
 enim structilis et dissolubilis, iam non immortalis. Itaque quia
 iam non mortalis, neque dissolubilis neque divisibilis. Nam et
@@ -724,12 +715,10 @@ in calamo per cavernas, ita per sensualia variis modis emicet, non
 tam concisa quam dispensata. Haec omnia quibus titulis nuncupentur,
 et quibus ex se divisionibus detineantur, et quibus in
 corpore metationibus sequestrentur, medici potius cum philosophis considerabunt, nobis pauca convenient.</p>
-<pb xml:id="v.2.p.577"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Inprimis an sit aliqui summus in anima gradus vitalis et 
+            <pb xml:id="v.2.p.577"/>
+         </div>
+         <div n="15" type="chapter">
+            <p>Inprimis an sit aliqui summus in anima gradus vitalis et 
 sapientialis, quod á¼¡Î³ÎµÎ¼Î¿Î½Î¹Îºá½¸Î½ appellant, id est principale, quia
 si negetur, totus animae status periclitatur. Denique qui negant
 principale, ipsam prius animam nihil censuerunt. Messenius aliqui
@@ -775,10 +764,9 @@ istis retusus Asclepiades capras suas quaerat sine corde balantes et
 muscas suas abigat sine capite volitantes, et omnes iam sciant se
 potius sine corde et cerebro vivere qui dispositionem animae humanae
 de condicione bestiarum praeiudicarint.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Est et illud ad fidem pertinens, quod Plato bifariam partitur
+         </div>
+         <div n="16" type="chapter">
+            <p> Est et illud ad fidem pertinens, quod Plato bifariam partitur
 animam, per rationale et inrationale. Cui definitioni et nos quidem
 applaudimus, sed non ut naturae deputetur utrumque. Naturale
 <pb xml:id="v.2.p.579"/>
@@ -820,15 +808,14 @@ dicit, Fuimus aliquando natura filii irae, inrationale indignativum <bibl n="Eph
 suggillat, quod non sit ex ea natura quae a deo est, sed ex illa
 quam diabolus induxit, dominus et ipse dictus sui ordinis: Non <bibl n="Matth. VI, 24."/>
 potestis duobus dominis servire, pater et ipse cognominatus: Vos <bibl n="Io. VIII, 44."/>
-<pb xml:id="v.2.p.580"/>
+               <pb xml:id="v.2.p.580"/>
 
 ex diabolo patre estis. Ne timeas et illi proprietatem naturae alterius
 <bibl n="Matth. XIII, 25."/> adscribere posterioris et adulterae, quem legis avenarum super
 seminatorem et frumentariae segetis nocturnum interpolatorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p> Contingit nos illorum etiam quinque sensuum quaestio, quos
+         </div>
+         <div n="17" type="chapter">
+            <p> Contingit nos illorum etiam quinque sensuum quaestio, quos
 in primis litteris discimus, quoniam et hinc aliquid haereticis procuratur.
 Visus est et auditus et odoratus et gustus et tactus. Horum
 fidem Academici durius damnant, secundum quosdam et Heraclitus
@@ -925,10 +912,9 @@ et in Christo de fide eorum deliberetur, ne forte dicatur quod falso
 oculis nostris vidimus, et manus nostrae contrectaverunt, de
 sermone vitae. Falsa utique testatio, si oculorum et aurium et
 manuum sensus natura mentitur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Convetor ad intellectualium partem, quemadmodum illam
+         </div>
+         <div n="18" type="chapter">
+            <p> Convetor ad intellectualium partem, quemadmodum illam
 Plato a corporalibus separatam haereticis commendaverit, agnitionem
 ante mortem consecutus. Ait enim in Phaedone: Quid tum
 <pb xml:id="v.2.p.583"/>
@@ -1031,10 +1017,9 @@ ergo potior erit eo per quem est, quo eget, cui debet totum quod
 attingit? Ita utrumque concluditur, neque praeferendum sensui intellectum,
 per quem enim quid constat, inferius ipso est, neque
 separandum a sensu, per quod enim quid est, cum ipso est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Sed ne illi quidem praetereundi qui vel modico temporis 
+         </div>
+         <div n="19" type="chapter">
+            <p>Sed ne illi quidem praetereundi qui vel modico temporis 
 viduant animam intellectu. Proinde enim viam sternunt postea inducendi
 eius, sicut et animi, a quo scilicet proveniat intellectus.
 <pb xml:id="v.2.p.586"/>
@@ -1093,10 +1078,9 @@ Christus ex ore lactantium et parvulorum experiendo laudem nec
 pueritiam nec infantiam hebetes pronuntiavit, quarum altera cum
 suffragio occurrens testimonium ei potuit offerre, altera pro ipso
 trucidata utique vim sensit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p>Et hic itaque concludimus omnia naturalia animae ut substantiva 
+         </div>
+         <div n="20" type="chapter">
+            <p>Et hic itaque concludimus omnia naturalia animae ut substantiva 
 eius ipsi inesse et cum ipsa procedere atque proficere, ex
 quo ipsa censetur. Sicut et Seneca saepe noster: Insita sunt
 nobis omnium artium et aetatum semina, magisterque ex occulto
@@ -1142,10 +1126,9 @@ substantiae unius, item varietas ista moralis, quae quanta
 nunc est, tanta non fuerit in ipso principe generis Adam. Debuerant
 enim fuisse haec omnia in illo, ut in fonte naturae, atque inde
 cum tota varietate manasse, si varietas naturae fuisset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Quodsi uniformis natura animae ab initio in Adam ante tot 
+         </div>
+         <div n="21" type="chapter">
+            <p>Quodsi uniformis natura animae ab initio in Adam ante tot 
 ingenia, ergo non multiformis per tot ingenia, nec qua triformis,
 ut adhuc trinitas Valentiniana caedatur, quae nec ipsa in Adam
 recognoscitur. Quid enim spiritale in illo? Si quia prophetavit
@@ -1166,8 +1149,7 @@ convertibilem negant naturam, ut trinitatem suam in singulis proprietatibus
 figant; quia arbor bona malos non ferat fructus nec <bibl n="Luc. VI, 43 sq."/>
 mala bonos, et nemo de spinis metat ficus et de tribulis uvas.
 <pb xml:id="v.2.p.590"/>
-
-<bibl n="Matth. III, 7 sqq."/> Ergo si ita est neque de lapidibus filios Abrahae suscitare poterit
+               <bibl n="Matth. III, 7 sqq."/> Ergo si ita est neque de lapidibus filios Abrahae suscitare poterit
 deus, nec genimina viperarum facere paenitentiae fructus. Et erravi
 <bibl n="Eph. V, 8. II, 3."/> apostolus scribens: Eratis et vos aliquando tenebrae, et fuimus
 <bibl n="I Cor. VI, 11."/> et nos aliquando natura filii irae, et in his vos quoque fuistis, sed
@@ -1190,10 +1172,9 @@ immortali et inconvertibili, absolutum est ceterorum omnium natorum
 atque factorum convertibilem et demutabilem esse naturam,
 ut, et si trinitas animae adscribenda esset, ex mutatione accidentiae,
 non ex institutione naturae deputaretur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Cetera animae naturalia iam a nobis audiit Hermogenes cum
+         </div>
+         <div n="22" type="chapter">
+            <p> Cetera animae naturalia iam a nobis audiit Hermogenes cum
 ipsorum defensione et probatione, per quae dei potius quam materiae
 propinqua cognoscitur. Hic solummodo nominabuntur, ne
 praeterita videantur. Dedimus enim illi et libertatem arbitrii, ut
@@ -1208,10 +1189,9 @@ procedentem, liberam arbitrii, accidentiis obnoxiam, per ingenia
 mutabilem, rationalem, dominatricem, divinatricem, ex una redundantem.
 Sequitur nunc ut quomodo ex una redundet consideremus,
 id est unde et quando et qua ratione sumatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p>Quidam de caelis devenisse se credunt, tanta persuasione 
+         </div>
+         <div n="23" type="chapter">
+            <p>Quidam de caelis devenisse se credunt, tanta persuasione 
 quanta et illuc indubitate regressuros repromittunt, ut Saturninus
 Menandri Simoniani discipulus induxit, hominem affirmans ab angelis
 factum primoque opus futile et invalidum et instabile in
@@ -1245,10 +1225,9 @@ fuerint, dehinc ex his visibilibus edoctas recordari. Cum igitur
 huiusmodi argumento illa insinuentur a Platone quae haeretici
 mutuantur, satis haereticos repercutiam, si argumentum Platonis
 elidam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Primo quidem oblivionis capacem animam non cedam, quia
+         </div>
+         <div n="24" type="chapter">
+            <p> Primo quidem oblivionis capacem animam non cedam, quia
 tantam illi concessit divinitatem, ut deo adaequetur. Innatam eam
 facit, quod et solum armare potuissem ad testimonium plenae divinitatis;
 adicit immortalem, incorruptibilem, incorporalem, quis
@@ -1343,10 +1322,9 @@ modo consistit argumentatio ista praecipua, totum illud pariter
 eversum est cui accommodata est, ut animae et innatae et in caelestibus
 conversatae et consciae divinorum illic et inde delatae et
 hic recordatae crederentur, ad occasiones plane haereticis subministrandas.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="25">
-<p>Iam nunc regrediar ad causam huius excessus, uti reddam 
+         </div>
+         <div n="25" type="chapter">
+            <p>Iam nunc regrediar ad causam huius excessus, uti reddam 
 quomodo animae ex una redundent, quando et ubi et qua ratione
 sumantur. De qua specie nihil refert, a philosopho, an ab haeretico,
 an a vulgo quaestio occurrat. Nulla interest professoribus
@@ -1436,10 +1414,9 @@ si non et ex animae semine educimur? Cur autem et
 veteres astrologi genituram hominis ab initio conceptus digerebant,
 si non exinde et anima est? Ad quam aeque pertinet, si
 quid est, flatus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="26">
-<p> Sed omnis inaequalitas sententiae humanae usque ad dei terminos.
+         </div>
+         <div n="26" type="chapter">
+            <p> Sed omnis inaequalitas sententiae humanae usque ad dei terminos.
 In nostras iam lineas gradum colligam, ut quod philosophis
 medicisque respondi, Christiano probem. De tuo, frater, fundamento
 fidem aedifica. Aspice viventes uteros sanctissimarum feminarum,
@@ -1473,11 +1450,11 @@ te in utero fingerem, novi te. Si fingit deus in utero, et
 afflat ex primordii forma: Et finxit deus hominem, et flavit in eum <bibl n="Gen. I, 27. III, 7."/>
 flatum vitae. Nec nosset autem hominem deus in utero nisi totum:
 Et priusquam exires de vulva, sanctificavi te. Et mortuum adbuc <bibl n="Ier. I, 5."/>
-corpus? Utique nequaquam. Deus enim vivorum, non mortuorum. <bibl n="Matth. XXII, 30."/></p>
-</div>
-
-<div type="textpart" subtype="chapter" n="27">
-<p>Quomodo igitur animal conceptum? simulne conflata utriusque 
+corpus? Utique nequaquam. Deus enim vivorum, non mortuorum. <bibl n="Matth. XXII, 30."/>
+            </p>
+         </div>
+         <div n="27" type="chapter">
+            <p>Quomodo igitur animal conceptum? simulne conflata utriusque 
 substantia corporis animaeque, an altera earum praecedeute? Immo
 simul ambas et concipi et confici et perfici dicimus, sicut et promi,
 nec ullum intervenire momentum in conceptu quo locus ordinetur.
@@ -1532,10 +1509,9 @@ scilicet natura dei edictum: Crescite et in multitudinem proficite. <bibl n="Gen
 Nam et in ipsa praefatione operis unius, Faciamus hominem, <bibl n="Gen. I, 26."/>
 universa posteritas pluraliter praedicata est: Et praesint piscibus
 maris. Nihil mirum; repromissio segetis in semine.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="28">
-<p>Quis ille nunc vetus sermo apud memoriam Platonis de animarum 
+         </div>
+         <div n="28" type="chapter">
+            <p>Quis ille nunc vetus sermo apud memoriam Platonis de animarum 
 reciproco discursu, quod hinc abeuntes eant illuc, et rursus
 huc veniant et vivant, et dehinc e vita abeant, rursus ex mortuis
 effici vivos? Pythagoricus, ut volunt quidam; divinum Albinus
@@ -1589,10 +1565,9 @@ daemon in illo fuit qui et in Euphorbo res sanguinis gessit? Denique
 qui se Euphorbum ex argumento clypei probarat, cur
 neminem Troianorum commilitonum aeque recognovit? Nam et illi
 iam revixissent, si vivi ex mortuis fierent.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="29">
-<p>Mortuos quidem ex vivis effici constat, non ideo tamen et ex 
+         </div>
+         <div n="29" type="chapter">
+            <p>Mortuos quidem ex vivis effici constat, non ideo tamen et ex 
 mortuis vivos. Ab initio enim vivi priores, unde ab initio aeque
 mortui posteriores. Non aliunde quam ex vivis. Illi habuerunt
 unde potius orirentur, dum ne ex mortuis. Isti non habuerunt
@@ -1618,10 +1593,9 @@ quaerit contrarietatum genera distinguere. Quasi non et haec tam
 absolute in contrarietatibus posita sint quam et illa quae ad sententiam
 magistri sui interpretantur, vitam dico et mortem. Nec
 tamen ex morte vita reddatur quia ex vita mors deferatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="30">
-<p> Quid autem ad cetera respondebimus? Primo enim si ex mortuis
+         </div>
+         <div n="30" type="chapter">
+            <p> Quid autem ad cetera respondebimus? Primo enim si ex mortuis
 vivi, sicut mortui ex vivis, unus omnino et idem numerus
 semper haesisset omnium hominum, ille scilicet numerus qui primus
 vitam introisset. Priores enim mortuis vivi, dehinc mortui
@@ -1661,10 +1635,9 @@ miliario tempori longe scilicet brevior et idcirco facilior ante extingui
 quam redaccendi? Igitur quae hoc modo intercidisset, si
 vivi ex mortuis fierent, quando non intercidit, non erit credendum
 vivos ex mortuis fieri.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="31">
-<p>Iam vero si ex mortuis vivi, utique singuli ex singulis. Singulorum 
+         </div>
+         <div n="31" type="chapter">
+            <p>Iam vero si ex mortuis vivi, utique singuli ex singulis. Singulorum 
 ergo corporum animas ut singulas in singula corpora reverti
 oportuerat. Porro si et binae et trinae et quinae usque uno
 utero resumuntur, non erunt ex mortuis vivi, quia non singuli ex
@@ -1706,10 +1679,9 @@ est, et utique Graecorum, quasi non et Scythae et ludi philosophentur,
 cur neminem se retro meminit Epicurus, neminem
 Chrysippus, neminem Zeno, ne ipse quidem Plato, quem forsitan
 Nestorem credidissemus ob mella facundiae?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="32">
-<p>Sed enim Empedocles, qui se deum delirarat, idcirco, opinor, 
+         </div>
+         <div n="32" type="chapter">
+            <p>Sed enim Empedocles, qui se deum delirarat, idcirco, opinor, 
 dedignatus aliquem se heroum recordari, Thamnus et piscis fui,
 inquit. Cur non magis et pepo, tam insulsus, et chamaeleon, tam
 inflatus? Plane ut piscis, ne aliqua sepultura conditiore putesceret,
@@ -1800,10 +1772,9 @@ ipsam. Sic et divina pronuntiatio sapit, pecudibus adaequans hominem
 
 natura, non substantia. Ceterum nec deus hominem hoc
 modo notasset, si pecudem de substantia nosset.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="33">
-<p> Etiam cum iudicii nomine vindicatur hoc dogma, quod animae
+         </div>
+         <div n="33" type="chapter">
+            <p> Etiam cum iudicii nomine vindicatur hoc dogma, quod animae
 humanae pro vita et meritis genera animalium sortiantur, iugulandae
 quaeque in occisoriis, et subigendae quaeque in famulatoriis,
 et fatigandae in operariis, et foedandae in immundis, proinde honorandae
@@ -1886,12 +1857,10 @@ corpora revertentibus animabus. Et hoc semel, et in eum diem
 quem solus pater novit, ut pendula expectatione sollicitudo fidei
 probetur, semper diem observans, dum semper ignorat, quotidie
 timens, quod quotidie sperat.</p>
-<pb xml:id="v.2.p.613"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="34">
-<p>Nulla quidem ad hodiernum dementiae huiusmodi sententia 
+            <pb xml:id="v.2.p.613"/>
+         </div>
+         <div n="34" type="chapter">
+            <p>Nulla quidem ad hodiernum dementiae huiusmodi sententia 
 erupit sub nomine haeretico quae humanas animas refingat in
 bestias. Sed necessarie hanc quoque speciem intulimus et exclusimus
 ut superioribus cohaerentem, quo perinde in pavo retunderetur
@@ -1934,10 +1903,9 @@ statim insequitur amissam, statim repetit ereptam, decenni proelio
 extorquet, non latens, non fallens, non cavillabundus. Vereor
 ne ille magis pater fuerit qui circa Helenae recuperationem et vigilantius
 et audentius et diutius laboraverit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="35">
-<p> Sed non tibi soli metempsychosis hanc fabulam instruxit.
+         </div>
+         <div n="35" type="chapter">
+            <p> Sed non tibi soli metempsychosis hanc fabulam instruxit.
 Inde etiam Carpocrates utitur pariter magus, pariter fornicarius,
 etsi Helena minus. Quidni? cum propter omnimodam divinae et
 humanae disciplinae eversionem constituendam recorporari animas
@@ -1996,10 +1964,9 @@ non in anima eius nec in carne. Hae enim substantiae sui cuiusque
 <bibl n="Num. XII, 2 sqq."/> sunt hominis. Spiritus vero et virtus extrinsecus conferuntur ex
 dei gratia; ita et transferri in alterum possunt ex dei voluntate, ut
 factum est retro de Mosei spiritu.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="36">
-<p> In has quaestiones inde, opinor, excessimus quo nunc revertendum
+         </div>
+         <div n="36" type="chapter">
+            <p> In has quaestiones inde, opinor, excessimus quo nunc revertendum
 est. Constitueramus animam in ipso et ex ipso seri homine,
 et unum esse a primordio semen, sicut et carnis in totum
 generis examen, propter aemulas scilicet opiniones philosophorum
@@ -2026,10 +1993,9 @@ prior enim Adam; femina aliquanto serius, posterior enim Eva. Ita
 diu caro informis est, qualis ex Adae latere decerpta est, animal
 tamen et ipsa iam, quia et illam tunc Adae portionem animam
 agnoscam. Ceterum et ipsam dei afflatus animasset, si non ut carnis, ita et animae ex Adam tradux fuisset in femina.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="37">
-<p>Omnem autem hominis in utero serendi, struendi, fingendi 
+         </div>
+         <div n="37" type="chapter">
+            <p>Omnem autem hominis in utero serendi, struendi, fingendi 
 paraturam aliqua utique potestas divinae voluntatis ministra modulatur,
 quamcumque illam rationem agitare sortita. Haec aestimando
 etiam superstitio Romana deam finxit Alemonam alendi in
@@ -2037,8 +2003,7 @@ utero fetus, et Nonam et Decimam a sollicitioribus mensibus, et
 Partulam, quae partum gubernet, et Lucinam, quae producat in
 lucem. Nos officia divina angelos credimus. Ex eo igitur fetus in
 <pb xml:id="v.2.p.618"/>
-
-<bibl n="Exod. XXI, 22."/> utero homo a quo forma completa est. Nam et Mosei lex tunc
+               <bibl n="Exod. XXI, 22."/> utero homo a quo forma completa est. Nam et Mosei lex tunc
 aborsus reum talionibus iudicat, cum iam hominis est causa, cum
 iam illi vitae et mortis status deputatur, cum et fato iam inscribitur,
 etsi adhuc in matre vivendo cum matre plurimum communicat
@@ -2078,10 +2043,9 @@ nullus. Tunc et alii atque alii habitus accedunt pro facilitate
 materiae, qua duxerit eam qui aget, nihil conferens modulo nisi
 effigiem. Ita et animae crementa reputanda, non substantiva, sed
 provocativa.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="38">
-<p>Quamquam autem et retro praestruxerimus, omnia naturalia 
+         </div>
+         <div n="38" type="chapter">
+            <p>Quamquam autem et retro praestruxerimus, omnia naturalia 
 animae ipsi substantiae inesse pertinentia ad sensum et intellectum,
 et ex ingenito animae censu, sed paulatim per aetatis spatia procedere
 et varie per accidentia evadere pro artibus, pro institutis,
@@ -2124,10 +2088,9 @@ possit quam domo fulta. Alioquin licebit animae dilapsa domo ex
 destitutione propriorum subsidiorum incolumi abire, habenti sua
 firmamenta et propriae condicionis alimenta, immortalitatem, rationalitatem,
 sensualitatem, intellectualitatem, arbitrii libertatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="39">
-<p> Quae omnia nativitus animae collata idem, qui in primordio
+         </div>
+         <div n="39" type="chapter">
+            <p> Quae omnia nativitus animae collata idem, qui in primordio
 invidit, nunc quoque obumbrat atque depravat, quominus aut ultro
 prospiciantur aut qua oportet administrentur. Cui enim hominum
 non adhaerebit spiritus nequam, ab ipsa etiam ianua nativitatis animas
@@ -2154,10 +2117,9 @@ huius spei pignore matrimoniis, quae retinenda censuerat, patrocinaretur.
 Alioquin meminerat dominicae definitionis: Nisi quis <bibl n="Io. III, 5."/>
 nascetur ex aqua et spiritu, non introibit in regnum dei, id
 est non erit sanctus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="40">
-<p>Ita omnia anima eo usque in Adam censetur, donec in Christo <bibl n="Rom. V, 14. 21."/>
+         </div>
+         <div n="40" type="chapter">
+            <p>Ita omnia anima eo usque in Adam censetur, donec in Christo <bibl n="Rom. V, 14. 21."/>
 recenseatur, tamdiu immunda, quamdiu recenseatur; peccatrix
 autem, quia immunda, respuens ignominiam suam et in carnem
 ex societate. Nam etsi caro peccatrix, secundum quam incedere
@@ -2186,10 +2148,9 @@ Sed ea per quam delinquitur convenitur ut illa a qua delinquitur
 oneretur, etiam in ministerii accusationem. Gravior invidia
 est in praesidem cum officia pulsantur. Plus caeditur qui iubet
 quando nec qui obsequitur excusatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="41">
-<p> Malum igitur animae, praeter quod ex obventu spiritus nequam
+         </div>
+         <div n="41" type="chapter">
+            <p> Malum igitur animae, praeter quod ex obventu spiritus nequam
 superstruitur, ex originis vitio antecedit, naturale quodammodo.
 Nam, ut diximus, naturae corruptio alia natura est, habens
 suum deum et patrem, ipsum scilicet corruptionis auctorem, ut
@@ -2216,10 +2177,9 @@ etiam a spiritu sancto, sicut in pristina nativitate a spiritu profano.
 Sequitur animam nubentem spiritui caro, ut dotale mancipium,
 et iam non animae famula, sed spiritus. O beatum conubium,
 si non admiserit adulterium!</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="42">
-<p>De morte iam superest; ut illic materiam ponat ubi ipsa 
+         </div>
+         <div n="42" type="chapter">
+            <p>De morte iam superest; ut illic materiam ponat ubi ipsa 
 anima consummat. Quamquam Epicurus vulgari satis opinione
 negarit mortem ad nos pertinere. Quod enim dissolvitur, inquit,
 sensu caret, et quod sensu caret, nihil ad nos. Dissolvitur autem
@@ -2239,10 +2199,9 @@ Sed mortem quoque interimat qui et animam. A nobis ut de
 postuma vita et de alia provincia animae, ita de morte tractabitur,
 ad quam vel ipsi pertinemus, si ad nos illa non pertinet.
 Denique nec speculum eius somnus aliena materia est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="43">
-<p> De somno prius disputemus, post, mortem qualiter anima
+         </div>
+         <div n="43" type="chapter">
+            <p> De somno prius disputemus, post, mortem qualiter anima
 decurrat. Non utique extranaturale est somnus, ut quibusdam philosophis
 placet, cum ex bis eum deputant causis quae praeter
 naturam haberi videntur. Stoici somnum resolutionem sensualis
@@ -2330,10 +2289,9 @@ eius resurrectionem mortuorum tibi affirmat. Haec erit somni et
 ratio naturalis et natura rationalis. Etiam per imaginem mortis
 fidem initiaris, spem meditaris, discis mori et vivere, discis vigilare,
 dum dormis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="44">
-<p>Ceterum de Hermotimo, anima, ut aiunt, in somno carebat, 
+         </div>
+         <div n="44" type="chapter">
+            <p>Ceterum de Hermotimo, anima, ut aiunt, in somno carebat, 
 quasi per occasionem vacaturi hominis proficiscente de corpore.
 Uxor hoc prodidit. Inimici dormientem nacti pro defuncto cremaverunt.
 Regressa anima tardius, credo, homicidium sibi imputavit.
@@ -2356,12 +2314,10 @@ hominem seu moneri seu terreri a deo, velut fulgure rapido, momentaneae
 mortis ictu: si non magis in proximo esset somnium
 credi quod vigilanti potius accidere deberet si non somnium magis
 credi oporteret.</p>
-<pb xml:id="v.2.p.628"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="45">
-<p> Tenemur hic de somniis quoque Christianam sententiam ex
+            <pb xml:id="v.2.p.628"/>
+         </div>
+         <div n="45" type="chapter">
+            <p> Tenemur hic de somniis quoque Christianam sententiam ex
 promere, ut de accidentibus somni, sed non modicis iactationibus
 animae, quam ediximus negotiosam et exercitam semper ex perpetuitate
 motationis, quod divinitatis et immortalitatis est ratio.
@@ -2393,12 +2349,10 @@ si quando sumus. Sapere enim nostrum licet obumbretur,
 non tamen extinguitur; nisi quod et ipsum potest videri vacare
 tunc, ecstasin autem hoc quoque operari de suo proprio, ut sic
 nobis sapientiae imagines inferat, quemadmodum et erroris.</p>
-<pb xml:id="v.2.p.629"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="46">
-<p>Ecce rursus urgemur etiam de ipsorum somniorum retractatu 
+            <pb xml:id="v.2.p.629"/>
+         </div>
+         <div n="46" type="chapter">
+            <p>Ecce rursus urgemur etiam de ipsorum somniorum retractatu 
 quibus anima iactatur exprimere. Et quando perveniemus ad mortem?
 Et hic dixerim, Cum dens dederit, nullae longae morae eius
 quod eveniet. Vana in totum somnia Epicurus iudicavit, liberans
@@ -2483,10 +2437,9 @@ falsae? Et utique non clausa vis est, nec sacrariorum circumscribitur
 terminis; vaga et pervolatica et interim libera est. Quo nemo
 dubitaverit domus quoque daemoniis patere, nec tantum in adytis,
 sed in cubiculis homines imaginibus circumvenire.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="47">
-<p> Definimus enim a daemoniis plurimum incuti somnia, etsi interdum
+         </div>
+         <div n="47" type="chapter">
+            <p> Definimus enim a daemoniis plurimum incuti somnia, etsi interdum
 vera et gratiosa, sed, de qua industria diximus, affectantia
 atque captantia, quanto magis vana et frustratoria et turbida et
 ludibriosa et immunda. Nec mirum si eorum sunt imagines quorum
@@ -2511,10 +2464,9 @@ in ecstasi res suas perpeti? Ea autem, quae neque a deo neque
 a daemonio neque ab anima videbuntur accidere, et praeter opinionem
 et praeter interpretationem et praeter enarrationem facultatis,
 ipsi proprie ecstasi et rationi eius separabuntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="48">
-<p>Certiora et colatiora somniari affirmant sub extimis noctibus, 
+         </div>
+         <div n="48" type="chapter">
+            <p>Certiora et colatiora somniari affirmant sub extimis noctibus, 
 quasi iam emergente animarum vigore prodacto sopore. Ex temporibus
 autem anni verno magis quieta, quod aestas dissolvat
 animas et hiems quodammodo obduret, et autumnus, temptator
@@ -2546,10 +2498,9 @@ humiliationis officiis, non ut animae somniaturae sensum et sapientiam
 strueret, quasi non in ecstasi acturae. Ita non ad ecstasin
 summovendam sobrietas proficiet, sed ad ipsam ecstasin commendandam,
 ut in deo fiat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="49">
-<p> Infantes qui non putant somniare, cum omnia animae pro
+         </div>
+         <div n="49" type="chapter">
+            <p> Infantes qui non putant somniare, cum omnia animae pro
 modo aetatis expungantur in vita, animadvertant succussus et nutus
 et renidentias eorum per quietem, ut ex re comprehendant motus
 animae somniantis facile per carnis teneritatem erumpere in superficiem.
@@ -2566,10 +2517,9 @@ quia nulla iam gens dei extranea est, in omnem terram et in terminos
 orbis evangelio coruscante? Num ergo aut fama mentita est
 Aristoteli, aut daemonum adhuc ratio est, dum ne animae aliqua
 natura credatur immunis somniorum?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="50">
-<p> Satis de speculo mortis, id est de somno, tum etiam de
+         </div>
+         <div n="50" type="chapter">
+            <p> Satis de speculo mortis, id est de somno, tum etiam de
 negotiis somni, id est de somniis. Nunc ad originem huius excessus,
 <pb xml:id="v.2.p.635"/>
 
@@ -2611,10 +2561,9 @@ praesidia quo pugnant. Postremo compendium est: Ubi
 sunt illi quos Menander ipse perfudit, quos in Stygem suam mersit?
 Apostoli perennes veniant, assistant. Videat illos meus Thomas,
 audiat, contrectet, et credidit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="51">
-<p> Opus autem mortis in medio est, discretio corporis animaeque.
+         </div>
+         <div n="51" type="chapter">
+            <p> Opus autem mortis in medio est, discretio corporis animaeque.
 Sed quidam ad immortalitatem animae, quam quidem non
 a deo edocti infirme tuentur, ita argumentationes emendicant, ut
 velint credi etiam post mortem quasdam animas adhaerere corporibus.
@@ -2628,9 +2577,8 @@ salsius? quid, si et ipsius corporis substantia exsucior? quid,
 si et genus mortis ante iam corruptrices materias erogarat? Ungues
 autem cum exordia nervorum sint, merito nervis resolutione
 porrectis provectiores et quotidie deficiente carne expelli videntur.</p>
-<pb xml:id="v.2.p.637"/>
-
-<p>Comae quoque alimenta de cerebro, quod aliquamdiu durare praestat
+            <pb xml:id="v.2.p.637"/>
+            <p>Comae quoque alimenta de cerebro, quod aliquamdiu durare praestat
 secreta munitio. Denique in viventibus etiam pro cerebri
 ubertate vel affluit capillago vel deserit. Habes medicos. Sed nec
 modicum quid animae subsidere in corpore est, decessurum quandoque
@@ -2665,10 +2613,9 @@ sunt ista, signis potius et ostentis deputanda, naturam facere
 non possunt Mors, si non semel tota est, non est. Si quid animae
 remanserit, vita est. Non magis vitae miscebitur mors quam
 diei nox.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="52">
-<p> Hoc igitur opus mortis, separationem carnis atque animae,
+         </div>
+         <div n="52" type="chapter">
+            <p> Hoc igitur opus mortis, separationem carnis atque animae,
 seposita quaestione fatorum et fortuitorum, bifariam distinxit humanus
 affectus, in ordinariam et extraordinariam formam, ordinariam
 quidem naturae deputans, placidae cuiusque mortis, extraordinariam
@@ -2703,10 +2650,9 @@ perculsu cum tota securitate desidunt. Non secus naufragia
 sunt vitae, etiam tranquillae mortis eventus. Nihilo refert integram
 abire corporis navem, an dissipatam, dum animae navigatio
 evertatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="53">
-<p>Sed quo deinde anima nuda et explosa devertet? Sine dubio 
+         </div>
+         <div n="53" type="chapter">
+            <p>Sed quo deinde anima nuda et explosa devertet? Sine dubio 
 prosequemur ex ordine. Prius tamen quod est loci buius explebimus,
 ne, quia varios exitus mortis ediximus, expectet quis a nobis
 rationes singulorum, medicis potius relinquendas, propriis arbitris
@@ -2762,10 +2708,9 @@ ipsa libertate resipiscit, ut de somno emergens ab imagi
 nibus ad veritates. Tunc et enuntiat quae videt, tunc exultat
 aut trepidat, prout paraturam devorsorii sui sentit, de ipsius statim
 angeli facie, evocatoris animarum, Mercurii poÃ«tarum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="54">
-<p>Quo igitur deducetur anima iam hinc reddimus. Omnes ferme 
+         </div>
+         <div n="54" type="chapter">
+            <p>Quo igitur deducetur anima iam hinc reddimus. Omnes ferme 
 philosophi, qui immortalitatem animae, qualiterqualiter volunt,
 tamen vindicant, ut Pythagoras, ut Empedocles, ut Plato, quique aliquod
 illi tempus indulgent ab excessu usque in conflagrationem universitatis,
@@ -2785,12 +2730,10 @@ ad inferos deiciunt. Hos Plato velut gremium terrae describit in
 Phaedone, quo omnes labes mundialium sordium confluendo et ibi
 desidendo exhalent, et quasi coeno immunditiarum suarum
 crassiorem haustum et privatum illic aÃ«rem stipent.</p>
-<pb xml:id="v.2.p.642"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="55">
-<p> Nobis inferi non nuda cavositas nec subdivalis aliqua mundi
+            <pb xml:id="v.2.p.642"/>
+         </div>
+         <div n="55" type="chapter">
+            <p> Nobis inferi non nuda cavositas nec subdivalis aliqua mundi
 sentina creduntur, sed in fossa terrae et in alto vastitas et in ipsis
 visceribus eius abstrusa profunditas, siquidem Christo in corde
 terrae triduum mortis legimus expunctum, id est in recessu intimo
@@ -2831,10 +2774,9 @@ et in lectulis, sed in martyriis, si crucem tuam tollas et sequaris
 dominum, ut ipse praecepit. Tota paradisi clavis tuus sanguis
 est. Habes etiam de paradiso a nobis libellum, quo constituimus
 omnem animam apud inferos sequestrari in diem domini.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="56">
-<p>Occurrit disceptatio, an hoc ab excessu statim fiat, an quasdam 
+         </div>
+         <div n="56" type="chapter">
+            <p>Occurrit disceptatio, an hoc ab excessu statim fiat, an quasdam 
 animas aliqua ratio detineat hic interim, an etiam receptas
 liceat postea ab inferis ex arbitrio vel ex imperio intervenire. Nec
 harum enim opinionum suasoriae desunt. Creditum est insepultos
@@ -2898,10 +2840,9 @@ ergo constituas compello, aut bonos inferos aut malos. Si malos
 placet, et iam praecipitari illuc animae pessimae debent: si bonos,
 cur idem animas immaturas et innuptas et pro condicione aetatis
 puras et innocuas interim indignas inferis iudicas?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="57">
-<p>Aut optimum est hic retineri secundum aoros, aut pessimum 
+         </div>
+         <div n="57" type="chapter">
+            <p>Aut optimum est hic retineri secundum aoros, aut pessimum 
 secundum biaeothanatos, ut ipsis iam vocabulis utar quibus auctrix
 opinionum istarum magia sonat, Ostanes et Typhon et Dardanus
 <pb xml:id="v.2.p.646"/>
@@ -2984,10 +2925,10 @@ Christum sive per apostolos in corpora animas repraesentat, solida
 et contrectabili et satiata veritate praeiudicatum est hanc esse formam
 veritatis, ut omnem mortuorum exhibitionem incorporalem
 praestigias iudices.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="58">
-<p><bibl n="Luc. XVI, 19 sqq."/> Omnes ergo animae penes inferos, inquis? Velis ac nolis,
+         </div>
+         <div n="58" type="chapter">
+            <p>
+               <bibl n="Luc. XVI, 19 sqq."/> Omnes ergo animae penes inferos, inquis? Velis ac nolis,
 et supplicia iam illic et refrigeria; habes pauperem et divitem. Et
 quia distuli nescio quid ad hanc partem, iam opportune in clausula
 reddam. Cur enim non putes animam et puniri et foveri in
@@ -3031,8 +2972,7 @@ tamen tractat quod per corpus actura est. Nunquam denique conscientia
 posterior erit facto. Ita huic quoque ordini competit eam
 priorem pensare mercedes cui priori debeantur. In summa,
 <pb xml:id="v.2.p.650"/>
-
-<bibl n="Matth. V, 25 sqq."/> cum carcerem illum, quem evangelium demonstrat, inferos intellegimus,
+               <bibl n="Matth. V, 25 sqq."/> cum carcerem illum, quem evangelium demonstrat, inferos intellegimus,
 et novissimum quadrantem modicum quoque delictum
 mora resurrectionis illic luendum interpretamur, nemo dubitabit
 animam aliquid pensare penes inferos salva resurrectionis plenitudine
@@ -3041,10 +2981,10 @@ commendavit, si qui sermones eius ex agnitione promissorum
 charismatum admiserit. Ad omnem, ut arbitror, humanam super
 anima opinionem ex doctrina fidei congressi iustae dumtaxat ac
 necessariae curiositati satisfecimus. Enormi autem et otiosae tantum
-deerit discere quantum libuerit inquirere.</p></div>
-<pb xml:id="v.2.p.651"/>
-
-<pb xml:id="v.2.p.652"/>
-</div></body></text>
-
+deerit discere quantum libuerit inquirere.</p>
+         </div>
+         <pb xml:id="v.2.p.651"/>
+         <pb xml:id="v.2.p.652"/>
+      </body>
+   </text>
 </TEI>

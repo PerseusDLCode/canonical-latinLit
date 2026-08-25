@@ -1,70 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Ad Nationes</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Ad Nationes</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-            </imprint>
-            <biblScope unit="volume">1</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=334%3Bownerid=13510798896211526-346">HathiTrust</ref>
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-          <p>This pointer pattern extracts book and chapter</p>
-        </cRefPattern>
-        <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts book</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa002.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.305"/>
-<head>AD NATIONES
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa002.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                  </imprint>
+                  <biblScope unit="volume">1</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=334%3Bownerid=13510798896211526-346">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-book-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa002.opp-lat1">
+         <pb xml:id="v.1.p.305"/>
+         <head>AD NATIONES
 LIBER PRIMVS.</head>
- <div type="textpart" subtype="book" n="1">
-<div type="textpart" subtype="chapter" n="1">
-<p>Testimonium ignorantiae vestrae, quae iniquitatem dum defendit, 
+         <div n="1" type="book">
+            <div n="1" type="chapter">
+               <p>Testimonium ignorantiae vestrae, quae iniquitatem dum defendit, 
 revincit, in promtu est, quod omnes qui vobiscum retro
 ignorabant et vobiscum oderant, simul eis contigit scire, desinunt
 odisse qui desinunt ignorare, immo fiunt et ipsi quod oderant et
@@ -102,10 +104,9 @@ paenitet, nisi tantum pristinorum. Si denotatur, gloriatur, si
 trahitur, non subsistit, si accusatur, non defendit, interrogatus
 confitetur, damnatus gloriatur. Quod hoc malum est in quo mali
 natura cessat?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>In qua ipsi etiam contra formam iudicandorum malorum iudicatis. 
+            </div>
+            <div n="2" type="chapter">
+               <p>In qua ipsi etiam contra formam iudicandorum malorum iudicatis. 
 Nam nocentes quidem perductos, si admissum negent, tormentis
 urgetis ad confessionem, Christianos vero sponte confessos
 tormentis comprimitis ad negationem. Quae tanta perversitas, ut
@@ -146,12 +147,10 @@ de nobis deferuntur, utique erui debuerunt, ne incredibilia
 viderentur et odium in nos publicum refrigesceret. Nam et plerique
 fidem talium temperant, horrentes naturam quaerere pabulum ferinum
 quod concubitu ab humano genere praeclusit.</p>
-<pb xml:id="v.1.p.309"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Vos igitur, alias diligentissimi ac pertinacissimi discussores 
+               <pb xml:id="v.1.p.309"/>
+            </div>
+            <div n="3" type="chapter">
+               <p>Vos igitur, alias diligentissimi ac pertinacissimi discussores 
 scelerum longe minorum, cum talibus tam horrendis et omnem
 impietatem supergressis eam diligentiam deseratis, neque confessionem
 recipiendo, iudicantibus semper laborandam, neque exquisitionem
@@ -193,10 +192,9 @@ nomen innoxium nostrum, non incommodum linguae, non auribus
 asperum, non homini malum, non patriae infestum, sed et Graecum
 cum aliis,  et sonorum et interpretatione iucundum. Et utique
 non gladio aut cruce aut bestiis punienda sunt nomina.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Sed dicitis sectam nomine puniri sui auctoris. Primo quidem
+            </div>
+            <div n="4" type="chapter">
+               <p> Sed dicitis sectam nomine puniri sui auctoris. Primo quidem
 sectam de auctoris appellatione notari utique probum usitatumque
 ius est, dum philosophi quoque de auctoribus cognominentur Pythagorici
 et Platonici, ut medici Erasistratei et grammatici Aristarchii.
@@ -259,10 +257,9 @@ nec oculis contaminamus, misericordiam, qua super indigentes flectimur,
 ipsam veritatem, qua offendimus, ipsam libertatem, pro qua
 mori novimus? Qui vult intellegere qui sint Christiani, istis indicibus
 utatur necesse est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Quod ergo dicitis: Pessimi et probrosissimi avaritia, luxuria, 
+            </div>
+            <div n="5" type="chapter">
+               <p>Quod ergo dicitis: Pessimi et probrosissimi avaritia, luxuria, 
 improbitate, non negabimus quosdam. Sufficit et hoc ad testimonium
 nominis nostri, si non omnes, si non plures. Necesse est
 in corpore, et quantum velis integro aut puro, uti naevus aliqui
@@ -292,10 +289,9 @@ saevitia ad negandum subegit. Utique enim facilius inter nos inviti
 desertores disciplinae quam voluntarii continerentur. Ceterum sine
 (??)usa vocatis Christianos quos ipsi negant Christiani, qui se negare
 non norunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> His propositionibus responsionibusque nostris, quas veritas de
+            </div>
+            <div n="6" type="chapter">
+               <p> His propositionibus responsionibusque nostris, quas veritas de
 suo suggerit, quotiens comprimitur et coartatur conscientia vestra,
 tacita ignorantiae suae testis, confugitis aestuantes ad arulam quandam,
 id est legum auctoritatem, quod utique non plecterent sectam
@@ -319,10 +315,9 @@ iniquissimae repertae cum suis machaeris et patibulis et leonibus
 despuuntur. Legis iniustae honor nullus est. Ut opinor autem,
 dubitatur de iniquitate legum quarundam, cum quotidie novis consultis
 constitutisque duritias nequitiasque earum temperetis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Unde ergo, inquitis, tantum de vobis famae licuit, cuius testimonium 
+            </div>
+            <div n="7" type="chapter">
+               <p>Unde ergo, inquitis, tantum de vobis famae licuit, cuius testimonium 
 suffecerit forsitan conditoribus legum? Quis, oro, sponsor
 aut illis tune aut exinde vobis de fide? Fama est. Nonne haec est,
 Fama malum, quo non aliud velocius ullum? Cur malum, si vera
@@ -448,10 +443,9 @@ Inpunitatem, aeternitatem quanto constare vultis? An hae nobis
 omni modo redimendae videntur? an alii ordines dentium Christianorum,
 et alii specus faucium, et alii ad incesti libidinem nervi?
 Non opinor. Satis enim est nobis sola veritate a vestra positione discerni.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Plane, tertium genus dicimur. Cynopaene aliqui vel Sciapodes?
+            </div>
+            <div n="8" type="chapter">
+               <p> Plane, tertium genus dicimur. Cynopaene aliqui vel Sciapodes?
 vel aliqui de subterraneo Antipodes? Si qua istic apud
 vos saltem ratio est, edatis velim primum et secundum genus,
 ut ita de tertio constet. Psammetichus quidem putavit sibi de
@@ -492,10 +486,9 @@ quoniam quidem etiam deos Graeciae Roma sollicitavit, ubi saltem
 Aegyptii, et ipsi, quod sciam, privatae curiosaeque religionis?
 Porro si tam monstrosi qui tertii loci, quales habendi qui primo
 et secundo antecedunt?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Sed quid ego mirer vana vestra, cum ex forma naturali concorporata
+            </div>
+            <div n="9" type="chapter">
+               <p> Sed quid ego mirer vana vestra, cum ex forma naturali concorporata
 et concreta intercessit malitia et stultitia sub eodem mancipe
 erroris? Sane, quia non miror, enumerem necesse est, ut
 vos recognoscendo miremini, in quantam stultitiam incidatis, qui
@@ -533,12 +526,10 @@ animadversione cessantibus, si ex se quid possent. Quanquam
 et alias confitemini istud, si quando illos supplicio nostro videmini
 ulcisci. Si ab alio aliud, a maiore defenditur. Pudeat igitur
 deos ab homine defendi.</p>
-<pb xml:id="v.1.p.324"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Effundite iam omnia venena, omnia calumniae tela infligite huic
+               <pb xml:id="v.1.p.324"/>
+            </div>
+            <div n="10" type="chapter">
+               <p> Effundite iam omnia venena, omnia calumniae tela infligite huic
 nomini, non cessabo ultra repellere, at postmodum obtundentur
 expositione totius nostrae disciplinae. Nunc vero eadem ipsa de
 nostro corpore vulsa in vos retorquebo, eadem vulnera criminum in
@@ -713,10 +704,9 @@ quam eorum qui ita suscipiunt. Quare nescio, ne plus de
 vobis dei vestri quam de nobis querantur Contemptis ex alia
 parte adulamini, redimitis si qua delinquitis, et postremo licet
 vobis in eos quos esse voluistis. Nos vero in totum aversamur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Nec tantum in hoc nomine rei desertae communis religionis, 
+            </div>
+            <div n="11" type="chapter">
+               <p>Nec tantum in hoc nomine rei desertae communis religionis, 
 sed superductae monstruosae superstitionis. Nam ut quidam
 somniastis caput asininum esse deum nostrum, hanc Cornelius
 Tacitus suspicionem fecit. Is enim in quarta Historiarum suarum,
@@ -742,10 +732,9 @@ habere nobiscum? Sane vos totos asinos colitis et cum sua
 Epona, et omnia iumenta et pecora et bestias, quae perinde
 cum suis praesepibus consecratis. Et hoc forsitan crimini datis,
 quod inter cultores omnium tantum asinarii sumus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Sed et qui nos crucis antistites affirmat, consacraneus erit
+            </div>
+            <div n="12" type="chapter">
+               <p> Sed et qui nos crucis antistites affirmat, consacraneus erit
 noster. Crucis qualitas signum est de ligno: etiam de materia
 colitis penes vos cum effigie. Quanquam sicut vestrum humana
 figura est, ita et nostrum sua propria. Viderint nunc lineamenta,
@@ -798,10 +787,9 @@ et totius auri cultus monilia crucum sunt. Sic etiam in cantabris
 atque vexillis, quae non minore sanctitate militia custodit, sipbara
 illa vestes crucum sunt. Erubescitis, opinor, incultas et nudas
 cruces colere.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> Alii plane humanius solem Christianum deum aestimant, quod
+            </div>
+            <div n="13" type="chapter">
+               <p> Alii plane humanius solem Christianum deum aestimant, quod
 innotuerit ad orientis partem facere nos precationem, vel die solis
 laetitiam curare. Quid? vos minus facitis? Non plerique affectatione
 adorandi aliquando etiam caelestia ad solis initium labra vibratis?
@@ -816,10 +804,9 @@ ritus lucernarum et ieiunia cum azymis et orationes litorales, quae
 utique aliena sunt a diis vestris. Quare, ut ab excessu revertar,
 qui solem et diem eius nobis exprobratis, agnoscite vicinitatem;
 non longe a Saturno et sabbatis vestris sumus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Nova iam de deo nostro fama suggessit, nec adeo nuper 
+            </div>
+            <div n="14" type="chapter">
+               <p>Nova iam de deo nostro fama suggessit, nec adeo nuper 
 quidam perditissimus in ista civitate, etiam suae religionis desertor,
 solo detrimento cutis Iudaeus, utique magis post bestiarum
 morsus, ut ad quas se locando quotidie toto iam corpore decutiendus
@@ -838,10 +825,9 @@ vel anguini, et alites planta, fronte et tergo. Quid
 
 itaque nostrum unicum denotatis? Plures Onocoëtae penes vos
 deprehenduntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Si in deis aequalitate concurrimus, sequitur ut sacrificii vel
+            </div>
+            <div n="15" type="chapter">
+               <p> Si in deis aequalitate concurrimus, sequitur ut sacrificii vel
 sacri quoque inter nos diversitas nulla sit, ut ex alia specie comparationi
 satisfiat. Nos infanticidio litamus sive initiamus. Vos, si
 de memoria abierunt quae caede hominis quaeque infanticidiis
@@ -868,10 +854,9 @@ visceribus inhiatis, quia vivos et puberes devoratis? parum humanum
 sanguinem lambitis, quoniam futurum sanguinem elicitis?
 parum infante vescimini, quia infantem totum praecocum
 perhauritis?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Ventum est ad horam lucernarum et caninum ministerium et 
+            </div>
+            <div n="16" type="chapter">
+               <p>Ventum est ad horam lucernarum et caninum ministerium et 
 ingenia tenebrarum. Quo in loco metuo ne cedam. Quid enim
 tale in vobis detinebo? Verum iam laudate consilium incesti verecundi,
 quod adulteram noctem commenti sumus, ne aut lucem
@@ -944,10 +929,9 @@ eiusmodi scelerum delitiscentium in vobis. Nihil semel evenit
 in rebus humanis. Semel plane erui potest de sacramentis nostrae
 religionis, opinor. Intentatis, et sunt paria vestris etiam
 non sacramentis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>De obstinationibus vero vel praesumptionibus, si qua proponitis, 
+            </div>
+            <div n="17" type="chapter">
+               <p>De obstinationibus vero vel praesumptionibus, si qua proponitis, 
 ne istae quidem ad communionem comparationis absistunt.
 <pb xml:id="v.1.p.342"/>
 
@@ -975,10 +959,9 @@ Sed non dicimus deum imperatorem; super hoc enim, quod
 vulgo aiunt, sannam facimus. Immo qui deum Caesarem dicitis,
 etderidetis, dicendo quod non est, et maledicitis, quia non vult
 esse quod dicitis. Mavult enim vivere quam deus fieri.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p>Reliquum obstinationis in illo capitulo collocatis, quod neque 
+            </div>
+            <div n="18" type="chapter">
+               <p>Reliquum obstinationis in illo capitulo collocatis, quod neque 
 gladios neque cruces neque bestias vestras, non ignem, non tormenta
 ob duritatem ac contemptum mortis animo recusemus. At
 enim haec omnia apud priores maioresque vestros non contemni
@@ -1013,10 +996,9 @@ evasit, ex quo se quidam proxime vestiendum incendiali
 tunica ad certum usquequaque locum auctoravit. Si flagris mulier
 insultavit, hoc quoque proxume inter venatorios ordine transcurso
 remensus est, ut taceam de Laconica gloria.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Hucusque, opinor, horrenda obstinationum Christianarum. Quae 
+            </div>
+            <div n="19" type="chapter">
+               <p>Hucusque, opinor, horrenda obstinationum Christianarum. Quae 
 si vobiscum communicamus, superest deridenda personarum conferamus.
 Quanquam de persuasionibus omnis obstinatio nostra
 praestruitur; mortuorum enim praesumimus resurrectionem. Spes
@@ -1037,10 +1019,9 @@ perpetuitatem transacturos. Apud vos quoque Pyriphlegethontis
 et Elysii non alias condicio disponitur. Nec mythici ac poetici
 soli talia canunt, sed et philosophi de animarum reciprocatione
 et iudicii distributione confirmant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Quonam igitur usque, iniquissimae nationes, non agnoscitis,
+            </div>
+            <div n="20" type="chapter">
+               <p> Quonam igitur usque, iniquissimae nationes, non agnoscitis,
 immo insuper execramini vestros, si nihil inter nos diversitas habet,
 si unum et eidem sumus? Quia non odistis quod estis, date
 dextras potius, compingite oscula, miscete complexus, cruenti cum
@@ -1075,14 +1056,14 @@ aperire potuerimus e pauculis istis libellulis, erroris inspectio
 et veritatis recognitio. Damnate veritatem, sed inspectam si potestis,
 et probate errorem, sed repertum si putatis. Quodsi praescribitur
 vobis errorem amare et odisse veritatem, cur quod amatis
-et odistis non noveritis?</p></div></div>
-
-<pb xml:id="v.1.p.349"/>
-<div type="textpart" subtype="book" n="2">
-<head>AD NATIONES LIBER SECVNDVS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Nunc de deis vestris, miserandae nationes, congredi vobiscum 
+et odistis non noveritis?</p>
+            </div>
+         </div>
+         <pb xml:id="v.1.p.349"/>
+         <div n="2" type="book">
+            <head>AD NATIONES LIBER SECVNDVS.</head>
+            <div n="1" type="chapter">
+               <p>Nunc de deis vestris, miserandae nationes, congredi vobiscum 
 defensio nostra desiderat, provocans ipsam conscientiam vestram
 ad censendum, an vere dei, ut vultis, an falso, ut scire
 non vultis. Haec enim materia est erroris humani per artificem
@@ -1132,10 +1113,9 @@ sicut est, certa, integra, communis, quia scilicet omnium. Ceterum
 quem deum credam? Quem suspicio aestimavit? Quem historia
 iactavit? Quem civitas voluit? Dignius multo neminem credam
 quam dubitandum, aut pudendum, aut adoptivum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Sed physicorum auctoritas philosophorum ut mancipium sapientiae 
+            </div>
+            <div n="2" type="chapter">
+               <p>Sed physicorum auctoritas philosophorum ut mancipium sapientiae 
 patrocinatur. Sane mera sapientia philosophorum, cuius
 infirmitatem prima haec contestatur varietas opinionum, veniens de
 ignorantia veritatis. Quis autem sapiens expers veritatis, qui ipsius
@@ -1194,10 +1174,9 @@ ut perinde in mundo ignis omnia gubernet sicut animus in nobis.
 Atqui vanissime. Nam cum est, inquit, in nobis, ipsi sumus;
 cum exivit, emorimur. Ergo et ignis cum de mundo per fulgura
 proficiscitur, mundus emoritur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>His ita expeditis videmus physicum istud ad hoc subornatum, 
+            </div>
+            <div n="3" type="chapter">
+               <p>His ita expeditis videmus physicum istud ad hoc subornatum, 
 ut deos elementa contendat, cum ex his etiam alios deos natos
 alleget; dei enim nonnisi de deis nascerentur. Quos quoniam in
 
@@ -1265,10 +1244,9 @@ per se, quia non per alium, tamen ut ea non statim dei,
 quia animalia, ita nec ideo, quia per se mobilia: aut quid vetat
 universa animalia, ut mobilia per se, deos haberi? Et hoc alia
 sane vanitate Aegyptiis licet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Aiunt quidam propterea deos fuisse appellatos quod θέειν et
+            </div>
+            <div n="4" type="chapter">
+               <p> Aiunt quidam propterea deos fuisse appellatos quod θέειν et
 σείεσθᾳι procurrere ac motari interpretatio est. Ergo iam vocabulum
 istud non est alicuius maiestatis; a cursu enim et motu,
 non ab divinitatis eis dominatione formatum est. Sed cum etiam
@@ -1328,10 +1306,9 @@ Itaque casus eius per figuram philosophos notat, scilicet eos,
 qui stupidam exerceant curiositatem in res naturae quam prius
 in artificem eius et praesidem, in vacuum suum studium
 habituros.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Quin ergo ad humaniorem aliquanto convertimur opinionem,
+            </div>
+            <div n="5" type="chapter">
+               <p> Quin ergo ad humaniorem aliquanto convertimur opinionem,
 quae de communi omnium sensu et simplici coniectura deducta
 videatur? Nam et Varro meminit eius, creditam praeterea dicens
 elementorum divinitatem, quod nihil omnino sine suffragio illorum
@@ -1402,10 +1379,9 @@ agere ista ac sibi curare nec quicquam hominum causa disponere,
 cum propterea defendas elementis divinitatem quod ab illis aut
 iuvari te aut laedi sentias. Nam si sibi praestant, nihil eis
 debes.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Age iam, conceditisne divinitatem non modo non serviliter currere, 
+            </div>
+            <div n="6" type="chapter">
+               <p>Age iam, conceditisne divinitatem non modo non serviliter currere, 
 sed inprimis integre stare neque minui neque intercipi neque
 corrumpi debere? Ceterum abiit omnis felicitas eius, si quid patitur
 umquam. Ecce autem et astra intercidunt et intercidisse se
@@ -1429,10 +1405,9 @@ si ad mythicum spectes, melius iam in physico mortalitas
 errat eis divinitatem adscribendo quae super hominem putat situ
 et vi et magnitudine et divinitate sentiri. Quod enim super hominem,
 credas deo proximum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Ceterum ut ad mythicum transeamus, quod poëtis deputatur,
+            </div>
+            <div n="7" type="chapter">
+               <p> Ceterum ut ad mythicum transeamus, quod poëtis deputatur,
 nescio an tantum par quaerere mediocritati nostrae, an tanti de
 documentis divinitatis confirmentur, ut Mopsus Africanus et
 Boeotus Amphiaraus. Delibanda enim nunc est species ista, cuius
@@ -1493,10 +1468,9 @@ ideo quod talia gesserint vestri dei, homines quando fuerint,
 nec quod divinas adscripserint foeditates divinitatis, cum interim
 vobis credibilius visum est deos fuisse, sed non tales, quam
 tales, sed non deos.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Superest gentile illud genus inter populos deorum, quos libidine 
+            </div>
+            <div n="8" type="chapter">
+               <p>Superest gentile illud genus inter populos deorum, quos libidine 
 sumptos, non pro notitia veritatis, docet privata notitia.
 Deum ergo existimo ubique notum, ubique praesentem, ubique
 dominantem, omnibus colendum, omnibus demerendum. At enim
@@ -1559,10 +1533,9 @@ faciem in unum Anubin contulerunt, in quo naturae condicionisque
 suae potius argumenta videri posset consecrasse gens
 rixosa, suis regibus recontrans, in extraneis deiecta, sane et gula
 et spurcitia canina etiam servi ipsa.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Haec secundum tripertitam dispositionem Varronis divinitatis
+            </div>
+            <div n="9" type="chapter">
+               <p> Haec secundum tripertitam dispositionem Varronis divinitatis
 aut notiora aut insigniora digessimus, ut possit iam videri satis
 responsum de physico genere, de poëtico, de gentili. Sed quoniam
 omnis substitutio non iam philosophorum nec poëtarum
@@ -1645,10 +1618,9 @@ quae inter tot vilissimos amatores diversata obsessam castitatem
 tenere protexit? Est et Sanctus propter hospitalitatem a rege
 Plotio fanum consecutus: potuit et Vlixes de humanissimo Alcinoo
 unum amplius deum vobis contulisse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p>Ad foediora festino. Non puduit auctores vestros de Larentina 
+            </div>
+            <div n="10" type="chapter">
+               <p>Ad foediora festino. Non puduit auctores vestros de Larentina 
 palam facere. Scortum haec meritorium fuit, sive dum Romuli
 nutrix et ideo lupa quia scortum, sive dum Herculis amica
 est, et iam mortui Herculis, id est iam dei. Nam ferunt aedituum
@@ -1682,10 +1654,9 @@ Quis denique Antinoo controversiam divinitatis agitavit? Quo
 decorior Ganymedes aut carior suo amatori? Patet apud vos mortuis
 caelum. Viam ab inferis ad astra subigitis. Passim scorta
 ascendunt, no multum putetis vos praestare regibus vestris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Nec estis contenti eos deos asseverare qui visi retro, auditi
+            </div>
+            <div n="11" type="chapter">
+               <p> Nec estis contenti eos deos asseverare qui visi retro, auditi
 
 <pb xml:id="v.1.p.374"/>
 
@@ -1730,10 +1701,9 @@ ordinate, sed sunt, proli pudor! et Mutunus et Tutunus et dea
 Pertunda et Subigus et Prema dea et Perfica. Parcite dei impudentes!
 Luctantibus sponsis nemo intervenit. Ipsi, quorum
 votum est, foris gaudentes erubescunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p> Et quonam usque deos edam, quia disserendum quales deos
+            </div>
+            <div n="12" type="chapter">
+               <p> Et quonam usque deos edam, quia disserendum quales deos
 receperitis? Quantum vobis erubescendum? Rideam vanitatem
 an exprobrem caecitatem est admodum incertum. Nam quot deos
 et quos utique producam? maiores an et minores? veteres an et
@@ -1858,10 +1828,9 @@ de terrenis; gradus ad gradus comparantur, nuptiae, conceptus,
 natales cucurrerunt, patriae, sedes, regna, monumenta liquent.
 Igitur qui natos non possunt negare, mortuos credant, qui mortuos
 confitentur, deos non putent.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Sed enim manifestis vis sua adsistit. Quos a primordio possunt 
+            </div>
+            <div n="13" type="chapter">
+               <p>Sed enim manifestis vis sua adsistit. Quos a primordio possunt 
 non asserere nisi homines fuisse, recipiunt in divinitatem,
 affirmando illos post mortem deos factos, ut Varro, et qui cum
 eo somniaverunt. Hic igitur consisto: si sunt allecti dei vestri in
@@ -1939,10 +1908,9 @@ vulgo appellatis, et est Vergilii Aequus Iuppiter. Omnes
 proinde incesti in suos, impudici in extraneos, impii, iniusti.
 Cui nullam insignem infamiam fabula reliquit, is deus fieri tion
 fuit dignus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Sed quoniam alios seorsum volunt in divinitatem ab hominibus 
+            </div>
+            <div n="14" type="chapter">
+               <p>Sed quoniam alios seorsum volunt in divinitatem ab hominibus 
 receptos, et distingui inter nativos et factos secundum Dionysium
 Stoicum, de ista quoque specie adiciam. De ipso quidem Hercule
 erit summa responsionis, an dignus caelo et divinitate; sic enim
@@ -1994,14 +1962,10 @@ et matri inter mortuos parentant. Quasi non et ipsi Thesea
 suum adorent, merito deum. Quidni? Si conservatricem suam
 in litore peregrino dereliquit, eadem oblivione, immo amentia, quae
 patri causa mortis fuit?</p>
-
-<pb xml:id="v.1.p.389"/>
-
-
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Longum foret recensere etiam de illis quos in sidera sepelistis
+               <pb xml:id="v.1.p.389"/>
+            </div>
+            <div n="15" type="chapter">
+               <p> Longum foret recensere etiam de illis quos in sidera sepelistis
 et audaciter deis ministratis. Sic opinor digni de caelo
 Castores et Perseus et Erigona, quemadmodum et Iovis exoletus.
 Sed quid mirandum? etiam canes et scorpios et cancros in caelum
@@ -2034,10 +1998,9 @@ apud Romanos deputentur quos supra signavimus, nec facile foris
 cogniti, quomodo ea omnia quibus illos praeesse voluerunt in omni
 genere humano et in omni gente proveniunt ubi praedes eorum
 non modo honore, sed ipsa quoque notitia carent?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Sedenim quidam fructus et necessaria victui demonstraverunt.
+            </div>
+            <div n="16" type="chapter">
+               <p> Sedenim quidam fructus et necessaria victui demonstraverunt.
 Quaeso vos, cum dicitis invenisse illos, none confitemini prius
 fuisse quae invenirentur? Cur ergo non auctorem potius honoratis,
 cuius haec dona sunt, sed auctorem transfertis in repertores?
@@ -2059,10 +2022,9 @@ posteris quam prioribus consecratio competisset? Quaeso vos,
 an non omnibus iam artificiis antiquitas exolevit, usu quotidiano
 ubique instruente novitatem? Atque adeo quos ob artes sanctificatis,
 laeditis in ipsis artibus et provocatis in aemulis insuperatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Denique religionis vestrae tutoribus suis non negatis omnibus 
+            </div>
+            <div n="17" type="chapter">
+               <p>Denique religionis vestrae tutoribus suis non negatis omnibus 
 his quos deos antiquitas voluit, posteritas credidit, nobis superest
 adhuc illa Romanarum superstitionum praegrandis praesumptio,
 cui adversus vos, nationes, congredi habemus, propterea scilicet
@@ -2085,10 +2047,10 @@ potius terra regnaret quae Iovis cineres texit? Vellet Iuno Punicam
 urbem posthabita Samo dilectam et utique Aeneadarum ignibus
 adoleri? Quod sciam
 <quote rend="blockquote">
-<l part="F">hic illius arma,</l>
-<l>Hic currus fuit, hoc regnum dea gentibus esse,</l>
-<l>Si qua fata sinant, iam tunc tenditque fovetque.</l>
-</quote>
+                     <l part="F">hic illius arma,</l>
+                     <l>Hic currus fuit, hoc regnum dea gentibus esse,</l>
+                     <l>Si qua fata sinant, iam tunc tenditque fovetque.</l>
+                  </quote>
 Misera adversus fata non valuit! Nec tamen tantum honoris Romani
 fatis decreverunt, ut dedentibus Carthaginem sibi, quantum
 Larentinae. Sed dei isti conferendi regni in potestate non sunt.
@@ -2138,16 +2100,11 @@ vices ordinavit. Idem regna dispensat, et nunc penes
 Romanos eam summam tanquam pecuniam de multis nominibus
 exactam in unam arcam congregavit. Quid de ea statuerit sciunt
 proximi ei.</p>
-</div>
-</div>
-
-
-<pb xml:id="v.1.p.396"/>
-
-<pb xml:id="v.1.p.397"/>
-
-<pb xml:id="v.1.p.398"/>
-</div></body></text>
-
-
+            </div>
+         </div>
+         <pb xml:id="v.1.p.396"/>
+         <pb xml:id="v.1.p.397"/>
+         <pb xml:id="v.1.p.398"/>
+      </body>
+   </text>
 </TEI>

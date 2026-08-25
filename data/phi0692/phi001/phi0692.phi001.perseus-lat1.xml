@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base" n="chunk">
+          <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -63,7 +64,7 @@
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
 
- <text n="dirae" id="phi0692.phi001.perseus.lat1"><body>
+ <text n="dirae" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi001.perseus-lat1">
    <head>Dirae</head>
    <p>
 <lb n="1"/>Battare, cycneas repetamus carmine uoces,
@@ -128,7 +129,7 @@
 <lb n="51"/>fluctibus et spissa campos perfundat harena.
 <lb n="52"/>qua Vulcanus agros pastus Iouis ignibus arcet,
 <lb n="53"/>barbara dicatur Libycae soror altera Syrtis.
-<lb n="54"/>Tristius hoc, memini, &dagger;reuocasset&dagger;, Battare, carmen.
+<lb n="54"/>Tristius hoc, memini, †reuocasset†, Battare, carmen.
 <lb n="55"/>nigro multa mari dicunt portenta natare, 
 <lb n="56"/>monstra repentinis terrentia saepe figuris,
 <lb n="57"/>cum subito emersere furenti corpora ponto:
@@ -173,7 +174,7 @@
 <lb n="90"/>et casti fontes, et felix nomen agelli.' 
 <lb n="91"/>Tardius a miserae descendite monte capellae:
 <lb n="92"/>mollia non iterum carpetis pabula nota;
-<lb n="93"/>tuque resiste pater. &dagger;et prima nouissima nobis&dagger;
+<lb n="93"/>tuque resiste pater. †et prima nouissima nobis†
 <lb n="94"/>intueor campos longum : manet esse sine illis.
 <lb n="95"/>rura ualete iterum, tuque optima Lydia salue, 
 <lb n="96"/>siue eris, et si non, mecum morieris, utrumque.
@@ -189,4 +190,4 @@
 <lb n="103"/>gaudia semper enim tua me meminisse licebit.
 
 </p></body></text>
-</TEI.2>
+</TEI>

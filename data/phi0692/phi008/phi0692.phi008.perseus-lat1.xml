@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
+            <citeStructure match=".//lb" use="@n" unit="line" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -62,7 +65,7 @@
     </profileDesc>
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
- <text n="priapea" id="phi0692.phi008.perseus.lat1"><body>
+ <text n="priapea" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi008.perseus-lat1">
    <head>Priapea</head>
 <div1 type="poem" n="1"><p>
 <lb n="1"/>vere rosa, autumno pomis, aestate frequentor
@@ -104,7 +107,7 @@
 
 
 
-<lb n="3"/>quercus arida rustica &dagger;formitata securi,
+<lb n="3"/>quercus arida rustica †formitata securi,
 <lb n="4"/>nutrior, magis ut magis sit beata quotannis.
 <lb n="5"/>huius nam domini colunt me deumque salutant 
 <lb n="6"/>pauperis tuguri pater filiusque adulescens,
@@ -116,9 +119,9 @@
 <lb n="12"/>luteae uiolae mihi lacteumque papauer,
 <lb n="13"/>pallentesque cucurbitae et suaue olentia mala,
 <lb n="14"/>uua pampinea rubens educata sub umbra.
-<lb n="15"/>sanguine hanc etiam mihi&mdash;sed tacebitis&mdash;aram 
+<lb n="15"/>sanguine hanc etiam mihi—sed tacebitis—aram 
 <lb n="16"/>barbatus linit hirculus cornipesque capella.
-<lb n="17"/>pro quis omnia honoribus &dagger;hoc necesse Priapo est
+<lb n="17"/>pro quis omnia honoribus †hoc necesse Priapo est
 
 
 
@@ -127,4 +130,4 @@
 <lb n="20"/>uicinus prope diues est neglegensque Priapus. 
 <lb n="21"/>inde sumite, semita haec deinde uos feret ipsa.
 </p></div1></body></text>
-</TEI.2>
+</TEI>

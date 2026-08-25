@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1014.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1014">
             <ti:title xml:lang="lat">Controversiae</ti:title>
             <ti:edition urn="urn:cts:latinLit:phi1014.phi001.perseus-lat1" workUrn="urn:cts:latinLit:phi1014.phi001">
@@ -5,5 +6,4 @@
               <ti:description xml:lang="mul">Seneca the Elder. Annaei Senecae Oratorum et rhetorum sententiae divisiones colores. Kiessling, Adolf Gottlieb, editor.
                 Leipzig: Teubner, 1872.</ti:description>
             </ti:edition>
-          </ti:work>
-        
+          <ti:genre confidence="high">prose-section</ti:genre></ti:work>

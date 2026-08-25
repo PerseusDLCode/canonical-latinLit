@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De idolatria</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De idolatria</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=97%3Bownerid=13510798896211526-101">HathiTrust</ref>                                        
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa017.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.67"/>
-<head>DE IDOLOLATRIA.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Principale crimen generis humani, summus saeculi reatus, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa017.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=97%3Bownerid=13510798896211526-101">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa017.opp-lat1">
+         <pb xml:id="v.1.p.67"/>
+         <head>DE IDOLOLATRIA.</head>
+         <div n="1" type="chapter">
+            <p>Principale crimen generis humani, summus saeculi reatus, 
 tota causa iudicii idololatria. Nam etsi suam speciem tenet unumquodque
 delictum, etsi suo quoque nomine iudicio destinatur, in
 idololatriae tamen crimine expungitur. Omitte titulos, opera recognosce,
@@ -96,10 +99,9 @@ autem, quod adversus deum sapiat, non daemoniis et immundis
 spiritibus deputetur quibus idola mancipantur, sine dubio idololatrian
 admittit quicunque delinquit. Id enim facit quod ad idolorum
 mancipes pertinet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Sed universa nomina criminum discedant in operum suorum
+         </div>
+         <div n="2" type="chapter">
+            <p> Sed universa nomina criminum discedant in operum suorum
 proprietates, remaneat idololatria in co quod ipsa est. Sufficit
 sibi tam inimicum deo nomen, tam locuples substantia criminis,
 quae tot ramos porrigit, tot venas diffundit, ut de hoc cum maxime
@@ -127,10 +129,9 @@ Pharisaeos, ut dominus praescripsit, nisi abundantiam adversariae
 eius, id est iniustitiae, perspexerimus? Quod si caput iniustitiae
 idololatria est, prius est, uti adversus abundantiam idololatriac
 praemuniamur, dum illam non solum in manifestis recognoscimus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Idolum aliquamdiu retro non erat. Priusquam huius monstri 
+         </div>
+         <div n="3" type="chapter">
+            <p>Idolum aliquamdiu retro non erat. Priusquam huius monstri 
 artifices ebullissent, sola templa et vacuae aedes erant, sicut in
 hodiernum quibusdam locis vetustatis vestigia permanent. Tamen
 idololatria agebatur, non in isto nomine, sed in isto opere. Nam
@@ -154,10 +155,9 @@ se dici exposcit. Inde idololatria omnis circa omne idolum famulatus
 et servitus. Inde et omnis idoli artifex eiusdem et unius est
 criminis, nisi parum idololatrian populus admisit qui simulacrum
 vituli et non hominis sibi consecravit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Idolum tam fieri quam coli deus prohibet. Quanto praecedit,
+         </div>
+         <div n="4" type="chapter">
+            <p> Idolum tam fieri quam coli deus prohibet. Quanto praecedit,
 ut fiat quod coli possit, tanto prius est, ne fiat, si coli non licet.
 Propter hanc causam, ad eradicandam scilicet materiam idololatriae,
 <bibl n="Lev. XXVI, 1. Exod. XX, 3. Deut. V, 8."/> lex divina prociamat, Ne feceritis idolum, et coniungens, Neque
@@ -190,12 +190,10 @@ quid recolam de scripturis? Quasi aut non sufficiat vox
 spiritus sancti, aut ultra deliberandum sit, an maledixerit atque
 damuaverit dominus ipsos prius artifices eorum, quorum cultores
 maledicit et damnat?</p>
-<pb xml:id="v.1.p.72"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Plane impensius respondebimus ad excusationes huiusmodi artificum, quos numquam in domum dei admitti oportet, si quis
+            <pb xml:id="v.1.p.72"/>
+         </div>
+         <div n="5" type="chapter">
+            <p> Plane impensius respondebimus ad excusationes huiusmodi artificum, quos numquam in domum dei admitti oportet, si quis
 eam disciplinam norit. Iam illa obici solita vox, Non habeo aliud
 quo vivam, districtius repercuti potest: Vivere ergo habes? Quid
 tibi cum deo est, si tuis legibus? Tum quod et de scripturis audent
@@ -232,10 +230,9 @@ interdixit. Si eundem deum observas, habes legem
 eius, Ne feceris similitudinem. Si et praeceptum factae postea similitudinis <bibl n="Exod. XX, 4."/>
 respicis, et tu imitare Moysen, ne facias adversus legem
 simulacrum aliquod, nisi et tibi deus iusserit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Si nulla lex dei prohibuisset idola fieri a nobis, nulla vox 
+         </div>
+         <div n="6" type="chapter">
+            <p>Si nulla lex dei prohibuisset idola fieri a nobis, nulla vox 
 <pb xml:id="v.1.p.74"/>
 
 spiritus sancti fabricatoribus idolorum non minus quam cultoribus
@@ -256,10 +253,9 @@ Plus es illis quam sacerdos, cum per te habeant sacerdotem;
 diligentia tua numen illorum est. Negas te quod facis colere?
 Sed illi non negant, quibus hanc saginatiorem et maiorem hostiam
 caedis, salutem tuam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Tota die ad hanc partem zelus fidei perorabit ingemens Christianum
+         </div>
+         <div n="7" type="chapter">
+            <p> Tota die ad hanc partem zelus fidei perorabit ingemens Christianum
 ab idolis in ecclesiam venire, de adversaria officina in
 <pb xml:id="v.1.p.75"/>
 
@@ -274,10 +270,9 @@ corpus eius lacessunt. O manus praecidendae! Viderit iam, an
 per similitudinem dictum sit: Si te manus tua scandalizat, amputa <bibl n="Matth. XVIII,"/>
 eam. Quae magis amputandae, quam in quibus domini corpus
 scandalizatur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Sunt et aliae complurium artium species, quae, etsi non contingunt 
+         </div>
+         <div n="8" type="chapter">
+            <p>Sunt et aliae complurium artium species, quae, etsi non contingunt 
 idolorum fabricationem, tamen ea, sine quibus idola nil
 possunt, eodem crimine expediunt. Nec enim differt, an extruas
 vel exornes, si templum, si aram, si aediculam eius instruxeris,
@@ -314,10 +309,9 @@ de manibus nostris (??) rem idolorum postuletur. Quod si concesserimus
 et non remediis tam usitatis egerimus, non puto nos
 a contagio idololatriae vacare, quorum manus non ignorantium in
 officio vel in honore et usu daemoniorum deprehenduntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Animadvertimus inter artes etiam professiones quasdam obnoxias 
+         </div>
+         <div n="9" type="chapter">
+            <p>Animadvertimus inter artes etiam professiones quasdam obnoxias 
 idololatriae. De astrologis ne loquendum quidem est. Sed
 quoniam quidam istis diebus provocavit defendens sibi perseverantiam
 professionis istius, paucis utar. Non allego, quod idola honoret,
@@ -371,12 +365,10 @@ quoque scire debueras, nihil tibi futurum cum ista professione.
 Ipsa te de periculo suo instrueret, quae aliorum climacterica praecanit.
 Non est tibi pars neque sors in ista ratione. Non potest <bibl n="Act. App. VIII, 21."/>
 regna caelorum sperare cuius digitus aut radius abutitur caelo.</p>
-<pb xml:id="v.1.p.80"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Quaerendum autem est etiam de ludimagistris, sed et ceteris
+            <pb xml:id="v.1.p.80"/>
+         </div>
+         <div n="10" type="chapter">
+            <p> Quaerendum autem est etiam de ludimagistris, sed et ceteris
 professoribus litterarum. Immo non dubitandum affines illos esse
 multimodae idololatriae. Primum quibus necesse est deos nationum
 praedicare, nomina, genealogias, fabulas, ornamenta honorifica
@@ -423,10 +415,9 @@ Tanto autem facilius est litteras non docere quam non discere,
 quanto et reliqua scholarum de publicis ac propriis sollemnitatibus
 inquinamenta facilius discipulus fidelis non adibit quam magister
 non frequentabit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> De generationibus si cetera delictorum recogitemus, inprimis
+         </div>
+         <div n="11" type="chapter">
+            <p> De generationibus si cetera delictorum recogitemus, inprimis
 <pb xml:id="v.1.p.83"/>
 
 cupiditatem radicem omnium malorum qua quidam irretiti circa
@@ -481,10 +472,9 @@ quem quotidie pascit. Nulla igitur ars, nulla professio, nulla negotiatio,
 quae quid aut instruendis aut formandis idolis administrat,
 carere poterit titulo idololatriae; nisi si aliud omnino interpretemur
 idololatrian, quam famulatum idolorum colendorum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Male nobis de necessitatibus humanae exhibitionis supplau- 
+         </div>
+         <div n="12" type="chapter">
+            <p>Male nobis de necessitatibus humanae exhibitionis supplau- 
 <pb xml:id="v.1.p.86"/>
 
 dimus, si post fidem obsignatam dicimus: Non habeo quo vivam
@@ -523,10 +513,9 @@ sed in universa serie humanae superstitionis, sive deis
 suis, sive defunctis, sive regibus mancipatae, ut ad eosdem spiritus
 immundos pertinentis, modo per sacrificia et sacerdotia, modo
 per spectacula et hoc genus, modo per festos dies.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Sed de sacrificiis et de sacerdotiis quid loquar? De spectaculis 
+         </div>
+         <div n="13" type="chapter">
+            <p>Sed de sacrificiis et de sacerdotiis quid loquar? De spectaculis 
 autem et voluptatibus eiusmodi suum iam volumen implevimus.
 Hoc loco retractari oportet de festis diebus et aliis extraordinariis
 sollemnitatibus, quas interdum lasciviae, interdum timiditati
@@ -564,10 +553,9 @@ temptatus addictus es. Certe sive hac sive illac, reus
 es confusionis in deo. Qui autem confusus super me fuerit penes
 <bibl n="Matth. X, 32 sq. Luc. IX, 26."/> homines, et ego confundar super illo, inquit, penes pafrem
 meum, qui est in caelis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Sed enim plerique iam induxerunt animo agnoscendum
+         </div>
+         <div n="14" type="chapter">
+            <p> Sed enim plerique iam induxerunt animo agnoscendum
 esse, si quando, quae ethnici, faciunt, ne nomen blasphemetur.
 Porro blasphemia, quae nobis omni modo devitanda est, haec
 opinor est, si qui nostrum ad iustam blasphemiam ethnicum deducat
@@ -618,10 +606,9 @@ est, habes; non dicam tuos dies tantum, sed et plures. Nam
 ethnicis semel annuus dies quisque festus est, tibi octavo quoque
 die. Excerpe singulas sollemnitates nationum et in ordinem exsere:
 pentecosten implere non poterunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Sed luceant, inquit, opera vestra. At nunc lucent tabernae
+         </div>
+         <div n="15" type="chapter">
+            <p> Sed luceant, inquit, opera vestra. At nunc lucent tabernae
 <bibl n="Matth. V, 16."/> et ianuae nostrae. Plures iam invenias ethnicorum fores sine lucernis
 et laureis, quam Christianorum. De ista quoque specie
 quid videtur? Si idoli honor est, sine dubio idoli honor idololatria
@@ -690,10 +677,9 @@ Tu lumen es mundi et arbor virens semper. Si templis renuntiasti,
 ne feceris templum ianuam tuam. Minus dixi: si lupanaribus
 renuntiasti, ne indueris domui tuae faciem novi
 lupanaris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Circa officia vero privatarum et communium sollemnitatum, 
+         </div>
+         <div n="16" type="chapter">
+            <p>Circa officia vero privatarum et communium sollemnitatum, 
 ut togae purae, ut sponsalium, ut nuptialium, ut nominalium,
 nullum putem periculum observari de flatu idololatriae, quae intervenit.
 Causae enim sunt considerandae, quibus praestatur officium.
@@ -717,10 +703,9 @@ vocatus non ibo (proprium enim idoli officium est), sed
 neque consilio neque sumptu aliave opera in eiusmodi fungar.
 Si propter sacrificium vocatus adsistam, ero particeps idololatriae:
 si me alia causa coniungit sacrificanti, ero tantum spectator sacrificii.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Ceterum quid facient servi vel liberi fideles, item officiales 
+         </div>
+         <div n="17" type="chapter">
+            <p>Ceterum quid facient servi vel liberi fideles, item officiales 
 sacrificantibus dominis vel patronis vel praesidibus suis adhaerentes?
 Sed si merum quis sacrificanti tradiderit, immo si verbo
 quoque aliquo sacrificio necessario adiuverit, minister habebitur
@@ -745,10 +730,9 @@ pecunia — neque damnet neque praedamnet, neminem vinciat,
 
  neminem recludat aut torqueat, si haec credibile est fieri
 posse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Iam vero de solo suggestu et apparatu honoris retractandum.
+         </div>
+         <div n="18" type="chapter">
+            <p> Iam vero de solo suggestu et apparatu honoris retractandum.
 Proprius habitus uniuscuisque est, tam ad usum quotidianum, quam
 ad honorem et dignitatem. Igitur purpura illa et aurum cervicis
 ornamentum eodem more apud Aegyptios et Babylonios insignia
@@ -813,10 +797,9 @@ ignorantur. Sed et nativitas et substantia tua molestae tibi
 sunt adversus idololatrian. Ad evitandum remedia deesse non
 possunt, cum et, si defuerint, supersit unicum illud, quo felicior
 factus non in terris magistratus, sed in caelis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p>Possit in isto capitulo etiam de militia definitum videri, quae 
+         </div>
+         <div n="19" type="chapter">
+            <p>Possit in isto capitulo etiam de militia definitum videri, quae 
 inter dignitatem et potestatem est. At nunc de isto quaeritur, an
 fidelis ad militiam converti possit, et an militia ad fidem admitti,
 etiam caligata vel inferior quaeque, cui non sit necessitas immolationum
@@ -833,10 +816,9 @@ adierant milites ad Iohannem et formam observationis acceperant,
 si etiam centurio crediderat, omnem postea militem dominus in
 Petro exarmando discinxit. Nullus habitus licitus est apud nos
 illicito actui adscriptus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Sed enim cum conversatio divinae disciplinae non factis tantum,
+         </div>
+         <div n="20" type="chapter">
+            <p> Sed enim cum conversatio divinae disciplinae non factis tantum,
 verum etiam verbis periclitetur (nam sicut scriptum est, Ecce
 <bibl n="Matth. XII, 21"/> homo et facta eius, ita, Ex ore tuo iustificaberis), meminisse
 debemus etiam in verbis quoque idololatriae incursum praecavendum
@@ -863,10 +845,9 @@ est Mehercule dicere, Medius Fidius, accedente ignorantia quorundam,
 qui ignorant iusiurandum esse per Herculem. Porro
 quid erit deiratio per eos quos eirasti, quam praevaricatio fidei
 cum idololatria? quis enim, per quos deierat, non honorat?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Timiditatis est autem, cum te alius per deos suos obligat iuratione 
+         </div>
+         <div n="21" type="chapter">
+            <p>Timiditatis est autem, cum te alius per deos suos obligat iuratione 
 vel aliqua testificatione, et tu, ne intellegaris, quiescis. Nam
 aeque quiescendo confirmas maiestatem eorum, cuius causa videberis
 obligatus. Quid refert, deos nationum dicendo deos an
@@ -895,10 +876,9 @@ Fidelis autem in eiusmodi ridere debet, non insanire,
 immo, secundum praeceptum, ne per deum quidem remaledicere,
 sed plane benedicere per deum, ut et idola destruas et deum
 praedices et adimpleas disciplinam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> Aeque benedici per deos nationum Christo initiatus non
+         </div>
+         <div n="22" type="chapter">
+            <p> Aeque benedici per deos nationum Christo initiatus non
 sustinebit, ut non semper reiciat immundam benedictionem, et eam
 sibi in deum convertens emundet. Benedici per deos nationum,
 maledici est per deum. Si dedero eleemosynam vel aliquid praestitero
@@ -913,10 +893,9 @@ quodammodo feci. Multi dicunt, Nemo se debet promulgare; puto
 autem nec negare. Negat enim quicumque dissimulat in quacumque
 causa pro ethnico habitus, et utique omnis negatio idololatria
 est, sicut omnis idololatria negatio, sive in factis sive in verbis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="23">
-<p> Sed est quaedam eiusmodi species in facto et in verbo bis
+         </div>
+         <div n="23" type="chapter">
+            <p> Sed est quaedam eiusmodi species in facto et in verbo bis
 acuta et infesta utrimque, licet tibi blandiatur, quasi vacet in utroque,
 dum factum non videtur, quia dictum non tenetur. Pecuniam
 <pb xml:id="v.1.p.105"/>
@@ -954,10 +933,9 @@ copiam vel nobis abrumpendae omnis necessitatis constantiam,
 ne illae litterae negatrices vicariae oris nostri in die iudicii adversus
 nos proferantur signatae signis, non iam advocalorum, sed
 angelorum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="24">
-<p> Inter hos scopulos et sinus, inter haec vada et freta idololatriae
+         </div>
+         <div n="24" type="chapter">
+            <p> Inter hos scopulos et sinus, inter haec vada et freta idololatriae
 velificata spiritu dei fides navigat, tuta si cauta, secura si
 attonita. Ceterum inenatabile excussis profundum est, inextricabile
 inpactis naufragium est, inrespirabile devoratis hypobrychium in
@@ -978,9 +956,9 @@ deliberent, observantes perseverent, non observantes renuntient
 sibi. Viderimus enim si secundum arcae typum et corvus
 et milvus et lupus et canis et serpens in ecclesia erit. Certe
 idololatres in arcae typo non habetur. Nullum animal in idololatren
-figuratum est. Quod in arca non fuit, in ecclesia non sit.</p></div>
-<pb xml:id="v.1.p.108"/>
-</div></body></text>
-
-
+figuratum est. Quod in arca non fuit, in ecclesia non sit.</p>
+         </div>
+         <pb xml:id="v.1.p.108"/>
+      </body>
+   </text>
 </TEI>

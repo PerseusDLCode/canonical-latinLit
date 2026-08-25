@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi018" urn="urn:cts:latinLit:phi0474.phi018">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi018" urn="urn:cts:latinLit:phi0474.phi018">
     
     <ti:title xml:lang="lat">Cum populo gratias egit</ti:title>
 
@@ -17,5 +17,4 @@
     </ti:translation>
     
 
-</ti:work>
-    
+<ti:genre confidence="high">prose-section</ti:genre></ti:work>

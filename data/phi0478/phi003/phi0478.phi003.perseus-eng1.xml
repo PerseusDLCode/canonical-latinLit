@@ -1,79 +1,91 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-                <fileDesc>
-                        <titleStmt>
-                                <title>Pet.</title>
-                                
-                                <author n="Cic.">M. Tullius Cicero</author>
-                                <editor role="editor" n="Shuckburgh">Evelyn Shuckburgh</editor>
-                                <sponsor>Perseus Project, Tufts University</sponsor>
-                                <principal>Gregory Crane</principal>
-                                <respStmt>
-                                        <resp>Prepared under the supervision of</resp>
-                                        <name>Bridget Almas</name>
-                                        <name>Lisa Cerrato</name>
-                                        <name>William Merrill</name>
-                                        <name>David Smith</name>
-                                </respStmt>
-                                <funder n="org:NEH">The National Endowment for the Humanities</funder>
-                        </titleStmt>
-                        <publicationStmt>
-                                <publisher>Trustees of Tufts University</publisher>
-                                <pubPlace>Medford, MA</pubPlace>
-                                <authority>Perseus Project</authority>
-                                <date type="release">2000-08-01</date>
-                        </publicationStmt>
-                        <sourceDesc>
-                                <biblStruct>
-                                        <monogr>
-                                                <author>Cicero</author>
-                                                <title>The Letters of Cicero; the whole extant
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Pet.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Shuckburgh">Evelyn Shuckburgh</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">The National Endowment for the Humanities</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2000-08-01</date>
+            <idno type="CTS">urn:cts:latinLit:phi0478.phi003.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Cicero</author>
+                  <title>The Letters of Cicero; the whole extant
                                                   correspondence in chronological order, in four
-                                                  volumes</title><idno type="OCLC">7046222</idno>
-                                                <editor>Evelyn S. Shuckburgh</editor>
-                                                <imprint>
-                                                  <pubPlace>London</pubPlace>
-                                                  <publisher>George Bell and Sons</publisher>
-                                                  <date>1908-1909</date>
-                                                </imprint>
-                                        </monogr>
-                                </biblStruct>
-                                <bibl>
+                                                  volumes</title>
+                  <idno type="OCLC">7046222</idno>
+                  <editor>Evelyn S. Shuckburgh</editor>
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell and Sons</publisher>
+                     <date>1908-1909</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
                                         
                                 </bibl>
-                        </sourceDesc>
-                </fileDesc>
-
-                <encodingDesc>
-                        <refsDecl>
-                                <refState delim="." unit="volume"/>
-                                <refState unit="page"/>
-                        </refsDecl>
-                        <refsDecl>
-                                <refState n="chunk" unit="year"/>
-                        </refsDecl>
-                        <refsDecl>
-                                <refState unit="volume"/>
-                                <refState unit="year"/>
-                                <refState unit="letter"/>
-                                <refState unit="section"/>
-                        </refsDecl>
-                </encodingDesc>
-
-                <profileDesc>
-                        <langUsage>
-                                <language ident="en">English </language>
-                                <language ident="la">Latin </language>
-                                <language ident="greek">Greek </language>
-                                <language ident="fr">French </language>
-                                <language ident="de">German </language>
-                                <language ident="it">Italian </language>
-                        </langUsage>
-                </profileDesc>
-
-                <revisionDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim="." unit="volume"/>
+            <refState unit="page"/>
+         </refsDecl>
+         <refsDecl>
+            <refState n="chunk" unit="year"/>
+         </refsDecl>
+         <refsDecl>
+            <refState unit="volume"/>
+            <refState unit="year"/>
+            <refState unit="letter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English </language>
+            <language ident="la">Latin </language>
+            <language ident="greek">Greek </language>
+            <language ident="fr">French </language>
+            <language ident="de">German </language>
+            <language ident="it">Italian </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
                         <!--
                         <change>
                                 <date>9 August 1999</date>
@@ -234,15 +246,15 @@ Combined into single file.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite file and converted to unicode</item>
       </change>-->
-                        <change when="2014-08-01" who="Stella Dee">edited markup</change>
-                </revisionDesc>
-        </teiHeader>
-        <text xml:lang="en">
-                <body>
-                        <div n="text=Pet." type="letter">
-                                <head>DE PETITIONE CONSULATUS</head>
-                                <epigraph>
-                                        <p>[This is rather an essay than a letter, and is not
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <body xml:base="urn:cts:latinLit:phi0478.phi003.perseus-eng1">
+         <div n="text=Pet." type="letter">
+            <head>DE PETITIONE CONSULATUS</head>
+            <epigraph>
+               <p>[This is rather an essay than a letter, and is not
                                                 generally included in any of the books of the
                                                 correspondence. To my mind there are indications of
                                                 its being a later composition, the exercise of some
@@ -251,12 +263,12 @@ Combined into single file.
                                                 of regarding it as the composition of Quintus, and
                                                 at any rate it is a contribution to the picture of
                                                 the times.]</p>
-                                </epigraph>
-                                <opener>
-                                        <salute>Q. CICERO TO HIS BROTHER MARCUS (AT ROME)</salute>
-                                </opener>
-                                <milestone unit="section" n="1"/>
-                                <p>Although you have all the accomplishments within the reach of
+            </epigraph>
+            <opener>
+               <salute>Q. CICERO TO HIS BROTHER MARCUS (AT ROME)</salute>
+            </opener>
+            <milestone unit="section" n="1"/>
+            <p>Although you have all the accomplishments within the reach of
                                         human genius, experience, or acuteness, yet I thought it
                                         only consistent with my affection to set down in writing
                                         what occurred to my mind while thinking, as I do, day and
@@ -265,10 +277,9 @@ Combined into single file.
                                         considerations on a subject, which appeared to be
                                         disconnected and without system, might be brought under one
                                         view by a logical arrangement. </p>
-                                <p>Consider what the state is : what it is you seek: who you are
+            <p>Consider what the state is : what it is you seek: who you are
                                         that seek it. Almost every day as you go down to the forum
-                                        you should say to yourself, "I am a <foreign xml:lang="la"
-                                                >novus homo</foreign>," "I am a candidate for the
+                                        you should say to yourself, "I am a <foreign xml:lang="la">novus homo</foreign>," "I am a candidate for the
                                         consulship," "This is Rome." For the "newness" of your name
                                         you will best compensate by the brilliancy of your oratory.
                                         That has ever carried with it very great political
@@ -282,13 +293,10 @@ Combined into single file.
                                         use and always available; and remember what Demetrius wrote
                                         about the hard work and practice of Demosthenes; and,
                                         finally, take care that both the number and rank of your
-                                        friends are unmistakable. For you have such as few <foreign
-                                                xml:lang="la">novi homines</foreign> have had—all
-                                        the <foreign xml:lang="la">publicani</foreign>, <pb n="368"
-                                        /> nearly the whole equestrian order, many municipal towns
+                                        friends are unmistakable. For you have such as few <foreign xml:lang="la">novi homines</foreign> have had—all
+                                        the <foreign xml:lang="la">publicani</foreign>, <pb n="368"/> nearly the whole equestrian order, many municipal towns
                                         specially devoted to you, many persons who have been
-                                        defended by you, men of every order, many <foreign
-                                                xml:lang="la">collegia</foreign>, and, besides
+                                        defended by you, men of every order, many <foreign xml:lang="la">collegia</foreign>, and, besides
                                         these, a large number of the rising generation who have
                                         become attached to you in their enthusiasm for rhetoric,
                                         and, finally, your friends who visit you daily in large
@@ -311,10 +319,8 @@ Combined into single file.
                                         said anything in the spirit of that party, we did so with
                                         the view of attracting Cn. Pompeius, that we might have the
                                         man of the greatest influence either actively on our side in
-                                        our canvass, or at least not opposed to us. <note n="1"
-                                                anchored="true">It is to be observed that at this
-                                                time Pompey is reckoned as inclined to the <foreign
-                                                  xml:lang="la">populares</foreign>. His legislation
+                                        our canvass, or at least not opposed to us. <note n="1" anchored="true">It is to be observed that at this
+                                                time Pompey is reckoned as inclined to the <foreign xml:lang="la">populares</foreign>. His legislation
                                                 in B.C. 70 had been somewhat in their favour; but he
                                                 had not, as a fact, ever declared himself either
                                                 way. </note> Furthermore, take pains to get on your
@@ -323,9 +329,9 @@ Combined into single file.
                                         political position. You have very many; make them feel how
                                         much you think depends on them: if you induce those to be
                                         positively eager who are merely not disinclined, they will
-                                        be of very great advantage to you. <milestone unit="section"
-                                                n="2"/></p>
-                                <p>It is also a great set-off to your "newness," that the nobles who
+                                        be of very great advantage to you. <milestone unit="section" n="2"/>
+            </p>
+            <p>It is also a great set-off to your "newness," that the nobles who
                                         are your competitors are of a such a kind that no one can
                                         venture to say that their nobility ought to stand them in
                                         greater stead than your high character. For instance, who
@@ -347,8 +353,7 @@ Combined into single file.
                                                   iuravitque se forum eiurare, quod aequo jure uti
                                                   non posset</foreign> (<bibl>Ascon. 84</bibl>). His
                                                 offences in Macedonia, where be had been left by
-                                                Sulla, were in B.C. <date to="-0080" from="-0083"
-                                                  >83</date>-80; his impeachment, B.C. 76; his
+                                                Sulla, were in B.C. <date to="-0080" from="-0083">83</date>-80; his impeachment, B.C. 76; his
                                                 expulsion from the senate, B.C. 70. </note> We know
                                         that he was ejected from the senate by the judgment of
                                         genuine censors : in our praetorship we had him as a
@@ -374,9 +379,9 @@ Combined into single file.
                                         killed with his own hands the best man of the day, his own
                                         sister's husband, Quintus Caecilius, who was a Roman eques,
                                         a man belonging to no party, always quiet by inclination,
-                                        and then so from age also. <milestone unit="section" n="3"
-                                        /></p>
-                                <p>Why should I speak of him as a candidate for the consulship, who
+                                        and then so from age also. <milestone unit="section" n="3"/>
+            </p>
+            <p>Why should I speak of him as a candidate for the consulship, who
                                         caused M. Marius, a man most beloved by the Roman people, to
                                         be beaten with vine-rods in the sight of that Roman people
                                         from one end of the City to the other—forced him up to the
@@ -411,7 +416,7 @@ Combined into single file.
                                         every day. His position is such that he is more likely to be
                                         nervous even if you do nothing, than contemptuous if you
                                         start any proceedings. </p>
-                                <p>What much better fortune in your canvass is yours than that which
+            <p>What much better fortune in your canvass is yours than that which
                                         not long ago fell to the lot of another "new man", Gaius
                                         Caelius! <note n="1" anchored="true">Caelius, consul B.C. 94
                                                 with Cn. Domitius Ahenobarbus. </note> He had two
@@ -430,24 +435,22 @@ Combined into single file.
                                         conspicuous for their birth as notorious for their vices.
                                         For what citizen can there be found so ill-affected as to
                                         wish by one vote to draw two daggers against the Republic?
-                                                <milestone unit="section" n="4"/></p>
-                                <p>Having thus set forth what advantages you have and might have to
+                                                <milestone unit="section" n="4"/>
+            </p>
+            <p>Having thus set forth what advantages you have and might have to
                                         set against your "newness," I think I ought now to say a
                                         word on the importance of what you are trying for. You are
                                         seeking the consulship, an office of which no one thinks you
                                         unworthy, but of which there are many who will be jealous.
-                                        For, while by birth of equestrian rank, <note n="2"
-                                                anchored="true">Cicero, of course, was now a
+                                        For, while by birth of equestrian rank, <note n="2" anchored="true">Cicero, of course, was now a
                                                 senator, but he was the first of his family who had
                                                 been so. The others who came forward for the
                                                 consulship were two patricians, P. Sulpicius Galba,
                                                 L. Sergius Catilina; four plebeians. C. Antonius, L.
-                                                Cassius Longinus, whom Asconius calls <foreign
-                                                  xml:lang="la">nobiles</foreign>, i.e., members of
+                                                Cassius Longinus, whom Asconius calls <foreign xml:lang="la">nobiles</foreign>, i.e., members of
                                                 families who had held curule office; and Q.
                                                 Cornificius and C. Licinius Sacerdos, whose families
-                                                had only recently risen to this position, <foreign
-                                                  xml:lang="la">tantum non primi ex familiis suis
+                                                had only recently risen to this position, <foreign xml:lang="la">tantum non primi ex familiis suis
                                                   magistratum adepti erant</foreign> (Asc.). </note>
                                         you are seeking the highest rank in the state, and yet one
                                         which, though the highest, <pb n="371"/> reflects much
@@ -468,16 +471,15 @@ Combined into single file.
                                         pleaded. Nay, carefully consider this also, whether, seeing
                                         that you have devoted yourself with such fervour to the
                                         promotion of Pompey's glory you can suppose certain men to
-                                        be your friends on that account. <note n="1" anchored="true"
-                                                >He hints, I think, at Caesar, who Supported
+                                        be your friends on that account. <note n="1" anchored="true">He hints, I think, at Caesar, who Supported
                                                 Antonius and Catiline and also the Luculli, who were
                                                 opponents of Pompey. </note> Wherefore, seeing that
                                         you are seeking the highest place in the state, and at the
                                         same time that there do exist sentiments opposed to you, you
                                         must positively employ every method and all your vigilance,
-                                        labour, and attention to business. <milestone unit="section"
-                                                n="5"/></p>
-                                <p>Again, the canvass for office resolves itself into an activity of
+                                        labour, and attention to business. <milestone unit="section" n="5"/>
+            </p>
+            <p>Again, the canvass for office resolves itself into an activity of
                                         two kinds, of which one is concerned with the loyalty of
                                         friends, the other with the feelings of the people. The
                                         loyalty of friends must be secured by acts of kindness and
@@ -519,16 +521,14 @@ Combined into single file.
                                         election, those of C. Fundanius, Q. Gallius, C. Cornelius,
                                         C. Orchivius. <note n="1" anchored="true">C. Fundanius,
                                                 defended by Cicero B.C. 66, fr. p.216. Q. Gallius,
-                                                defended by Cicero on <foreign xml:lang="la"
-                                                  >ambitus</foreign> B.C. 64, fr. p. 217
+                                                defended by Cicero on <foreign xml:lang="la">ambitus</foreign> B.C. 64, fr. p. 217
                                                   (<bibl>Brut. 277</bibl>). C. Cornelius, quaestor
                                                 of Pompey, tr. pl. B.C. 67, defended by Cicero B.C.
                                                 65 (<bibl>Ascon. 56ff.</bibl>). C. Orchivius.
                                                 Cicero's colleague in praetorship B.C. 66 seq.). We
                                                 don't know on what charge Cicero defended him. The
                                                 passage in <bibl>pro Cluent. 147</bibl>, does not
-                                                mean that he was accused of <foreign xml:lang="la"
-                                                  >peculatus</foreign>, but that he presided over
+                                                mean that he was accused of <foreign xml:lang="la">peculatus</foreign>, but that he presided over
                                                 trials of <foreign xml:lang="la">peculatus</foreign>
                                                 as praetor. </note> When they committed the defence
                                         of these men to you, I am acquainted with what their
@@ -548,9 +548,9 @@ Combined into single file.
                                         case be clearly defined and set forth. And as you have never
                                         been in any matter importunate with them, so be careful that
                                         they understand that you have reserved for this occasion all
-                                        that you consider them to owe you. <milestone unit="section"
-                                                n="6"/></p>
-                                <p>But since men are principally induced to shew goodwill and zeal
+                                        that you consider them to owe you. <milestone unit="section" n="6"/>
+            </p>
+            <p>But since men are principally induced to shew goodwill and zeal
                                         at the hustings by three considerations—kindness received,
                                         hope of more, personal affection and good feeling—we must
                                         take notice how best to take advantage of each of these. By
@@ -595,9 +595,9 @@ Combined into single file.
                                         the ability to exert themselves on the spur of the moment :
                                         be sure you distinguish between such men, that you may, not
                                         be disappointed in your expectation of support by placing
-                                        over-much hope on some particular person. <milestone
-                                                unit="section" n="7"/></p>
-                                <p>But although you ought to rely on and be fortified by,
+                                        over-much hope on some particular person. <milestone unit="section" n="7"/>
+            </p>
+            <p>But although you ought to rely on and be fortified by,
                                         friendships already gained and firmly secured, yet in the
                                         course of the canvass itself very numerous and useful
                                         friendships are acquired. For among its annoyances a
@@ -636,9 +636,9 @@ Combined into single file.
                                         lying under a cloud of discredit, and without friends,
                                         should beat a man fortified with the devotion of a numerous
                                         circle and by the good opinion of all, cannot possibly occur
-                                        except from gross negligence. <milestone unit="section"
-                                                n="8"/></p>
-                                <p>Wherefore see that you have the votes of all the centuries
+                                        except from gross negligence. <milestone unit="section" n="8"/>
+            </p>
+            <p>Wherefore see that you have the votes of all the centuries
                                         secured to you by the number and variety of your friends.
                                         The first and most obvious thing is that you should embrace
                                         the Roman senators and knights, and the active and popular
@@ -654,8 +654,7 @@ Combined into single file.
                                         easily keep a hold upon the multitude. When you have done
                                         that, take care to have in your mind a chart of all Italy
                                         laid out according to the tribe of each town, and ]earn it
-                                        by heart, so that you may not allow any <foreign
-                                                xml:lang="la">municipium</foreign>, colony,
+                                        by heart, so that you may not allow any <foreign xml:lang="la">municipium</foreign>, colony,
                                         prefecture, or, in a word, any spot in Italy to exist, in
                                         which you have not a sufficient foothold. Inquire also for
                                         and trace out individuals in every region, inform yourself
@@ -685,7 +684,7 @@ Combined into single file.
                                         section of their tribe, owing to considerations attaching to
                                         their municipality or neighbourhood or college, then you may
                                         allow yourself to entertain the highest hopes. </p>
-                                <p>Again, the centuries of the knights appear to me capable of being
+            <p>Again, the centuries of the knights appear to me capable of being
                                         won over, if you are careful, with considerably more ease.
                                         Let your first care be to acquaint yourself with the knights
                                         ; for they are comparatively few : then make advances to
@@ -700,8 +699,9 @@ Combined into single file.
                                         young in canvassing for votes, appearing at various places,
                                         bringing intelligence, and being in attendance on you in
                                         public are surprisingly important as well as creditable.
-                                                <milestone unit="section" n="9"/></p>
-                                <p>And since I have mentioned "attendance," I may add that you
+                                                <milestone unit="section" n="9"/>
+            </p>
+            <p>And since I have mentioned "attendance," I may add that you
                                         should be careful to see large companies every day of every
                                         class and order; for from the mere number of these a guess
                                         may well be made as to the amount of support you are likely
@@ -713,8 +713,7 @@ Combined into single file.
                                         less select and, according to the prevailing fashion, come
                                         in greater numbers, you must contrive to make them think
                                         that you value even this slight attention very highly. Let
-                                        those who shall come to your house see that you <pb n="376"
-                                        /> notice it; shew your gratification to such of their
+                                        those who shall come to your house see that you <pb n="376"/> notice it; shew your gratification to such of their
                                         friends as will repeat it to them ; frequently mention it to
                                         the persons themselves. It often happens that people, when
                                         they visit a number of candidates, and observe that there is
@@ -732,7 +731,7 @@ Combined into single file.
                                         thinks that he is not giving satisfaction can never be a
                                         friend. You ought, however, to know each man's real feeling,
                                         in order to settle how much confidence to place in him. </p>
-                                <p>Secondly, of those who escort you to the forum: since this is a
+            <p>Secondly, of those who escort you to the forum: since this is a
                                         greater attention than a morning call, indicate and make
                                         clear that it is still more gratifying to you, and as far as
                                         it shall lie in your power go down to the forum at fixed
@@ -757,8 +756,9 @@ Combined into single file.
                                         civil existence and entire fortunes, and since there will
                                         never be any other time at which they can shew their
                                         gratitude, they should remunerate you by this service.
-                                                <milestone unit="section" n="10"/></p>
-                                <p>And since the point now in discussion is entirely a question of
+                                                <milestone unit="section" n="10"/>
+            </p>
+            <p>And since the point now in discussion is entirely a question of
                                         the loyalty of friends, I must not, I think, pass over one
                                         caution. Deception, intrigue, and treachery are everywhere.
                                         This is not the time for a formal disquisition on the
@@ -785,9 +785,9 @@ Combined into single file.
                                         you owing to friendship for your competitors, gratify them
                                         also by the same means as the former, and, if you can get
                                         them to believe it, shew that you are kindly disposed to the
-                                        very men who are standing against you. <milestone
-                                                unit="section" n="11"/></p>
-                                <p>Having said enough about securing friendships, I must now speak
+                                        very men who are standing against you. <milestone unit="section" n="11"/>
+            </p>
+            <p>Having said enough about securing friendships, I must now speak
                                         on another department of a candidate's task, which is
                                         concerned with the conciliation of the people. This demands
                                         a knack of remembering names, insinuating manners, constant
@@ -850,8 +850,9 @@ Combined into single file.
                                         gentlemanly way: you must point out to him that your hands
                                         are tied, must shew that you are exceedingly sorry, must
                                         convince him that you will make up for it in other ways.
-                                                <milestone unit="section" n="12"/></p>
-                                <p>I have heard a man say about certain orators, to whom he had
+                                                <milestone unit="section" n="12"/>
+            </p>
+            <p>I have heard a man say about certain orators, to whom he had
                                         offered his case, "that he had been better pleased with the
                                         words of the one who declined, than of the one who
                                         accepted." So true it is that men are more taken by look and
@@ -865,8 +866,7 @@ Combined into single file.
                                         saying that you are hindered by the affairs of closer
                                         friends, or by cases more important or previously
                                         undertaken, quit you with hostile feelings, and are one and
-                                        all disposed to prefer an insincere promise to a direct <pb
-                                                n="379"/> negative from you. C. Cotta, a master in
+                                        all disposed to prefer an insincere promise to a direct <pb n="379"/> negative from you. C. Cotta, a master in
                                         the art of electioneering, used to say that, "so long as the
                                         request was not directly contrary to moral duty, he used to
                                         promise his assistance to all to bestow it on those with
@@ -907,8 +907,9 @@ Combined into single file.
                                         by giving them hope of your support the contriving that men
                                         should leave you with more friendly feelings than they came,
                                         the filling the ears of as many as possible with the most
-                                        telling words. <milestone unit="section" n="13"/></p>
-                                <p>For my next theme must be popular report, to which very great
+                                        telling words. <milestone unit="section" n="13"/>
+            </p>
+            <p>For my next theme must be popular report, to which very great
                                         attention must be paid. But what I have said throughout the
                                         foregoing discourse applies also to the diffusion of a
                                         favourable report: the reputation for eloquence; the favour
@@ -933,12 +934,10 @@ Combined into single file.
                                         defence of Cornelius. <note n="1" anchored="true">Manilius,
                                                 tr. p1. B.C. 66, proposed the law for appointing
                                                 Pompey to supersede Lucullus in the East. After his
-                                                year of office he was accused of <foreign
-                                                  xml:lang="la">majestas</foreign>, and later on of
+                                                year of office he was accused of <foreign xml:lang="la">majestas</foreign>, and later on of
                                                   <foreign xml:lang="la">repetundae</foreign>, but
                                                 apparently neither case came on. C. Cornelius, tr.
-                                                pl. B.C. 57, was accused of <foreign xml:lang="la"
-                                                  >majestas</foreign> in B.C. 55, and defended by
+                                                pl. B.C. 57, was accused of <foreign xml:lang="la">majestas</foreign> in B.C. 55, and defended by
                                                 Cicero. He had become alienated from the senate by
                                                 its opposition to his legislation against usury in
                                                 the provinces, and the case made a great sensation.
@@ -948,14 +947,13 @@ Combined into single file.
                                         everyone knows that Cn. Pompeius is strongly in your favour,
                                         and that it emphatically suits his purpose that you should
                                         win your election. Lastly, take care that your whole
-                                        candidature is full of <foreign xml:lang="fr"
-                                                >éclat</foreign>, brilliant, splendid, suited to the
+                                        candidature is full of <foreign xml:lang="fr">éclat</foreign>, brilliant, splendid, suited to the
                                         popular taste, presenting a spectacle of the utmost dignity
                                         and magnificence. See also, if possible, that some new
                                         scandal is started against your competitors for crime or
                                         looseness of life or corruption, such as is in harmony with
                                         their characters. </p>
-                                <p>Above all in this election you must see that the Republic
+            <p>Above all in this election you must see that the Republic
                                         entertains a good hope and an honourable opinion of you. And
                                         yet you must not enter upon political measures in
                                         senate-house and public meeting while a candidate: you must
@@ -967,8 +965,9 @@ Combined into single file.
                                         as not likely to be hostile to their interests from the fact
                                         that in your style of speaking in public meetings, and in
                                         your declared convictions, you have been on the popular
-                                        side. <milestone unit="section" n="14"/></p>
-                                <p>This is what occurred to me to say on the subject of these two
+                                        side. <milestone unit="section" n="14"/>
+            </p>
+            <p>This is what occurred to me to say on the subject of these two
                                         morning reflexions, which I said you ought to turn over in
                                         your mind every day as you went down to the forum: "I am a
                                                 <foreign xml:lang="la">novus homo</foreign>," "I am
@@ -1014,7 +1013,7 @@ Combined into single file.
                                         their agents with fear, and by some means check the
                                         distributors, it is possible to secure either that there
                                         shall be no bribery or that it shall be ineffectual. </p>
-                                <p>These are the points that I thought, not that I knew better than
+            <p>These are the points that I thought, not that I knew better than
                                         you, but that I could more easily than you—in the pressing
                                         state of your present engagements—collect together and send
                                         you written out. And although they are written in such terms
@@ -1024,7 +1023,7 @@ Combined into single file.
                                         corrected or entirely struck out, or that has been omitted.
                                         For I wish this little essay "on the duties of a candidate"
                                         to be regarded as complete in every respect.</p>
-                        </div>
-                </body>
-        </text>
+         </div>
+      </body>
+   </text>
 </TEI>

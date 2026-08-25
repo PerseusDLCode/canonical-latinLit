@@ -1,65 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Pudicitia</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Pudicitia</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>                                                                                                    
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa025.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.791"/>
-<head>DE PUDICITIA.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Pudicitia, flos morum, honor corporum, decor sexuum, integritas 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa025.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=943%3Bownerid=13510798896211526-997">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa025.opp-lat1">
+         <pb xml:id="v.1.p.791"/>
+         <head>DE PUDICITIA.</head>
+         <div n="1" type="chapter">
+            <p>Pudicitia, flos morum, honor corporum, decor sexuum, integritas 
 sanguinis, fides generis, fundamentum sanctitatis, praeiudicium
 omnis bonae mentis, quamquam rara nec facile perfecta
 vixque perpetua, tamen aliquatenus in saeculo morabitur, si natura
@@ -147,10 +150,9 @@ et ideo durissime nos infamantes paracletum disciplinae enormitate
 digamos foris sistimus. Eundem limitem liminis moechis quoque
 et fornicatoribus figimus, ieiunas pacis lacrimas profusuris,
 nec amplius ab ecclesia quam publicationem dedecoris relaturis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Ceterum deus, inquiunt, bonus et optimus, et misericors et
+         </div>
+         <div n="2" type="chapter">
+            <p> Ceterum deus, inquiunt, bonus et optimus, et misericors et
 miserator et misericordiae plurimus, quam omni sacrificio anteponit,
 <bibl n="Ioel. II, 13. Hos. VI, 6."/> non tanti ducens peccatoris mortem quam paenitentiam,
 <bibl n="Ezech. XXXIII, 11."/> salutificator omnium hominum et maxime fidelium. Itaque et filios
@@ -220,10 +222,9 @@ scilicet remissibili, alia quae consequi nullo modo possit, in delicto
 scilicet inremissibili. Et superest specialiter de moechiae
 et fornicationis statu examinare, in quam delictorum partem
 debeant redigi.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Sed prius decidam intercedentem ex diverso responsionem ad 
+         </div>
+         <div n="3" type="chapter">
+            <p>Sed prius decidam intercedentem ex diverso responsionem ad 
 eam paenitentiae speciem quam cum maxime definimus venia carere.
 Si enim, inquiunt, aliqua paenitentia caret venia, iam nec
 in totum agenda tibi est. Nihil enim agendum est frustra. Porro
@@ -247,10 +248,9 @@ si non vacaverit ab officio. Ita nec paenitentia huiusmodi
 vana, nec disciplina eiusmodi dura est. Deum ambae honorant.
 Illa nihil sibi blandiendo facilius impetrabit, ista nihil sibi adsumendo
 plenius adiuvabit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Possumus igitur demandata paenitentiae distinctione ad ipsorum 
+         </div>
+         <div n="4" type="chapter">
+            <p>Possumus igitur demandata paenitentiae distinctione ad ipsorum 
 iam delictorum regredi censum, an ea sint, quae veniam ab
 hominibus consequi possint. Inprimis quod moechiam et fornicationem
 <pb xml:id="v.1.p.798"/>
@@ -270,10 +270,9 @@ crimen eludant. Reliquas autem libidinum furias impias et
 in corpora et in sexus ultra iura naturae, non modo limine, verum
 omni ecclesiae tecto submovemus, quia non sunt delicta, sed
 monstra.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Ergo moechia, quod etiam fornicationis est res, secundum
+         </div>
+         <div n="5" type="chapter">
+            <p> Ergo moechia, quod etiam fornicationis est res, secundum
 opus criminis quanti aestimanda sit sceleris prima lex dei praesto
 est. Siquidem post interdictam alienorum deorum superstitionem
 ipsorumque idolorum fabricationem, post commendatam sabbati venerationem,
@@ -333,10 +332,9 @@ et humanissima disciplina? Aut omnibus eis hoc esse debebis
 quidem et homicidam semel damnas, moechum vero de medio excipis?
 idololatrae successorem, homicidae antecessorem, utriusque collegam?
 Personae acceptatio est: miserabiliores paenitentias reliquisti.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Plane, si ostendas, de quibus patrociniis exemplorum praeceptorumque
+         </div>
+         <div n="6" type="chapter">
+            <p> Plane, si ostendas, de quibus patrociniis exemplorum praeceptorumque
 caelestium soli moechiae et in ea fornicationi quoque
 ianuam paenitentiae expandas, ad hanc iam lineam dimicabit nostra
 congressio. Praescribam tamen tibi formam necesse est, ne ad
@@ -375,9 +373,8 @@ quia et populum ipsum totiens reum istorum totiens invenimus
 retro restitutum. Communicabis et homicidae, quia et Nabothae
 sanguinem Achab deprecatione delevit, et David Uriae caedem <bibl n="I Reg. XXI, 27."/>
 cum causa eius moechia confessione purgavit. Iam et incesta <bibl n="II Sam. XII, 13."/>
-<pb xml:id="v.1.p.802"/>
-
-<bibl n="Gen. XIX. 33. XXVIII, 9. XXXVIII, 16 sqq. Hos. I, 2."/> donabis propter Loth, et fornicationes cum incesto propter Iudam,
+               <pb xml:id="v.1.p.802"/>
+               <bibl n="Gen. XIX. 33. XXVIII, 9. XXXVIII, 16 sqq. Hos. I, 2."/> donabis propter Loth, et fornicationes cum incesto propter Iudam,
 et turpes de prostitutione nuptias propter Osee, et non tantum
 frequentatas, verum et semel plures, propter patres nostros.
 Utique enim dignum est peraequari nunc quoque gratiam circa
@@ -414,10 +411,9 @@ et agni, tenes aliquod exemplum sive praeceptum sive formam
 sive sententiam indultae sive indulgendae fornicationis atque moechiae,
 habes etiam temporis a nobis definitionem ex quo deputetur
 aetas quaestionis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>A parabolis licebit incipias, ubi est ovis perdita a domino requisita <bibl n="Luc. XV, 4 sqq."/>
+         </div>
+         <div n="7" type="chapter">
+            <p>A parabolis licebit incipias, ubi est ovis perdita a domino requisita <bibl n="Luc. XV, 4 sqq."/>
 quisita et humeris eius revecta. Procedant ipsae picturae calicum
 vestrorum, si vel in illis perlucebit interpretatio pecudis illius,
 utrumne Christiano an ethnico peccatori de restitutione conlineet.
@@ -512,10 +508,9 @@ etiam hac nostra cum illorum interpretatione eo magis in ethnicum
 spectabunt et ovis et drachmae argumenta, quanto nec in eius
 delicti Christianum competere possunt propter quod in Christianum
 de diversa parte coguntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Sed enim plerosque interpretes parabolarum idem exitus
+         </div>
+         <div n="8" type="chapter">
+            <p> Sed enim plerosque interpretes parabolarum idem exitus
 decipit quem in vestibus purpura oculandis saepissime evenire
 <pb xml:id="v.1.p.807"/>
 
@@ -571,10 +566,9 @@ aptissime? Quoniam a primordio secundum occasiones parabolarum
 ipsas materias confinxerunt doctrinarum. Vacuit scilicet
 illis solutis a regula veritatis ea conquirere atque componere quorum
 parabolae videntur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p>Nos autem quia non ex parabolis materias commentamur, sed 
+         </div>
+         <div n="9" type="chapter">
+            <p>Nos autem quia non ex parabolis materias commentamur, sed 
 ex materiis parabolas interpretamur, nec valde laboramus omnia in
 expositione torquere, dum contraria quaeque caveamus. Quare <bibl n="Luc. XV. 4 sqq. 8 sqq."/>
 centum oves? et quid utique decem drachmae? et quae illae scopae?
@@ -672,10 +666,9 @@ humeris ipsius domini in gregem referet. Sed malumus in
 scripturis minus, si forte, sapere quam contra. Proinde sensum
 domini custodire debemus atque praeceptum. Non est levior transgressio
 in interpretatione quam in conversatione.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Excusso igitur iugo in ethnicum disserendi parabolas istas,
+         </div>
+         <div n="10" type="chapter">
+            <p> Excusso igitur iugo in ethnicum disserendi parabolas istas,
 et semel dispecta vel recepta necessitate non aliter interpretandi
 quam materia propositi est, contendunt iam nec competere ethnicis
 paenitentiae denuntiationem, quorum delicta obnoxia ei non sint,
@@ -738,10 +731,9 @@ Quid enim ex paenitentia maturescit quam emendationis effectus!
 Sed etsi venia potius est paenitentiae fructus, hanc quoque consistere
 non licet sine cessatione delicti. Ita cessatio delicti radix
 est veniae, ut venia sit paenitentiae fructus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Exinde quod ad evangelium pertinet, parabolarum quidem
+         </div>
+         <div n="11" type="chapter">
+            <p> Exinde quod ad evangelium pertinet, parabolarum quidem
 discussa iam quaestio est. Si vero et factis aliquid tale pro peccatoribus
 edidit dominus, ut cum peccatrici feminae etiam corporis
 <bibl n="Luc. VII, 37 sq."/> sui contactum permittit lavanti lacrimis pedes eius et crinibus detergenti
@@ -760,10 +752,9 @@ est domini passione censetur. Nemo perfectus ante repertum
 ordinem fide, nemo Christianus ante Christum caelo resumptum,
 nemo sanctus ante spiritum sanctum de caelo repraesentatum ipsius
 disciplinae determinatorem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Itaque isti qui alium paracletum in apostolis et per apostolos 
+         </div>
+         <div n="12" type="chapter">
+            <p>Itaque isti qui alium paracletum in apostolis et per apostolos 
 receperunt, quem nec in prophetis propriis agnitum iam nec in
 apostolis possident, age nunc vel de apostolico instrumento doceant
 maculas carnis post baptisma respersae paenitentia. dilui
@@ -807,10 +798,9 @@ pax ab ecclesiis redditur. De qua finitione sua apostolos
 
 excidisse, puto, non licet credere; aut si credere quidam possunt,
 debebunt probare.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Novimus plane et hic suspiciones eorum. Revera enim suspicantur 
+         </div>
+         <div n="13" type="chapter">
+            <p>Novimus plane et hic suspiciones eorum. Revera enim suspicantur 
 apostolum Paulum in secunda ad Corinthios eidem fornicatori
 veniam dedisse quem in prima dedendum satanae in interitum
 carnis pronuntiarit, impium patris de matrimonio haeredem, quasi
@@ -909,10 +899,9 @@ in die domini ab immunditiarum contagione, eiecto incesto
 <bibl n="I Cor. V, 6."/> fornicatore. Siquidem subiungit, Non scitis, quod modicum fermentum
 totam desipiat consparsionem? Et tamen fornicatio incesta
 non erat modicum, sed grande fermentum.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p> Et his itaque discussis, quae intercesserant, regredior ad secundam
+         </div>
+         <div n="14" type="chapter">
+            <p> Et his itaque discussis, quae intercesserant, regredior ad secundam
 Corinthiorum, ut probem illud quoque apostoli dictum,
 <bibl n="II Cor. II, 6."/> Sufficiat eiusmodi homini increpatio ista quae a multis non in
 fornicatoris personam convenire. Si enim dedendum satanae pronuntiaverat
@@ -1035,10 +1024,9 @@ quam advocata etiam domini virtute damnaverat, ne humana sententia
 videretur. Lusit igitur et de suo spiritu et de ecclesiae
 angelo et de virtute domini, si quod de consilio eorum pronuntiaverat
 rescidit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p> Si etiam sequentia illius epistolae ad intentationem apostoli
+         </div>
+         <div n="15" type="chapter">
+            <p> Si etiam sequentia illius epistolae ad intentationem apostoli
 extendas, nec ipsa comparabuntur ad obliterationem incesti, ne et
 hic suffundatur apostolus posteriorum incongruentia sensuum.
 <pb xml:id="v.1.p.825"/>
@@ -1075,8 +1063,7 @@ mentibus nostris, revocaverat aliquem fornicatorem in ecclesiam?
 an ideo scribit, ne tibi nunc revocasse videatur? Haec sicuti et
 praeteritis praescribere, ita et sequentibus praeiudicare debebunt.
 <pb xml:id="v.1.p.826"/>
-
-<bibl n="II Cor. XII, 21."/> In finem enim epistolae dicens, Ne rursus cum venero, humiliet
+               <bibl n="II Cor. XII, 21."/> In finem enim epistolae dicens, Ne rursus cum venero, humiliet
 me deus, et lugeam multos eorum qui ante deliquerunt et paenitentiam
 non egerunt super immunditia quam admiserunt, fornicatione
 et vilitate, non utique recipiendos constituit, si paenitentiam
@@ -1089,10 +1076,9 @@ hominis ipsius, contra formam et regulam doctrinarum eius intellegunt,
 ut sanctitatis omnis etiam ex semetipso magistrum, impuritatis
 omnis exsecratorem et expiatorem et ubique talem citius incesto
 quam alicui humaniori reo ecclesiam reddidisse praesumant.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p> Necesse est igitur usque illis apostolum ostendi quem ego et
+         </div>
+         <div n="16" type="chapter">
+            <p> Necesse est igitur usque illis apostolum ostendi quem ego et
 in secunda Corinthiorum talem defendam qualem in omnibus litteris
 novi. Qui et in prima primus omnium templum dei dedicavit:
 <bibl n="I Cor. III, 16 sq."/> Non scitis vos templum dei esse et in vobis dominum habitare?
@@ -1140,7 +1126,7 @@ omnem silvam libidinum caedat et eradicet et excaudicet, ne
 quidquam de recidivo fruticare permittat, aspice illum a iusta
 fruge naturae, a matrimonii dico pomo, animas ieiunare cupientem.
 De quibus autem scripsistis, bonum est homini mulierem <bibl n="I Cor. VII, 1 sqq."/>
-<pb xml:id="v.1.p.828"/>
+               <pb xml:id="v.1.p.828"/>
 
 non contingere; sed propter fornicationem unusquisque uxorem
 suam habeat; vir uxori et uxor viro debitum reddat. Huius boni
@@ -1192,10 +1178,9 @@ Hoc ei supererat, carnem vel a sordibus purgare; a maculis enim
 non potest. Sed est hoc sollemne perversis et idiotis haereticis,
 iam et psychicis universis, alicuius capituli ancipitis occasione
 adversus exercitum sententiarum instrumenti totius armari.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="17">
-<p>Provoca ad apostolicam aciem, aspice epistolas eius, omnes 
+         </div>
+         <div n="17" type="chapter">
+            <p>Provoca ad apostolicam aciem, aspice epistolas eius, omnes 
 pro pudicitia, pro castitate, pro sanctitate praetendunt, omnes in
 luxuriae et lasciviae et libidinis negotia iaculantur. Quid denique
 et Thessalonicensibus scribit? Advocatio enim nostra non ex seductione, <bibl n="I Thes. II, 3. IV, 3 sqq."/>
@@ -1278,10 +1263,9 @@ tenes. Pauca multis, dubia certis, obscura manifestis adumbrantur.
 esset aliud, quod semel contra institutum suum pro ratione temporis
 <bibl n="Act. XVI, 3."/> faceret. Circumcidit Timotheum solum, et tamen abstulit
 circumcisionem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="18">
-<p> Sed haec, inquit, ad interdictionem pertinebunt omnis impudicitiae
+         </div>
+         <div n="18" type="chapter">
+            <p> Sed haec, inquit, ad interdictionem pertinebunt omnis impudicitiae
 et addictionem omnis pudicitiae, salvo tamen loco veniae,
 quae non statim denegatur, si delicta damnantur, quando
 veniae tempus cum damnatione concurrat, quam excludit. Sequebatur
@@ -1333,8 +1317,7 @@ Quid, si et hic respondere concipias, adimi quidem peccatoribus
 vel maxime carne pollutis communicationem, sed ad praesens,
 restituendam scilicet ex paenitentiae ambitu, secundum illam
 <pb xml:id="v.1.p.834"/>
-
-<bibl n="Ezech. XXXIII, 11."/> elementiam dei quae mavult peccatoris paenitentiam quam mortem?
+               <bibl n="Ezech. XXXIII, 11."/> elementiam dei quae mavult peccatoris paenitentiam quam mortem?
 Hoc enim fundamentum opinionis vestrae usquequaque pulsandum
 est. Dicimus itaque, clementiae divinae si cavisse competisset
 demonstrationem sui etiam post fidem lapsis, ita apostolus
@@ -1363,10 +1346,9 @@ et paenitentia ad se clementiam invitat, salva illa paenitentiae
 specie post fidem, quae aut levioribus delictis veniam (??)
 episcopo consequi poterit, aut maioribus et inremissibilibus (??)
 deo solo.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="19">
-<p> Sed quonam usque de Paulo, quando etiam Ioannes nescio
+         </div>
+         <div n="19" type="chapter">
+            <p> Sed quonam usque de Paulo, quando etiam Ioannes nescio
 quid diversae parti subplaudere videatur? quasi in Apocalypsi manifeste
 <pb xml:id="v.1.p.835"/>
 
@@ -1472,8 +1454,7 @@ nec ipsi excidimus a qua digressi sumus distinctione delictorum.
 Et hic enim illam Ioannes commendavit, quod sint quaedam delicta
 cotidianae incursionis, quibus omnes simus obiecti. Cui enim non
 <pb xml:id="v.1.p.838"/>
-
-<bibl n="Eph. V, 26."/> accidet aut irasci inique, et ultra solis occasum, aut et ma(??)
+               <bibl n="Eph. V, 26."/> accidet aut irasci inique, et ultra solis occasum, aut et ma(??)
 immittere, aut facile maledicere, aut temere iurare, aut fidem pac(??)
 destruere, aut verecundia aut necessitate mentiri? In nego(??)
 officiis, in quaestu, in victu, in visu, in auditu quanta tenta(??)
@@ -1497,10 +1478,9 @@ deo natus sit non delinquit, scilicet delictum quod ad morte(??) est.
 Ita nihil iam superest quam aut neges moechiam et fornication(??)
 mortalia esse delicta, aut inremissibilia fatearis, pro quibus (??)
 exorare permittitur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="20">
-<p> Disciplina igitur apostolorum proprie quidem instruit ac (??)
+         </div>
+         <div n="20" type="chapter">
+            <p> Disciplina igitur apostolorum proprie quidem instruit ac (??)
 minat principaliter sanctitatis omnis erga templum dei antisti(??)
 <pb xml:id="v.1.p.839"/>
 
@@ -1576,10 +1556,9 @@ inquit illi, et non morietur, quia nondum est manumissa
 cui servabatur. Nondum enim caro a Christo manumissa,
 cui servabatur, impune contaminabatur, ita iam manumissa non
 habet veniam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="21">
-<p>Haec si apostoli magis norant, magis utique curabant. Sed 
+         </div>
+         <div n="21" type="chapter">
+            <p>Haec si apostoli magis norant, magis utique curabant. Sed 
 et in hunc iam gradum decurram, excernens inter doctrinam apostolorum
 et potestatem. Disciplina hominem gubernat, potestas adsiguat,
 <pb xml:id="v.1.p.842"/>
@@ -1657,10 +1636,9 @@ ab auctore et consecratore censetur. Et ideo ecclesia quidem
 delicta donabit, sed ecclesia spiritus per spiritalem hominem,
 non ecclesia numerus epsicoporum. Domini enim, non famuli est
 ius et arbitrium; dei ipsius, non sacerdotis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="22">
-<p> At tu iam et in martyras tuos effundis hanc potestatem. Ut
+         </div>
+         <div n="22" type="chapter">
+            <p> At tu iam et in martyras tuos effundis hanc potestatem. Ut
 quisque ex consensione vincula induit adhuc mollia in novo custodiae
 nomine, statim ambiunt moechi, statim adeunt fornicatores,
 iam preces circumsonant, iam lacrimae circumstagnant maculati
@@ -1680,8 +1658,7 @@ et possessione martyrii, quis permittit homini donare quae
 deo reservanda sunt, a quo ea sine excusatione damnata sunt,
 quae nec apostoli, quod sciam, martyres et ipsi donabilia iudicaverunt?
 <pb xml:id="v.1.p.846"/>
-
-<bibl n="I Cor. XV, 32. V. 3 sqq."/> Denique iam ad bestias depugnaverat Paulus Ephesi, cum
+               <bibl n="I Cor. XV, 32. V. 3 sqq."/> Denique iam ad bestias depugnaverat Paulus Ephesi, cum
 interitum decernit incesto. Sufficiat martyri propria delicta purgasse.
 Ingrati vel superbi est in alios quoque spargere quod pro
 magno fuerit consecutus. Quis alienam mortem sua solvit, nisi
@@ -1733,13 +1710,11 @@ cesserunt, in quas adhuc et diabolus ipse suspirat, cum sua infelicitate,
 sed casta, cum paenitentia maerente, sed non erubescente
 ad dominum de venia, denuo dimittentur eis, quia piaculariter
 negaverunt. Solis illis caro infirma est. Atquin nulla tam fortis
-caro quam quae spiritum elidit.</p></div>
-<pb xml:id="v.1.p.848"/>
-
-<pb xml:id="v.1.p.849"/>
-
-<pb xml:id="v.1.p.850"/>
-</div></body></text>
-
-
+caro quam quae spiritum elidit.</p>
+         </div>
+         <pb xml:id="v.1.p.848"/>
+         <pb xml:id="v.1.p.849"/>
+         <pb xml:id="v.1.p.850"/>
+      </body>
+   </text>
 </TEI>

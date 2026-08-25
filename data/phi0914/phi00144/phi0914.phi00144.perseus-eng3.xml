@@ -67,7 +67,12 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
-        </encodingDesc>
+              <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="en">English </language>
@@ -120,8 +125,8 @@ Added to repository. Passed SGML parse.
             <change when="2014-10-09" who="Stella Dee">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="en">
-        <body>
+    <text xml:lang="eng">
+        <body xml:base="urn:cts:latinLit:phi0914.phi00144.perseus-eng3">
             <div part="N" sample="complete" org="uniform" n="44" type="book">
                 <head>Pydna and the Fall of Macedonia</head>
                 <div part="N" sample="complete" org="uniform" n="1" type="chapter">

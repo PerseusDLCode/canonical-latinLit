@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>Against Publius Vatinius </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>Against Publius Vatinius </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi023.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,36 +159,36 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <front>
-            <head> THE SPEECH OF M. T. CICERO AGAINST PUBLIUS VATINIUS; CALLED ALSO, THE EXAMINATION
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <front>
+         <head> THE SPEECH OF M. T. CICERO AGAINST PUBLIUS VATINIUS; CALLED ALSO, THE EXAMINATION
                 OF PUBLIUS VATINIUS.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>This speech arose out of the preceding one. Vatinius was a partisan and creature
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>This speech arose out of the preceding one. Vatinius was a partisan and creature
                     of Caesar's and instigated by him to appear as a witness against Sestius on his
                     trial and Cicero was so indignant at a man of so infamous a character appearing
                     against his friend that be exposed the whole iniquity of his life by the
                     severity of his examination and the searching nature of the questions which he
-                    put to him. And he says of this speech himself (<bibl n="Cic. Fam. 1.9"
-                            ><title>Epist. Fam.</title> i. 9</bibl>): “The whole of my examination
+                    put to him. And he says of this speech himself (<bibl n="Cic. Fam. 1.9">
+                  <title>Epist. Fam.</title> i. 9</bibl>): “The whole of my examination
                     of him consisted of nothing but a reproof of his conduct in his tribuneship; and
                     I spoke with great freedom, and the greatest earnestness and indignation.” </p>
-                <p>Vatinius had also, while replying to Cicero's questions, attacked Cicero himself
+            <p>Vatinius had also, while replying to Cicero's questions, attacked Cicero himself
                     as having been a turncoat, and being now anxious himself to curry favour with
                     Caesar, because he saw that his affairs were becoming more prosperous than they
                     had been, and reminded him of his having not always entertained a favourable
                     opinion of Caesar; and Cicero replied, that he still preferred the condition of
                     Bibulus's consulship to the triumphs and victories of any one whatever.</p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>If, O Vatinius, I had chosen to regard merely what the unworthiness of your character
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi023.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>If, O Vatinius, I had chosen to regard merely what the unworthiness of your character
                 deserved, I should have <pb n="226"/> treated you in a way that would have been very
                 pleasing to these men, and, as your evidence could not, on account of the infamy of
                 your life and the scandal of your private conduct, be possibly considered of the
@@ -186,7 +201,8 @@ Added to repository.
                 by everybody, I was carried away so far, that though I did not despise you at all
                 less than I detest you, still I chose to dismiss you in embarrassment and distress,
                 rather than in contempt. </p>
-            <p><milestone n="2" unit="section"/>Wherefore, that you may not wonder at my having paid
+         <p>
+            <milestone n="2" unit="section"/>Wherefore, that you may not wonder at my having paid
                 you this compliment of putting questions to you, whom no one thinks worthy of being
                 spoken to or visited, whom no one thinks deserving of a vote, or of the rights of a
                 citizen, or even of the light of life; know that no motive would have induced me to
@@ -195,8 +211,7 @@ Added to repository.
                 you. In truth, you ought, O Vatinius, even if you had become suspected by Publius
                 Sestius undeservedly, still to pardon me, if, on the occasion of such great danger
                 to a man who has done me such great services, I had yielded to the consideration of
-                what his necessities required, and what his inclination deserved of me. <milestone
-                    n="3" unit="section"/>But you unintentionally showed a few moments ago that you
+                what his necessities required, and what his inclination deserved of me. <milestone n="3" unit="section"/>But you unintentionally showed a few moments ago that you
                 spoke falsely in the evidence which you gave yesterday, when you asserted that you
                 had never had the least conversation with Albinovanus, not only about the
                 prosecution of Sestius, but about anything whatever; and yet you said just now that
@@ -212,37 +227,38 @@ Added to repository.
                 that the man who you had previously said was an entire stranger to you, had come to
                 your house, and that you had given the documents which he asked for to aid him in
                 his accusation to a man whom you had from the beginning considered a trickster and a
-                prevaricator. <milestone n="2" unit="chapter"/><milestone n="4" unit="section"/></p>
-            <p>You are too impetuous and fierce by nature. You do not think it allowable for a word
+                prevaricator. <milestone n="2" unit="chapter"/>
+            <milestone n="4" unit="section"/>
+         </p>
+         <p>You are too impetuous and fierce by nature. You do not think it allowable for a word
                 to escape from any man's mouth which may not fall pleasantly and complimentary on
                 your ears. You came forward in a rage with everybody which I perceived and
                 comprehended the moment I saw you, before you began to speak, while Gellius, the dry
                 nurse of all seditious men, was giving his evidence before you. For on a sudden you
                 sprang forward like a serpent out of his hole, with eyes starting out of your head
-                and your neck inflated and your throat swelling so that <milestone n="5"
-                    unit="section"/><gap reason="* * * * * *"/> I defended my old friend, who was,
+                and your neck inflated and your throat swelling so that <milestone n="5" unit="section"/>
+            <gap reason="* * * * * *"/> I defended my old friend, who was,
                 nevertheless an acquaintance of yours, though in this city an attack on another,
                 such as you are now making, is sometimes found fault with, but the defence of a man
                 never is. </p>
-            <p>But I ask you why I should not defend Caius Cornelius? I ask whether Cornelius has
+         <p>But I ask you why I should not defend Caius Cornelius? I ask whether Cornelius has
                 ever passed any law in defiance of the <foreign xml:lang="la">auspices</foreign>?
                 whether he has despised the Aelian or the Fufian law? when he has offered violence
                 to the consul? whether he has occupied any temple with armed men? whether he has
                 driven away by violence any magistrate who was exercising his veto? whether he has
                 profaned any religious ceremonies? whether he has drained the treasury? whether he
                 has pillaged the republic? These, all these, are actions of yours. No imputation of
-                this sort is cast upon Cornelius. He was said to have read a document.<note
-                    anchored="true">There is some corruption in the text here.</note> It was urged
+                this sort is cast upon Cornelius. He was said to have read a document.<note anchored="true">There is some corruption in the text here.</note> It was urged
                 in his defence, his colleagues giving evidence in support of his cause, that he read
                 it not for the sake of reading it but for the sake of examining it more
                 particularly. However, it was quite certain that Cornelius dismissed the council
-                that day, and submitted to the interposition of the veto. But you who are <pb
-                    n="228"/> offended at my defending Cornelius, what cause do you bring to your
+                that day, and submitted to the interposition of the veto. But you who are <pb n="228"/> offended at my defending Cornelius, what cause do you bring to your
                 advocates to uphold, or what countenance have you to show? when you already point
                 out to them in an imperious manner, what a disgrace it will be to them if they
                 defend you by thinking the defence of Cornelius a matter for accusation and abuse of
-                me. <milestone n="6" unit="section"/></p>
-            <p>However, Vatinius, remember this—that a little after the time when I defended him in
+                me. <milestone n="6" unit="section"/>
+         </p>
+         <p>However, Vatinius, remember this—that a little after the time when I defended him in
                 a way which you say gave great offence to all good men, I was appointed consul in
                 the most honourable manner in which any one has been elected since the memory of
                 man, not only by the exceeding zeal in my behalf of the entire Roman people, but
@@ -250,10 +266,10 @@ Added to repository.
                 and that I gained all these honours by living in a modest manner, which you have
                 over and over again said that you hoped to obtain by dealing in the most impudent
                     prophecies.<note anchored="true">The critics say that Cicero intends a pun here,
-                    by the similarity of the sound of the word he uses, “<foreign xml:lang="la"
-                        >vaticinando</foreign>,” to Vatinius's name.</note>
-                <milestone n="3" unit="chapter"/></p>
-            <p>For as regards your having blamed me for my departure, and your having attempted to
+                    by the similarity of the sound of the word he uses, “<foreign xml:lang="la">vaticinando</foreign>,” to Vatinius's name.</note>
+            <milestone n="3" unit="chapter"/>
+         </p>
+         <p>For as regards your having blamed me for my departure, and your having attempted to
                 renew the grief and lamentation of those men to whom that day was most miserable,
                 which, however, was to you most joyful, I will make you this reply,—that when you
                 and the other pests of the republic were seeking a pretext to take up arms, and
@@ -261,38 +277,36 @@ Added to repository.
                 citizens, and to drink the blood of the chief men of the state, and satiate your
                 barbarity and the long-standing hatred which you had cherished against all good men
                 till it had become inveterate, I preferred to break the force of your frenzy and
-                wickedness by yielding to it, rather than by resisting it. <milestone n="7"
-                    unit="section"/>Wherefore, I entreat you, O Vatinius, to pardon me for sparing
+                wickedness by yielding to it, rather than by resisting it. <milestone n="7" unit="section"/>Wherefore, I entreat you, O Vatinius, to pardon me for sparing
                 the country which I had saved; and I beg you, if I bear with you who would willingly
                 be a harasser and destroyer of the republic, to bear also with me who have been its
                 preserver and its guardian. Do you find fault with that man for having departed from
                 the city, who, as you see, was recalled by the regret of all the citizens, and by
                 the grief of the republic herself? </p>
-            <p>Oh, but you say that men were anxious for my return, not for my sake, but for the
+         <p>Oh, but you say that men were anxious for my return, not for my sake, but for the
                 sake of the republic. As if any man <pb n="229"/> who had mixed himself up in the
                 affairs of the state in a proper spirit could think anything more desirable for him
-                than to be beloved by his fellow-citizens for the sake of the republic. <milestone
-                    n="8" unit="section"/> Forsooth, my nature, I suppose, is a harsh one, I am
+                than to be beloved by his fellow-citizens for the sake of the republic. <milestone n="8" unit="section"/> Forsooth, my nature, I suppose, is a harsh one, I am
                 difficult of access, my countenance is forbidding, my answers to men are arrogant,
                 my way of life insolent. No one ever sought the aid of my humanity,—no one was ever
                 anxious for my intimacy, for my advice, or my aid; for mine, out of regret for whom
                 (to say the least of it) the forum was sad, the senate-house silent, and all studies
                 of virtuous and liberal sciences voiceless and lifeless. </p>
-            <p>However, I will allow that nothing was done for my sake. Let us admit that all those
+         <p>However, I will allow that nothing was done for my sake. Let us admit that all those
                 resolutions of the senate and commands of the people, and decrees of all Italy, and
                 of all companies, and of all colleges and guilds concerning me were passed for the
                 sake of the republic. What then, O man most ignorant of the character of solid glory
                 and real dignity, could possibly happen better for me? What could be more desirable
                 as regards the immortality of my glory and the everlasting recollection of my name,
                 than for all my fellow citizens to be of this opinion,—that the safety of the state
-                was indissolubly bound up with my individual safety? <milestone n="9" unit="section"
-                /> But I will send you back the arrow which you aimed at me. For as you said that I
+                was indissolubly bound up with my individual safety? <milestone n="9" unit="section"/> But I will send you back the arrow which you aimed at me. For as you said that I
                 was dear to the senate and people of <placeName key="perseus,Rome">Rome</placeName>
                 not so much for my own sake as for that of the republic, so I say that you, although
                 you are a man of scandalous character, disgraced by every sort of foulness and
                 infamy, still are detested by the city, not so much on your own account as for the
-                sake of the republic. <milestone n="4" unit="chapter"/></p>
-            <p>And, that I may at length come to speak of you, this shall be the last thing which I
+                sake of the republic. <milestone n="4" unit="chapter"/>
+         </p>
+         <p>And, that I may at length come to speak of you, this shall be the last thing which I
                 will say of myself. What any one of us may say of himself, that is not the question.
                 Let good men judge; that is the consideration of the greatest importance and weight.
                     <milestone n="10" unit="section"/>There are two times at which the decisions of
@@ -303,7 +317,7 @@ Added to repository.
                 as I have. But what men think of you we have already had <pb n="230"/> experience
                 when you were a candidate for honour; and now that your safety is at stake, we are
                 in expectation of what we shall see. </p>
-            <p>However, not to compare myself with these the leading men of the state, who are here
+         <p>However, not to compare myself with these the leading men of the state, who are here
                 to give their countenance to Publius Sestius by their presence, but merely to
                 compare myself to one, the most impudent and vilest of men, I will just ask you, O
                 Vatinius,—you the most arrogant of all men, and also the most hostile to me,—whether
@@ -311,27 +325,25 @@ Added to repository.
                 this city, for these temples, and for the treasury, and for the senate-house, and
                 for these men whom you see around us, and their property, fortunes, and
                 children,—whether you think it was better and more desirable for all the rest of the
-                citizens, and for the temples of the gods, and for the <foreign xml:lang="la"
-                    >auspices</foreign>, and for the religious rites and observances of the city,
+                citizens, and for the temples of the gods, and for the <foreign xml:lang="la">auspices</foreign>, and for the religious rites and observances of the city,
                 that I should have been born as a citizen in this city, or that you should? When you
                 have answered me this question, either so impudently that men will hardly he able to
                 keep their hands off you, or in so melancholy a manner as to burst that inflated
                 neck and throat of yours; after that, reply to me from memory to these questions
-                which I am going to put to you. <milestone n="5" unit="chapter"/><milestone n="11"
-                    unit="section"/></p>
-            <p>And I will allow that dark period of your early youth to remain in obscurity. You may
+                which I am going to put to you. <milestone n="5" unit="chapter"/>
+            <milestone n="11" unit="section"/>
+         </p>
+         <p>And I will allow that dark period of your early youth to remain in obscurity. You may
                 with impunity, as far as I am concerned, have broken through walls in your youth,
                 and plundered your neighbours, and beaten your mother. Your infamous character has
                 this advantage, that the baseness of your youth is concealed by your obscurity and
                 vileness. </p>
-            <p>You stood for the quaestorship with Publius Sestius; while he was talking of nothing
+         <p>You stood for the quaestorship with Publius Sestius; while he was talking of nothing
                 but the object which he had in view at the moment and you were constantly saying
                 that you were thinking of obtaining a second consulship. I ask you this. Do you
                 recollect when Publius Sestius was unanimously elected quaestor, that you then were
                 named as the last quaestor, against the will of every one; not owing to the kindness
-                which the people felt for you, but only to that of the consul? <milestone n="12"
-                    unit="section"/>In that magistracy, when the province of <placeName
-                    key="perseus,Ostia">Ostia</placeName>, down by the water's edge, had fallen to
+                which the people felt for you, but only to that of the consul? <milestone n="12" unit="section"/>In that magistracy, when the province of <placeName key="perseus,Ostia">Ostia</placeName>, down by the water's edge, had fallen to
                 your lot, raising a great outcry at the time, were you not sent by me, as I was
                 consul, to <placeName key="perseus,Puteoli">Puteoli</placeName>, to prevent gold and
                 silver being exported from thence? While occupied in the discharge of that duty, do
@@ -341,28 +353,23 @@ Added to repository.
                 into every one's house, and store, and ship, and harassing men occupied in business
                 and in trade with most iniquitous law proceedings, frightening merchants as they
                 disembarked from their ships, and delaying them as they were embarking,—do you
-                recollect, I say, that violent hands were laid on you in <placeName
-                    key="perseus,Puteoli">Puteoli</placeName> while you were present among the body
-                of the Roman settlers? and that the complaints of the people of <placeName
-                    key="perseus,Puteoli">Puteoli</placeName> were brought before me as consul? Do
+                recollect, I say, that violent hands were laid on you in <placeName key="perseus,Puteoli">Puteoli</placeName> while you were present among the body
+                of the Roman settlers? and that the complaints of the people of <placeName key="perseus,Puteoli">Puteoli</placeName> were brought before me as consul? Do
                 you recollect that after your quaestorship you went as lieutenant into the further
                     <placeName key="tgn,1000095">Spain</placeName>, Caius Cosconius being the
-                proconsul? Do you recollect too, that though that journey into <placeName
-                    key="tgn,1000095">Spain</placeName> is usually made by land, or if any one
+                proconsul? Do you recollect too, that though that journey into <placeName key="tgn,1000095">Spain</placeName> is usually made by land, or if any one
                 chooses to go by sea, there is a regular route by which they sail, you came into
                     <placeName key="tgn,7003121">Sardinia</placeName>, and from thence into
                     <placeName key="tgn,7001242">Africa</placeName>? Were you not in the kingdom of
                 Hiempsal,—a proceeding on your part which was perfectly illegal without a decree of
-                the senate to authorize it? Were you not in the kingdom of Mastanesosus?<note
-                    anchored="true">It is unknown what country is meant, except that it is evidently
+                the senate to authorize it? Were you not in the kingdom of Mastanesosus?<note anchored="true">It is unknown what country is meant, except that it is evidently
                     some part of <placeName key="tgn,7001242">Africa</placeName>.</note> Did you not
                 come to the strait by way of <placeName key="tgn,1000176">Mauritania</placeName>?
-                and did you ever hear of any lieutenant of any part of <placeName key="tgn,1000095"
-                    >Spain</placeName> before you who went to that province by that route?
-                    <milestone n="13" unit="section"/></p>
-            <p>You were made tribune of the people, (for why need I put questions to you about the
-                iniquities and most sordid robberies which you committed in <placeName
-                    key="tgn,1000095">Spain</placeName>?) I ask of you first in a general manner
+                and did you ever hear of any lieutenant of any part of <placeName key="tgn,1000095">Spain</placeName> before you who went to that province by that route?
+                    <milestone n="13" unit="section"/>
+         </p>
+         <p>You were made tribune of the people, (for why need I put questions to you about the
+                iniquities and most sordid robberies which you committed in <placeName key="tgn,1000095">Spain</placeName>?) I ask of you first in a general manner
                 what description of dishonesty and wickedness did you omit to practise in your
                 discharge of that office? And I now give you this warning,—not to mix up your own
                 infamy with the high character of most eminent men. I, in whatever questions I put
@@ -370,9 +377,10 @@ Added to repository.
                 dignity of a great man, which you affect, but from your own obscurity and darkness.
                 And all my weapons shall be directed at you in such a manner, that no one else shall
                 be wounded (to use an expression of your own) through your side; my arrows shall
-                stick in your lungs and in your entrails. <milestone n="6" unit="chapter"
-                    /><milestone n="14" unit="section"/></p>
-            <p>And since the beginnings of all great things are <pb n="232"/> derived from the gods,
+                stick in your lungs and in your entrails. <milestone n="6" unit="chapter"/>
+            <milestone n="14" unit="section"/>
+         </p>
+         <p>And since the beginnings of all great things are <pb n="232"/> derived from the gods,
                 I wish you to answer me,—you, who are accustomed to call yourself a Pythagorean, and
                 to put forth the name of a most learned man as a screen to bide your own savage and
                 barbarian habits,—what depravity of intellect possessed you, what excessive frenzy
@@ -401,11 +409,11 @@ Added to repository.
                 performed, will you, you wretch, assume the same privilege to yourself, and is the
                 voice of Vatinius, the thief and sacrilegious man, to be heard, demanding that the
                 same indulgence is to be allowed to him that is allowed to Caesar? For this is what
-                I ask of you. <milestone n="7" unit="chapter"/><milestone n="16" unit="section"
-                /></p>
-            <p>You were a tribune of the people. Separate yourself from the consul. You had nine
-                gallant men for your colleagues. Of these there were three whom you knew to be <pb
-                    n="233"/> every day observing the heavens, whom you used to laugh at, whom you
+                I ask of you. <milestone n="7" unit="chapter"/>
+            <milestone n="16" unit="section"/>
+         </p>
+         <p>You were a tribune of the people. Separate yourself from the consul. You had nine
+                gallant men for your colleagues. Of these there were three whom you knew to be <pb n="233"/> every day observing the heavens, whom you used to laugh at, whom you
                 used to call private individuals, of whom you see two now sitting here in their
                 robes of office; (you know that you sold the official robe of an aedile which you
                 had had made for yourself to no purpose;) and the third, you are aware, after that
@@ -414,8 +422,7 @@ Added to repository.
                 adopted your opinion, and some held a sort of middle course. All had laws which they
                 wished to propose; and among them my own intimate friend Caius Cosconius, one of our
                 judges, had several, some even drawn up by my advice; a man who makes you ready to
-                burst with envy when you see him invested with the rank of aedile. <milestone n="17"
-                    unit="section"/>I wish you to reply to me. Did any one of the whole college
+                burst with envy when you see him invested with the rank of aedile. <milestone n="17" unit="section"/>I wish you to reply to me. Did any one of the whole college
                 venture to bring forward any law, except you alone? And how did you become possessed
                 of so much audacity, how did you dare to act with so much violence, as alone—you, a
                 man raised out of the mud, beyond all comparison the lowest of all men in every
@@ -423,20 +430,22 @@ Added to repository.
                 which all your nine colleagues thought deserving of their fear and awe? Have you
                 ever known of any one tribune of the people, since the foundation of the city,
                 having transacted business with the people when it was known that any magistrate was
-                observing the heavens? <milestone n="18" unit="section"/></p>
-            <p>I wish you also to answer me, as, while you were tribune of the people, the Aelian
+                observing the heavens? <milestone n="18" unit="section"/>
+         </p>
+         <p>I wish you also to answer me, as, while you were tribune of the people, the Aelian
                 and Fufian laws still existed in the republic; laws which have repeatedly checked
                 and repressed the frenzy of the tribunes; in contravention of which no one has ever
                 dared to act except you; (though those same laws the year after, when two men were
                 sitting in the temple, whom I will not call consuls, but betrayers of this state,
-                and pestilences, were destroyed at the same time with the <foreign xml:lang="la"
-                    >auspices</foreign>, and the power of intercession, and all public law:) Did you
+                and pestilences, were destroyed at the same time with the <foreign xml:lang="la">auspices</foreign>, and the power of intercession, and all public law:) Did you
                 ever hesitate to transact business with the people, and to convene the assembly in
                 defiance of these laws? Have you ever heard of any one out of all the tribunes of
                 the people that ever existed, however seditious they may have been, being so
                 audacious as to summon an assembly in defiance of the Aelian and Fufian laws?
-                    <milestone n="8" unit="chapter"/><milestone n="19" unit="section"/></p>
-            <p>I ask you this, also, whether you endeavoured, <pb n="234"/> whether you wished,
+                    <milestone n="8" unit="chapter"/>
+            <milestone n="19" unit="section"/>
+         </p>
+         <p>I ask you this, also, whether you endeavoured, <pb n="234"/> whether you wished,
                 whether, in short, you intended, (for these all amount to the same thing, so that if
                 it ever only occurred to your mind, there is no one who would not think you worthy
                 of the greatest severity of punishment,)—I ask you, I say, whether you ever intended
@@ -455,12 +464,15 @@ Added to repository.
                 other wounds under which you believed the republic to be sinking, you had added the
                 deadly and fatal blow of your augurship, would you have decreed that which every
                 augur ever since the time of Romulus has invariably decreed, that when
-                        <persName><surname>Jupiter</surname></persName> was sending forth his
+                        <persName>
+               <surname>Jupiter</surname>
+            </persName> was sending forth his
                 lightning it was impious to transact business with the people; or, because you had
                 constantly done so, would you as augur have put an end to the system of taking
-                    <foreign xml:lang="la">auspices</foreign> altogether? <milestone n="9"
-                    unit="chapter"/><milestone n="21" unit="section"/></p>
-            <p>And, not to waste any more words on your augurship, (and I speak of it all against my
+                    <foreign xml:lang="la">auspices</foreign> altogether? <milestone n="9" unit="chapter"/>
+            <milestone n="21" unit="section"/>
+         </p>
+         <p>And, not to waste any more words on your augurship, (and I speak of it all against my
                 will, as I do not wish to recollect the ruin of the republic; for, indeed, you
                 yourself never thought that you would be augur as long as not only the majesty of
                 these men, but as long as that city itself remained standing,)—still, to pass over
@@ -479,8 +491,7 @@ Added to repository.
                 which bridge, a consul of the Roman people, a man of the greatest moderation and
                 wisdom removed from all assistance cut off from all his friends, was to be led by
                 the inflamed violence of profligate men, a most shameful and miserable spectacle,
-                not only to prison but to execution and to death? <milestone n="22" unit="section"
-                />I ask whether there was ever any one before your time so wicked as to do such a
+                not only to prison but to execution and to death? <milestone n="22" unit="section"/>I ask whether there was ever any one before your time so wicked as to do such a
                 thing as that? So that we may know whether you are an imitator of old crimes or an
                 inventor of new ones. And when you, by counsels and atrocities of this sort, carried
                 on under the name of Caius Caesar a most merciful and excellent man, but in reality
@@ -493,21 +504,19 @@ Added to repository.
                 of private individuals the sanctity of their house is always observed, while you
                 were tribune of the people even his own house should not be a safe refuge for the
                 consul? </p>
-            <p><milestone n="23" unit="section"/>Answer me at the same time, you who call us tyrants
+         <p>
+            <milestone n="23" unit="section"/>Answer me at the same time, you who call us tyrants
                 who are agreed together as to our views for the general safety, were not you a
                 tribune of the people, but in reality an intolerable tyrant raised of some obscure
                 mud and darkness? and did not you attempt in the first instance to overturn the
-                republic, which was originally founded in obedience to <foreign xml:lang="la"
-                    >auspices</foreign>, by the destruction of those same <foreign xml:lang="la"
-                    >auspices</foreign> arm after that have not you been the only man to trample
+                republic, which was originally founded in obedience to <foreign xml:lang="la">auspices</foreign>, by the destruction of those same <foreign xml:lang="la">auspices</foreign> arm after that have not you been the only man to trample
                 under foot and disregard those most holy laws, I mean the Aelian and Fufian
                 laws,—which subsisted through the furious times of the Gracchi, and through all the
                 audacity of Saturninus,—which <pb n="236"/> survived unhurt the rabble of
                     Drusus,<note anchored="true">Cicero refers here to the Marcus Livius Drusus who,
                     A. U. C. 661, brought forward an entire series of measures, calculated, as he
                     said, to remedy the evils of the state; among others, one to give the freedom of
-                    the city to all the inhabitants of <placeName key="tgn,1000080"
-                        >Italy</placeName>. He was privately assassinated.</note> and the contests
+                    the city to all the inhabitants of <placeName key="tgn,1000080">Italy</placeName>. He was privately assassinated.</note> and the contests
                 of Sulpicius,<note anchored="true">Publius Sulpicius Rufus was a partisan of Marius;
                     and, as tribune of the people, the instigator of some violent measures against
                     Sulla. After Sulla had driven Marius out of the city, Sulpicius was slain and
@@ -517,9 +526,10 @@ Added to repository.
                 house? And you, who by means of that magistracy emerged out of actual beggary, and
                 who now even alarm us by your riches, were you not so inhuman as to endeavour, by
                 means of your proposed law, to get rid of and destroy the chosen men and chief
-                leaders of the state? <milestone n="10" unit="chapter"/><milestone n="24"
-                    unit="section"/></p>
-            <p>When you had produced in the assembly Lucius Vettius, who had confessed in the senate
+                leaders of the state? <milestone n="10" unit="chapter"/>
+            <milestone n="24" unit="section"/>
+         </p>
+         <p>When you had produced in the assembly Lucius Vettius, who had confessed in the senate
                 that he had been armed with the intention of putting Cnaeus Pompeius, that great and
                 illustrious citizen, to death with his own hands; when you had produced him as a
                 witness in the <foreign xml:lang="la">rostra</foreign>, and placed him in that
@@ -532,15 +542,13 @@ Added to repository.
                 men for the originators and encouragers of, and accomplices in that wicked conduct,
                 whom if the city had been deprived of, (and that was your real object at that time,)
                 it could not have continued to stand? </p>
-            <p>You had endeavoured to murder Marcus Bibulus, as you were not contented with shutting
-                him up in his house; you had stripped him of his consulship,<note anchored="true"
-                    >After the violent way in which Caesar's partisans had treated Bibulus, which
+         <p>You had endeavoured to murder Marcus Bibulus, as you were not contented with shutting
+                him up in his house; you had stripped him of his consulship,<note anchored="true">After the violent way in which Caesar's partisans had treated Bibulus, which
                     has been alluded to in the preceding chapter, Bibulus complained to the senate
                     the next day; but finding that assembly too completely intimidated to take any
                     notice of it, he retired to his own house, and there shut himself up for the
                     remaining eight months of the year of his consulship and determined to act no
-                    more in public except by means of edicts.</note> you were anxious to <pb n="237"
-                /> deprive him of his country. You wished also to murder Lucius Lucullus, whose
+                    more in public except by means of edicts.</note> you were anxious to <pb n="237"/> deprive him of his country. You wished also to murder Lucius Lucullus, whose
                 exploits you envied above measure, because, I suppose, you from your boyhood had had
                 an eye yourself to the glory of a general; and Caius Curio, the unceasing enemy of
                 all wicked men, the leader of the public council, a man of the greatest freedom in
@@ -559,15 +567,13 @@ Added to repository.
                 wickedness, the republic would not have been defeated; moreover, you wished by means
                 of the same information and the same accusation to involve his son in his father's
                 ruin. You comprehended in the same information of Vettius and in the same body of
-                criminals, Lucius Paullus, who was at the time quaestor in <placeName
-                    key="tgn,7006667">Macedonia</placeName>. How good a citizen! how great a man!
+                criminals, Lucius Paullus, who was at the time quaestor in <placeName key="tgn,7006667">Macedonia</placeName>. How good a citizen! how great a man!
                 who had already banished by his laws two impious traitors to their country, domestic
-                enemies; a man born for the salvation of the republic. <milestone n="26"
-                    unit="section"/>Why should I complain of your conduct to myself? When I ought
+                enemies; a man born for the salvation of the republic. <milestone n="26" unit="section"/>Why should I complain of your conduct to myself? When I ought
                 rather to return you thanks, for having thought me deserving of not being separated
-                from the number of gallant and virtuous citizens. <milestone n="11" unit="chapter"
-                /></p>
-            <p>But how was it that you were so insane as when Vettius had now summed up his oration
+                from the number of gallant and virtuous citizens. <milestone n="11" unit="chapter"/>
+         </p>
+         <p>But how was it that you were so insane as when Vettius had now summed up his oration
                 just as you pleased, and had uttered his calumnies against all the lights of the
                 city, and had descended from the <foreign xml:lang="la">rostra</foreign>—to call him
                 back on a sudden, and converse with him in the sight of the <pb n="238"/> Roman
@@ -583,8 +589,9 @@ Added to repository.
                 open reproaches, did you not strangle that very man Vettius in prison, in order that
                 there might be no evidence of your having procured his information by bribery, and
                 that no investigation of that guilt might be instituted so as to affect you
-                yourself? <milestone n="27" unit="section"/></p>
-            <p> And since you are constantly repeating that you proposed a law to allow each party
+                yourself? <milestone n="27" unit="section"/>
+         </p>
+         <p> And since you are constantly repeating that you proposed a law to allow each party
                 to reject judges alternately, in order that every one may see that you could not
                 contrive even to do right without committing some crime or other, I ask you whether,
                 after a just law had been proposed at the beginning of your magistracy, and after
@@ -595,14 +602,15 @@ Added to repository.
                 after the proposal of your law,” in order that a man of consular rank—unhappy
                 man!—might be deprived by just that moment of time, of the benefit and equitable
                 provisions of your law? </p>
-            <p><milestone n="28" unit="section"/>You will say that there was great intimacy between
+         <p>
+            <milestone n="28" unit="section"/>You will say that there was great intimacy between
                 you and Quintus Maximus. An admirable defence of your guilt! No doubt it is the
                 greatest praise of Maximus, that after he had adopted the quarrel against Caius
                 Antonius, and undertaken the prosecution, and after a president of the court and a
                 bench of judges had been selected, he was unwilling to allow his adversary a power
-                of striking off judges which would have been too favourable for him.<gap
-                    reason="* * *"/></p>
-            <p>Quintus Maximus did nothing inconsistent either with his <pb n="239"/> own virtue, or
+                of striking off judges which would have been too favourable for him.<gap reason="* * *"/>
+         </p>
+         <p>Quintus Maximus did nothing inconsistent either with his <pb n="239"/> own virtue, or
                 with the precedents of those most illustrious men, the Paulli, the Maximi, and
                 Africani; whose renown we not only hope will be renewed by this man's virtue, but we
                 actually see that it is so. It is your dishonesty, your guilt, your wickedness, that
@@ -611,8 +619,10 @@ Added to repository.
                 himself under his misery with this one fact that he had rather be at a distance to
                 hear that the images of his father and his brother, and that his brother's daughter,
                 are placed, not in the house of their family, but in prison, than be at hand to see
-                it. <milestone n="12" unit="chapter"/><milestone n="29" unit="section"/></p>
-            <p>And since you so despise the property of others, and boast in a most intolerable
+                it. <milestone n="12" unit="chapter"/>
+            <milestone n="29" unit="section"/>
+         </p>
+         <p>And since you so despise the property of others, and boast in a most intolerable
                 manner of your own riches, I desire you to answer me, whether you, while tribune of
                 the people, made any treaties with foreign states, or kings, or tetrarchs? whether
                 you got any money out of the treasury by your laws? whether you did not at that time
@@ -625,7 +635,8 @@ Added to repository.
                 friend; before whom you are in the habit of employing hard words against us, who are
                 very friendly to him, while you abuse him in the most insulting manner every time
                 that you say that he is in the least degree connected with you. </p>
-            <p><milestone n="30" unit="section"/>And I wish also to know this from you, with what
+         <p>
+            <milestone n="30" unit="section"/>And I wish also to know this from you, with what
                 design or with what intention you attended at the banquet given by Quintus Arrius,
                 an intimate friend of mine, in a black robe? who you ever saw do such a thing
                 before? who you ever heard of having done such a thing? What precedent had you for
@@ -637,9 +648,10 @@ Added to repository.
                 peculiar acts of wickedness? Grant that the supplication was informal. Still, tell
                 me, who ever went to a banquet in a mourning garment? For by such conduct the
                 banquet itself is turned into a funeral feast; though the proper intention of a
-                banquet is to be a scene of enjoyment and compliment. <milestone n="13"
-                    unit="chapter"/><milestone n="31" unit="section"/></p>
-            <p>But I pass over the fact of its having been a banquet of the Roman people, the day of
+                banquet is to be a scene of enjoyment and compliment. <milestone n="13" unit="chapter"/>
+            <milestone n="31" unit="section"/>
+         </p>
+         <p>But I pass over the fact of its having been a banquet of the Roman people, the day of
                 festival, adorned with the exhibition of silver plate, and robes, and all sorts of
                 furniture and ornaments; I ask who ever in a time of domestic mourning, who ever at
                 a funeral of one of his own family, sat down to supper in a black robe? who ever,
@@ -650,8 +662,7 @@ Added to repository.
                 assistants at a funeral. Who was there who did not then receive you with groans? who
                 was there who did not lament over the fate of the republic? what other topic of
                 conversation was there at that banquet except this, that this city, so great and so
-                wise, was now exposed not only to your frenzy, but also to your derision? <milestone
-                    n="32" unit="section"/>Were you ignorant of the usual practice on such
+                wise, was now exposed not only to your frenzy, but also to your derision? <milestone n="32" unit="section"/>Were you ignorant of the usual practice on such
                 occasions? had you never seen a feast of the sort? had you never, when a boy or
                 young man, been among the cooks? had you not a short time before satisfied your
                 ancient voracity at that most magnificent banquet of Faustus, a noble young man? And
@@ -661,12 +672,12 @@ Added to repository.
                 insulted the temple of Castor, and the name of a feast, and the eyes of a citizen,
                 and ancient custom, and the authority of the man who had invited you, you had not
                 given sufficient proof that you did not think that a properly decreed and formal
-                supplication? <milestone n="14" unit="chapter"/><milestone n="33" unit="section"
-                /></p>
-            <p>I will also ask you about this thing which you did as a private individual; a matter
+                supplication? <milestone n="14" unit="chapter"/>
+            <milestone n="33" unit="section"/>
+         </p>
+         <p>I will also ask you about this thing which you did as a private individual; a matter
                 in which you, at all events, will not be able to say that your cause is at all
-                connected with that of any other illustrious man. I ask you, whether you <pb n="241"
-                /> were not prosecuted in accordance with the provisions of the Licinian and Junian
+                connected with that of any other illustrious man. I ask you, whether you <pb n="241"/> were not prosecuted in accordance with the provisions of the Licinian and Junian
                 laws? whether Caius Memmius, the praetor, did not in accordance with that law, order
                 you by his edict to appear on the thirtieth day? When that day arrived, did you not
                 do what was not only never done before in this republic, but what was never even
@@ -684,8 +695,9 @@ Added to repository.
                 burden of producing any evidence in support of what I say; and what I see that I
                 shall have to state in the same place in a short time, I will reserve at present and
                 I will not accuse you; but as I have done with respect to other matters, I will only
-                put questions to you. <milestone n="34" unit="section"/></p>
-            <p> I ask you then, O Vatinius, whether any one in the state since the first foundation
+                put questions to you. <milestone n="34" unit="section"/>
+         </p>
+         <p> I ask you then, O Vatinius, whether any one in the state since the first foundation
                 of the city, has ever appealed to the tribunes of the people to interpose and save
                 him from having to plead his case? Has any criminal ever mounted up to the tribunal
                 of the president of the court which tried him and driven him down from thence by
@@ -706,9 +718,10 @@ Added to repository.
                 as you had been accused; I ask, I say, how it was consistent with that conduct of
                 yours, in being unwilling to avail yourself of the door of escape which your
                 lieutenancy opened to you, for you to have recourse to an impious source of
-                assistance by means of a most dishonest appeal? <milestone n="15" unit="chapter"
-                    /><milestone n="35" unit="section"/></p>
-            <p>And since mention has been made of your lieutenancy, I wish also to hear from you, by
+                assistance by means of a most dishonest appeal? <milestone n="15" unit="chapter"/>
+            <milestone n="35" unit="section"/>
+         </p>
+         <p>And since mention has been made of your lieutenancy, I wish also to hear from you, by
                 what resolution of the senate you were appointed lieutenant? I understand, from your
                 gestures, what answer you are going to give. By your own law, you say. Are not you,
                 then, a most manifest parricide of your country? Had not you had regard to the idea
@@ -721,7 +734,8 @@ Added to repository.
                 ancestors, the messengers of peace and war, and managers, and interpreters, and
                 authors of warlike determinations, and ministers of the different sorts of
                 provincial duty? </p>
-            <p><milestone n="36" unit="section"/>You had taken from the senate the power of
+         <p>
+            <milestone n="36" unit="section"/>You had taken from the senate the power of
                 decreeing provinces to the different magistrates, and the decision as to what
                 general was to be appointed to a command, and the management of the treasury; things
                 which the Roman people never coveted for itself, as it never endeavoured to deprive
@@ -739,9 +753,9 @@ Added to repository.
                 those most strict men, the Sabines, of those brave tribes, the Marsi and the
                 Peligni, people of the same tribe as yourself, and that there is no other instance,
                 since the foundation of <placeName key="perseus,Rome">Rome</placeName>, of any man
-                of the Sergian tribe having lost the votes of that tribe? <milestone n="37"
-                    unit="section"/></p>
-            <p> And I wish to hear this also from you, why it is, since I carried the law with
+                of the Sergian tribe having lost the votes of that tribe? <milestone n="37" unit="section"/>
+         </p>
+         <p> And I wish to hear this also from you, why it is, since I carried the law with
                 respect to bribery and corruption in accordance with the terms of a resolution of
                 the senate and carried it without violence, and with every proper regard to the
                     <foreign xml:lang="la">auspices</foreign> and to the Aelian and Fufian laws that
@@ -752,14 +766,14 @@ Added to repository.
                 How can you be so insane as to dare to exhibit shows of gladiators actually at the
                 very time when you are a candidate? Do you think that any tribune of the people can
                 be found like that undeniable gladiator of yours, who will interpose to save you
-                from being prosecuted according to the provisions of my law? <milestone n="16"
-                    unit="chapter"/><milestone n="38" unit="section"/></p>
-            <p>And if you disregard and despise all these considerations, because you have persuaded
+                from being prosecuted according to the provisions of my law? <milestone n="16" unit="chapter"/>
+            <milestone n="38" unit="section"/>
+         </p>
+         <p>And if you disregard and despise all these considerations, because you have persuaded
                 yourself, as you are in the habit of boasting openly, that though gods and men may
                 be both unwilling, still you shall be able to gain everything which you desire in
                 consequence of the incredible regard which Caius Caesar has for you; have you ever
-                heard, has any one told you, that lately at <placeName key="perseus,Aquileia"
-                    >Aquileia</placeName>, Caius Caesar, when some accidental mention was made of
+                heard, has any one told you, that lately at <placeName key="perseus,Aquileia">Aquileia</placeName>, Caius Caesar, when some accidental mention was made of
                 some circumstances, said that he was exceedingly indignant that Caius Alfius had
                 been passed over, because he knew the admirable loyalty and honesty of <pb n="244"/>
                 the man; and that he was also greatly annoyed at any one having been made praetor,
@@ -782,24 +796,28 @@ Added to repository.
                 wishing for the praetorship rather than for death? especially as you try to make
                 yourself out a friend of the people, and as you cannot possibly do anything which
                 would be more agreeable to the people than you would if you were to kill yourself! </p>
-            <p><milestone n="40" unit="section"/>But that we may hear at length how fully you reply
+         <p>
+            <milestone n="40" unit="section"/>But that we may hear at length how fully you reply
                 to my interrogations, I will now conclude my examination of you, and at the end I
-                will ask you a few questions relating to the cause itself. <milestone n="17"
-                    unit="chapter"/></p>
-            <p>I ask you what is the meaning of all this inconsistency and levity of yours, that in
+                will ask you a few questions relating to the cause itself. <milestone n="17" unit="chapter"/>
+         </p>
+         <p>I ask you what is the meaning of all this inconsistency and levity of yours, that in
                 this trial you extolled Titus Annius in the very same words in which good men and
                 good citizens have been in the habit of extolling him, when lately, when you were
                 produced before the people by that foul Fury, Clodius, you gave false evidence
                 against him with the greatest eagerness? Is this to be a matter left to your option
                 and in your power, so that when you see Clodius's band of artisans, and that troop
                 of furious and abandoned men, you then say, <pb n="245"/> as you said in the
-                assembly, that <persName><surname>Milo</surname></persName><note anchored="true"
-                    >Titus Annius are the two other names of
-                        <persName><surname>Milo</surname></persName>.</note> has besieged the
+                assembly, that <persName>
+               <surname>Milo</surname>
+            </persName>
+            <note anchored="true">Titus Annius are the two other names of
+                        <persName>
+                  <surname>Milo</surname>
+               </persName>.</note> has besieged the
                 republic with gladiators and men who combat with beasts; but when you come before
                 such men as these, then you do not venture to say anything against a citizen of
-                extraordinary virtue, and integrity, and wisdom, and firmness? <milestone n="41"
-                    unit="section"/>But as you praise Titus Annius so excessively, and by your
+                extraordinary virtue, and integrity, and wisdom, and firmness? <milestone n="41" unit="section"/>But as you praise Titus Annius so excessively, and by your
                 encomium cast some sort of slight stain on that most illustrious man, (for Titus
                 Annius would prefer being one of those men who are loaded with reproaches by you,)
                 still I ask, since in the administration of the affairs of the republic there has
@@ -811,12 +829,14 @@ Added to repository.
                 who is more worthless than yourself, and the other being reduced to the same
                 condition by your design indeed, not with his assistance,)—I ask, I say, how you can
                 separate those men in your evidence, whom you connect together by your accusation? </p>
-            <p>The last thing which I wish you to answer me is this:—As you said a great deal
+         <p>The last thing which I wish you to answer me is this:—As you said a great deal
                 against Albinovanus with respect to his prevarication, I wish to know whether you
                 said or did not say that you were not pleased at Sestius being prosecuted for
                 violence, and that he ought not to have been so prosecuted; and that there was no
                 law and no charge on which he was not more liable to impeachment? Did you also say
-                that the cause of <persName><surname>Milo</surname></persName>, a most admirable
+                that the cause of <persName>
+               <surname>Milo</surname>
+            </persName>, a most admirable
                 man, was generally considered as closely connected with his cause? and that the
                 things which were done by Sestius in my behalf were agreeable to good men? I am not
                 now arguing against the inconsistency of your language and of your evidence; for you
@@ -830,6 +850,6 @@ Added to repository.
                 attributing to you any authority by so doing, I ask whether you gave evidence
                 against a man on his trial for violence, who you say never ought to have been
                 prosecuted for violence at all?</p>
-        </body>
-    </text>
+      </body>
+   </text>
 </TEI>

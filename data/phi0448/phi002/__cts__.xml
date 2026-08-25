@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0448" urn="urn:cts:latinLit:phi0448.phi002" xml:lang="lat">
         <ti:title xml:lang="eng">Civil War</ti:title>
         <ti:title xml:lang="lat">De Bello Civili</ti:title>
@@ -25,4 +24,4 @@
     </ti:translation>
     
     
-    </ti:work>
+    <ti:genre confidence="high">prose-standard</ti:genre></ti:work>

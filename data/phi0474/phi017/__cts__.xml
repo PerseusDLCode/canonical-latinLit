@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi017" urn="urn:cts:latinLit:phi0474.phi017">
+<?xml version='1.0' encoding='UTF-8'?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0474" projid="latinLit:phi017" urn="urn:cts:latinLit:phi0474.phi017">
     
     <ti:title xml:lang="lat">Pro L. Flacco</ti:title>
    
@@ -16,5 +16,4 @@
     </ti:translation>
     
 
-</ti:work>
-    
+<ti:genre confidence="high">prose-section</ti:genre></ti:work>

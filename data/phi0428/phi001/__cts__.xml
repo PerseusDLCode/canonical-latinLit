@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0428.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0428">
   <ti:title xml:lang="lat">De Bello Alexandrino</ti:title>
   
@@ -10,4 +11,4 @@
             <ti:label xml:lang="eng">The Alexandrian War</ti:label>
             <ti:description xml:lang="eng">[Pseudo-]Caesar: Alexandrian, African and Spanish Wars. Way, A. G., translator. William Heinemann Ltd.: London;  Harvard University Press: Cambridge, MA, 1955 (printing).</ti:description>
           </ti:translation>
-          </ti:work>
+          <ti:genre confidence="high">prose-standard</ti:genre></ti:work>

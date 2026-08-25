@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:stoa0089.stoa002" xml:lang="lat" groupUrn="urn:cts:latinLit:stoa0089">
             <ti:title xml:lang="lat">de bello Gildonico</ti:title>
             
@@ -10,5 +11,4 @@
     <ti:label xml:lang="eng">The War Against Gildo</ti:label>
     <ti:description xml:lang="eng">Claudian, Volume 1. Platnauer, Maurice, translator. Harvard University Press: Cambridge, MA; London, England. 1922.</ti:description>
   </ti:translation>
-          </ti:work>
-        
+          <ti:genre confidence="high">verse-book-line</ti:genre></ti:work>

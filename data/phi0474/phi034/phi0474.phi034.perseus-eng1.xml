@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>On Behalf of King Deiotarus </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>On Behalf of King Deiotarus </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi034.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,16 +159,16 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <front>
-            <head>THE SPEECH OF M. T. CICERO IN BEHALF OF KING DEIOTARUS. ADDRESSED TO CAIUS
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <front>
+         <head>THE SPEECH OF M. T. CICERO IN BEHALF OF KING DEIOTARUS. ADDRESSED TO CAIUS
                 CAESAR.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>This speech, like those for Marcellus and Ligarius, was addressed to Caesar.
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>This speech, like those for Marcellus and Ligarius, was addressed to Caesar.
                     Deiotarus was king of Galatia, and during Cicero's pro-consulship in Cilicia he
                     had formed a friendship with him, and had been of great assistance to him in his
                     campaign against Pacorus and the Parthians. Having been an adherent of Pompey,
@@ -164,20 +179,19 @@ Added to repository.
                     probable that Caesar was aware of the groundlessness of the charge, but
                     countenanced it, and allowed it to be brought before him, in the hopes of
                     finding a pretext for stripping the king of all the rest of his dominions. </p>
-                <p>Brutus espoused Deiotarus's cause very warmly, and went towards Spain <pb n="484"
-                    /> to meet Caesar, and made him a most earnest address in favour of Deiotarus. </p>
-                <p>The present trial was held in Caesar's house, and Cicero proved the king's
+            <p>Brutus espoused Deiotarus's cause very warmly, and went towards Spain <pb n="484"/> to meet Caesar, and made him a most earnest address in favour of Deiotarus. </p>
+            <p>The present trial was held in Caesar's house, and Cicero proved the king's
                     innocence so completely that he was unable to condemn him; but, as he would not
                     acquit him, he adjourned the further consideration of the matter till he himself
                     could go into the East and investigate the affair on the spot. </p>
-                <p>This speech was delivered in the year of Caesar's fourth consulship the year
+            <p>This speech was delivered in the year of Caesar's fourth consulship the year
                     before he was killed.</p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>In all causes of more than ordinary importance, O Caius Caesar, I am accustomed, at
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi034.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>In all causes of more than ordinary importance, O Caius Caesar, I am accustomed, at
                 the beginning of my speech, to be more vehemently affected than either common custom
                 or my own age appears to require. And in this particular cause I am agitated by so
                 many considerations, that in proportion as my fidelity to my friend inspires me with
@@ -191,13 +205,14 @@ Added to repository.
                 the senate, used formerly to extol on account of his uninterrupted services towards
                 our republic. There is this further consideration, that I am disturbed by the
                 cruelty of one of the prosecutors, and by the unworthy conduct of the other. </p>
-            <p>O cruel, not to say wicked and impious, Castor! a grandson, who has brought his
+         <p>O cruel, not to say wicked and impious, Castor! a grandson, who has brought his
                 grandfather into danger of his life, and has caused that man to dread his youth,
                 whose old age he was bound to defend and protect; who has sought to recommend his
                 entrance into life to our favour by impiety and wickedness; who has instigated his
                 grandfather's slave, whom he corrupted by bribes, to accuse his master, and has
                 carried him away from the feet of the king's ambassadors. </p>
-            <p><milestone n="3" unit="section"/> But when I saw the countenance and heard the words
+         <p>
+            <milestone n="3" unit="section"/> But when I saw the countenance and heard the words
                 of this runaway slave, accusing his master,—his absent master,—his master, who was a
                 most devoted friend to our republic,—I did not feel so much grief at the depressed
                 condition of the monarch himself, as fear for the general fortunes of every one. For
@@ -205,9 +220,10 @@ Added to repository.
                 as a witness against his master, not <pb n="485"/> even by torture,—in which mode of
                 examination pain might, perhaps, elicit the truth from a man even against his
                 will,—a slave has arisen, who, without any compulsion, accuses him against whom he
-                might not legally say a word even on the rack. <milestone n="2" unit="chapter"
-                    /><milestone n="4" unit="section"/></p>
-            <p>This thing also, O Caius Caesar, at times disturbs me; which, however, I cease to
+                might not legally say a word even on the rack. <milestone n="2" unit="chapter"/>
+            <milestone n="4" unit="section"/>
+         </p>
+         <p>This thing also, O Caius Caesar, at times disturbs me; which, however, I cease to
                 fear when I come to a complete recollection of your disposition. For in principle it
                 is an unjust thing, but by your wisdom it becomes a most just one. For it is a
                 serious business (if you consider the matter by itself) to speak concerning a crime
@@ -218,8 +234,8 @@ Added to repository.
                 virtue to a great extent releases me from this fear. For I am not so much afraid
                 what you may wish to decide with respect to king Deiotarus, as I am sure what you
                 wish to decide in all other cases. <milestone n="5" unit="section"/>
-            </p>
-            <p>I am affected, also, by the unusual circumstance of the trial in this place; because
+         </p>
+         <p>I am affected, also, by the unusual circumstance of the trial in this place; because
                 I am pleading so important a cause—one, the fellow of which has never been brought
                 under discussion—within the walls of a private house; I am pleading it out of the
                 hearing of any court or body of auditors, which are a great support and
@@ -227,10 +243,9 @@ Added to repository.
                 countenance; I behold you alone; the whole of my speech is necessarily confined to
                 you alone. And if those considerations are very important as regards my hope of
                 establishing the truth, they for all that are impediments of the energy of my mind,
-                and to the proper enthusiasm and ardour of speaking. <milestone n="6" unit="section"
-                />
-            </p>
-            <p>For if, O Caius Caesar, I were pleading this cause in the forum, still having you for
+                and to the proper enthusiasm and ardour of speaking. <milestone n="6" unit="section"/>
+         </p>
+         <p>For if, O Caius Caesar, I were pleading this cause in the forum, still having you for
                 my auditor and my judge, with what great cheerfulness would the concourse of the
                 Roman people inspire me! For what citizen would do otherwise than favour that king,
                 the whole of whose life he would recollect had been spent in the wars of the Roman
@@ -244,12 +259,14 @@ Added to repository.
                 many defendants, to consider within yourself what my feelings at present must be; so
                 that your justice, and also your careful attention in listening to me, may the more
                 easily lessen my natural agitation and anxiety. </p>
-            <p>But before I say anything about the accusation itself, I will say a few words about
+         <p>But before I say anything about the accusation itself, I will say a few words about
                 the hopes entertained by the accusers. For though they appear to be possessed of no
                 great skill or experience in affairs, nevertheless they have never, surely,
                 undertaken this cause without some hope or other and some definite design.
-                    <milestone n="3" unit="chapter"/><milestone n="8" unit="section"/></p>
-            <p>They were not ignorant that you were offended with king Deiotarus. They recollected
+                    <milestone n="3" unit="chapter"/>
+            <milestone n="8" unit="section"/>
+         </p>
+         <p>They were not ignorant that you were offended with king Deiotarus. They recollected
                 that he had been already exposed to some inconvenience and loss on account of the
                 displeasure with which you regarded him; and while they knew that you were angry
                 with him, they had had proofs also that you were friendly to them. And as they would
@@ -263,10 +280,9 @@ Added to repository.
                 promises and pledges of good faith. You have chosen to enter his house, you have
                 chosen to renew with him the ancient ties of friendship and hospitality. His
                 household gods have received you under their protection; the altars and hearths of
-                king Deiotarus have beheld you at peace with and friendly towards him. <milestone
-                    n="9" unit="section"/>
-            </p>
-            <p>You are accustomed, O Caius Caesar, not only to he prevailed upon by entreaties
+                king Deiotarus have beheld you at peace with and friendly towards him. <milestone n="9" unit="section"/>
+         </p>
+         <p>You are accustomed, O Caius Caesar, not only to he prevailed upon by entreaties
                 easily, but to he prevailed on once for all. No enemy has ever been reconciled to
                 you who has found any remnant of hostility remaining in your breast afterwards.
                 Although, who is there who has not heard of your complaints against king Deiotarus?
@@ -274,11 +290,10 @@ Added to repository.
                 slack in his duty, <pb n="487"/> because his inclination led him more to friendships
                 with Cnaeus Pompeius than with you. And yet that very fact you said that you would
                 have pardoned, if when he sent reinforcements and even his son to Pompeius, he had
-                himself availed himself of the excuse furnished him by his age. <milestone n="10"
-                    unit="section"/> And in this way, which you were acquitting him of the most
+                himself availed himself of the excuse furnished him by his age. <milestone n="10" unit="section"/> And in this way, which you were acquitting him of the most
                 important charges, you left behind only the little blame of his friendship for
                 another. </p>
-            <p>Therefore, you not only abstained from punishing him, but you released him from all
+         <p>Therefore, you not only abstained from punishing him, but you released him from all
                 apprehension; you acknowledged him as your friend, you left him king. And, indeed,
                 his proceedings were not dictated by any hatred of you; he fell by the general error
                 of us all. That king, whom the senate had repeatedly addressed by this name, using
@@ -286,8 +301,10 @@ Added to repository.
                 considered that order most important and most sacred, being a man living at a great
                 distance, and a foreigner by birth, was perplexed by the same affairs which
                 embarrassed us who were born and who at all times had lived in the middle of the
-                republic. <milestone n="4" unit="chapter"/><milestone n="11" unit="section"/></p>
-            <p>When he heard that men had taken arms by the authority of the senate, acting with
+                republic. <milestone n="4" unit="chapter"/>
+            <milestone n="11" unit="section"/>
+         </p>
+         <p>When he heard that men had taken arms by the authority of the senate, acting with
                 great unanimity; that the defence of the republic had been entrusted to the consuls,
                 the praetors, the tribunes of the people, and to all of us who had received the
                 title of <foreign xml:lang="la">Imperator</foreign>, he was agitated in his mind,
@@ -301,8 +318,7 @@ Added to repository.
                 followed. He never heard a word of the conditions which you offered, nor of your
                 eagerness for concord and peace, nor of the way in which certain men conspired
                 against your dignity. And though this was the state of things, still he continued
-                quiet until ambassadors and letters came to him from Cnaeus Pompeius. <milestone
-                    n="12" unit="section"/> Pardon Deiotarus, pardon him, I entreat you, O Caesar,
+                quiet until ambassadors and letters came to him from Cnaeus Pompeius. <milestone n="12" unit="section"/> Pardon Deiotarus, pardon him, I entreat you, O Caesar,
                 if he, though a king, yielded to the authority of that man whom we all followed, and
                 on whom both gods and men had heaped every sort of distinction, and on whom you
                 yourself had conferred the <pb n="488"/> most numerous and most important
@@ -315,9 +331,10 @@ Added to repository.
                 and by you yourself? He had surpassed all his predecessors in glory as much as you
                 have surpassed all the world. Therefore, we used to count up with admiration the
                 wars, and the victories, and the triumphs, and the consulship; of Cnaeus Pompeius.
-                But yours we are wholly unable to reckon. <milestone n="5" unit="chapter"
-                    /><milestone n="13" unit="section"/></p>
-            <p>To him then came king Deiotarus in this miserable and fatal war, to him whom he had
+                But yours we are wholly unable to reckon. <milestone n="5" unit="chapter"/>
+            <milestone n="13" unit="section"/>
+         </p>
+         <p>To him then came king Deiotarus in this miserable and fatal war, to him whom he had
                 previously assisted in his regular wars against the enemies of Rome, and with whom
                 he was bound, not only by ties of hospitality, but also by personal intimacy. And he
                 came, either because he had been asked, as a friend; or because he had been sent for
@@ -339,8 +356,8 @@ Added to repository.
                 was yours. And all those actions of his were accepted by you, O Caius Caesar, in
                 such a spirit that you paid him the <pb n="489"/> highest possible honours, and
                 confirmed hint in the dignity and title of king. <milestone n="15" unit="section"/>
-            </p>
-            <p>He, therefore, having been not only released from danger by you, but having been also
+         </p>
+         <p>He, therefore, having been not only released from danger by you, but having been also
                 distinguished by you with the highest honours, is now accused of having intended to
                 assassinate you in his own house—a thing which you cannot in truth possibly suspect,
                 unless you consider him to have been utterly mad. For, to say nothing of what a deed
@@ -356,8 +373,10 @@ Added to repository.
                 all the arms, in short, of every people on earth against himself alone! To what
                 misery would he not have exposed his kingdom, his house, his wife, and his beloved
                 son, not merely by the accomplishment of such a crime, but even by the bare idea of
-                it! <milestone n="6" unit="chapter"/><milestone n="16" unit="section"/></p>
-            <p>But I suppose that improvident and rash man did not see all this! On the contrary,
+                it! <milestone n="6" unit="chapter"/>
+            <milestone n="16" unit="section"/>
+         </p>
+         <p>But I suppose that improvident and rash man did not see all this! On the contrary,
                 who is a more considerate than he? Who is more secret in his plans? Who is more
                 prudent? Although in this place it is not so much on the ground of cleverness and
                 prudence that it seems to me that I should defend Deiotarus, as on that of good
@@ -369,8 +388,9 @@ Added to repository.
                 instant destruction, nor to an unscrupulous man, unless he be at the same time
                 utterly insane; will you pretend that such a crime was thought of by a most virtuous
                 man, and one too who was never accounted a fool? <pb n="490"/>
-            </p>
-            <p><milestone n="17" unit="section"/> And in what a way do you try and support this
+         </p>
+         <p>
+            <milestone n="17" unit="section"/> And in what a way do you try and support this
                 invention! in a way not only not calculated to win belief, but not even such as to,
                 give rise to the least suspicion. When, says the prosecutor, you had come to the
                 Luceian fort, and had turned aside to the palace of the king your entertainer, there
@@ -396,11 +416,11 @@ Added to repository.
                 he might have attempted in secret and have executed with great caution, he never
                 entrusted to you who were a skillful physician, and, as he believed, a faithful
                 servant and yet that he could conceal nothing from you with respect to arms and
-                blood, and ambuscade? And how cleverly is the whole nation worked up! <milestone
-                    n="19" unit="section"/> It was your own good fortune, says he that fortune which
+                blood, and ambuscade? And how cleverly is the whole nation worked up! <milestone n="19" unit="section"/> It was your own good fortune, says he that fortune which
                 always preserves you, which saved you then. You said that you did not wish at that
-                moment to see the presents. <milestone n="7" unit="chapter"/></p>
-            <p>What happened afterwards? Did Deiotarus, after he had failed in accomplishing the
+                moment to see the presents. <milestone n="7" unit="chapter"/>
+         </p>
+         <p>What happened afterwards? Did Deiotarus, after he had failed in accomplishing the
                 business at that time, at once <pb n="491"/> dismiss his army? was there no other
                 place where he could set an ambush? But you said that when you had supped you would
                 come back again the same way; and you did so. Was it a very difficult job to detain
@@ -429,7 +449,7 @@ Added to repository.
                 only worthless and infamous, but also stupid and senseless? What? were they brazen
                 statues that he had planted in ambush, so that they could not be moved from the
                 bath-room to the bed-chamber? </p>
-            <p>Here you have the whole charge as to the ambuscade: for he said nothing further. “In
+         <p>Here you have the whole charge as to the ambuscade: for he said nothing further. “In
                 all this,” says he, “I was his accomplice.” What do you mean? Was he so demented as
                 to allow a man to leave him who was privy to so enormous a wickedness? As even to
                 send him to Rome, where he knew his grandson was, who was most bitterly hostile to
@@ -438,9 +458,9 @@ Added to repository.
                 his absence. <milestone n="22" unit="section"/> “My brothers too,” says he, “because
                 they also were privy to it he threw into prison.” When, then, he was putting those
                 men in prison whom he had with him, did he leave you at large and send you to
-                Rome,—you who knew the very same facts which you say that they knew? <milestone
-                    n="8" unit="chapter"/></p>
-            <p>The remainder of the accusation was of a twofold character; one part of which was,
+                Rome,—you who knew the very same facts which you say that they knew? <milestone n="8" unit="chapter"/>
+         </p>
+         <p>The remainder of the accusation was of a twofold character; one part of which was,
                 that the king was always in his watch-tower because he was so disaffected to your
                 interests; the other, that he had levied a large army against you. As to the army, I
                 will reply to that charge in a very few words, as I will to the rest of the charges.
@@ -467,16 +487,17 @@ Added to repository.
                 was recognised as being a slave;—I do not believe it; I never heard of it. But
                 still, even if such a thing had happened, I should not conceive that that was any
                 fault of the king's. <pb n="493"/>
-                <milestone n="9" unit="chapter"/></p>
-            <p>“He was very ill-disposed towards you.” How so? He hoped, I suppose, that you would
+            <milestone n="9" unit="chapter"/>
+         </p>
+         <p>“He was very ill-disposed towards you.” How so? He hoped, I suppose, that you would
                 find it difficult to get out of Alexandria, on account of the nature of the country
                 and of the river. But, at that very time, he supplied you with money, and with
                 provisions for your army; he cooperated to the utmost of his power with the officer
                 to whom you had given command in Asia; he assisted you when victorious, not only in
                 the way of affording you hospitality, but with you he encountered danger, and stood
                 by your side in the array of battle. <milestone n="25" unit="section"/>
-            </p>
-            <p>The African war followed: there were unfavourable reports spread about you, which
+         </p>
+         <p>The African war followed: there were unfavourable reports spread about you, which
                 also roused that frantic Caecilius. What on that occasion was the disposition
                 evinced towards you by the king? He sold property by auction, and preferred
                 stripping himself to not supplying you with money. “But,” says the prosecutor, “at
@@ -485,11 +506,10 @@ Added to repository.
                 came that Domitius had perished by shipwreck, and that you were blockaded in some
                 fortress, he quoted a Greek verse with reference to Domitius, having the same
                 meaning as that of our poet: <quote>
-                    <l>So can we well afford to lose our friends, </l>
-                    <l>If our foes perish in the same destruction:</l>
-                </quote>
-                <note anchored="true">The Greek proverb is given by Plutarch as <quote
-                        xml:lang="grc">e)rre/tw fi/los so\n e)/xqrw|</quote>. If the Latin iambic
+               <l>So can we well afford to lose our friends, </l>
+               <l>If our foes perish in the same destruction:</l>
+            </quote>
+            <note anchored="true">The Greek proverb is given by Plutarch as <quote xml:lang="grc">e)rre/tw fi/los so\n e)/xqrw|</quote>. If the Latin iambic
                     quoted by Cicero comes from any Latin poet, it is not known who he was.</note>
                 an expression which he would never have uttered had he been ever so much an enemy to
                 you. For he himself is a man of a humane disposition; and that verse is a savage
@@ -497,8 +517,8 @@ Added to repository.
                 Moreover, why should he be an enemy to you, by whom he might even have been put to
                 death according to the laws of war, and by whom he recollected that he and his son
                 had been appointed kings? <milestone n="26" unit="section"/>
-            </p>
-            <p>What is the next statement? What is the next step taken by this scoundrel? He says
+         </p>
+         <p>What is the next statement? What is the next step taken by this scoundrel? He says
                 that Deiotarus was so elated at this, that he drowned his joy in wine, and danced
                 naked at a banquet. What cross is there that could be a sufficient punishment for
                 this slave? Did any one ever see Deiotarus dancing,—did any one ever see him drunk?
@@ -513,8 +533,8 @@ Added to repository.
                 this man from his earliest youth, and was experienced by, and known to, all Asia,
                 and by all our magistrates and ambassadors, and by all the Roman knights who
                 trafficked in Asia. </p>
-            <p>
-                <milestone n="27" unit="section"/> It was by many successive steps of dutiful
+         <p>
+            <milestone n="27" unit="section"/> It was by many successive steps of dutiful
                 service towards our republic that he arrived at this title of king; but still,
                 whatever leisure he had from the wars of the Roman people, he devoted entirely to
                 cultivating friendship and intimacy with our citizens, and to uniting his affairs
@@ -523,9 +543,10 @@ Added to repository.
                 he, then, who, while a young man, before he had arrived at his subsequent high rank,
                 never did anything that was inconsistent with the most rigid virtue and the greatest
                 dignity, after he had raised to himself the esteem in which he is now held, and when
-                he had become of so advanced an age, did he dance? <milestone n="10" unit="chapter"
-                    /><milestone n="28" unit="section"/></p>
-            <p>You ought, O Castor, rather to imitate the manner and principles of your grandfather,
+                he had become of so advanced an age, did he dance? <milestone n="10" unit="chapter"/>
+            <milestone n="28" unit="section"/>
+         </p>
+         <p>You ought, O Castor, rather to imitate the manner and principles of your grandfather,
                 than calumniate a most virtuous and most illustrious man with the language of a
                 runaway slave. Even if you had had a grandfather who was a dancer, and not a man
                 from whom examples of modesty and chastity might be derived, still this reproach is
@@ -545,12 +566,14 @@ Added to repository.
                 could never bring this young man to adopt my advice, both because of his own
                 eagerness for that war, and because he thought himself bound to satisfy the
                 expectations of his father. </p>
-            <p>Happy is that house which has obtained, not only impunity, but licence to accuse
+         <p>Happy is that house which has obtained, not only impunity, but licence to accuse
                 others! Unfortunate Deiotarus, who is not only accused by one who was in the same
                 camp with him, before you, but who is impeached even by his own relations. Cannot
                 you, O Castor, be content with your own good fortune without bringing misery on your
-                relations? <milestone n="11" unit="chapter"/><milestone n="30" unit="section"/></p>
-            <p>Grant that there may be enmity between you; which, however, there ought not to be;
+                relations? <milestone n="11" unit="chapter"/>
+            <milestone n="30" unit="section"/>
+         </p>
+         <p>Grant that there may be enmity between you; which, however, there ought not to be;
                 for it was king Deiotarus who raised your family, when abject and obscure, from
                 darkness into light. Who ever heard of your father, or who he was, before they heard
                 whose son-in-law he was? But even supposing you repudiated the name of the
@@ -566,8 +589,9 @@ Added to repository.
                 that of this tribunal, no walls, no laws, no rights will be sufficient for the
                 protection of our safety. For when that which is in our houses and is our own can
                 sally out with impunity and fight against us, slavery then gets the mastery, and the
-                master's position is slavery. <milestone n="31" unit="section"/></p>
-            <p>Shame on the times, and on our present habits! That <pb n="496"/> Cnaeus Domitius,
+                master's position is slavery. <milestone n="31" unit="section"/>
+         </p>
+         <p>Shame on the times, and on our present habits! That <pb n="496"/> Cnaeus Domitius,
                 whom we as boys saw consul, and censor and chief pontiff, when, as tribune of the
                 people, he had impeached Marcus Scaurus, the chief man of the state, before the
                 people, and when a slave of Scaurus had come secretly to him at his own house, and
@@ -584,12 +608,14 @@ Added to repository.
                 this Servius Sulpicius that most illustrious man, who is present here, and of this
                 Titus Torquatus, a most virtuous young man, who is also present, confess that he had
                 been bribed by you, and that it was by your promises that he had been instigated to
-                this dishonesty? <milestone n="12" unit="chapter"/></p>
-            <p>What then is the object of this shameless, and barbarous, and unrestrained
+                this dishonesty? <milestone n="12" unit="chapter"/>
+         </p>
+         <p>What then is the object of this shameless, and barbarous, and unrestrained
                 inhumanity? Was it for this that you came into this city, that you might corrupt the
                 principles predominant in, and the examples furnished by this city, and that you
                 might pollute the humanity of our state by your own private ferocity? </p>
-            <p><milestone n="33" unit="section"/> And how ingeniously have all your charges been
+         <p>
+            <milestone n="33" unit="section"/> And how ingeniously have all your charges been
                 collected! Blesamius, says he, (for it was in his name, a very excellent man, and
                 one who was a stranger to you, that he was calumniating you, O Deiotarus,) used to
                 write to the king, that you, O Caesar, were very unpopular; that you were considered
@@ -598,8 +624,7 @@ Added to repository.
                 Do not you perceive, O Caesar, that these statements were collected by these
                 fellows, from the city conversation of spiteful men? Could Blesamius have written to
                 say that Caesar was a tyrant? Yes, for he had seen the heads of many citizens
-                exposed; he had seen many men by the orders of Caesar ill-treated, scourged <pb
-                    n="497"/> and executed; he had seen many houses pillaged and destroyed; he had
+                exposed; he had seen many men by the orders of Caesar ill-treated, scourged <pb n="497"/> and executed; he had seen many houses pillaged and destroyed; he had
                 seen the forum filled with armed troops!—No; those things which previously we always
                 have felt after victories in civil war, we have not seen now, when you have been our
                 conqueror. <milestone n="34" unit="section"/> You are the only man—you I say, O
@@ -616,9 +641,10 @@ Added to repository.
                 been desired by you, and sometimes, owing to the amazement with which men have
                 viewed your achievements, it has even been stifled by the excess of their
                 admiration; and perhaps, too, it has been omitted because nothing vulgar could
-                possibly appear worthy of you. <milestone n="13" unit="chapter"/><milestone n="35"
-                    unit="section"/></p>
-            <p>I do not think that anything has been omitted by me; but some topics have been
+                possibly appear worthy of you. <milestone n="13" unit="chapter"/>
+            <milestone n="35" unit="section"/>
+         </p>
+         <p>I do not think that anything has been omitted by me; but some topics have been
                 reserved for the end of my speech, and they are of such a nature that they ought to
                 reconcile you cordially to Deiotarus—for I am not now afraid of your being angry
                 with him; I am apprehensive rather of your suspecting that he harbours some
@@ -631,8 +657,7 @@ Added to repository.
                 truth, if that great prince, Antiochus the Great the king of Asia, who, after he had
                 been conquered by Scipio, was ordered to consider Mount Taurus as the boundary of
                 his dominions, and was deprived of all this Asia which is now a province of our
-                own,—if he was accustomed to say that he had been kindly treated by the Roman <pb
-                    n="498"/> people, because be had been released by them from the care of an
+                own,—if he was accustomed to say that he had been kindly treated by the Roman <pb n="498"/> people, because be had been released by them from the care of an
                 overgrown empire, and was now at liberty to enjoy a kingdom of moderate extent,
                 Deiotarus can comfort himself much more easily. For Antiochus had suffered a
                 chastisement for his insanity, my client only for an error. You, O Caesar, gave
@@ -640,10 +665,9 @@ Added to repository.
                 as he is allowed to retain and preserve this title, he does not think that the
                 kindness of the Roman people is at all diminished, or that the senate has come to
                 any unfavourable decision respecting him. He preserves a great and lofty spirit, and
-                will never succumb to his enemies, nor even to fortune. <milestone n="37"
-                    unit="section"/>
-            </p>
-            <p>He thinks that by his previous conduct he has given birth to much, and that by his
+                will never succumb to his enemies, nor even to fortune. <milestone n="37" unit="section"/>
+         </p>
+         <p>He thinks that by his previous conduct he has given birth to much, and that by his
                 own courage and virtue he still has much which he cannot possibly he deprived of.
                 For what fortune, or what accident, or what injury can happen to Deiotarus of such
                 severity as to efface the decrees of all our generals respecting him? For he has
@@ -653,25 +677,24 @@ Added to repository.
                 will ever efface, what forgetfulness will ever obliterate those numerous and
                 honourable resolutions of the senate respecting him, which have been recorded in the
                 public writings and memorials of the Roman people? </p>
-            <p>Why need I speak of his valour? why of his greatness of mind? of his wisdom? of his
+         <p>Why need I speak of his valour? why of his greatness of mind? of his wisdom? of his
                 firmness and consistency? qualities which not only have all wise and learned men
                 pronounced to be the greatest blessings, but which some have even considered the
                 only real ones, and have said that virtue wanted nothing more than these for the
-                purpose of living not only well, but even happily. <milestone n="38" unit="section"
-                /> He, considering these things, and reflecting on them day and night, is so far
+                purpose of living not only well, but even happily. <milestone n="38" unit="section"/> He, considering these things, and reflecting on them day and night, is so far
                 from feeling resentment against you, (for he would not only be ungrateful, but even
                 mad to do so,) that he attributes the whole of the tranquillity and quiet of his old
-                age which he enjoys to your clemency. <milestone n="14" unit="chapter"/></p>
-            <p>And as these were his sentiments previously, I do not doubt also that after the
+                age which he enjoys to your clemency. <milestone n="14" unit="chapter"/>
+         </p>
+         <p>And as these were his sentiments previously, I do not doubt also that after the
                 receipt of your letters, of which I have read a copy, which you gave to this
-                Blesamius at Tarraco for Deiotarus, his spirit became loftier still, and that <pb
-                    n="499"/> he ceased to feel any anxiety whatever. For in them you bid him
+                Blesamius at Tarraco for Deiotarus, his spirit became loftier still, and that <pb n="499"/> he ceased to feel any anxiety whatever. For in them you bid him
                 entertain good hopes, and to be of good courage—expressions which I know you are not
                 in the habit of using without a meaning: for I recollect that you wrote to me in
                 almost the same language, and that when you bade me entertain good hopes of the
                 future you were not deceiving me. </p>
-            <p>
-                <milestone n="39" unit="section"/> I am anxious, indeed, in this cause of King
+         <p>
+            <milestone n="39" unit="section"/> I am anxious, indeed, in this cause of King
                 Deiotarus, with whom the affairs of this republic have united me in friendship,
                 while our mutual regard for one another has connected us by ties of hospitality,
                 with whom long acquaintance has engendered intimacy, and his great services to me
@@ -683,8 +706,8 @@ Added to repository.
                 in their minds; nor, in short, ought it to be allowed to happen that any one of
                 those men should begin again to feel apprehension, who has once been released by you
                 from fear. <milestone n="40" unit="section"/>
-            </p>
-            <p>I ought not, O Caesar, to endeavour, as is often done by men in such danger as this,
+         </p>
+         <p>I ought not, O Caesar, to endeavour, as is often done by men in such danger as this,
                 to move your pity by my language. There is no need of my doing so. Your feelings are
                 of their own accord accustomed to come to the aid of the suppliant and unfortunate,
                 without being elicited by the eloquence of anybody. Place before your eyes two
@@ -695,9 +718,10 @@ Added to repository.
                 if such an action is glorious in the case of a private individual, much more will it
                 be celebrated when it is a king who is the object of it. The title of King has
                 always been accounted a holy name in this city; but the names of ally and king, when
-                united together, are then the holiest of all titles. <milestone n="15"
-                    unit="chapter"/><milestone n="41" unit="section"/></p>
-            <p>And these kings were afraid that if you were victorious they might lose that name.
+                united together, are then the holiest of all titles. <milestone n="15" unit="chapter"/>
+            <milestone n="41" unit="section"/>
+         </p>
+         <p>And these kings were afraid that if you were victorious they might lose that name.
                 But now that they have been allowed to retain it, and have been confirmed in it by
                 you, I confidently trust that they will even transmit it to <pb n="500"/> their
                 posterity. Moreover, these ambassadors whom you see before you, Hieras, and
@@ -715,15 +739,14 @@ Added to repository.
                 he attended you to the borders on the opposite side of the country; that when you
                 left the bath he was with you, and when you surveyed all those presents after
                 supper, and when you retired to rest in your bed-chamber. And he says, too, that he
-                attended you in the same unremitting manner all the next day. <milestone n="43"
-                    unit="section"/></p>
-            <p>Wherefore, if any one of those things which Deiotarus has been accused of, really was
+                attended you in the same unremitting manner all the next day. <milestone n="43" unit="section"/>
+         </p>
+         <p>Wherefore, if any one of those things which Deiotarus has been accused of, really was
                 thought of, he does not object to your thinking the crime his. I entreat you, O
                 Caius Caesar, to consider that on this day your sentence will bring on those kings
                 either most miserable calamity, accompanied with infinite disgrace, or an unsullied
                 reputation attended with safety; and to desire the one of those results would be an
                 act of cruelty, to secure the other is an action suitable to your clemency. </p>
-        </body>
-    </text>
-
+      </body>
+   </text>
 </TEI>

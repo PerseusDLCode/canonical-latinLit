@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-    schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title>Eclogues</title>
-             <author>P. Vergilius Maro</author>
-             <editor>J. B. Greenough</editor>
+            <title>Eclogues</title>
+            <author>P. Vergilius Maro</author>
+            <editor>J. B. Greenough</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
-              <principal>Gregory Crane</principal>
+            <principal>Gregory Crane</principal>
             <respStmt>
                <resp>Prepared under the supervision of</resp>
                <name>Bridget Almas</name>
@@ -27,6 +24,7 @@
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
             <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0690.phi001.perseus-lat2</idno>
          </publicationStmt>
          <sourceDesc>
             <biblStruct>
@@ -40,60 +38,58 @@
                      <date>1881</date>
                   </imprint>
                </monogr>
-               <ref target="https://hdl.handle.net/2027/uc1.a0000339325">HathiTrust</ref>                  
+               <ref target="https://hdl.handle.net/2027/uc1.a0000339325">HathiTrust</ref>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-    
       <encodingDesc>
-        <refsDecl n="CTS">
-          <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
-            <p>This pointer pattern extracts poem and line</p>
-          </cRefPattern>
-          <cRefPattern n="poem" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-            <p>This pointer pattern extracts poem</p>
-          </cRefPattern>
-        </refsDecl>
          <refsDecl n="TEI">
             <refState unit="poem"/>
             <refState unit="line"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="poem" delim=":" match="div[@type='poem']" use="@n">
+                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
-    
-     <profileDesc>
-        <langUsage>
-           <language ident="lat">Latin
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#verse-poem-line"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin
            </language>
-        </langUsage>
-     </profileDesc>
-    
+         </langUsage>
+      </profileDesc>
       <revisionDesc>
-        <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
-        <change when="2011-10-31" who="lcerrato">fixed typo at start of line 68 of ecl 1</change>
-        <change when="2011-01-17" who="gcrane">base SDL files</change>
-        <change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
-        <change when="2009-03-17" who="rsingh04">is now well-formed</change>
-        <change when="2009-01-21" who="lcerrato">fixed two typos checked against source</change>
-        <change when="2005-11-21" who="lcerrato">changed pallelltis to pallentis 2.47</change>
-        <change when="2005-08-01" who="packel">removed stray item tags</change>
-        <change when="2005-07-25" who="packel">Converted to XML</change>
-        <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
-        <change when="2003-05-21" who="lcerrato">added missing first word of 5.1: cur; confirmed with source</change>
-        <change when="2003-02-06" who="lcerrato">fixed typo calaunos 8.24 to calamos</change>
-        <change when="2003-02-04" who="lcerrato">fixed typo in 10.77: te to Ite</change>
-        <change when="2003-02-04" who="gcrane">missing period</change>
-        <change when="2001-03-12" who="amahoney">add line numbers</change>
-        <change when="2000-03-06" who="amahoney">remove headers so poem numbers get into short toc</change>
-        <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-        <change when="1999-08-04" who="textgod">Changed header.</change>
-        <change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
-        <change when="1996-11-01" who="WM">Mark up public domain text downloaded from Libellus; did diereses; needs line nos.</change>
+         <change when="2014-11-06" who="Thibault Clerice">Moving to Epidoc with new URN</change>
+         <change when="2011-10-31" who="lcerrato">fixed typo at start of line 68 of ecl 1</change>
+         <change when="2011-01-17" who="gcrane">base SDL files</change>
+         <change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
+         <change when="2009-03-17" who="rsingh04">is now well-formed</change>
+         <change when="2009-01-21" who="lcerrato">fixed two typos checked against source</change>
+         <change when="2005-11-21" who="lcerrato">changed pallelltis to pallentis 2.47</change>
+         <change when="2005-08-01" who="packel">removed stray item tags</change>
+         <change when="2005-07-25" who="packel">Converted to XML</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2003-05-21" who="lcerrato">added missing first word of 5.1: cur; confirmed with source</change>
+         <change when="2003-02-06" who="lcerrato">fixed typo calaunos 8.24 to calamos</change>
+         <change when="2003-02-04" who="lcerrato">fixed typo in 10.77: te to Ite</change>
+         <change when="2003-02-04" who="gcrane">missing period</change>
+         <change when="2001-03-12" who="amahoney">add line numbers</change>
+         <change when="2000-03-06" who="amahoney">remove headers so poem numbers get into short toc</change>
+         <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+         <change when="1999-08-04" who="textgod">Changed header.</change>
+         <change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
+         <change when="1996-11-01" who="WM">Mark up public domain text downloaded from Libellus; did diereses; needs line nos.</change>
       </revisionDesc>
-  </teiHeader>
+   </teiHeader>
    <text>
-      <body>
-        <div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0690.phi001.perseus-lat2">
-         <div type="textpart" subtype="poem" n="1">
+      <body xml:base="urn:cts:latinLit:phi0690.phi001.perseus-lat2">
+         <div n="1" type="poem">
             <head>ECLOGA I. MELIBOEUS, TITYRUS</head>
             <sp>
                <speaker>Meliboeus</speaker>
@@ -136,7 +132,7 @@
                <l n="26">quantum lenta solent inter viburna cupressi.</l>
             </sp>
             <sp>
-               <speaker>Meliboeus</speaker> 
+               <speaker>Meliboeus</speaker>
                <l n="27">Et quae tanta fuit Romam tibi causa videndi?</l>
             </sp>
             <sp>
@@ -218,7 +214,7 @@
                <l n="84">maioresque cadunt altis de montibus umbrae.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="2">
+         <div n="2" type="poem">
             <head>ECLOGA II.</head>
             <l n="1">Formosum pastor Corydon ardebat Alexim,</l>
             <l n="2">delicias domini, nec quid speraret habebat;</l>
@@ -294,9 +290,8 @@
             <l n="72">viminibus mollique paras detexere iunco?</l>
             <l n="73">Invenies alium, si te hic fastidit, Alexim.</l>
          </div>
-         <div type="textpart" subtype="poem" n="3">
+         <div n="3" type="poem">
             <head>ECLOGA III. MENALCAS, DAMOETAS, PALAEMON</head>
-
             <sp>
                <speaker>Menalcas</speaker>
                <l n="1">Dic mihi, Damoeta, cuium pecus, an Meliboei?</l>
@@ -529,7 +524,7 @@
                <l n="111">Claudite iam rivos, pueri, sat prata biberunt.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="4">
+         <div n="4" type="poem">
             <head>ECLOGA IV.</head>
             <lg type="stanza">
                <l n="1">Sicelides Musae, paulo maiora canamus!</l>
@@ -603,9 +598,8 @@
                <l n="63">nec deus hunc mensa, dea nec dignata cubili est.</l>
             </lg>
          </div>
-         <div type="textpart" subtype="poem" n="5">
+         <div n="5" type="poem">
             <head>ECLOGA V. MENALCAS, MOPSUS</head>
-
             <sp>
                <speaker>Menalcas</speaker>
                <l n="1">Cur non, Mopse, boni quoniam convenimus ambo,</l>
@@ -745,7 +739,7 @@
                <l n="90">formosum paribus nodis atque aere, Menalca.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="6">
+         <div n="6" type="poem">
             <head>ECLOGA VI.</head>
             <lg>
                <l n="1">Prima Syracosio dignata est ludere versu,</l>
@@ -840,9 +834,8 @@
                <l n="86">iussit, et invito processit Vesper Olympo.</l>
             </lg>
          </div>
-         <div type="textpart" subtype="poem" n="7">
+         <div n="7" type="poem">
             <head>ECLOGA VII. MELIBOEUS, CORYDON, THYRSIS</head>
-
             <sp>
                <speaker>Meliboeus</speaker>
                <l n="1">Forte sub arguta consederat ilice Daphnis,</l>
@@ -953,7 +946,7 @@
                <l n="70">ex illo Corydon Corydon est tempore nobis.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="8">
+         <div n="8" type="poem">
             <head>ECLOGA VIII. DAMON, ALPHESIBOEUS</head>
             <l n="1">Pastorem Musam Damonis et Alphesiboei—</l>
             <l n="2">immemor herbarum quos est mirata iuvenca</l>
@@ -1101,9 +1094,8 @@
                </lg>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="9">
+         <div n="9" type="poem">
             <head>ECLOGA IX. LYCIDAS, MOERIS</head>
-
             <sp>
                <speaker>Lycidas</speaker>
                <l n="1">te, Moeri, pedes? an, quo via ducit, in urbem?</l>
@@ -1208,7 +1200,7 @@
                <l n="67">carmina tum melius, cum venerit ipse, canemus.</l>
             </sp>
          </div>
-         <div type="textpart" subtype="poem" n="10">
+         <div n="10" type="poem">
             <head>ECLOGA X.</head>
             <l n="1">Extremum hunc, Arethusa, mihi concede laborem:</l>
             <l n="2">pauca meo Gallo, sed quae legat ipsa Lycoris,</l>
@@ -1292,7 +1284,6 @@
                <l n="77">Ite domum saturae, venit Hesperus, ite capellae.</l>
             </lg>
          </div>
-       </div>
       </body>
    </text>
 </TEI>

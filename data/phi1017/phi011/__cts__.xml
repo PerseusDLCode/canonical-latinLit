@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1017.phi011" groupUrn="urn:cts:latinLit:phi1017" xml:lang="lat">
   <ti:title xml:lang="lat">Apocolocyntosis</ti:title>
   <ti:edition urn="urn:cts:latinLit:phi1017.phi011.perseus-lat2" workUrn="urn:cts:latinLit:phi1017.phi011">
@@ -10,4 +11,4 @@
     <ti:description xml:lang="mul">Seneca, Lucius Annaeus. Petronius. Seneca Apocolocyntosis. Heseltine, Michael, editor. Rouse, William Henry Denham, translator. 
       London: William Heinemann; New York: G.P. Putnam's Sons, 1913.</ti:description> 
   </ti:translation>
-</ti:work>
+<ti:genre confidence="high">verse-stichic</ti:genre></ti:work>

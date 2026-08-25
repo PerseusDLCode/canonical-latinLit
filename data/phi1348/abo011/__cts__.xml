@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1348.abo011" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1348">
             <ti:title xml:lang="lat">Divus Julius</ti:title>
             <ti:edition xml:lang="lat" urn="urn:cts:latinLit:phi1348.abo011.perseus-lat2" workUrn="urn:cts:latinLit:phi1348.abo011">
@@ -17,4 +18,4 @@
             <ti:label xml:lang="eng">The Deified Julius</ti:label>
           <ti:description xml:lang="eng">Suetonius. Rolfe, John C., translator. London: William Heineman; New York: The Macmillan Company, 1914.</ti:description>
           </ti:translation>
-          </ti:work>
+          <ti:genre confidence="high">prose-chapter-section</ti:genre></ti:work>

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -26,6 +23,7 @@
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
             <date type="release">2011-09-12</date>
+            <idno type="CTS">urn:cts:latinLit:stoa0058.stoa003.perseus-lat1</idno>
          </publicationStmt>
          <sourceDesc>
             <biblStruct>
@@ -51,17 +49,19 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <refsDecl n="CTS">
-            <cRefPattern n="section" matchPattern="(\w+)"
-               replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-               <p>This pointer pattern extracts section</p>
-            </cRefPattern>
-         </refsDecl>
          <refsDecl n="TEI.2">
             <refState unit="card"/>
          </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="section" delim=":" match="div[@type='section']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
       </encodingDesc>
       <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-section"/>
+         </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
             <language ident="grc">Greek</language>
@@ -69,9 +69,8 @@
       </profileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div xml:lang="lat" type="edition" n="urn:cts:latinLit:stoa0058.stoa003.perseus-lat1">
-            <div type="textpart" subtype="section" n="1">
+      <body xml:base="urn:cts:latinLit:stoa0058.stoa003.perseus-lat1">
+         <div n="1" type="section">
             <pb n="p.38"/>
             <head>quomodo substantiae</head>
             <label type="opener">Item eiusdem ad eundem quomodo substantiae in eo quod sint bonae sint cum non
@@ -84,16 +83,13 @@
                mihi ipse commentor potiusque ad memoriam meam speculata conseruo quam cuiquam
                   <milestone unit="loebline" n="10"/> participo quorum lasciuia ac petulantia nihil
                a ioco risuque patitur esse seiunctum. 1 Prohinc tu ne sis obscuritatibus breuitatis
-               aduersus, quae cum sint arcani fida custodia tum id habent commodi, quod <pb n="p.40"
-               /> cum his solis qui digni sunt conloquuntur. Vt igitur <milestone unit="loebline"
-                  n="15"/> in mathematica fieri solet ceterisque etiam disciplinis, praeposui
+               aduersus, quae cum sint arcani fida custodia tum id habent commodi, quod <pb n="p.40"/> cum his solis qui digni sunt conloquuntur. Vt igitur <milestone unit="loebline" n="15"/> in mathematica fieri solet ceterisque etiam disciplinis, praeposui
                terminos regulasque quibus cuncta quae sequuntur efficiam. </p>
             <p>I. Communis animi conceptio est enuntiatio quam quisque probat auditam. Harum duplex
                modus est. <milestone unit="loebline" n="20"/> Nam una ita communis est, ut omnium
                sit hominum, ueluti si hanc proponas: <q rend="undirect">Si duobus aequalibus
                   aequalia auferas, quae relinquantur aequalia esse, nullus id intellegens neget.
-                  Alia uero est doctorum tantum, quae tamen ex talibus communis animi <milestone
-                     unit="loebline" n="25"/> conceptionibus uenit, ut est: Quae incorporalia sunt,
+                  Alia uero est doctorum tantum, quae tamen ex talibus communis animi <milestone unit="loebline" n="25"/> conceptionibus uenit, ut est: Quae incorporalia sunt,
                   in loco non esse,</q> et cetera; quae non uulgus sed docti comprobant. </p>
             <p>II. Diuersum est esse et id quod est; ipsum enim esse nondum est, at uero quod est
                accepta essendi <milestone unit="loebline" n="30"/> forma est atque consistit. </p>
@@ -104,8 +100,7 @@
             <p>IV. Id quod est habere aliquid praeterquam quod ipsum est potest; ipsum uero esse
                nihil aliud praeter se habet admixtum. </p>
             <p>V. Diuersum est tantum esse aliquid et esse aliquid in eo quod est; illic enim
-               accidens hic <milestone unit="loebline" n="40"/> substantia significatum <pb n="p.42"
-               />
+               accidens hic <milestone unit="loebline" n="40"/> substantia significatum <pb n="p.42"/>
             </p>
             <p>VI. Omne quod est 1 participate eo quod est esse ut sit; alio uero participat ut
                aliquid sit. Ac per hoc id quod est participat eo quod est esse ut sit; est uero ut
@@ -122,8 +117,7 @@
                bonum tendunt <milestone unit="loebline" n="60"/> bona ipsa sunt. Sed quemadmodum
                bona sint, inquirendum est, utrumne participatione an substantia? Si participatione,
                per se ipsa nullo modo bona sunt; nam quod participatione album est, per se in eo
-               quod ipsum est album non est. Et de ceteris qualitatibus <milestone unit="loebline"
-                  n="65"/> eodem modo. Si igitur participatione sunt bona, ipsa per se nullo modo
+               quod ipsum est album non est. Et de ceteris qualitatibus <milestone unit="loebline" n="65"/> eodem modo. Si igitur participatione sunt bona, ipsa per se nullo modo
                bona sunt: non igitur ad bonum tendunt. Sed concessum est. Non igitur participatione
                sunt bona sed substantia. Quorum <pb n="p.44"/> uero substantia bona est, id quod
                sunt bona sunt; <milestone unit="loebline" n="70"/> id quod sunt autem habent ex eo
@@ -142,8 +136,7 @@
                subiecta materia nullus actu <milestone unit="loebline" n="90"/> separat, mente tamen
                segregans ipsum triangulum proprietatemque eius piae ter materiam speculatur.
                Amoueamus igitur primi boni praesentiam paulisper ex animo, quod esse quidem constat
-               idque ex omnium doctorum indoctorumque sententia barbararumque <milestone
-                  unit="loebline" n="95"/> gentium religionibus cognosci potest. Hoc igitur
+               idque ex omnium doctorum indoctorumque sententia barbararumque <milestone unit="loebline" n="95"/> gentium religionibus cognosci potest. Hoc igitur
                paulisper amoto ponamus omnia esse quae sunt bona atque ea consideremus quemadmodum
                bona esse <pb n="p.46"/> possent, si a primo bono minime defluxissent. Hinc intueor
                aliud in eis esse quod bona sunt, aliud quod <milestone unit="loebline" n="100"/>
@@ -163,22 +156,19 @@
                bonum est esse uoluisset. Idcirco quoniam <milestone unit="loebline" n="120"/> esse
                eorum a boni uoluntate defluxit, bona esse dicuntur. Primum enim bonum, quoniam est,
                in eo quod est bonum est; secundum uero bonum, quoniam ex eo fluxit cuius ipsum esse
-               bonum est, ipsum quoque bonum est. Sed ipsum esse omnium rerum ex eo <milestone
-                  unit="loebline" n="125"/> fluxit quod est primum bonum et quod bonum tale est ut
+               bonum est, ipsum quoque bonum est. Sed ipsum esse omnium rerum ex eo <milestone unit="loebline" n="125"/> fluxit quod est primum bonum et quod bonum tale est ut
                recte dicatur in eo quod est esse bonum. Ipsum igitur eorum esse bonum est; tunc enim
                in eo. <pb n="p.48"/> Qua in re soluta quaestio est. Idcirco enim licet in eo quod
                sint bona sint, non sunt tamen similia <milestone unit="loebline" n="130"/> primo
                bono, quoniam non quoquo modo sint res ipsum esse earum bonum est, sed quoniam non
                potest esse ipsum esse rerum, nisi a primo esse defluxerit, id est bono; idcirco
-               ipsum esse bonum est nec est simile ei a quo est. Illud enim quoquo modo <milestone
-                  unit="loebline" n="135"/> sit bonum est in eo quod est; non enim aliud est
+               ipsum esse bonum est nec est simile ei a quo est. Illud enim quoquo modo <milestone unit="loebline" n="135"/> sit bonum est in eo quod est; non enim aliud est
                praeterquam bonum. Hoc autem nisi ab illo esset, bonum fortasse esse posset, sed
                bonum in eo quod est esse non posset. Tunc enim participaret forsitan bono; ipsum
                uero esse quod non haberent a bono, <milestone unit="loebline" n="140"/> bonum habere
                non possent. Igitur sublato ab his bono primo mente et cogitatione, ista licet essent
                bona, tamen in eo quod essent bona esse non possent, et quoniam actu non potuere
-               exsistere, nisi illud ea quod uere bonum est produxisset, idcirco et esse <milestone
-                  unit="loebline" n="145"/> eorum bonum est et non est simile substantiali bono id
+               exsistere, nisi illud ea quod uere bonum est produxisset, idcirco et esse <milestone unit="loebline" n="145"/> eorum bonum est et non est simile substantiali bono id
                quod ab eo fluxit; et nisi ab eo fluxissent, licet essent bona, tamen in eo quod sunt
                bona esse non possent, quoniam et praeter bonum et non ex bono essent, cum illud
                ipsum bonum primum est et ipsum <milestone unit="loebline" n="150"/> esse sit et
@@ -188,8 +178,7 @@
                effecit <milestone unit="loebline" n="155"/> bonus quidem est, minime uero albus.
                Voluntatem <pb n="p.50"/> igitur boni comitatum est ut essent bona in eo quod sunt;
                uoluntatem uero non albi non est comitata talis eius quod est proprietas ut esset
-               album in eo quod est; neque enim ex albi uoluntate defluxerunt. <milestone
-                  unit="loebline" n="160"/> Itaque quia uoluit esse ea alba qui erat non albus, sunt
+               album in eo quod est; neque enim ex albi uoluntate defluxerunt. <milestone unit="loebline" n="160"/> Itaque quia uoluit esse ea alba qui erat non albus, sunt
                alba tantum; quia uero uoluit ea esse bona qui erat bonus, sunt bona in eo quod sunt.
                Secundum hanc igitur rationem cuncta oportet esse iusta, quoniam ipse iustus est qui
                ea esse uoluit? Ne hoc <milestone unit="loebline" n="165"/> quidem. Nam bonum esse
@@ -199,7 +188,6 @@
                esse quod iustis, sed idem nobis est esse omnibus in eo quod sumus. Bona igitur omnia
                sunt, non etiam iusta. Amplius bonum quidem generale est, iustum uero speciale nec
                species descendit in omnia. Idcirco alia quidem iusta alia aliud omnia bona.</p>
-         </div>
          </div>
       </body>
    </text>

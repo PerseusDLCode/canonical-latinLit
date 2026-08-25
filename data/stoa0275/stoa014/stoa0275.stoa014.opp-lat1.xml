@@ -1,67 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng"><fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Cultu Feminarum</title>
-        <author>Tertullian</author>
-         <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Cultu Feminarum</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=745%3Bownerid=13510798896211526-769">HathiTrust</ref>                              
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa014.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.701"/>
-<head>DE CULTU FEMINARUM.</head>
-<div type="textpart" subtype="book" n="1">
-<head>LIBER PRIMVS.</head>
-
-<div type="textpart" subtype="chapter" n="1">
-<p>Si tanta in terris moraretur fides, quanta merces eius expectatur 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa014.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=745%3Bownerid=13510798896211526-769">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-book-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa014.opp-lat1">
+         <pb xml:id="v.1.p.701"/>
+         <head>DE CULTU FEMINARUM.</head>
+         <div n="1" type="book">
+            <head>LIBER PRIMVS.</head>
+            <div n="1" type="chapter">
+               <p>Si tanta in terris moraretur fides, quanta merces eius expectatur 
 in caelis, nulla omnino vestrum, sorores dilectissimae, ex
 quo deum vivum cognovisset, et de sua, id est de feminae conditione
 didicisset, laetiorem habitum, ne dicam gloriosiorem appetisset,
@@ -91,10 +96,9 @@ Ergo nec nunc appetere debet aut nosse, si cupit reviviscere, quae
 nec habuerat nec noverat quando vivebat. Ideo omnia ista damnatae
 et mortuae mulieris impedimenta sunt, quasi ad pompam funeris
 constituta.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p>Nam et illi qui ea constituerunt damnati in poenam mortis 
+            </div>
+            <div n="2" type="chapter">
+               <p>Nam et illi qui ea constituerunt damnati in poenam mortis 
 deputantur, illi scilicet angeli qui ad filias hominum de caelo ruerunt,
 ut haec quoque ignominia feminae accedat. Nam cum et
 materias quasdam bene occultas et artes plerasque non bene revelatas
@@ -140,10 +144,9 @@ angelica repromissa, idem sexus qui et viris, eandem
 indicandi dignationem pollicetur. Nisi ergo hic iam praeiudicaverimus
 res eorum praedamnando quas in illis damnaturi sumus, illi
 potius nos iudicabunt atque damnabunt.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Scio scripturam Enoch, quae hunc ordinem angelis dedit, non 
+            </div>
+            <div n="3" type="chapter">
+               <p>Scio scripturam Enoch, quae hunc ordinem angelis dedit, non 
 recipi a quibusdam, quia nec in armarium Iudaicum admittitur.
 Opinor, non putaverunt illam ante cataclysmum editam post eum
 casum orbis omnium rerum abolitorem salvam esse potuisse. Si ista
@@ -169,10 +172,9 @@ reiecta, sicut et cetera fere quae Christum sonant. Nec utique
 mirum hoc, si scripturas aliquas non receperunt de eo locutas
 quem et ipsum coram loquentem non erant recepturi. Eo accedit,
 <bibl n="Iud. 14."/> quod Enoch apud Iudam apostolum testimonium possidet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p> Nulla nunc muliebri pompae nota inusta sit praedamnationis
+            </div>
+            <div n="4" type="chapter">
+               <p> Nulla nunc muliebri pompae nota inusta sit praedamnationis
 de exitu auctorum. Nihil angelis illis imputetur praeter repudium
 caeli et matrimonium carnis: rerum ipsarum qualitates examinemus,
 ut consilia quoque concupiscentiae earum deprehendamus. Habitus
@@ -184,10 +186,9 @@ corporis quae oculos trahunt. Alteri ambitionis crimen intendimus,
 alteri prostitutionis: ut iam hinc prospicias, dei ancilla, quid ex
 his disciplinae tuae conveniat, quae de diversis institutis censearis,
 scilicet humilitatis et castitatis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Aurum et argentum principes materiae cultus saecularis id
+            </div>
+            <div n="5" type="chapter">
+               <p> Aurum et argentum principes materiae cultus saecularis id
 sint necesse est unde sunt, terra scilicet, plane gloriosior, quoniam
 in maledictorum metallorum feralibus officinis poenali opera
 deplorata nomen terrae in igni reliquit, atque exinde de tormentis
@@ -213,10 +214,9 @@ dae, sine ferri et aeris operario vigore non possint. Iam igitur
 aestimandum est, unde obveniat tanta dignitas auro et argento,
 cum et consanguineis, quantum ad genus, et potioribus, quantum
 ad utensilitatem, materiis praeferantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Sed et lapillos istos, qui cum auro superbiam iungunt, quid 
+            </div>
+            <div n="6" type="chapter">
+               <p>Sed et lapillos istos, qui cum auro superbiam iungunt, quid 
 aliud interpreter, nisi lapillos et calculos et eiusdem terrae minutalia,
 nec tamen aut fundamentis demandandis aut parietibus moliendis
 <pb xml:id="v.1.p.708"/>
@@ -235,12 +235,10 @@ Aiunt et de frontibus draconum gemmas erui, sicut et in
 piscium cerebris lapidositas quaedam est. Hoc quoque deerat
 Christianae, ut de serpente cultior fiat. Sic calcabit diaboli caput,
 dum de capite eius cervicibus suis aut ipsi capiti ornamenta struit?</p>
-<pb xml:id="v.1.p.709"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Haec omnia de raritate et peregrinitate sola gratiam possident. 
+               <pb xml:id="v.1.p.709"/>
+            </div>
+            <div n="7" type="chapter">
+               <p>Haec omnia de raritate et peregrinitate sola gratiam possident. 
 Denique intra terminos suos patrios non tanti habentur.
 Semper abundantia contumeliosa in semetipsam est. Apud barbaros
 quosdam, quia vernaculum est aurum et copiosum, auro vinctos
@@ -256,10 +254,9 @@ peronibus uniones emergere de luto cupiunt. Nihil denique tam
 
 gemmatum habent, quam quod gemmatum esse non debet, si non
 comparet, aut ideo comparet, ut neglectum quoque ostendatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Perinde et vestium de coloribus honorem servi etiam eorum
+            </div>
+            <div n="8" type="chapter">
+               <p> Perinde et vestium de coloribus honorem servi etiam eorum
 terunt. Sed et parietes Tyriis et hyacinthinis et illis regiis velis,
 quae vos operose resoluta transfiguratis, pro pictura abutuntur.
 Vilior est apud illos purpura quam rubrica. Quis enim est vestium
@@ -286,12 +283,10 @@ est et tus et merum et ignis qui vescitur, et animalia quae victimae
 fiunt, cum et ipsa materia quae adoratur dei sit. Sic ergo
 et circa actum materiarum census a deo descendens propterea
 excusat, ut deo extraneum, ut reum scilicet gloriae saecularis?</p>
-<pb xml:id="v.1.p.712"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Nam ut quaedam rerum per singulas quasque terras et unamquamque
+               <pb xml:id="v.1.p.712"/>
+            </div>
+            <div n="9" type="chapter">
+               <p> Nam ut quaedam rerum per singulas quasque terras et unamquamque
 regionem maris a deo distributa sunt invicem sibi peregrina,
 apud exteros mutuo rara, apud suos iure, si utique,
 vel negleguntur vel appetuntur, quia non tantus est in illis gloriae
@@ -314,15 +309,14 @@ profertur. Uno lino decies sestertium inseritur. Saltus et insulas
 tenera cervix circumfert. Graciles aurium cutes kalendarium
 expendunt, et sinistra per singulos digitos de saccis singulis
 ludit. Hae sunt vires ambitionis, tantarum substantiarum usuram
-uno et muliebri corpusculo baiulare.</p></div>
-</div>
-
-<pb xml:id="v.1.p.714"/>
-
-<div type="textpart" subtype="book" n="2">
-<head>LIBER SECVNDVS.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Ancillae dei vivi, conservae et sorores meae, quo iure deputor
+uno et muliebri corpusculo baiulare.</p>
+            </div>
+         </div>
+         <pb xml:id="v.1.p.714"/>
+         <div n="2" type="book">
+            <head>LIBER SECVNDVS.</head>
+            <div n="1" type="chapter">
+               <p>Ancillae dei vivi, conservae et sorores meae, quo iure deputor
 vobiscum, postremissimus equidem eo iure conservitii et fraternitatis,
 audeo ad vos facere sermonem, non utique affectionis,
 sed affectioni procurans in causa vestrae salutis. Ea salus, nec
@@ -362,10 +356,9 @@ non totum bonum obtinendo facile et quod obtinent malo commiscent.
 Vos ab eis, ut in ceteris, incessu quoque divertere
 necessarium est, quoniam perfectae esse debetis, sicut pater
 vester qui est in caelis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Perfectae, id est Christianae pudicitiae, appetitionem sui non
+            </div>
+            <div n="2" type="chapter">
+               <p> Perfectae, id est Christianae pudicitiae, appetitionem sui non
 tantum non appetendam, sed etiam exsecrandam vobis sciatis.
 Primo, quod non de integra conscientia venit studium placendi per
 decorem, quem naturaliter invitatorem libidinis scimus. Quid igitur
@@ -416,10 +409,9 @@ iniuriam et violentiam sectatorum, quam etiam pater fidei Abra-
 
 ham in uxoris suae specie pertimuit, et Isaac sororem ementitus
 Rebeccam salutem contumelia redemit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p> Nunc non sit timenda dignitas formae, ut nec possidentibus
+            </div>
+            <div n="3" type="chapter">
+               <p> Nunc non sit timenda dignitas formae, ut nec possidentibus
 gravis, nec appetentibus exitiosa, nec coniunctis periculosa, non
 exposita temptationibus, non circumdata scandalis existimetur: sufficit,
 quod angelis dei non est necessaria. Nam ubi pudicitia, ibi
@@ -448,10 +440,9 @@ post se trahat. Ita quod ex omni parte in vobis vacat, merito
 et non habentes fastidiatis et habentes neglegatis. Sanctae feminae,
 si naturaliter speciosae, non adeo sit occasio. Certe si et
 fuerit, non adiuvare, sed etiam impedire debet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Quasi gentilibus dicam, gentili et communi omnium praecepto 
+            </div>
+            <div n="4" type="chapter">
+               <p>Quasi gentilibus dicam, gentili et communi omnium praecepto 
 alloquens vos, solis maritis vestris placere debetis. In tantum
 autem placebitis eis, in quantum aliis placere non curaveritis.
 Securae estote, benedictae: uxor nulla deformis est marito suo.
@@ -468,10 +459,9 @@ opinione gentilium. Cui ergo pulchritudinem tuam nutris? Si
 
 fideli, non exigit, si infideli, nisi simplicem non credit. Quid
 gestis aut suspecto aut non desideranti placere?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p> Haec utique non in crudam in totum et ferinam habitudinem
+            </div>
+            <div n="5" type="chapter">
+               <p> Haec utique non in crudam in totum et ferinam habitudinem
 insinuanda vobis suggeruntur nec de bono squaloris et paedoris
 suademus, sed de modo et cardine et iustitia corporis excolendi.
 Non supergrediendum ultra quam simplices et sufficientes munditiae
@@ -502,10 +492,9 @@ quibus in lingua non licet? appetere quod tuum non sit,
 quibus alieni abstinentia traditur? adulterium in specie exercere,
 quibus studium pudicitiae sit! Credite, benedictae, quomodo
 praecepta dei custodietis, lineamenta eius in vobis non custodientes?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p>Video quasdam capillum croco vertere. Pudet eas etiam nationis 
+            </div>
+            <div n="6" type="chapter">
+               <p>Video quasdam capillum croco vertere. Pudet eas etiam nationis 
 suae, quod non Germaniae atque Galliae sint procreatae,
 
 <pb xml:id="v.1.p.722"/>
@@ -538,10 +527,9 @@ superinduere ad novam domum domini, quam monarchia pollicetur.
 Bene properatis ad dominum, bene festinatis excedere
 de isto iniquissimo saeculo, quibus ad finem propinquare deforme
 est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p>Quid item tanta ordinandi crinis operositas ad salutem subministrat? 
+            </div>
+            <div n="7" type="chapter">
+               <p>Quid item tanta ordinandi crinis operositas ad salutem subministrat? 
 Quid crinibus vestris quiescere non licet, modo substrictis,
 modo relaxatis, modo suscitatis, modo elisis? Aliae ge-
 
@@ -575,10 +563,9 @@ corporibus et sua loca agnoscent. Sed non potest resurgere, nisi
 caro et spiritus solus ac purus. Damnatum est igitur quod in
 spiritu et carne non resurgit, quia dei non est. Damnatis hodie
 abstinete. Hodie vos tales deus videat, quales tunc videbit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p>Videlicet nunc vir ut sexu aemulus feminas a suis depello. 
+            </div>
+            <div n="8" type="chapter">
+               <p>Videlicet nunc vir ut sexu aemulus feminas a suis depello. 
 An et nobis quaedam respectu obeundae gravitatis propter metum
 debitum deo detrahuntur? Siquidem et viris propter feminas,
 ut feminis propter viros, vitio naturae ingenita est placendi voluntas,
@@ -599,10 +586,9 @@ pudicitiam sine instrumento suo, id est sine gravitate tractabimus?
 Quomodo autem gravitatem administrandae pudicitiae adhibebimus,
 nisi et in facie et in cultu et in totius hominis contemplatione
 severitas circumferatur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Quamobrem erga vestitum quoque et reliqua compositionis
+            </div>
+            <div n="9" type="chapter">
+               <p> Quamobrem erga vestitum quoque et reliqua compositionis
 vestrae impedimenta perinde vobis curanda est amputatio et decussio
 redundantioris nitoris. Nam quid prodest faciem quidem
 frugi et expeditam et simplicitatem condignam divinae disciplinae
@@ -652,10 +638,9 @@ saeculorum. Nos destinati a deo ante mundum in extimatione temporali.
 Itaque castigando et castrando, ut ita dixerim, saecule
 erudimur a deo. Nos sumus circumcisio omnium spiritalis et
 carnalis. Nam et in spiritu et carne saecularia circumcidimus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Nimirum enim deus demonstravit sucis herbarum et concharum
+            </div>
+            <div n="10" type="chapter">
+               <p> Nimirum enim deus demonstravit sucis herbarum et concharum
 salivis incoquere lanas. Exciderat illi, cum universa
 nasci iuberet, purpureas et coccineas oves mandate. Deus et ipsarum
 vestium officinas commentus, quae leves et exiles solo pretio
@@ -682,8 +667,7 @@ ut Enoch refert, quomodo placebimus deo, gaudentes rebus illorum
 qui iram et animadversionem dei propterea provocaverunt?
 Nunc ut ista prospexerit deus, deus permiserit, nullam de conchylio
 vestem Esaias increpet, nullum botronatum retundat, <note n="Ies. III, 18 sqq."/>
-
-<pb xml:id="v.1.p.730"/>
+                  <pb xml:id="v.1.p.730"/>
 
 
 nullas lunulas reprobet, tamen non ut gentiles, ita nos quoque
@@ -699,10 +683,9 @@ Quanto autem laudabilior qui abstinuerit in totum, qui
 timuerit etiam indulgentiam domini? Sic igitur et apostolus,
 <note n="I Cor. X, 23."/> Omnia, inquit, licent, sed non omnia expediunt. Quanto facilius
 inlicita timebit qui licita verebitur?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p> Quae autem vobis causae extructius prodeundi, cum remotae
+            </div>
+            <div n="11" type="chapter">
+               <p> Quae autem vobis causae extructius prodeundi, cum remotae
 sitis ab his quae talium indigent. Nam nec templa circumitis,
 nec spectacula postulatis, nec festos dies gentium nostis. Propter
 istos enim conventus et multum videre ac videri omnes pompae
@@ -730,10 +713,9 @@ dicatur: Ex quo facta est Christiana, pauperius incedit. Timebis
 pauperior videri, ex quo locupletior facta es, et sordidior, ex
 quo mundior? Secundum gentilium, an secundum dei placitum
 incedere Christianos oportet?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Optemus tantummodo ne iustae blasphemationis causa simus. 
+            </div>
+            <div n="12" type="chapter">
+               <p>Optemus tantummodo ne iustae blasphemationis causa simus. 
 Quanto autem magis blasphemabile est, si, quae sacerdotes pudicitiae
 dicimini, impudicarum ritu procedatis cultae et expictae?
 Aut quid minus habeant infelicissimae illae publicarum libidinum
@@ -760,10 +742,10 @@ enim castae mentis integritas alterius suspicione maculatur? quid
 speratur in me quod aversor? quid non meos mores habitus
 praenuntiat, ne spiritus per aures ab impudentia vulneretur?
 Liceat videri pudicam, certe impudicam non licet.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p> <note n="I Sam. XVI, 7."/> Aliqua fors dicet, Non est mihi necessarium hominibus probari:
+            </div>
+            <div n="13" type="chapter">
+               <p>
+                  <note n="I Sam. XVI, 7."/> Aliqua fors dicet, Non est mihi necessarium hominibus probari:
 nec enim testimonium hominum requiro; deus conspector
 est cordis. Scimus omnes, dum tamen quid idem per apostolum
 <note n="Phil. IV, 5."/> dixerit recordemur: Probum vestrum coram hominibus appareat.
@@ -813,12 +795,10 @@ vos serico probitatis, byssino sanctitatis, purpura pudicitiae. Taliter
 pigmentatae deum habebitis amatorem.
 
 <pb xml:id="v.1.p.735"/>
-</p>
-</div>
-</div>
-
-<pb xml:id="v.1.p.736"/>
-</div></body></text>
-
-
+               </p>
+            </div>
+         </div>
+         <pb xml:id="v.1.p.736"/>
+      </body>
+   </text>
 </TEI>

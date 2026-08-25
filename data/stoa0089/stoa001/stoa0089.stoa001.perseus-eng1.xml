@@ -1,69 +1,70 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>Shorter Poems</title>
-        <author>Claudian</author>
-        <editor role="translator">Maurice Platnauer</editor>
-        <sponsor>Perseus Project, Tufts University</sponsor>
-        <principal>Gregory Crane</principal>
-        <respStmt>
-          <resp>Prepared under the supervision of</resp>
-          <name>Bridget Almas</name>
-          <name>Lisa Cerrato</name>
-          <name>Rashmi Singhal</name>
-        </respStmt>
-        <funder n="org:Mellon">The Mellon Foundation</funder>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Trustees of Tufts University</publisher>
-        <pubPlace>Medford, MA</pubPlace>
-        <authority>Perseus Project</authority>
-        <date type="release">2011-09-12</date>
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title>Claudian</title>
-            <author>Claudius Claudianus</author>
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Shorter Poems</title>
+            <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
-            <imprint>
-              <publisher>Harvard University Press</publisher>
-              <pubPlace>Cambridge, MA</pubPlace>
-              <pubPlace>London, England</pubPlace>
-              <date>1922</date>
-            </imprint>
-            <biblScope unit="volume">2</biblScope>
-          </monogr>
-          <ref target="https://archive.org/details/claudian02clau#page/174/mode/2up">Internet Archive</ref>
-        </biblStruct>
-      </sourceDesc>
-    </fileDesc>
-
-    <encodingDesc>
-      <editorialDecl><p>Keyboarding</p></editorialDecl>
-      <refsDecl doctype="TEI.2">
-        <state unit="poem"/>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-09-12</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Claudian</title>
+                  <author>Claudius Claudianus</author>
+                  <editor role="translator">Maurice Platnauer</editor>
+                  <imprint>
+                     <publisher>Harvard University Press</publisher>
+                     <pubPlace>Cambridge, MA</pubPlace>
+                     <pubPlace>London, England</pubPlace>
+                     <date>1922</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <ref target="https://archive.org/details/claudian02clau#page/174/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="poem"/>
+         </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>
+        </citeStructure>
       </refsDecl>
-    </encodingDesc>
-
-    <profileDesc>
-      <langUsage>
-	<language id="la">Latin</language>
-	<language id="greek">Greek</language>
-      </langUsage>
-    </profileDesc>
-  </teiHeader>
-
-  <text id="stoa0089.stoa001.perseus-eng1"><body>
-<pb id="v.2.p.175"/>
-
-<div1 type="poem" n="1" id="poem.13"><head>To Stilicho.</head><p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language id="la">Latin</language>
+            <language id="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa001.perseus-eng1">
+         <pb id="v.2.p.175"/>
+         <div1 type="poem" n="1" id="poem.13">
+            <head>To Stilicho.</head>
+            <p>
 
 Crown with a wreath of flowers, Stilicho, that
 head more often graced with the shining helmet.
@@ -77,9 +78,11 @@ will be thine. What cause is there now for envy,
 what excuse for jealousy ? Stilicho is at once father
 and father-in-law.
 
-</p></div1>
-
-<div1 type="poem" n="2" id="poem.85"><head>Description of the harbour at Smyrna.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="2" id="poem.85">
+            <head>Description of the harbour at Smyrna.</head>
+            <p>
 
 The city that meets our gaze veils the mountain
 peaks, fronting a tranquil sea. The two headlands
@@ -88,10 +91,11 @@ water from the north wind. Here the sea is disarmed
 by the encircling land and learns to lie in
 undisturbed tranquillity.
 <pb id="v.2.p.177"/>
-
-</p></div1>
-
-<div1 type="poem" n="3" id="poem.81"><head>To Aeternalis.1</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="3" id="poem.81">
+            <head>To Aeternalis.1</head>
+            <p>
 
 Phoebus' every breath from the Castalian spring,
 the tripod's every moan within the shrine of prophecy
@@ -99,9 +103,11 @@ the tripod's every moan within the shrine of prophecy
 have none. In poetry only can I express myself,
 so wholly does my patron, Apollo, possess me.
 
-</p></div1>
-
-<div1 type="poem" n="4" id="poem.54"><head>Description of a Herd,</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="4" id="poem.54">
+            <head>Description of a Herd,</head>
+            <p>
 
 Not such were the beauteous herds that the land
 once ruled over by triple Geryon produced. Not
@@ -118,10 +124,11 @@ shame — even he could scarce have shown a shape so
 fair had all his rough limbs resembled those of his
 sire.
 <pb id="v.2.p.179"/>
-
-</p></div1>
-
-<div1 type="poem" n="5" id="poem.86"><head>A distant Scene.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="5" id="poem.86">
+            <head>A distant Scene.</head>
+            <p>
 
 There is a place deep buried in a huge bay where
 an island, stretching far out into the sea, stills the
@@ -129,18 +136,22 @@ rough waves to quiet, and steep cliffs, jutting out
 into the broken water, curve themselves into a
 peaceful harbourage.
 
-</p></div1>
-
-<div1 type="poem" n="6" id="poem.78"><head>Anger affords a weapon to him who seeks one,1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="6" id="poem.78">
+            <head>Anger affords a weapon to him who seeks one,1</head>
+            <p>
 
 Whate'er it carries, that rage converts into a
 weapon. Wrath supplies all with arms. When an
 angry man thirsts for blood anything will serve him
 for a spear. Fury turns a stick into a cudgel.
 
-</p></div1>
-
-<div1 type="poem" n="7" id="poem.87"><head>Statue of a Chariot.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="7" id="poem.87">
+            <head>Statue of a Chariot.</head>
+            <p>
 
 1. Who had the skill to fashion so many figures
 out of one block of marble ? The chariot melts
@@ -156,11 +167,11 @@ skill ! A single block combines within itself all these
 bodies : one mass of marble by submitting to the
 chisel has grown into all these various shapes.
 <pb id="v.2.p.181"/>
-
-
-</p></div1>
-
-<div1 type="poem" n="8" id="poem.69"><head>Of Polycaste and Perdiccas. 1</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="8" id="poem.69">
+            <head>Of Polycaste and Perdiccas. 1</head>
+            <p>
 
 To what deeds of cruelty will the flames of love
 not inspire mankind ? Here is a mother who dares
@@ -171,9 +182,11 @@ is his mother, a shameful passion. Cupid, thou
 goest too far ; put down thy cruel quiver. Consult
 Venus ; mayhap she feels like pangs.
 
-</p></div1>
-
-<div1 type="poem" n="9" id="poem.45"><head>The Porcupine.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="9" id="poem.45">
+            <head>The Porcupine.</head>
+            <p>
 
 I had heard the strange tale, Stymphalus, that
 the birds that haunted thy marshes let fall from them
@@ -235,9 +248,11 @@ him that the Cretans learned to shoot and the Parthians
 to strike while in flight. These did but follow
 the example of the animal that is armed with arrows.
 
-</p></div1>
-
-<div1 type="poem" n="10" id="poem.92"><head>Of Beaver's Overcoat. 1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="10" id="poem.92">
+            <head>Of Beaver's Overcoat. 1</head>
+            <p>
 
 'Tis but the shadow of a name that is left. I
 cannot call it a coat of beaver, not though Beaver
@@ -245,18 +260,22 @@ swear it is one. It cost six shillings. Now you
 know what it is like. If you don't believe me,
 believe the price.
 
-</p></div1>
-
-<div1 type="poem" n="11" id="poem.91"><head>On the Tomb of a Beauty.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="11" id="poem.91">
+            <head>On the Tomb of a Beauty.</head>
+            <p>
 
 Fate allows not beauty a long life : sudden is the
 end of all that is noble and pre-eminent. Here lies
 a lovely woman : hers was the beauty of Venus
 and hers the illwill of Heaven for a gift so rare.
 
-</p></div1>
-
-<div1 type="poem" n="12" id="poem.84"><head>Quintius' Baths.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="12" id="poem.84">
+            <head>Quintius' Baths.</head>
+            <p>
 
 Stay awhile and bathe in these waters, traveller ;
 then set forth again upon thy journey refreshed.
@@ -265,9 +284,11 @@ An thou become its guest, warm will be thy gratitude
 towards him that built this bath and set it by the side
 of this long dusty road.
 
-</p></div1>
-
-<div1 type="poem" n="13" id="poem.79"><head>To a gouty Critic.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="13" id="poem.79">
+            <head>To a gouty Critic.</head>
+            <p>
 
 Canst thou talk of feet ? Dost blame my verses
 and criticize my lines, thou whose own feet are so
@@ -275,29 +296,37 @@ weak ? This couplet, you say, will scarcely stand :
 the scansion is shaky. Dear friend, a gouty man
 thinks nothing at all can stand.
 
-</p></div1>
-
-<div1 type="poem" n="14" id="poem.82"><head>To thank Maximus for a Gift of Honey.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="14" id="poem.82">
+            <head>To thank Maximus for a Gift of Honey.</head>
+            <p>
 Thou dost ever send me sweet gifts, Maximus ;
 'tis honey whatsoever thou sendest, methinks.
 
-</p></div1>
-
-<div1 type="poem" n="15" id="poem.89"><head>The Poor Lover.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="15" id="poem.89">
+            <head>The Poor Lover.</head>
+            <p>
 
 Biting poverty and cruel Cupid are my foes.
 Hunger I can endure ; love I cannot.
 
-</p></div1>
-
-<div1 type="poem" n="16" id="poem.90"><head>The Same.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="16" id="poem.90">
+            <head>The Same.</head>
+            <p>
 
 A hungry pauper am I, a victim fallen to love.
 Two ills ; but poverty is the lesser.
 <pb id="v.2.p.189"/>
-</p></div1>
-
-<div1 type="poem" n="17" id="poem.50"><head>On the Statues of Two Brothers at Catina. 1</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="17" id="poem.50">
+            <head>On the Statues of Two Brothers at Catina. 1</head>
+            <p>
 
 See these two brothers toiling beneath a burden
 piety bade them bear. They deserve the tribute
@@ -357,9 +386,11 @@ houses burned down by the fire's fury. The flames
 abating had never put affection to the proof; the
 great disaster purchased immortal fame.
 <pb id="v.2.p.193"/>
-</p></div1>
-
-<div1 type="poem" n="18" id="poem.51"><head>Of French Mules.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="18" id="poem.51">
+            <head>Of French Mules.</head>
+            <p>
 
 Behold the docile children of fast-flowing Rhone
 that at their master's word come together and at
@@ -387,9 +418,11 @@ that Orpheus tamed the wild beasts with his song
 when the words of a Gaul can guide these swift-footed
 mules ?
 
-</p></div1>
-
-<div1 type="poem" n="19" id="poem.43"><head>Letter to Gennadius, 1 ex-Proconsul.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="19" id="poem.43">
+            <head>Letter to Gennadius, 1 ex-Proconsul.</head>
+            <p>
 
 Glory of all Italy, who dwellest on the pleasant
 banks of Rubicon, ornament of the Roman bar
@@ -403,9 +436,11 @@ My verses soon learn to trust to their own wings
 and leave the nest, flying far afield nor ever returning
 to their humble home.
 
-</p></div1>
-
-<div1 type="poem" n="20" id="poem.52"><head>Of an old Man of Verona who never left his home.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="20" id="poem.52">
+            <head>Of an old Man of Verona who never left his home.</head>
+            <p>
 
 Happy he who has passed his whole life mid
 his own fields, he of whose birth and old age the
@@ -437,18 +472,22 @@ grandsire. Let who will be a wanderer and
 explore farthest Spain : such may have more of a
 journey ; he of Verona has more of a life. 1
 
-</p></div1>
-
-<div1 type="poem" n="21" id="poem.80"><head>Of Theodore and Hadrian. 2</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="21" id="poem.80">
+            <head>Of Theodore and Hadrian. 2</head>
+            <p>
 
 Manlius Theodorus sleeps night and day ; the
 sleepless Egyptian steals alike from gods and men.
 Peoples of Italy, be this your one prayer — that
 Manlius keep awake and the Egyptian sleep.
 
-</p></div1>
-
-<div1 type="poem" n="22" id="poem.39"><head>Apology to Hadrian.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="22" id="poem.39">
+            <head>Apology to Hadrian.</head>
+            <p>
 
 Must the violence of thine anger last so long ?
 Are my tears never to cease to flow ? Dost thou
@@ -526,9 +565,11 @@ who sail the distant seas, and let Father Nile raise
 his weeping head from out the flood and mourn my
 cruel case along the banks of all his seven mouths.
 
-</p></div1>
-
-<div1 type="poem" n="23" id="poem.74"><head>Apology to Alethius, the Quaestor. 3</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="23" id="poem.74">
+            <head>Apology to Alethius, the Quaestor. 3</head>
+            <p>
 
 As I hope never to cross the plains of Ethiopia
 beneath a summer sun, never to pass a winter naked
@@ -554,9 +595,11 @@ and pardon at last, let him cease from wrath
 — and with secure voice recite whate'er he will ; I
 applaud.
 
-</p></div1>
-
-<div1 type="poem" n="24" id="poem.83"><head>The Lobster,</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="24" id="poem.83">
+            <head>The Lobster,</head>
+            <p>
 
 Long horns project from his head ; fierce eyes
 stand out from his forehead ; his back is protected
@@ -565,9 +608,11 @@ herself has rendered his skin a sufficient defence,
 covering it with small, red, pointed spikes.
 
 <pb id="v.2.p.205"/>
-</p></div1>
-
-<div1 type="poem" n="25" id="poem.30"><head>Epithalamium of Palladius and Celerina: Preface 1 </head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="25" id="poem.30">
+            <head>Epithalamium of Palladius and Celerina: Preface 1 </head>
+            <p>
 
 Asked to improvise a song in honour of a marriage
 I find myself unwilling to refuse the bridegroom
@@ -651,7 +696,8 @@ me from what land they spring and what their
 parentage. Needs must thou know, for no marriage
 can take place without thee and by covenant with
 thee are wedlock's joys first tasted.</q>
-He replied : <q><p>Long have I been wondering,
+He replied : <q>
+                  <p>Long have I been wondering,
 goddess, at thy delay, and marvelled that thou didst
 take no notice of so world-famed an union. They
 are no common folk that now submit them to thy
@@ -687,7 +733,8 @@ and sovereignty, making offer of herself, met with
 a refusal. Sadly did Fortune confess herself beaten
 by a mortal. Great it is to deserve high office, still
 greater to have despised it.
-</p><p>Celerina's father has won every title that a
+</p>
+                  <p>Celerina's father has won every title that a
 warrior may. Step by step he has reached the
 highest of all ranks, that of commander-in-chief ; it is
 he who dispenses titles of honour, settles the garrisons
@@ -708,8 +755,10 @@ present at the marriage of such a maid. Come,
 bring all thy train. Fain would I shake the withering
 wreaths, brandish the torches, and devote the
 night to pleasure. Now even this my pipe gives
-no dishonoured service answering the choirs' songs.</p></q>
-</p><p>
+no dishonoured service answering the choirs' songs.</p>
+               </q>
+            </p>
+            <p>
 Scarce had Hymen spoken and she bathes her in
 the cool stream, gathers her flowing hair, and renews
 her charms, taking from out the press the wondrous
@@ -772,10 +821,11 @@ their bows ; the strings twang and the sure arrows
 cleave the air with equal speed and implant themselves
 at equal depths in the hearts of the twain.
 <pb id="v.2.p.217"/>
-
-</p></div1>
-
-<div1 type="poem" n="26" id="poem.49"><head>Aponus. 1</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="26" id="poem.49">
+            <head>Aponus. 1</head>
+            <p>
 
 Fount that prolongest life for the dwellers in
 Antenor's city, banishing by thy neighbouring waters
@@ -901,9 +951,11 @@ By thy water's aid they renew their lost strength
 without suffering ; 'mid luxury the sick find relief
 from pain.
 
-</p></div1>
-
-<div1 type="poem" n="27" id="poem.44"><head>The Phoenix. 1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="27" id="poem.44">
+            <head>The Phoenix. 1</head>
+            <p>
 
 There is a leafy wood fringed by Ocean's farthest
 marge beyond the Indes and the East where Dawn's
@@ -1043,9 +1095,11 @@ thou livest to see the earth subdued ; against thee
 the Fates gather not up their threads, powerless to
 do thee harm.
 
-</p></div1>
-
-<div1 type="poem" n="28" id="poem.47"><head>The Nile. 1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="28" id="poem.47">
+            <head>The Nile. 1</head>
+            <p>
 
 Blessèd is the man who cleaves the soil of Egypt
 with his plough ; he need not hope for clouds to
@@ -1103,9 +1157,11 @@ the beat of the oar, and full often the shepherd,
 o'ercome with summer's heat, wakes to see flocks
 and fold carried away by the flood.
 
-</p></div1>
-
-<div1 type="poem" n="29" id="poem.48"><head>The Magnet.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="29" id="poem.48">
+            <head>The Magnet.</head>
+            <p>
 
 Whosoever with anxious thought examines the
 universe and searches out the origin of things — the
@@ -1165,9 +1221,11 @@ gentle attraction for the stone. It is thus that Venus often holds the fierce go
 
 Cruel boy, is aught beyond thy powers? Thou dost master the mighty thunderbolt; thou canst force the Thunderer to leave the sky and bellow amid the waves. Now thou showest that thou canst smite cold rocks and shapes not instinct with feeling or life, that stone can be wounded by thine arrows. Rocks are stirred by a passion of their own; iron is obedient to thy blandishments; thy flames exercise dominion over hardest marl. 
 
-</p></div1>
-
-<div1 type="poem" n="30" id="poem.29"><head>In Praise of Serena1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="30" id="poem.29">
+            <head>In Praise of Serena1</head>
+            <p>
 
 
 Say, my muse, why tarriest thou so long to crown Serena's brows with the Pierian garland they so well deserve? Thinkest thou the gift too poor shouldst thou, a queen, deck but with flowers the head of a queen accustomed rather to wear a tiara bright with all the jewels of the Red Sea? Nay, those flowers of thine are such that neither Boreas' cold blast nor Sirius' scorching heat can hurt them; theirs is the bloom of everlasting spring for they
@@ -1431,9 +1489,11 @@ Getae against Rome, for thou didst search out his
 foul conspiracy and in fear for thy husband's safety,
 didst send him warning by letters and messages.
 
-</p></div1>
-
-<div1 type="poem" n="31" id="poem.40"><head>Letter to Serena.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="31" id="poem.40">
+            <head>Letter to Serena.</head>
+            <p>
 
 At the first kindling of Orpheus' marriage-torch
 when festive Hymen filled the countryside of Thrace
@@ -1509,9 +1569,11 @@ that the Muses and Aganippe's stream, the fount
 of song, may hymn thy praises in gratitude for the
 saving of their servant, the poet. 1
 
-</p></div1>
-
-<div1 type="poem" n="32" id="poem.95"><head></head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="32" id="poem.95">
+            <head/>
+            <p>
 of the Saviour
 
 Christ, lord of the world, founder of a new age
@@ -1543,9 +1605,11 @@ may for many years to come observe the fast-days
 of the calendar.
 
 
-</p></div1>
-
-<div1 type="poem" n="33" id="poem.56"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="33" id="poem.56">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 This piece of ice still shows traces of its original
 nature : part of it has become stone, part resisted
@@ -1553,9 +1617,11 @@ the cold. It is a freak of winter's, more precious by
 reason of its incomplete crystallization, for that the
 jewel contains within itself living water.
 
-</p></div1>
-
-<div1 type="poem" n="34" id="poem.57"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="34" id="poem.57">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 Ye waters, who confine waters in a prison akin
 to them, ye that are liquid still and ye that were so,
@@ -1567,12 +1633,11 @@ ice ? How comes it that the jewel in whose heart
 the water ebbs and flows was either made solid
 or liquid by frost ?
 <pb id="v.2.p.265"/>
-
-
-
-</p></div1>
-
-<div1 type="poem" n="35" id="poem.58"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="35" id="poem.58">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 Alpine ice was becoming so hard that the sun
 could not melt it, and this excess of cold was like
@@ -1583,9 +1648,11 @@ crystal its value is enhanced, for this liquid rock is
 accounted a miracle and the water enclosed within
 it increases its rarity.
 
-</p></div1>
-
-<div1 type="poem" n="36" id="poem.59"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="36" id="poem.59">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 See this vein which runs in a bright streak
 through the translucent ice. This hidden water
@@ -1594,9 +1661,11 @@ runs this way and that. It is not frozen by
 December's cold, nor dried up by July's sun, nor
 wasted away by all-consuming time.
 
-</p></div1>
-
-<div1 type="poem" n="37" id="poem.60"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="37" id="poem.60">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 Safely hidden away in this round covering is a
 stream, an errant spring, enclosed within frozen
@@ -1608,9 +1677,11 @@ in it ? Wonderful stone, wonderful water : stranger
 than all rivers and all stones because it is a stone
 and yet fluid.
 
-</p></div1>
-
-<div1 type="poem" n="38" id="poem.61"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="38" id="poem.61">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 Children love to handle this shining crystal
 and turn its chilly mass over and over in their little
@@ -1620,11 +1691,11 @@ Placing the dry sphere against their thirsty lips
 they press useless kisses on that which guards the
 waters they desire.
 <pb id="v.2.p.267"/>
-
-
-</p></div1>
-
-<div1 type="poem" n="39" id="poem.62"><head>On a Crystal enclosing a Drop of Wafer.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="39" id="poem.62">
+            <head>On a Crystal enclosing a Drop of Wafer.</head>
+            <p>
 
 Do not despise this sphere of rock-crystal.
 Kings' palaces contain no rarer jewel, nor are the
@@ -1632,9 +1703,11 @@ Red Sea's pearls of greater value. It may be shapeless
 ice, unpolished rock, a rough, uncarven mass,
 yet is it accounted among the most precious of riches.
 
-</p></div1>
-
-<div1 type="poem" n="40" id="poem.41"><head>Letter to Olyhrius.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="40" id="poem.41">
+            <head>Letter to Olyhrius.</head>
+            <p>
 
 What am I to think, that you send me no greeting,
 that no <q>Good wishes</q> traced by your fingers come
@@ -1666,9 +1739,11 @@ to my shelves and to my heart. Augustus disdained
 not to write to poor Vergil and my muse shall never
 bring thee shame. Farewell.
 
-</p></div1>
-
-<div1 type="poem" n="41" id="poem.42"><head>Letter to Probinus.1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="41" id="poem.42">
+            <head>Letter to Probinus.1</head>
+            <p>
 
 How long, pray, shall there be silence between
 us ? When shall a welcome letter win a dear
@@ -1692,10 +1767,11 @@ Be moved by my importunity and after so long a
 delay answer my letter. Farewell, Probinus ; be
 thy father's fortune thine.
 <pb id="v.2.p.271"/>
-
-</p></div1>
-
-<div1 type="poem" n="42" id="poem.53"><head>The Wild Boar and the Lion.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="42" id="poem.53">
+            <head>The Wild Boar and the Lion.</head>
+            <p>
 
 A dark boar and a tawny lion met once in battle,
 each exulting in his strength : the one shook his
@@ -1704,9 +1780,11 @@ was Mars' favourite, the other Cybele's : both are
 kings of the mountains, both engaged the labours
 of Hercules.
 
-</p></div1>
-
-<div1 type="poem" n="43" id="poem.75"><head>Against Curetius. 1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="43" id="poem.75">
+            <head>Against Curetius. 1</head>
+            <p>
 
 Uranius, Curetius' father, could set deceptive stars
 in a sphere of glass, gloomily shake his head over
@@ -1720,9 +1798,11 @@ And so the tongue of the son has squandered all
 the riches which that of his lying father gathered
 together.
 
-</p></div1>
-
-<div1 type="poem" n="44" id="poem.76"><head>The Same.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="44" id="poem.76">
+            <head>The Same.</head>
+            <p>
 
 Wouldst thou, Curetius, have sure knowledge of
 thy horoscope, I can give it thee better than even
@@ -1734,9 +1814,11 @@ decay to lady Moon and lady Venus ; Saturn
 has robbed thee of thy property. But this one fact
 is beyond me : — what causes thy filthy ways ?
 
-</p></div1>
-
-<div1 type="poem" n="45" id="poem.55"><head>The Shell</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="45" id="poem.55">
+            <head>The Shell</head>
+            <p>
 
 Nymph, come from Helicon and pour herein thy
 limpid waters ; fill all the vast extent of this wondrous
@@ -1744,9 +1826,11 @@ shell. Surely the water that has bathed the
 face of the poetess Serena will have more virtue
 than all the streams of Castalia.
 
-</p></div1>
-
-<div1 type="poem" n="46" id="poem.72"><head>On a Cloak and a Bridle.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="46" id="poem.72">
+            <head>On a Cloak and a Bridle.</head>
+            <p>
 
 His loving mother did not always fashion for her
 dear son Achilles those round shields that did affright
@@ -1765,10 +1849,11 @@ gifts — slaughter of barbarians and victories on the
 Rhine ; Serena, content to do such work as befits
 a queen, plies her busy loom to weave thee raiment.
 <pb id="v.2.p.275"/>
-
-</p></div1>
-
-<div1 type="poem" n="47" id="poem.73"><head>On a Gift to a Horse.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="47" id="poem.73">
+            <head>On a Gift to a Horse.</head>
+            <p>
 
 Happy steed, whose good fortune it is to obey the
 directing hand of a god and to be guided by a sacred
@@ -1787,9 +1872,11 @@ Persia. Such is her motherly love that to enhance
 her son-in-law's glory she disdains not to embroider
 the very harness of his horses.
 
-</p></div1>
-
-<div1 type="poem" n="48" id="poem.70"><head>On a Strap embroidered by Serena for Honorius' Horse.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="48" id="poem.70">
+            <head>On a Strap embroidered by Serena for Honorius' Horse.</head>
+            <p>
 Receive at a sister's hand a small gift, revered
 prince, a gift embroidered by her own hand ; the
 bridle of thy champing steed is of gold, his head-
@@ -1807,9 +1894,11 @@ The slight nature of the present is dignified by the
 affection of Serena who for her brothers decks even
 their swift steeds.
 
-</p></div1>
-
-<div1 type="poem" n="49" id="poem.46"><head>The Electric Ray</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="49" id="poem.46">
+            <head>The Electric Ray</head>
+            <p>
 
 Who has not heard of the invincible skill of the
 dread torpedo and of the powers that win it its name ?
@@ -1845,9 +1934,11 @@ of it, the blood of the fisherman's victorious hand.
 He casts away his dangerous burden and lets go his
 rebel prey, returning home disarmed without his rod.
 
-</p></div1>
-
-<div1 type="poem" n="50" id="poem.77"><head>Against James Commander of the Cavalry. 1</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="50" id="poem.77">
+            <head>Against James Commander of the Cavalry. 1</head>
+            <p>
 
 By the ashes of S. Paul and the shrine of revered
 S. Peter, do not pull my verses to pieces. General
@@ -1866,9 +1957,11 @@ broached casks o'ercome thy thirst ; so may thy hand
 ne'er be red with an enemy's blood — do not, I say,
 pull my verses to pieces.
 
-</p></div1>
-
-<div1 type="poem" n="51" id="poem.68"><head>Archimedes' Sphere.</head><p>
+</p>
+         </div1>
+         <div1 type="poem" n="51" id="poem.68">
+            <head>Archimedes' Sphere.</head>
+            <p>
 
 When Jove looked down and saw the heavens
 figured in a sphere of glass he laughed and said to
@@ -1888,10 +1981,11 @@ the stars in motion by human wit. Why should I
 take umbrage at harmless Salmoneus and his mock
 thunder ? Here the feeble hand of man has proved
 Nature's rival.</q>
-
-</p></div1>
-
-<div1 type="poem" n="52" id="poem.37"><head>The Battle of the Giants.</head><p>
+            </p>
+         </div1>
+         <div1 type="poem" n="52" id="poem.37">
+            <head>The Battle of the Giants.</head>
+            <p>
 
 Once upon a time mother Earth, jealous of the
 heavenly kingdoms and in pity for the ceaseless woes
@@ -2055,4 +2149,8 @@ a final portion which has been lost. But it is more likely
 that they come from some other poet's work and that the
 abrupt end of Claudian's poem is due not to loss but to the
 poet's sudden death.
-</p></div1></body></text></TEI.2>
+</p>
+         </div1>
+      </body>
+   </text>
+</TEI>

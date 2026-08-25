@@ -1,67 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng" type="text">
-        <fileDesc>
-            <titleStmt>
-                <title>On the Subject of the Consular Provinces </title>
-                <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
-                
-                <author n="Cic.">M. Tullius Cicero</author>
-                <editor role="editor" n="Yonge">C. D. Yonge</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-                <principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>William Merrill</name>
-                    <name>David Mimno</name>
-                    <name>Rashmi Singhal</name>
-                    <name>David Smith</name>
-                </respStmt>
-                <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">1997-10-28</date>
-            </publicationStmt> 
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <author>M. Tullius Cicero</author>
-                        <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
+   <teiHeader xml:lang="eng" type="text">
+      <fileDesc>
+         <titleStmt>
+            <title>On the Subject of the Consular Provinces </title>
+            <title>for his house, Plancius, Sextius, Coelius, Milo, Ligarius, etc.</title>
+            <author n="Cic.">M. Tullius Cicero</author>
+            <editor role="editor" n="Yonge">C. D. Yonge</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>William Merrill</name>
+               <name>David Mimno</name>
+               <name>Rashmi Singhal</name>
+               <name>David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0474.phi025.perseus-eng1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>M. Tullius Cicero</author>
+                  <title>The Orations of Marcus Tullius Cicero, literally translated by C. D.
                             Yonge, B. A.</title>
-                        <imprint>
-                            <pubPlace>London</pubPlace>
-                            <publisher>George Bell &amp; Sons, York Street, Covent
+                  <imprint>
+                     <pubPlace>London</pubPlace>
+                     <publisher>George Bell &amp; Sons, York Street, Covent
                                 Garden</publisher>
-                            <date>1891</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState unit="section"/>
-            </refsDecl>
-            <refsDecl>
-                <refState delim=" " unit="text"/>
-                <refState delim="." unit="chapter"/>
-                <refState unit="section"/>
-            </refsDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="la">Latin</language>
-                <language ident="greek">Greek</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
+                     <date>1891</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl>
+            <refState delim=" " unit="text"/>
+            <refState delim="." unit="chapter"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="chapter" delim="." match="div[@type='chapter']" use="@n">
+                     <citeStructure unit="section" delim="." match="div[@type='section']" use="@n"/>
+                  </citeStructure>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre"
+                    target="#prose-standard"
+                    cert="low"
+                    resp="#corpus-tools"/>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="la">Latin</language>
+            <language ident="greek">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
             <!--
 			<change>
 				<date>7/14/97</date>
@@ -144,15 +159,15 @@ Added to repository.
     <respStmt><name>Stella Dee</name><resp>ed.</resp></respStmt>
     <item>split composite text and converted to unicode</item>
       </change>-->
-            <change when="2014-08-01" who="Stella Dee">edited markup</change>
-        </revisionDesc>
-    </teiHeader>
-    <text xml:lang="en">
-        <front>
-            <head> THE SPEECH OF M. T. CICERO ON THE SUBJECT OF THE CONSULAR PROVINCES.</head>
-            <argument>
-                <head>THE ARGUMENT.</head>
-                <p>This speech was delivered about the middle of the year of the consulship of
+         <change when="2014-08-01" who="Stella Dee">edited markup</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="en">
+      <front>
+         <head> THE SPEECH OF M. T. CICERO ON THE SUBJECT OF THE CONSULAR PROVINCES.</head>
+         <argument>
+            <head>THE ARGUMENT.</head>
+            <p>This speech was delivered about the middle of the year of the consulship of
                     Cnaeus Cornelius Lentulus Marcellinus and Lucius Marcius Philippus, A. U. C.
                     698. Before the new consuls were elected, the senate assembled to deliberate on
                     what province should be allotted to them on the expiration of their year of
@@ -179,28 +194,25 @@ Added to repository.
                     that Piso and Gabinius were only tyrannizing over and draining their provinces
                     while they were objects of contempt to all foreign enemies. The result was that
                     he brought the senate entirely over to this opinion, and they continued Caesar's
-                    command in <placeName key="tgn,1000070">Gaul</placeName> and recalled <placeName
-                        key="tgn,2040810">Piso</placeName> and Gabinius from their provinces which
+                    command in <placeName key="tgn,1000070">Gaul</placeName> and recalled <placeName key="tgn,2040810">Piso</placeName> and Gabinius from their provinces which
                     were given to the new consuls.<note anchored="true">See the oration against
                             <placeName key="tgn,2040810">Piso</placeName>.</note>
-                </p>
-            </argument>
-        </front>
-        <body>
-            <milestone n="1" unit="chapter"/>
-            <milestone n="1" unit="section"/>
-            <p>If any one of you, O conscript fathers, is waiting to see what provinces I shall
+            </p>
+         </argument>
+      </front>
+      <body xml:base="urn:cts:latinLit:phi0474.phi025.perseus-eng1">
+         <milestone n="1" unit="chapter"/>
+         <milestone n="1" unit="section"/>
+         <p>If any one of you, O conscript fathers, is waiting to see what provinces I shall
                 propose to decree to the consuls, let him consider in his own mind what men I must
-                think it most desirable to recall from the provinces; and then he will not <pb
-                    n="286"/> have any doubt what ought to be my sentiments, when he has once
+                think it most desirable to recall from the provinces; and then he will not <pb n="286"/> have any doubt what ought to be my sentiments, when he has once
                 seriously thought what it is absolutely inevitable that they should be. And if I
                 were the first to deliver the opinion which I am about to state, you would in truth
                 praise it; if I were to stand alone in it, at all events you would pardon me. Even
                 if my opinion were to appear to you on the whole somewhat ineligible, still you
                 would make some allowance for my just indignation. But, as the case stands at
                 present, O conscript fathers, I feel no ordinary delight because it is so entirely
-                for the advantage of the republic that <placeName key="tgn,1000140"
-                    >Syria</placeName> and <placeName key="tgn,7006667">Macedonia</placeName> should
+                for the advantage of the republic that <placeName key="tgn,1000140">Syria</placeName> and <placeName key="tgn,7006667">Macedonia</placeName> should
                 be the provinces decreed to the consuls, that my own private feelings are in no
                 respect at variance with the general good; and because also I can cite the authority
                 of Publius Servilius, who has delivered his opinion before me, a most illustrious
@@ -213,53 +225,51 @@ Added to repository.
                 especially because of their extraordinary wickedness and unseemly inhumanity towards
                 me, with what feelings ought I myself to be actuated towards those men,—I whose
                 safety they devoted and ruined for the gratification of their own evil passions? </p>
-            <p>But in declaring my sentiments at this time, I will not be guided by my indignation,
+         <p>But in declaring my sentiments at this time, I will not be guided by my indignation,
                 nor will I make my speech subservient to my enmity. The same feelings which every
                 individual among you ought to entertain towards those men, shall influence me also.
                 My own predominant and peculiar feeling of private indignation, which, however, you
                 have always considered as belonging to yourselves in common with me, I will put
                 aside while delivering my opinion, and reserve for a more fitting opportunity of
-                revenge. <milestone n="2" unit="chapter"/><milestone n="3" unit="section"/></p>
-            <p>There are four provinces, O conscript fathers, concerning which I understand that
+                revenge. <milestone n="2" unit="chapter"/>
+            <milestone n="3" unit="section"/>
+         </p>
+         <p>There are four provinces, O conscript fathers, concerning which I understand that
                 opinions have as yet been delivered: the two Gauls, which at present we see united
                 under one command; and <placeName key="tgn,1000140">Syria</placeName>; and
                     <placeName key="tgn,7006667">Macedonia</placeName>; which, against your will,
                 and when you were suffering under oppression <pb n="287"/> and constraint, those
                 pernicious consuls seized on as their reward for having overturned the republic.
                 According to the provisions of the Sempronian law, we have now to decree two to the
-                consuls. How is it possible for us to doubt about <placeName key="tgn,1000140"
-                    >Syria</placeName> and <placeName key="tgn,7006667">Macedonia</placeName> being
+                consuls. How is it possible for us to doubt about <placeName key="tgn,1000140">Syria</placeName> and <placeName key="tgn,7006667">Macedonia</placeName> being
                 these two? I say nothing of the fact that those men are holding them at present who
                 procured them in such a way that they did not get them till they condemned this
                 order of ours till they had destroyed your authority and put an end to it in the
                 state till they had destroyed all public credit and good faith endangered the
                 lasting safety of the Roman people, and harassed me and my friends and relations in
                 the most shameful and barbarous manner. </p>
-            <p><milestone n="4" unit="section"/> All these private matters, all these transactions
+         <p>
+            <milestone n="4" unit="section"/> All these private matters, all these transactions
                 which took place in the city, I say nothing about; though they are of such a nature
                 that Hannibal himself never wished so much evil to this city, as those men have
-                done. I come to the case of the provinces themselves, of which <placeName
-                    key="tgn,7006667">Macedonia</placeName>, which was formerly fortified not by the
+                done. I come to the case of the provinces themselves, of which <placeName key="tgn,7006667">Macedonia</placeName>, which was formerly fortified not by the
                 towers built, but by the trophies erected by numbers of our generals, which had long
                 ago been reduced to a state of tranquillity by many victories and triumphs, is now
                 so harassed by the barbarians who are not allowed to rest in peace in consequence of
-                the avarice of the late consul, that the people of <placeName key="tgn,7011182"
-                    >Thessalonica</placeName>, placed in the lap as it were of our empire are
+                the avarice of the late consul, that the people of <placeName key="tgn,7011182">Thessalonica</placeName>, placed in the lap as it were of our empire are
                 compelled to abandon their town and to fortify their citadel, that that military
-                road of ours which reaches all through <placeName key="tgn,7006667"
-                    >Macedonia</placeName> as far as the <placeName key="tgn,7002638"
-                    >Hellespont</placeName> is not only infested by the incursions of the barbarians
+                road of ours which reaches all through <placeName key="tgn,7006667">Macedonia</placeName> as far as the <placeName key="tgn,7002638">Hellespont</placeName> is not only infested by the incursions of the barbarians
                 but is even studded with and divided among Thracian encampments. And so those
                 nations which had given large sums of money to our illustrious commanders to
                 purchase the blessings of peace, in order to be able to replenish their houses which
                 had been thus drained, instead of the peace which they had purchased, have waged
                 against us what is little short of a regular war. And now that very army of ours,
                 collected by a most splendid enlistment, and by a very rigid levy, has almost
-                entirely perished. I say this with the most real grief. <milestone n="3"
-                    unit="chapter"/><milestone n="5" unit="section"/></p>
-            <p>The soldiers of the Roman people have been taken prisoners, put to death, abandoned,
-                and dispersed in a most miserable manner. They have been wasted away by neglect, <pb
-                    n="288"/> by famine, by disease, by every sort of disaster; so that (and it is a
+                entirely perished. I say this with the most real grief. <milestone n="3" unit="chapter"/>
+            <milestone n="5" unit="section"/>
+         </p>
+         <p>The soldiers of the Roman people have been taken prisoners, put to death, abandoned,
+                and dispersed in a most miserable manner. They have been wasted away by neglect, <pb n="288"/> by famine, by disease, by every sort of disaster; so that (and it is a
                 most scandalous thing) the wickedness of the general appears <gap reason="* * *"/>to
                 have been chastised by the punishment of the fatherland and the army. And this
                     <placeName key="tgn,7006667">Macedonia</placeName>, as all the neighbouring
@@ -279,7 +289,8 @@ Added to repository.
                 miserable as they were, sent his cohorts into winter quarters, and gave them
                 commanders whom he thought likely to be his most complying and diligent agents in
                 wickedness, and ministers to his desires. </p>
-            <p><milestone n="6" unit="section"/> I say nothing of the way in which he exercised his
+         <p>
+            <milestone n="6" unit="section"/> I say nothing of the way in which he exercised his
                 jurisdiction in a free city contrary to the laws and to the resolutions of the
                 senate. I pass over his murders, I omit all mention of his acts of lust; of which
                 there is a most bitter token, for the lasting recollection of his infamy, and almost
@@ -287,23 +298,21 @@ Added to repository.
                 some virgins of the noblest birth threw themselves into wells, and by a voluntary
                 death escaped from otherwise inevitable disgrace. Nor do I omit them now because
                 they are not most enormous atrocities, but because I am speaking without the support
-                of any witnesses. <milestone n="4" unit="chapter"/></p>
-            <p>But who is there who is ignorant that the city of the Byzantines was entirely filled
+                of any witnesses. <milestone n="4" unit="chapter"/>
+         </p>
+         <p>But who is there who is ignorant that the city of the Byzantines was entirely filled
                 and superbly decorated with statues? which the citizens, even when exhausted by the
                 great <pb n="289"/> expenses of important wars, while sustaining the attacks of
                 Mithridates, and the whole force of <placeName key="tgn,7016619">Pontus</placeName>,
-                boiling over and pouring itself over all <placeName key="tgn,1000004"
-                    >Asia</placeName> which they repulsed with difficulty at their own great
+                boiling over and pouring itself over all <placeName key="tgn,1000004">Asia</placeName> which they repulsed with difficulty at their own great
                 risk,—even then, I say, and afterwards, the Byzantines preserved those statues and
-                all the other ornaments of their city and guarded them most religiously. <milestone
-                    n="7" unit="section"/> But when you, O most unhappy and most infamous of men,
+                all the other ornaments of their city and guarded them most religiously. <milestone n="7" unit="section"/> But when you, O most unhappy and most infamous of men,
                 became the commander there, O Caesoninus Calventius then a free city, and one which
-                had been made so by the senate and people of <placeName key="perseus,Rome"
-                    >Rome</placeName>, on account of its recent services, was so plundered and
+                had been made so by the senate and people of <placeName key="perseus,Rome">Rome</placeName>, on account of its recent services, was so plundered and
                 stripped of everything, that, if Caius Virgilius the lieutenant, a very brave and
                 incorruptible man, had not interfered, the Byzantines would not have retained one
                 single statue out of all their great number. </p>
-            <p>What temple in all <placeName key="tgn,7002733">Achaia</placeName>? what spot or what
+         <p>What temple in all <placeName key="tgn,7002733">Achaia</placeName>? what spot or what
                 grove in the whole of <placeName key="tgn,1000074">Greece</placeName>, was there of
                 such sanctity that a single statue or a single ornament has been left in it? You
                 purchased from a most infamous tribune of the people, at the time of that general
@@ -327,21 +336,20 @@ Added to repository.
                 whose fortune, from the very moment <pb n="290"/> that he first reached the
                 province, has so vied with his wickedness, that no one could decide whether he was
                 more undeserving or more unfortunate. <milestone n="9" unit="section"/>
-            </p>
-            <p>But as for <placeName key="tgn,1000140">Syria</placeName>, is that Semiramis any
+         </p>
+         <p>But as for <placeName key="tgn,1000140">Syria</placeName>, is that Semiramis any
                 longer to be retained there? a man whose march into the province bore the appearance
                 of king Ariobarzanes having hired your consul to come and commit murder, as if he
-                were some Thracian. His very first arrival in <placeName key="tgn,1000140"
-                    >Syria</placeName> was signalized by the destruction of the cavalry; after that,
-                all his best cohorts were cut to pieces. Therefore, in <placeName key="tgn,1000140"
-                    >Syria</placeName>, since he has been the commander-in-chief, nothing has been
+                were some Thracian. His very first arrival in <placeName key="tgn,1000140">Syria</placeName> was signalized by the destruction of the cavalry; after that,
+                all his best cohorts were cut to pieces. Therefore, in <placeName key="tgn,1000140">Syria</placeName>, since he has been the commander-in-chief, nothing has been
                 done beyond making money-bargains with tyrants, and selling decisions, and
                 committing robbery and piracy and massacre; while the general of the Roman people,
                 with his army in battle array, stretching forth his right hand, did not exhort his
                 soldiers to the pursuit of glory, but only kept crying out that everything had been
-                bought by him and was to be bought still. <milestone n="5" unit="chapter"
-                    /><milestone n="10" unit="section"/></p>
-            <p>And as for the miserable farmers of the revenue, (miserable man that I also am, when
+                bought by him and was to be bought still. <milestone n="5" unit="chapter"/>
+            <milestone n="10" unit="section"/>
+         </p>
+         <p>And as for the miserable farmers of the revenue, (miserable man that I also am, when
                 I see the miseries and sufferings of those men who have deserved so well at my
                 hands,) he handed them over as slaves to the Jews and Syrian nations, themselves
                 born for slavery. He laid down as a rule from the very beginning, and he persevered
@@ -355,8 +363,8 @@ Added to repository.
                 Roman citizens, especially towards those of that order which has hitherto always
                 been maintained by its own dignity and by the goodwill of the magistrates.
                     <milestone n="11" unit="section"/>
-            </p>
-            <p>Therefore, O conscript fathers, you see that the farmers of the revenue were ground
+         </p>
+         <p>Therefore, O conscript fathers, you see that the farmers of the revenue were ground
                 down and nearly ruined, not by any rashness with which they had entered into their
                 contracts, nor by any ignorance of the proper methods of transacting business, but
                 by the avarice, the pride, and the cruelty of Gabinius. And to their assistance
@@ -366,10 +374,9 @@ Added to repository.
                 foe of the equestrian order and of all virtuous men, wretched that they are, have
                 lost not only their property but their honourable position; men whom neither
                 parsimony nor temperance nor virtue nor labour nor respectability of character, have
-                been able to protect against the audacity of that glutton and robber. <milestone
-                    n="12" unit="section"/>
-            </p>
-            <p>What are we to do? shall we suffer those men to perish who are even now supporting
+                been able to protect against the audacity of that glutton and robber. <milestone n="12" unit="section"/>
+         </p>
+         <p>What are we to do? shall we suffer those men to perish who are even now supporting
                 themselves on the resources of their patrimony or on the liberality of their
                 friends? Or, suppose any man has been prevented by the enemies means from enjoying
                 his public rights is that man protected by the law of the censors? but in the case
@@ -381,9 +388,10 @@ Added to repository.
                 and by his countenance, while he himself has never once pretended to be less
                 worthless than he really is. But Piso boasts in another sort of fashion that he in a
                 very short time has brought it to pass that Gabinius is not thought the most
-                infamous of all men. <milestone n="6" unit="chapter"/><milestone n="13"
-                    unit="section"/></p>
-            <p>Do not you think that you ought to recall these men from their provinces even if you
+                infamous of all men. <milestone n="6" unit="chapter"/>
+            <milestone n="13" unit="section"/>
+         </p>
+         <p>Do not you think that you ought to recall these men from their provinces even if you
                 had no one to send thither in their places? Would you, could you retain there these
                 two pests of the allies, these men who are the destruction of the soldiers, the ruin
                 of the farmers of the revenue, the desolators of the provinces, the disgracers of
@@ -396,10 +404,9 @@ Added to repository.
                 conferred on them in return for their wickedness and for the <pb n="292"/> overthrow
                 of their country. And if they at that time escaped from that punishment, through no
                 merit of their own, but through the influence of others, greatly against your
-                consent, still they have undergone a much greater and severer punishment. <milestone
-                    n="14" unit="section"/>
-            </p>
-            <p>For what severer punishment could befall any one, in whom there exists, if not any
+                consent, still they have undergone a much greater and severer punishment. <milestone n="14" unit="section"/>
+         </p>
+         <p>For what severer punishment could befall any one, in whom there exists, if not any
                 respect for his reputation, at all events some fear of punishment, than to have
                 those letters of theirs utterly disbelieved which announced that the republic had
                 been very successful in war? The senate decided this, when in a very full house it
@@ -410,20 +417,20 @@ Added to repository.
                 enemy of the republic; and, lastly, that even the immortal gods themselves did not
                 choose their temples to be thrown open, and supplications to be addressed to them in
                 the name of a most profligate and wicked man. </p>
-            <p>Therefore, that other man is either himself a learned man, and one well instructed by
+         <p>Therefore, that other man is either himself a learned man, and one well instructed by
                 his Greek slaves, with whom he now sups behind the scenes, as he used to do before
                 the curtain, or else he has wiser friends than Gabinius, from whom no letters are
-                produced. <milestone n="7" unit="chapter"/><milestone n="15" unit="section"/></p>
-            <p>Shall we then have these men for our generals? the one of whom does not venture to
-                inform us whether <gap reason="* * * *"/>he is styled <foreign xml:lang="la"
-                    >Imperator</foreign>; and the other must in a few days repent of having ventured
+                produced. <milestone n="7" unit="chapter"/>
+            <milestone n="15" unit="section"/>
+         </p>
+         <p>Shall we then have these men for our generals? the one of whom does not venture to
+                inform us whether <gap reason="* * * *"/>he is styled <foreign xml:lang="la">Imperator</foreign>; and the other must in a few days repent of having ventured
                 to mention such a thing to us, if his clerks do not tire of writing. And if that man
                 has any friends, or indeed, if it be possible that any one should be a friend to so
                 savage and foul a brute, they comfort themselves with this consolation, that this
                 senatorial order once refused an application to Titus Albucius. But first of all,
                 the cases are very unlike. The proprietor had had a battle with one auxiliary cohort
-                against a lot of banditti clad in sheepskins in <placeName key="tgn,7003121"
-                    >Sardinia</placeName>. And a war against the mightiest nations and tyrants of
+                against a lot of banditti clad in sheepskins in <placeName key="tgn,7003121">Sardinia</placeName>. And a war against the mightiest nations and tyrants of
                     <placeName key="tgn,1000140">Syria</placeName> was brought to a termination by
                 means of a consular army, and a magistrate invested with the supreme military
                 command. In the next place, Albucius had had already decreed to himself in
@@ -431,37 +438,34 @@ Added to repository.
                 soliciting <pb n="293"/> from the senate. For it was notorious that he like a Greek,
                 and like a light-headed inconsiderate man as he was had celebrated something like a
                 triumph in the province itself. And therefore the senate marked their displeasure at
-                this precipitate conduct of his by the refusing of a supplication. <milestone n="16"
-                    unit="section"/> But let him in truth enjoy this as some comfort, and let him
+                this precipitate conduct of his by the refusing of a supplication. <milestone n="16" unit="section"/> But let him in truth enjoy this as some comfort, and let him
                 think this very eminent mark of disgrace all the less considerable because it has
                 been inflicted on himself alone, provided only that he is content to expect the same
                 end as that man by whose precedent he consoles himself. Especially as Albucius was
                 not liable to the reproach of either Piso's lust or Gabinius's audacity and yet fell
-                by this one blow, the infamy with which he was branded by the senate. <milestone
-                    n="17" unit="section"/>
-            </p>
-            <p>But the man who proposes to decree the two Gauls to the two consuls would return both
+                by this one blow, the infamy with which he was branded by the senate. <milestone n="17" unit="section"/>
+         </p>
+         <p>But the man who proposes to decree the two Gauls to the two consuls would return both
                 these men in their provinces. But he who proposes to decree them one of the Gauls
-                and either <placeName key="tgn,1000140">Syria</placeName> or <placeName
-                    key="tgn,7006667">Macedonia</placeName> still would retain one of these men; and
+                and either <placeName key="tgn,1000140">Syria</placeName> or <placeName key="tgn,7006667">Macedonia</placeName> still would retain one of these men; and
                 while they are both equal in wickedness, he proposes to make their future condition
                 unequal. No, I will make them, says he, praetorian provinces in order that Piso and
                 Gabinius may have successors appointed immediately. Yes; if you are allowed to do
                 so. For then the tribune will be able to intercede with his veto; but at present he
                 cannot do so. Therefore I myself who now propose to decree to the consuls who are to
-                be elected <placeName key="tgn,1000140">Syria</placeName> and <placeName
-                    key="tgn,7006667">Macedonia</placeName>, am prepared also to make them
+                be elected <placeName key="tgn,1000140">Syria</placeName> and <placeName key="tgn,7006667">Macedonia</placeName>, am prepared also to make them
                 praetorian provinces, in order that the praetors may have their provinces for a
                 year, and that we may see those men among us as soon as possible whom we cannot see
-                at all with any equanimity. <milestone n="8" unit="chapter"/></p>
-            <p>But believe me, those men will never have successors appointed to them, except when a
+                at all with any equanimity. <milestone n="8" unit="chapter"/>
+         </p>
+         <p>But believe me, those men will never have successors appointed to them, except when a
                 motion shall be made in accordance with the provisions of that law by which it is
                 unlawful for any one to interpose his veto while the debate is pending about the
                 provinces; therefore, as this opportunity is lost, you must now wait an entire year;
                 during which interval the calamities of the citizens, the miseries of the allies,
-                and the impunity of the most wicked men may be extended. <milestone n="18"
-                    unit="section"/></p>
-            <p>But even if they were the most excellent of men, still, in my opinion, it could never
+                and the impunity of the most wicked men may be extended. <milestone n="18" unit="section"/>
+         </p>
+         <p>But even if they were the most excellent of men, still, in my opinion, it could never
                 be advisable to appoint a successor to Caius Caesar. Now, concerning this matter, O
                 conscript <pb n="294"/> fathers. I shall declare my real sentiments, and I shall not
                 be disconcerted by that interruption of my most intimate friend, who did a little
@@ -479,13 +483,11 @@ Added to repository.
                 assembly that he had by no means become reconciled to him, but that it seemed to him
                 quite inconsistent with the dignity of the empire that, after the generals of the
                 enemy had been led to prison while Scipio was celebrating his triumph, the very man
-                also who had triumphed should be led to the same place? <milestone n="19"
-                    unit="section"/>
-            </p>
-            <p>Who had a greater number of enemies than Caius Marius? There were Lucius Crassus,
+                also who had triumphed should be led to the same place? <milestone n="19" unit="section"/>
+         </p>
+         <p>Who had a greater number of enemies than Caius Marius? There were Lucius Crassus,
                 Marcus Scaurus, (were there no more?) and all the Metelli. But those men not only
-                forbore to recall that enemy of theirs from <placeName key="tgn,1000070"
-                    >Gaul</placeName> by their votes, but also, out of consideration for the Gallic
+                forbore to recall that enemy of theirs from <placeName key="tgn,1000070">Gaul</placeName> by their votes, but also, out of consideration for the Gallic
                 war, they even voted him the province out of the regular order. A most important war
                 has been waged in <placeName key="tgn,1000070">Gaul</placeName>; very mighty nations
                 have been subdued by Caesar; but they are not yet established with laws, or with any
@@ -500,33 +502,33 @@ Added to repository.
                 if I lay aside my enmity itself for the sake of the republic, who, I should like to
                 know, would have a right to blame me? especially as I have at all times thought that
                 I ought to seek for the models for all my intentions and for all my actions in the
-                conduct of the most illustrious men. <milestone n="9" unit="chapter"/></p>
-            <p>Was not, I should like to know, was not that great man Marcus Lepidus, who was twice
+                conduct of the most illustrious men. <milestone n="9" unit="chapter"/>
+         </p>
+         <p>Was not, I should like to know, was not that great man Marcus Lepidus, who was twice
                 consul, and also <foreign xml:lang="la">Pontifex Maximus</foreign>, praised not only
                 by the evidence of men's recollection, but also in the records of our annals, and by
                 the voice of an immortal poet, because on the day that he was made censor, he
                 immediately in the <placeName key="tgn,7006964">Campus Martius</placeName>
                 reconciled himself to Marcus Fulvius his colleague a man who was his bitterest enemy
                 in order that they might perform their common duty devolving on them in the
-                censorship with one common feeling and union of good will? <milestone n="21"
-                    unit="section"/> And to pass over ancient instances, of which there is no end,
+                censorship with one common feeling and union of good will? <milestone n="21" unit="section"/> And to pass over ancient instances, of which there is no end,
                 did not your own father, O Philippus, did not he become reconciled at one and the
                 same time with all his greatest enemies? to all of whom the same attachment to the
-                republic now reconciled him which had previously separated him from them. <milestone
-                    n="22" unit="section"/> I pass over many instances because I see before me these
+                republic now reconciled him which had previously separated him from them. <milestone n="22" unit="section"/> I pass over many instances because I see before me these
                 lights and ornaments of the republic Publius Servilius and Marcus Lucullus; would
                 that that great man, Lucius Lucullus, were still alive! What enmities were ever more
                 bitter in this city that those which subsisted between the Luculli and the Servilii?
                 But in those most gallant men the welfare of the republic, and their own dignity,
                 not only put an end to that ill-feeling, but even changed it into friendship and
                 intimacy. What? did not Quintus Metellus Nepos while consul in the temple of the all
-                good and all powerful <persName><surname>Jupiter</surname></persName>, influenced by
+                good and all powerful <persName>
+               <surname>Jupiter</surname>
+            </persName>, influenced by
                 your authority and also by the incredible dignity of eloquence of that same Publius
                 Servilius, become reconciled to me though I was far away, and do me the greatest
                 possible service? Is it possible for me to be an enemy to this man, by whose
                 letters, by whose glory, and by whose messengers my ears are every day saluted with
-                previously unknown names of tribes, and nations, and places? <milestone n="23"
-                    unit="section"/> I burn, believe me, O conscript fathers, (as indeed you do
+                previously unknown names of tribes, and nations, and places? <milestone n="23" unit="section"/> I burn, believe me, O conscript fathers, (as indeed you do
                 believe of me, and as you feel yourselves,) with an incredible love for my country;
                 which love compelled me formerly to encounter most terrible <pb n="296"/> dangers
                 which were hanging over it, at the risk of my own life; and again, when I saw every
@@ -535,9 +537,10 @@ Added to repository.
                 citizens. And this, my ancient and perpetual disposition towards the republic, now
                 reunites and reconciles me to and unites me in friendship with Caius Caesar. In
                 short, let men think what they please; it is impossible for me to be other than a
-                friend to one who deserves; well of his country. <milestone n="10" unit="chapter"
-                    /><milestone n="24" unit="section"/></p>
-            <p>In truth, if I have not only taken on myself the enmity of, but have declared and
+                friend to one who deserves; well of his country. <milestone n="10" unit="chapter"/>
+            <milestone n="24" unit="section"/>
+         </p>
+         <p>In truth, if I have not only taken on myself the enmity of, but have declared and
                 waged open war against those men who wished to destroy all these things with fire
                 and sword; though some of them were my own personal acquaintances, and some had been
                 saved on capital trials through my defence of them; why should not the same republic
@@ -550,8 +553,8 @@ Added to repository.
                 was consulting the interests of the republic more than my own tranquillity; but that
                 some others, who defended him, thought more of their own ease than they did of the
                 peace of the community? </p>
-            <p>
-                <milestone n="25" unit="section"/> I admit that I was of a different opinion to
+         <p>
+            <milestone n="25" unit="section"/> I admit that I was of a different opinion to
                 Caesar with respect to the affairs of the republic, and that I agreed with all of
                 you: but now I am agreeing also with you with whom I felt in common before. For
                 you,—to whom Lucius Piso does not venture to send letters respecting his
@@ -567,9 +570,10 @@ Added to repository.
                 opinion of the designs of Caius Caesar with respect to the republic saw that I too
                 was very little connected with him; since you changed your opinions and inclinations
                 on account of his great achievements you have seen me also not only the sharer of
-                your sentiments but also the panegyrist and advocate of them. <milestone n="11"
-                    unit="chapter"/><milestone n="26" unit="section"/></p>
-            <p>But what is the reason why in this cause men so exceedingly marvel at and find fault
+                your sentiments but also the panegyrist and advocate of them. <milestone n="11" unit="chapter"/>
+            <milestone n="26" unit="section"/>
+         </p>
+         <p>But what is the reason why in this cause men so exceedingly marvel at and find fault
                 with my opinions when I also before now proposed and voted for many things which
                 concerned that man's dignity more than they did the safety of the republic? I
                 proposed and carried a supplication of fifteen days in Caesar's honour the bill
@@ -591,17 +595,15 @@ Added to repository.
                 himself had received. Therefore, in that supplication which I proposed, the honour
                 was paid to the immortal gods, and to the established usages of our ancestors, and
                 to the welfare of the republic. But the dignity of the language in which the decree
-                was couched, and the honour and the novelty of the attendant circumstances, <pb
-                    n="298"/> and the number of the days,<note anchored="true">
-                    <p>A <foreign xml:lang="la">supplicatio</foreign> was a solemn thanksgiving or
+                was couched, and the honour and the novelty of the attendant circumstances, <pb n="298"/> and the number of the days,<note anchored="true">
+               <p>A <foreign xml:lang="la">supplicatio</foreign> was a solemn thanksgiving or
                         supplication to the gods, decreed by the senate, when all the temples were
                         opened, and the statues of the gods were frequently placed in public upon
                         couches. (<foreign xml:lang="la">pulvinaria</foreign>,) to which the people
-                        offered up their thanksgivings and prayers. (See <bibl n="Cic. Catil. 3.10"
-                            >Cic. <title>in Cat.</title> 3.10</bibl>.) </p>
-                    <p>It was decreed after great victories, and also in times of public danger and
+                        offered up their thanksgivings and prayers. (See <bibl n="Cic. Catil. 3.10">Cic. <title>in Cat.</title> 3.10</bibl>.) </p>
+               <p>It was decreed after great victories, and also in times of public danger and
                         distress, and on account of prodigies, to avert the anger of the gods. </p>
-                    <p>When decreed for a victory, the number of days during which it was to last
+               <p>When decreed for a victory, the number of days during which it was to last
                         was proportioned to the importance of the victory. Sometimes it was decreed
                         for only one day, but more commonly for three or five days. After the
                         supplication mentioned here of fifteen days, one of twenty days was decreed
@@ -615,10 +617,10 @@ Added to repository.
                         for his suppression of Catiline's conspiracy, which was no subject for a
                         triumph, being a civil transaction. <foreign xml:lang="la">Vide</foreign>
                         Smith, Dict. Ant. v. <foreign xml:lang="la">Supplicatio</foreign>.</p>
-                </note> was meant as a compliment to the renown and glory of Caesar himself.
+            </note> was meant as a compliment to the renown and glory of Caesar himself.
                     <milestone n="28" unit="section"/>
-            </p>
-            <p>A motion was lately brought forward before our body concerning the pay of the army. I
+         </p>
+         <p>A motion was lately brought forward before our body concerning the pay of the army. I
                 not only voted for it myself, but I laboured earnestly to induce you to vote for it;
                 I replied to many of the arguments of those who objected to it; I supported it also
                 by writing. In that case also, I was rather considering the dignity of the man who
@@ -627,15 +629,17 @@ Added to repository.
                 maintain his army with the booty that he had already acquired, and to terminate the
                 war. But I thought it would be unbecoming to diminish the glory and splendour of
                 that triumph of his by any parsimony on our part. </p>
-            <p>A discussion took place also about the ten lieutenants whom he wished to have
+         <p>A discussion took place also about the ten lieutenants whom he wished to have
                 appointed; and some voted altogether against giving them, others asked for
                 precedents, others wished to adjourn the consideration of the question, and others
                 declared their opinion in favour of it without any complimentary expressions to
                 Caesar himself. But on that occasion, I spoke in such a manner as to let all men see
                 that, though I thought the measure advantageous to the republic, I was promoting it
                     <pb n="299"/> more cordially out of a desire to pay due honour to the dignity of
-                Caesar. <milestone n="12" unit="chapter"/><milestone n="29" unit="section"/></p>
-            <p>And I who have been received in all those discussions with silent attention now that
+                Caesar. <milestone n="12" unit="chapter"/>
+            <milestone n="29" unit="section"/>
+         </p>
+         <p>And I who have been received in all those discussions with silent attention now that
                 the question is about the provinces which are to be decreed to the consuls am
                 interrupted; though in all the former transactions it was only a compliment to an
                 individual that I urged, while now I have no motive but the consideration of the war
@@ -660,8 +664,8 @@ Added to repository.
                 to receive the highest honours which the senate can bestow, to receive the thanks of
                 the equestrian order, and to become the object of the devoted affection of the
                 people. <milestone n="30" unit="section"/>
-            </p>
-            <p>But if he, out of his regard for the interests of the republic, does not hasten to
+         </p>
+         <p>But if he, out of his regard for the interests of the republic, does not hasten to
                 the enjoyment of that extraordinary good fortune which is in store for him,
                 preferring to remain and finish everything; what ought I to do as a senator,—I, who
                 ought to think only of the advantage of the republic, even if <pb n="300"/> his
@@ -683,27 +687,26 @@ Added to repository.
                 men. There is no nation which is not either so far destroyed as scarcely to have any
                 existence at all, or so utterly subdued as to be quite tranquil; or else so entirely
                 at peace with us, as to share our exultation at our victories and at the extension
-                of our empire. <milestone n="13" unit="chapter"/><milestone n="32" unit="section"
-                /></p>
-            <p>The war with <placeName key="tgn,1000070">Gaul</placeName>, O conscript fathers, has
+                of our empire. <milestone n="13" unit="chapter"/>
+            <milestone n="32" unit="section"/>
+         </p>
+         <p>The war with <placeName key="tgn,1000070">Gaul</placeName>, O conscript fathers, has
                 been carried on actively since Caius Caesar has been our commander-in-chief;
                 previously, we were content to act on the defensive, and to repel attacks. For our
                 generals at all times thought it better to limit themselves to repulsing those
                 nations, than to provoke their hostility by any attack of our own. Even that great
                 man, Caius Marius, whose godlike and amazing valour came to the assistance of the
                 Roman people in many of its distresses and disasters, was content to check the
-                enormous multitudes of Gauls who were forcing their way into <placeName
-                    key="tgn,1000080">Italy</placeName>, without endeavouring to penetrate himself
+                enormous multitudes of Gauls who were forcing their way into <placeName key="tgn,1000080">Italy</placeName>, without endeavouring to penetrate himself
                 into their cities and dwelling-places. And lately, that partner of my labours, and
                 dangers, and counsels, Caius Pomptinus, that most gallant man, crushed in battle a
                 war of the Allobroges which rose up suddenly against us, and which was excited by
                 that impious conspiracy, and defeated those tribes who had provoked us, and then he
                 remained quiet, contented <pb n="301"/> with the victory by which be had delivered
                 the republic from alarm. </p>
-            <p>But I see that the counsels of Caius Caesar are widely different. For he thought it
+         <p>But I see that the counsels of Caius Caesar are widely different. For he thought it
                 his duty, not only to war against those men whom he saw already in arms against the
-                Roman people, but to reduce the whole of <placeName key="tgn,1000070"
-                    >Gaul</placeName> under our dominion. <milestone n="33" unit="section"/>
+                Roman people, but to reduce the whole of <placeName key="tgn,1000070">Gaul</placeName> under our dominion. <milestone n="33" unit="section"/>
                 Therefore, he fought with the greatest success against those most valiant and
                 powerful nations the Germans and Helvetians; and the other nations he alarmed and
                 drove back and defeated, and accustomed to yield to the supremacy of the Roman
@@ -711,8 +714,7 @@ Added to repository.
                 neither by any one's letters, nor by the personal account of any one, nor even by
                 vague report, have now been overrun and thoroughly examined by our own general, by
                 our own army, and by the arms of the Roman people. </p>
-            <p>Hitherto, O conscript fathers, we have only known the road into <placeName
-                    key="tgn,1000070">Gaul</placeName>. All other parts of it were possessed by
+         <p>Hitherto, O conscript fathers, we have only known the road into <placeName key="tgn,1000070">Gaul</placeName>. All other parts of it were possessed by
                 nations which were either hostile to this empire, or treacherous, or unknown to us,
                 or, at all events, savage, barbarian, and warlike;—nations which no one ever existed
                 who did not wish to break their power and subdue: nor has any one, from the very
@@ -722,23 +724,22 @@ Added to repository.
                 of those nations, we never before have had a war with all of them; we have always
                 been content to resist them when attacked. Now, at last, it has been brought about
                 that there should be one and the same boundary to our empire and to those nations.
-                    <milestone n="14" unit="chapter"/><milestone n="34" unit="section"/></p>
-            <p>Nature had previously protected <placeName key="tgn,1000080">Italy</placeName> by the
+                    <milestone n="14" unit="chapter"/>
+            <milestone n="34" unit="section"/>
+         </p>
+         <p>Nature had previously protected <placeName key="tgn,1000080">Italy</placeName> by the
                     <placeName key="tgn,2066659">Alps</placeName>, not without some especial
                 kindness of the gods in providing us with such a bulwark. For if that road had been
                 open to the savage disposition and vast numbers of the Gauls, this city would never
                 have been the home and chosen seat of the empire of the world. Now, indeed, they are
                 at liberty to sink down if they please; for there is nothing beyond those lofty
-                heights as far as the ocean itself, which can be any object of fear to <placeName
-                    key="tgn,1000080">Italy</placeName>. But still it will be the work of one or two
+                heights as far as the ocean itself, which can be any object of fear to <placeName key="tgn,1000080">Italy</placeName>. But still it will be the work of one or two
                 summers finally to bind the whole of <placeName key="tgn,1000070">Gaul</placeName>
-                in everlasting chains either by fear, or hope, or punishment or reward, or <pb
-                    n="302"/> arms, or laws. And if our affairs there are left in an unfinished
+                in everlasting chains either by fear, or hope, or punishment or reward, or <pb n="302"/> arms, or laws. And if our affairs there are left in an unfinished
                 state, and while there is still some bitterness of feeling remaining, although the
                 enemy may be pruned back severely for the present, still they will raise their heads
                 again some time or other, and come forth with recruited strength to renew the war.
-                    <milestone n="35" unit="section"/> Let, then, <placeName key="tgn,1000070"
-                    >Gaul</placeName> be left in the guardianship of that man to whose valour, and
+                    <milestone n="35" unit="section"/> Let, then, <placeName key="tgn,1000070">Gaul</placeName> be left in the guardianship of that man to whose valour, and
                 good faith, and good fortune it has already been entrusted. If, in truth, he, having
                 been distinguished by such marked kindness of Fortune, were unwilling to risk the
                 favour of that fickle goddess too often; if he were anxious himself to return to his
@@ -755,24 +756,20 @@ Added to repository.
                 duty which the republic has committed to him; then certainly, we, for our part,
                 ought not to recall a general who is so eager to conduct the affairs of the republic
                 gloriously, nor to throw into confusion and to hinder his plans for the whole Gallic
-                war, which are now almost matured and accomplished. <milestone n="15" unit="chapter"
-                    /><milestone n="36" unit="section"/></p>
-            <p>For I cannot at all approve of those opinions which have been expressed by some most
-                illustrious men, one of whom proposes to give the consuls the further <placeName
-                    key="tgn,1000070">Gaul</placeName> and <placeName key="tgn,1000140"
-                    >Syria</placeName>, and the other inclines to the nearer <placeName
-                    key="tgn,1000070">Gaul</placeName>. He who proposes the further <placeName
-                    key="tgn,1000070">Gaul</placeName>, throws all those matters into confusion
+                war, which are now almost matured and accomplished. <milestone n="15" unit="chapter"/>
+            <milestone n="36" unit="section"/>
+         </p>
+         <p>For I cannot at all approve of those opinions which have been expressed by some most
+                illustrious men, one of whom proposes to give the consuls the further <placeName key="tgn,1000070">Gaul</placeName> and <placeName key="tgn,1000140">Syria</placeName>, and the other inclines to the nearer <placeName key="tgn,1000070">Gaul</placeName>. He who proposes the further <placeName key="tgn,1000070">Gaul</placeName>, throws all those matters into confusion
                 about which I have just been speaking, and shows at the same time that he is
                 advocating a law which he affirms to be no law at all; and that he is taking away
                 that part of the province to which no interruption can be given, but is not touching
                 that part which has a defender. The effect of his conduct also is not to meddle with
                 that which has been conferred <pb n="303"/> by the people while at the same time he
                 a senator is anxious to take away what has been given by the senate. </p>
-            <p>The other disregards all consideration of the Gallic war; he discharges the duty of a
+         <p>The other disregards all consideration of the Gallic war; he discharges the duty of a
                 virtuous senator: though he thinks the law invalid, still he observes it; for he
-                fixes beforehand a day for his successor to enter on his office. <gap
-                    reason="* *  *"/> But it seems to me that nothing is more inconsistent with the
+                fixes beforehand a day for his successor to enter on his office. <gap reason="* *  *"/> But it seems to me that nothing is more inconsistent with the
                 dignity and principles of our ancestors than for the consul, who on the first of
                 January is to have a province, to have it promised to him in this way, and not
                 regularly decreed to him. Suppose he were during the whole of his consulship without
@@ -784,13 +781,13 @@ Added to repository.
                 February he is not to have a province. At last on the first of March up will spring
                 a province for him all on a sudden. <milestone n="38" unit="section"/> Nevertheless
                 if these sentiments prevail, Piso will remain in his province. </p>
-            <p>And though these are weighty considerations, still none of them are more serious than
+         <p>And though these are weighty considerations, still none of them are more serious than
                 this—that it is an insulting thing for a commander in chief to be mulcted as it were
                 by a diminution of his provinces, and we ought to take great care that such a thing
                 should not be allowed to happen, not only not in the case of a most illustrious man,
-                but not even in that of a man of moderate reputation. <milestone n="16"
-                    unit="chapter"/></p>
-            <p>I am well aware, O conscript fathers, that you have decreed many extraordinary
+                but not even in that of a man of moderate reputation. <milestone n="16" unit="chapter"/>
+         </p>
+         <p>I am well aware, O conscript fathers, that you have decreed many extraordinary
                 honours to Caius Caesar; honours which are almost unprecedented. In that he has
                 amply merited them, you have been grateful; if I add, too, that he is a man most
                 thoroughly attached to this order of the senate, you have been wise and provident.
@@ -806,12 +803,10 @@ Added to repository.
                 of their voyage amid the whims of the people, having been successful in the conduct
                 of the affairs of the republic, they show their faces again in the senate-house, and
                 wish to gain the favours of this most honourable order, I say that they are not only
-                not to be repelled, but are to be received with open arms, and courted. <milestone
-                    n="39" unit="section"/>
-            </p>
-            <p>We are warned by the bravest man and most admirable consul who has ever existed in
-                the memory of man, to take care that the nearer <placeName key="tgn,1000070"
-                    >Gaul</placeName> be not decreed against our will to any one after the election
+                not to be repelled, but are to be received with open arms, and courted. <milestone n="39" unit="section"/>
+         </p>
+         <p>We are warned by the bravest man and most admirable consul who has ever existed in
+                the memory of man, to take care that the nearer <placeName key="tgn,1000070">Gaul</placeName> be not decreed against our will to any one after the election
                 of those consuls who are now about to be elected, and that it be not for the future
                 occupied forever by these men who are the constant attackers of this order, by some
                 turbulent system of currying favour with the mob. And although I am not indifferent
@@ -821,18 +816,17 @@ Added to repository.
                 regarded with even more apprehension than that,—the evil, I mean, of diminishing the
                 honours of most illustrious and powerful citizens, and rejecting their zeal for the
                 maintenance of this order. </p>
-            <p>For even supposing that Caius Julius, having been distinguished by all sorts of
+         <p>For even supposing that Caius Julius, having been distinguished by all sorts of
                 extraordinary and unprecedented honours by the senate, were compelled to deliver up
                 this province to one whom you would be very unwilling to see there, still I cannot
                 possibly be induced to suspect that be would deprive that body of liberty by which
                 he himself had the greatest glory conferred on him. Lastly, what disposition every
                 one will have I know not; I am aware only of what my own hopes are. I, as a senator,
                 am bound to take care, as far as I can, that no illustrious or powerful man shall
-                appear to have any right to feel offended with this body. <milestone n="40"
-                    unit="section"/> These sentiments I should express out of regard to the
-                republic, even were I ever so great an enemy to Caius Caesar. <milestone n="17"
-                    unit="chapter"/></p>
-            <p>But I do not think it foreign to the present discussion, with the object of being for
+                appear to have any right to feel offended with this body. <milestone n="40" unit="section"/> These sentiments I should express out of regard to the
+                republic, even were I ever so great an enemy to Caius Caesar. <milestone n="17" unit="chapter"/>
+         </p>
+         <p>But I do not think it foreign to the present discussion, with the object of being for
                 the future less frequently <pb n="305"/> interrupted by certain persons, or less
                 reproved in the opinion of some who forbear to interrupt me, to explain briefly what
                 is the nature of my relations with Caesar. And in the first place, I pass over that
@@ -844,18 +838,15 @@ Added to repository.
                 as consul, adopted measures in which he wished to have me for a partner; and if I
                 was opposed to the measures themselves, still I could not avoid being pleased at the
                 opinion of me which he displayed by that wish. He entreated me also to accept the
-                office of quinquevir.<note anchored="true">Some read here <foreign xml:lang="la"
-                        >vigentiviratum</foreign> referring it to the commission of twenty citizens
-                    for the division of the lands in <placeName key="tgn,7003005"
-                        >Campania</placeName>, a place in which was offered to Cicero and refused by
+                office of quinquevir.<note anchored="true">Some read here <foreign xml:lang="la">vigentiviratum</foreign> referring it to the commission of twenty citizens
+                    for the division of the lands in <placeName key="tgn,7003005">Campania</placeName>, a place in which was offered to Cicero and refused by
                     him. And Orellius thinks that reading not to be disregarded but retains the one
                     translated in the text (<foreign xml:lang="la">quinqueviratum</foreign>),
-                    because (<bibl n="Cic. Att. 2.7"><title>Epist ad Att.</title> ii. 7</bibl>,) he
+                    because (<bibl n="Cic. Att. 2.7">
+                  <title>Epist ad Att.</title> ii. 7</bibl>,) he
                     also speaks of a <foreign xml:lang="la">quinqueviratus</foreign>, which
                     therefore Orellius thinks may refer to some project which was never brought to
-                    bear.</note> He wished me to be one of three men of consular rank<note
-                    anchored="true">Cicero speaks also in his Letters to Atticus (<bibl
-                        n="Cic. Att. 2.3">ii.3</bibl>) of Caesar's overtures to him to join him and
+                    bear.</note> He wished me to be one of three men of consular rank<note anchored="true">Cicero speaks also in his Letters to Atticus (<bibl n="Cic. Att. 2.3">ii.3</bibl>) of Caesar's overtures to him to join him and
                     Pompeius and Crassus in their partition of all power between them and of
                     Caesar's sending him word by Balbus that he would be governed in all his
                     proceedings by him and Pompeius and Crassus; but Cicero refused entering into
@@ -872,7 +863,7 @@ Added to repository.
                 men, I preferred to meet any fortune to encounter any violence and any in jury,
                 rather than differ from the wise and righteous sentiments <pb n="306"/> of the
                 senate, or deviate from the line of conduct which I had marked out for myself. </p>
-            <p>But a man is bound to be grateful, not only if he has received a kindness, but if he
+         <p>But a man is bound to be grateful, not only if he has received a kindness, but if he
                 has had an opportunity of receiving one. I did not think that all those compliments
                 and distinctions with which he was loading me became me, or were suited to the
                 exploits which I had performed. But I saw that he regarded me with the same friendly
@@ -885,13 +876,13 @@ Added to repository.
                 entreated me to act as his lieutenant. Even that I would not accept; not because I
                 thought it inconsistent with my dignity, but because I had no suspicion that such
                 wicked designs against the republic were entertained by the succeeding consuls as
-                afterwards proved to be. <milestone n="18" unit="chapter"/></p>
-            <p>Therefore I have much more reason to fear that I may be blamed for arrogance of
+                afterwards proved to be. <milestone n="18" unit="chapter"/>
+         </p>
+         <p>Therefore I have much more reason to fear that I may be blamed for arrogance of
                 conduct with respect to his liberality towards me, than that I should be reproached
-                with the injuries which he has done me in spite of our friendship. <milestone n="43"
-                    unit="section"/>
-            </p>
-            <p>Turn your eyes to that tempest—to that season of darkness to all good men,—to that
+                with the injuries which he has done me in spite of our friendship. <milestone n="43" unit="section"/>
+         </p>
+         <p>Turn your eyes to that tempest—to that season of darkness to all good men,—to that
                 sudden and unforeseen danger which overwhelmed all things,—to that cloud which came
                 over the republic—to the ruin and conflagration of the city—to the alarm given to
                 Caesar with respect to all the acts of his consulship,—to the fear of massacre with
@@ -913,17 +904,17 @@ Added to repository.
                 to you that I ought rather to recollect the times that are long past and also to
                 remember this time which is nearest to us now, and by means of these memories to
                 eradicate that middle time so full of infamy and misery, if not from the history of
-                events, (which indeed may be impossible,) at all events from my own mind? <milestone
-                    n="44" unit="section"/>
-            </p>
-            <p>But I, if I may not (as some people think I ought not) boast that I have sacrificed
+                events, (which indeed may be impossible,) at all events from my own mind? <milestone n="44" unit="section"/>
+         </p>
+         <p>But I, if I may not (as some people think I ought not) boast that I have sacrificed
                 my own private feelings of indignation and enmity to the republic, which it appears
                 to me to be the duty of a great and wise man to do, will at all events avail myself
                 of this plea,—which is of force not so much to gain praise as to avoid
                 reproach,—namely, that I am a grateful person, and that I am inclined to be moved,
                 not only by such exceeding services as his, but even by a moderate display of
-                good-will towards me. <milestone n="19" unit="chapter"/></p>
-            <p>I entreat of some most gallant men, who have done me great service, that, if I have
+                good-will towards me. <milestone n="19" unit="chapter"/>
+         </p>
+         <p>I entreat of some most gallant men, who have done me great service, that, if I have
                 been unwilling that they should be partakers of my labours and distresses, they will
                 also spare me from being the partaker of their enmities; especially as they have
                 granted to me that I have a right to defend those acts of Caesar's which I neither
@@ -933,8 +924,7 @@ Added to repository.
                 invited me, deny that the Julian laws, and the others which were passed during his
                 consulship, were legally passed at all. And at the same time they say that the bill
                 for my proscription was passed in a manner contrary to the safety of the republic,
-                but still without any illegal disregard of the <foreign xml:lang="la"
-                    >auspices</foreign>. Therefore a man of the highest authority, and of the
+                but still without any illegal disregard of the <foreign xml:lang="la">auspices</foreign>. Therefore a man of the highest authority, and of the
                 greatest eloquence, said with great positiveness that that disaster of mine was a
                 funeral of the republic, but <pb n="308"/> a funeral performed with all regular
                 solemnity. To me myself it is altogether excessively complimentary, that my
@@ -950,11 +940,9 @@ Added to repository.
                 tribuneship be declared valid, there is then no one of Caesar's acts which can
                 possibly be invalid; and so, will not, not merely his tribuneship, but also other
                 matters the most mischievous imaginable, appear to have been passed with proper
-                regularity, if it be decided that the religious respect due to the <foreign
-                    xml:lang="la">auspices</foreign> was preserved? <milestone n="46" unit="section"
-                />
-            </p>
-            <p>Wherefore you must decide either that the Aelian law still exists, that the Fufian
+                regularity, if it be decided that the religious respect due to the <foreign xml:lang="la">auspices</foreign> was preserved? <milestone n="46" unit="section"/>
+         </p>
+         <p>Wherefore you must decide either that the Aelian law still exists, that the Fufian
                 law has not been abrogated, and that it is not lawful for a law to be passed on
                 every one of the <foreign xml:lang="la">dies fasti</foreign>; that, when a law is
                 being passed, there is no objection to observations of the heavens being taken, or
@@ -962,17 +950,14 @@ Added to repository.
                 veto; that the decisions and animadversions of the censors, and that most strict
                 inspection of morals, has not been abolished in the city by nefarious laws; that if
                 a patrician has been tribune of the people, he has been so in violation of the most
-                sacred laws,—if a plebeian, in disregard of the <foreign xml:lang="la"
-                    >auspices</foreign>: or else men must grant to me that it is not necessary for
+                sacred laws,—if a plebeian, in disregard of the <foreign xml:lang="la">auspices</foreign>: or else men must grant to me that it is not necessary for
                 me in the case of good measures to be bound by those rules which they themselves do
                 not adhere to in shameful ones; especially as it has been a proposal made by them to
                 Caius Caesar several times, that he should carry the same measures in some other
-                manner, (in some manner, that is, which the <foreign xml:lang="la"
-                    >auspices</foreign> required and which the law sanctioned;) and when, in the
+                manner, (in some manner, that is, which the <foreign xml:lang="la">auspices</foreign> required and which the law sanctioned;) and when, in the
                 case of Clodius, the history of the <foreign xml:lang="la">auspices</foreign> is
-                just the same, and all the laws of the state have been overturned and destroyed. <pb
-                    n="309"/>
-                <milestone n="20" unit="chapter"/>This is the last thing which I have to say. If I
+                just the same, and all the laws of the state have been overturned and destroyed. <pb n="309"/>
+            <milestone n="20" unit="chapter"/>This is the last thing which I have to say. If I
                 had any enmity against Caius Caesar, still at this time I ought to consult the
                 interests of the republic, and to reserve my hostility for another time. I might
                 even, following the precedent of most eminent men, lay aside my enmity altogether
@@ -986,11 +971,11 @@ Added to repository.
                 consideration of the Gallic war is to be taken into the account, I shall consult the
                 interests of the republic if I may have respect to my own private duty I shall show
                 that I am not ungrateful. </p>
-            <p>And I wish, O conscript fathers, to induce you all to approve of my sentiments; but I
+         <p>And I wish, O conscript fathers, to induce you all to approve of my sentiments; but I
                 shall not be greatly concerned if I fail to induce those men to approve of them who
                 shielded my enemy in spite of your authority; or those who found fault with my
                 reconciliation with their enemy, while they themselves do not hesitate to be
                 reconciled both to my enemy and to their own.</p>
-        </body>
-    </text>
+      </body>
+   </text>
 </TEI>

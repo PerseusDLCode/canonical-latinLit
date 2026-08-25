@@ -53,7 +53,14 @@
                 <refState unit="book"/>
                 <refState unit="chapter" n="chunk"/>
             </refsDecl>
-        </encodingDesc>
+              <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div[@type='book']" use="@n" unit="book" delim=":">
+            <citeStructure match=".//milestone[@unit='chapter']" use="@n" unit="chapter" delim="." n="chunk"/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+</encodingDesc>
         <profileDesc>
             <langUsage default="false">
                 <language ident="en">English </language>
@@ -76,8 +83,8 @@
             <change when="2014-10-09" who="Stella Dee">edited markup</change>
         </revisionDesc>
     </teiHeader>
-    <text xml:lang="en">
-        <body>
+    <text xml:lang="eng">
+        <body xml:base="urn:cts:latinLit:phi0914.phi0011.perseus-eng2">
             <pb n="1" xml:id="p.1"/>
             <div part="N" sample="complete" org="uniform" n="1" type="book">
                 <head>THE HISTORY OF ROME. BOOK I.</head>
@@ -114,7 +121,7 @@
                         Brutus and L. Tarquinius Collatinus first created consuls. </p>
                 </argument>
                 <pb n="2" xml:id="p.2"/>
-                <milestone n="1" unit="chapter"/>
+                <milestone n="pr" unit="chapter"/>
                 <p>
                     <milestone n="1" unit="section"/> WHETHER in tracing the history of the Roman
                     people, from the foundation of the city, I shall employ myself to a useful

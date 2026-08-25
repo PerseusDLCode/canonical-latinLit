@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-                         schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng"
-                         schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
-	           <title>Aeneid</title>
-	           <author>P. Vergilius Maro</author>
-	           <editor role="translator">Theodore C. Williams</editor>
-      	     <sponsor>Perseus Project, Tufts University</sponsor>
-      	     <principal>Gregory Crane</principal>
+            <title>Aeneid</title>
+            <author>P. Vergilius Maro</author>
+            <editor role="translator">Theodore C. Williams</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
             <respStmt>
                <resp>Prepared under the supervision of</resp>
                <name>Bridget Almas</name>
@@ -32,86 +29,81 @@
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
             <date type="release">1997-10-28</date>
+            <idno type="CTS">urn:cts:latinLit:phi0690.phi003.perseus-eng2</idno>
          </publicationStmt>
          <sourceDesc>
-	           <biblStruct>
-	              <monogr>
-	                 <author>Vergil</author>
-	                 <title>The Aeneid of Virgil</title>
-	                 <editor role="translator">Theodore C. Williams</editor>	
-	                 <imprint>
-	                    <pubPlace>Boston</pubPlace>
-	                    <publisher>Houghton Mifflin Co.</publisher>
-	                    <date>1910</date>
-	                 </imprint>
-	              </monogr>
-	              <ref target="HathiTrust">https://hdl.handle.net/2027/hvd.32044015567506</ref>
-	           </biblStruct>
+            <biblStruct>
+               <monogr>
+                  <author>Vergil</author>
+                  <title>The Aeneid of Virgil</title>
+                  <editor role="translator">Theodore C. Williams</editor>
+                  <imprint>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Houghton Mifflin Co.</publisher>
+                     <date>1910</date>
+                  </imprint>
+               </monogr>
+               <ref target="HathiTrust">https://hdl.handle.net/2027/hvd.32044015567506</ref>
+            </biblStruct>
          </sourceDesc>
       </fileDesc>
-
-     <encodingDesc>
-        <refsDecl n="NTS">
-           <cRefPattern n="line"
-              matchPattern="(\w+).(\w+)"
-              replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
-              <p>This pointer pattern extracts book and lines</p>
-           </cRefPattern>
-           <cRefPattern n="book"
-              matchPattern="(\w+)"
-              replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-              <p>This pointer pattern extracts book</p>
-           </cRefPattern>
-        </refsDecl>
-        <refsDecl n="CTS">
-           <cRefPattern n="card"
-              matchPattern="(\w+).(\w+)"
-              replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
-              <p>This pointer pattern extracts book and card</p>
-           </cRefPattern>
-           <cRefPattern n="book"
-              matchPattern="(\w+)"
-              replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-              <p>This pointer pattern extracts book</p>
-           </cRefPattern>
-        </refsDecl>
+      <encodingDesc>
+         <refsDecl n="NTS">
+            <cRefPattern n="line"
+                         matchPattern="(\w+).(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']//tei:l[@n='$2'])">
+               <p>This pointer pattern extracts book and lines</p>
+            </cRefPattern>
+            <cRefPattern n="book"
+                         matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+               <p>This pointer pattern extracts book</p>
+            </cRefPattern>
+         </refsDecl>
          <refsDecl n="TEI.2">
-	           <refState unit="book"/>
-	           <refState n="chunk" unit="card"/>
+            <refState unit="book"/>
+            <refState n="chunk" unit="card"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               </citeStructure>
+            </citeStructure>
          </refsDecl>
       </encodingDesc>
-
       <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#verse-book-line"/>
+         </textClass>
          <langUsage>
-	           <language ident="eng">English
+            <language ident="eng">English
       </language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-      	  <change when="2010-07-02" who="student">fixed place tags - zr</change>
-      	  <change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
-      	  <change when="2009-01-12" who="rsingh04">commented out extra chunking scheme</change>
-      	  <change when="2006-02-10" who="packel">places/dates now actually tagged</change>
-      	  <change when="2005-11-21" who="lcerrato">changed two suspected typos book 10 line 505; cuch to such; Ioud to loud no source found, not confirmed</change>
-      	  <change when="2005-08-01" who="packel">removed stray item tags</change>
-      	  <change when="2005-07-25" who="packel">Converted to XML</change>
-      	  <change when="2004-04-02" who="mimno">added line 1 cards</change>
-      	  <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
-      	  <change when="2002-01-15" who="amahoney">ocr error—UIysses for Ulysses</change>
-      	  <change when="2001-03-14" who="lcerrato">changed typo Glaucus, to Glaucus'</change>
-      	  <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
-      	  <change when="1999-08-12" who="dasmith">Changed line tags to handle verse translation.</change>
-      	  <change when="1999-08-04" who="textgod">Turned line milestones into cards.</change>
-    	    <change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
-    	    <change when="1996-11-01" who="WM">Scan, proofread, tag public domain text.</change>
+         <change when="2010-07-02" who="student">fixed place tags - zr</change>
+         <change when="2009-12-09" who="rsingh04">moved more xml files around based on copyright status</change>
+         <change when="2009-01-12" who="rsingh04">commented out extra chunking scheme</change>
+         <change when="2006-02-10" who="packel">places/dates now actually tagged</change>
+         <change when="2005-11-21" who="lcerrato">changed two suspected typos book 10 line 505; cuch to such; Ioud to loud no source found, not confirmed</change>
+         <change when="2005-08-01" who="packel">removed stray item tags</change>
+         <change when="2005-07-25" who="packel">Converted to XML</change>
+         <change when="2004-04-02" who="mimno">added line 1 cards</change>
+         <change when="2003-07-01" who="yorkc">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2002-01-15" who="amahoney">ocr error—UIysses for Ulysses</change>
+         <change when="2001-03-14" who="lcerrato">changed typo Glaucus, to Glaucus'</change>
+         <change when="2000-03-04" who="dasmith">Added separate funder entity to TEI header.</change>
+         <change when="1999-08-12" who="dasmith">Changed line tags to handle verse translation.</change>
+         <change when="1999-08-04" who="textgod">Turned line milestones into cards.</change>
+         <change when="1997-09-24" who="textgod">Changed names and redid headers.</change>
+         <change when="1996-11-01" who="WM">Scan, proofread, tag public domain text.</change>
       </revisionDesc>
-  </teiHeader>
-
+   </teiHeader>
    <text>
-      <body>
-         <div type="translation" xml:lang="eng" n="urn:cts:latinLit:phi0690.phi003.perseus-eng2">
-         <div type="textpart" subtype="book" n="1">
-            <div type="textpart" subtype="card" resp="p" n="1">
+      <body xml:base="urn:cts:latinLit:phi0690.phi003.perseus-eng2">
+         <div n="1" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">Arms and the man I sing, who first made way,</l>
                <l n="2">predestined exile, from the Trojan shore</l>
                <l n="3">to <placeName key="tgn,1000080">Italy</placeName>, the blest Lavinian strand.</l>
@@ -124,14 +116,14 @@
                <l n="10">the Latin race, old Alba's reverend lords,</l>
                <l n="11">and from her hills wide-walled, imperial <placeName key="perseus,Rome">Rome</placeName>.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="8">
+            <div resp="p" n="8" type="card">
                <l n="12">O Muse, the causes tell! What sacrilege,</l>
                <l n="13">or vengeful sorrow, moved the heavenly Queen</l>
                <l n="14">to thrust on dangers dark and endless toil</l>
                <l n="15">a man whose largest honor in men's eyes</l>
                <l n="16">was serving Heaven? Can gods such anger feel?</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="12">
+            <div resp="p" n="12" type="card">
                <l n="17">In ages gone an ancient city stood—</l>
                <l n="18">
                   <placeName key="perseus,Carthage">Carthage</placeName>, a Tyrian seat, which from afar</l>
@@ -167,7 +159,7 @@
                <l n="48">year after year, o'er many an unknown sea—</l>
                <l n="49">O labor vast, to found the Roman line!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="34">
+            <div resp="p" n="34" type="card">
                <l n="50">Below th' horizon the Sicilian isle</l>
                <l n="51">just sank from view, as for the open sea</l>
                <l n="52">with heart of hope they sailed, and every ship</l>
@@ -190,7 +182,7 @@
                <l n="69">make war so long! Who now on Juno calls?</l>
                <l n="70">What suppliant gifts henceforth her altars crown?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="50">
+            <div resp="p" n="50" type="card">
                <l n="71">So, in her fevered heart complaining still,</l>
                <l n="72">unto the storm-cloud land the goddess came,</l>
                <l n="73">a region with wild whirlwinds in its womb,</l>
@@ -212,7 +204,7 @@
                <l n="88">with Jove's consent, to loose them o'er the world.</l>
                <l n="89">To him proud Juno thus made lowly plea:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="65">
+            <div resp="p" n="65" type="card">
                <l n="90">“Thou in whose hands the Father of all gods</l>
                <l n="91">and Sovereign of mankind confides the power</l>
                <l n="92">to calm the waters or with winds upturn,</l>
@@ -228,7 +220,7 @@
                <l n="102">shall pass long, happy years, and fruitful bring</l>
                <l n="103">her beauteous offspring unto thee their sire.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="76">
+            <div resp="p" n="76" type="card">
                <l n="104">Then Aeolus: “'T is thy sole task, O Queen,</l>
                <l n="105">to weigh thy wish and will. My fealty</l>
                <l n="106">thy high behest obeys. This humble throne</l>
@@ -237,7 +229,7 @@
                <l n="109">my station at your bright Olympian board,</l>
                <l n="110">and gives me lordship of the darkening storm.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="81">
+            <div resp="p" n="81" type="card">
                <l n="111">Replying thus, he smote with spear reversed</l>
                <l n="112">the hollow mountain's wall; then rush the winds</l>
                <l n="113">through that wide breach in long, embattled line,</l>
@@ -266,7 +258,7 @@
                <l n="134">in furious flood engulfed and whirled away</l>
                <l n="135">so many helms and shields and heroes slain!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="102">
+            <div resp="p" n="102" type="card">
                <l n="136">While thus he cried to Heaven, a shrieking blast</l>
                <l n="137">smote full upon the sail. Up surged the waves</l>
                <l n="138">to strike the very stars; in fragments flew</l>
@@ -297,7 +289,7 @@
                <l n="163">bursts the tempestuous shock; their loosened seams</l>
                <l n="164">yawn wide and yield the angry wave its will.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="124">
+            <div resp="p" n="124" type="card">
                <l n="165">Meanwhile how all his smitten ocean moaned,</l>
                <l n="166">and how the tempest's turbulent assault</l>
                <l n="167">had vexed the stillness of his deepest cave,</l>
@@ -324,7 +316,7 @@
                <l n="188">let Aeolus look proud, and play the king</l>
                <l n="189">in yon close-bounded prison-house of storms!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="142">
+            <div resp="p" n="142" type="card">
                <l n="190">He spoke, and swiftlier than his word subdued</l>
                <l n="191">the swelling of the floods; dispersed afar</l>
                <l n="192">th' assembled clouds, and brought back light to heaven.</l>
@@ -347,7 +339,7 @@
                <l n="209">looked o'er th' expanse, and, riding on in light,</l>
                <l n="210">flung free rein to his winged obedient car.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="157">
+            <div resp="p" n="157" type="card">
                <l n="211">Aeneas' wave-worn crew now landward made,</l>
                <l n="212">and took the nearest passage, whither lay</l>
                <l n="213">the coast of <placeName key="tgn,1000172">Libya</placeName>. A haven there</l>
@@ -368,7 +360,7 @@
                <l n="228">In such a port, a weary ship rides free</l>
                <l n="229">of weight of firm-fluked anchor or strong chain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="180">
+            <div resp="p" n="180" type="card">
                <l n="230">Hither Aeneas of his scattered fleet</l>
                <l n="231">saving but seven, into harbor sailed;</l>
                <l n="232">with passionate longing for the touch of land,</l>
@@ -407,7 +399,7 @@
                <l n="264">with his Ioved guest;—this too Aeneas gave;</l>
                <l n="265">and with these words their mournful mood consoled.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="198">
+            <div resp="p" n="198" type="card">
                <l n="266">“Companions mine, we have not failed to feel</l>
                <l n="267">calamity till now. O, ye have borne</l>
                <l n="268">far heavier sorrow: Jove will make an end</l>
@@ -422,7 +414,7 @@
                <l n="277">that <placeName key="perseus,Troy">Troy</placeName> shall rise new-born! Have patience all!</l>
                <l n="278">And bide expectantly that golden day.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="208">
+            <div resp="p" n="208" type="card">
                <l n="279">Such was his word, but vexed with grief and care,</l>
                <l n="280">feigned hopes upon his forehead firm he wore,</l>
                <l n="281">and locked within his heart a hero's pain.</l>
@@ -444,7 +436,7 @@
                <l n="297">or mourns with grief untold the untimely doom</l>
                <l n="298">of bold young Gyas and Cloanthus bold.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="223">
+            <div resp="p" n="223" type="card">
                <l n="299">After these things were past, exalted Jove,</l>
                <l n="300">from his ethereal sky surveying clear</l>
                <l n="301">the seas all winged with sails, lands widely spread,</l>
@@ -494,7 +486,7 @@
                <l n="344">Is this what piety receives? Or thus</l>
                <l n="345">doth Heaven's decree restore our fallen thrones?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="254">
+            <div resp="p" n="254" type="card">
                <l n="346">Smiling reply, the Sire of gods and men,</l>
                <l n="347">with such a look as clears the skies of storm</l>
                <l n="348">chastely his daughter kissed, and thus spake on:</l>
@@ -520,7 +512,7 @@
                <l n="368">from the Lavinian citadel, and build</l>
                <l n="369">for <placeName key="perseus,Alba Longa">Alba Longa</placeName> its well-bastioned wall.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="272">
+            <div resp="p" n="272" type="card">
                <l n="370">Here three full centuries shall Hector's race</l>
                <l n="371">have kingly power; till a priestess queen,</l>
                <l n="372">by Mars conceiving, her twin offspring bear;</l>
@@ -558,7 +550,7 @@
                <l n="403">and fettered by a hundred brazen chains,</l>
                <l n="404">shall belch vain curses from his lips of gore.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="297">
+            <div resp="p" n="297" type="card">
                <l n="405">These words he gave, and summoned Maia's son,</l>
                <l n="406">the herald Mercury, who earthward flying,</l>
                <l n="407">should bid the Tyrian realms and new-built towers</l>
@@ -572,7 +564,7 @@
                <l n="415">and, most of all, the Queen, with heart at ease</l>
                <l n="416">awaits benignantly her guests from <placeName key="perseus,Troy">Troy</placeName>.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="305">
+            <div resp="p" n="305" type="card">
                <l n="417">But good Aeneas, pondering all night long</l>
                <l n="418">his many cares, when first the cheerful dawn</l>
                <l n="419">upon him broke, resolved to take survey</l>
@@ -605,7 +597,7 @@
                <l n="446">her spotted mantle was; perchance she roused</l>
                <l n="447">some foaming boar, and chased with loud halloo.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="325">
+            <div resp="p" n="325" type="card">
                <l n="448">So Venus spoke, and Venus' son replied:</l>
                <l n="449">“No voice or vision of thy sister fair</l>
                <l n="450">has crossed my path, thou maid without a name!</l>
@@ -620,7 +612,7 @@
                <l n="459">compelled by wind and wave. Lo, this right hand</l>
                <l n="460">shall many a victim on thine altar slay!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="335">
+            <div resp="p" n="335" type="card">
                <l n="461">Then Venus: “Nay, I boast not to receive</l>
                <l n="462">honors divine. We Tyrian virgins oft</l>
                <l n="463">bear bow and quiver, and our ankles white</l>
@@ -677,7 +669,7 @@
                <l n="514">her son, with sighs that rose from his heart's depths,</l>
                <l n="515">this answer gave: </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="372">
+            <div resp="p" n="372" type="card">
                <l n="516">“Divine one, if I tell</l>
                <l n="517">my woes and burdens all, and thou could'st pause</l>
                <l n="518">to heed the tale, first would the vesper star</l>
@@ -704,7 +696,7 @@
                <l n="539">But Venus could not let him longer plain,</l>
                <l n="540">and stopped his grief midway: </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="387">
+            <div resp="p" n="387" type="card">
                <l n="541">“Whoe'er thou art,</l>
                <l n="542">I deem that not unblest of heavenly powers,</l>
                <l n="543">with vital breath still thine, thou comest hither</l>
@@ -726,7 +718,7 @@
                <l n="559">are landed, or fly landward at full sail.</l>
                <l n="560">Up, then! let yon plain path thy guidance be,”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="402">
+            <div resp="p" n="402" type="card">
                <l n="561">She ceased and turned away. A roseate beam</l>
                <l n="562">from her bright shoulder glowed; th' ambrosial hair</l>
                <l n="563">breathed more than mortal sweetness, while her robes</l>
@@ -749,7 +741,7 @@
                <l n="580">garlands of myrtle and fresh roses breathe,</l>
                <l n="581">and clouds of orient sweetness waft away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="418">
+            <div resp="p" n="418" type="card">
                <l n="582">Meanwhile the wanderers swiftly journey on</l>
                <l n="583">along the clear-marked road, and soon they climb</l>
                <l n="584">the brow of a high hill, which close in view</l>
@@ -785,7 +777,7 @@
                <l n="614">of human eyes,—O strange the tale and true!—</l>
                <l n="615">he threaded the thronged streets, unmarked, unknown.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="441">
+            <div resp="p" n="441" type="card">
                <l n="616">Deep in the city's heart there was a grove</l>
                <l n="617">of beauteous shade, where once the Tyrians,</l>
                <l n="618">cast here by stormful waves, delved out of earth</l>
@@ -819,7 +811,7 @@
                <l n="646">each other's sorrow. Therefore, have no fear!</l>
                <l n="647">This story of our loss forbodes us well.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="464">
+            <div resp="p" n="464" type="card">
                <l n="648">So saying, he received into his heart</l>
                <l n="649">that visionary scene, profoundly sighed,</l>
                <l n="650">and let his plenteous tears unheeded flow.</l>
@@ -864,7 +856,7 @@
                <l n="688">beneath one bare, protruded breast she bound—</l>
                <l n="689">a warrior-virgin braving mail-clad men.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="494">
+            <div resp="p" n="494" type="card">
                <l n="690">While on such spectacle Aeneas' eyes</l>
                <l n="691">looked wondering, while mute and motionless</l>
                <l n="692">he stood at gaze, Queen Dido to the shrine</l>
@@ -904,7 +896,7 @@
                <l n="726">from every ship had come to sue for grace,</l>
                <l n="727">and all the temple with their voices rang.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="520">
+            <div resp="p" n="520" type="card">
                <l n="728">The doors swung wide; and after access given</l>
                <l n="729">and leave to speak, revered Ilioneus</l>
                <l n="730">with soul serene these lowly words essayed:</l>
@@ -938,7 +930,7 @@
                <l n="758">If man thou scornest and all mortal power,</l>
                <l n="759">forget not that the gods watch good and ill!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="544">
+            <div resp="p" n="544" type="card">
                <l n="760">A king we had; Aeneas,—never man</l>
                <l n="761">in all the world more loyal, just and true,</l>
                <l n="762">nor mightier in arms! If Heaven decree</l>
@@ -967,7 +959,7 @@
                <l n="785">ended his pleading; the Dardanidae</l>
                <l n="786">murmured assent.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="561">
+            <div resp="p" n="561" type="card">
                <l n="787">Then Dido, briefly and with downcast eyes,</l>
                <l n="788">her answer made: “O Teucrians, have no fear!</l>
                <l n="789">Bid care begone! It was necessity,</l>
@@ -995,7 +987,7 @@
                <l n="811">our <placeName key="tgn,1000172">Libya</placeName>'s utmost bound, where haply he</l>
                <l n="812">in wilderness or hamlet wanders lost.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="579">
+            <div resp="p" n="579" type="card">
                <l n="813">By these fair words to joy profoundly stirred,</l>
                <l n="814">Father Aeneas and Achates brave</l>
                <l n="815">to cast aside the cloud that wrapped them round</l>
@@ -1047,7 +1039,7 @@
                <l n="861">his left Serestus; then the comrades all,</l>
                <l n="862">brave Gyas, brave Cloanthus, and their peers.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="613">
+            <div resp="p" n="613" type="card">
                <l n="863">Sidonian Dido felt her heart stand still</l>
                <l n="864">when first she looked on him; and thrilled again</l>
                <l n="865">to hear what vast adventure had befallen</l>
@@ -1092,7 +1084,7 @@
                <l n="904">prolonged, since first her ancient line began,</l>
                <l n="905">from royal sire to son. </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="643">
+            <div resp="p" n="643" type="card">
                <l n="906">Aeneas now</l>
                <l n="907">(for love in his paternal heart spoke loud</l>
                <l n="908">and gave no rest) bade swift Achates run</l>
@@ -1113,7 +1105,7 @@
                <l n="923">of jewels set in gold. These gifts to find,</l>
                <l n="924">Achates to the tall ships sped away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="657">
+            <div resp="p" n="657" type="card">
                <l n="925">But Cytherea in her heart revolved</l>
                <l n="926">new wiles, new schemes: how Cupid should transform</l>
                <l n="927">his countenance, and, coming in the guise</l>
@@ -1169,7 +1161,7 @@
                <l n="977">of softly-petalled marjoram embower</l>
                <l n="978">in pleasurable shade. </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="695">
+            <div resp="p" n="695" type="card">
                <l n="979">Cupid straightway</l>
                <l n="980">obeyed his mother's word and bore the gifts,</l>
                <l n="981">each worthy of a king, as offerings</l>
@@ -1211,7 +1203,7 @@
                <l n="1017">and with new life, new love, to re-possess</l>
                <l n="1018">her Iong-since slumbering bosom's Iost desire.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="723">
+            <div resp="p" n="723" type="card">
                <l n="1019">When the main feast is over, they replace</l>
                <l n="1020">the banquet with huge bowls, and crown the wine</l>
                <l n="1021">with ivy-leaf and rose. Loud rings the roof</l>
@@ -1262,8 +1254,8 @@
                <l n="1066">thee wandering far o'er alien lands and seas.”</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="2">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="2" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">A general silence fell; and all gave ear,</l>
                <l n="2">while, from his lofty station at the feast,</l>
                <l n="3">Father Aeneas with these words began :—</l>
@@ -1319,7 +1311,7 @@
                <l n="52">with probing spear. Yet did the multitude</l>
                <l n="53">veer round from voice to voice and doubt of all.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="40">
+            <div resp="p" n="40" type="card">
                <l n="54">Then from the citadel, conspicuous,</l>
                <l n="55">Laocoon, with all his following choir,</l>
                <l n="56">hurried indignant down; and from afar</l>
@@ -1344,7 +1336,7 @@
                <l n="75">and <placeName key="perseus,Troy">Troy</placeName> were standing on the earth this day!</l>
                <l n="76">O Priam's towers, ye were unfallen still!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="57">
+            <div resp="p" n="57" type="card">
                <l n="77">But, lo! with hands fast bound behind, a youth</l>
                <l n="78">by clamorous Dardan shepherds haled along,</l>
                <l n="79">was brought before our king,—to this sole end</l>
@@ -1372,7 +1364,7 @@
                <l n="100">such hope of mercy for a foe in chains.</l>
                <l n="101">Then fearing us no more, this speech he dared:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="77">
+            <div resp="p" n="77" type="card">
                <l n="102">“O King! I will confess, whate'er befall,</l>
                <l n="103">the whole unvarnished truth. I will not hide</l>
                <l n="104">my Grecian birth. Yea, thus will I begin.</l>
@@ -1412,7 +1404,7 @@
                <l n="137">Ulysses smiles and Atreus' royal sons</l>
                <l n="138">with liberal price your deed of blood repay.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="105">
+            <div resp="p" n="105" type="card">
                <l n="139">We ply him then with passionate appeal</l>
                <l n="140">and question all his cause: of guilt so dire</l>
                <l n="141">or such Greek guile we harbored not the thought.</l>
@@ -1477,7 +1469,7 @@
                <l n="199">on these long sufferings my heart hath borne.</l>
                <l n="200">O, pity! I deserve not what I bear.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="145">
+            <div resp="p" n="145" type="card">
                <l n="201">Pity and pardon to his tears we gave,</l>
                <l n="202">and spared his life. King Priam bade unbind</l>
                <l n="203">the fettered hands and loose those heavy chains</l>
@@ -1549,7 +1541,7 @@
                <l n="269">would hurl aggression upon Pelops' land,</l>
                <l n="270">and all that curse on our own nation fall.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="195">
+            <div resp="p" n="195" type="card">
                <l n="271">Thus Sinon's guile and practiced perjury</l>
                <l n="272">our doubt dispelled. His stratagems and tears</l>
                <l n="273">wrought victory where neither Tydeus' son,</l>
@@ -1624,7 +1616,7 @@
                <l n="341">Our hapless nation on its dying day</l>
                <l n="342">flung free o'er streets and shrines the votive flowers.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="250">
+            <div resp="p" n="250" type="card">
                <l n="343">The skies rolled on; and o'er the ocean fell</l>
                <l n="344">the veil of night, till utmost earth and heaven</l>
                <l n="345">and all their Myrmidonian stratagems</l>
@@ -1652,7 +1644,7 @@
                <l n="367">let in their fellows, and arrayed for war</l>
                <l n="368">th' auxiliar legions of the dark design.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="268">
+            <div resp="p" n="268" type="card">
                <l n="369">That hour it was when heaven's first gift of sleep</l>
                <l n="370">on weary hearts of men most sweetly steals.</l>
                <l n="371">O, then my slumbering senses seemed to see</l>
@@ -1693,7 +1685,7 @@
                <l n="405">the solemn fillet, the ancestral shrines,</l>
                <l n="406">and Vesta's ever-bright, inviolate fire.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="298">
+            <div resp="p" n="298" type="card">
                <l n="407">Now shrieks and loud confusion swept the town;</l>
                <l n="408">and though my father's dwelling stood apart</l>
                <l n="409">embowered deep in trees, th' increasing din</l>
@@ -1719,7 +1711,7 @@
                <l n="429">seized on my soul. I only sought what way</l>
                <l n="430">with sword in hand some noble death to die.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="318">
+            <div resp="p" n="318" type="card">
                <l n="431">When Panthus met me, who had scarce escaped</l>
                <l n="432">the Grecian spears,—Panthus of Othrys' line,</l>
                <l n="433">Apollo's priest within our citadel;</l>
@@ -1758,7 +1750,7 @@
                <l n="466">as Priam's kinsman with our Phrygian arms:</l>
                <l n="467">ill-starred, to heed not what the virgin raved!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="347">
+            <div resp="p" n="347" type="card">
                <l n="468">When these I saw close-gathered for the fight,</l>
                <l n="469">I thus addressed them: “Warriors, vainly brave,</l>
                <l n="470">if ye indeed desire to follow one</l>
@@ -1790,7 +1782,7 @@
                <l n="496">were everywhere; pale terrors ranged abroad,</l>
                <l n="497">and multitudinous death met every eye.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="370">
+            <div resp="p" n="370" type="card">
                <l n="498">Androgeos, followed by a thronging band</l>
                <l n="499">of Greeks, first met us on our desperate way;</l>
                <l n="500">but heedless, and confounding friend with foe,</l>
@@ -1830,7 +1822,7 @@
                <l n="534">Some cowards foul went clambering back again</l>
                <l n="535">to that vast horse and hid them in its maw.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="402">
+            <div resp="p" n="402" type="card">
                <l n="536">But woe is me! If gods their help withhold,</l>
                <l n="537">'t is impious to be brave. That very hour</l>
                <l n="538">the fair Cassandra passed us, bound in chains,</l>
@@ -1899,7 +1891,7 @@
                <l n="601">go crashing down. Men armed with naked swords</l>
                <l n="602">defend the inner doors in close array.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="453">
+            <div resp="p" n="453" type="card">
                <l n="603">Thus were our hearts inflamed to stand and strike</l>
                <l n="604">for the king's house, and to his body-guard</l>
                <l n="605">bring succor, and renew their vanquished powers.</l>
@@ -1924,7 +1916,7 @@
                <l n="624">But fresh ranks soon arrive; thick showers of stone</l>
                <l n="625">rain down, with every missile rage can find.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="469">
+            <div resp="p" n="469" type="card">
                <l n="626">Now at the threshold of the outer court </l>
                <l n="627">Pyrrhus triumphant stood, with glittering arms</l>
                <l n="628">and helm of burnished brass. He glittered like</l>
@@ -1978,7 +1970,7 @@
                <l n="676">lay strewn and trampled on. The Danaan foe</l>
                <l n="677">stood victor, where the raging flame had failed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="506">
+            <div resp="p" n="506" type="card">
                <l n="678">But would ye haply know what stroke of doom</l>
                <l n="679">on Priam fell? Now when his anguish saw</l>
                <l n="680">his kingdom lost and fallen, his abode</l>
@@ -2008,7 +2000,7 @@
                <l n="704">she drew him to her side, and near the shrine</l>
                <l n="705">made for her aged spouse a place to cling.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="526">
+            <div resp="p" n="526" type="card">
                <l n="706">But, lo! just 'scaped of Pyrrhus' murderous hand,</l>
                <l n="707">Polites, one of Priam's sons, fled fast</l>
                <l n="708">along the corridors, through thronging foes</l>
@@ -2056,7 +2048,7 @@
                <l n="749">his severed trunk lies tombless on the shore,</l>
                <l n="750">the head from shoulder torn, the corpse unknown.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="559">
+            <div resp="p" n="559" type="card">
                <l n="751">Then first wild horror on my spirit fell</l>
                <l n="752">and dazed me utterly. A vision rose</l>
                <l n="753">of my own cherished father, as I saw</l>
@@ -2069,7 +2061,7 @@
                <l n="760">from battlement or tower; some in despair</l>
                <l n="761">yielded their suffering bodies to the flame.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="567">
+            <div resp="p" n="567" type="card">
                <l n="762">I stood there sole surviving; when, behold,</l>
                <l n="763">to Vesta's altar clinging in dumb fear,</l>
                <l n="764">hiding and crouching in the hallowed shade,</l>
@@ -2143,7 +2135,7 @@
                <l n="832">upon thy father's threshold.” Having said,</l>
                <l n="833">she fled upon the viewless night away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="624">
+            <div resp="p" n="624" type="card">
                <l n="834">Then loomed o'er <placeName key="perseus,Troy">Troy</placeName> the apparition vast</l>
                <l n="835">of her dread foes divine; I seemed to see</l>
                <l n="836">all <placeName key="perseus,Troy">Ilium</placeName> sink in fire, and sacred <placeName key="perseus,Troy">Troy</placeName>,</l>
@@ -2159,7 +2151,7 @@
                <l n="846">threaded the maze of deadly foes and fires,</l>
                <l n="847">through spears that glanced aside and flames that fell.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="634">
+            <div resp="p" n="634" type="card">
                <l n="848">Soon came I to my father's ancient seat,</l>
                <l n="849">our home and heritage. But lo! my sire</l>
                <l n="850">(whom first of all I sought, and first would bear</l>
@@ -2183,7 +2175,7 @@
                <l n="868">when Jove, of gods the Sire and men the King,</l>
                <l n="869">his lightnings o'er me breathed and blasting fire.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="650">
+            <div resp="p" n="650" type="card">
                <l n="870">Such fixed resolve he uttered o'er and o'er,</l>
                <l n="871">and would not yield, though with my tears did join</l>
                <l n="872">my spouse Creusa, fair Ascanius,</l>
@@ -2218,7 +2210,7 @@
                <l n="901">where oft revives the flagging stroke of war:</l>
                <l n="902">Not all of us die unavenged this day!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="671">
+            <div resp="p" n="671" type="card">
                <l n="903">I clasped my sword-belt round me once again,</l>
                <l n="904">fitted my left arm to my shield, and turned</l>
                <l n="905">to fly the house; but at the threshold clung</l>
@@ -2231,7 +2223,7 @@
                <l n="912">thy babe Iulus, or thy reverend sire?</l>
                <l n="913">Or me, thy wife that was—what help have I?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="679">
+            <div resp="p" n="679" type="card">
                <l n="914">So rang the roof-top with her piteous cries:</l>
                <l n="915">but lo! a portent wonderful to see</l>
                <l n="916">on sudden rose; for while his parents' grief</l>
@@ -2251,7 +2243,7 @@
                <l n="930">we aught can claim, O Father, lend us aid,</l>
                <l n="931">and ratify the omen thou hast given!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="692">
+            <div resp="p" n="692" type="card">
                <l n="932">Scarce ceased his aged voice, when suddenly </l>
                <l n="933">from leftward, with a deafening thunder-peal, </l>
                <l n="934">cleaving the blackness of the vaulted sky,</l>
@@ -2335,7 +2327,7 @@
                <l n="1012">all <placeName key="perseus,Troy">Troy</placeName> to re-explore, and once again</l>
                <l n="1013">offer my life to perils without end.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="752">
+            <div resp="p" n="752" type="card">
                <l n="1014">The walls and gloomy gates whence forth I came</l>
                <l n="1015">I first revisit, and retrace my way,</l>
                <l n="1016">searching the night once more. On all sides round</l>
@@ -2391,7 +2383,7 @@
                <l n="1065">thrice from the clasp of hand that vision fled,</l>
                <l n="1066">like wafted winds and like a fleeting dream.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="795">
+            <div resp="p" n="795" type="card">
                <l n="1067">The night had passed, and to my friends once more</l>
                <l n="1068">I made my way, much wondering to find</l>
                <l n="1069">a mighty multitude assembled there</l>
@@ -2409,8 +2401,8 @@
                <l n="1081">for refuge to the distant hills I fled.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="3">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="3" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">When <placeName key="tgn,1000004">Asia</placeName>'s power and Priam's race and throne,</l>
                <l n="2">though guiltless, were cast down by Heaven's decree,</l>
                <l n="3">when <placeName key="perseus,Troy">Ilium</placeName> proud had fallen, and Neptune's <placeName key="perseus,Troy">Troy</placeName>
@@ -2432,7 +2424,7 @@
                <l n="18">with son and followers and household shrines,</l>
                <l n="19">and <placeName key="perseus,Troy">Troy</placeName>'s great guardian-gods, I took my way.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="13">
+            <div resp="p" n="13" type="card">
                <l n="20">There is a far-off land where warriors breed,</l>
                <l n="21">where Thracians till the boundless plains, and where</l>
                <l n="22">the cruel-eyed Lycurgus once was king.</l>
@@ -2443,7 +2435,7 @@
                <l n="27">our entrance there. In memory of my name</l>
                <l n="28">I called its people the Aeneadae.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="19">
+            <div resp="p" n="19" type="card">
                <l n="29">Unto Dione's daughter, and all gods</l>
                <l n="30">who blessed our young emprise, due gifts were paid;</l>
                <l n="31">and unto the supreme celestial King</l>
@@ -2486,7 +2478,7 @@
                <l n="68">Then stood I, burdened with dark doubt and fear</l>
                <l n="69">I quailed, my hair rose and my utterance choked.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="49">
+            <div resp="p" n="49" type="card">
                <l n="70">For once this Polydorus, with much gold,</l>
                <l n="71">ill-fated Priam sent by stealth away</l>
                <l n="72">for nurture with the Thracian king, what time</l>
@@ -2519,7 +2511,7 @@
                <l n="99">we laid his ghost to rest, and loudly sang,</l>
                <l n="100">with prayer for peace, the long, the last farewell.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="69">
+            <div resp="p" n="69" type="card">
                <l n="101">After these things, when first the friendly sea</l>
                <l n="102">looked safe and fair, and o'er its tranquil plain</l>
                <l n="103">light-whispering breezes bade us launch away,</l>
@@ -2544,7 +2536,7 @@
                <l n="122">claimed old acquaintance, grasped us by the hand,</l>
                <l n="123">and bade us both his roof and welcome share.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="84">
+            <div resp="p" n="84" type="card">
                <l n="124">Then, kneeling at the shrine of time-worn stone:</l>
                <l n="125">“Thou who at Thymbra on the Trojan shore</l>
                <l n="126">hast often blessed my prayer, O, give to me</l>
@@ -2603,7 +2595,7 @@
                <l n="178">unto the clouds and storms; but fleece of snow</l>
                <l n="179">to the mild zephyrs was our offering.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="121">
+            <div resp="p" n="121" type="card">
                <l n="180">The tale was told us that Idomeneus,</l>
                <l n="181">from his hereditary kindgom driven,</l>
                <l n="182">had left his <placeName key="tgn,7012056">Crete</placeName> abandoned, that no foe</l>
@@ -2628,7 +2620,7 @@
                <l n="200">pleased with such name, I gave command to build</l>
                <l n="201">altar and hearth, and raise the lofty tower.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="135">
+            <div resp="p" n="135" type="card">
                <l n="202">But scarce the ships were beached along the strand</l>
                <l n="203">(While o'er the isle my busy mariners</l>
                <l n="204">ploughed in new fields and took them wives once more, —</l>
@@ -2646,7 +2638,7 @@
                <l n="216">he might vouchsafe the end, or bid us find</l>
                <l n="217">help for our task, or guidance o'er the sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="147">
+            <div resp="p" n="147" type="card">
                <l n="218">'T was night, and sleep possessed all breathing things;</l>
                <l n="219">when, lo! the sacred effigies divine,</l>
                <l n="220">the Phrygian gods which through the flames I bore</l>
@@ -2710,7 +2702,7 @@
                <l n="278">a feeble few, again with spreading sails</l>
                <l n="279">we coursed in hollow ship the spacious sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="192">
+            <div resp="p" n="192" type="card">
                <l n="280">When from the deep the shores had faded far,</l>
                <l n="281">and only sky and sea were round our way,</l>
                <l n="282">full in the zenith hung a purple cloud,</l>
@@ -2795,7 +2787,7 @@
                <l n="361">by you unjustly spilt, your famished jaws</l>
                <l n="362">bite at your tables, aye,—and half devour.’”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="258">
+            <div resp="p" n="258" type="card">
                <l n="363">She spoke: her pinions bore her to the grove,</l>
                <l n="364">and she was seen no more. But all my band</l>
                <l n="365">shuddered with shock of fear in each cold vein;</l>
@@ -2825,7 +2817,7 @@
                <l n="388">the little port and town. Our weary fleet</l>
                <l n="389">dropped anchor, and lay beached along the strand.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="278">
+            <div resp="p" n="278" type="card">
                <l n="390">So, safe at land, our hopeless peril past,</l>
                <l n="391">we offered thanks to Jove, and kindled high</l>
                <l n="392">his altars with our feast and sacrifice;</l>
@@ -2849,7 +2841,7 @@
                <l n="410">of proud <placeName key="tgn,7002705">Epirus</placeName>, in Chaonian land,</l>
                <l n="411">and made <placeName key="perseus,Buthrotum">Buthrotum</placeName>'s port and towering town.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="294">
+            <div resp="p" n="294" type="card">
                <l n="412">Here wondrous tidings met us, that the son</l>
                <l n="413">of Priam, Helenus, held kingly sway</l>
                <l n="414">o'er many <placeName key="tgn,5001993">Argive</placeName> cities, having wed</l>
@@ -2889,7 +2881,7 @@
                <l n="448">could give thee honor due? Andromache,</l>
                <l n="449">once Hector's wife, is Pyrrhus still thy lord?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="320">
+            <div resp="p" n="320" type="card">
                <l n="450">With drooping brows and lowly voice she cried :</l>
                <l n="451">“O, happy only was that virgin blest,</l>
                <l n="452">daughter of Priam, summoned forth to die</l>
@@ -2960,7 +2952,7 @@
                <l n="517">awed by th' o'er-brooding godhead, whose true priest,</l>
                <l n="518">with lips inspired, made this prophetic song:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="374">
+            <div resp="p" n="374" type="card">
                <l n="519">“O goddess-born, indubitably shines</l>
                <l n="520">the blessing of great gods upon thy path</l>
                <l n="521">across the sea; the heavenly King supreme</l>
@@ -3089,7 +3081,7 @@
                <l n="642">arise, begone! and by thy glorious deeds</l>
                <l n="643">set <placeName key="perseus,Troy">Troy</placeName> among the stars! “</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="463">
+            <div resp="p" n="463" type="card">
                <l n="644">So spake the prophet with benignant voice.</l>
                <l n="645">Then gifts he bade be brought of heavy gold</l>
                <l n="646">and graven ivory, which to our ships</l>
@@ -3105,7 +3097,7 @@
                <l n="656">to every sea-worn ship, while he supplied</l>
                <l n="657">seafarers, kit to all my loyal crews.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="472">
+            <div resp="p" n="472" type="card">
                <l n="658">Anchises bade us speedily set sail,</l>
                <l n="659">nor lose a wind so fair; and answering him,</l>
                <l n="660">Apollo's priest made reverent adieu:</l>
@@ -3156,7 +3148,7 @@
                <l n="703">one <placeName key="perseus,Troy">Troy</placeName> in heart and soul. But this remains</l>
                <l n="704">for our sons' sons the happy task and care.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="506">
+            <div resp="p" n="506" type="card">
                <l n="705">Forth o'er the seas we sped and kept our course</l>
                <l n="706">nigh the Ceraunian headland, where begins</l>
                <l n="707">the short sea-passage unto <placeName key="tgn,1000080">Italy</placeName>.</l>
@@ -3179,7 +3171,7 @@
                <l n="724">stirred to the signal for embarking; soon</l>
                <l n="725">we rode the seas once more with swelling sail.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="521">
+            <div resp="p" n="521" type="card">
                <l n="726">Scarce had Aurora's purple from the sky</l>
                <l n="727">warned off the stars, when Iying very low</l>
                <l n="728">along th' horizon, the dimmed hills we saw</l>
@@ -3217,7 +3209,7 @@
                <l n="760">we paid the honors his chief counsel urged,</l>
                <l n="761">with blameless rite, to Juno, Argive Queen.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="548">
+            <div resp="p" n="548" type="card">
                <l n="762">No tarrying now, but after sacrifice</l>
                <l n="763">we twirled the sailyards and shook out all sail,</l>
                <l n="764">leaving the cities of the sons of <placeName key="tgn,1000074">Greece</placeName>
@@ -3246,7 +3238,7 @@
                <l n="786">and weary, worn, not witting of our way,</l>
                <l n="787">we drifted shoreward to the Cyclops' land.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="570">
+            <div resp="p" n="570" type="card">
                <l n="788">A spreading bay is there, impregnable</l>
                <l n="789">to all invading storms; and <placeName key="tgn,7003867">Aetna</placeName>'s throat</l>
                <l n="790">with roar of frightful ruin thunders nigh.</l>
@@ -3271,7 +3263,7 @@
                <l n="809">the constellated fires, but all was gloom,</l>
                <l n="810">and frowning night confined the moon in cloud.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="588">
+            <div resp="p" n="588" type="card">
                <l n="811">When from the eastern waves the light of morn</l>
                <l n="812">began to peer, and from the upper sky</l>
                <l n="813">Aurora flamed away the dark and dew,</l>
@@ -3306,7 +3298,7 @@
                <l n="842">and by prompt token cheered the exile's heart,</l>
                <l n="843">who, banishing his fears, poured forth this tale :—</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="613">
+            <div resp="p" n="613" type="card">
                <l n="844">“My home was <placeName key="tgn,1007519">Ithaca</placeName>, and I partook</l>
                <l n="845">the fortunes of Ulysses evil-starred.</l>
                <l n="846">My name is Achemenides, my sire</l>
@@ -3363,7 +3355,7 @@
                <l n="896">to 'scape that monster brood. I ask no more.</l>
                <l n="897">O, set me free by any death ye will!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="655">
+            <div resp="p" n="655" type="card">
                <l n="898">He scarce had said, when moving o'er the crest</l>
                <l n="899">of a high hill a giant shape we saw:</l>
                <l n="900">that shepherd Polyphemus, with his flocks</l>
@@ -3391,7 +3383,7 @@
                <l n="922">of <placeName key="tgn,1000080">Italy</placeName> from glens and gorges moaned,</l>
                <l n="923">and <placeName key="tgn,7003867">Aetna</placeName> roared from every vaulted cave.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="675">
+            <div resp="p" n="675" type="card">
                <l n="924">Then rallied from the grove-clad, Iofty isle</l>
                <l n="925">the Cyclops' clan, and lined the beach and bay.</l>
                <l n="926">We saw each lonely eyeball glare in vain,</l>
@@ -3417,7 +3409,7 @@
                <l n="946">made him familiar there, for he had sailed</l>
                <l n="947">with evil-starred Ulysses o'er that sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="692">
+            <div resp="p" n="692" type="card">
                <l n="948">Off the Sicilian shore an island lies,</l>
                <l n="949">wave-washed Plemmyrium, called in olden days</l>
                <l n="950">Ortygia; here Alpheus, river-god,</l>
@@ -3455,15 +3447,15 @@
                <l n="980">From thence departing, the divine behest</l>
                <l n="981">impelled me to thy shores, O listening queen!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="716">
+            <div resp="p" n="716" type="card">
                <l n="982">Such was, while all gave ear, the tale sublime</l>
                <l n="983">father Aeneas, none but he, set forth</l>
                <l n="984">of wanderings and of dark decrees divine:</l>
                <l n="985">silent at last, he ceased, and took repose.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="4">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="4" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">Now felt the Queen the sharp, slow-gathering pangs</l>
                <l n="2">of love; and out of every pulsing vein</l>
                <l n="3">nourished the wound and fed its viewless fire.</l>
@@ -3509,7 +3501,7 @@
                <l n="42">o, let it rest beside him in the grave!”</l>
                <l n="43">She spoke: the bursting tears her breast o'erflowed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="31">
+            <div resp="p" n="31" type="card">
                <l n="44">“O dearer to thy sister than her life,”</l>
                <l n="45">Anna replied, “wouldst thou in sorrow's weed</l>
                <l n="46">waste thy long youth alone, nor ever know</l>
@@ -3543,7 +3535,7 @@
                <l n="73">are loud beneath Orion's stormful star,</l>
                <l n="74">and on his battered ships the season frowns.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="54">
+            <div resp="p" n="54" type="card">
                <l n="75">So saying, she stirred a passion-burning breast</l>
                <l n="76">to Iove more madly still; her words infused</l>
                <l n="77">a doubting mind with hope, and bade the blush</l>
@@ -3601,7 +3593,7 @@
                <l n="129">but idly all her half-built bastions frown,</l>
                <l n="130">and enginery of sieges, high as heaven.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="90">
+            <div resp="p" n="90" type="card">
                <l n="131">But soon the chosen spouse of Jove perceived</l>
                <l n="132">the Queen's infection; and because the voice</l>
                <l n="133">of honor to such frenzy spoke not, she,</l>
@@ -3624,7 +3616,7 @@
                <l n="150">a Phrygian husband, while thy hands receive</l>
                <l n="151">her Tyrian subjects for the bridal dower!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="105">
+            <div resp="p" n="105" type="card">
                <l n="152">In answer (reading the dissembler's mind</l>
                <l n="153">which unto Libyan shores were fain to shift</l>
                <l n="154">italia's future throne) thus Venus spoke:</l>
@@ -3702,7 +3694,7 @@
                <l n="225">a tusky boar, or, leaping from the hills,</l>
                <l n="226">a growling mountain-lion, golden-maned.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="160">
+            <div resp="p" n="160" type="card">
                <l n="227">Meanwhile low thunders in the distant sky</l>
                <l n="228">mutter confusedly; soon bursts in full</l>
                <l n="229">the storm-cloud and the hail. The Tyrian troop</l>
@@ -3724,7 +3716,7 @@
                <l n="244">her loves to hide; but called the lawlessness</l>
                <l n="245">a marriage, and with phrases veiled her shame.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="173">
+            <div resp="p" n="173" type="card">
                <l n="246">Swift through the Libyan cities Rumor sped.</l>
                <l n="247">Rumor! What evil can surpass her speed?</l>
                <l n="248">In movement she grows mighty, and achieves</l>
@@ -3762,7 +3754,7 @@
                <l n="280">to King Iarbas, where her hateful song</l>
                <l n="281">to newly-swollen wrath his heart inflamed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="198">
+            <div resp="p" n="198" type="card">
                <l n="282">Him the god Ammon got by forced embrace</l>
                <l n="283">upon a Libyan nymph; his kingdoms wide</l>
                <l n="284">possessed a hundred ample shrines to Jove,</l>
@@ -3797,7 +3789,7 @@
                <l n="312">though they be thine, a fruitless offering bring,</l>
                <l n="313">and feed on empty tales our trust in thee.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="219">
+            <div resp="p" n="219" type="card">
                <l n="314">As thus he prayed and to the altars clung,</l>
                <l n="315">th' Omnipotent gave ear, and turned his gaze</l>
                <l n="316">upon the royal dwelling, where for love</l>
@@ -3826,7 +3818,7 @@
                <l n="339">Let him to sea! Be this our final word:</l>
                <l n="340">this message let our herald faithful bear.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="238">
+            <div resp="p" n="238" type="card">
                <l n="341">He spoke. The god a prompt obedience gave</l>
                <l n="342">to his great sire's command. He fastened first</l>
                <l n="343">those sandals of bright gold, which carry him</l>
@@ -3885,7 +3877,7 @@
                <l n="396">vanished, and e'er his accents died away,</l>
                <l n="397">dissolved in air before the mortal's eyes.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="279">
+            <div resp="p" n="279" type="card">
                <l n="398">Aeneas at the sight stood terror-dumb</l>
                <l n="399">with choking voice and horror-rising hair.</l>
                <l n="400">He fain would fly at once and get him gone</l>
@@ -3908,7 +3900,7 @@
                <l n="417">such matters may require. With joy they heard,</l>
                <l n="418">and wrought, assiduous, at their prince's plan.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="296">
+            <div resp="p" n="296" type="card">
                <l n="419">But what can cheat true love? The Queen foreknew</l>
                <l n="420">his stratagem, and all the coming change</l>
                <l n="421">perceived ere it began. Her jealous fear</l>
@@ -3958,7 +3950,7 @@
                <l n="464">whose face should be the memory of thine own —</l>
                <l n="465">I were not so forsaken, Iost, undone!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="331">
+            <div resp="p" n="331" type="card">
                <l n="466">She said. But he, obeying Jove's decree,</l>
                <l n="467">gazed steadfastly away; and in his heart</l>
                <l n="468">with strong repression crushed his cruel pain;</l>
@@ -4002,7 +3994,7 @@
                <l n="506">with lamentation fond thy heart and mine.</l>
                <l n="507">'T is not my own free act seeks <placeName key="tgn,1000080">Italy</placeName>.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="362">
+            <div resp="p" n="362" type="card">
                <l n="508">She with averted eyes and glance that rolled</l>
                <l n="509">speechless this way and that, had listened long</l>
                <l n="510">to his reply, till thus her rage broke forth:</l>
@@ -4049,7 +4041,7 @@
                <l n="550">her maidens to a marble chamber bore</l>
                <l n="551">and on her couch the helpless limbs reposed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="393">
+            <div resp="p" n="393" type="card">
                <l n="552">Aeneas, faithful to a task divine,</l>
                <l n="553">though yearning sore to remedy and soothe</l>
                <l n="554">such misery, and with the timely word</l>
@@ -4113,7 +4105,7 @@
                <l n="612">this last grace. (To thy sister's grief be kind!)</l>
                <l n="613">I will requite with increase, till I die.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="437">
+            <div resp="p" n="437" type="card">
                <l n="614">Such plaints, such prayers, again and yet again,</l>
                <l n="615">betwixt the twain the sorrowing sister bore.</l>
                <l n="616">But no words move, no lamentations bring</l>
@@ -4133,7 +4125,7 @@
                <l n="630">has many a pang, while his serene intent</l>
                <l n="631">abides unmoved, and tears gush forth in vain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="450">
+            <div resp="p" n="450" type="card">
                <l n="632">Then wretched Dido, by her doom appalled,</l>
                <l n="633">asks only death. It wearies her to see</l>
                <l n="634">the sun in heaven. Yet that she might hold fast</l>
@@ -4203,7 +4195,7 @@
                <l n="698">nor feared she worse than when Sichaeus died,</l>
                <l n="699">but tried her forth the errand to fulfil.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="504">
+            <div resp="p" n="504" type="card">
                <l n="700">Soon as the funeral pyre was builded high</l>
                <l n="701">in a sequestered garden, Iooming huge </l>
                <l n="702">with boughs of pine and faggots of cleft oak,</l>
@@ -4230,7 +4222,7 @@
                <l n="723">who heeds when lovers plight unequal vow,</l>
                <l n="724">to that god first her supplications rise.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="522">
+            <div resp="p" n="522" type="card">
                <l n="725">Soon fell the night, and peaceful slumbers breathed</l>
                <l n="726">on all earth's weary creatures; the loud seas</l>
                <l n="727">and babbling forests entered on repose;</l>
@@ -4301,7 +4293,7 @@
                <l n="792">is woman ever.” Such command he spoke,</l>
                <l n="793">then melted in the midnight dark away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="571">
+            <div resp="p" n="571" type="card">
                <l n="794">Aeneas, by that fleeting vision struck</l>
                <l n="795">with an exceeding awe, straightway leaped forth</l>
                <l n="796">from slumber's power, and to his followers cried :</l>
@@ -4322,7 +4314,7 @@
                <l n="811">clean from the shore they scudded, with strong strokes</l>
                <l n="812">sweeping the purple waves and crested foam.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="584">
+            <div resp="p" n="584" type="card">
                <l n="813">Aurora's first young beams to earth were pouring</l>
                <l n="814">as from Tithonus' saffron bed she sprang;</l>
                <l n="815">while from her battlements the wakeful Queen</l>
@@ -4392,7 +4384,7 @@
                <l n="879">in shock of arms with arms. May living foes</l>
                <l n="880">pass down from sire to son insatiate war!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="630">
+            <div resp="p" n="630" type="card">
                <l n="881">She said. From point to point her purpose flew,</l>
                <l n="882">seeking without delay to quench the flame</l>
                <l n="883">of her loathed life. Brief bidding she addressed</l>
@@ -4508,8 +4500,8 @@
                <l n="992">fled forth, departing on the viewless air.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="5">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="5" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">Meanwhile Aeneas, now well launched away,</l>
                <l n="2">steered forth with all the fleet to open sea,</l>
                <l n="3">on his unswerving course, and ploughed the waves,</l>
@@ -4554,7 +4546,7 @@
                <l n="42">the fleet is wafted, and with thankful soul</l>
                <l n="43">they moor on <placeName key="tgn,7003122">Sicily</placeName>'s familiar strand.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="35">
+            <div resp="p" n="35" type="card">
                <l n="44">From a far hill-top having seen with joy</l>
                <l n="45">the entering ships, and knowing them for friends,</l>
                <l n="46">good King Acestes ran to bid them hail.</l>
@@ -4656,7 +4648,7 @@
                <l n="142">scattered at ease, hold o'er the embers bright</l>
                <l n="143">the spitted flesh and roast it in the flames.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="104">
+            <div resp="p" n="104" type="card">
                <l n="144">Arrived the wished-for day; through cloudless sky</l>
                <l n="145">the coursers of the Sun's bright-beaming car</l>
                <l n="146">bore upward the ninth morn. The neighboring folk</l>
@@ -4671,7 +4663,7 @@
                <l n="155">of silver and of gold. The trumpet's call</l>
                <l n="156">proclaimed from lofty mound the opening games.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="114">
+            <div resp="p" n="114" type="card">
                <l n="157">First, side by side, with sturdy, rival oars,</l>
                <l n="158">four noble galleys, pride of all the fleet,</l>
                <l n="159">come forward to contend. The straining crew</l>
@@ -4687,7 +4679,7 @@
                <l n="169">on sky-blue Scylla proud Cloanthus rides —</l>
                <l n="170">whence thy great stem, Cluentius of <placeName key="perseus,Rome">Rome</placeName>!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="124">
+            <div resp="p" n="124" type="card">
                <l n="171">Fronting the surf-beat shore, far out at sea</l>
                <l n="172">rises a rock, which under swollen waves</l>
                <l n="173">lies buffeted unseen, when wintry storms</l>
@@ -4767,7 +4759,7 @@
                <l n="247">and now to see his drink of bitter brine</l>
                <l n="248">spewed on the ground, the sailors laughed again.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="183">
+            <div resp="p" n="183" type="card">
                <l n="249">But Mnestheus and Sergestus, coming last,</l>
                <l n="250">have joyful hope enkindled in each heart</l>
                <l n="251">to pass the laggard Gyas. In the lead</l>
@@ -4851,7 +4843,7 @@
                <l n="329">than south wind, or an arrow from the string,</l>
                <l n="330">and soon made land in haven safe and sure.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="244">
+            <div resp="p" n="244" type="card">
                <l n="331">Aeneas then, assembling all to hear,</l>
                <l n="332">by a far-sounding herald's voice proclaimed</l>
                <l n="333">Cloanthus victor, and arrayed his brows</l>
@@ -4905,7 +4897,7 @@
                <l n="381">the Cretan Pholoe, well taught to weave,</l>
                <l n="382">and twin boy-babes upon her breast she bore.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="286">
+            <div resp="p" n="286" type="card">
                <l n="383">Then good Aeneas, the ship-contest o'er,</l>
                <l n="384">turned to a wide green valley, circled round</l>
                <l n="385">with clasp of wood-clad hills, wherein was made</l>
@@ -4943,7 +4935,7 @@
                <l n="416">a lustrous gem. The third man goes away</l>
                <l n="417">taking this helmet from the <placeName key="tgn,5001993">Argive</placeName> spoil.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="315">
+            <div resp="p" n="315" type="card">
                <l n="418">They heard, and took their places. The loud horn</l>
                <l n="419">gave signal, and impetuous from the line,</l>
                <l n="420">swift as a bursting storm they sped away,</l>
@@ -5004,7 +4996,7 @@
                <l n="475">from Neptune's temple; with this noble gift</l>
                <l n="476">he sent the high-born youth upon his way.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="362">
+            <div resp="p" n="362" type="card">
                <l n="477">The foot-race over and the gifts disbursed,</l>
                <l n="478">“Come forth!” he cries, “if any in his heart</l>
                <l n="479">have strength and valor, let him now pull on</l>
@@ -5129,7 +5121,7 @@
                <l n="598">upon a house-top, so from each huge hand</l>
                <l n="599">the champion's strokes on dizzy Dares fall.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="461">
+            <div resp="p" n="461" type="card">
                <l n="600">Then Sire Aeneas willed to make a stay</l>
                <l n="601">to so much rage, nor let Entellus' soul</l>
                <l n="602">flame beyond bound, but bade the battle pause,</l>
@@ -5161,7 +5153,7 @@
                <l n="628">For this last victory and joyful day,</l>
                <l n="629">my gauntlets and my art I leave with thee.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="485">
+            <div resp="p" n="485" type="card">
                <l n="630">Forthwith Aeneas summons all who will</l>
                <l n="631">to contest of swift arrows, and displays</l>
                <l n="632">reward and prize. With mighty hand he rears</l>
@@ -5236,7 +5228,7 @@
                <l n="701">Next gift was his whose arrow cut the cord;</l>
                <l n="702">last, his whose light shaft clove the lofty pine.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="545">
+            <div resp="p" n="545" type="card">
                <l n="703">Father Aeneas now, not making end</l>
                <l n="704">of game and contest, summoned to his side</l>
                <l n="705">Epytides, the mentor and true friend</l>
@@ -5278,7 +5270,7 @@
                <l n="740">Close followed him the youthful chivalry</l>
                <l n="741">of King Acestes on Trinacrian steeds.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="575">
+            <div resp="p" n="575" type="card">
                <l n="742">The Trojans, with exultant, Ioud acclaim,</l>
                <l n="743">receive the shy-faced boys, and joyfully</l>
                <l n="744">trace in the features of the sons their sires.</l>
@@ -5315,7 +5307,7 @@
                <l n="775">and call the lads a “<placeName key="perseus,Troy">Troy</placeName>.” Such was the end</l>
                <l n="776">of game and contest at Anchises' grave.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="604">
+            <div resp="p" n="604" type="card">
                <l n="777">Then fortune veered and different aspect wore.</l>
                <l n="778">For 'ere the sacred funeral games are done,</l>
                <l n="779">Saturnian Juno from high heaven sent down</l>
@@ -5472,7 +5464,7 @@
                <l n="929">such weary ones within this friendly isle</l>
                <l n="930">a city called Acesta,—if he will.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="719">
+            <div resp="p" n="719" type="card">
                <l n="931">Much moved Aeneas was by this wise word</l>
                <l n="932">of his gray friend, though still his anxious soul</l>
                <l n="933">was vexed by doubt and care. But when dark night</l>
@@ -5512,7 +5504,7 @@
                <l n="966">of venerable Vesta, worshipping</l>
                <l n="967">with hallowed bread and incense burning free.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="746">
+            <div resp="p" n="746" type="card">
                <l n="968">Straightway he calls assembly of his friends, —</l>
                <l n="969">Acestes first in honor,—and makes known</l>
                <l n="970">Jove's will, the counsel of his cherished sire,</l>
@@ -5536,7 +5528,7 @@
                <l n="988">and at Anchises' sepulchre ordain</l>
                <l n="989">a priesthood and wide groves of hallowed shade.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="762">
+            <div resp="p" n="762" type="card">
                <l n="990">Now the nine days of funeral pomp are done,</l>
                <l n="991">and every altar has had honors due</l>
                <l n="992">from all the folk. Now tranquil-breathing winds</l>
@@ -5563,7 +5555,7 @@
                <l n="1013">a fair wind rose and thrust them; while the crews</l>
                <l n="1014">with rival strokes swept o'er the spreading sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="779">
+            <div resp="p" n="779" type="card">
                <l n="1015">Venus, the while, disturbed with grief and care,</l>
                <l n="1016">to Neptune thus her sorrowing heart outpoured:</l>
                <l n="1017">“Stern Juno's wrath and breast implacable</l>
@@ -5633,7 +5625,7 @@
                <l n="1080">with virgin Panopea, and the nymphs</l>
                <l n="1081">Nesaea, Spio and Cymodoce.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="827">
+            <div resp="p" n="827" type="card">
                <l n="1082">Now in Aeneas' ever-burdened breast</l>
                <l n="1083">the voice of hope revived. He bade make haste</l>
                <l n="1084">to raise the masts, spread canvas on the spars;</l>
@@ -5666,7 +5658,7 @@
                <l n="1111">I, oft by ocean's treacherous calm betrayed —</l>
                <l n="1112">my lord Aeneas to false winds and skies?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="852">
+            <div resp="p" n="852" type="card">
                <l n="1113">So saying, he grasped his rudder tight, and clung</l>
                <l n="1114">more firmly, fixing on the stars his eyes.</l>
                <l n="1115">Then waved the god above his brows a branch</l>
@@ -5693,8 +5685,8 @@
                <l n="1136">my Palinurus, in a land unknown!”</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="6">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="6" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">After such words and tears, he flung free rein</l>
                <l n="2">To the swift fleet, which sped along the wave</l>
                <l n="3">To old Euboean Cumae's sacred shore.</l>
@@ -5715,7 +5707,7 @@
                <l n="18">Prophetic gifts, unfolding things to come.</l>
                <l n="19">Here are pale Trivia's golden house and grove.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="14">
+            <div resp="p" n="14" type="card">
                <l n="20">Here Daedalus, the ancient story tells,</l>
                <l n="21">Escaping Minos' power, and having made</l>
                <l n="22">Hazard of heaven on far-mounting wings,</l>
@@ -5754,7 +5746,7 @@
                <l n="55">To work her will; the priestess, calling loud,</l>
                <l n="56">Gathers the Trojans to her mountain-shrine.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="42">
+            <div resp="p" n="42" type="card">
                <l n="57">Deep in the face of that Euboean crag</l>
                <l n="58">A cavern vast is hollowed out amain,</l>
                <l n="59">With hundred openings, a hundred mouths,</l>
@@ -5833,7 +5825,7 @@
                <l n="131">Thy way of safety, as thou least couldst dream,</l>
                <l n="132">Lies through a city of the Greeks, thy foes.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="98">
+            <div resp="p" n="98" type="card">
                <l n="133">Thus from her shrine Cumaea's prophetess</l>
                <l n="134">Chanted the dark decrees; the dreadful sound</l>
                <l n="135">Reverberated through the bellowing cave,</l>
@@ -5870,7 +5862,7 @@
                <l n="166">If Theseus—but why name him? why recall</l>
                <l n="167">Alcides' task? I, too, am sprung from Jove.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="124">
+            <div resp="p" n="124" type="card">
                <l n="168">Thus, to the altar clinging, did he pray :</l>
                <l n="169">The Sibyl thus replied : “Offspring of Heaven,</l>
                <l n="170">Anchises' son, the downward path to death</l>
@@ -5916,7 +5908,7 @@
                <l n="210">And realms to things that breathe impassable,</l>
                <l n="211">Thine eye shall gaze.” So closed her lips inspired.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="156">
+            <div resp="p" n="156" type="card">
                <l n="212">Aeneas then drew forth, with downcast eyes,</l>
                <l n="213">From that dark cavern, pondering in his heart</l>
                <l n="214">The riddle of his fate. His faithful friend</l>
@@ -5954,7 +5946,7 @@
                <l n="245">Of axe and wedge, cleave oak and ash-tree through,</l>
                <l n="246">Or logs of rowan down the mountains roll.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="183">
+            <div resp="p" n="183" type="card">
                <l n="247">Aeneas oversees and shares the toil,</l>
                <l n="248">Cheers on his mates, and swings a woodman's steel.</l>
                <l n="249">But, sad at heart with many a doubt and care,</l>
@@ -5990,7 +5982,7 @@
                <l n="278">The lingering bough, broke it in eager haste,</l>
                <l n="279">And bore it straightway to the Sibyl's shrine.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="212">
+            <div resp="p" n="212" type="card">
                <l n="280">Meanwhile the Trojans on the doleful shore</l>
                <l n="281">Bewailed Misenus, and brought tribute there</l>
                <l n="282">Of grief's last gift to his unheeding clay.</l>
@@ -6022,7 +6014,7 @@
                <l n="308">Beneath a windy hill, which now is called</l>
                <l n="309">“Misenus,”—for all time the name to bear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="236">
+            <div resp="p" n="236" type="card">
                <l n="310">After these toils, they hasten to fulfil</l>
                <l n="311">What else the Sibyl said. Straightway they find</l>
                <l n="312">A cave profound, of entrance gaping wide,</l>
@@ -6062,7 +6054,7 @@
                <l n="346">With frenzied step; he follows where she leads,</l>
                <l n="347">And strides with feet unfaltering at her side.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="264">
+            <div resp="p" n="264" type="card">
                <l n="348">Ye gods! who rule the spirits of the dead!</l>
                <l n="349">Ye voiceless shades and silent lands of night!</l>
                <l n="350">0 Phlegethon! 0 Chaos! let my song,</l>
@@ -6071,7 +6063,7 @@
                <l n="353">Unfold what hidden things enshrouded lie</l>
                <l n="354">In that dark underworld of sightless gloom.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="268">
+            <div resp="p" n="268" type="card">
                <l n="355">They walked exploring the unpeopled night,</l>
                <l n="356">Through Pluto's vacuous realms, and regions void,</l>
                <l n="357">As when one's path in dreary woodlands winds</l>
@@ -6089,7 +6081,7 @@
                <l n="369">The Furies' beds of steel, where wild-eyed Strife</l>
                <l n="370">Her snaky hair with blood-stained fillet binds.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="282">
+            <div resp="p" n="282" type="card">
                <l n="371">There in the middle court a shadowy elm</l>
                <l n="372">Its ancient branches spreads, and in its leaves</l>
                <l n="373">Deluding visions ever haunt and cling.</l>
@@ -6106,7 +6098,7 @@
                <l n="384">These were but shapes and shadows sweeping by,</l>
                <l n="385">His stroke had cloven in vain the vacant air.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="295">
+            <div resp="p" n="295" type="card">
                <l n="386">Hence the way leads to that Tartarean stream</l>
                <l n="387">Of Acheron, whose torrent fierce and foul</l>
                <l n="388">Disgorges in Cocytus all its sands.</l>
@@ -6159,7 +6151,7 @@
                <l n="435">Whom, while from <placeName key="perseus,Troy">Troy</placeName> they crossed the wind-swept seas,</l>
                <l n="436">A whirling tempest wrecked with ship and crew.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="337">
+            <div resp="p" n="337" type="card">
                <l n="437">There, too, the helmsman Palinurus strayed :</l>
                <l n="438">Who, as he whilom watched the Libyan stars,</l>
                <l n="439">Had fallen, plunging from his lofty seat</l>
@@ -6223,7 +6215,7 @@
                <l n="497">Grief ebbed awhile, and even to this day,</l>
                <l n="498">Our land is glad such noble name to wear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="384">
+            <div resp="p" n="384" type="card">
                <l n="499">The twain continue now their destined way</l>
                <l n="500">Unto the river's edge. The Ferryman,</l>
                <l n="501">Who watched them through still groves approach his shore,</l>
@@ -6267,7 +6259,7 @@
                <l n="539">Came safe across the river, and were moored</l>
                <l n="540">'mid sea-green sedges in the formless mire.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="417">
+            <div resp="p" n="417" type="card">
                <l n="541">Here Cerberus, with triple-throated roar,</l>
                <l n="542">Made all the region ring, as there he lay</l>
                <l n="543">At vast length in his cave. The Sibyl then,</l>
@@ -6281,7 +6273,7 @@
                <l n="551">Its warder buried; then he fled that shore</l>
                <l n="552">Of Stygian stream, whence travellers ne'er return.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="426">
+            <div resp="p" n="426" type="card">
                <l n="553">Now hears he sobs, and piteous, lisping cries</l>
                <l n="554">Of souls of babes upon the threshold plaining;</l>
                <l n="555">Whom, ere they took their portion of sweet life,</l>
@@ -6349,7 +6341,7 @@
                <l n="614">With anguish knew, watched with dimmed eyes her way,</l>
                <l n="615">And pitied from afar the fallen Queen.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="477">
+            <div resp="p" n="477" type="card">
                <l n="616">But now his destined way he must be gone;</l>
                <l n="617">Now the last regions round the travellers lie,</l>
                <l n="618">Where famous warriors in the darkness dwell:</l>
@@ -6374,7 +6366,7 @@
                <l n="637">A feeble shout, or vainly opened wide</l>
                <l n="638">Their gaping lips in mockery of sound.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="494">
+            <div resp="p" n="494" type="card">
                <l n="639">Here Priam's son, with body rent and torn,</l>
                <l n="640">
                   <choice>
@@ -6434,7 +6426,7 @@
                <l n="691">What chastisement of fortune thrusts thee on</l>
                <l n="692">Toward this forlorn abode of night and cloud?”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="535">
+            <div resp="p" n="535" type="card">
                <l n="693">While thus they talked, the crimsoned car of Morn</l>
                <l n="694">Had wheeled beyond the midmost point of heaven,</l>
                <l n="695">On her ethereal road. The princely pair</l>
@@ -6455,7 +6447,7 @@
                <l n="706">0 glory of my race, pass on! Thy lot</l>
                <l n="707">Be happier than mine!” He spoke, and fled.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="548">
+            <div resp="p" n="548" type="card">
                <l n="708">Aeneas straightway by the leftward cliff</l>
                <l n="709">Beheld a spreading rampart, high begirt</l>
                <l n="710">With triple wall, and circling round it ran</l>
@@ -6493,7 +6485,7 @@
                <l n="742">What sentinel upon that threshold sits,</l>
                <l n="743">What shapes of fear keep guard upon that gloom?</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="576">
+            <div resp="p" n="576" type="card">
                <l n="744">Far, far within the dragon Hydra broods</l>
                <l n="745">With half a hundred mouths, gaping and black;</l>
                <l n="746">And Tartarus slopes downward to the dark</l>
@@ -6563,7 +6555,7 @@
                <l n="807">Or iron voice, their divers shapes of sin,</l>
                <l n="808">Nor call by name the myriad pangs they bear.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="628">
+            <div resp="p" n="628" type="card">
                <l n="809">So spake Apollo's aged prophetess.</l>
                <l n="810">“Now up and on!” she cried. “Thy task fulfil!</l>
                <l n="811">We must make speed. Behold yon arching doors</l>
@@ -6576,7 +6568,7 @@
                <l n="818">Pure, lustral waters o'er his body threw,</l>
                <l n="819">And hung for garland there the Golden Bough.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="637">
+            <div resp="p" n="637" type="card">
                <l n="820">Now, every rite fulfilled, and tribute due</l>
                <l n="821">Paid to the sovereign power of Proserpine,</l>
                <l n="822">At last within a land delectable</l>
@@ -6670,7 +6662,7 @@
                <l n="910">Thrice from the touch of hand the vision fled,</l>
                <l n="911">Like wafted winds or likest hovering dreams.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="703">
+            <div resp="p" n="703" type="card">
                <l n="912">After these things Aeneas was aware</l>
                <l n="913">Of solemn groves in one deep, distant vale,</l>
                <l n="914">Where trees were whispering, and forever flowed</l>
@@ -6702,7 +6694,7 @@
                <l n="940">Anchises said, and thus the truth set forth,</l>
                <l n="941">In ordered words from point to point unfolding:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="724">
+            <div resp="p" n="724" type="card">
                <l n="942">“Know first that heaven and earth and ocean's plain,</l>
                <l n="943">The moon's bright orb, and stars of Titan birth</l>
                <l n="944">Are nourished by one Life; one primal Mind,</l>
@@ -6740,14 +6732,14 @@
                <l n="976">They may behold once more the vaulted sky,</l>
                <l n="977">And willingly to shapes of flesh return.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="752">
+            <div resp="p" n="752" type="card">
                <l n="978">So spoke Anchises; then led forth his son,</l>
                <l n="979">The Sibyl with him, to the assembled shades</l>
                <l n="980">(A voiceful throng), and on a lofty mound</l>
                <l n="981">His station took, whence plainly could be seen</l>
                <l n="982">The long procession, and each face descried.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="756">
+            <div resp="p" n="756" type="card">
                <l n="983">“Hark now! for of the glories I will tell</l>
                <l n="984">That wait our Dardan blood; of our sons' sons</l>
                <l n="985">Begot upon the old Italian breed,</l>
@@ -6808,7 +6800,7 @@
                <l n="1040">Break forth in oracles; the Maeotian land</l>
                <l n="1041">Trembles, and all the seven-fold mouths of <placeName key="tgn,1127805">Nile</placeName>.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="801">
+            <div resp="p" n="801" type="card">
                <l n="1042">Not o'er domain so wide Alcides passed,</l>
                <l n="1043">Although the brazen-footed doe he slew</l>
                <l n="1044">And stilled the groves of Erymanth, and bade</l>
@@ -6888,7 +6880,7 @@
                <l n="1117">To keep the world in lasting peace, to spare</l>
                <l n="1118">humbled foe, and crush to earth the proud.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="854">
+            <div resp="p" n="854" type="card">
                <l n="1119">So did Anchises speak, then, after pause,</l>
                <l n="1120">Thus to their wondering ears his word prolonged:</l>
                <l n="1121">“Behold Marcellus, bright with glorious spoil,</l>
@@ -6939,7 +6931,7 @@
                <l n="1166">Of King Latinus' town; and shows what way</l>
                <l n="1167">Each task and hardship to prevent, or bear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="893">
+            <div resp="p" n="893" type="card">
                <l n="1168">Now Sleep has portals twain, whereof the one</l>
                <l n="1169">Is horn, they say, and easy exit gives</l>
                <l n="1170">To visions true; the other, gleaming white</l>
@@ -6954,8 +6946,8 @@
                <l n="1179">Each lofty prow; the sterns stand firm on shore.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="7">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="7" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">One more immortal name thy death bequeathed,</l>
                <l n="2">Nurse of Aeneas, to Italian shores,</l>
                <l n="3">
@@ -6989,7 +6981,7 @@
                <l n="30">their sails with winds of power, and sped them on</l>
                <l n="31">in safety past the perils of that sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="25">
+            <div resp="p" n="25" type="card">
                <l n="32">Now morning flushed the wave, and saffron-garbed</l>
                <l n="33">Aurora from her rose-red chariot beamed</l>
                <l n="34">in highest heaven; the sea-winds ceased to stir;</l>
@@ -7005,7 +6997,7 @@
                <l n="44">Thither to landward now his ships he steered,</l>
                <l n="45">and sailed, high-hearted, up the shadowy stream.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="37">
+            <div resp="p" n="37" type="card">
                <l n="46">Hail, Erato! while olden kings and thrones</l>
                <l n="47">and all their sequent story I unfold!</l>
                <l n="48">How <placeName key="tgn,7003080">Latium</placeName>'s honor stood, when alien ships</l>
@@ -7065,7 +7057,7 @@
                <l n="102">bright honors on the virgin's head to fall</l>
                <l n="103">by Fate's decree, but on her people, war.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="81">
+            <div resp="p" n="81" type="card">
                <l n="104">The King, sore troubled by these portents, sought</l>
                <l n="105">oracular wisdom of his sacred sire,</l>
                <l n="106">Faunus, the fate-revealer, where the groves</l>
@@ -7150,7 +7142,7 @@
                <l n="184">with zealous emulation, ranging well</l>
                <l n="185">the wine-cups fair with many a garland crowned.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="148">
+            <div resp="p" n="148" type="card">
                <l n="186">Soon as the morrow with the lamp of dawn</l>
                <l n="187">looked o'er the world, they took their separate ways,</l>
                <l n="188">exploring shore and towns; here spread the pools</l>
@@ -7180,7 +7172,7 @@
                <l n="212">bade call them to his house, and took his seat</l>
                <l n="213">in mid-court on his high, ancestral throne.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="170">
+            <div resp="p" n="170" type="card">
                <l n="214">Large and majestical the castle rose:</l>
                <l n="215">a hundred columns lifted it in air</l>
                <l n="216">upon the city's crown—the royal keep</l>
@@ -7214,7 +7206,7 @@
                <l n="244">and, raining o'er him potent poison-dew,</l>
                <l n="245">changed to a bird of pied and dappled wings.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="192">
+            <div resp="p" n="192" type="card">
                <l n="246">In such a temple of his gods did Sire</l>
                <l n="247">Latinus, on hereditary throne,</l>
                <l n="248">welcome the Trojans to his halls, and thus</l>
@@ -7240,7 +7232,7 @@
                <l n="268">he has a throne, and by his altars blest</l>
                <l n="269">adds to the number of the gods we praise.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="212">
+            <div resp="p" n="212" type="card">
                <l n="270">He spoke; Ilioneus this answer made:</l>
                <l n="271">“O King, great heir of Faunus! No dark storm</l>
                <l n="272">impelled us o'er the flood thy realm to find.</l>
@@ -7340,7 +7332,7 @@
                <l n="365">such gifts and greetings from Latinus bearing,</l>
                <l n="366">rode back in pomp his words of peace to bring.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="286">
+            <div resp="p" n="286" type="card">
                <l n="367">But lo! from <placeName key="perseus,Argos">Argos</placeName> on her voyage of air</l>
                <l n="368">rides the dread spouse of Jove. She, sky-enthroned</l>
                <l n="369">above the far Sicilian promontory,</l>
@@ -7395,7 +7387,7 @@
                <l n="417">such offspring bore, a second Paris, who</l>
                <l n="418">to their new <placeName key="perseus,Troy">Troy</placeName> shall fatal wedlock bring.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="323">
+            <div resp="p" n="323" type="card">
                <l n="419">So saying, with aspect terrible she sped</l>
                <l n="420">earthward her way; and called from gloom of hell</l>
                <l n="421">Alecto, woeful power, from cloudy throne</l>
@@ -7423,7 +7415,7 @@
                <l n="443">causes of battle, till yon warrior hosts</l>
                <l n="444">cry out for swords and leap to gird them on.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="341">
+            <div resp="p" n="341" type="card">
                <l n="445">Straightway Alecto, through whose body flows</l>
                <l n="446">the Gorgon poison, took her viewless way</l>
                <l n="447">to <placeName key="tgn,7003080">Latium</placeName> and the lofty walls and towers</l>
@@ -7557,7 +7549,7 @@
                <l n="573">or hear thy wooing, shall be taught too late</l>
                <l n="574">what Turnus is in panoply of war.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="435">
+            <div resp="p" n="435" type="card">
                <l n="575">In mocking answer to the prophetess</l>
                <l n="576">the warrior thus replied: “That stranger fleet</l>
                <l n="577">in <placeName key="tgn,1130786">Tiber</placeName> moored, not, as thy folly prates,</l>
@@ -7571,7 +7563,7 @@
                <l n="585">the images divine! Of peace and war</l>
                <l n="586">let men and warriors the burden bear!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="445">
+            <div resp="p" n="445" type="card">
                <l n="587">So kindled he Alecto's wrath to flame;</l>
                <l n="588">and even as he spoke a shudder thrilled</l>
                <l n="589">the warrior's body, and his eyeballs stood</l>
@@ -7611,7 +7603,7 @@
                <l n="622">some by his youth and noble beauty moved,</l>
                <l n="623">some by his kingly sires and fame in arms.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="475">
+            <div resp="p" n="475" type="card">
                <l n="624">While Turnus stirred Rutulia's valiant souls,</l>
                <l n="625">Alecto on her Stygian pinions sped</l>
                <l n="626">to where the Teucrians lay. She scanned the ground</l>
@@ -7698,7 +7690,7 @@
                <l n="707">five herds of cattle home; his busy churls</l>
                <l n="708">turned with a hundred ploughs his fruitful glebe.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="540">
+            <div resp="p" n="540" type="card">
                <l n="709">While o'er the battle-field thus doubtful swung</l>
                <l n="710">the scales of war, the Fury (to her task</l>
                <l n="711">now equal proven) having dyed the day</l>
@@ -7744,7 +7736,7 @@
                <l n="751">her execrable godhead, while the air</l>
                <l n="752">of earth and heaven felt the curse removed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="572">
+            <div resp="p" n="572" type="card">
                <l n="753">Forthwith the sovereign hands of Juno haste</l>
                <l n="754">to consummate the war. The shepherds bear</l>
                <l n="755">back from the field of battle to the town</l>
@@ -7787,7 +7779,7 @@
                <l n="792">of comfort in my death.” With this the King</l>
                <l n="793">fled to his house and ceased his realm to guide.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="601">
+            <div resp="p" n="601" type="card">
                <l n="794">A sacred custom the Hesperian land</l>
                <l n="795">of <placeName key="tgn,7003080">Latium</placeName> knew, by all the Alban hills</l>
                <l n="796">honored unbroken, which wide-ruling <placeName key="perseus,Rome">Rome</placeName>
@@ -7844,7 +7836,7 @@
                <l n="844">the mettled war-horse, dons a shining shield</l>
                <l n="845">and golden mail, and buckles his good sword.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="641">
+            <div resp="p" n="641" type="card">
                <l n="846">Virgins of Helicon, renew my song!</l>
                <l n="847">Instruct me what proud kings to battle flown</l>
                <l n="848">with following legions throng the serried plain.</l>
@@ -7855,7 +7847,7 @@
                <l n="852">have memory of the past, but faint and low</l>
                <l n="853">steals glory's whisper on a mortal ear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="647">
+            <div resp="p" n="647" type="card">
                <l n="854">Foremost in fight, from shores Etrurian came</l>
                <l n="855">Mezentius, scornful rebel against Heaven,</l>
                <l n="856">his people all in arms; and at his side</l>
@@ -7867,7 +7859,7 @@
                <l n="862">to serve a nobler sire, and happier far</l>
                <l n="863">he had ne'er been born Mezentius' son.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="655">
+            <div resp="p" n="655" type="card">
                <l n="864">Next after these, conspicuous o'er the plain,</l>
                <l n="865">with palm-crowned chariot and victorious steeds,</l>
                <l n="866">rode forth well-moulded Aventinus, sprung</l>
@@ -7887,7 +7879,7 @@
                <l n="880">and white teeth crowning his ferocious brow:</l>
                <l n="881">for garbed as Hercules he sought his King.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="670">
+            <div resp="p" n="670" type="card">
                <l n="882">Then came twin brethren, leaving <placeName key="perseus,Tibur">Tibur</placeName>'s keep</l>
                <l n="883">(named from Tiburtus, brother of them twain)</l>
                <l n="884">Catillus and impetuous Coras, youth</l>
@@ -7898,7 +7890,7 @@
                <l n="889">the snows of Homole and Othrys leaving,</l>
                <l n="890">while crashing thickets in their pathway fall.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="678">
+            <div resp="p" n="678" type="card">
                <l n="891">Nor was <placeName key="perseus,Praeneste">Praeneste</placeName>'s founder absent there,</l>
                <l n="892">by Vulcan sired, among the herds and hinds,</l>
                <l n="893">and on a hearth-stone found (so runs the tale</l>
@@ -7917,7 +7909,7 @@
                <l n="906">the left foot leaves a barefoot track behind,</l>
                <l n="907">a rawhide sandal on the right they wear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="691">
+            <div resp="p" n="691" type="card">
                <l n="908">Messapus came, steed-tamer, Neptune's son,</l>
                <l n="909">by sword and fire invincible: this day,</l>
                <l n="910">though mild his people and unschooled in war,</l>
@@ -7937,7 +7929,7 @@
                <l n="924">was like shrill-calling birds, when home from sea</l>
                <l n="925">their soaring flock moves shoreward like a cloud.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="706">
+            <div resp="p" n="706" type="card">
                <l n="926">Then, one of far-descended Sabine name,</l>
                <l n="927">Clausus advanced, the captain of a host,</l>
                <l n="928">and in himself an equal host he seemed;</l>
@@ -7963,7 +7955,7 @@
                <l n="947">near Hermus or on <placeName key="tgn,7001294">Lycia</placeName>'s yellowing plain:</l>
                <l n="948">shields clashed; their strong tramp smote the trembling ground.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="723">
+            <div resp="p" n="723" type="card">
                <l n="949">Now Agamemnon's kinsman, cruel foe</l>
                <l n="950">to the mere name of <placeName key="perseus,Troy">Troy</placeName>, <placeName key="tgn,7003906">Halaesus</placeName>, yokes</l>
                <l n="951">the horses of his car and summons forth</l>
@@ -7979,7 +7971,7 @@
                <l n="961">bound by a coiling thong; a shield conceals</l>
                <l n="962">the left side, and they fight with crooked swords.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="733">
+            <div resp="p" n="733" type="card">
                <l n="963">Nor shalt thou, Oebalus, depart unsung,</l>
                <l n="964">whom minstrels say the nymph Sebethis bore</l>
                <l n="965">to Telon, who in <placeName key="tgn,7006855">Capri</placeName> was a king</l>
@@ -7994,7 +7986,7 @@
                <l n="974">stripped cork-tree bark; the crescent of their shields</l>
                <l n="975">is gleaming bronze, and gleaming bronze the sword.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="744">
+            <div resp="p" n="744" type="card">
                <l n="976">Next Ufens, mountain-bred, from Nersae came</l>
                <l n="977">to join the war; of goodly fame was he</l>
                <l n="978">for prosperous arms: his Aequian people show</l>
@@ -8003,7 +7995,7 @@
                <l n="981">compel the plough; though their chief pride and joy</l>
                <l n="982">are rapine, violence, and plundered store.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="750">
+            <div resp="p" n="750" type="card">
                <l n="983">Next after these, his brows and helmet bound</l>
                <l n="984">with noble olive, from <placeName key="perseus,Marruvium">Marruvium</placeName> came</l>
                <l n="985">a priest, brave Umbro, ordered to the field</l>
@@ -8019,7 +8011,7 @@
                <l n="995">thee, <placeName key="tgn,1110914">Fucinus</placeName>, the lake of crystal wave,</l>
                <l n="996">thee, many a mountain-tarn!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="761">
+            <div resp="p" n="761" type="card">
                <l n="997">Next, Virbius in martial beauty rode,</l>
                <l n="998">son of Hippolytus, whose mother, proud</l>
                <l n="999">
@@ -8051,7 +8043,7 @@
                <l n="1024">Yet did the son o'er that tumultuous plain</l>
                <l n="1025">his battle-chariot guide and plunging team.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="783">
+            <div resp="p" n="783" type="card">
                <l n="1026">Lo, Turnus strides conspicuous in the van,</l>
                <l n="1027">full armed, of mighty frame, his lordly head</l>
                <l n="1028">high o'er his peers emerging! His tall helm</l>
@@ -8078,7 +8070,7 @@
                <l n="1049">of <placeName key="tgn,1051578">Satura</placeName>, and Ufens' icy wave</l>
                <l n="1050">through lowland valleys seeks his seaward way.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="803">
+            <div resp="p" n="803" type="card">
                <l n="1051">Last came Camilla, of the Volscians bred,</l>
                <l n="1052">leading her mail-clad, radiant chivalry;</l>
                <l n="1053">a warrior-virgin, of Minerva's craft</l>
@@ -8100,8 +8092,8 @@
                <l n="1069">and shepherd's shaft of myrtle tipped with steel.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="8">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="8" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">When Turnus from Laurentum's bastion proud</l>
                <l n="2">published the war, and roused the dreadful note</l>
                <l n="3">of the harsh trumpet's song; when on swift steeds</l>
@@ -8126,7 +8118,7 @@
                   <placeName key="tgn,7002678">Aetolia</placeName>'s lord will not less wisely fear</l>
                <l n="22">than royal Turnus or our Latin King.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="18">
+            <div resp="p" n="18" type="card">
                <l n="23">Thus <placeName key="tgn,7003080">Latium</placeName>'s cause moved on. Meanwhile the heir</l>
                <l n="24">of great Laomedon, who knew full well</l>
                <l n="25">the whole wide land astir, was vexed and tossed</l>
@@ -8153,7 +8145,7 @@
                <l n="46">o'erhung with wreath of reeds. In soothing words</l>
                <l n="47">thus, to console Aeneas' cares, he spoke:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="36">
+            <div resp="p" n="36" type="card">
                <l n="48">“Seed of the gods! who bringest to my shore</l>
                <l n="49">thy Trojan city wrested from her foe,</l>
                <l n="50">a stronghold everlasting, <placeName key="tgn,7003080">Latium</placeName>'s plain</l>
@@ -8199,7 +8191,7 @@
                <l n="90">here shall arise my house magnificent,</l>
                <l n="91">a city of all cities chief and crown.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="66">
+            <div resp="p" n="66" type="card">
                <l n="92">So spake the river-god, and sank from view</l>
                <l n="93">down to his deepest cave; then night and sleep</l>
                <l n="94">together from Aeneas fled away.</l>
@@ -8221,7 +8213,7 @@
                <l n="110">He spoke; then chose twin biremes from the fleet,</l>
                <l n="111">gave them good gear and armed their loyal crews.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="81">
+            <div resp="p" n="81" type="card">
                <l n="112">But, lo! a sudden wonder met his eyes:</l>
                <l n="113">white gleaming through the grove, with all her brood</l>
                <l n="114">white like herself, on the green bank the Sow</l>
@@ -8252,7 +8244,7 @@
                <l n="139">Evander's realm its slender strength displayed:</l>
                <l n="140">swiftly they turned their prows and neared the town.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="102">
+            <div resp="p" n="102" type="card">
                <l n="141">It chanced th' Arcadian King had come that day</l>
                <l n="142">to honor Hercules, Amphitryon's son,</l>
                <l n="143">and to the powers divine pay worship due</l>
@@ -8286,7 +8278,7 @@
                <l n="171">with lingering clasp; then hand in hand advanced</l>
                <l n="172">up the steep woodland, leaving <placeName key="tgn,1130786">Tiber</placeName>'s wave.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="126">
+            <div resp="p" n="126" type="card">
                <l n="173">Aeneas to Evander speaking fair,</l>
                <l n="174">these words essayed: “O best of Grecian-born!</l>
                <l n="175">whom Fortune's power now bids me seek and sue,</l>
@@ -8322,7 +8314,7 @@
                <l n="205">quail not in battle; souls of fire are we,</l>
                <l n="206">and warriors proved in many an action brave.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="152">
+            <div resp="p" n="152" type="card">
                <l n="207">Aeneas ceased. The other long had scanned</l>
                <l n="208">the hero's face, his eyes, and wondering viewed</l>
                <l n="209">his form and mien divine; in answer now</l>
@@ -8356,7 +8348,7 @@
                <l n="237">well-omened looks and words. Allies we are!</l>
                <l n="238">Use this our sacred feast as if your own.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="175">
+            <div resp="p" n="175" type="card">
                <l n="239">So saying, he bade his followers renew</l>
                <l n="240">th' abandoned feast and wine; and placed each guest</l>
                <l n="241">on turf-built couch of green, most honoring</l>
@@ -8369,7 +8361,7 @@
                <l n="248">While good Aeneas and his Trojans share</l>
                <l n="249">the long whole ox and meats of sacrifice.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="184">
+            <div resp="p" n="184" type="card">
                <l n="250">When hunger and its eager edge were gone,</l>
                <l n="251">Evander spoke: “This votive holiday,</l>
                <l n="252">yon tables spread and altar so divine,</l>
@@ -8495,7 +8487,7 @@
                <l n="372">he raised in his right hand, while all the rest</l>
                <l n="373">called on the gods and pure libation poured.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="280">
+            <div resp="p" n="280" type="card">
                <l n="374">Soon from the travelling heavens the western star</l>
                <l n="375">glowed nearer, and Potitius led forth</l>
                <l n="376">the priest-procession, girt in ancient guise</l>
@@ -8530,7 +8522,7 @@
                <l n="404">of Cacus' cave and blasting breath of fire:</l>
                <l n="405">while hills and sacred grove the note prolong.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="306">
+            <div resp="p" n="306" type="card">
                <l n="406">Such worship o'er, all take the homeward way</l>
                <l n="407">back to the town. The hospitable King,</l>
                <l n="408">though bowed with weight of years, kept at his side</l>
@@ -8667,7 +8659,7 @@
                <l n="539">embrace of mutual desire, and found</l>
                <l n="540">deep, peaceful sleep, on her fond heart reclined.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="407">
+            <div resp="p" n="407" type="card">
                <l n="541">Night's course half run, soon as the first repose</l>
                <l n="542">had banished sleep,—what time some careful wife</l>
                <l n="543">whose distaff and Minerva's humble toil</l>
@@ -8733,7 +8725,7 @@
                <l n="603">they lift their giant arms in numbered blows</l>
                <l n="604">and roll with gripe of tongs the ponderous bars.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="454">
+            <div resp="p" n="454" type="card">
                <l n="605">While thus the Lemnian god his labor sped</l>
                <l n="606">in far Aeolian isle, the cheerful morn</l>
                <l n="607">with voice of swallows round his lowly eaves</l>
@@ -8755,7 +8747,7 @@
                <l n="623">in midcourt of the house, and give the hour</l>
                <l n="624">to converse unrestrained. First spoke the King:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="470">
+            <div resp="p" n="470" type="card">
                <l n="625">“Great leader of the Teucrians, while thy life</l>
                <l n="626">in safety stands, I call not Trojan power</l>
                <l n="627">vanquished or fallen. But to help thy war</l>
@@ -8858,7 +8850,7 @@
                <l n="723">shall in confusion roll! Yea, let them lead</l>
                <l n="724">their lines to battle, and our league abjure!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="541">
+            <div resp="p" n="541" type="card">
                <l n="725">He said: and from the lofty throne uprose.</l>
                <l n="726">Straightway he roused anew the slumbering fire</l>
                <l n="727">sacred to Hercules, and glad at heart</l>
@@ -8878,7 +8870,7 @@
                <l n="741">o'er whom a tawny robe descended low,</l>
                <l n="742">of lion-skin, with claws of gleaming gold.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="554">
+            <div resp="p" n="554" type="card">
                <l n="743">Noised swiftly through the little town it flies</l>
                <l n="744">that to the precinct of the Tuscan King</l>
                <l n="745">armed horsemen speed. Pale mothers in great fear</l>
@@ -8922,7 +8914,7 @@
                <l n="783">at this last parting; the strong arms of slaves</l>
                <l n="784">lifted him, fallen in swoon, and bore him home.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="585">
+            <div resp="p" n="585" type="card">
                <l n="785">Now forth beneath the wide-swung city-gates</l>
                <l n="786">the mounted squadron poured; Aeneas rode,</l>
                <l n="787">companioned of Achates, in the van;</l>
@@ -8955,7 +8947,7 @@
                <l n="814">made sure advance, and found repose at eve</l>
                <l n="815">for warrior travel-worn and fainting steed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="608">
+            <div resp="p" n="608" type="card">
                <l n="816">But now athwart the darkening air of heaven</l>
                <l n="817">came Venus gleaming bright, to bring her son</l>
                <l n="818">the gifts divine. In deep, sequestered vale</l>
@@ -9042,7 +9034,7 @@
                <l n="898">th' assemblies of the righteous, in whose midst</l>
                <l n="899">was Cato, giving judgment and decree.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="671">
+            <div resp="p" n="671" type="card">
                <l n="900">Encircled by these pictures ran the waves</l>
                <l n="901">of vast, unrestful seas in flowing gold,</l>
                <l n="902">where seemed along the azure crests to fly</l>
@@ -9127,7 +9119,7 @@
                <l n="979">and Dahae, little wont to bend the knee,</l>
                <l n="980">and swift Araxes, for a bridge too proud.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="729">
+            <div resp="p" n="729" type="card">
                <l n="981">Such was the blazoned shield his mother gave</l>
                <l n="982">from Vulcan's forge; which with astonished eyes</l>
                <l n="983">Aeneas viewed, and scanned with joyful mind</l>
@@ -9136,8 +9128,8 @@
                <l n="986">the destined mighty deeds of all his sons.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="9">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="9" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">While thus in distant region moves the war,</l>
                <l n="2">down to bold Turnus Saturn's daughter sends</l>
                <l n="3">celestial Iris. In a sacred vale,</l>
@@ -9170,7 +9162,7 @@
                <l n="30">took water from its brim, and offered Heaven</l>
                <l n="31">much prayer, with many an importuning vow.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="25">
+            <div resp="p" n="25" type="card">
                <l n="32">Soon o'er the spreading fields in proud array</l>
                <l n="33">the gathered legions poured; no lack was there</l>
                <l n="34">of steeds all fire, and broidered pomp and gold.</l>
@@ -9198,7 +9190,7 @@
                <l n="56">each portal strong, and, patient of control,</l>
                <l n="57">from hollow towers expect th' encircling foe.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="47">
+            <div resp="p" n="47" type="card">
                <l n="58">Turnus, at full speed, had outridden far</l>
                <l n="59">his laggard host, and, leading in his train</l>
                <l n="60">a score of chosen knights, dashed into view</l>
@@ -9242,7 +9234,7 @@
                <l n="98">red glare of fuming torches burned abroad,</l>
                <l n="99">and Vulcan starward flung a sparkling cloud.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="77">
+            <div resp="p" n="77" type="card">
                <l n="100">What god, O Muses, saved the Trojans then</l>
                <l n="101">from wrathful flame? Who shielded then the fleet,</l>
                <l n="102">I pray you tell, from bursting storm of fire?</l>
@@ -9288,7 +9280,7 @@
                <l n="142">
                   <placeName key="perseus,Olympos,Lycia">Olympus</placeName> quaked at his consenting brow.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="107">
+            <div resp="p" n="107" type="card">
                <l n="143">Now was the promised day at hand (for Fate</l>
                <l n="144">had woven the web so far) when Turnus' rage</l>
                <l n="145">stirred the divine progenitress to save</l>
@@ -9309,7 +9301,7 @@
                <l n="160">the forms of virgin goddesses uprose,</l>
                <l n="161">one for each ship, and seaward sped away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="123">
+            <div resp="p" n="123" type="card">
                <l n="162">The hearts of the Rutulian host stood still</l>
                <l n="163">in panic, and Messapus terrified</l>
                <l n="164">his trembling horses reined; the sacred stream</l>
@@ -9377,7 +9369,7 @@
                <l n="225">The camp-fires cheerly burn; the jovial guard</l>
                <l n="226">spend the long, sleepless night in sport and game.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="168">
+            <div resp="p" n="168" type="card">
                <l n="227">The Trojans peering from the lofty walls</l>
                <l n="228">survey the foe, and arm for sure defence</l>
                <l n="229">of every point exposed. They prove the gates</l>
@@ -9391,7 +9383,7 @@
                <l n="237">the pain and peril, giving each his due</l>
                <l n="238">of alternating vigil and repose.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="176">
+            <div resp="p" n="176" type="card">
                <l n="239">Nisus kept sentry at the gate: a youth</l>
                <l n="240">of eager heart for noble deeds, the son</l>
                <l n="241">of Hyrtacus, whom in Aeneas' train</l>
@@ -9466,7 +9458,7 @@
                <l n="309">his post assigned; at Nisus' side he strode,</l>
                <l n="310">and both impatient sped them to the King.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="224">
+            <div resp="p" n="224" type="card">
                <l n="311">Now in all lands all creatures that have breath</l>
                <l n="312">lulled care in slumber, and each heart forgot</l>
                <l n="313">its load of toil and pain. But they who led</l>
@@ -9591,7 +9583,7 @@
                <l n="432">the hazard of wild winds soon scattered far,</l>
                <l n="433">and flung them fruitless on the darkening storm.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="314">
+            <div resp="p" n="314" type="card">
                <l n="434">Forth through the moat they climb, and steal away</l>
                <l n="435">through midnight shades, to where their foemen lie</l>
                <l n="436">encamped in arms; of whom, before these fall,</l>
@@ -9667,7 +9659,7 @@
                <l n="506">which once Messapus wore. So from the camp,</l>
                <l n="507">escaping danger, the two champions ran.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="367">
+            <div resp="p" n="367" type="card">
                <l n="508">But horsemen from the Latin city sent</l>
                <l n="509">to join the serried legions of the plain</l>
                <l n="510">had come at Turnus' call, three hundred strong</l>
@@ -9776,7 +9768,7 @@
                <l n="613">upon his fallen comrade's breast; and there,</l>
                <l n="614">stabbed through, found tranquil death and sure repose. </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="446">
+            <div resp="p" n="446" type="card">
                <l n="615">Heroic pair and blest! If aught I sing</l>
                <l n="616">have lasting music, no remotest age</l>
                <l n="617">shall blot your names from honor's storied scroll:</l>
@@ -9785,7 +9777,7 @@
                <l n="620">nor while the Roman Father's hand sustains</l>
                <l n="621">its empire o'er the world.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="450">
+            <div resp="p" n="450" type="card">
                <l n="622">The Rutules seized the spoils of victory,</l>
                <l n="623">and slowly to their camp, with wail and cry,</l>
                <l n="624">bore Volscens' corse; and in the eamp they made</l>
@@ -9798,7 +9790,7 @@
                <l n="631">Messapus' glittering helm, his baldric fair,</l>
                <l n="632">recaptured now with lavish sweat and pain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="459">
+            <div resp="p" n="459" type="card">
                <l n="633">Now, from Tithonus' saffron couch set free,</l>
                <l n="634">Aurora over many a land outpoured</l>
                <l n="635">the rising morn; the sun's advancing beam</l>
@@ -9818,7 +9810,7 @@
                <l n="649">the hero-faces thrust aloft; too well</l>
                <l n="650">their loyal grief the blood-stained features knew.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="473">
+            <div resp="p" n="473" type="card">
                <l n="651">On restless pinions to the trembling town</l>
                <l n="652">had voiceful Rumor hied, and to the ears</l>
                <l n="653">of that lone mother of Euryalus</l>
@@ -9865,7 +9857,7 @@
                <l n="694">bade Actor and Idaeus, lifting her</l>
                <l n="695">in both their reverent arms, to bear her home.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="503">
+            <div resp="p" n="503" type="card">
                <l n="696">But now the brazen trumpet's fearsome song</l>
                <l n="697">blares loud, and startled shouts of soldiery</l>
                <l n="698">spread through the roaring sky. The Volscian band</l>
@@ -9894,14 +9886,14 @@
                <l n="721">ripped down the palisade, and at the breach</l>
                <l n="722">strung a steep path of ladders up the wall.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="525">
+            <div resp="p" n="525" type="card">
                <l n="723">Aid, O Calliope, the martial song!</l>
                <l n="724">Tell me what carnage and how many deaths</l>
                <l n="725">the sword of Turnus wrought: what peer in arms</l>
                <l n="726">each hero to the world of ghosts sent down.</l>
                <l n="727">Unroll the war's great book before these eyes.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="530">
+            <div resp="p" n="530" type="card">
                <l n="728">A tower was there, well-placed and looming large,</l>
                <l n="729">with many a lofty bridge, which desperately</l>
                <l n="730">th' Italians strove to storm, and strangely plied</l>
@@ -9987,7 +9979,7 @@
                <l n="810">the youth's mid-forehead, and his towering form</l>
                <l n="811">fell prostrate its full length along the ground.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="590">
+            <div resp="p" n="590" type="card">
                <l n="812">'T was then Ascanius first shot forth in war</l>
                <l n="813">the arrow swift from which all creatures wild</l>
                <l n="814">were wont to fly in fear: and he struck down</l>
@@ -10035,7 +10027,7 @@
                <l n="856">calls you away, and Ida's goddess calls.</l>
                <l n="857">Leave arms to men, true men! and quit the sword!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="621">
+            <div resp="p" n="621" type="card">
                <l n="858">Of such loud insolence and words of shame</l>
                <l n="859">Ascanius brooked no more, but laid a shaft</l>
                <l n="860">athwart his bowstring, and with arms stretched wide</l>
@@ -10107,7 +10099,7 @@
                <l n="926">flings forth tempestuous and-boundless rain,</l>
                <l n="927">and splits the bellied clouds in darkened air.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="672">
+            <div resp="p" n="672" type="card">
                <l n="928">The brothers Pandarus and Bitias,</l>
                <l n="929">of whom Alcanor was the famous sire,</l>
                <l n="930">on Ida born, and whom Iaera bred</l>
@@ -10132,7 +10124,7 @@
                <l n="949">the Trojans rally to one point, and dare</l>
                <l n="950">close conflict, or long sallies o'er the plain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="691">
+            <div resp="p" n="691" type="card">
                <l n="951">To Turnus, who upon a distant field</l>
                <l n="952">was storming with huge havoc, came the news</l>
                <l n="953">that now his foe, before a gate thrown wide,</l>
@@ -10169,7 +10161,7 @@
                <l n="984">of cruel stone, <placeName key="tgn,7010392">Inarime</placeName>, which lies</l>
                <l n="985">heaped o'er Typhoeus by revenge of Jove.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="717">
+            <div resp="p" n="717" type="card">
                <l n="986">Now to the Latins Mars, the lord of war,</l>
                <l n="987">gave might and valor, and to their wild hearts</l>
                <l n="988">his spur applied, but on the Teucrians breathed</l>
@@ -10220,7 +10212,7 @@
                <l n="1033">dead on the earth he lay! in equal halves</l>
                <l n="1034">the sundered head from either shoulder swung.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="756">
+            <div resp="p" n="756" type="card">
                <l n="1035">In horror and amaze the Trojans all</l>
                <l n="1036">dispersed and fled; had but the conqueror thought</l>
                <l n="1037">to break the barriers of the gates and call</l>
@@ -10249,7 +10241,7 @@
                <l n="1060">and fit his numbers to the chorded Iyre;</l>
                <l n="1061">steeds, wars, armed men were his perpetual song.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="778">
+            <div resp="p" n="778" type="card">
                <l n="1062">At last the Teucrian chiefs had heard the tale</l>
                <l n="1063">of so much slaughter; and in council met</l>
                <l n="1064">are Mnestheus and Serestus bold, who see</l>
@@ -10305,8 +10297,8 @@
                <l n="1114">with all the gore and carnage washed away.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="10">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="10" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">Meanwhile <placeName key="perseus,Olympos,Lycia">Olympus</placeName>, seat of sovereign sway,</l>
                <l n="2">threw wide its portals, and in conclave fair</l>
                <l n="3">the Sire of gods and King of all mankind</l>
@@ -10330,7 +10322,7 @@
                <l n="20">and havoc have no bound. Till then, give o'er, </l>
                <l n="21">and smile upon the concord I decree!” </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="16">
+            <div resp="p" n="16" type="card">
                <l n="22">Thus briefly, Jove. But golden Venus made</l>
                <l n="23">less brief reply. “O Father, who dost hold</l>
                <l n="24">o'er Man and all things an immortal sway!</l>
@@ -10398,7 +10390,7 @@
                   <placeName key="perseus,Xanthos">Xanthus</placeName> and Simois back! Let Teucer's sons</l>
                <l n="85">unfold once more the tale of <placeName key="perseus,Troy">Ilium</placeName>'s woe!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="62">
+            <div resp="p" n="62" type="card">
                <l n="86">Then sovereign Juno, flushed with solemn scorn,</l>
                <l n="87">made answer. “Dost thou bid me here profane</l>
                <l n="88">the silence of my heart, and gossip forth</l>
@@ -10486,7 +10478,7 @@
                <l n="166">Now from the golden throne uprises Jove;</l>
                <l n="167">the train of gods attend him to the doors.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="118">
+            <div resp="p" n="118" type="card">
                <l n="168">Meanwhile at every gate the Rutule foe</l>
                <l n="169">urges the slaughter on, and closes round</l>
                <l n="170">the battlements with ring of flame. The host</l>
@@ -10526,7 +10518,7 @@
                <l n="204">in glory eminent; there Capys stood,</l>
                <l n="205">whose name the Capuan citadel shall bear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="146">
+            <div resp="p" n="146" type="card">
                <l n="206">While these in many a shock of grievous war</l>
                <l n="207">hotly contend, Aeneas cleaves his way</l>
                <l n="208">at midnight through the waters. He had fared</l>
@@ -10552,13 +10544,13 @@
                <l n="228">of stars, the highway of dark night, and asks</l>
                <l n="229">the story of his toils on land and sea.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="163">
+            <div resp="p" n="163" type="card">
                <l n="230">Now open Helicon and move my song,</l>
                <l n="231">ye goddesses, to tell what host in arms</l>
                <l n="232">followed Aeneas from the Tuscan shore,</l>
                <l n="233">and manned his ships and traveiled o'er the sea!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="166">
+            <div resp="p" n="166" type="card">
                <l n="234">First Massicus his brazen Tigress rode,</l>
                <l n="235">cleaving the brine; a thousand warriors</l>
                <l n="236">were with him out of <placeName key="perseus,Clusium">Clusium</placeName>'s walls, or from</l>
@@ -10586,7 +10578,7 @@
                <l n="258">and Minio's plain, and by the ancient towers</l>
                <l n="259">of Pyrgo or <placeName key="perseus,Gravisca">Gravisca</placeName>'s storm-swept hill.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="185">
+            <div resp="p" n="185" type="card">
                <l n="260">Nor thy renown may I forget, brave chief</l>
                <l n="261">of the Ligurians, Cinyrus; nor thine,</l>
                <l n="262">Cupavo, with few followers, thy crest</l>
@@ -10627,7 +10619,7 @@
                   <milestone ed="P" unit="para"/>Such chosen chiefs in thirty galleys ploughed</l>
                <l n="297">the salt-wave, bringing help to Trojan arms.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="215">
+            <div resp="p" n="215" type="card">
                <l n="298">Day now had left the sky. The moon benign</l>
                <l n="299">had driven her night-wandering chariot</l>
                <l n="300">to the mid-arch of heaven. Aeneas sate,</l>
@@ -10724,7 +10716,7 @@
                <l n="391">he chose, well-weighing, who should lead the charge,</l>
                <l n="392">who at the leaguered walls the fight sustain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="287">
+            <div resp="p" n="287" type="card">
                <l n="393">Aeneas straightway from his lofty ships</l>
                <l n="394">lets down his troop by bridges. Some await</l>
                <l n="395">the ebbing of slack seas, and boldly leap</l>
@@ -10751,7 +10743,7 @@
                <l n="416">of shattered oars and thwarts entangles them,</l>
                <l n="417">or ebb of swirling waters sucks them down.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="308">
+            <div resp="p" n="308" type="card">
                <l n="418">Turnus no lingering knows, but fiercely hurls</l>
                <l n="419">his whole line on the Teucrians, and makes stand</l>
                <l n="420">along the shore. Now peals the trumpet's call.</l>
@@ -10826,7 +10818,7 @@
                <l n="488">the line of Trojans on the Latian line</l>
                <l n="489">hurls itself, limb on limb and man on man.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="362">
+            <div resp="p" n="362" type="card">
                <l n="490">But at a distance where the river's flood</l>
                <l n="491">had scattered rolling boulders and torn trees</l>
                <l n="492">uprooted from the shore, young Pallas spied</l>
@@ -10854,7 +10846,7 @@
                <l n="514">across the sea to <placeName key="perseus,Troy">Troy</placeName>?” He said, and sprang</l>
                <l n="515">full in the centre of his gathered foes.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="380">
+            <div resp="p" n="380" type="card">
                <l n="516">First in his path was Lagus, thither led</l>
                <l n="517">by evil stars; whom, as he tried to lift</l>
                <l n="518">a heavy stone, the shaft of Pallas pierced</l>
@@ -10917,7 +10909,7 @@
                <l n="575">over Imaon, his ill-fated breast</l>
                <l n="576">lay naked to th' Arcadian's hungry spear.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="426">
+            <div resp="p" n="426" type="card">
                <l n="577">But Lausus, seeing such a hero slain,</l>
                <l n="578">bade his troop have no fear, for he himself</l>
                <l n="579">was no small strength in war; and first he slew</l>
@@ -10937,7 +10929,7 @@
                <l n="593">to close in battle, but each hero found</l>
                <l n="594">a later doom at hands of mightier foes.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="439">
+            <div resp="p" n="439" type="card">
                <l n="595">Now Turnus' goddess-sister bids him haste</l>
                <l n="596">to Lausus' help. So he, in wheeling car,</l>
                <l n="597">cut through the lines; and when his friends he saw,</l>
@@ -11034,7 +11026,7 @@
                <l n="687">bore thee to battle and now bears away;</l>
                <l n="688">yet leavest thou full tale of foemen slain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="510">
+            <div resp="p" n="510" type="card">
                <l n="689">No doubtful rumor to Aeneas breaks</l>
                <l n="690">the direful news, but a sure messenger</l>
                <l n="691">tells him his followers' peril, and implores</l>
@@ -11124,7 +11116,7 @@
                <l n="774">their captain to the ground, and bore away</l>
                <l n="775">the chariot to the river's distant shore.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="575">
+            <div resp="p" n="575" type="card">
                <l n="776">Meanwhile, with two white coursers to their car,</l>
                <l n="777">the brothers Lucagus and Liger drove</l>
                <l n="778">into the heart of battle: Liger kept</l>
@@ -11167,7 +11159,7 @@
                <l n="815">the boy Ascanius from the ramparts came,</l>
                <l n="816">his warriors with him; for the siege had failed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="606">
+            <div resp="p" n="606" type="card">
                <l n="817">Now Jupiter to Juno thus began:</l>
                <l n="818">“O ever-cherished spouse and sister dear,</l>
                <l n="819">surely 't is Venus—as thy mind misgave—</l>
@@ -11206,7 +11198,7 @@
                <l n="852">wouldst but refashion to some happier end</l>
                <l n="853">the things by thee begun—for thou hast power!”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="633">
+            <div resp="p" n="633" type="card">
                <l n="854">She ceased; and swiftly from the peak of heaven</l>
                <l n="855">moved earthward, trailing cloud-wrack through the air,</l>
                <l n="856">and girdled with the storm. She took her way </l>
@@ -11233,7 +11225,7 @@
                <l n="877">he followed, flashing far his naked sword;</l>
                <l n="878">nor saw the light winds waft his dream away.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="653">
+            <div resp="p" n="653" type="card">
                <l n="879">By chance in covert of a lofty crag</l>
                <l n="880">a ship stood fastened and at rest; her sides</l>
                <l n="881">showed ready bridge and stairway; she had brought</l>
@@ -11283,7 +11275,7 @@
                <l n="925">o'er yielding waters and propitious tides,</l>
                <l n="926">far as his father Daunus' ancient town.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="689">
+            <div resp="p" n="689" type="card">
                <l n="927">At Jove's command Mezentius, breathing rage,</l>
                <l n="928">now takes the field and leads a strong assault</l>
                <l n="929">against victorious <placeName key="perseus,Troy">Troy</placeName>. The Tuscan ranks</l>
@@ -11324,7 +11316,7 @@
                <l n="963">he, all unterrified, makes frequent stand,</l>
                <l n="964">gnashing his teeth, and shaking off their spears.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="719">
+            <div resp="p" n="719" type="card">
                <l n="965">From ancient Corythus had Acron come,</l>
                <l n="966">a Greek, who left half-sung his wedding-song,</l>
                <l n="967">and was an exile; him Mezentius saw</l>
@@ -11365,7 +11357,7 @@
                <l n="1002">inexorable rest and iron slumber,</l>
                <l n="1003">and in unending night their vision closed.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="747">
+            <div resp="p" n="747" type="card">
                <l n="1004">Then Caedicus cut down Alcathous,</l>
                <l n="1005">Sacrator slew Hydaspes, Rapo smote</l>
                <l n="1006">Parthenius and Orses stout and strong;</l>
@@ -11379,7 +11371,7 @@
                <l n="1014">by skilled Nealces, of illustrious name</l>
                <l n="1015">for spear well cast and far-surprising bow.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="755">
+            <div resp="p" n="755" type="card">
                <l n="1016">Thus Mars relentless holds in equal scale</l>
                <l n="1017">slaughters reciprocal and mutual woe;</l>
                <l n="1018">the victors and the vanquished kill or fall</l>
@@ -11401,7 +11393,7 @@
                <l n="1034">his feet in earth and hides his brows in cloud;—</l>
                <l n="1035">so Ioomed Mezentius with his ponderous arms.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="769">
+            <div resp="p" n="769" type="card">
                <l n="1036">To match him now, Aeneas, Iooking down</l>
                <l n="1037">the long array of war, came forth in arms</l>
                <l n="1038">to challenge and defy. But quailing not,</l>
@@ -11487,7 +11479,7 @@
                <l n="1117">with his own hand the fallen foe: dark blood</l>
                <l n="1118">defiled those princely tresses braided fair.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="833">
+            <div resp="p" n="833" type="card">
                <l n="1119">Meanwhile Mezentius by the <placeName key="tgn,1130786">Tiber</placeName>'s wave</l>
                <l n="1120">with water staunched his wound, and propped his weight</l>
                <l n="1121">against a tree; upon its limbs above</l>
@@ -11545,7 +11537,7 @@
                <l n="1173">surged in his heart of sorrow, wrath, and shame;</l>
                <l n="1174">and thrice with loud voice on his foe he called.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="873">
+            <div resp="p" n="873" type="card">
                <l n="1175">Aeneas heard and made exulting vow:</l>
                <l n="1176">“Now may the Father of the gods on high,</l>
                <l n="1177">and great Apollo hear! Begin the fray!”</l>
@@ -11597,8 +11589,8 @@
                <l n="1223">his vital breath gushed forth in streaming gore.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="11">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="11" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">Up from the sea now soared the dawning day:</l>
                <l n="2">Aeneas, though his sorrow bids him haste</l>
                <l n="3">to burial of the slain, and his sad soul</l>
@@ -11636,7 +11628,7 @@
                <l n="35">of virtue's crown, was seized by doom unblest,</l>
                <l n="36">and to the bitterness of death consigned.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="29">
+            <div resp="p" n="29" type="card">
                <l n="37">Weeping he spoke, and slowly backward drew</l>
                <l n="38">to the tent-door, where by the breathless clay</l>
                <l n="39">of Pallas stood Acoetes, aged man,</l>
@@ -11728,7 +11720,7 @@
                <l n="125">I bid thee hail, farewell!” In silence then</l>
                <l n="126">back to the stronghold's Iofty walls he moved.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="100">
+            <div resp="p" n="100" type="card">
                <l n="127">Now envoys from the Latin citadel</l>
                <l n="128">came olive-crowned, to plead for clemency:</l>
                <l n="129">would he not yield those bodies of the dead</l>
@@ -11783,7 +11775,7 @@
                <l n="178">stout oak and odorous cedar, piling high</l>
                <l n="179">harvest of ash-trees on the creaking wain.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="139">
+            <div resp="p" n="139" type="card">
                <l n="180">Now Rumor, herald of prodigious woe,</l>
                <l n="181">to King Evander hied, Evander's house</l>
                <l n="182">and city filling, where, but late, her word</l>
@@ -11845,7 +11837,7 @@
                <l n="238">has no joy left to pray for, save to bring</l>
                <l n="239">my son that solace in the shadowy land.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="182">
+            <div resp="p" n="182" type="card">
                <l n="240">Meanwhile o'er sorrowing mortals the bright morn</l>
                <l n="241">had lifted her mild beam, renewing so</l>
                <l n="242">the burden of man's toil. Aeneas now</l>
@@ -11874,7 +11866,7 @@
                <l n="265">till cooling night re-shifts the globe of heaven,</l>
                <l n="266">thick-strewn with numberless far-flaming stars.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="203">
+            <div resp="p" n="203" type="card">
                <l n="267">Likewise the mournful Latins far away</l>
                <l n="268">have built their myriad pyres. Yet of the slain</l>
                <l n="269">not few in graves are laid, and borne with tears</l>
@@ -11904,7 +11896,7 @@
                <l n="293">protects him, and his high renown in arms</l>
                <l n="294">defends his cause with well-won trophies fair.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="225">
+            <div resp="p" n="225" type="card">
                <l n="295">Amid these tumults of the wrathful throng,</l>
                <l n="296">lo, the ambassadors to Diomed</l>
                <l n="297">arrive with cloudy forehead from their quest</l>
@@ -11929,7 +11921,7 @@
                <l n="316">fell silence, while the princely Venulus,</l>
                <l n="317">heeding his Iord's behest, began the parle:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="243">
+            <div resp="p" n="243" type="card">
                <l n="318">“My countrymen,” he said, “our eyes have seen</l>
                <l n="319">strongholds of Greeks and Diomed the King.</l>
                <l n="320">We braved all perils to our journey's end</l>
@@ -12004,7 +11996,7 @@
                <l n="388">now hast thou heard, good King, a king's reply,</l>
                <l n="389">and how his wisdom sits in this vast war.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="296">
+            <div resp="p" n="296" type="card">
                <l n="390">Soon as the envoys ceased, an answering sound</l>
                <l n="391">of troubled voices through the council flowed</l>
                <l n="392">of various note, as when its rocky bed</l>
@@ -12015,7 +12007,7 @@
                <l n="397">the King, invoking first the gods in heaven,</l>
                <l n="398">thus from a Iofty throne his sentence gave:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="302">
+            <div resp="p" n="302" type="card">
                <l n="399">“Less evil were our case, if long ago</l>
                <l n="400">ye had provided for your country's weal,</l>
                <l n="401">O Latins, as I urged. It is no time</l>
@@ -12118,7 +12110,7 @@
                <l n="498">of thy undaunted sires, Iook yonder where</l>
                <l n="499">the Trojan chieftain waits thee in the field.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="376">
+            <div resp="p" n="376" type="card">
                <l n="500">By such discourse he stirred the burning blood</l>
                <l n="501">of Turnus, who groaned loud and from his heart</l>
                <l n="502">this utterance hurled: “O Drances, thou art rich</l>
@@ -12151,7 +12143,7 @@
                <l n="528">a thousand in a day,—though I was penned</l>
                <l n="529">a prisoner in the ramparts of my foe.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="399">
+            <div resp="p" n="399" type="card">
                <l n="530">War will not save us? Fling that prophecy</l>
                <l n="531">on the doomed Dardan's head, or on thy own,</l>
                <l n="532">thou madman! Aye, with thy vile, craven soul</l>
@@ -12218,7 +12210,7 @@
                <l n="593">the debt of death, if wrath from Heaven impend;</l>
                <l n="594">nor his a brave man's name and fame to share.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="445">
+            <div resp="p" n="445" type="card">
                <l n="595">Thus in their doubtful cause the chieftains strove.</l>
                <l n="596">Meanwhile Aeneas his assaulting line</l>
                <l n="597">moved forward. The ill tidings wildly sped</l>
@@ -12333,7 +12325,7 @@
                <l n="706">and, ranging the familiar tract, chose out</l>
                <l n="707">his cunning ambush in the dangerous grove.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="532">
+            <div resp="p" n="532" type="card">
                <l n="708">But now in dwellings of the gods on high,</l>
                <l n="709">Diana to fleet-footed Opis called,</l>
                <l n="710">a virgin from her consecrated train,</l>
@@ -12368,7 +12360,7 @@
                <l n="739">fast bound her to the spear; then, poising it</l>
                <l n="740">high in his right hand, thus he called on Heaven:</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="557">
+            <div resp="p" n="557" type="card">
                <l n="741">‘Latona's daughter, whose benignant grace</l>
                <l n="742">protects this grove, behold, her father now</l>
                <l n="743">gives thee this babe for handmaid! Lo, thy spear</l>
@@ -12426,7 +12418,7 @@
                <l n="795">took her loud pathway on the moving winds,</l>
                <l n="796">and mantled in dark storm her shape divine.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="597">
+            <div resp="p" n="597" type="card">
                <l n="797">Meanwhile the Teucrian legions to the wall</l>
                <l n="798">draw near, with Tuscan lords and cavalry</l>
                <l n="799">in numbered troops arrayed. Loud-footed steeds</l>
@@ -12455,7 +12447,7 @@
                <l n="822">hurled from a catapult; full length he falls,</l>
                <l n="823">surrend'ring to the winds his fleeting soul.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="618">
+            <div resp="p" n="618" type="card">
                <l n="824">Now all is panic: holding their light shields</l>
                <l n="825">behind their backs, the Latin horse wheel round,</l>
                <l n="826">retreating to the wall, the Trojan foe</l>
@@ -12498,7 +12490,7 @@
                <l n="863">where fatal swords were crossed and cut their way</l>
                <l n="864">through many a wound to famous death and fair.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="648">
+            <div resp="p" n="648" type="card">
                <l n="865">Swift through the midmost slaughter proudly strides</l>
                <l n="866">the quiver-girt Camilla, with one breast</l>
                <l n="867">thrust naked to the fight, like Amazon.</l>
@@ -12524,7 +12516,7 @@
                <l n="885">'mid acclamations shrill, and all her host</l>
                <l n="886">of women clash in air the moon-shaped shield.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="664">
+            <div resp="p" n="664" type="card">
                <l n="887">What warrior first, whom last, did thy strong spear,</l>
                <l n="888">fierce virgin, earthward fling? Or what thy tale</l>
                <l n="889">of prostrate foes laid gasping on the ground?</l>
@@ -12562,7 +12554,7 @@
                <l n="921">unto the ghosts of thy dead sires wilt tell,</l>
                <l n="922">that 't was Camilla's javelin struck thee down.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="690">
+            <div resp="p" n="690" type="card">
                <l n="923">The turn of Butes and Orsilochus</l>
                <l n="924">came next, who were the Trojans, hugest twain:</l>
                <l n="925">yet Butes with her javelin-point she clove</l>
@@ -12613,7 +12605,7 @@
                <l n="970">holds tight and rips,—while through celestial air</l>
                <l n="971">the torn, ensanguined plumage floats along.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="725">
+            <div resp="p" n="725" type="card">
                <l n="972">But now not blindly from Olympian throne</l>
                <l n="973">the Sire of gods and men observant saw</l>
                <l n="974">how sped the day. Then to the conflict dire</l>
@@ -12705,7 +12697,7 @@
                <l n="1060">that curse and plague destroy, may I unpraised</l>
                <l n="1061">safe to the cities of my sires return.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="794">
+            <div resp="p" n="794" type="card">
                <l n="1062">Apollo heard and granted half the prayer,</l>
                <l n="1063">but half upon the passing breeze he threw:</l>
                <l n="1064">granting his votary he should confound</l>
@@ -12758,7 +12750,7 @@
                <l n="1111">the gathered Trojans ran, with Tuscan lords</l>
                <l n="1112">and King Evander's troops of Arcady.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="836">
+            <div resp="p" n="836" type="card">
                <l n="1113">Fair Opis, keeping guard for Trivia</l>
                <l n="1114">in patient sentry on a lofty hill, beheld</l>
                <l n="1115">unterrified the conflict's rage. Yet when,</l>
@@ -12803,7 +12795,7 @@
                <l n="1154">scorned and forgotten, on the dusty field, </l>
                <l n="1155">while Opis soared to bright Olympian air.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="868">
+            <div resp="p" n="868" type="card">
                <l n="1156">Camilla's light-armed troop, its virgin chief</l>
                <l n="1157">now fallen, were the first to fly; in flight</l>
                <l n="1158">the panic-stricken Rutule host is seen</l>
@@ -12841,7 +12833,7 @@
                <l n="1190">as if, well-armed in steel, each bosom bold</l>
                <l n="1191">would fain in such defence be first to die.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="896">
+            <div resp="p" n="896" type="card">
                <l n="1192">Meanwhile th' unpitying messenger had flown</l>
                <l n="1193">to Turnus in the wood; the warrior heard</l>
                <l n="1194">from <placeName>Acca</placeName> of the wide confusion spread,</l>
@@ -12871,8 +12863,8 @@
                <l n="1218">both pitch their camps and make their ramparts strong.</l>
             </div>
          </div>
-         <div type="textpart" subtype="book" n="12">
-            <div type="textpart" subtype="card" resp="p" n="1">
+         <div n="12" type="book">
+            <div resp="p" n="1" type="card">
                <l n="1">When Turnus marks how much the Latins quail</l>
                <l n="2">in adverse war, how on himself they call</l>
                <l n="3">to keep his pledge, and with indignant eyes</l>
@@ -12897,7 +12889,7 @@
                <l n="22">efface the general shame; or let him claim</l>
                <l n="23">the conquest, and Lavinia be his bride.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="18">
+            <div resp="p" n="18" type="card">
                <l n="24">To him Latinus with unruffled mind</l>
                <l n="25">thus made reply: “O youth surpassing brave!</l>
                <l n="26">The more thy sanguinary valor burns</l>
@@ -12957,7 +12949,7 @@
                <l n="79">to hide him in her woman's skirt of cloud,</l>
                <l n="80">herself in dim, deluding shade concealed.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="54">
+            <div resp="p" n="54" type="card">
                <l n="81">But now the Queen, whose whole heart shrank in fear</l>
                <l n="82">from these new terms of duel, wept aloud,</l>
                <l n="83">and like one dying clasped her fiery son:</l>
@@ -12997,7 +12989,7 @@
                <l n="117">an end of war; on yonder mortal field</l>
                <l n="118">let each man woo Lavinia for his bride.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="81">
+            <div resp="p" n="81" type="card">
                <l n="119">So saying, he hied him to his lordly halls,</l>
                <l n="120">summoned his steeds, and with pleased eye surveyed</l>
                <l n="121">their action proud: them Orithyia, bride</l>
@@ -13032,7 +13024,7 @@
                <l n="150">would tear the winds in pieces; while his hoofs</l>
                <l n="151">toss up the turf and sand, rehearsing war.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="107">
+            <div resp="p" n="107" type="card">
                <l n="152">That self-same day with aspect terrible</l>
                <l n="153">Aeneas girt him in the wondrous arms</l>
                <l n="154">his mother gave; made sharp his martial steel,</l>
@@ -13043,7 +13035,7 @@
                <l n="159">but on Latinus bade his heralds lay</l>
                <l n="160">unyielding terms and laws of peace impose.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="113">
+            <div resp="p" n="113" type="card">
                <l n="161">Soon as the breaking dawn its glory threw</l>
                <l n="162">along the hills, and from the sea's profound</l>
                <l n="163">leaped forth the horses of the sun-god's car,</l>
@@ -13073,7 +13065,7 @@
                <l n="187">of the unarmed, and sit them there at gaze,</l>
                <l n="188">or on the columned gates expectant stand.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="134">
+            <div resp="p" n="134" type="card">
                <l n="189">But Juno, peering from that summit proud</l>
                <l n="190">which is to-day the Alban (though that time</l>
                <l n="191">nor name nor fame the hallowed mountain knew),</l>
@@ -13114,7 +13106,7 @@
                <l n="226">such boldness to essay.” With this command</l>
                <l n="227">she left the nymph dismayed and grieving sore.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="161">
+            <div resp="p" n="161" type="card">
                <l n="228">Meanwhile the kings ride forth: Latinus first,</l>
                <l n="229">looming tall-statured from his four-horse car;</l>
                <l n="230">twelve rays of gold encircle his bright brow,</l>
@@ -13134,7 +13126,7 @@
                <l n="244">they mark each victim's brow, outpouring wine</l>
                <l n="245">from shallow bowls, the sacrifice to bless.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="175">
+            <div resp="p" n="175" type="card">
                <l n="246">Then good Aeneas, his sword drawn, put forth</l>
                <l n="247">this votive prayer: “O Sun in heaven; and thou,</l>
                <l n="248">
@@ -13168,7 +13160,7 @@
                <l n="275">shall build my stronghold, but our citadel</l>
                <l n="276">shall bear forevermore Lavinia's name.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="195">
+            <div resp="p" n="195" type="card">
                <l n="277">Aeneas thus: then with uplifted eyes</l>
                <l n="278">Latinus swore, his right hand raised to heaven:</l>
                <l n="279">“I too, Aeneas, take the sacred vow.</l>
@@ -13201,7 +13193,7 @@
                <l n="306">drew forth the quivering vitals, and with flesh</l>
                <l n="307">on loaded chargers heaped the sacrifice.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="216">
+            <div resp="p" n="216" type="card">
                <l n="308">But to Rutulian eyes th' approaching joust</l>
                <l n="309">seemed all ill-matched; and shifting hopes and fears</l>
                <l n="310">disturbed their hearts the closer they surveyed</l>
@@ -13296,7 +13288,7 @@
                <l n="399">Even Latinus fled; his stricken gods</l>
                <l n="400">far from his violated oath he bore.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="287">
+            <div resp="p" n="287" type="card">
                <l n="401">Some leaped to horse or chariot and rode</l>
                <l n="402">with naked swords in air. Messapus, wild</l>
                <l n="403">to break the truce, assailed the Tuscan King,</l>
@@ -13377,7 +13369,7 @@
                <l n="477">when grappling with a foe, or o'er the field</l>
                <l n="478">speeding a war-horse faster than the wind.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="346">
+            <div resp="p" n="346" type="card">
                <l n="479">Elsewhere Eumedes through a throng of foes</l>
                <l n="480">to battle rode, the high-born Dolon's child,</l>
                <l n="481">famous in war, who bore his grandsire's name,</l>
@@ -13463,7 +13455,7 @@
                <l n="561">of men in fierce fight, and of men who fall</l>
                <l n="562">beneath relentless Mars, rends all the air.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="411">
+            <div resp="p" n="411" type="card">
                <l n="563">Then Venus, by her offspring's guiltless woe</l>
                <l n="564">sore moved, did cull from Cretan Ida's crest</l>
                <l n="565">some dittany, with downy leaf and stem</l>
@@ -13503,7 +13495,7 @@
                <l n="599">the story of our line. Heed honor's call,</l>
                <l n="600">like Sire Aeneas and Hector thy close kin.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="441">
+            <div resp="p" n="441" type="card">
                <l n="601">After such farewell word, he from the gates</l>
                <l n="602">in mighty stature strode, and swung on high</l>
                <l n="603">his giant spear. With him in serried line</l>
@@ -13540,7 +13532,7 @@
                <l n="634">for through the war-cloud he but seeks the arms</l>
                <l n="635">of Turnus, and to single combat calls.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="468">
+            <div resp="p" n="468" type="card">
                <l n="636">The warrior-maid Juturna, seeing this,</l>
                <l n="637">distraught with terror, strikes down from his place</l>
                <l n="638">Metiscus, Turnus' charioteer, who dropped</l>
@@ -13584,7 +13576,7 @@
                <l n="676">grim, never-pitying slaughter, and flung free</l>
                <l n="677">the bridle of his rage. </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="500">
+            <div resp="p" n="500" type="card">
                <l n="678">What voice divine</l>
                <l n="679">such horror can make known? What song declare</l>
                <l n="680">the bloodshed manifold, the princes slain,</l>
@@ -13624,7 +13616,7 @@
                <l n="714">either indomitable heart; and now</l>
                <l n="715">each hero's full strength to the slaughter moves.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="529">
+            <div resp="p" n="529" type="card">
                <l n="716">Behold Murranus, boasting his high birth</l>
                <l n="717">from far-descended sires of storied name,</l>
                <l n="718">the line of <placeName key="tgn,7003080">Latium</placeName>'s kings! Aeneas now</l>
@@ -13660,7 +13652,7 @@
                <l n="748">of might and skill; no sloth nor lingering now,</l>
                <l n="749">but in one far-spread conflict all contend.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="554">
+            <div resp="p" n="554" type="card">
                <l n="750">His goddess-mother in Aeneas' mind</l>
                <l n="751">now stirred the purpose to make sudden way</l>
                <l n="752">against the city-wall, in swift advance</l>
@@ -13716,7 +13708,7 @@
                <l n="802">noise and confusion ring; the fatal cloud</l>
                <l n="803">pours forth incessant on the vacant air.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="593">
+            <div resp="p" n="593" type="card">
                <l n="804">But now a new adversity befell</l>
                <l n="805">the weary Latins, which with common woe</l>
                <l n="806">shook the whole city to its heart. The Queen,</l>
@@ -13743,7 +13735,7 @@
                <l n="827">to see his consort's doom, his falling throne;</l>
                <l n="828">and heaped foul dust upon his hoary hair.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="614">
+            <div resp="p" n="614" type="card">
                <l n="829">Meanwhile the warrior Turnus far afield</l>
                <l n="830">pursued a scattered few; but less his speed,</l>
                <l n="831">for less and less his worn steeds worked his will;</l>
@@ -13794,7 +13786,7 @@
                <l n="876">to join your company; I have not been</l>
                <l n="877">unworthy offspring of my kingly sires.”</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="650">
+            <div resp="p" n="650" type="card">
                <l n="878">Scarce had he said, when through the foeman's line</l>
                <l n="879">Saces dashed forth upon a foaming steed,</l>
                <l n="880">his face gashed by an arrow. He cried loud</l>
@@ -13822,7 +13814,7 @@
                <l n="902">goaded to fury, and a warrior's pride</l>
                <l n="903">of valor proven. </l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="672">
+            <div resp="p" n="672" type="card">
                <l n="904">But when first the light</l>
                <l n="905">of reason to his blinded soul returned,</l>
                <l n="906">he strained his flaming eyeballs to behold</l>
@@ -13861,7 +13853,7 @@
                <l n="939">our broken truce by judgment of the sword.”</l>
                <l n="940">Back fell the hostile lines, and cleared the field.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="697">
+            <div resp="p" n="697" type="card">
                <l n="941">But Sire Aeneas, hearing Turnus' name,</l>
                <l n="942">down the steep rampart from the citadel</l>
                <l n="943">unlingering tried, all lesser task laid by,</l>
@@ -13903,7 +13895,7 @@
                <l n="978">th' unequal fortunes of the heroes twain:</l>
                <l n="979">one to vast labors doomed and one to die.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="728">
+            <div resp="p" n="728" type="card">
                <l n="980">Soon Turnus, reckless of the risk, leaped forth,</l>
                <l n="981">upreached his whole height to his lifted sword,</l>
                <l n="982">and struck: the Trojans and the Latins pale</l>
@@ -13927,7 +13919,7 @@
                <l n="1000">for <placeName key="perseus,Troy">Troy</placeName>'s close ring confines him, and one way</l>
                <l n="1001">a wide swamp lies, one way a frowning wall.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="746">
+            <div resp="p" n="746" type="card">
                <l n="1002">But lo! Aeneas—though the arrow's wound</l>
                <l n="1003">still slackens him and oft his knees refuse</l>
                <l n="1004">their wonted step—pursues infuriate</l>
@@ -13958,7 +13950,7 @@
                <l n="1029">is no light laurel or a youthful game:</l>
                <l n="1030">for Turnus' doom and death their race is run.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="766">
+            <div resp="p" n="766" type="card">
                <l n="1031">But haply in that place a sacred tree,</l>
                <l n="1032">a bitter-leaved wild-olive, once had grown,</l>
                <l n="1033">to Faunus dear, and venerated oft</l>
@@ -13995,7 +13987,7 @@
                <l n="1064">uptowered in wrath, and with confronting brows</l>
                <l n="1065">they set them to the war-god's breathless game.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="791">
+            <div resp="p" n="791" type="card">
                <l n="1066">Meanwhile th' Olympian sovereign supreme</l>
                <l n="1067">to Juno speaks, as from an amber cloud</l>
                <l n="1068">the strife she views: “My Queen, what end shall be?</l>
@@ -14073,7 +14065,7 @@
                <l n="1138">be changed, as with much comfort in her breast</l>
                <l n="1139">she left <placeName key="perseus,Olympos,Lycia">Olympus</placeName> and her haunt of cloud.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="843">
+            <div resp="p" n="843" type="card">
                <l n="1140">After these things Jove gave his kingly mind</l>
                <l n="1141">to further action, that he might forthwith</l>
                <l n="1142">cut off Juturna from her brother's cause.</l>
@@ -14134,7 +14126,7 @@
                <l n="1197">her mournful brow; then in her stream divine</l>
                <l n="1198">the nymph sank sighing to its utmost cave.</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="887">
+            <div resp="p" n="887" type="card">
                <l n="1199">Aeneas now is near; and waving wide</l>
                <l n="1200">a spear like some tall tree, he called aloud</l>
                <l n="1201">with unrelenting heart: “What stays thee now?</l>
@@ -14177,7 +14169,7 @@
                <l n="1238">what path to fly, what way confront the foe:—</l>
                <l n="1239">no chariot now, nor sister-charioteer!</l>
             </div>
-            <div type="textpart" subtype="card" resp="p" n="919">
+            <div resp="p" n="919" type="card">
                <l n="1240">Above his faltering terror gleams in air</l>
                <l n="1241">Aeneas' fatal spear; whose eye perceived</l>
                <l n="1242">the moment of success, and all whose strength</l>
@@ -14227,7 +14219,6 @@
                <l n="1286">sank cold and helpless; and the vital breath </l>
                <l n="1287">with moan of wrath to darkness fled away.</l>
             </div>
-         </div>
          </div>
       </body>
    </text>

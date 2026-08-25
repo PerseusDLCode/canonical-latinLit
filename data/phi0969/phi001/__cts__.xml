@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <work xmlns="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi0969.phi001" xml:lang="lat" groupUrn="urn:cts:latinLit:phi0969">
     <title xml:lang="lat">Saturae</title>
     
@@ -6,4 +7,4 @@
         <description xml:lang="eng">Persius. Juvenal and Persius. Ramsay, G. G., editor. London, New York: William Heinemann, 
             G. P. Putnam's Sons, 1918.</description>
     </edition>
-</work>
+<genre confidence="high">verse-poem-line</genre></work>

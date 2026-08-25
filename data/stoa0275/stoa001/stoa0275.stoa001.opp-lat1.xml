@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">Ad Martyras</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Ad Martyras</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-            </imprint>
-            <biblScope unit="volume">1</biblScope>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=32%3Bownerid=13510798896211526-36">HathiTrust</ref>
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-    <encodingDesc>
-      
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa001.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.3"/>
-<head>AD MARTYRES</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Inter carnis alimenta, benedicti martyres designati, quae vobis 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa001.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                  </imprint>
+                  <biblScope unit="volume">1</biblScope>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=32%3Bownerid=13510798896211526-36">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa001.opp-lat1">
+         <pb xml:id="v.1.p.3"/>
+         <head>AD MARTYRES</head>
+         <div n="1" type="chapter">
+            <p>Inter carnis alimenta, benedicti martyres designati, quae vobis 
 et domina mater ecclesia de uberibus suis et singuli fratres de
 opibus suis propriis in carcerem subministrant, capite aliquid et
 a nobis, quod faciat ad spiritum quoque educandum. Carnem
@@ -91,10 +93,9 @@ earcere exorare consueverunt. Et ideo eam propterea in vobis
 
 habere et fovere et custodire debetis, ut, si forte, et aliis praestare
 possitis.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Cetera aeque animi impedimenta usque ad limen carceris
+         </div>
+         <div n="2" type="chapter">
+            <p> Cetera aeque animi impedimenta usque ad limen carceris
 deduxerint vos, quousque et parentes vestri. Exinde segregati
 estis ab ipso mundo, quanto magis a saeculo rebusque eius?
 Nec hoc vos consternet, quod segregati estis a mundo. Si enim
@@ -141,11 +142,11 @@ sed illam viam, quae ad deum ducit. Quotiens eam spiritu deambulaveris,
 totiens in carcere non eris. Nihil crus sentit in nervo,
 cum animus in caelo est. Totum hominem animus circumfert et,
 quo velit, transfert. Ubi autem erit cor tuum, illic erit et thesaurus
-tuus. Ibi ergo sit cor nostrum, ubi volumus habere thesaurum. <bibl n="Matth. VI. 21."/></p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Sit nunc, benedicti, carcer etiam Christianis molestus. Vocati 
+tuus. Ibi ergo sit cor nostrum, ubi volumus habere thesaurum. <bibl n="Matth. VI. 21."/>
+            </p>
+         </div>
+         <div n="3" type="chapter">
+            <p>Sit nunc, benedicti, carcer etiam Christianis molestus. Vocati 
 sumus ad militiam dei vivi iam tunc, cum in sacramenti verba
 respondemus. Nemo miles ad bellum cum deliciis venit nec de
 cubiculo ad aciem procedit, sed de papilionibus expeditis et substrictis,
@@ -176,10 +177,9 @@ consequantur. Nos aeternam consecuturi carcerem nobis
 pro palaestra interpretamur, ut ad stadium tribunalis bene
 exercitati incommodis omnibus producamur, quia virtus duritia extruitur,
 mollitia vero destruitur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Scimus ex dominico praecepto, quod caro infirma sit, spiritus 
+         </div>
+         <div n="4" type="chapter">
+            <p>Scimus ex dominico praecepto, quod caro infirma sit, spiritus 
 promptus. Non ergo nobis blandiamur, quia dominus consensit <bibl n="Matth. XXVI, 44."/>
 carnem infirmam esse. Propterea enim praedixit spiritum promptum,
 ut ostenderet, quid cui debeat esse subiectum, scilicet ut
@@ -231,10 +231,9 @@ modicae sunt istae passiones ad consecutionem gloriae caelestis et
 divinae mercedis. Tanti vitreum, quanti verum margaritum?
 Quis ergo non libentissime tantum pro vero habeat erogare, quantum
 alii pro falso?</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Omitto nunc gloriae causam. Eadem omnia saevitiae et cruciatus 
+         </div>
+         <div n="5" type="chapter">
+            <p>Omitto nunc gloriae causam. Eadem omnia saevitiae et cruciatus 
 certamina iam apud homines affectatio quoque et morbus
 quidam animi conculcavit. Quot otiosos affectatio armorum ad
 gladium locat? Certe ad feras ipsas affectatione descendunt,
@@ -247,10 +246,9 @@ inambulaverunt. Haec, benedicti, non sine causa dominus
 in saeculum admisit, sed ad nos et nunc exhortandos et in
 illo die confundendos, si reformidaverimus pati pro veritate in
 salutem quae alii affectaverunt pro vanitate in perditionem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Sed haec exempla constantiae omittamus de affectatione venientis.
+         </div>
+         <div n="6" type="chapter">
+            <p> Sed haec exempla constantiae omittamus de affectatione venientis.
 Convertamur ad ipsam condicionis humanae contemplationem,
 ut et illa nos instruant, si qua constanter adeunda sint
 quae et invitis evenire consueverunt. Quotiens enim incendia vivos
@@ -262,10 +260,10 @@ quod in causa dei pati dubitat. Ad hoc quidem vel praesentia nobis
 tempora documenta sint, quantae qualesque personae inopinatos
 natalibus et dignitatibus et corporibus et aetatibus suis exitus referunt
 hominis causa, aut ab ipso, si contra cum fecerint, aut ab
-adversariis eius, si pro eo steterint.</p></div>
-<pb xml:id="v.1.p.15"/>
-
-<pb xml:id="v.1.p.16"/>
-</div></body></text>
-
+adversariis eius, si pro eo steterint.</p>
+         </div>
+         <pb xml:id="v.1.p.15"/>
+         <pb xml:id="v.1.p.16"/>
+      </body>
+   </text>
 </TEI>

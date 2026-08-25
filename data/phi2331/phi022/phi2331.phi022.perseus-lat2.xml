@@ -1,68 +1,84 @@
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng">
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="lat">Valeriani Duo</title>
-                <editor>David Magie</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-<principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>Rashmi Singhal</name>
-                </respStmt>
-                <funder n="org:Mellon">The Mellon Foundation</funder>
-                <funder n="org:Tufts">Tufts University</funder>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">2011-03-14</date>
-            </publicationStmt>
-            <notesStmt><note>OCR cleanup</note></notesStmt>
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <title xml:lang="lat">Scriptores Historiae Augustae</title>
-                        <editor>David Magie</editor>
-                        <imprint>
-                            <publisher>William Heinemann</publisher>
-                            <publisher>G.P. Putnam's Sons</publisher>
-                            <pubPlace>London</pubPlace>
-                            <pubPlace>New York</pubPlace>
-                            <date>1932</date>
-                        </imprint>
-                        <biblScope unit="volume">3</biblScope>
-                    </monogr>
-                    <series>
-                        <title>Loeb Classical Library</title>
-                    </series>
-                    <ref target="https://archive.org/details/scriptoreshistor03camb/page/4/mode/2up">Internet Archive</ref>
-                </biblStruct>
-                </sourceDesc>
-        </fileDesc>      
-        <encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
-                <refState unit="work"/>
-                <refState unit="chapter" n="chunk"/>
-                <refState unit="section"/>
-            </refsDecl>
-            
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="lat">Latin</language>
-                <language ident="grc">Greek</language>
-            </langUsage>
-        </profileDesc>
-    <revisionDesc><change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change></revisionDesc></teiHeader> <text xml:lang="lat"> <body><div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi2331.phi022.perseus-lat2">
-<div type="textpart" n="1" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
-<gap reason="omitted"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Valeriani Duo</title>
+            <editor>David Magie</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+            <funder n="org:Tufts">Tufts University</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-03-14</date>
+            <idno type="CTS">urn:cts:latinLit:phi2331.phi022.perseus-lat2</idno>
+         </publicationStmt>
+         <notesStmt>
+            <note>OCR cleanup</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Scriptores Historiae Augustae</title>
+                  <editor>David Magie</editor>
+                  <imprint>
+                     <publisher>William Heinemann</publisher>
+                     <publisher>G.P. Putnam's Sons</publisher>
+                     <pubPlace>London</pubPlace>
+                     <pubPlace>New York</pubPlace>
+                     <date>1932</date>
+                  </imprint>
+                  <biblScope unit="volume">3</biblScope>
+               </monogr>
+               <series>
+                  <title>Loeb Classical Library</title>
+               </series>
+               <ref target="https://archive.org/details/scriptoreshistor03camb/page/4/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="work"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi2331.phi022.perseus-lat2">
+         <div n="1" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
+               <gap reason="omitted"/>
 Sapori regi regum vel soli 1:
 <q>Si scirem posse aliquando Romanos penitus vinci, gauderem tibi
 <milestone unit="section" n="2"/>
@@ -76,29 +92,29 @@ audivimus certe quod Galli eos vicerint et ingentem illam civitatem incenderint 
 <milestone unit="section" n="5"/>
 Romanis, de longioribus exemplis et fortasse
 <note n="n22.2.1">So Salm.; Saporis rex regum uel solus P; Velsolus Peter </note>
-<note n="n22.2.2"> Hohl. </note>
-<pb n="p.4"/>
+                  <note n="n22.2.2"> Hohl. </note>
+                  <pb n="p.4"/>
 inferioribus
 <note target="n22.4.1"/>
 nihil dico. Mithradates Ponticus totam Asiam tenuit; certe victus est, certe Asia Romanorum
 <milestone unit="section" n="6"/>
 est. si meum consilium requiris, utere occasione pacis et Valerianum suis redde, ego gratulor felicitati tuae, ; si tamen illa uti tu scias.</q>
-</p>
-</div>
-<div type="textpart" n="2" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="2" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Velenus rex Cadusiorum sic scripsit:
 <q>Remissa mihi auxilia integra et incolumia gratanter accepi. at captum Valerianum principem principum non satis gratulor, magis gratuler, si redderetur. Romani enim
 <milestone unit="section" n="2"/>
 graviores tunc sunt, quando vincuntur. age igitur ut prudentem decet, nec fortuna te inflammet, quae multos decepit. Valerianus et filium imperatorem habet et nepotem Caesarem, et quid ad omnem orbem illum Romanum, qui contra te totus insurget?
 <milestone unit="section" n="3"/>
 redde igitur Valerianum et fac cum Romanis pacem, nobis etiam ob gentes Ponti eas profuturam.</q>
-</p>
-</div>
-<div type="textpart" n="3" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="3" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Artavasdes rex Armeniorum talem ad Saporem epistulam misit :
 <q>In partem gloriae venio, sed
 <milestone unit="section" n="2"/>
@@ -106,16 +122,16 @@ vereor ne non tam viceris quam bella severis. Valerianum et filius repetit et ne
 <note n="n22.4.1">inferioribus Obrecht, Peter; interioribus P,
 <foreign xml:lang="grc">*s</foreign>
 . </note>
-<pb n="p.6"/>
-<milestone unit="section" n="3"/>
+                  <pb n="p.6"/>
+                  <milestone unit="section" n="3"/>
 consentiunt aut Romanorum sunt, unum ergo senem cepisti sed
 <note target="n22.6.1"/>
 omnes gentes orbis terrarum infestissimas tibi fecisti, fortassis et nobis, qui auxilia misimus, qui vicini sumus, qui semper vobis inter vos pugnantibus laboramus.</q>
-</p>
-</div>
-<div type="textpart" n="4" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="4" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Bactriani et Hiberi et Albani et Tauroscythae Saporis litteras non receperunt sed ad Romanos duces scripserunt auxilia pollicentes ad Valerianum de captivitate liberandum.
 <milestone unit="section" n="2"/>
 Sed Valeriano apud Persas consenescente Odaenathus Palmyrenus collecto exercitu rem Romanam
@@ -123,17 +139,17 @@ Sed Valeriano apud Persas consenescente Odaenathus Palmyrenus collecto exercitu 
 prope in pristinum statum reddidit. cepit regis thesauros, cepit etiam, quas thesauris cariores habent
 <milestone unit="section" n="4"/>
 reges Parthici, concubinas, quare magis reformidans Romanos duces Sapor timore Ballistae atque Odaenathi in regnum suum ocius se recepit, atque hic interim finis belli fuit Persici. </p>
-</div>
-<div type="textpart" n="5" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="5" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Haec sunt digna cognitu de Valeriano, cuius per annos sexaginta vita laudabilis in eam conscenderat gloriam ut post omnes honores et magistratus insigniter gestos imperator fieret, non, ut solet, tumultuario populi concursu, non militum strepitu, sed iure meritorum et quasi ex totius orbis una sententia.
 <milestone unit="section" n="2"/>
 denique si data esset omnibus potestas promendi arbitrii quem imperatorem vellent, alter non esset electus.
 <milestone unit="section" n="3"/>
 Et ut scias quanta vis in Valeriano meritorum
 <note n="n22.6.1">cepisti sed Petschenig, Hohl; cepistis et P. </note>
-<pb n="p.8"/>
+               <pb n="p.8"/>
 fuerit
 <note target="n22.8.1"/>
 publicorum, ponam senatus consulta, quibus animadvertant omnes quid de illo semper amplissimus ordo indicaverit.
@@ -151,7 +167,7 @@ hostis vitiorum, hunc censorem omnes accipimus, hunc imitari omnes volumus, prim
 <note n="n22.8.1">fuerit
 <foreign xml:lang="grc">*s</foreign>
 , Peter, Hohl ; fuit P. </note>
-<pb n="p.10"/>
+                  <pb n="p.10"/>
 sanguine, emendatus vita, doctrina clarus, moribus
 <milestone unit="section" n="8"/>
 singularis, exemplum
@@ -160,10 +176,10 @@ antiquitatis.</q>
 quae cum essent saepius dicta, addiderunt,
 <q>omnes,</q>
 atque ita discessum est. </p>
-</div>
-<div type="textpart" n="6" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="6" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Hoc senatus consultum ubi Decius accepit, omnes aulicos convocavit, ipsum etiam Valerianum praecepit
 <note target="n22.10.2"/>
 rogari, atque in conventu summorum
@@ -189,14 +205,14 @@ non potes iudicare.</q>
 haec Decius, sed Valeriano sententia huiusmodi fuit:
 <q>Ne, quaeso, sanctissime imperator, ad hanc me necessitatem alliges, ut ego
 <note n="n22.10.1">exemplo P, Hohl. </note>
-<note n="n22.10.2"> praecepit
+                  <note n="n22.10.2"> praecepit
 <foreign xml:lang="grc">*s</foreign>
 ; praecipit P, Peter. </note>
-<note n="n22.10.3">pectoribus E; peccatoribus P. </note>
-<note n="n22.10.4"> statues tu Hohl; statues
+                  <note n="n22.10.3">pectoribus E; peccatoribus P. </note>
+                  <note n="n22.10.4"> statues tu Hohl; statues
 <foreign xml:lang="grc">*s</foreign>
 ; statio P; tu Peter. </note>
-<pb n="p.12"/>
+                  <pb n="p.12"/>
 iudicem de populo, de militibus, de senatu, de omni
 <milestone unit="section" n="8"/>
 penitus orbe iudicibus et tribunis ac ducibus, haec sunt propter
@@ -204,34 +220,35 @@ penitus orbe iudicibus et tribunis ac ducibus, haec sunt propter
 quae Augustum nomen tenetis ; apud vos censura desedit, non potest hoc implere privatus.
 <milestone unit="section" n="9"/>
 veniam igitur eius honoris peto, cui vita impar est, impar est confidentia, cui tempora sic repugnant, ut censuram hominum natura non quaerat.</q>
-</p>
-</div>
-<div type="textpart" n="7" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="7" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Poteram multa alia et senatus consulta et iudicia principum de
 <note target="n22.12.2"/>
 Valeriano proferre, nisi et vobis pleraque nota essent, et puderet altius virum extollere, qui fatali quadam necessitate superatus est. nunc ad Valerianum minorem revertar. </p>
-</div>
-<div type="textpart" n="8" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="8" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Valerianus iunior, alia quam Gallienus matre genitus, forma conspicuus, verecundia probabilis, eruditione pro aetate clarus, moribus periucundus atque a fratris dissolutione seiunctus, a patre absente Caesar est appellatus, a fratre, ut Caelestinus dicit,
 <milestone unit="section" n="2"/>
 Augustus, nihil habet praedicabile in vita, nisi quod est nobiliter natus, educatus optime et miserabiliter interemptus.
 <milestone unit="section" n="3"/>
 Et quoniam scio errare plerosque, qui Valeriani imperatoris titulum in sepulchro legentes illius Valeriani redditum putant corpus, qui a Persis est captus, ne ullus error obrepat, mittendum in litteras censui hunc Valerianum circa Mediolanum sepultum addito titulo Claudii iussu :
 <q>Valerianus imperator.</q>
-<note n="n22.12.1">propter om. in P and 27. </note>
-<note n="n22.12.2"> de E, Peter ; seu P. </note>
-<pb n="p.14"/>
-<milestone unit="section" n="4"/>
+               <note n="n22.12.1">propter om. in P and 27. </note>
+               <note n="n22.12.2"> de E, Peter ; seu P. </note>
+               <pb n="p.14"/>
+               <milestone unit="section" n="4"/>
 Non puto plus aliquid vel de maiore Valeriano vel
 <milestone unit="section" n="5"/>
 de iuniore requirendum. et quoniam vereor ne modum voluminis transeam, si Gallienum, Valeriani filium, de quo iam multus et fortasse nimius nobis fuit sermo in illius vita, vel Saloninum filium etiam Gallieni, qui et Saloninus et Gallienus est dictus in historia sui temporis, huic libro adiunctos edam, nunc ad aliud volumen transeamus, ut iubetur. semper enim nos vobis dedimus et famae, cui negare nihil possumus.
 <note target="n22.14.1"/>
-<note n="n22.14.1">Italics are supplements of Peter to fill lacunae in P. </note>
-</p>
-</div>
-
-</div></body></text></TEI>
+               <note n="n22.14.1">Italics are supplements of Peter to fill lacunae in P. </note>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

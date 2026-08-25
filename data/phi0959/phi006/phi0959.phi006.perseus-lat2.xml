@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_verse.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -24,7 +24,8 @@
             <pubPlace>Medford, MA</pubPlace>
             <authority>Perseus Project</authority>
             <date type="release">1997-10-28</date>
-        </publicationStmt>
+            <idno type="CTS">urn:cts:latinLit:phi0959.phi006.perseus-lat2</idno>
+         </publicationStmt>
          <sourceDesc>
             <biblStruct>
                <monogr>
@@ -38,35 +39,34 @@
                   </imprint>
                   <biblScope unit="volume">1-3</biblScope>
                </monogr>
-               <ref target="https://archive.org/details/bub_gb_ECUlAAAAMAAJ/">Internet Archive</ref><note>Volume 1</note>
-               <ref target="https://hdl.handle.net/2027/uc1.$b734695">HathiTrust</ref><note>Volume 3</note>
+               <ref target="https://archive.org/details/bub_gb_ECUlAAAAMAAJ/">Internet Archive</ref>
+               <note>Volume 1</note>
+               <ref target="https://hdl.handle.net/2027/uc1.$b734695">HathiTrust</ref>
+               <note>Volume 3</note>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-
-
-        <encodingDesc>
-         
-         <refsDecl n="CTS">
-            <cRefPattern n="line" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:l[@n='$2'])">
-                <p>This pointer pattern extracts book and line</p>
-            </cRefPattern>
-            <cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                <p>This pointer pattern extracts book</p>
-            </cRefPattern>
-        </refsDecl>
-            <refsDecl>
-                <refState unit="book"/>
-                <refState unit="line"/>
-            </refsDecl>
-        </encodingDesc>
-
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="book"/>
+            <refState unit="line"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="book" delim=":" match="div[@type='book']" use="@n">
+                  <citeStructure unit="line" delim="." match="l" use="@n"/>
+               </citeStructure>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
       <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#verse-book-line"/>
+         </textClass>
          <langUsage>
             <language ident="lat">Latin</language>
          </langUsage>
       </profileDesc>
-
       <revisionDesc>
          <change who="Lisa Cerrato" when="2017-03-21">Added notes to better indicate deleted lines. Changed certainty of source edition date as there were inconsistencies with 1892.</change>
          <change who="balmas01" when="2013-09-13T11:17:41">moving Greg's work-in-progress on CTS-izing greco-roman collection texts to a Work directory</change>
@@ -98,24 +98,19 @@
          <change who="DAS" when="1997-08-07">.</change>
       </revisionDesc>
    </teiHeader>
-
    <text>
-      <body>
-         <div type="edition" xml:lang="lat" n="urn:cts:latinLit:phi0959.phi006.perseus-lat2">
-         <div type="textpart" subtype="book" n="1">
+      <body xml:base="urn:cts:latinLit:phi0959.phi006.perseus-lat2">
+         <div n="1" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Invocatio." unit="tale"/>
             <milestone ed="More" n="Invocation" unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="1">In nova fert animus mutatas dicere formas</l>
             <l n="2">corpora; di, coeptis (nam vos mutastis et illas)</l>
             <l n="3">adspirate meis primaque ab origine mundi</l>
             <l n="4">ad mea perpetuum deducite tempora carmen.</l>
-
             <milestone n="5" unit="card"/>
             <milestone ed="Magnus" n="Mundi origo." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="5">Ante mare et terras et quod tegit omnia caelum</l>
             <l n="6">unus erat toto naturae vultus in orbe,</l>
@@ -206,10 +201,8 @@
             <l n="86">iussit et erectos ad sidera tollere vultus.</l>
             <l n="87">Sic, modo quae fuerat rudis et sine imagine, tellus</l>
             <l n="88">induit ignotas hominum conversa figuras.</l>
-
             <milestone n="89" unit="card"/>
             <milestone ed="Magnus" n="Quattuor aetates. Gigantes." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="89">Aurea prima sata est aetas, quae vindice nullo,</l>
             <l n="90">sponte sua, sine lege fidem rectumque colebat.</l>
@@ -275,9 +268,7 @@
             <l n="148">filius ante diem patrios inquirit in annos.</l>
             <l n="149">Victa iacet pietas, et virgo caede madentis,</l>
             <l n="150">ultima caelestum terras Astraea reliquit.</l>
-
             <milestone ed="More" n="Giants" unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="151">Neve foret terris securior arduus aether,</l>
             <l n="152">adfectasse ferunt regnum caeleste Gigantas</l>
@@ -291,10 +282,8 @@
             <l n="160">in faciem vertisse hominum. Sed et illa propago</l>
             <l n="161">contemptrix superum saevaeque avidissima caedis</l>
             <l n="162">et violenta fuit: scires e sanguine natos.</l>
-
             <milestone n="163" unit="card"/>
             <milestone ed="Magnus" n="Lycaon." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="163">Quae pater ut summa vidit Saturnius arce,</l>
             <l n="164">ingemit et, facto nondum vulgata recenti,</l>
@@ -393,10 +382,8 @@
             <l n="250">Talia quaerentes (sibi enim fore cetera curae)</l>
             <l n="251">rex superum trepidare vetat subolemque priori</l>
             <l n="252">dissimilem populo promittit origine mira.</l>
-
             <milestone n="253" unit="card"/>
             <milestone ed="Magnus" n="Diluvium. Deucalion et Pyrrha." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="253">Iamque erat in totas sparsurus fulmina terras:</l>
             <l n="254">sed timuit, ne forte sacer tot ab ignibus aether</l>
@@ -570,10 +557,8 @@
             <l n="413">et de femineo reparata est femina iactu.</l>
             <l n="414">Inde genus durum sumus experiensque laborum</l>
             <l n="415">et documenta damus qua simus origine nati.</l>
-
             <milestone n="416" unit="card"/>
             <milestone ed="Magnus" n="Python." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="416">Cetera diversis tellus animalia formis</l>
             <l n="417">sponte sua peperit, postquam vetus umor ab igne</l>
@@ -612,10 +597,8 @@
             <l n="449">vicerat, aesculeae capiebat frondis honorem:</l>
             <l n="450">nondum laurus erat, longoque decentia crine</l>
             <l n="451">tempora cingebat de qualibet arbore Phoebus.</l>
-
             <milestone n="452" unit="card"/>
             <milestone ed="Magnus" n="Daphne." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="452">Primus amor Phoebi Daphne Peneia, quem non</l>
             <l n="453">fors ignara dedit, sed saeva Cupidinis ira.</l>
@@ -717,8 +700,13 @@
             <l n="544">victa labore fugae spectans Peneidas undas</l>
             <l n="545">“fer pater” inquit “opem si flumina numen habetis.</l>
             <note resp="editor">vulg. 
-               <l n="546"><del>qua nimium placui, tellus aut hisce vel istam,</del></l>
-               <l n="547"><del>quae facit ut laedar, mutando perde figuram.</del></l></note>
+               <l n="546">
+                  <del>qua nimium placui, tellus aut hisce vel istam,</del>
+               </l>
+               <l n="547">
+                  <del>quae facit ut laedar, mutando perde figuram.</del>
+               </l>
+            </note>
             <l n="547">Qua nimium placui, mutando perde figuram!”</l>
             <milestone ed="P" unit="para"/>
             <l n="548">Vix prece finita torpor gravis occupat artus:</l>
@@ -743,10 +731,8 @@
             <milestone ed="P" unit="para"/>
             <l n="566">Finierat Paean: factis modo laurea ramis</l>
             <l n="567">adnuit utque caput visa est agitasse cacumen.</l>
-
             <milestone n="568" unit="card"/>
             <milestone ed="Magnus" n="Io. Argus. Syrinx." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="568">Est nemus Haemoniae, praerupta quod undique claudit</l>
             <l n="569">silva: vocant Tempe. Per quae Peneus ab imo</l>
@@ -939,10 +925,8 @@
             <l n="744">Officioque pedum nymphe contenta duorum</l>
             <l n="745">erigitur metuitque loqui, ne more iuvencae</l>
             <l n="746">mugiat, et timide verba intermissa retemptat.</l>
-
             <milestone n="747" unit="card"/>
             <milestone ed="Magnus" n="Phaethon." unit="tale"/>
-
             <milestone ed="P" unit="para"/>
             <l n="747">Nunc dea linigera colitur celeberrima turba,</l>
             <l n="748">nunc Epaphus magni genitus de semine tandem</l>
@@ -981,7 +965,7 @@
             <l n="778">Aethiopasque suos positosque sub ignibus Indos</l>
             <l n="779">sidereis transit patriosque adit inpiger ortus.</l>
          </div>
-         <div type="textpart" subtype="book" n="2">
+         <div n="2" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="More" n="PHAETON AND PHOEBUS" unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -1927,7 +1911,7 @@
             <l n="874">respicit, et dextra cornum tenet, altera dorso</l>
             <l n="875">imposita est; tremulae sinuantur flamine vestes.</l>
          </div>
-         <div type="textpart" subtype="book" n="3">
+         <div n="3" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Cadmus." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -2205,8 +2189,13 @@
             <l n="249">Undique circumstant mersisque in corpore rostris</l>
             <l n="250">dilacerant falsi dominum sub imagine cervi.</l>
             <note resp="editor">
-               <l n="251"><del>nec nisi finita per plurima vulnera vita</del></l>
-               <l n="252"><del>ira pharetratae fertur satiata Dianae.</del></l></note>
+               <l n="251">
+                  <del>nec nisi finita per plurima vulnera vita</del>
+               </l>
+               <l n="252">
+                  <del>ira pharetratae fertur satiata Dianae.</del>
+               </l>
+            </note>
             <milestone n="253" unit="card"/>
             <milestone ed="Magnus" n="Semele." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -2304,7 +2293,6 @@
             <l n="336">At pater omnipotens (neque enim licet inrita cuiquam</l>
             <l n="337">facta dei fecisse deo) pro lumine adempto</l>
             <l n="338">scire futura dedit, poenamque levavit honore.</l>
-
             <milestone n="339" unit="card"/>
             <milestone ed="Magnus" n="Narcissus. Echo." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -2371,9 +2359,14 @@
             <l n="397">adducitque cutem macies et in aera sucus</l>
             <l n="398">corporis omnis abit. Vox tantum atque ossa supersunt:</l>
             <l n="399">vox manet; ossa ferunt lapidis traxisse figuram.</l>
-           <note resp="editor">
-            <l n="400"><del>inde latet silvis nulloque in monte videtur;</del></l>
-            <l n="401"><del>omnibus auditur: sonus est, qui vivit in illa.</del></l></note>
+            <note resp="editor">
+               <l n="400">
+                  <del>inde latet silvis nulloque in monte videtur;</del>
+               </l>
+               <l n="401">
+                  <del>omnibus auditur: sonus est, qui vivit in illa.</del>
+               </l>
+            </note>
             <milestone ed="P" unit="para"/>
             <l n="402">Sic hanc, sic alias undis aut montibus ortas</l>
             <l n="403">luserat hic nymphas, sic coetus ante viriles.</l>
@@ -2392,12 +2385,15 @@
             <l n="414">procubuit faciemque loci fontemque secutus.</l>
             <note resp="editor">
                <l n="415">
-               <del>dumque sitim sedare cupit, sitis altera crevit.</del>
-            </l></note>
+                  <del>dumque sitim sedare cupit, sitis altera crevit.</del>
+               </l>
+            </note>
             <l n="416">Dumque bibit, visae correptus imagine formae</l>
-            <note resp="editor"><l n="417">
-               <del>spem sine corpore amat: corpus putat esse, quod unda est</del>
-            </l></note>
+            <note resp="editor">
+               <l n="417">
+                  <del>spem sine corpore amat: corpus putat esse, quod unda est</del>
+               </l>
+            </note>
             <l n="418">adstupet ipse sibi, vultuque inmotus eodem</l>
             <l n="419">haeret, ut e Pario formatum marmore signum.</l>
             <l n="420">Spectat humi positus geminum, sua lumina, sidus</l>
@@ -2734,7 +2730,7 @@
             <l n="732">Talibus exemplis monitae nova sacra frequentant</l>
             <l n="733">turaque dant sanctasque colunt Ismenides aras.</l>
          </div>
-         <div type="textpart" subtype="book" n="4">
+         <div n="4" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Minyeides." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -3211,9 +3207,16 @@
             <l n="434">Styx nebulas exhalat iners, umbraeque recentes</l>
             <l n="435">descendunt illac simulacraque functa sepulcris.</l>
             <note resp="editor">
-            <l n="436"><del>Pallor hiemsque tenent late loca senta, novique,</del></l>
-            <l n="437"><del>qua sit iter, manes, Stygiam qua ducat ad urbem,</del></l>
-            <l n="438"><del>ignorant, ubi sit nigri fera regia Ditis.</del></l></note>
+               <l n="436">
+                  <del>Pallor hiemsque tenent late loca senta, novique,</del>
+               </l>
+               <l n="437">
+                  <del>qua sit iter, manes, Stygiam qua ducat ad urbem,</del>
+               </l>
+               <l n="438">
+                  <del>ignorant, ubi sit nigri fera regia Ditis.</del>
+               </l>
+            </note>
             <l n="439">Mille capax aditus et apertas undique portas</l>
             <l n="440">urbs habet, utque fretum de tota flumina terra,</l>
             <l n="441">sic omnes animas locus accipit ille, nec ulli</l>
@@ -3223,8 +3226,9 @@
             <l n="445">pars aliquas artes, antiquae imitamina vitae.</l>
             <note resp="editor">
                <l n="446">
-               <del>exercent, aliam partem sua poena coercet</del>
-            </l></note>
+                  <del>exercent, aliam partem sua poena coercet</del>
+               </l>
+            </note>
             <l n="447">Sustinet ire illuc caelesti sede relicta</l>
             <l n="448">(tantum odiis iraeque dabat) Saturnia Iuno.</l>
             <milestone ed="P" unit="para"/>
@@ -3582,11 +3586,12 @@
             <l n="767">quaerit Lyncides moresque animumque virorum.</l>
             <note resp="editor">vulg. 
                <l n="767">
-               <del>quaerit Abantiades: quaerenti protinus unus</del>
-            </l>
-            <l n="768">
-               <del>narrat Lyncides moresque animumque virorum</del>
-            </l></note>
+                  <del>quaerit Abantiades: quaerenti protinus unus</del>
+               </l>
+               <l n="768">
+                  <del>narrat Lyncides moresque animumque virorum</del>
+               </l>
+            </note>
             <l n="769">Quae simul edocuit, “nunc, o fortissime,” dixit</l>
             <l n="770">“fare, precor, Perseu, quanta virtute quibusque</l>
             <l n="771">artibus abstuleris crinita draconibus ora.”</l>
@@ -3624,12 +3629,16 @@
             <l n="800">nata Iovis texit; neve hoc inpune fuisset,</l>
             <l n="801">Gorgoneum crinem turpes mutavit in hydros.</l>
             <note resp="editor">
-            <l n="802"><del>Nunc quoque, ut attonitos formidine terreat hostes,</del></l>
-            <l n="803"><del>pectore in adverso, quos fecit, sustinet angues.”</del></l></note>
+               <l n="802">
+                  <del>Nunc quoque, ut attonitos formidine terreat hostes,</del>
+               </l>
+               <l n="803">
+                  <del>pectore in adverso, quos fecit, sustinet angues.”</del>
+               </l>
+            </note>
          </div>
-         <div type="textpart" subtype="book" n="5">
+         <div n="5" type="book">
             <milestone n="1" unit="card"/>
-
             <milestone ed="P" unit="para"/>
             <l n="1">Dumque ea Cephenum medio Danaeius heros</l>
             <l n="2">agmine commemorat, fremida regalia turba</l>
@@ -4349,7 +4358,9 @@
             <l n="659">adgreditur ferro. Conantem figere pectus</l>
             <l n="660">lynca Ceres fecit rursusque per aera iussit</l>
             <l n="661">Mopsopium iuvenem sacros agitare iugales.”</l>
-            <milestone ed="More" n="THE NINE OPPONENTS OF THE NINE MUSES CHANGED TO MAGPIES" unit="tale"/>
+            <milestone ed="More"
+                       n="THE NINE OPPONENTS OF THE NINE MUSES CHANGED TO MAGPIES"
+                       unit="tale"/>
             <milestone ed="P" unit="para"/>
             <l n="662">Finierat doctos e nobis maxima cantus.</l>
             <l n="663">At nymphae vicisse deas Helicona colentes</l>
@@ -4371,7 +4382,7 @@
             <l n="677">Nunc quoque in alitibus facundia prisca remansit</l>
             <l n="678">raucaque garrulitas studiumque inmane loquendi.”</l>
          </div>
-         <div type="textpart" subtype="book" n="6">
+         <div n="6" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Pallas et Arachne." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -4674,10 +4685,11 @@
             <l n="279">A quibus ad caelum liventia bracchia tollens</l>
             <l n="280">“pascere, crudelis, nostro, Latona, dolore,</l>
             <l n="281">pascere” ait “satiaque meo tua pectora luctu:</l>
-           <note resp="editor">
-              <l n="282">
-               <del>“Corque ferum satia” dixit, “per funera septem”</del>
-            </l></note>
+            <note resp="editor">
+               <l n="282">
+                  <del>“Corque ferum satia” dixit, “per funera septem”</del>
+               </l>
+            </note>
             <l n="283">efferor. Exsulta victrixque inimica triumpha.</l>
             <l n="284">Cur autem victrix? miserae mihi plura supersunt,</l>
             <l n="285">quam tibi felici: post tot quoque funera vinco.”</l>
@@ -4692,8 +4704,9 @@
             <l n="293">conticuit subito duplicataque vulnere tota est.</l>
             <note resp="editor">
                <l n="294">
-               <del>oraque compressit, nisi postquam spiritus ibat.</del>
-            </l></note>
+                  <del>oraque compressit, nisi postquam spiritus ibat.</del>
+               </l>
+            </note>
             <l n="295">Haec frustra fugiens collabitur, illa sorori</l>
             <l n="296">inmoritur, latet haec, illam trepidare videres.</l>
             <l n="297">Sexque datis leto diversaque vulnera passis</l>
@@ -5153,7 +5166,7 @@
             <l n="720">vellera cum Minyis nitido radiantia villo</l>
             <l n="721">per mare non notum prima petiere carina.</l>
          </div>
-         <div type="textpart" subtype="book" n="7">
+         <div n="7" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Iason et Medea." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -5306,9 +5319,11 @@
             <l n="142">civilique cadunt acie. Gratantur Achivi</l>
             <l n="143">victoremque tenent avidisque amplexibus haerent.</l>
             <l n="144">Tu quoque victorem complecti, barbara, velles:</l>
-            <note resp="editor"><l n="145">
-               <del>obstitit incepto pudor. At complexa fuisses</del>
-            </l></note>
+            <note resp="editor">
+               <l n="145">
+                  <del>obstitit incepto pudor. At complexa fuisses</del>
+               </l>
+            </note>
             <l n="146">sed te, ne faceres, tenuit reverentia famae.</l>
             <l n="147">Quod licet, adfectu tacito laetaris agisque</l>
             <l n="148">carminibus grates et dis auctoribus horum.</l>
@@ -5979,9 +5994,11 @@
             <l n="759">Carmina Laiades non intellecta priorum</l>
             <l n="760">solverat ingeniis, et praecipitata iacebat</l>
             <l n="761">inmemor ambagum vates obscura suarum.</l>
-            <note resp="editor"><l n="762">
-               <del>scilicet alma Themis non talia liquit inulta.</del>
-            </l></note>
+            <note resp="editor">
+               <l n="762">
+                  <del>scilicet alma Themis non talia liquit inulta.</del>
+               </l>
+            </note>
             <l n="763">Protinus Aoniis inmittitur altera Thebis</l>
             <l n="764">pestis, et exitio multi pecorumque suoque</l>
             <l n="765">rurigenae pavere feram. Vicina iuventus</l>
@@ -6090,7 +6107,7 @@
             <l n="864">Aeacus ingreditur duplici cum prole novoque</l>
             <l n="865">milite, quem Cephalus cum fortibus accipit armis.</l>
          </div>
-         <div type="textpart" subtype="book" n="8">
+         <div n="8" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Nisus et Scylla." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -6186,7 +6203,10 @@
             <l n="85">intrat et (heu facinus!) fatali nata parentem</l>
             <l n="86">crine suum spoliat praedaque potita nefanda</l>
             <note resp="editor">
-               <l n="87"><del>fert secum spolium celeris progressaque porta</del></l></note>
+               <l n="87">
+                  <del>fert secum spolium celeris progressaque porta</del>
+               </l>
+            </note>
             <l n="88">per medios hostes (meriti fiducia tanta est)</l>
             <l n="89">pervenit ad regem. Quem sic adfata paventem est:</l>
             <milestone ed="P" unit="para"/>
@@ -6407,11 +6427,12 @@
             <l n="284">Sanguine et igne micant oculi, riget horrida cervix,</l>
             <note resp="editor">
                <l n="285">
-               <del>et sactae similes rigidis hastilibus horrent</del>
-            </l>
-            <l n="286">
-               <del>stantque velut vallum, velut alta hastilia saetae</del>
-            </l></note>
+                  <del>et sactae similes rigidis hastilibus horrent</del>
+               </l>
+               <l n="286">
+                  <del>stantque velut vallum, velut alta hastilia saetae</del>
+               </l>
+            </note>
             <l n="287">fervida cum rauco latos stridore per armos</l>
             <l n="288">spuma fluit, dentes aequantur dentibus Indis,</l>
             <l n="289">fulmen ab ore venit, frondes adflatibus ardent.</l>
@@ -6753,23 +6774,43 @@
             <l n="596">regna vagae” dixi “sortite, tridentifer, undae,</l>
             <note resp="editor">
                v. 597—608 in multis libris leguntur hi:
-               <l><del>In quo desinimus, quo sacri currimus amnes</del></l>
-               <l><del>huc ades atque audi placidus, Neptune, precantem.</del></l>
-               <l><del>Huic ego, quam porto, nocui. Si mitis et aequus,</del></l>
-               <l><del>si pater Hippodamas, aut si minus impius esset,</del></l>
-               <l><del>debuit illius misereri, ignoscere nobis.</del></l>
+               <l>
+                  <del>In quo desinimus, quo sacri currimus amnes</del>
+               </l>
+               <l>
+                  <del>huc ades atque audi placidus, Neptune, precantem.</del>
+               </l>
+               <l>
+                  <del>Huic ego, quam porto, nocui. Si mitis et aequus,</del>
+               </l>
+               <l>
+                  <del>si pater Hippodamas, aut si minus impius esset,</del>
+               </l>
+               <l>
+                  <del>debuit illius misereri, ignoscere nobis.</del>
+               </l>
                Sequuntur v. 601—602, post quos inveniuntur haec:
-               <l><del>hunc quoque complectar.” Movit caput aequoreus rex</del></l>
-               <l><del>concussitque suis omnes adsensibus undas.</del></l>
-               <l><del>Extimuit nymphe, nabat tamen. Ipse natantis</del></l>
-               <l><del>pectora tangebam trepido salientia motu.</del></l>
-               <l><del>Dumque ea contrecto, totum durescere sensi</del></l>
-               <l><del>corpus et inducta condi praecordia terra.</del></l></note>
-               
-            
+               <l>
+                  <del>hunc quoque complectar.” Movit caput aequoreus rex</del>
+               </l>
+               <l>
+                  <del>concussitque suis omnes adsensibus undas.</del>
+               </l>
+               <l>
+                  <del>Extimuit nymphe, nabat tamen. Ipse natantis</del>
+               </l>
+               <l>
+                  <del>pectora tangebam trepido salientia motu.</del>
+               </l>
+               <l>
+                  <del>Dumque ea contrecto, totum durescere sensi</del>
+               </l>
+               <l>
+                  <del>corpus et inducta condi praecordia terra.</del>
+               </l>
+            </note>
             <l n="601">adfer opem mersaeque precor, feritate paterna</l>
             <l n="602">da, Neptune, locum; vel sit locus ipsa licebit.”</l>
-            
             <milestone ed="P" unit="para"/>
             <l n="609">Dum loquor, amplexa est artus nova terra natantes,</l>
             <l n="610">et gravis increvit mutatis insula membris.</l>
@@ -6822,11 +6863,23 @@
             <milestone ed="P" unit="para"/>
             <l n="651">Interea medias fallunt sermonibus horas</l>
             <note resp="editor">Pro v. 655 in multis libris leguntur hi versus:
-            <l><del>sentirique moram prohibent. Erat alveus illic</del></l>
-            <l><del>fagineus, dura clavo suspensus ab ansa.</del></l>
-            <l><del>Is tepidis inpletur aquis artusque fovendos</del></l>
-            <l><del>accipit. In medio torus est de mollibus ulvis,</del></l>
-            <l><del>impositus lecto <emph>sq.</emph></del></l></note>
+            <l>
+                  <del>sentirique moram prohibent. Erat alveus illic</del>
+               </l>
+               <l>
+                  <del>fagineus, dura clavo suspensus ab ansa.</del>
+               </l>
+               <l>
+                  <del>Is tepidis inpletur aquis artusque fovendos</del>
+               </l>
+               <l>
+                  <del>accipit. In medio torus est de mollibus ulvis,</del>
+               </l>
+               <l>
+                  <del>impositus lecto <emph>sq.</emph>
+                  </del>
+               </l>
+            </note>
             <l n="655">concutiuntque torum de molli fluminis ulva</l>
             <l n="656">impositum lecto sponda pedibusque salignis.</l>
             <l n="657">Vestibus hunc velant, quas non nisi tempore festo</l>
@@ -7080,7 +7133,7 @@
             <l n="883">cornua, dum potui! nunc pars caret altera telo</l>
             <l n="884">frontis, ut ipse vides.” Gemitus sunt verba secuti.</l>
          </div>
-         <div type="textpart" subtype="book" n="9">
+         <div n="9" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Achelous et Hercules." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -7871,7 +7924,10 @@
             <l n="727">“cognita quam nulli, quam prodigiosa novaeque</l>
             <l n="728">cura tenet Veneris? Si di mihi parcere vellent,</l>
             <note resp="editor">
-               <l n="729"><del>parcere debuerant; si non, et perdere vellent,</del></l></note>
+               <l n="729">
+                  <del>parcere debuerant; si non, et perdere vellent,</del>
+               </l>
+            </note>
             <l n="730">naturale malum saltem et de more dedissent.</l>
             <l n="731">Nec vaccam vaccae, nec equas amor urit equarum:</l>
             <l n="732">urit oves aries, sequitur sua femina cervum.</l>
@@ -7946,7 +8002,7 @@
             <l n="796">cum Venus et Iuno sociosque Hymenaeus ad ignes</l>
             <l n="797">conveniunt, potiturque sua puer Iphis Ianthe.</l>
          </div>
-         <div type="textpart" subtype="book" n="10">
+         <div n="10" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Orpheus et Eurydice." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -8290,9 +8346,11 @@
             <l n="302">desit in hac mihi parte fides, nec credite factum,</l>
             <l n="303">vel, si credetis, facti quoque credite poenam.</l>
             <l n="304">Si tamen admissum sinit hoc natura videri,</l>
-            <note resp="editor"><l n="305">
-               <del>gentibus Ismariis et nostro gratulor orbi,</del>
-            </l></note>
+            <note resp="editor">
+               <l n="305">
+                  <del>gentibus Ismariis et nostro gratulor orbi,</del>
+               </l>
+            </note>
             <l n="306">gratulor huic terrae, quod abest regionibus illis,</l>
             <l n="307">quae tantum genuere nefas. Sit dives amomo</l>
             <l n="308">cinnamaque costumque suum sudataque ligno</l>
@@ -8757,7 +8815,7 @@
             <l n="738">namque male haerentem et nimia levitate caducum</l>
             <l n="739">excutiunt idem, qui praestant nomina, venti.”</l>
          </div>
-         <div type="textpart" subtype="book" n="11">
+         <div n="11" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Orphei mors." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -8838,8 +8896,13 @@
             <l n="69">protinus in silvis matres Edonidas omnes,</l>
             <l n="70">quae videre nefas, torta radice ligavit.</l>
             <note resp="editor">
-               <l n="71"><del>Quippe pedum digitos, in quantum est quaeque secuta,</del></l>
-            <l n="72"><del>traxit et in solidam detrusit acumina terram,</del></l></note>
+               <l n="71">
+                  <del>Quippe pedum digitos, in quantum est quaeque secuta,</del>
+               </l>
+               <l n="72">
+                  <del>traxit et in solidam detrusit acumina terram,</del>
+               </l>
+            </note>
             <l n="73">utque suum laqueis, quos callidus abdidit auceps,</l>
             <l n="74">crus ubi commisit volucris sensitque teneri,</l>
             <l n="75">plangitur ac trepidans adstringit vincula motu:</l>
@@ -9089,7 +9152,10 @@
             <l n="291">“Forsitan hanc volucrem, rapto quae vivit et omnes</l>
             <l n="292">terret aves, semper pennas habuisse putetis:</l>
             <note resp="editor">
-               <l n="293"><del>vir fuit et (tanta est animi constantia!) iam tum</del></l></note>
+               <l n="293">
+                  <del>vir fuit et (tanta est animi constantia!) iam tum</del>
+               </l>
+            </note>
             <l n="294">acer erat belloque ferox ad vimque paratus,</l>
             <l n="295">nomine Daedalion. Illo genitore creatis,</l>
             <l n="296">qui vocat auroram caeloque novissimus exit,</l>
@@ -9551,7 +9617,10 @@
             <l n="712">Dumque moratur ibi, dumque “hic retinacula solvit,</l>
             <l n="713">hoc mihi discedens dedit oscula litore” dicit,</l>
             <note resp="editor">
-               <l n="714"><del>quae dum tota locis (s. dumque notata oculis) reminiscitur acta fretumque</del></l></note>
+               <l n="714">
+                  <del>quae dum tota locis (s. dumque notata oculis) reminiscitur acta fretumque</del>
+               </l>
+            </note>
             <l n="715">prospicit: in liquida, spatio distante, tuetur</l>
             <l n="716">nescio quid quasi corpus, aqua. Primoque, quid illud</l>
             <l n="717">esset, erat dubium; postquam paulum appulit unda,</l>
@@ -9640,7 +9709,7 @@
             <l n="794">longa manet cervix, caput est a corpore longe;</l>
             <l n="795">aequor amat nomenque manet, quia mergitur, illi.”</l>
          </div>
-         <div type="textpart" subtype="book" n="12">
+         <div n="12" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Graeci Aulide. Fama." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -9898,11 +9967,12 @@
             <l n="229">Pirithoum violesque duos ignarus in uno?”</l>
             <note resp="editor">
                <l n="230">
-               <del>neve ea magnanimus frustra memoraverit ore,</del>
-            </l>
-            <l n="231">
-               <del>submovet instantes raptamque furentibus aufert.</del>
-            </l></note>
+                  <del>neve ea magnanimus frustra memoraverit ore,</del>
+               </l>
+               <l n="231">
+                  <del>submovet instantes raptamque furentibus aufert.</del>
+               </l>
+            </note>
             <l n="232">Ille nihil contra (neque enim defendere verbis</l>
             <l n="233">talia facta potest), sed vindicis ora protervis</l>
             <l n="234">insequitur manibus generosaque pectora pulsat.</l>
@@ -10125,16 +10195,22 @@
             <l n="432">Codice qui misso, quem vix iuga bina moverent,</l>
             <l n="433">Tectaphon Oleniden a summo vertice fregit.</l>
             <note resp="editor">
-               <l n="434"><del>fracta volubilitas capitis latissima, perque os</del>
-            </l>
-            <l n="435"><del>perque cavas nares oculosque auresque cerebrum</del>
-            </l>
-            <l n="436"><del>molle fluit veluti concretum vimine querno</del>
-            </l>
-            <l n="437"><del>lac solet, utve liquor rari sub pondere cribri</del>
-            </l>
-            <l n="438"><del>manat et exprimitur per densa foramina spissus.</del>
-            </l></note>
+               <l n="434">
+                  <del>fracta volubilitas capitis latissima, perque os</del>
+               </l>
+               <l n="435">
+                  <del>perque cavas nares oculosque auresque cerebrum</del>
+               </l>
+               <l n="436">
+                  <del>molle fluit veluti concretum vimine querno</del>
+               </l>
+               <l n="437">
+                  <del>lac solet, utve liquor rari sub pondere cribri</del>
+               </l>
+               <l n="438">
+                  <del>manat et exprimitur per densa foramina spissus.</del>
+               </l>
+            </note>
             <l n="439">Ast ego, dum parat hic armis nudare iacentem,</l>
             <l n="440">(scit tuus hoc genitor) gladium spoliantis in ima</l>
             <l n="441">ilia demisi. Chthonius quoque Teleboasque</l>
@@ -10346,7 +10422,7 @@
             <l n="627">Argolicosque duces mediis considere castris</l>
             <l n="628">iussit et arbitrium litis traiecit in omnes.</l>
          </div>
-         <div type="textpart" subtype="book" n="13">
+         <div n="13" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Armorum iudicium. Aiax." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -10598,7 +10674,10 @@
             <l n="228">Talibus atque aliis, in quae dolor ipse disertum</l>
             <l n="229">fecerat, aversos profuga de classe reduxi.</l>
             <note resp="editor">
-               <l n="230"><del>Convocat Atrides socios terrore paventes;</del></l></note>
+               <l n="230">
+                  <del>Convocat Atrides socios terrore paventes;</del>
+               </l>
+            </note>
             <l n="231">nec Telamoniades etiam nunc hiscere quicquam</l>
             <l n="232">audet, at ausus erat reges incessere dictis</l>
             <l n="233">Thersites etiam, per me haud impune protervus!</l>
@@ -10667,7 +10746,11 @@
             <l n="292">Oceanum et terras cumque alto sidera caelo</l>
             <l n="293">Pleiadasque hyadasque inmunemque aequoris arcton</l>
             <l n="294">diversasque urbes nitidumque Orionis ensem:</l>
-            <note resp="editor"><l n="295"><del>postulat, ut capiat, quae non intelligit, arma!</del></l></note>
+            <note resp="editor">
+               <l n="295">
+                  <del>postulat, ut capiat, quae non intelligit, arma!</del>
+               </l>
+            </note>
             <milestone ed="P" unit="para"/>
             <l n="296">Quid quod me duri fugientem munera belli</l>
             <l n="297">arguit incepto serum accessisse labori,</l>
@@ -10708,7 +10791,11 @@
             <l n="329">dure Philoctete, licet exsecrere meumque</l>
             <l n="330">devoveas sine fine caput cupiasque dolenti</l>
             <l n="331">me tibi forte dari nostrumque haurire cruorem,</l>
-            <note resp="editor"><l n="332"><del>utque tui mihi, sic fiat tibi copia nostri:</del></l></note>
+            <note resp="editor">
+               <l n="332">
+                  <del>utque tui mihi, sic fiat tibi copia nostri:</del>
+               </l>
+            </note>
             <l n="333">te tamen adgrediar mecumque reducere nitar,</l>
             <l n="334">tamque tuis potiar (faveat Fortuna!) sagittis,</l>
             <l n="335">quam sum Dardanio, quem cepi, vate potitus,</l>
@@ -10759,7 +10846,10 @@
             <l n="377">per siquid superest, quod sit sapienter agendum,</l>
             <l n="378">siquid adhuc audax ex praecipitique petendum est,</l>
             <note resp="editor">
-               <l n="379"><del>si Troiae fatis aliquid restare putatis,</del></l></note>
+               <l n="379">
+                  <del>si Troiae fatis aliquid restare putatis,</del>
+               </l>
+            </note>
             <l n="380">este mei memores! Aut si mihi non datis arma,</l>
             <l n="381">huic date!” — et ostendit signum fatale Minervae.</l>
             <milestone ed="P" unit="para"/>
@@ -10790,10 +10880,19 @@
             <l n="402">Quae postquam ad Graios, domino comitante, revexit,</l>
             <l n="403">imposita estque fero tandem manus ultima bello,</l>
             <note resp="editor">
-            <l n="404"><del>Troia simul Priamusque cadunt: Priameia coniunx</del></l>
-            <l n="405"><del>perdidit infelix hominis post omnia formam</del></l>
-            <l n="406"><del>externasque novo latratu terruit auras,</del></l>
-            <l n="407"><del>longus in angustum qua clauditur Hellespontus.</del></l></note>
+               <l n="404">
+                  <del>Troia simul Priamusque cadunt: Priameia coniunx</del>
+               </l>
+               <l n="405">
+                  <del>perdidit infelix hominis post omnia formam</del>
+               </l>
+               <l n="406">
+                  <del>externasque novo latratu terruit auras,</del>
+               </l>
+               <l n="407">
+                  <del>longus in angustum qua clauditur Hellespontus.</del>
+               </l>
+            </note>
             <milestone ed="P" unit="para"/>
             <l n="408">Ilion ardebat, neque adhuc consederat ignis,</l>
             <l n="409">exiguumque senis Priami Iovis ara cruorem</l>
@@ -10852,8 +10951,13 @@
             <l n="458">“nulla mora est: aut tu iugulo vel pectore telum</l>
             <l n="459">conde meo! (iugulumque simul pectusque retexit)</l>
             <note resp="editor">
-               <l n="460"><del>scilicet haud ulli servire Polyxena vellem.</del></l>
-            <l n="461"><del>haud per tale sacrum numen placabitis ullum!</del></l></note>
+               <l n="460">
+                  <del>scilicet haud ulli servire Polyxena vellem.</del>
+               </l>
+               <l n="461">
+                  <del>haud per tale sacrum numen placabitis ullum!</del>
+               </l>
+            </note>
             <l n="462">Mors tantum vellem matrem mea fallere posset!</l>
             <l n="463">Mater obest minuitque necis mihi gaudia, quamvis</l>
             <l n="464">non mea mors illi, verum sua vita gemenda est.</l>
@@ -11222,7 +11326,10 @@
             <l n="795">lucidior glacie, matura dulcior uva,</l>
             <l n="796">mollior et cygni plumis et lacte coacto</l>
             <note resp="editor">
-               <l n="797"><del>et, si non fugias, riguo formosior horto</del></l></note>
+               <l n="797">
+                  <del>et, si non fugias, riguo formosior horto</del>
+               </l>
+            </note>
             <l n="798">saevior indomitis eadem Galatea iuvencis,</l>
             <l n="799">durior annosa quercu, fallacior undis,</l>
             <l n="800">lentior et salicis virgis et vitibus albis,</l>
@@ -11275,7 +11382,10 @@
             <l n="847">corpora, turpe puta turpis sine frondibus arbor,</l>
             <l n="848">turpis equus, nisi colla iubae flaventia velent;</l>
             <note resp="editor">
-               <l n="849"><del>pluma tegit volucres, ovibus sua lana decori est</del></l></note>
+               <l n="849">
+                  <del>pluma tegit volucres, ovibus sua lana decori est</del>
+               </l>
+            </note>
             <l n="850">barba viros hirtaeque decent in corpore saetae.</l>
             <l n="851">Unum est in media lumen mihi fronte, sed instar</l>
             <l n="852">ingentis clipei. Quid? non haec omnia magnus</l>
@@ -11405,7 +11515,7 @@
             <l n="967">Scylla deum; furit ille inritatusque repulsa</l>
             <l n="968">prodigiosa petit Titanidos atria Circes.</l>
          </div>
-         <div type="textpart" subtype="book" n="14">
+         <div n="14" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Scylla et Circe." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -11837,7 +11947,10 @@
             <l n="383">“non impune feres, neque” ait “reddere Canenti,</l>
             <l n="384">laesaque quid faciat, quid amans, quid femina disces.”</l>
             <note resp="editor">
-               <l n="385"><del>rebus, ait, sed amans et laesa et femina Circe.</del></l></note>
+               <l n="385">
+                  <del>rebus, ait, sed amans et laesa et femina Circe.</del>
+               </l>
+            </note>
             <milestone ed="P" unit="para"/>
             <l n="386">Tum bis ad occasum, bis se convertit ad ortus,</l>
             <l n="387">ter iuvenem baculo tetigit, tria carmina dixit.</l>
@@ -12213,7 +12326,10 @@
             <l n="721">Vincis enim, moriorque libens: age, ferrea, gaude!</l>
             <l n="722">Certe aliquid laudare mei cogeris amoris,</l>
             <note resp="editor">
-               <l n="723"><del>quo tibi sim gratus, meritumque fatebere nostrum</del></l></note>
+               <l n="723">
+                  <del>quo tibi sim gratus, meritumque fatebere nostrum</del>
+               </l>
+            </note>
             <l n="724">Non tamen ante tui curam fugisse memento,</l>
             <l n="725">quam vitam, geminaque simul mihi luce carendum est.</l>
             <l n="726">Nec tibi fama mei ventura est nuntia leti:</l>
@@ -12233,8 +12349,12 @@
             <milestone ed="P" unit="para"/>
             <l n="739">Icta pedum motu est adapertaque ianua factum</l>
             <note>
-               <l n="739"><del>icta pedum motu trepidantem et multa timentem</del></l>
-               <l n="740"><del>visa dedisse sonum est adapertaque ianua factum</del></l>
+               <l n="739">
+                  <del>icta pedum motu trepidantem et multa timentem</del>
+               </l>
+               <l n="740">
+                  <del>visa dedisse sonum est adapertaque ianua factum</del>
+               </l>
             </note>
             <l n="741">prodidit. Exclamant famuli frustraque levatum</l>
             <l n="742">(nam pater occiderat) referunt ad limina matris;</l>
@@ -12360,7 +12480,7 @@
             <l n="850">excipit et priscum pariter cum corpore nomen</l>
             <l n="851">mutat Horamque vocat, quae nunc dea iuncta Quirino est.</l>
          </div>
-         <div type="textpart" subtype="book" n="15">
+         <div n="15" type="book">
             <milestone n="1" unit="card"/>
             <milestone ed="Magnus" n="Myscelus. Croton." unit="tale"/>
             <milestone ed="P" unit="para"/>
@@ -12419,8 +12539,13 @@
             <l n="50">navigat Ionium, Sallentinumque Neretum</l>
             <l n="51">praeterit et Sybarin Crimisenque et Iapygis arva;</l>
             <note resp="editor">
-               <l n="51"><del>praeterit et Sybarin Lacedaemoniumque Tarentum</del></l>
-               <l n="52"><del>Thurinosque sinus Crimisenque et Iapygis arva</del></l></note>
+               <l n="51">
+                  <del>praeterit et Sybarin Lacedaemoniumque Tarentum</del>
+               </l>
+               <l n="52">
+                  <del>Thurinosque sinus Crimisenque et Iapygis arva</del>
+               </l>
+            </note>
             <l n="53">vixque pererratis, quae spectant litora, terris,</l>
             <l n="54">invenit Aesarei fatalia fluminis ora</l>
             <l n="55">nec procul hinc tumulum, sub quo sacrata Crotonis</l>
@@ -12822,11 +12947,21 @@
             <l n="424">nunc humilis veteres tantummodo Troia ruinas</l>
             <l n="425">et pro divitiis tumulos ostendit avorum.</l>
             <note resp="editor">
-            <l n="426"><del>Clara fuit Sparte, magnae viguere Mycenae,</del></l>
-            <l n="427"><del>nec non et Cecropis nec non Amphionis arces.</del></l>
-            <l n="428"><del>Vile solum Sparte est, altae cecidere Mycenae,</del></l>
-            <l n="429"><del>Oedipodioniae quid sunt, nisi nomina, Thebae?</del></l>
-            <l n="430"><del>Quid Pandioniae restant, nisi nomen, Athenae?</del></l>
+               <l n="426">
+                  <del>Clara fuit Sparte, magnae viguere Mycenae,</del>
+               </l>
+               <l n="427">
+                  <del>nec non et Cecropis nec non Amphionis arces.</del>
+               </l>
+               <l n="428">
+                  <del>Vile solum Sparte est, altae cecidere Mycenae,</del>
+               </l>
+               <l n="429">
+                  <del>Oedipodioniae quid sunt, nisi nomina, Thebae?</del>
+               </l>
+               <l n="430">
+                  <del>Quid Pandioniae restant, nisi nomen, Athenae?</del>
+               </l>
             </note>
             <l n="431">Nunc quoque Dardaniam fama est consurgere Romam,</l>
             <l n="432">Appenninigenae quae proxima Thybridis undis</l>
@@ -13321,7 +13456,6 @@
             <l n="878">ore legar populi, perque omnia saecula fama,</l>
             <l n="879">siquid habent veri vatum praesagia, vivam.</l>
          </div>
-      </div>
       </body>
    </text>
 </TEI>

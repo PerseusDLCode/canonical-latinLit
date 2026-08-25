@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Epithalamium of Honorius and Maria</title>
+            <title>Epithalamium of Honorius and Maria</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -40,11 +40,18 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="poem"/>
+         </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -52,12 +59,15 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa006.perseus-eng1">
-      <body>
-               <pb id="v.1.p.241" TEIform="pb"/>
-       <div1 type="poem" n="praef" org="uniform" sample="complete" part="N">
-         <head>PREFACE</head>
-         <p>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa006.perseus-eng1">
+         <pb id="v.1.p.241" TEIform="pb"/>
+         <div1 type="poem"
+               n="praef"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>PREFACE</head>
+            <p>
 
 When Pelion reared his height to form a bridal
 chamber with long-drawn arches, and his hospitable
@@ -73,10 +83,10 @@ bands into the caves. The gods, the Thunderer
 himself, disdained not these songs, for they knew
 that lovers' vows ever harmonized with tender strains.
 </p>
-         <p>Centaurs and Fauns would have none of it: what
+            <p>Centaurs and Fauns would have none of it: what
 lyre could touch Rhoetus or move inhuman Pholus?
 </p>
-         <p>The seventh day had flamed in heaven, seven
+            <p>The seventh day had flamed in heaven, seven
 times had Hesperus relumed his lamp and seen the
 dances completed; then Phoebus touched his lyre
 with that nobler quill, wherewith he leads captive
@@ -86,12 +96,17 @@ slaughter of the Trojans and the river Simois. The
 happy marriage-cry re-echoed o'er leafy Olympus, and
 Othrys and Ossa gave back their mistress Thetis' name.
 <pb id="v.1.p."/>
-         </p>
-       </div1>
-               <pb id="v.1.p.243" TEIform="pb"/>
-       <div1 type="poem" n="1" id="poem.10" org="uniform" sample="complete" part="N">
-         <head>EPITHALAMIUM</head>
-         <p>
+            </p>
+         </div1>
+         <pb id="v.1.p.243" TEIform="pb"/>
+         <div1 type="poem"
+               n="1"
+               id="poem.10"
+               org="uniform"
+               sample="complete"
+               part="N">
+            <head>EPITHALAMIUM</head>
+            <p>
 
 Unfelt before was the fire the Emperor Honorius
 had conceived for his promised bride, and he burned,
@@ -117,8 +132,8 @@ his warrior hands to draw the slender thread and
 passed her rosy fingers through the locks of that Thessalian
 of whom all Ida was soon to stand in awe.
 </p>
-         <p>Thus too he communed with himself: <q direct="unspecified">
-               <p>How long
+            <p>Thus too he communed with himself: <q direct="unspecified">
+                  <p>How long
 <pb id="v.1.p.245"/>
 will honoured Stilicho forbear to grant my prayers?
 Why postpones he the union of those whose love he
@@ -156,15 +171,15 @@ art my mother. Why dost thou separate thy two
 children? Why not bestow a daughter born upon
 an adopted son? Will the longed-for day ever
 come; the marriage-night ever be sanctioned?</p>
-            </q>
-         </p>
-         <p>
+               </q>
+            </p>
+            <p>
 With such complaint he assuages the wounds of
 love. Cupid laughed and speeding across the deep
 bore the news to his gentle mother, proudly spreading
 his wings to their full extent.
 </p>
-         <p>Where Cyprus looks out over the Ionian main a
+            <p>Where Cyprus looks out over the Ionian main a
 craggy mountain overshadows it; unapproachable
 by human foot it faces the isle of Pharos, the home of
 Proteus and the seven mouths of the Nile. The hoar
@@ -176,7 +191,7 @@ blessings of eternal spring. The mountain's height
 slopes down into a plain; that a golden hedge
 encircles, guarding its meadows with yellow metal.
 </p>
-         <p>This demesne, men say, was the price paid by
+            <p>This demesne, men say, was the price paid by
 Mulciber for the kisses of his wife, these towers were
 the gift of a loving husband. Fair is the enclosed
 country, ever bright with flowers though touched
@@ -186,12 +201,12 @@ enter save such as has first won the goddess' approval
 for its song. Those which please her may flit among
 the branches; they must quit who cannot pass the test.
 </p>
-         <p>The very leaves live for love and in his season every
+            <p>The very leaves live for love and in his season every
 happy tree experiences love's power: palm bends
 down to mate with palm, poplar sighs its passion for
 poplar, plane whispers to plane, alder to alder.
 </p>
-         <p>Here spring two fountains, the one of sweet water,
+            <p>Here spring two fountains, the one of sweet water,
 the other of bitter, honey is mingled with the first,
 poison with the second, and in these streams 'tis said
 <pb id="v.1.p.249"/>
@@ -211,7 +226,7 @@ Pleasure, and lovers' Oaths, the sport of every
 lightest breeze. Amid them all wanton Youth with
 haughty neck shuts out Age from the grove.
 </p>
-         <p>Afar shines and glitters the goddess' many-coloured
+            <p>Afar shines and glitters the goddess' many-coloured
 palace, green gleaming by reason of the encircling
 grove. Vulcan built this too of precious stones and
 gold, wedding their costliness to art. Columns cut
@@ -225,7 +240,7 @@ cassia, Panchaean cinnamon-flowers and sprays of
 oozy balm, while balsam creeps forth slowly in an
 exuding stream.
 </p>
-         <p>Hither Love glided down, winging his way o'er
+            <p>Hither Love glided down, winging his way o'er
 the long journey. Joyfully and with prouder gait
 than e'er his wont he enters. Venus was seated on
 her glittering throne, tiring her hair. On her right
@@ -234,7 +249,7 @@ these one pours a rich stream of nectar over Venus'
 <pb id="v.1.p.251"/>
 head, another parts her hair with a fine ivory comb.
 </p>
-         <p>A third, standing behind the goddess, braids her
+            <p>A third, standing behind the goddess, braids her
 tresses and orders her ringlets in due array, yet
 carefully leaving a part untended; such negligence
 becomes her more. Nor did her face lack the mirror's
@@ -251,16 +266,16 @@ Sidon? Hast thou overcome Apollo, or again
 summoned Diana to a shepherd's cave? Methinks
 thou hast triumphed over some fierce and potent
 god.</q>
-         </p>
-         <p>Hanging upon his mother's kisses he answered:
+            </p>
+            <p>Hanging upon his mother's kisses he answered:
 <q direct="unspecified">Mother, be thou glad; a great victory is ours.
 Now has Honorius felt our arrows. Thou knowest
 Maria and her sire, the general whose spear protects
 Gaul and Italy; the fame of noble Serena is
 not hidden from thee. Haste thee, assent to their
 princely prayers and seal this royal union.</q>
-         </p>
-         <p>Cytherea freed her from her son's embrace,
+            </p>
+            <p>Cytherea freed her from her son's embrace,
 hastily bound up her hair, gathered up her flowing
 dress and girt herself about with the divine girdle
 whose all-compelling charm can stay the rain-swollen
@@ -277,8 +292,8 @@ be the Libyan sea rings to his conch, may be he
 cleaves the Aegean main. Whoso shall find and
 bring him hither shall have a golden quiver as a
 reward.</q>
-         </p>
-         <p>She spake and, dividing into various bands, the
+            </p>
+            <p>She spake and, dividing into various bands, the
 scouts set out. Triton was swimming beneath the
 waves of the Carpathian sea, pursuing reluctant
 Cymothoe. She feared her rough lover and eluded
@@ -290,8 +305,8 @@ reward for thy services (and 'tis no meagre one) thou
 shalt have Cymothoe, a complaisant mistress shall she
 be though she flout thee now. Come and win thy
 recompense.</q>
-         </p>
-         <p>The dread monster uprose from the abyss; his
+            </p>
+            <p>The dread monster uprose from the abyss; his
 billowing hair swept his shoulders; hoofs of cloven
 horn grown round with bristles sprang from where his
 fishy tail joined his man's body. He swam three
@@ -324,7 +339,7 @@ depths of the Red Sea. Doto suddenly dives to
 gather coral, a plant so long as it is beneath the
 water, a jewel once it is brought forth from the waves.
 </p>
-         <p>The nude crowd of Nereids throng around Venus,
+            <p>The nude crowd of Nereids throng around Venus,
 following her and singing praises after this manner;
 <q direct="unspecified">We beg thee, Venus, our queen, to bear these
 our gifts, these adornments, to queen Maria. Tell
@@ -335,8 +350,8 @@ realize the devotion of the sea and know that Ocean
 is her slave. 'Tis we who bore up her father's fleet,
 the hope of his victorious land, what time he set
 out to avenge the ruined Greeks.</q>
-         </p>
-         <p>And now Triton's foam-flecked breast had touched
+            </p>
+            <p>And now Triton's foam-flecked breast had touched
 the Ligurian shore and his wearied coils were extended
 over the surface of the water. Straightway Venus
 flew high in the air to the city founded by the Gauls,
@@ -349,7 +364,7 @@ though he cannot tell why. The standards of
 war burgeon with red flowers and the spears on a
 sudden sprout with living leaves. Then Venus
 thus addresses her attendant throng. <q direct="unspecified">
-               <p>Comrades
+                  <p>Comrades
 mine, keep away for a while the god of war that the
 palace may be mine and mine alone. Banish afar
 the terror of the flashing breastplate; let its scabbard
@@ -366,7 +381,7 @@ make one the nobles with the crowd. Let joy be
 unrestrained and sober Law herself be not ashamed
 to laugh.
 </p>
-               <p>Hymen, choose thou the festal torches, and ye
+                  <p>Hymen, choose thou the festal torches, and ye
 Graces gather flowers for the feast. Thou, Concord,
 weave two garlands. You, winged band, divide and
 hasten whithersoever you can be of use: let none be
@@ -397,9 +412,9 @@ bought peace of Rome. Let the lofty couch be
 adorned with the barbaric splendour of kings'
 treasuries; be all the wealth of all our triumphs
 gathered in that marriage-chamber.</p>
-            </q>
-         </p>
-         <p>So spake she and all unannounced sought the
+               </q>
+            </p>
+            <p>So spake she and all unannounced sought the
 bride's home. But Maria, with no thoughts of
 wedlock nor knowing that the torches were being
 got ready, was listening with rapt attention to the
@@ -430,9 +445,9 @@ spring it spreads abroad its petals; the other yet
 nestles in its bud nor dares receive the sun's warmth
 within its tender heart.
 </p>
-         <p>Venus stood and addressed Maria with these gentle
+            <p>Venus stood and addressed Maria with these gentle
 words: <q direct="unspecified">
-               <p>All hail! revered daughter of divine Serena,
+                  <p>All hail! revered daughter of divine Serena,
 scion of great kings and destined to be the mother of
 kings. For thy sake have I left my home in Paphos'
 isle and Cyprus; for thy sake was I pleased to
@@ -447,7 +462,7 @@ though no ties of blood united thee to the royal
 house, though thou wert in no way related thereto,
 yet would thy beauty render thee worthy of a kingdom.
 </p>
-               <p>What face could rather win a sceptre? What
+                  <p>What face could rather win a sceptre? What
 countenance better adorn a palace? Redder than
 roses thy lips, whiter than the hoar-frost thy neck,
 cowslips 1 are not more yellow than thine hair, fire
@@ -471,9 +486,9 @@ Now Rhine and Elbe shall be thy slaves; thou shalt
 be queen among the Sygambri. Why should I
 number the peoples and the Atlantic's distant
 shores? The whole world alike shall be thy dowry.</p>
-            </q>
-         </p>
-         <p>She spake and fitted to Maria's neck and shining
+               </q>
+            </p>
+            <p>She spake and fitted to Maria's neck and shining
 limbs the rich gear which the happy Nereids had
 just given her. She parted her hair with the spear's
 point, girded up her dress, and with her own hands
@@ -490,7 +505,7 @@ the streams that saw his birth. His masters smile
 at the hope of their stud's increase, and the mares
 take pleasure in their handsome mate.
 </p>
-         <p>Meanwhile the army has laid aside its swords:
+            <p>Meanwhile the army has laid aside its swords:
 the soldiers are dressed in white and throng around
 Stilicho, the bride's father. No standard-bearer nor
 <pb id="v.1.p.265"/>
@@ -520,9 +535,9 @@ the fair Thermantia,1 thy daughter, live to see a
 marriage such as this; so may Maria's womb grow
 big and a little Honorius, born in the purple, rest
 on his grandsire's lap.</q>
-            <pb id="v.1.p.269"/>
-         </p>
-                </div1>
+               <pb id="v.1.p.269"/>
+            </p>
+         </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

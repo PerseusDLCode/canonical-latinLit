@@ -1,66 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.19/tei-epidoc.rng"
-schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader xml:lang="eng">
-    <fileDesc>
-      <titleStmt>
-        <title xml:lang="lat">De Monogamia</title>
-        <author>Tertullian</author>
-       <editor>Franz Oehler</editor>
-      </titleStmt>
-      <publicationStmt>
-       <publisher>Trustees of Tufts University</publisher>
-       <pubPlace>Medford, MA</pubPlace>
-       <authority>Perseus Project</authority>
-       <availability>          
-        <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
-       </availability>      
-      </publicationStmt>
-      <sourceDesc>
-        <biblStruct>
-          <monogr>
-            <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">De Monogamia</title>
             <author>Tertullian</author>
             <editor>Franz Oehler</editor>
-            <imprint>
-              <publisher>T. O. Weigel</publisher>
-              <pubPlace>Leipzig</pubPlace>
-              <date>1853</date>
-              <biblScope unit="volume">1</biblScope>
-            </imprint>
-          </monogr>
-          <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=791%3Bownerid=13510798896211526-821">HathiTrust</ref>                                                  
-          
-        </biblStruct>
-        
-        </sourceDesc>
-  </fileDesc>
-   <encodingDesc>
-      <refsDecl n="CTS">
-        <cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-          <p>This pointer pattern extracts Chapter</p>
-        </cRefPattern>
-      </refsDecl>
-<refsDecl n="text=1">
-<refState unit="text"/>
-<refState unit="book"/>
-<refState unit="chapter" n="chunk"/>
-<refState unit="section"/>
-</refsDecl>
-
-   </encodingDesc>
-   <profileDesc>
-      <langUsage>
-	<language ident="lat">Latin</language>
-	<language ident="grc">Greek</language>
-      </langUsage>
-   </profileDesc>
-  </teiHeader>
-<text><body><div type="edition" n="urn:cts:latinLit:stoa0275.stoa019.opp-lat1" xml:lang="lat">
-<pb xml:id="v.1.p.761"/>
-<head>DE MONOGAMIA.</head>
-<div type="textpart" subtype="chapter" n="1">
-<p>Haeretici nuptias auferunt, psychici ingerunt. Illi nec semel, 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Available under a Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+            </availability>
+            <idno type="CTS">urn:cts:latinLit:stoa0275.stoa019.opp-lat1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Quinti Septimii Florentis Tertulliani Quae Supersunt Omnia</title>
+                  <author>Tertullian</author>
+                  <editor>Franz Oehler</editor>
+                  <imprint>
+                     <publisher>T. O. Weigel</publisher>
+                     <pubPlace>Leipzig</pubPlace>
+                     <date>1853</date>
+                     <biblScope unit="volume">1</biblScope>
+                  </imprint>
+               </monogr>
+               <ref target="https://hdl.handle.net/2027/mdp.39015012086974?urlappend=%3Bseq=791%3Bownerid=13510798896211526-821">HathiTrust</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl n="text=1">
+            <refState unit="text"/>
+            <refState unit="book"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="urn:cts:latinLit:stoa0275.stoa019.opp-lat1">
+         <pb xml:id="v.1.p.761"/>
+         <head>DE MONOGAMIA.</head>
+         <div n="1" type="chapter">
+            <p>Haeretici nuptias auferunt, psychici ingerunt. Illi nec semel, 
 isti non semel nubunt. Quid agis, lex creatoris? Inter alienos
 spadones et aurigas tuos tantundem quereris de domestico obsequio
 <pb xml:id="v.1.p.762"/>
@@ -82,10 +84,9 @@ et spiritus adversus carnem. Quid autem concupiscet
 caro quam quae magis carnis sunt? Propter quod et in primordio
 <bibl n="Gen. VI, 3."/> extranea spiritus facta est. Non, inquit, permanebit spiritus meus
 in istis hominibus in aevum, eo quod caro sint.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="2">
-<p> Itaque monogamiae disciplinam in haeresim exprobrant, nec
+         </div>
+         <div n="2" type="chapter">
+            <p> Itaque monogamiae disciplinam in haeresim exprobrant, nec
 ulla magis ex causa paracletum negare coguntur, quam dum existimant
 novae disciplinae institutorem, et quidem durissimae illis,
 ut iam de hoc primum consistendum sit in generali retractatu,
@@ -115,10 +116,9 @@ licet onerosis, quia nec nunc sustinentur, non alterius tamen
 Christi quam qui habere se dixit et alia multa quae a paracleto
 edocerentur, non minus istis onerosa quam illis a quibus nondum
 tunc sustinebantur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="3">
-<p>Sed an onerosa monogamia, viderit adhuc impudens infirmitas 
+         </div>
+         <div n="3" type="chapter">
+            <p>Sed an onerosa monogamia, viderit adhuc impudens infirmitas 
 carnis, an autem nova, de hoc interim constet. Illud enim
 amplius dicimus, etiamsi totam et solidam virginitatem sive continentiam
 paracletus hodie determinasset, ut ne unis quidem nuptiis
@@ -194,10 +194,9 @@ praedicare, qui potuit et nullas, magisque credendum temperasse
 illum quod et abstulisse decuisset, si quae velit Christus intellegas.
 In hoc quoque paracletum agnoscere debes advocatum, quod a tota
 continentia infirmitatem tuam excusat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="4">
-<p>Secedat nunc mentio paracleti, ut nostri alicuius auctoris. 
+         </div>
+         <div n="4" type="chapter">
+            <p>Secedat nunc mentio paracleti, ut nostri alicuius auctoris. 
 Evolvamus communia instrumenta scripturarum pristinarum. Hoc
 ipsum demonstratur a nobis, neque novam neque extraneam esse
 <pb xml:id="v.1.p.766"/>
@@ -240,10 +239,9 @@ ipsorum: duo ex omnibus introibunt ad te, masculus et femina.
 Edem forma et septena ex binis adlegi mandat ex masculo et femina,
 uno et una. Quid amplius dicam? Immundis quoque alitibus
 cum binis feminis introire non licuit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="5">
-<p>Haec quantum ad primordiorum testimonium et originis nostrae 
+         </div>
+         <div n="5" type="chapter">
+            <p>Haec quantum ad primordiorum testimonium et originis nostrae 
 patrocinium et divinae institutionis praeiudicium. Quae utique lex
 est, non monimentum; quoniam si ita factum est a primordio,
 invenimus nos ad initium dirigi a Christo; sicut in quaestione repudii
@@ -293,10 +291,9 @@ Vides igitur quemadmodum etiam in Christo novans censum
 non possis eum sine monogamiae professione deferre, nisi
 carne sis quod spiritu ille est, licet et quod fuit in carne aeque
 esse debueris.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="6">
-<p> Sed adhuc nobis quaeramus aliquos originis principes. Non
+         </div>
+         <div n="6" type="chapter">
+            <p> Sed adhuc nobis quaeramus aliquos originis principes. Non
 placent enim quibusdam monogami parentes Adam et No(??), fortasse
 nec Christus. Ad Abraham denique provocant, prohibiti patrem
 <pb xml:id="v.1.p.769"/>
@@ -343,10 +340,9 @@ proximo arbitrum, habes Aaronem principalem sacerdotem. Secundus
 quoque Mogses populi secundi, qui imaginem nostram in
 promissionem dei induxit, in quo primo nomen domini dedicatum
 est, non fuit digamus.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="7">
-<p> Post vetera exempla originalium personarum aeque ad vetera
+         </div>
+         <div n="7" type="chapter">
+            <p> Post vetera exempla originalium personarum aeque ad vetera
 transeamus instrumenta legalium scripturarum, ut per ordinem
 de omni nostra paratura retractemus. Et quoniam quidam interdum
 <bibl n="Matth. V, 17."/> nihil sibi dicunt esse cum lege, quam Christus non dissolvit,
@@ -414,10 +410,9 @@ neque mortui sumus, qui deo vivimus, neque mortuos sepelimus,
 quia et illi vivunt in Christo. Certe sacerdotes sumus a
 Christo vocati, monogamiae debitores, ex pristina dei lege, quae
 nos tunc in suis sacerdotibus prophetavit.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="8">
-<p> Nunc ad legem proprie nostram, id est ad evangelium, conversi
+         </div>
+         <div n="8" type="chapter">
+            <p> Nunc ad legem proprie nostram, id est ad evangelium, conversi
 qualibus excipimur exemplis, dum ad sententias pervenimus?
 Ecce statim quasi in limine duae nobis antistites Christianae sanctitatis
 occurrunt, monogamia et continentia, alia pudica, in Zacharia
@@ -464,7 +459,7 @@ regnum caelorum, cum consortes illis facit alios post nuptias pueros,
 cum ad simplicitatem columbae provocat, avis non tantum <bibl n="Matth. X, 16."/>
 innocuae, verum et pudicae, quam unam unus masculus novit,
 cum Samaritanae maritum negat, ut adulterum ostendat numerosum <bibl n="Ioh. IV, 17 sq."/>
-<pb xml:id="v.1.p.774"/>
+               <pb xml:id="v.1.p.774"/>
 
 maritum, cum in revelatione gloriae suae de tot sanctis et prophetis
 <bibl n="Matth. XVII, 3sqq."/> Moysen et Heliam secum mavult, alterum monogamum, alterum
@@ -473,10 +468,9 @@ spadonem. Non enim aliud fuit Helias quam Ioannes qui in
 prandiorum et coenarum cum publicanis et peccatoribus frequentator,
 <bibl n="Ioh. II, 2 sqq."/> semel apud unas nuptias coenat multis utique nubentibus. Totiens
 enim voluit celebrare eas quotiens et esse.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="9">
-<p> Sed hae argumentationes potius existimentur de coniecturis
+         </div>
+         <div n="9" type="chapter">
+            <p> Sed hae argumentationes potius existimentur de coniecturis
 coactae, si non et sententiae adstiterint, quas dominus emisit in
 repudii retractatu, quod permissum aliquando iam prohibet, inprimis
 quia ab initio non fuit sic, sicut matrimonii numerus, tum
@@ -528,12 +522,10 @@ genus duritiae commissum denotetur. Sed illi
  etiam non repudiantes
 adulteria commiscent: nobis, etsi repudiemus, ne nubere
 quidem licebit.</p>
-<pb xml:id="v.1.p.776"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="10">
-<p> Video iam hinc nos ad apostolum provocari. Ad cuius sensum
+            <pb xml:id="v.1.p.776"/>
+         </div>
+         <div n="10" type="chapter">
+            <p> Video iam hinc nos ad apostolum provocari. Ad cuius sensum
 facilius perspiciendum tanto instantius praeculcandum est mulierem
 magis defuncto marito teneri, quo minus alium virum admitat.
 Recogitemus enim repudium aut discordia fieri aut discordiam
@@ -588,10 +580,9 @@ per quod et factus est, id est animum: in quo si et alius habitabit,
 hoc erit crimen. Ceterum non est exclusus, si a viliore
 commercio carnis discessit. Honoratior maritus est, quanto mundior
 factus est.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="11">
-<p>Ut igitur in domino nubas secundum legem et apostolum (si 
+         </div>
+         <div n="11" type="chapter">
+            <p>Ut igitur in domino nubas secundum legem et apostolum (si 
 tamen vel hoc curas), qualis es id matrimonium postulans quod
 eis a quibus postulas non licet habere, ab episcopo monogamo, a
 presbyteris et diaconis eiusdem sacramenti, a viduis, quarum sectam
@@ -693,10 +684,9 @@ et tam exemplis et argumentis praecedentibus quam et sententiis
 et sensibus subsequentibus, et in primis an ipsius apostoli et consilio
 proprio congruat et instituto; nihil enim custodiendum est
 quam ne diversus sibi quis deprehendatur.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="12">
-<p>Audi et subtilissimam e contrario argumentationem. Adeo, 
+         </div>
+         <div n="12" type="chapter">
+            <p>Audi et subtilissimam e contrario argumentationem. Adeo, 
 inquiunt, permisit apostolus iterare connubium, ut solos qui sunt
 in clero monogamiae iugo astrinxerit. Quod enim quibusdam
 praescribit, id non omnibus praescribit. Numquid ergo et quod
@@ -735,12 +725,10 @@ velis, vincula disciplinae totius. Praescribe constanter non omnibus
 praecipi quae quibusdam sint praecepta, aut si cetera quidem
 communia sunt, monogamia vero solis episcopis imposita est, numquid
 illi soli Christiani pronuntiandi in quos tota disciplina collata est?</p>
-<pb xml:id="v.1.p.783"/>
-
-</div>
-
-<div type="textpart" subtype="chapter" n="13">
-<p>Sed et Timotheo scribens vult iuvenculas nubere, filios suscipere, <bibl n="II Tim. V, 11—15."/>
+            <pb xml:id="v.1.p.783"/>
+         </div>
+         <div n="13" type="chapter">
+            <p>Sed et Timotheo scribens vult iuvenculas nubere, filios suscipere, <bibl n="II Tim. V, 11—15."/>
 matres familiae agere. Ad eas dirigit quales supra denotat,
 iuvenculas viduas, quae in viduitate deprehensae et aliquamdiu adsectatae,
 postquam in deliciis habuerunt Christum, nubere volunt,
@@ -770,10 +758,9 @@ facta alteri viro post mortem mariti, si adhuc in lege agere deberes,
 tanto ex diversitate condicionis adulterii te praeiudicat post
 mortem mariti alii nubentem; quia iam mortificata es legi, non
 potest tibi licere, cum recessisti ab ea apud quam tibi licebat.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="14">
-<p>Nunc si et absolute apostolus permisisset in fide amisso matrimonio 
+         </div>
+         <div n="14" type="chapter">
+            <p>Nunc si et absolute apostolus permisisset in fide amisso matrimonio 
 <pb xml:id="v.1.p.784"/>
 
 nubere, proinde fecisset quemadmodum et cetera quae
@@ -824,10 +811,9 @@ inquit, posui ante te bonum et malum. Elige quod bonum est;
 si non potes, quia non vis (posse enim te, si velis, ostendit, quia
 tuo arbitrio utrumque proposuit), discedas oportet ab eo cuius non
 facis voluntatem.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="15">
-<p>Quae igitur hic duritia nostra, si non facientibus voluntatem 
+         </div>
+         <div n="15" type="chapter">
+            <p>Quae igitur hic duritia nostra, si non facientibus voluntatem 
 dei renuntiamus? Quae haeresis, si secundas nuptias, ut illicitas,
 iuxta adulterium iudicamus? Quid est enim adulterium quam matrimonium
 illicitum? Notat apostolus eos qui in totum nubere <bibl n="I Tim. IV, 3."/>
@@ -850,10 +836,9 @@ quid utraque
 honestiorem quae saevitiam quam quae pudicitiam sustinere non
 potuit. Et tamen nec cruentam defectionem infirmitas carnis excusat,
 nedum impudicam.</p>
-</div>
-
-<div type="textpart" subtype="chapter" n="16">
-<p>Rideo autem, cum infirmitas carnis opponitur, quae summa 
+         </div>
+         <div n="16" type="chapter">
+            <p>Rideo autem, cum infirmitas carnis opponitur, quae summa 
 fortitudo dicenda est. Iterum nubere est res virium; resurgere
 <pb xml:id="v.1.p.786"/>
 
@@ -887,10 +872,8 @@ particulae Iudaeae. Satis opportunos novissimis temporibus fructus
 iteratis matrimoniis colligant, ubera fluitantia et uteros nauseantes
 et infantes pipiantes. Parent antichristo, in quae libidinosius
 saeviat. Adducet illis carnifices obstetrices.</p>
-<pb xml:id="v.1.p.787"/>
-
-
-<p>Habebunt plane Christo quod allegent speciosum privilegium,
+            <pb xml:id="v.1.p.787"/>
+            <p>Habebunt plane Christo quod allegent speciosum privilegium,
 carnis usquequaque imbecillitatem. Sed hanc iudicabunt iam non
 Isaac monogamus pater noster, nec Ioannes aliqui Christi spado,
 nec Iudith filia Merari, nec tot alia exempla sanctorum. Solent
@@ -917,12 +900,11 @@ semel pudenda protexit, semel deo erubuit, semel ruborem suum
 abscondit, semel de paradiso sanctiatis exulavit, semel exinde
 nupsit. Si in illo fuisti, habes tuam formam; si in Christum transisti,
 melior esse debebis. Exhibe tertium Adam et hunc digamum,
-et tunc poteris esse, quod inter duos non potes.</p></div>
-<pb xml:id="v.1.p.788"/>
-
-<pb xml:id="v.1.p.789"/>
-
-<pb xml:id="v.1.p.790"/>
-</div></body></text>
-
+et tunc poteris esse, quod inter duos non potes.</p>
+         </div>
+         <pb xml:id="v.1.p.788"/>
+         <pb xml:id="v.1.p.789"/>
+         <pb xml:id="v.1.p.790"/>
+      </body>
+   </text>
 </TEI>

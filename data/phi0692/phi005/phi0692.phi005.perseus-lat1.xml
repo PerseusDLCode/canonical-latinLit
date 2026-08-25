@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,12 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base" n="chunk">
+          <citeStructure match=".//lb" use="@n" unit="line" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -64,7 +65,7 @@
   </teiHeader>
 
 
-  <text n="copa" id="phi0692.phi005.perseus.lat1"><body>
+  <text n="copa" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi005.perseus-lat1">
     <head>Copa</head><p>
 <lb n="1"/>Copa Surisca caput Graeca redimita mitella,
 <lb n="2"/>crispum sub crotalo docta mouere latus,
@@ -104,7 +105,7 @@
 
 <lb n="31"/>heia age pampinea fessus requiesce sub umbra
 <lb n="32"/>et grauidum roseo necte caput strophio,
-<lb n="33"/>&dagger;formosum&dagger; tenerae decerpens ora puellae.
+<lb n="33"/>†formosum† tenerae decerpens ora puellae.
 <lb n="34"/>a pereat cui sunt prisca supercilia!
 <lb n="35"/>quid cineri ingrato seruas bene olentia serta? 
 <lb n="36"/>anne coronato uis lapide ista tegi?
@@ -116,4 +117,4 @@
 
 </p></body></text>
 
- </TEI.2>
+ </TEI>

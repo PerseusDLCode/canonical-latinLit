@@ -1,9 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
-<!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersProse PUBLIC "-//Perseus P4//DTD Perseus Prose//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersProse.dtd" >
-%PersProse;
-]>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,6 +47,14 @@
 <state unit="section"/>
 </refsDecl>
 
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk">
+            <citeStructure match=".//lb" use="@n" unit="line" delim="."/>
+          </citeStructure>
+        </citeStructure>
+      </refsDecl>
+
     </encodingDesc>
 
     <profileDesc>
@@ -63,23 +66,7 @@
     <change>Added to repository November, 2011. Unreleased.</change>
   </teiHeader>
 
-<text><group>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  <text n="catalepton" id="phi0692.phi009.perseus.lat1"><body>
+<text n="catalepton" xml:lang="lat"><body xml:base="urn:cts:latinLit:phi0692.phi009.perseus-lat1">
     <head>Catalepton</head>
 
 <div1 type="poem" n="1"><p>
@@ -98,7 +85,7 @@
 
 
 <lb n="3"/>Thucydides, tyrannus Atticaest febris,
-<lb n="4"/>tau Gallicum min et psin et 'male illi sit'&mdash;
+<lb n="4"/>tau Gallicum min et psin et 'male illi sit'—
 <lb n="5"/>ista omnia ista uerba miscuit fratri. 
 </p></div1>
 
@@ -138,7 +125,7 @@
 
 <div1 type="poem" n="5"><p>
 <lb n="1"/>Ite hinc, inanes, ite, rhetorum ampullae,
-<lb n="2"/>inflata &dagger;rhoso non Achaico uerba,
+<lb n="2"/>inflata †rhoso non Achaico uerba,
 <lb n="3"/>et uos, Selique Tarquitique Varroque,
 <lb n="4"/>scholasticorum natio madens pingui,
 <lb n="5"/>ite hinc, inanis cymbalon iuuentutis. 
@@ -216,8 +203,8 @@
 <lb n="26"/>quae uolucrem cursu uicerat Hippomenen;
 <lb n="27"/>candida cycneo non edita Tyndaris ouo,
 <lb n="28"/>non supero fulgens Cassiopea polo,
-<lb n="29"/>non defensa diu &dagger;multum certamine equorum
-<lb n="30"/>optabant &dagger;grauidae quod sibi quaeque manus&dagger;, 
+<lb n="29"/>non defensa diu †multum certamine equorum
+<lb n="30"/>optabant †grauidae quod sibi quaeque manus†, 
 <lb n="31"/>saepe animam generi pro qua pater impius hausit,
 
 
@@ -355,7 +342,7 @@
 <lb n="26"/>macraque luctantes aqua;
 <lb n="27"/>neque in culinam et uncta compitalia
 <lb n="28"/>dapesque duces sordidas,
-<lb n="29"/>quibus repletus ut saliuosis &dagger;aquis
+<lb n="29"/>quibus repletus ut saliuosis †aquis
 <lb n="30"/>obesam ad uxorem redis, 
 <lb n="31"/>exaestuantes dote soluis pantices,
 <lb n="32"/>os crusque lambis sauiis.
@@ -406,4 +393,4 @@
 
 
 
-</p></div1></body></text></TEI.2>
+</p></div1></body></text></TEI>

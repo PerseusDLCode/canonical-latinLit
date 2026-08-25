@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI.2>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-                  <title>Panegyric on the Fourth Consulship of the Emperor Honorius</title>
+            <title>Panegyric on the Fourth Consulship of the Emperor Honorius</title>
             <author>Claudian</author>
             <editor role="translator">Maurice Platnauer</editor>
             <sponsor>Perseus Project, Tufts University</sponsor>
@@ -41,11 +41,18 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <editorialDecl><p>Keyboarding</p></editorialDecl>
-                     <refsDecl doctype="TEI.2">
-                              <state unit="poem"/>
-                     </refsDecl>
-            </encodingDesc>
+         <editorialDecl>
+            <p>Keyboarding</p>
+         </editorialDecl>
+         <refsDecl doctype="TEI.2">
+            <state unit="poem"/>
+         </refsDecl>
+      <refsDecl n="CTS" xml:id="CTS">
+        <citeStructure match="/TEI/text/body" use="@xml:base">
+          <citeStructure match="div1[@type='poem']" use="@n" unit="poem" delim=":" n="chunk"/>
+        </citeStructure>
+      </refsDecl>
+      </encodingDesc>
       <profileDesc>
          <langUsage>
             <language id="la">Latin</language>
@@ -53,11 +60,10 @@
          </langUsage>
       </profileDesc>
    </teiHeader>
-   <text id="stoa0089.stoa011.perseus-eng1">
-      <body>
+   <text xml:lang="eng"><body xml:base="urn:cts:latinLit:stoa0089.stoa011.perseus-eng1">
          <pb id="v.1.p.287" TEIform="pb"/>
-               <div1 type="poem" n="1">        
-         <p>
+         <div1 type="poem" n="1">
+            <p>
 
 Once more the year opens under royal auspices
 and enjoys in fuller pride its famous prince; not
@@ -80,7 +86,7 @@ exchange thy shining breastplate for the Latin
 toga while thine iron chariot remains unused and
 thy steeds disport them in the pastures of Eridanus.
 </p>
-         <p>Not unworthy of reverence nor but newly
+            <p>Not unworthy of reverence nor but newly
 acquainted with war is the family of Trajan and that
 Spanish house which has showered diadems upon
 the world. No common stream was held worthy
@@ -113,7 +119,7 @@ down, the frenzied valour of the Moor yielded to
 the sword and the palace of ancient Bocchus was
 razed to the ground.
 </p>
-         <p>But thy father's fame far surpassed that of thy
+            <p>But thy father's fame far surpassed that of thy
 grandsire: he subdued Ocean to his governance
 and set the sky for border to his kingdom, ruling
 from Gades to the Tigris, and all that lies 'twixt
@@ -139,7 +145,7 @@ Rome's name had survived had not thy sire borne
 up the tottering mass, succoured the storm-tossed
 bark and with sure hand averted universal shipwreck.
 </p>
-         <p>As when the maddened coursers broke from
+            <p>As when the maddened coursers broke from
 their path and carried Phaethon far astray, when
 day's heat grew fierce and the sun's rays, brought
 near to earth, dried up both land and sea, Phoebus
@@ -149,7 +155,7 @@ with a happier guide heaven's harmonious order was
 restored; for now the chariot again accepted government
 and its fires control.
 </p>
-         <p>Thus was the East entrusted to him and thus was
+            <p>Thus was the East entrusted to him and thus was
 its salvation assured; but the other half of the
 world was not so entrusted: twice was the West
 gained by valour, twice won by dangers. In those
@@ -167,7 +173,7 @@ was safe. The one o'erran the country, spreading
 his forces in all directions, the other kept his troops
 together and himself secure behind a rampart.
 </p>
-         <p>Different were they, but in their deaths alike. To
+            <p>Different were they, but in their deaths alike. To
 neither was it granted to escape an ignominious end
 and to fall in the thick of the fight. Gone was their
 glory, their weapons were reft from them and they
@@ -182,19 +188,19 @@ not as warriors at a victor's hand but as malefactors
 before a judge; he sentences with his voice as
 criminals those whom he assailed in war as tyrants.
 </p>
-         <p>With both perished their lieutenants: Andragathius
+            <p>With both perished their lieutenants: Andragathius
 hurled himself from his ship into the waves, Arbogast
 took his life with his own sword; the Alps
 mark the tomb of the one, the sea of the other.
 </p>
-         <p>This solace at least the avenger afforded to those murdered
+            <p>This solace at least the avenger afforded to those murdered
 brothers that both the authors of their deaths
 themselves were slain; two victims went to appease
 those royal ghosts. Such was Theodosius' oblation
 at their tomb and with the blood of the guilty he
 appeased the shades of the two young emperors.
 </p>
-         <p>Those triumphs stablished Justice on her throne
+            <p>Those triumphs stablished Justice on her throne
 <pb id="v.1.p.295"/>
 and taught that heaven gives help. From them
 let the ages learn that righteousness need fear no
@@ -204,7 +210,7 @@ Theodosius traversed those long journeys undetected
 by his enemies. Suddenly he fell on both, passing
 over entrenched mountains as if they were a plain.
 </p>
-         <p>Build up monstrous rocks, raise towers, surround
+            <p>Build up monstrous rocks, raise towers, surround
 yourselves with rivers, set limitless forests to protect
 you, put Garganus and the snowy Apennines upon
 the summits of the Alps that all form one vast mountain
@@ -213,7 +219,7 @@ roll Pelion on Ossa, yet will ye not gain security
 for guilt. The avenger will come; for the better
 cause all things shall sink to make a path.
 </p>
-         <p>Yet never did Theodosius forget that he and
+            <p>Yet never did Theodosius forget that he and
 the vanquished were fellow-citizens, nor was his
 anger implacable against those who yielded. Not
 his the choice to exult over the fallen. His ears
@@ -222,15 +228,15 @@ vengeance restrained. His anger did not survive
 the war to darken the days of peace; the day that
 set an end to the combat set an end to his wrath.
 </p>
-         <p>Capture by such a victor was a gain; and many a
+            <p>Capture by such a victor was a gain; and many a
 conquered foe did their chains commend to future
 fortune. 1 As liberal of money as of honours he
 was ever bent to redress the injuries of fate.
 </p>
-         <p>Hence the love, the fortitude, the devotion of his
+            <p>Hence the love, the fortitude, the devotion of his
 troops; hence their abiding loyalty to his sons.
 </p>
-         <p>Child of so noble a sire, thy kingly state was
+            <p>Child of so noble a sire, thy kingly state was
 coeval with thy birth nor ever knewest thou the
 soilure of a private lot. To thee all things came
 unsought; thee only 2 did a palace rear; thy happy
@@ -240,11 +246,11 @@ outraged by garb profane, were laid upon a hallowed
 lap. Spain with its rivers of gold gave birth
 to thy sire; Bosporus boasts thee among its children.
 </p>
-         <p>The West is the cradle of thy race but the East
+            <p>The West is the cradle of thy race but the East
 was thine own nurse; rivals are they for so dear a
 pledge, either hemisphere claims thee as its citizen.
 </p>
-         <p>The fame of Hercules and Bacchus has immortalized
+            <p>The fame of Hercules and Bacchus has immortalized
 Thebes; when Latona gave birth to Apollo in
 Delos that island stayed its errant course; it is
 Crete's boast that over its fields the infant Thunderer
@@ -259,7 +265,7 @@ joy at that royal deliverance. What presages were
 there not then of future prosperity? what songs of
 birds, what flights of good omen in the heavens?
 </p>
-         <p>What was the hurrying to and fro of seers? Hornèd
+            <p>What was the hurrying to and fro of seers? Hornèd
 Ammon and Delphi so long dumb at length broke
 their silence; Persian magi prophesied thy triumphs;
 Tuscan augurs felt thine influence; seers of Babylon
@@ -273,7 +279,7 @@ the royal babe who marked the bowed helmets of
 the worshipping soldiery while the trumpet's blare
 answered his warlike cries.
 </p>
-         <p>The day that gave thee birth gave thee a kingdom;
+            <p>The day that gave thee birth gave thee a kingdom;
 <pb id="v.1.p.299"/>
 in thy cradle thou wast raised to the consulship.1
 With the name so recently bestowed upon thee thou
@@ -338,7 +344,7 @@ neck the curls whose stirrings were to shake the
 world. He was yet learning how to cleave the clouds
 and hurl the thunderbolt with unpractised hand.
 </p>
-         <p>Gladdened by that augury and proud of his now
+            <p>Gladdened by that augury and proud of his now
 equal sons the sire returned, upstayed on the two
 princes and lovingly embracing his children in
 glittering car. Even so the Spartan twins, the
@@ -351,11 +357,11 @@ uncertainty, and to their hesitating mother her
 ignorance brings delight; Eurotas cannot make
 distinction between his own nurslings.
 </p>
-         <p>When all had returned to the palace, Theodosius,
+            <p>When all had returned to the palace, Theodosius,
 anxious for the world's just governance, is said to
 have addressed thee in these terms:
 <q direct="unspecified">
-               <p>Had fortune, my dear son, given thee the throne
+                  <p>Had fortune, my dear son, given thee the throne
 of Parthia, hadst thou been a descendant of the
 Arsacid house and did the tiara, adored by Eastern
 lands afar, tower upon thy forehead, thy long
@@ -368,7 +374,7 @@ and more useful. Nay, o'erwhelmed in darkness it
 will no more advantage its obscure possessor than
 a vessel with no oars, a silent lyre, an unstrung bow.
 </p>
-               <p>Yet virtue none shall find that has not first learned
+                  <p>Yet virtue none shall find that has not first learned
 to know himself and stilled the uncertain waves of
 passion within him. Long and winding is the path
 that leads thereto. What each man learns in his
@@ -408,7 +414,7 @@ swayed now by joy, now by misery, and is no sooner
 fed than fain to be fed again, returning with more
 insistence than the oft-beheaded hydra.
 </p>
-               <p>Can any assuage this tumult he will assure an
+                  <p>Can any assuage this tumult he will assure an
 inviolable sanctuary for a spotless soul. Thou
 mayest hold sway o'er farthest India, be obeyed by
 Mede, unwarlike Arab or Chinese, yet, if thou
@@ -426,7 +432,7 @@ Yet master thine emotions and ponder not what
 thou mightest do but what thou oughtest to do,
 and let regard for duty control thy mind.
 </p>
-               <p>Of this too I cannot warn thee too often: remember
+                  <p>Of this too I cannot warn thee too often: remember
 that thou livest in the sight of the whole world,
 to all peoples are thy deeds known; the vices of
 monarchs cannot anywhere remain hid. The splendour
@@ -434,7 +440,7 @@ of their lofty station allows nought to be concealed;
 fame penetrates every hiding-place and
 discovers the inmost secrets of the heart.
 </p>
-               <p>Above all fail not in loving-kindness; for though
+                  <p>Above all fail not in loving-kindness; for though
 we be surpassed in every virtue yet mercy alone
 makes us equal with the gods. Let thine actions be
 open and give no grounds for suspicion, be loyal to
@@ -464,7 +470,7 @@ fears. Do thou, my son, be at once a citizen and
 a father, consider not thyself but all men, nor let
 thine own desires stir thee but thy people's.
 </p>
-               <p>If thou make any law or establish any custom for
+                  <p>If thou make any law or establish any custom for
 the general good, be the first to submit thyself
 thereto; then does a people show more regard for
 justice nor refuse submission when it has seen their
@@ -473,7 +479,7 @@ itself after its ruler's pattern, nor can edicts sway
 men's minds so much as their monarch's life; the
 unstable crowd ever changes along with the prince.
 </p>
-               <p>Nor is this all: show no scorn of thine inferiors
+                  <p>Nor is this all: show no scorn of thine inferiors
 nor seek to overstep the limits established for mankind.
 Pride joined thereto defaces the fairest
 character. They are not submissive Sabaeans whom
@@ -497,7 +503,7 @@ triumph up the slope of the Capitol, but because
 he was kindly to his country. Fail not to make
 such as he thine example, my son.
 </p>
-               <p>Should war threaten, see first that thy soldiers
+                  <p>Should war threaten, see first that thy soldiers
 are exercised in the practices of war and prepare
 them for the rigours of service. The ease of winter
 months spent in winter quarters must not weaken
@@ -539,9 +545,9 @@ ride amid thy squadrons of horse or again stand foot
 to foot with the infantry. They will advance the bolder
 for thy presence, and with thee to witness glorious
 and glad shall be the fulfilment of their task.</p>
-            </q>
-         </p>
-         <p>More would he have spoken but Honorius broke in
+               </q>
+            </p>
+            <p>More would he have spoken but Honorius broke in
 and said: <q direct="unspecified">All this will I do, so God favour my
 attempts. The peoples and kingdoms committed to
 my care shall find me not unworthy of thee nor of my
@@ -560,10 +566,10 @@ combat? I am as old as was Pyrrhus when alone he
 o'erthrew Troy and proved himself no degenerate
 from his father Achilles. If I may not remain in thy
 camp as a prince I will come even as a soldier.</q>
-         </p>
-         <p>Theodosius kissed his son's sweet lips and answered
+            </p>
+            <p>Theodosius kissed his son's sweet lips and answered
 him wondering: <q direct="unspecified">
-               <p>Nought have I but praise for thy
+                  <p>Nought have I but praise for thy
 petition, but this love of glory has bloomed too early.
 Thy strength will increase with years; till then be
 patient. Though thou hast not yet completed ten
@@ -599,7 +605,7 @@ just rule. Then, careless of doom and rejoicing in
 my labours, I shall quit this mortal life, while you,
 my sons, rule either hemisphere.
 </p>
-               <p>Meanwhile cultivate the Muses whilst thou art
+                  <p>Meanwhile cultivate the Muses whilst thou art
 yet young; read of deeds thou soon mayest rival;
 never may Greece's story, never may Rome's, cease
 to speak with thee. Study the lives of the heroes
@@ -631,9 +637,9 @@ the fasces were hung upon a gateway of wood;
 consuls helped to gather in the harvest, and for long
 years the fields were ploughed by husbandmen who
 wore the consular robe.</p>
-            </q>
-         </p>
-         <p>Such were the precepts of the sire. Even so an
+               </q>
+            </p>
+            <p>Such were the precepts of the sire. Even so an
 aged helmsman oft proved by winter's various storms,
 aweary now of the sea and his weight of years,
 commends to his son the rudder of his bark, tells him
@@ -660,7 +666,7 @@ carry him on foot across the deserts of Libya, at
 the setting of the rainy Pleiads his ship will penetrate
 the Gaetulian Syrtes.
 </p>
-         <p>To him, however, thy first command is to calm
+            <p>To him, however, thy first command is to calm
 fierce nations and bring peace to the Rhine. On
 wind-swift steed, no escort clinging to his side,
 he crosses the cloud-capped summits of the
@@ -676,7 +682,7 @@ to the absent Honorius and addresses her suppliant
 prayers to him. Fierce Bastarnae were there
 and the Bructeri who dwell in the Hercynian forest.
 </p>
-         <p>The Cimbrians left their broad marsh-lands, the tall
+            <p>The Cimbrians left their broad marsh-lands, the tall
 Cherusci came from the river Elbe. Stilicho listens
 <pb id="v.1.p.321"/>
 to their various prayers, gives tardy assent to their
@@ -688,7 +694,7 @@ recall the Rhine conquered by terror alone? That
 which others were enabled to win by long wars —
 this, Honorius, Stilicho's mere march gives thee.
 </p>
-         <p>Thou biddest Stilicho after restoring peace in
+            <p>Thou biddest Stilicho after restoring peace in
 Gaul save Greece from ruin. Vessels cover the
 Ionian sea; scarce can the wind fill out so many
 sails. Neptune with favouring currents attends the
@@ -696,7 +702,7 @@ fleet that is to save Corinth, and young Palaemon,
 so long an exile from the shores of his isthmus,
 returns in safety with his mother to the harbour.
 </p>
-         <p>The blood of barbarians washes their wagons; the
+            <p>The blood of barbarians washes their wagons; the
 ranks of skin-clad warriors are mowed down, some by
 disease, some by the sword. The glades of Lycaeus,
 the dark and boundless forests of Erymanthus, are
@@ -715,7 +721,7 @@ in the persons of the few that survive, laments its
 own overthrow. One hill now shelters a people whose
 hordes scarce the whole world could once contain.
 </p>
-         <p>Athirst and hemmed within their rampart they
+            <p>Athirst and hemmed within their rampart they
 <pb id="v.1.p.323"/>
 sought in vain for the stolen waters, that, once
 within our foemen's reach, Stilicho had turned aside
@@ -723,7 +729,7 @@ in another course, and commanded the stream, that
 marvelled at its strange channel amid unknown
 ways, to shift its altered track.
 </p>
-         <p>What wonder that the nations barring thy path
+            <p>What wonder that the nations barring thy path
 should fall before thee, since the barbarian of his
 own choice now seeks to serve thee? The Sarmatae,
 ever a prey to internal strife, beg to swear allegiance
@@ -748,18 +754,18 @@ the voice of greed summons not the salesman, nor
 is thy treasury increased by private losses. Thou
 art liberal with thy money, yet not wasteful of it.
 </p>
-         <p>The loyalty of thy soldiers is a lasting loyalty,
+            <p>The loyalty of thy soldiers is a lasting loyalty,
 for it is not bought, nor is it gifts that win their love;
 the army is anxious for the success of its own child
 and loves thee who wast its nursling.
 </p>
-         <p>And how deep is thy devotion to Rome herself I
+            <p>And how deep is thy devotion to Rome herself I
 <pb id="v.1.p.325"/>
 THE FOURTH CONSULSHIP OF HONORIUS
 
 How fixed abides thy reverence for the Senate!
 </p>
-         <p>Old customs are preserved, law has recovered its
+            <p>Old customs are preserved, law has recovered its
 ancient sanctity in the amendment of former statutes
 and by the addition of new ones. Such an one as
 thee Pandion's city 1 found in Solon; even so did
@@ -776,9 +782,9 @@ learning thy ready wit, how controlled thy speech;
 ambassadors are awe-stricken at thine answers, and
 thy grave manners make them forget thy years.
 </p>
-         <p>How thy father's nobility shines in thy face!
+            <p>How thy father's nobility shines in thy face!
 </p>
-         <p>How awful is thy winning brow, how charming
+            <p>How awful is thy winning brow, how charming
 the majesty of a blushing emperor! Boy though
 thou art, thou canst wear thy sire's helmet and
 brandish thy grandsire's spear. These exercises
@@ -798,7 +804,7 @@ stroke. Thou knowest in what fashion the Cretan,
 with what skill the Armenian, directs his arrows;
 in what the retreating Parthian puts his trust.
 </p>
-         <p>Thus was Alcides, graced with the sweat of the
+            <p>Thus was Alcides, graced with the sweat of the
 wrestling-ground at Thebes, wont to try his bow
 and Boeotian arrows on the beasts of the forest ere
 he turned them against the Giants and so secured
@@ -808,7 +814,7 @@ he brought back home. Such was Apollo when he
 slew the livid serpent that enfolded and brake down
 forests in his dying coils.
 </p>
-         <p>When mounted on thy horse thou playest the
+            <p>When mounted on thy horse thou playest the
 mimicry of war, who is quicker smoothly to wheel in
 flight, who to hurl the spear, or more skilled to sweep
 round in swift return? There the Massagetae are not
@@ -818,13 +824,13 @@ themselves. Scarce can the squadrons and flying
 bands that accompany thee keep pace, while the wind
 behind thee bellies the fierce dragons on the flags.
 </p>
-         <p>So soon as the touch of thy spur has fired thy steed,
+            <p>So soon as the touch of thy spur has fired thy steed,
 flames start from his swelling nostrils; his hoof
 scarce touches the ground and his mane is outspread
 over his shoulders. His harness rattles and the
 golden bit grows warm in his foam-flecked mouth.
 </p>
-         <p>The jewels that stud his quivering bridle are red with
+            <p>The jewels that stud his quivering bridle are red with
 blood. The signs of toil, the dust stains, the disorder
 of thy hair all do but increase thy beauty. Thy
 brilliant scarlet cloak drinks in the sunlight as
@@ -845,7 +851,7 @@ driven by rosy Lucifer, seeing thee from heaven as
 thou ridest by, is filled with envy and would choose
 rather to hold thy bit in his foaming mouth.
 </p>
-         <p>What raiment, too, have we not seen, what
+            <p>What raiment, too, have we not seen, what
 miracles of splendour, when, girt with the robe of
 Italy, thou didst go, still more glorious than thou
 art wont, through the peoples of Liguria, borne
@@ -854,7 +860,7 @@ carried upon the shoulders of chosen warriors who
 so proudly upheld their godlike burden! 'Tis thus
 that Egypt brings forth her gods to the public gaze.
 </p>
-         <p>The image issues from its shrine; small it is, indeed,
+            <p>The image issues from its shrine; small it is, indeed,
 yet many a linen-clad priest pants beneath the pole,
 and by his sweat testifies that he bears a god;
 Nile's banks resound to the holy rattles, and Egypt's
@@ -866,7 +872,7 @@ their rank either to thee or to thy sire. Many
 a consular surrounds thee, the consul whose good
 pleasure it is to associate the senate in thy triumph.
 </p>
-         <p>The nobles of Spain, the wise men of Gaul, and the
+            <p>The nobles of Spain, the wise men of Gaul, and the
 senators of Rome all throng round thee. On young
 men's necks is borne thy golden throne, and new
 adorning adds weight to deity. Jewels of India
@@ -889,7 +895,7 @@ sands rich growth of coral? Who could broider
 precious stones on scarlet and so mingle the shining
 glories of the Red Sea and of Phoenicia's waters?
 </p>
-         <p>Tyre lent her dyes, China her silks, Hydaspes his
+            <p>Tyre lent her dyes, China her silks, Hydaspes his
 jewels. Shouldst thou traverse Maeonian cities in
 such a garb, to thee would Lydia hand over her
 vine-wreathed thyrsus, to thee Nysa her dances;
@@ -902,7 +908,7 @@ yoke; around him satyrs and wild-haired Maenads
 fetter Indians with triumphant ivy, while drunken
 Ganges twines his hair with the vine tendril.
 </p>
-         <p>Already shouts of joy and of good omen resound
+            <p>Already shouts of joy and of good omen resound
 about the consul's throne to welcome this thy fourth
 opening of Rome's year. Liberty enacts her wonted
 ceremonies; Law observes the custom dating back
@@ -915,7 +921,7 @@ gone; reddened cheeks have made him a citizen,
 and with the granting of his prayer a happy insult
 has given his back freedom from the lash.
 </p>
-         <p>Prosperity awaits our empire; thy name is earnest
+            <p>Prosperity awaits our empire; thy name is earnest
 for the fulfilment of our hopes. The past guarantees
 the future; each time that thy sire made thee chief
 magistrate of the year the laurels of victory crowned
@@ -924,7 +930,7 @@ forest to make them boats, dared to pass beyond
 the Danube. Three thousand vessels, each crowded
 with a barbarous crew, made a dash across the river.
 </p>
-         <p>Odothaeus was their leader. Thy youth, nay, the
+            <p>Odothaeus was their leader. Thy youth, nay, the
 first year of thy life, crushed the attempt of that
 formidable fleet. Its boats filled and sank; never
 did the fish of that northern river feed more lavishly
@@ -951,7 +957,7 @@ for thee the festal torches. Who shall be consecrated
 to such a couch; who, glorious in purple, shall
 pass, a queen, to the embraces of such a husband?
 </p>
-         <p>What bride shall come to be the daughter of so
+            <p>What bride shall come to be the daughter of so
 many gods, dowered with every land and the whole
 sea? How gloriously shall the nuptial song be
 borne at once to farthest East and West! O may
@@ -965,8 +971,8 @@ haired Suebian shall bear the aims of Rome and
 the distant Bactrian tremble beneath the rule of
 thyself and thy brother.
 <pb id="v.1.p.337"/>
-         </p>
-                        </div1>
+            </p>
+         </div1>
       </body>
    </text>
-</TEI.2>
+</TEI>

@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <work xmlns="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi0690" urn="urn:cts:latinLit:phi0690.phi001" xml:lang="lat">
   <title xml:lang="eng">Eclogues</title>
   <edition workUrn="urn:cts:latinLit:phi0690.phi001" urn="urn:cts:latinLit:phi0690.phi001.perseus-lat2" xml:lang="lat">
@@ -10,4 +11,4 @@
     <label xml:lang="eng">Eclogues</label>
     <description xml:lang="eng">Vergil. The Poems of Vergil. Rhoades, James, translator. London: Oxford University Press, 1921.</description>
   </translation>
-</work>
+<genre confidence="medium">verse-poem-line</genre></work>

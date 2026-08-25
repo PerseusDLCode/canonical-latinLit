@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1348.abo021" xml:lang="lat" groupUrn="urn:cts:latinLit:phi1348">
             <ti:title xml:lang="lat">Divus Titus</ti:title>
             <ti:edition urn="urn:cts:latinLit:phi1348.abo021.perseus-lat2" workUrn="urn:cts:latinLit:phi1348.abo021">
@@ -9,4 +10,4 @@
             <ti:description xml:lang="eng">Suetonius. The Lives of the Twelve Caesars. Thomson, Alexander, M.D, translator; Reed, J.E., editor.
               Philadelphia: Gebbie, 1883.</ti:description>
           </ti:translation>
-          </ti:work>
+          <ti:genre confidence="high">prose-chapter-section</ti:genre></ti:work>

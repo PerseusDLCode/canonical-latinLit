@@ -1,67 +1,83 @@
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng">
-        <fileDesc>
-            <titleStmt>
-                <title>Maximini Duo</title>
-                <editor>David Magie</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-<principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>Rashmi Singhal</name>
-                </respStmt>
-                <funder n="org:Mellon">The Mellon Foundation</funder>
-                <funder n="org:Tufts">Tufts University</funder>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">2011-03-14</date>
-            </publicationStmt>
-            <notesStmt><note>OCR cleanup</note></notesStmt>
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <title xml:lang="lat">Scriptores Historiae Augustae</title>
-                        <editor>David Magie</editor>
-                        <imprint>
-                            <publisher>William Heinemann</publisher>
-                            <publisher>G.P. Putnam's Sons</publisher>
-                            <pubPlace>London</pubPlace>
-                            <pubPlace>New York</pubPlace>
-                            <date>1924</date>
-                        </imprint>
-                        <biblScope unit="volume">2</biblScope>
-                    </monogr>
-                    <series>
-                        <title>Loeb Classical Library</title>
-                    </series>
-                    <ref target="https://archive.org/details/scriptoreshistor02camb/page/314/mode/2up">Internet Archive</ref>
-                </biblStruct>
-            </sourceDesc>  
-        </fileDesc>      
-        <encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
-                <refState unit="work"/>
-                <refState unit="chapter" n="chunk"/>
-                <refState unit="section"/>
-            </refsDecl>
-            
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="lat">Latin</language>
-                <language ident="grc">Greek</language>
-            </langUsage>
-        </profileDesc>
-    <revisionDesc><change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change></revisionDesc></teiHeader> <text xml:lang="lat"> <body><div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi2331.phi019.perseus-lat2">
-<div type="textpart" n="1" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>Maximini Duo</title>
+            <editor>David Magie</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+            <funder n="org:Tufts">Tufts University</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-03-14</date>
+            <idno type="CTS">urn:cts:latinLit:phi2331.phi019.perseus-lat2</idno>
+         </publicationStmt>
+         <notesStmt>
+            <note>OCR cleanup</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Scriptores Historiae Augustae</title>
+                  <editor>David Magie</editor>
+                  <imprint>
+                     <publisher>William Heinemann</publisher>
+                     <publisher>G.P. Putnam's Sons</publisher>
+                     <pubPlace>London</pubPlace>
+                     <pubPlace>New York</pubPlace>
+                     <date>1924</date>
+                  </imprint>
+                  <biblScope unit="volume">2</biblScope>
+               </monogr>
+               <series>
+                  <title>Loeb Classical Library</title>
+               </series>
+               <ref target="https://archive.org/details/scriptoreshistor02camb/page/314/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="work"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi2331.phi019.perseus-lat2">
+         <div n="1" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Ne fastidiosum esset Clementiae tuae, Constantine maxime, singulos quosque principes vel principum liberos per libros singulos legere, adhibui moderationem, qua in unum volumen duos Maximinos, patrem
 <milestone unit="section" n="2"/>
 filiumque, congererem. servavi deinceps hunc ordinem, quem Pietas tua etiam ab Tatio Cyrillo, Clarissimo Viro, qui Graeca in Latinum vertit, servari voluit.
@@ -77,10 +93,10 @@ Thraciae vicino barbaris, barbaro etiam patre et matre genitus, quorum alter e G
 esse perhibetur. et patri quidem nomen Micca, matri
 <milestone unit="section" n="7"/>
 Ababa fuisse dicitur, sed haec nomina Maximinus primis temporibus ipse prodidit, postea vero, ubi ad imperium venit, occuli praecepit, ne utroque parente barbaro genitus imperator esse videretur. </p>
-</div>
-<div type="textpart" n="2" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="2" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Et in prima quidem pueritia fuit pastor, iuvenum etiam procer, et
 <note target="n19.316.1"/>
 qui latronibus insidiaretur et suos ab
@@ -97,14 +113,14 @@ loco militarent. magnitudinem corporis Severus mi- ratus primum eum cum lixis co
 <note target="n19.316.2"/>
 disciplinam militarem conrumperet.
 <note n="n19.316.1">iuuenum etiam procer, et Hohl (Rh. Mus., lxx., p. 477); nonnum etiam procerte P; nonnumquam etiam † procerte Peter.</note>
-<note n="n19.316.2">quibus nec P. </note>
-<pb n="p.318"/>
-<milestone unit="section" n="7"/>
+               <note n="n19.316.2">quibus nec P. </note>
+               <pb n="p.318"/>
+               <milestone unit="section" n="7"/>
 tunc Maximinus sedecim lixas uno sudore devicit sedecim acceptis praemiis minusculis non militaribus </p>
-</div>
-<div type="textpart" n="3" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="3" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 iussusque militare, tertia forte die cum processisset Severus ad campum, in turba exultantem more barbarico Maximinum vidit iussitque statim tribuno, ut
 <milestone unit="section" n="2"/>
 eum coerceret ac Romana disciplina
@@ -125,12 +141,12 @@ milites ei comparari iussit, tum ille more solito septem fortissimos uno sudore 
 <milestone unit="section" n="6"/>
 consistere, hinc igitur factus conspicuus inter milites clarus, amari a tribunis, a conmilitonibus suspici, impetrare ab imperatore quod vellet, locis etiam militiae a Severo adiutus, cum esset peradulescens, longitudine
 <note n="n19.318.1">ac Romana disciplina Baehrens, Lessing; ac Romanam disciplinam P, Pete r1. </note>
-<pb n="p.320"/>
+               <pb n="p.320"/>
 autem corporis et vastitate et forma atque oculorum magnitudine et candore inter omnes excelleret. </p>
-</div>
-<div type="textpart" n="4" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="4" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Bibisse autem illum saepe in die vini Capitolinam amphoram constat, comedisse et quadraginta libras carnis, ut autem Cordus dicit, etiam sexaginta.
 <milestone unit="section" n="2"/>
 quod satis constat, holeribus semper abstinuit, a frigidis
@@ -147,7 +163,7 @@ apud impurum hominem valere nihil potuit.
 <milestone unit="section" n="7"/>
 nam dicitur cum eo iocatus esse Heliogabalus
 <note n="n19.320.1">sed om. in P. </note>
-<pb n="p.322"/>
+               <pb n="p.322"/>
 turpissime, dicens:
 <q> Diceris,
 <note target="n19.322.1"/>
@@ -157,10 +173,10 @@ tricies cum muliere perficere?</q>
 tum ille, ubi vidit infamem
 <milestone unit="section" n="9"/>
 principem sic exorsum, a militia discessit, et tamen retentus est per amicos Heliogabali, ne hoc quoque illius famae accederet quod virum temporis sui fortissimum et quem alii Herculem, alii Achillem, </p>
-</div>
-<div type="textpart" n="5" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="5" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Aiacem alii vocabant, a suo exercitu dimoveret. fuit igitur sub homine impurissimo tantum honore tribunatus, sed numquam ad manum eius accessit, numquam illum salutavit per totum triennium huc
 <milestone unit="section" n="2"/>
 atque illuc discurrens; modo agris, modo otio, modo fictis languoribus occupatus est.
@@ -177,23 +193,23 @@ ut in senatu verba faceret talia:
 comperitis.</q>
 statim denique illum tribunum legionis quartae ex tironibus, quam ipse composuerat, dedit et
 <note target="n19.322.4"/>
-<note n="n19.322.1">dicens:
+               <note n="n19.322.1">dicens:
 <add>diceris</add>
 Editor; dicens P, Peter1; diceris Mommsen, Peter2.</note>
-<note n="n19.322.2">Here follows in P the misplaced portion of the Vita Alexandri, c. xliii. 1, fecisset et, to c. lviii. 1, de Isauria; see Intro, to Vol. i. p. xxxiii. The portion of the Vita Maxim, beginning comperit Alexandrum and ending omnes qui mecum, c. xviii. 2, has been similarly transferred to Max.-Balb., viii. 2, after homines vulgar es.</note>
-<note n="n19.322.3">ita om. in P. </note>
-<note n="n19.322.4">et om. in P. </note>
-<pb n="p.324"/>
-<milestone unit="section" n="6"/>
+               <note n="n19.322.2">Here follows in P the misplaced portion of the Vita Alexandri, c. xliii. 1, fecisset et, to c. lviii. 1, de Isauria; see Intro, to Vol. i. p. xxxiii. The portion of the Vita Maxim, beginning comperit Alexandrum and ending omnes qui mecum, c. xviii. 2, has been similarly transferred to Max.-Balb., viii. 2, after homines vulgar es.</note>
+               <note n="n19.322.3">ita om. in P. </note>
+               <note n="n19.322.4">et om. in P. </note>
+               <pb n="p.324"/>
+               <milestone unit="section" n="6"/>
 eum in haec verba provexit:
 <q> Veteres milites tibi, Maximine mi carissime atque amantissime, idcirco non credidi quod veritus sum ne vitia eorum sub aliis
 <milestone unit="section" n="7"/>
 inolescentia emendare non posses, habes tirones; ad tuos mores, ad tuam virtutem, ad tuum laborem eos fac militiam condiscere, ut mihi multos Maximinos rei publicae optabiles solus efficias.</q>
-</p>
-</div>
-<div type="textpart" n="6" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="6" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Accepta igitur legione statim eam exercere
 <milestone unit="section" n="2"/>
 coepit, quinta quaque die iubebat milites decurrere, inter
@@ -214,21 +230,21 @@ denique invidentibus cunctis, cum quidam tribunus superbior, magni corporis, vir
 <q>Non magnam rem facis, si tribunus tuos milites vineis,</q>
 ille ait
 <q>Visne congrediamur?</q>
-<milestone unit="section" n="7"/>
+               <milestone unit="section" n="7"/>
 cumque adversarius adnuisset, venientem contra se palma in pectus percussum supinum reiecit et continuo dixit,
 <q>Date alium, sed tribunum.</q>
-<note n="n19.324.1">inter Madvig; in P, Peter. </note>
-<pb n="p.326"/>
-<milestone unit="section" n="8"/>
+               <note n="n19.324.1">inter Madvig; in P, Peter. </note>
+               <pb n="p.326"/>
+               <milestone unit="section" n="8"/>
 Erat praeterea, ut refert Cordus, magnitudine tanta ut octo pedes digitis sex diceretur
 <note target="n19.326.1"/>
 egressus, pollice ita vasto ut uxoris dextrocherio uteretur pro anulo.
 <milestone unit="section" n="9"/>
 iam illa prope in vulgi ore sunt posita, quod hamaxas manibus adtraheret, raedam onustam solus moveret, equo si pugnum dedisset, dentes solveret, si calcem, crura frangeret, lapides toficios friaret, arbores teneriores scinderet, alii denique eum Crotoniaten Milonem, alii Herculem, Antaeum alii vocarent. </p>
-</div>
-<div type="textpart" n="7" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="7" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 His rebus conspicuum virum Alexander, magnorum meritorum iudex, in suam perniciem omni exercitui praefecit, gaudentibus cunctis ubique tribunis,
 <milestone unit="section" n="2"/>
 ducibus et militibus, denique totum eius exercitum, qui sub Heliogabalo magna ex parte torpuerat, ad suam
@@ -239,14 +255,14 @@ nam cum in Gallia esset et non longe ab urbe quadam castra posuisset, subito inm
 <milestone unit="section" n="5"/>
 imperatore appellato. et causam quidem Alexandri interimendi alii aliam fuisse dicunt, quidam enim Mamaeam dicunt auctorem fuisse, ut filius deserto
 <note n="n19.326.1">digito uideretur P. </note>
-<pb n="p.328"/>
+               <pb n="p.328"/>
 bello Germanico orientem peteret, atque ideo milites
 <milestone unit="section" n="6"/>
 in seditionem prorupisse. quidam, quod ille nimis severus esset et voluisset ita in Gallia legiones exauctorare ut exauctoraverat in oriente. </p>
-</div>
-<div type="textpart" n="8" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="8" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Sed occiso Alexandro Maximinus primus1 e corpore militari et nondum senator sine decreto senatus Augustus ab exercitu appellatus est filio sibimet in participatum dato; de quo pauca quae nobis sunt
 <milestone unit="section" n="2"/>
 cognita mox dicemus. Maximinus autem ea fuit semper astutia, ut milites non modo
@@ -265,10 +281,10 @@ Gygam
 <note target="n19.328.4"/>
 vocarent, senatus eum tantum timuit, ut
 <note n="n19.328.1">primus Ursinus (cf. Eutrop., ix. 1; Victor, Caes., xxv.); primum P, Peter.</note>
-<note n="n19.328.2">modo ins. by Damsté; om. in P and Peter.</note>
-<note n="n19.328.3">ut om. in P.</note>
-<note n="n19.328.4">Gygam Peter; gigantam P. </note>
-<pb n="p.330"/>
+               <note n="n19.328.2">modo ins. by Damsté; om. in P and Peter.</note>
+               <note n="n19.328.3">ut om. in P.</note>
+               <note n="n19.328.4">Gygam Peter; gigantam P. </note>
+               <pb n="p.330"/>
 vota in templis publice privatimque mulieres etiam cum suis liberis facerent, ne ille umquam urbem
 <milestone unit="section" n="7"/>
 Romam videret, audiebant enim alios in crucem sublatos, alios animalibus nuper occisis inclusos, alios feris obiectos, alios fustibus elisos, atque omnia haec sine dilectu dignitatis, cum videretur disciplinam velle regere militarem, cuius exemplo civilia etiam corrigere
@@ -282,21 +298,21 @@ meminerat praeterea se Romae etiam a servis nobilium contemptum esse, ita ut ne 
 quidem eorum videretur; et, ut se habent stultae opiniones, tales eos contra se
 <note target="n19.330.1"/>
 sperabat futuros, cum iam imperator esset, tantum valet conscientia </p>
-</div>
-<div type="textpart" n="9" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="9" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 degeneris animi, nam ignobilitatis tegendae causa omnes conscios generis sui interemit, nonnullos etiam amicos, qui ei saepe misericordiae paupertatis causa
 <milestone unit="section" n="2"/>
 pleraque donaverant. neque enim fuit crudelius animal in terris, omnia sic in viribus suis ponens quasi
 <milestone unit="section" n="3"/>
 non posset occidi. denique cum immortalem se prope crederet ob magnitudinem corporis virtutisque,
 <note n="n19.330.1">se om. in P. </note>
-<pb n="p.332"/>
+               <pb n="p.332"/>
 mimus quidam in theatro praesente illo dicitur versus Graecos dixisse, quorum haec erat Latina sententia:
 <milestone unit="section" n="4"/>
-<quote rend="blockquote">
-<lb/>
+               <quote rend="blockquote">
+                  <lb/>
 Et qui ab uno non potest occidi, a multis occiditur.
 <lb/>
 elephans grandis est et occiditur,
@@ -306,27 +322,27 @@ leo fortis est et occiditur,
 tigris fortis est et occiditur;
 <lb/>
 cave multos, si singulos non times.</quote>
-<milestone unit="section" n="5"/>
+               <milestone unit="section" n="5"/>
 et haec imperatore ipso praesente iam dicta sunt. sed cum interrogaret amicos, quid inimicus scurra dixisset, dictum est ei quod antiquos versus cantaret contra homines asperos scriptos; et ille, ut erat Thrax et
 <milestone unit="section" n="6"/>
 barbarus, credidit, nobilem circa se neminem passus est, prorsus ut Spartaci aut Athenionis exemplo imperaret.
 <note target="n19.332.1"/>
-<milestone unit="section" n="7"/>
+               <milestone unit="section" n="7"/>
 praeterea omnes Alexandri ministros variis
 <milestone unit="section" n="8"/>
 modis interemit et
 <note target="n19.332.2"/>
 dispositionibus eius invidit, et dum suspectos habet amicos ac ministros eius, crudelior factus est. </p>
-</div>
-<div type="textpart" n="10" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="10" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Cum esset ita moratus, ut ferarum more viveret, tristior et inmanior factus est factione Magni cuiusdam consularis viri contra se parata, qui cum multis militibus et centurionibus ad eum confodiendum consilium
 <milestone unit="section" n="2"/>
 inierat, cum in se imperium transferre cuperet, et
 <note n="n19.332.1">imperaret Baehrens, Lessing; imperabat P, Peter.</note>
-<note n="n19.332.2">et ins. by Petschenig; om. in P and Peter. </note>
-<pb n="p.334"/>
+               <note n="n19.332.2">et ins. by Petschenig; om. in P and Peter. </note>
+               <pb n="p.334"/>
 genus factionis fuit tale: cum ponte iuncto in Germanos transire Maximinus vellet, placuerat ut contrarii cum eo transirent, pons postea solveretur, ille in barbarico circumventus occideretur, imperium
 <milestone unit="section" n="3"/>
 Magnus arriperet. nam omnia bella coeperat agere, et quidem fortissime, statim ut factus est imperator, peritus utpote rei militaris, volens existimationem de se habitam tenere et ante omnes Alexandri gloriam,
@@ -340,10 +356,10 @@ et istam quidem factionem Maximinus ipse finxisse perhibetur, ut materiam crudel
 denique sine iudicio, sine accusatione, sine delatore, sine defensore omnes interemit, omnium bona sustulit et plus quattuor milibus
 <note target="n19.334.2"/>
 hominum occisis se satiare non potuit. </p>
-</div>
-<div type="textpart" n="11" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="11" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Fuit etiam sub eodem factio desciscentibus sagittariis Osrhoenis ab eodem ob amorem Alexandri et desiderium, quem a Maximino apud eos occisum
 <milestone unit="section" n="2"/>
 esse constabat, nec aliud persuaderi potuerat, denique etiam ipsi Titum,
@@ -352,10 +368,10 @@ unum ex suis, sibi ducem atque imperatorem fecerunt, quem Maximinus privatum
 <milestone unit="section" n="3"/>
 iam dimiserat, quem quidem et purpura circumdederunt, regio adparatu ornarunt et quasi sui milites
 <note n="n19.334.1">manu Cas., Peter; magnus P.</note>
-<note n="n19.334.2">milibus Jordan, Peter; militibus P.</note>
-<note n="n19.334.3">Titum Salm., Peter; ticum P. </note>
-<pb n="p.336"/>
-<milestone unit="section" n="4"/>
+               <note n="n19.334.2">milibus Jordan, Peter; militibus P.</note>
+               <note n="n19.334.3">Titum Salm., Peter; ticum P. </note>
+               <pb n="p.336"/>
+               <milestone unit="section" n="4"/>
 obsaepserunt, et invitum quidem, sed hic dormiens domi suae ab uno ex amicis suis interfectus est, qui sibi doluit illum esse praepositum, Macedonio nomine, qui eum Maximino prodidit quique caput eius ad
 <milestone unit="section" n="5"/>
 imperatorem detulit, sed Maximinus primo ei gratias egit, postea tamen ut proditorem odio habuit et occidit.
@@ -367,10 +383,10 @@ Post haec transiit in Germaniam cum omni exercitu et Mauris et Osrhoenis et Part
 secum Alexander ducebat ad bellum, et ob hoc maxime orientalia secum trahebat auxilia, quod nulli magis contra Germanos quam expediti sagittarii valent.
 <milestone unit="section" n="9"/>
 mirandum autem adparatum belli Alexander habuit, </p>
-</div>
-<div type="textpart" n="12" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="12" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 cui Maximinus multa dicitur addidisse, ingressus igitur Germaniam Transrhenanam per triginta
 <note target="n19.336.1"/>
 vel quadraginta
@@ -387,11 +403,11 @@ cum suo equo inhaerentem
 <milestone unit="section" n="3"/>
 liberassent. habuit enim hoc barbaricae temeritatis,
 <note n="n19.336.1">triginta Salm., Peter; trecenta P.</note>
-<note n="n19.336.2">quadringenta P. </note>
-<note n="n19.336.3">incendit om. in P.</note>
-<note n="n19.336.4">omnes Eyssenhardt; amnes P; a campis Peter.</note>
-<note n="n19.336.5">eum sui om. in P; cum suo equo in- haerentem P, Peter1; eum sui equo inhaerente Peter2. </note>
-<pb n="p.338"/>
+               <note n="n19.336.2">quadringenta P. </note>
+               <note n="n19.336.3">incendit om. in P.</note>
+               <note n="n19.336.4">omnes Eyssenhardt; amnes P; a campis Peter.</note>
+               <note n="n19.336.5">eum sui om. in P; cum suo equo in- haerentem P, Peter1; eum sui equo inhaerente Peter2. </note>
+               <pb n="p.338"/>
 ut putaret imperatorem manum etiam suam semper
 <milestone unit="section" n="4"/>
 debere, denique quasi navale quoddam proelium in palude fecit plurimosque illic interemit.
@@ -402,7 +418,7 @@ sententia haec fuit:
 <q> Non possumus tantum, patres conscripti, loqui quantum fecimus, per quadraginta vel
 <note target="n19.338.1"/>
 quinquaginta milia Germanorum vicos incendimus, greges abduximus, captivos abstraximus, armatos occidimus, in palude pugnavimus. pervenissemus ad silvas, nisi altitudo paludium nos transire non permisisset.</q>
-<milestone unit="section" n="7"/>
+               <milestone unit="section" n="7"/>
 Aelius Cordus dicit hanc omnino ipsius
 <milestone unit="section" n="8"/>
 orationem fuisse, credibile est; quid enim in hac
@@ -412,17 +428,17 @@ est quod non posset barbarus miles? qui pari sententia et ad populum scripsit se
 credebat, iussit praeterea tabulas pingi ita ut erat bellum ipsum gestum et ante Curiam proponi, ut facta
 <milestone unit="section" n="11"/>
 eius pictura loqueretur, quas quidem tabulas post mortem eius senatus et deponi iussit et exuri. </p>
-</div>
-<div type="textpart" n="13" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="13" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Fuerunt et alia sub eo bella plurima ac2 proelia, ex quibus semper primus victor revertit et cum
 <milestone unit="section" n="2"/>
 ingentibus spoliis atque captivis, exstat oratio eiusdem missa ad senatum, cuius hoc exemplum est:
 <q> Brevi tempore, patres conscripti, tot bella gessi quot nemo
 <note n="n19.338.1">uel ins. by Peter; om. in P.</note>
-<note n="n19.338.2">ac ins. by Peter; om. in P. </note>
-<pb n="p.340"/>
+                  <note n="n19.338.2">ac ins. by Peter; om. in P. </note>
+                  <pb n="p.340"/>
 veterum, tantum praedae in Romanum solum attuli quantum sperari non potuit, tantum captivorum adduxi ut vix sola Romana sufficiant.</q>
 reliqua orationis ad hanc rem non
 <note target="n19.340.1"/>
@@ -436,12 +452,12 @@ Sed cum Romani eius crudelitatem ferre non possent, quod delatores evocaret, acc
 <milestone unit="section" n="6"/>
 operari, contra eum defectionem pararunt. nec solum Romani, sed, quia et in milites saeviebat, exercitus qui in Africa erant subita et ingenti sedi-
 <note n="n19.340.1">non ins. by Eyssenhardt and Peter; om. in P. </note>
-<pb n="p.342"/>
+               <pb n="p.342"/>
 tione Gordianum senem, virum gravissimum, qui erat pro consule, imperatorem fecerunt, cuius factionis hic ordo fuit. </p>
-</div>
-<div type="textpart" n="14" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="14" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Erat fisci procurator in Libya, qui omnes Maximini studio spoliaverat; hic per rusticanam plebem, deinde et quosdam milites interemptus est superantes
 <note target="n19.342.1"/>
 eos qui rationalem in honorem Maximini defendebant.
@@ -456,13 +472,13 @@ Carthaginem venit cum pompa regali et protectoribus et fascibus laureatis, unde 
 <milestone unit="section" n="5"/>
 appellati etiam Gordianus senex et Gordianus iuvenis
 <note n="n19.342.1">superantes Editor (cf. Herodian, vii. 4, 6); per P; j-per Peter.</note>
-<note n="n19.342.2">propere Peter; per P. </note>
-<pb n="p.344"/>
-</p>
-</div>
-<div type="textpart" n="15" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+               <note n="n19.342.2">propere Peter; per P. </note>
+               <pb n="p.344"/>
+            </p>
+         </div>
+         <div n="15" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 a senatu Augusti, interfecti deinde omnes delatores, omnes accusatores, omnes amici Maximini. interfectus est Sabinus praefectus urbis percussus in populo.
 <milestone unit="section" n="2"/>
 Ubi haec gesta sunt, senatus magis timens Maximinum aperte ac libere hostes appellat Maximinum et
@@ -480,13 +496,13 @@ dis faventibus Gordianum proconsularem, virum sanctissimum et gravissimum senato
 <milestone unit="section" n="8"/>
 nobilem iuvenem, vestrum nunc est consentire ad salutem rei publicae obtinendam et ad scelera defendenda et ad illam beluam atque illius amicos, ubicumque
 <pb n="p.346"/>
-<milestone unit="section" n="9"/>
+                  <milestone unit="section" n="9"/>
 fuerint, persequendos, a nobis etiam Maximinus cum filio suo hostis est iudicatus.</q>
-</p>
-</div>
-<div type="textpart" n="16" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="16" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Senatus consultum autem hoc fuit: Cum ventum esset in Aedem Castorum die VI kal. Iuliarum, acceptas litteras Iunius Silanus consul ex Africa Gordiani
 <milestone unit="section" n="2"/>
 imperatoris, patris patriae, proconsulis recitavit:
@@ -514,16 +530,16 @@ item adclamatum est:
 <milestone unit="section" n="7"/>
 ambo feliciter agatis, ambo feliciter imperetis. nepoti Gordiani praeturam decernimus, nepoti Gordiani con-
 <note n="n19.346.1">At the southern corner of the Forum; three of its columns are still standing. </note>
-<note n="n19.346.2">This date is incorrect; see note to Max.-Balb., xv. 7. </note>
-<note n="n19.346.3">For other acclamations see note to Alex., vi. 1. </note>
-<note n="n19.346.4">See c. xx. 2 and note. </note>
-<pb n="p.348"/>
+                  <note n="n19.346.2">This date is incorrect; see note to Max.-Balb., xv. 7. </note>
+                  <note n="n19.346.3">For other acclamations see note to Alex., vi. 1. </note>
+                  <note n="n19.346.4">See c. xx. 2 and note. </note>
+                  <pb n="p.348"/>
 sulatum spondemus. nepos Gordiani Caesar appelletur, tertius Gordianus praeturam accipiat.</q>
-</p>
-</div>
-<div type="textpart" n="17" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="17" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Ubi hoc senatus consultum Maximinus accepit, homo natura ferus, sic exarsit, ut non hominem
 <milestone unit="section" n="2"/>
 sed beluam putares, iaciebat se in parietes, nonnumquam terrae se prosternebat, exclamabat incondite, arripiebat gladium, quasi senatum posset occidere, conscindebat vestem regiam, aulicos
@@ -548,16 +564,16 @@ opus esset, de
 <note target="n19.348.5"/>
 consilio ad contionem processit, in qua contione multa in Afros, multa in Gordianum, plura in senatum dixit, cohortatusque milites ad communes iniurias vindicandas.
 <note n="n19.348.1">aulicos Kellerbauer; alios P, Peter.</note>
-<note n="n19.348.2">et nihil P, Peter. </note>
-<note n="n19.348.3">senatus om. in P.</note>
-<note n="n19.348.4">atque Obrecht; et qui P, Peter. </note>
-<note n="n19.348.5">sed P. </note>
-<pb n="p.350"/>
-</p>
-</div>
-<div type="textpart" n="18" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+               <note n="n19.348.2">et nihil P, Peter. </note>
+               <note n="n19.348.3">senatus om. in P.</note>
+               <note n="n19.348.4">atque Obrecht; et qui P, Peter. </note>
+               <note n="n19.348.5">sed P. </note>
+               <pb n="p.350"/>
+            </p>
+         </div>
+         <div n="18" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Contio denique omnis militaris fuit, cuius hoc exemplum est:
 <q> Conmilitones, rem vobis notam proferimus. Afri fidem fregerunt, nam quando tenuerunt? Gordianus senex debilis et morti vicinus sumpsit imperium.
 <milestone unit="section" n="2"/>
@@ -569,10 +585,10 @@ ergo si viri estis, si vires habetis, eamus contra senatum
 <milestone unit="section" n="4"/>
 et Afros, quorum omnium bona vos habebitis.</q>
 dato igitur stipendio, et quidem ingenti, Romam versus cum exercitu proficisci coepit. </p>
-</div>
-<div type="textpart" n="19" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="19" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Sed Gordianus in Africa primum a Capeliano quodam agitari coepit, cui Mauros regenti successorem
 <milestone unit="section" n="2"/>
 dederat, contra quem filium iuvenem cum misisset, acerrima pugna interfecto filio ipse laqueo vitam finiit, sciens et in Maximino multum esse roboris et in Afris
@@ -585,16 +601,16 @@ haec facere, civitates denique subdidit,
 <note target="n19.350.3"/>
 fana
 <note n="n19.350.1">Here ends the portion of this Vita that has been transferred in P to Max.-Balb., viii. 2; see note to c. v. 3. </note>
-<note n="n19.350.2">mortui Lenze; metu P, Peter; metu dei. by Cas.</note>
-<note n="n19.350.3">subdidit Peter; subiit P1; subuertit P corr. </note>
-<pb n="p.352"/>
+               <note n="n19.350.2">mortui Lenze; metu P, Peter; metu dei. by Cas.</note>
+               <note n="n19.350.3">subdidit Peter; subiit P1; subuertit P corr. </note>
+               <pb n="p.352"/>
 diripuit, donaria militibus divisit, plebem et principes
 <milestone unit="section" n="5"/>
 civitatum concidit, ipse praeterea militum animos sibi conciliabat, proludens ad imperium, si Maximinus perisset. </p>
-</div>
-<div type="textpart" n="20" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="20" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Haec ubi Romam nuntiata sunt senatus, Maximini et naturalem et iam necessariam crudelitatem timens mortuis duobus Gordianis, Maximum ex praefecto urbi et qui plurimas dignitates praecipue gessisset, ignobilem genere sed virtutibus clarum, et Balbinum,
 <note target="n19.352.1"/>
 moribus delicatiorem, imperatores creavit.
@@ -609,7 +625,7 @@ denique ipsi contra Maximinum et senatus
 <milestone unit="section" n="6"/>
 et Balbinus bellum crediderunt, profecto igitur ad bellum Maximo contra Maximinum Balbinus Romae bellis intestinis et domesticis seditionibus urguebatur
 <note n="n19.352.1">et Balbinum om. in P1; et Clodium Balbinum (cf. Gord., x. 1; xxii. 1) P corr., Peter. </note>
-<pb n="p.354"/>
+               <pb n="p.354"/>
 occisis praecipue1
 <gap reason="omitted"/>
 per populum Gallicano et Maecenate. qui quidem populus a praetorianis laniatus est, cum Balbinus resistere seditionibus non satis posset, denique magna pars urbis incensa est.
@@ -617,10 +633,10 @@ per populum Gallicano et Maecenate. qui quidem populus a praetorianis laniatus e
 Et recreatus quidem imperator fuerat Maximinus audita morte Gordiani atque eius filii Capeliani
 <milestone unit="section" n="8"/>
 victoria, verum ubi aliud senatus consultum accepit, quo Maximus et Balbinus et Gordianus imperatores appellati sunt, intellexit senatus odia esse perpetua et se vere hostem omnium iudicio haberi. </p>
-</div>
-<div type="textpart" n="21" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="21" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 acrior denique Italiam ingressus est. ubi cum comperisset Maximum contra se missum, vehementius
 <milestone unit="section" n="2"/>
 saeviens quadrato agmine Emonam venit, sed provincialium omnium consilium hoc fuit, ut sublatis omnibus quae victum praebere possent intra civitates se reciperent, ut Maximinus cum exercitu fame
@@ -634,18 +650,18 @@ odium tacitum in tempus distulit, quod
 loco suo statim prodidit, plerique sane dicunt ipsam Emonam vacuam et desertam inventam esse a Maximino, stulte laetante quod quasi sibi civitas tota cessisset.
 <note n="n19.354.1">Peter suggests as a reading to fill the lacuna: praecipue
 <add>duobus praetorianis a Gallicano et Maecenate et instantibus contra praetorianos</add>
-<del>per</del>
+                  <del>per</del>
 populum; cf. Gord., xxii. 8. </note>
-<note n="n19.354.2">sed Peter; et P. </note>
-<pb n="p.356"/>
-<milestone unit="section" n="6"/>
+               <note n="n19.354.2">sed Peter; et P. </note>
+               <pb n="p.356"/>
+               <milestone unit="section" n="6"/>
 Post hoc Aquileiam venit, quae contra eum armatis circa muros dispositis portas clausit, nec propugnatio
 <note target="n19.356.1"/>
 defuit Menophilo et Crispino consularibus viris auctoribus. </p>
-</div>
-<div type="textpart" n="22" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="22" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 cum igitur frustra obsideret Aquileiam Maximinus, legatos in eandem urbem misit, quibus populus paene consenserat, nisi Menophilus cum collega restitisset, dicens etiam deum Belenum per haruspices
 <milestone unit="section" n="2"/>
 respondisse
@@ -660,14 +676,14 @@ transiit et de proximo Aquileiam obsidere coepit, ingens autem oppugnatio et dis
 <milestone unit="section" n="6"/>
 machinamenta. inter haec Maximinus cum filio adulescente, quem Caesarem appellaverat, circumire muros, quantum a teli iactu satis tutus esse posset,
 <note n="n19.356.1">propugnatio Salm., Peter; oppugnatio P.</note>
-<note n="n19.356.2">pondisse P; spopondisse Edit. princ. </note>
-<pb n="p.358"/>
-<milestone unit="section" n="7"/>
+               <note n="n19.356.2">pondisse P; spopondisse Edit. princ. </note>
+               <pb n="p.358"/>
+               <milestone unit="section" n="7"/>
 nunc suos verbis, nunc oppidanos rogare. verum nihil profecit, nam multa et in eum crudelitatis causa et in filium, qui speciosissimus erat, probra congesta sunt. </p>
-</div>
-<div type="textpart" n="23" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="23" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Quare Maximinus sperans suorum ignavia bellum trahi duces suos interemit, eo tempore quo minime oportebat, unde sibi milites etiam iratiores
 <milestone unit="section" n="2"/>
 reddidit, huc accedebat quod deficiebatur commeatibus, quia senatus ad omnes provincias et portuum custodes litteras dederat, ne aliquid commeatuum
@@ -681,17 +697,17 @@ obsessi angustias obsidens ipse pateretur, nuntiabatur inter haec orbem terrarum
 Maximini. quare timentes milites, quorum adfectus in Albano monte erant, medio forte die, cum a proelio quiesceretur, et Maximinum et filium eius in tentorio positos occiderunt eorumque capita praefixa contis
 <milestone unit="section" n="7"/>
 Aquileiensibus demonstrarunt. in oppido igitur vicino statim Maximini statuae atque imagines depositae sunt, et eius praefectus praetorii occisus est cum amicis clarioribus. missi etiam Romam capita sunt eorum. </p>
-</div>
-<div type="textpart" n="24" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="24" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Hic finis Maximinorum fuit, dignus crudelitate patris, indignus bonitate filii, quibus mortuis ingens laetitia provincialium, dolor gravissimus barbarorum.
 <note n="n19.358.1">See Max.-Balb., x. 1. </note>
-<note n="n19.358.2">The Legio II. Parthica; see note to Carae, ii. 7. </note>
-<note n="n19.358.3">Another version is given in c. xxxii. 5. </note>
-<note n="n19.358.4">Especially the Pannonian and Thracian soldiers, who had made him emperor; see Herodian, viii. 6, 1. </note>
-<pb n="p.360"/>
-<milestone unit="section" n="2"/>
+               <note n="n19.358.2">The Legio II. Parthica; see note to Carae, ii. 7. </note>
+               <note n="n19.358.3">Another version is given in c. xxxii. 5. </note>
+               <note n="n19.358.4">Especially the Pannonian and Thracian soldiers, who had made him emperor; see Herodian, viii. 6, 1. </note>
+               <pb n="p.360"/>
+               <milestone unit="section" n="2"/>
 Sed milites interfectis publicis hostibus recepti sunt ab oppidanis rogantes, et primum ita ut ante imagines Maximi et Balbini et Gordiani adorarent, cum omnes dicerent priores Gordianos in deos relatos.
 <milestone unit="section" n="3"/>
 post hoc ingens ex Aquileia commeatus in castra, quae laborabant fame, propere
@@ -716,16 +732,16 @@ et sacella et loca religiosa gratias agerent. Balbinus autem, homo timidior natu
 <milestone unit="section" n="8"/>
 deinde Maximus Romam venit senatumque ingressus
 <note n="n19.360.1">propere Peter1, Jordan; p~ P; pretio Peter2.</note>
-<note n="n19.360.2">refectisque Peter; fecistisque P.</note>
-<note n="n19.360.3">qui ubi P, Novák; atque ibi Peter. </note>
-<note n="n19.360.4">quare statim P, Peter; quare dei. by Eyssenhardt and Novák.</note>
-<note n="n19.360.5">urbe Damsté; urbem P, Peter. </note>
-<pb n="p.362"/>
+               <note n="n19.360.2">refectisque Peter; fecistisque P.</note>
+               <note n="n19.360.3">qui ubi P, Novák; atque ibi Peter. </note>
+               <note n="n19.360.4">quare statim P, Peter; quare dei. by Eyssenhardt and Novák.</note>
+               <note n="n19.360.5">urbe Damsté; urbem P, Peter. </note>
+               <pb n="p.362"/>
 actis sibi gratiis contionem habuit, atque inde in Palatium cum Balbino et Gordiano victores se receperunt. </p>
-</div>
-<div type="textpart" n="25" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="25" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Interest scire quale senatus consultum fuerit vel qui dies urbis, cum est nuntiatus interemptus
 <milestone unit="section" n="2"/>
 Maximinus. iam primum is, qui ex Aquileiensi Romam missus fuerat, tanto impetu mutatis animalibus cucurrit, ut quarta die Romam veniret, cum apud
@@ -737,13 +753,13 @@ occisus est.</q>
 ita et nuntius praeventus et imperatores, qui aderant, gaudium publicum nutu et
 <milestone unit="section" n="5"/>
 consensu indicaverunt. soluto igitur spectaculo omnes statim ad suas religiones convolarunt, atque inde ad senatum principes, populus ad contionem cucurrerunt. </p>
-</div>
-<div type="textpart" n="26" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="26" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Senatus consultum hoc fuit: Recitatis in senatu per Balbinum Augustum litteris adclamavit senatus:
 <milestone unit="section" n="2"/>
-<q> Hostes populi Romani
+               <q> Hostes populi Romani
 <note target="n19.362.1"/>
 di persequuntur. Iuppiter optime, tibi gratias. Apollo venerabilis, tibi gratias. Maxime Auguste, tibi gratias. Balbine Auguste, tibi gratias. Divis Gordianis templa decernimus.
 <milestone unit="section" n="3"/>
@@ -753,11 +769,11 @@ Maximini nomen olim erasum nunc animis eradendum. hostis publici caput in proflu
 hostes, populi E.
 <add>hostes</add>
 Kellerbauer, Peter2. </note>
-<pb n="p.364"/>
+                  <pb n="p.364"/>
 merebatur, occisus est. qui senatui vincula minatus est,
 <milestone unit="section" n="4"/>
 ut debebat, interemptus est. sanctissimi imperatores, gratias vobis agimus. Maxime, Balbine, Gordiane, di vos servent. victores hostium omnes desideramus, praesentiam Maximi omnes desideramus. Balbine Auguste, di te servent. praesentem annum consules vos ornetis. in loco Maximini Gordianus sufficiatur.</q>
-<milestone unit="section" n="5"/>
+               <milestone unit="section" n="5"/>
 post rogatus sententiam Cuspidius Celerinus haec verba habuit:
 <q>Patres conscripti, eraso nomine Maximinorum appellatisque divis Gordianis victoriae causa principibus nostris Maximo, Balbino et Gordiano statuas cum elephantis decernimus, currus triumphales decernimus, statuas equestres decernimus, tropaea de-
 <milestone unit="section" n="6"/>
@@ -765,16 +781,16 @@ cernimus.</q>
 post haec misso senatu supplicationes
 <milestone unit="section" n="7"/>
 per totam urbem decretae, victores principes in Palatium se receperunt, de quorum vita in alio libro deinceps dicemus. MAXIMINUS IUNIOR </p>
-</div>
-<div type="textpart" n="27" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="27" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 De1 huius genere superius dictum est, ipse autem pulchritudinis fuit tantae, ut passim amatus sit a procacioribus feminis, nonnullae etiam optaverunt
 <milestone unit="section" n="2"/>
 de eo concipere, proceritatis videbatur posse illius esse, ut ad paternam staturam pervenire t, si quidem anno vicensimo et primo periit, in ipso flore iuventutis, ut aliqui autem dicunt octavo decimo, litteris et Graecis et Latinis imbutus ad primam disciplinam.
 <note n="n19.364.1">de om. in P. </note>
-<pb n="p.366"/>
-<milestone unit="section" n="3"/>
+               <pb n="p.366"/>
+               <milestone unit="section" n="3"/>
 nam usus est magistro Graeco litteratore Fabillo, cuius epigrammata Graeca multa et exstant, maxime
 <milestone unit="section" n="4"/>
 in imaginibus ipsius pueri, qui versus Graecos fecit ex illis Latinis Vergilii, cum ipsum puerum describeret: Qualis ubi Oceani perfusus lucifer unda extulit os sacrum caelo tenebrasque resolvit, talis erat iuvenis patrio sub nomine clarus.
@@ -785,16 +801,16 @@ Desponsa illi erat Iunia Fadilla, proneptis Antonini; quam postea accepit Toxoti
 <milestone unit="section" n="7"/>
 exstant, manserunt autem apud eam arrae regiae, quae tales (ut Iunius Cordus loquitur, qui harum
 <pb n="p.368"/>
-<milestone unit="section" n="8"/>
+               <milestone unit="section" n="8"/>
 rerum persecutor estx) fuisse dicuntur: monolinum de albis novem, reticulum cum
 <note target="n19.368.2"/>
 prasinis undecim, dextrocherium cum costula de hyacinthis quattuor, praeter vestes auratas et omnes regias
 <note target="n19.368.3"/>
 ceteraque insignia sponsaliorum. </p>
-</div>
-<div type="textpart" n="28" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="28" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Adulescens autem ipse Maximinus superbiae fuit insolentissimae, ita ut etiam, cum pater suus, homo crudelissimus, plerisque honoratis adsurgeret, ille
 <milestone unit="section" n="2"/>
 resideret, vitae laetioris, vini parcissimus, cibi avidus, maxime silvestris, ita ut nonnisi aprunam, anates,
@@ -809,30 +825,30 @@ mulier nitidior esset in mundo. amicis paternis inmane quantum obsecutus est, se
 <milestone unit="section" n="7"/>
 largiretur. nam in salutationibus superbissimus erat et manum porrigebat et genua sibi osculari patiebatur, nonnumquam etiam pedes; quod numquam passus est senior Maximinus, qui dicebat:
 <q> Di prohibeant, ut quisquam ingenuorum pedibus meis osculum rigat.</q>
-<milestone unit="section" n="8"/>
+               <milestone unit="section" n="8"/>
 et quoniam ad Maximinum seniorem revertimur, res iucunda praetereunda non est. nam cum esset Maximinus pedum, ut diximus, octo et prope semis, calciamentum eius, id est campagum regium, quidam in
 <note n="n19.368.1">
-<add>qui</add>
+                  <add>qui</add>
 h. r. persecutor est Lenze; h. r. persecutores P;
 <add>ut</add>
 h. r. persecutor est Petschenig, Peter2.</note>
-<note n="n19.368.2">cum ins. by Peter; om. in P.</note>
-<note n="n19.368.3">omnes regias P, Damsté, Lenze; gemmis ornatas Peter. </note>
-<pb n="p.370"/>
+               <note n="n19.368.2">cum ins. by Peter; om. in P.</note>
+               <note n="n19.368.3">omnes regias P, Damsté, Lenze; gemmis ornatas Peter. </note>
+               <pb n="p.370"/>
 luco, qui est inter
 <note target="n19.370.1"/>
 Aquileiam et Arciam. posuerunt, quod constitit pede maius fuisse hominis vestigii
 <milestone unit="section" n="9"/>
 mensura, unde etiam vulgo tractum est, cum de longis et ineptis hominibus diceretur
 <q>caliga Maximini.</q>
-<milestone unit="section" n="10"/>
+               <milestone unit="section" n="10"/>
 quod idcirco indidi, ne quis Cordum legeret me praetermisisse crederet aliquid quod ad rem
 <note target="n19.370.2"/>
 pertineret, sed redeam ad filium. </p>
-</div>
-<div type="textpart" n="29" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="29" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 De hoc adulescente Alexander Aurelius ad matrem suam scribit Mamaeam, cupiens ei sororem
 <milestone unit="section" n="2"/>
 suam Theocliam dare, in haec verba:
@@ -845,12 +861,12 @@ eruditus esse videatur, haec quidem cogito, sed te tamen consulo, utrum Maximinu
 futurum.</q>
 haec Alexander de Maximino. de quo nos nihil amplius habemus dicere.
 <note target="n19.370.3"/>
-<milestone unit="section" n="6"/>
+               <milestone unit="section" n="6"/>
 Sane ne quid praetermissum esse videatur, etiam epistulam indidi patris Maximini, imperatoris iam facti, qui dicit idcirco se etiam filium suum appellasse
 <note n="n19.370.1">inter om. in P.</note>
-<note n="n19.370.2">rem P, Peter3; patrem Kellerbauer, Peter 2.</note>
-<note n="n19.370.3">So Peter; quod dicere P, dei. by Petschenig. </note>
-<pb n="p.372"/>
+               <note n="n19.370.2">rem P, Peter3; patrem Kellerbauer, Peter 2.</note>
+               <note n="n19.370.3">So Peter; quod dicere P, dei. by Petschenig. </note>
+               <pb n="p.372"/>
 imperatorem, ut videret, vel in pictura vel in veritate,
 <milestone unit="section" n="7"/>
 qualis esset iunior Maximinus in purpura, fuit autem talis epistula:
@@ -862,15 +878,15 @@ usus autem est idem adulescens et aurea lorica exemplo Ptolemaeorum, usus est et
 hasta inaurata, fecit et spathas argenteas, fecit etiam aureas et omnino quicquid eius pulchritudinem posset iuvare, fecit et galeas gemmatas, fecit et bucculas.
 <milestone unit="section" n="10"/>
 Haec sunt quae de puero sciri et dici decuit, reliqua qui volet nosse de rebus Veneriis et amatoriis, quibus eum Cordus aspergit, eundem legat; nos enim hoc loco finem libri faciemus, ad alia, ut iubetur velut publico iure, properantes. </p>
-</div>
-<div type="textpart" n="30" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="30" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Omina sane imperii haec fuerunt: serpens dormienti caput circumdedit, posita ab eodem vitis intra annum ingentes uvas purpureas attulit et mirae
 <milestone unit="section" n="2"/>
 magnitudinis facta est. scutum eius sub sole arsit, lanceola sic fissa est fulmine ut tota etiam per ferrum finderetur et duas partes faceret; quando dixerunt haruspices duos imperatores non diuturnos ex una domo
 <pb n="p.374"/>
-<milestone unit="section" n="3"/>
+               <milestone unit="section" n="3"/>
 iisdem nominibus futuros, lorica patris eius non, ut solet, ferrugine sed tota purpureo colore infecta a
 <milestone unit="section" n="4"/>
 plurimis visa est. filio autem haec fuerunt: cum grammatico daretur, quaedam parens sua libros Horaericos
@@ -882,10 +898,10 @@ Alexandri accepit, cum infans esset, subito per publicum veniente vehiculo Anton
 mulionibus carrucariis deturbatus est. nec defuerunt qui cavendum infantem dicerent Caracallo. tum ille dixit,
 <q>Longe est, ut mihi iste succedat.</q>
 erat enim illo tempore inter ignobiles et nimis parvus. </p>
-</div>
-<div type="textpart" n="31" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="31" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Mortis omina haec fuerunt: venienti contra Maximum et Balbinum Maximino cum filio, mulier quaedam passis crinibus occurrit lugubri habitu et exclamavit
 <q>Maximini, Maximini, Maximini,</q>
 neque quicquam amplius dixit et mortua est. videbatur enim
@@ -902,18 +918,18 @@ se Maximinus contulerat; plerique dicunt Emonam, alii Archimeam, certe quae
 <milestone unit="section" n="4"/>
 deserta a civibus venienti Maximino patuit, longum est omnia persequi, quae qui scire desiderat, is velim,
 <note n="n19.374.1">lupi urbem P; urbem del. by Peter.</note>
-<note n="n19.374.2">quam Damsté; qua P, Peter. </note>
-<pb n="p.376"/>
+               <note n="n19.374.2">quam Damsté; qua P, Peter. </note>
+               <pb n="p.376"/>
 ut saepe dixi, legat Cordum, qui haec omnia usque ad fabellam scripsit.
 <milestone unit="section" n="5"/>
 Sepulchra eorum nulla exstant, in profluentem enim cadavera eorum missa sunt, et capita eorum in Campo Martio insultante populo exusta. </p>
-</div>
-<div type="textpart" n="32" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="32" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Scribit Aelius Sabinus, quod praetermittendum non fuit, tantam pulchritudinem oris fuisse in filio, ut etiam caput eius mortui iam nigrum, iam sordens, iam maceratum, diffluente tabo, vel umbra pulchri oris
 <note target="n19.376.1"/>
-<milestone unit="section" n="2"/>
+               <milestone unit="section" n="2"/>
 videretur, denique cum ingens gaudium esset, quod caput Maximini videretur, prope par maeror erat,
 <milestone unit="section" n="3"/>
 quod et filii pariter portaretur, addidit Dexippus tantum odium fuisse Maximini, ut interfectis Gordianis viginti viros senatus creaverit, quos opponeret Maximino. in quibus fuerunt Balbinus et Maximus,
@@ -921,25 +937,26 @@ quod et filii pariter portaretur, addidit Dexippus tantum odium fuisse Maximini,
 quos contra eum principes fecerunt, idem addidit in conspectu Maximini iam deserti a militibus et prae-
 <milestone unit="section" n="5"/>
 tectum praetorio ipsius et filium eius occisum, nec desunt historici qui dicant ipsum Maximinum, ubi desertus est et ubi filium interemptum ante oculos suos vidit, manu sua se interfecisse, ne quid ei muliebre contingeret. </p>
-</div>
-<div type="textpart" n="33" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="33" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Praetereundum ne illud quidem est quod tanta fide Aquileienses contra Maximinum pro senatu fuerunt, ut funes de capillis muliebribus facerent, cum
 <milestone unit="section" n="2"/>
 deessent nervi ad sagittas emittendas. quod aliquando
 <note n="n19.376.1">umbra pulchri oris Haupt, Peter2; umbrae pulchrioris P, Peter1. </note>
-<pb n="p.378"/>
+               <pb n="p.378"/>
 Romae dicitur factum, unde in honorem matronarum templum Veneri Calvae senatus dicavit. Sane quod nullo in loco tacendum est, cum et Dexippus et Arrianus et multi alii Graeci scripserunt Maximum et Balbinum imperatores contra Maximinum factos, Maximum autem cum exercitu missum et apud Ravennam bellum parasse, Aquileiam autem nisi victorem non vidisse: Latini scriptores non Maximum sed Pupienum contra Maximinum apud Aquileiam
 <milestone unit="section" n="3"/>
 pugnasse dixerunt eundemque vicisse, qui error unde natus sit, scire non possum, nisi forte idem est Pupienus
 <milestone unit="section" n="4"/>
 qui Maximus, quod ideo testatum posui, ne quis me hoc nescisse crederet, quod re vera magnum stuporem ac miraculum crearet.
 <note target="n19.378.1"/>
-<note n="n19.378.1">crearet Peter3; creat P; quod
+               <note n="n19.378.1">crearet Peter3; creat P; quod
 <gap reason="omitted"/>
 creat dei. by Eyssenhardt and Peter1. </note>
-</p>
-</div>
-
-</div></body></text></TEI>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

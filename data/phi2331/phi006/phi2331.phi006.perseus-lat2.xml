@@ -1,69 +1,85 @@
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.22/tei-epidoc.rng"
-  schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader xml:lang="eng">
-        <fileDesc>
-            <titleStmt>
-                <title>Avidius Cassius</title>
-                <editor>David Magie</editor>
-                <editor>Susan Helen Ballou</editor>
-                <sponsor>Perseus Project, Tufts University</sponsor>
-<principal>Gregory Crane</principal>
-                <respStmt>
-                    <resp>Prepared under the supervision of</resp>
-                    <name>Bridget Almas</name>
-                    <name>Lisa Cerrato</name>
-                    <name>Rashmi Singhal</name>
-                </respStmt>
-                <funder n="org:Mellon">The Mellon Foundation</funder>
-                <funder n="org:Tufts">Tufts University</funder>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Trustees of Tufts University</publisher>
-                <pubPlace>Medford, MA</pubPlace>
-                <authority>Perseus Project</authority>
-                <date type="release">2011-03-14</date>
-            </publicationStmt>
-            <notesStmt><note>OCR cleanup</note></notesStmt>
-            <sourceDesc>
-                <biblStruct>
-                    <monogr>
-                        <title xml:lang="lat">Scriptores Historiae Augustae</title>
-                        <editor>David Magie</editor>
-                        <editor>Susan Helen Ballou</editor>
-                        <imprint>
-                            <publisher>William Heinemann</publisher>
-                            <publisher>G.P. Putnam's Sons</publisher>
-                            <pubPlace>London</pubPlace>
-                            <pubPlace>New York</pubPlace>
-                            <date>1922</date>
-                        </imprint>
-                        <biblScope unit="volume">1</biblScope>
-                    </monogr>
-                    <series>
-                        <title>Loeb Classical Library</title>
-                    </series>
-                    <ref target="https://archive.org/details/scriptoreshistor01camb/page/232/mode/2up">Internet Archive</ref>
-                </biblStruct>
-                </sourceDesc>      
-        </fileDesc>      
-        <encodingDesc><refsDecl n="CTS"><cRefPattern n="chapter" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])"><p>This pointer pattern extracts chapter</p></cRefPattern></refsDecl><refsDecl>
-                <refState unit="work"/>
-                <refState unit="chapter" n="chunk"/>
-                <refState unit="section"/>
-            </refsDecl>
-            
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="lat">Latin</language>
-                <language ident="grc">Greek</language>
-            </langUsage>
-        </profileDesc>
-    <revisionDesc><change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change></revisionDesc></teiHeader> <text xml:lang="lat"> <body><div xml:lang="lat" type="edition" n="urn:cts:latinLit:phi2331.phi006.perseus-lat2">
-<div type="textpart" n="1" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/PerseusDLCode/perseus-schemas/main/perseus_prose.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+            <title>Avidius Cassius</title>
+            <editor>David Magie</editor>
+            <editor>Susan Helen Ballou</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name>Bridget Almas</name>
+               <name>Lisa Cerrato</name>
+               <name>Rashmi Singhal</name>
+            </respStmt>
+            <funder n="org:Mellon">The Mellon Foundation</funder>
+            <funder n="org:Tufts">Tufts University</funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release">2011-03-14</date>
+            <idno type="CTS">urn:cts:latinLit:phi2331.phi006.perseus-lat2</idno>
+         </publicationStmt>
+         <notesStmt>
+            <note>OCR cleanup</note>
+         </notesStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title xml:lang="lat">Scriptores Historiae Augustae</title>
+                  <editor>David Magie</editor>
+                  <editor>Susan Helen Ballou</editor>
+                  <imprint>
+                     <publisher>William Heinemann</publisher>
+                     <publisher>G.P. Putnam's Sons</publisher>
+                     <pubPlace>London</pubPlace>
+                     <pubPlace>New York</pubPlace>
+                     <date>1922</date>
+                  </imprint>
+                  <biblScope unit="volume">1</biblScope>
+               </monogr>
+               <series>
+                  <title>Loeb Classical Library</title>
+               </series>
+               <ref target="https://archive.org/details/scriptoreshistor01camb/page/232/mode/2up">Internet Archive</ref>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <refsDecl>
+            <refState unit="work"/>
+            <refState unit="chapter" n="chunk"/>
+            <refState unit="section"/>
+         </refsDecl>
+         <refsDecl n="CTS" xml:id="CTS">
+            <citeStructure match="/TEI/text/body" use="@xml:base">
+               <citeStructure unit="chapter" delim=":" match="div[@type='chapter']" use="@n"/>
+            </citeStructure>
+         </refsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <textClass>
+            <catRef scheme="#perseus-genre" target="#prose-chapter"/>
+         </textClass>
+         <langUsage>
+            <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2016-11-20" who="Thibault Clérice">CapiTainS and Epidoc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="lat">
+      <body xml:base="urn:cts:latinLit:phi2331.phi006.perseus-lat2">
+         <div n="1" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Avidius Cassius, ut quidam volunt, ex familia Cassiorum fuisse dicitur, per matrem tamen; homine novo
 <note target="n6.232.2"/>
 genitus Avidio Severo, qui ordines duxerat et
@@ -78,11 +94,11 @@ conspiraverant, oderat tacite principatum nec ferre poterat imperatorium nomen d
 <note target="n6.232.4"/>
 imperii, quod non posset e re publica tolli nisi per alterum
 <note n="n6.232.2">homine nouo genitus Klebs, Prosop. i. p. 188; homine omitted in P; auo genitus Peter (vulg.).</note>
-<note n="n6.232.3">So P corr.; in ciuilium P 1. </note>
-<note n="n6.232.4">Thus Peter with Mommsen; esse grauius nomine P. </note>
-<note n="n6.232.1">The honorary title of Vir Clarissimus was regularly borne by senators during the later empire. </note>
-<pb n="p.234"/>
-<milestone unit="section" n="5"/>
+               <note n="n6.232.3">So P corr.; in ciuilium P 1. </note>
+               <note n="n6.232.4">Thus Peter with Mommsen; esse grauius nomine P. </note>
+               <note n="n6.232.1">The honorary title of Vir Clarissimus was regularly borne by senators during the later empire. </note>
+               <pb n="p.234"/>
+               <milestone unit="section" n="5"/>
 imperatorem, denique temptasse in pueritia dicitur extorquere etiam Pio principatum, sed per patrem, virum sanctum et gravem, adfectionem tyrannidis latuisse, habitum tamen semper a ducibus suspectum.
 <milestone unit="section" n="6"/>
 Vero autem illum parasse insidias, ipsius Veri epistula
@@ -99,11 +115,11 @@ opes non mediocres parat, litteras nostras ridet, te philosopham aniculam, me lu
 vide quid agendum sit. ego hominem non odi, sed vide ne tibi et liberis tuis non bene consulas,
 <note target="n6.234.3"/>
 cum talem inter praecinctos habeas qualem milites libenter audiunt, libenter vident.</q>
-</p>
-</div>
-<div type="textpart" n="2" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="2" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 rescriptum Marci de Avidio Cassio:
 <q>Epistulam tuam legi, sollicitam potius quam
 <note target="n6.234.4"/>
@@ -113,11 +129,11 @@ nam si ei divinitus debetur imperium, non poterimus interficere, etiamsi velimus
 <milestone unit="section" n="3"/>
 laqueos inciderit, adde quod non possumus reum facere, quem et nullus accusat et, ut ipse dicis, milites
 <note n="n6.234.1">inde, following iam in P, removed by Novak.</note>
-<note n="n6.234.2">omnia ei nostra displicent P corr. (ediplicent P 1); omnia enim nostra ei d. Peter.</note>
-<note n="n6.234.3">consulat P.</note>
-<note n="n6.234.4">quam omitted by P1, added by P corr. </note>
-<pb n="p.236"/>
-<milestone unit="section" n="4"/>
+                  <note n="n6.234.2">omnia ei nostra displicent P corr. (ediplicent P 1); omnia enim nostra ei d. Peter.</note>
+                  <note n="n6.234.3">consulat P.</note>
+                  <note n="n6.234.4">quam omitted by P1, added by P corr. </note>
+                  <pb n="p.236"/>
+                  <milestone unit="section" n="4"/>
 amant. deinde in causis maiestatis haec natura est ut videantur vim pati etiam quibus probatur, scis enim ipse quid avus tuus Hadrianus dixerit:
 <milestone unit="section" n="5"/>
 ' misera condicio imperatorum, quibus de adfectata
@@ -132,10 +148,10 @@ tantum auctoritatis quantum debent. sibi ergo habeat suos mores, maxime cum bonu
 <milestone unit="section" n="8"/>
 severus et fortis et rei publicae necessarius, nam quod dicis, liberis meis cavendum esse morte illius; plane liberi mei pereant, si magis amari merebitur Avidius quam illi, et si rei publicae expediet, Cassium vivere quam liberos Marci.</q>
 haec de Cassio Verus, haec Marcus. </p>
-</div>
-<div type="textpart" n="3" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="3" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Sed nos hominis naturam et mores breviter explicabimus. neque enim plura de his sciri possunt, quorum vitam et inlustrare nullus audet eorum causa
 <milestone unit="section" n="2"/>
 a quibus oppressi fuerint, addemus autem quemadmodum ad imperium venerit et quemadmodum sit
@@ -146,9 +162,9 @@ habuerunt, in litteras mittere, ut omnes purpuratos Augustos cognosceres.
 <milestone unit="section" n="4"/>
 Fuit his moribus, ut nonnumquam trux et asper videretur, aliquando mitis et lenis, saepe religiosus, alias contemptor sacrorum, avidus vini item abstinens,
 <note n="n6.236.1">adfectata Petschenig; adfectu P; adfecta Peter.</note>
-<note n="n6.236.2">malui omitted by P 1, supplied by P corr.</note>
-<note n="n6.236.3">siue iusta causa siue iniusta Novak; siue iniusta P 1; siue iuste siue iniuste P corr.; siue iusta ex causa siue iniusta Peter with Mommsen. </note>
-<pb n="p.238"/>
+               <note n="n6.236.2">malui omitted by P 1, supplied by P corr.</note>
+               <note n="n6.236.3">siue iusta causa siue iniusta Novak; siue iniusta P 1; siue iuste siue iniuste P corr.; siue iusta ex causa siue iniusta Peter with Mommsen. </note>
+               <pb n="p.238"/>
 cibi adpetens et mediae patiens, Veneris cupidus et
 <milestone unit="section" n="5"/>
 castitatis amator, nec defuerunt qui illum Catilinam vocarent, cum et ipse se ita gauderet appellari, addens futurum se Sergium si dialogistam occidisset. Antoninum
@@ -157,12 +173,12 @@ hoc nomine significans, qui tantum enituit in philosophia, ut iturus ad bellum M
 <milestone unit="section" n="7"/>
 ederet, nec ille timuit, sed per ordinem paraeneseos
 <note target="n6.238.1"/>
-<milestone unit="section" n="8"/>
+               <milestone unit="section" n="8"/>
 per triduum disputavit, fuit praeterea disciplinae militaris Avidius Cassius tenax et qui se Marium dici vellet. </p>
-</div>
-<div type="textpart" n="4" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="4" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Quoniam de severitate illius dicere coepimus, multa exstant crudelitatis potius quam severitatis eius
 <milestone unit="section" n="2"/>
 indicia, nam primum milites qui aliquid provincialibus tulissent per vim, in illis ipsis locis, in quibus peccaverant,
@@ -175,9 +191,9 @@ alios fumo, cruciatu, timore etiam necaret. idem denos catenatos in profluentem 
 <milestone unit="section" n="5"/>
 mare. idem multis desertoribus manus excidit, aliis crura incidit ac poplites, dicens maius exemplum esse
 <note n="n6.238.1">The words hoc est praeceptionum, which follow paraeneseos in P, removed by Cas.</note>
-<note n="n6.238.2">The words id est materiam, following centum in P, removed by Cas. </note>
-<pb n="p.240"/>
-<milestone unit="section" n="6"/>
+               <note n="n6.238.2">The words id est materiam, following centum in P, removed by Cas. </note>
+               <pb n="p.240"/>
+               <milestone unit="section" n="6"/>
 viventis
 <note target="n6.240.1"/>
 miserabiliter criminosi quam occisi, eum exercitum duceret, et inscio ipso manus auxiliaria centurionibus suis auctoribus tria milia Sarmatarum neglegentius agentum in Danuvii ripis occidissent et eum praeda ingenti ad eum redissent sperantibus centurionibus praemium, quod perparva manu tantum hostium segnius agentibus tribunis et ignorantibus occidissent, rapi eos iussit et in crucem tolli servilique supplicio adfici, quod exemplum non exstabat, dicens evenire potuisse ut essent insidiae, ac periret Romani
@@ -195,17 +211,17 @@ tunc conquiescentibus
 cunctis meruit timeri, quia ipse
 <note target="n6.240.3"/>
 non timuit, quae res tantum disciplinae Romanis addidit, tantum terroris barbaris iniecit, ut pacem annorum centum ab Antonino absente peterent; si quidem viderant damnatos Romani ducis iudicio etiam eos qui contra fas vicerant. </p>
-</div>
-<div type="textpart" n="5" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="5" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 De hoc multa gravia contra militum licentiam facta inveniuntur apud Aemilium Parthenianum, qui adfectatores tyrannidis iam inde a veteribus historiae
 <milestone unit="section" n="2"/>
 tradidit, nam et virgis caesos in foro et in mediis
 <note n="n6.240.1">auiuentis (a later erased) P; aduiuentis Peter 2 with Baehrens.</note>
-<note n="n6.240.2"> in exercitum orta P, Peter. </note>
-<note n="n6.240.3"> ipse om. by Peter.</note>
-<pb n="p.242"/>
+               <note n="n6.240.2"> in exercitum orta P, Peter. </note>
+               <note n="n6.240.3"> ipse om. by Peter.</note>
+               <pb n="p.242"/>
 castris securi percussit, qui ita meruerunt, et manus
 <milestone unit="section" n="3"/>
 multis amputavit, et praeter laridum ac buccellatum atque acetum militem in expeditione portare prohibuit et si aliud quippiam repperit luxuriem non levi
@@ -220,7 +236,7 @@ Vectilianus scripsit, et puto me non errasse, si quidem et tu notum habeas Cassi
 Cassianae severitatis et disciplinae, neque enim milites regi possunt nisi vetere disciplina, scis enim versum a bono poeta dictum et omnibus frequentatum: ' Moribus antiquis res stat Romana virisque.
 <milestone unit="section" n="8"/>
 tu tantum fac adsint legionibus abunde commeatus, quos, si bene Avidium novi, scio non perituros.</q>
-<milestone unit="section" n="9"/>
+               <milestone unit="section" n="9"/>
 praefecti ad Marcum:
 <q>Recte consuluisti, mi domine,
 <milestone unit="section" n="10"/>
@@ -231,14 +247,14 @@ Syriacis legionibus, nihil enim tam expedit quam homo severior Graecanicis
 militibus, ille sane omnes excaldationes, omnes
 <milestone unit="section" n="12"/>
 flores de capite collo et sinu militi excutiet. annona militaris omnis parata est, neque quicquam deest sub bono duce; non enim multum aut quaeritur aut impenditur.</q>
-</p>
-</div>
-<div type="textpart" n="6" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="6" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 nec fefellit de se iudicium habitum.
 <note n="n6.242.1">praefecisti P corr.; praefectis P1. </note>
-<pb n="p.244"/>
+               <pb n="p.244"/>
 nam statim et ad signa edici iussit et programma in parietibus fixit, ut, si quis cinctus inveniretur apud
 <milestone unit="section" n="2"/>
 Daphnen, discinctus rediret, arma militum septima die semper respexit, vestimenta etiam et calciamenta et ocreas, delicias omnes de castris summovit iussitque eos hiemem sub pellibus agere nisi corrigerent suos
@@ -256,14 +272,14 @@ Maximus in vita divi Marci, nam et cum
 Bucolici milites per Aegyptum gravia multa facerent, ab hoc retunsi sunt, ut item
 <note target="n6.244.2"/>
 Marius Maximus refert in eo libro quem secundum de vita Marci Antonini edidit. </p>
-</div>
-<div type="textpart" n="7" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="7" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Hic imperatorem se in oriente appellavit, ut
 <note n="n6.244.1">cum et P.</note>
-<note n="n6.244.2">item P; idem Peter. </note>
-<pb n="p.246"/>
+               <note n="n6.244.2">item P; idem Peter. </note>
+               <pb n="p.246"/>
 quidam dicunt, Faustina volente, quae valetudini Marci iam diffidebat et timebat, ne infantes filios tueri sola non posset, atque aliquis exsisteret, qui capta statione
 <milestone unit="section" n="2"/>
 regia infantes de medio tolleret, alii autem dicunt, hanc artem adhibuisse militibus et provincialibus Cassium contra Marci amorem, ut sibi posset consentio, quod diceret Marcum diem suum obisse.
@@ -280,16 +296,16 @@ senatus illum hostem appellavit bonaque eius proscripsit. quae Antoninus in priv
 <milestone unit="section" n="7"/>
 publicum sunt relata, nec Romae terror defuit, cum
 <note n="n6.246.1">senserat P. </note>
-<pb n="p.248"/>
+               <pb n="p.248"/>
 quidam Avidium Cassium dicerent absente Antonino, qui nisi a voluptariis unice amabatur, Romam esse venturum atque urbem tyrannice direpturum, maxime senatorum causa, qui eum hostem iudicaverant bonis
 <milestone unit="section" n="8"/>
 proscriptis. et amor Antonini hoc maxime enituit, quod consensu omnium praeter Antiochenses Avidius
 <milestone unit="section" n="9"/>
 interemptus est; quem quidem occidi non iussit sed passus est, cum apud cunctos clarum esset, si potestatis </p>
-</div>
-<div type="textpart" n="8" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="8" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 suae fuisset, parsurum 1 illi fuisse, caput eius ad Antoninum cum delatum esset, ille non exsultauit, non elatus est, sed etiam doluit ereptam sibi esse occasionem misericordiae, cum diceret se vivum illum voluisse capere, ut illi exprobraret beneficia
 <milestone unit="section" n="2"/>
 sua eumque servaret. denique cum quidam diceret reprehendendum Antoninum, quod tam mitis esset in hostem suum eiusque liberos et adfectus atque omnes quos conscios tyrannidis repperisset, addente illo qui reprehendebat
@@ -302,8 +318,8 @@ enumeravit deinde omnes principes qui occisi essent habuisse causas quibus merer
 <milestone unit="section" n="4"/>
 occisum, dicens meruisse Neronem, debuisse Caligulam, Othonem et Vitellium nec imperare voluisse.
 <note n="n6.248.1">parsurum P corr.; passurum P 1. </note>
-<pb n="p.250"/>
-<milestone unit="section" n="5"/>
+               <pb n="p.250"/>
+               <milestone unit="section" n="5"/>
 etiam
 <note target="n6.250.1"/>
 de Galba
@@ -315,10 +331,10 @@ denique non Augustum, non Traianum, non Hadrianum, non patrem suum a rebellibus 
 insciis exstincta ipse autem Antoninus a senatu petiit ne graviter in conscios defectionis animadverteretur, eo ipso tempore quo rogavit ne quis senator temporibus suis capitali supplicio adficeretur, quod illi
 <milestone unit="section" n="8"/>
 maximum amorem conciliavit. denique paucissimis centurionibus punitis deportatos revocari iussit. </p>
-</div>
-<div type="textpart" n="9" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="9" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Antiochensibus,3 qui 4 Avidio Cassio consenserant, et his
 <note target="n6.250.5"/>
 et aliis civitatibus, quae illum iuverant, ignovit, cum primo Antiochensibus graviter iratus esset iisque spectacula sustulisset et multa alia civitatis ornamenta,
@@ -331,12 +347,12 @@ potestatem dedit, vixeruntque non quasi tyranni pignora sed quasi senatorii ordi
 <note target="n6.250.6"/>
 in lite obici fortunam propriae vetuisset domus, damnatis aliquibus iniuriarum, qui
 <note n="n6.250.1">So Peter with Boxhorn; nam P.</note>
-<note n="n6.250.2">de Pertinace et Galba P.</note>
-<note n="n6.250.3">So P corr; antiochensis P 1.</note>
-<note n="n6.250.4">qui P; quoque Peter with Madvig.</note>
-<note n="n6.250.5">sed et his P, Peter 2.</note>
-<note n="n6.250.6">illi seuam P 1; illis P corr. </note>
-<pb n="p.252"/>
+               <note n="n6.250.2">de Pertinace et Galba P.</note>
+               <note n="n6.250.3">So P corr; antiochensis P 1.</note>
+               <note n="n6.250.4">qui P; quoque Peter with Madvig.</note>
+               <note n="n6.250.5">sed et his P, Peter 2.</note>
+               <note n="n6.250.6">illi seuam P 1; illis P corr. </note>
+               <pb n="p.252"/>
 in eos petulantes fuissent, quos quidem amitae suae marito commendavit.
 <milestone unit="section" n="5"/>
 Si quis autem omnem hanc historiam scire desiderat, legat Marii Maximi secundum librum de vita Marci, in quo ille ea dicit quae solus
@@ -365,11 +381,11 @@ eum graviter vindicet, exemplum epistulae Faustinae ad Marcum:
 istos rebelliones acerrime persequaris. male enim assueverunt duces et milites,
 <note target="n6.252.4"/>
 qui nisi opprimuntur, oppriment.</q>
-</p>
-</div>
-<div type="textpart" n="10" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="10" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 item alia epistula eiusdem Faustinae ad Marcum:
 <q>Mater mea Faustina patrem tuum Pium in defectione
 <note target="n6.252.5"/>
@@ -383,13 +399,13 @@ filios. Commodus noster vides in qua aetate sit,
 <milestone unit="section" n="4"/>
 Pompeianus gener et senior est et peregrinus, vide
 <note n="n6.252.1">solum P.</note>
-<note n="n6.252.2">So Peter with Salm.; herispatores P. </note>
-<note n="n6.252.3">urget P; urguet edd.</note>
-<note n="n6.252.4">et duces milites P 1; et duces et milites P corr.</note>
-<note n="n6.252.5">eiusdem in def. P; eiusdem removed by Cas.</note>
-<note n="n6.252.6">sic hortata P; sic removed by Novak; cohortata Peter2. </note>
-<pb n="p.254"/>
-<milestone unit="section" n="5"/>
+                  <note n="n6.252.2">So Peter with Salm.; herispatores P. </note>
+                  <note n="n6.252.3">urget P; urguet edd.</note>
+                  <note n="n6.252.4">et duces milites P 1; et duces et milites P corr.</note>
+                  <note n="n6.252.5">eiusdem in def. P; eiusdem removed by Cas.</note>
+                  <note n="n6.252.6">sic hortata P; sic removed by Novak; cohortata Peter2. </note>
+                  <pb n="p.254"/>
+                  <milestone unit="section" n="5"/>
 quid agas de Avidio Cassio et de eius consciis, noli parcere hominibus, qui tibi non pepercerunt et nec
 <milestone unit="section" n="6"/>
 mihi nec filiis nostris parcerent, si vicissent. ipsa iter tuum mox consequor; quia Fadilla nostra
@@ -403,11 +419,11 @@ adhibere, signatas
 mihi litteras Calpurnius dedit; ad quas rescribam, si tardavero, per Caecilium senem
 <milestone unit="section" n="10"/>
 spadonem, hominem, ut scis, fidelem, cui verbo mandabo, quid uxor Avidii Cassii et filii et gener de te iactare dicantur.</q>
-</p>
-</div>
-<div type="textpart" n="11" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="11" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Ex his litteris intellegitur Cassio Faustinam consciam non fuisse, quin etiam supplicium eius graviter exegisse, si quidem Antoninum quiescentem et clementiora cogitantem ad vindictae necessitatem
 <milestone unit="section" n="2"/>
 impulit, cui
@@ -422,20 +438,20 @@ ut in Avidii conscios vindicem, ego vero et eius liberis parcam et genero et uxo
 crudelior. non enim quicquam est, quod imperatorem Romanum melius commendet gentibus quam cle-
 <note n="n6.254.1">signitas P, which Ellis thinks perhaps right in sense of
 <q> in cipher .</q>
-</note>
-<note n="n6.254.2"> cu, i.e. cum. P.</note>
-<pb n="p.256"/>
-<milestone unit="section" n="6"/>
+                  </note>
+                  <note n="n6.254.2"> cu, i.e. cum. P.</note>
+                  <pb n="p.256"/>
+                  <milestone unit="section" n="6"/>
 mentia. haec Caesarem deum fecit, haec Augustum consecravit, haec patrem tuum specialiter Pii nomine
 <milestone unit="section" n="7"/>
 ornavit, denique si ex mea sententia de bello iudicatum
 <milestone unit="section" n="8"/>
 esset, nec Avidius esset occisus, esto igitur secura; ' di me tuentur, dis pietas mea — — cordi est'. Pompeianum nostrum in annum sequentem consulem dixi.</q>
 haec Antoninus ad coniugem. </p>
-</div>
-<div type="textpart" n="12" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="12" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Ad senatum autem qualem orationem miserit,
 <milestone unit="section" n="2"/>
 interest scire, ex oratione Marci Antonini:
@@ -453,8 +469,8 @@ etiam ab inferis excitare! non enim umquam placet in imperatore vindicta sui dol
 <milestone unit="section" n="6"/>
 fuerit, acrior videtur, quare filiis Avidii Cassii et
 <note n="n6.256.1">quemquam ullum P; ullum removed by Lessing; quemquam unum Peter.</note>
-<note n="n6.256.2">multos P, which Lessing restores; multatos Peter. </note>
-<pb n="p.258"/>
+                  <note n="n6.256.2">multos P, which Lessing restores; multatos Peter. </note>
+                  <pb n="p.258"/>
 genero et uxori veniam dabitis, et quid dico veniam?
 <milestone unit="section" n="7"/>
 cum illi nihil fecerint, vivant igitur securi, scientes sub Marco vivere, vivant in patrimonio parentum pro parte donato, auro argento vestibus fruantur, sint divites, sint securi, sint vagi et liberi et per ora omnium ubique populorum circumferant meae, circumferant
@@ -464,17 +480,17 @@ vestrae pietatis exemplum, nec magna haec est, patres conscripti, clementia, ven
 liberis et coniugibus dari. ego vero a vobis peto, ut conscios senatorii ordinis et equestris a caede, a proscriptione, a timore, ab infamia, ab invidia, et postremo ab omni vindicetis iniuria detisque hoc meis temporibus,
 <milestone unit="section" n="10"/>
 ut in causa tyrannidis qui in tumultu cecidit probetur occisus.</q>
-</p>
-</div>
-<div type="textpart" n="13" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+            </p>
+         </div>
+         <div n="13" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 Hanc eius clementiam senatus his adclamationibus
 <milestone unit="section" n="2"/>
 prosecutus est:
 <q>Antonine pie, di te servent. Antonine clemens, di te servent. Antonine clemens,
 <note target="n6.258.1"/>
-<milestone unit="section" n="3"/>
+                  <milestone unit="section" n="3"/>
 di te servent. tu voluisti quod licebat, nos fecimus quod decebat. Commodo imperium iustum rogamus, progeniem tuam robora, fac securi sint liberi nostri.
 <milestone unit="section" n="4"/>
 bonum imperium nulla vis laedit. Commodo Antonino tribuniciam potestatem rogamus, praesentiam tuam
@@ -484,8 +500,8 @@ et reliqua.
 <milestone unit="section" n="6"/>
 Vixerunt igitur posteri Avidii Cassii securi et ad
 <note n="n6.258.1">So P; repetition from the preceding has crowded out some other adj. </note>
-<pb n="p.260"/>
-<milestone unit="section" n="7"/>
+               <pb n="p.260"/>
+               <milestone unit="section" n="7"/>
 honores admissi sunt. sed eos Commodus Antoninus post excessum divi patris sui omnes vivos incendi iussit, quasi in factione deprehensos.
 <milestone unit="section" n="8"/>
 Haec sunt quae de Cassio Avidio comperimus.
@@ -493,13 +509,13 @@ Haec sunt quae de Cassio Avidio comperimus.
 cuius ipsius mores, ut supra diximus, varii semper fuerunt sed ad censuram crudelitatemque propensiores.
 <milestone unit="section" n="10"/>
 qui, si optinuisset imperium, fuisset non clemens et </p>
-</div>
-<div type="textpart" n="14" subtype="chapter">
-<p>
-<milestone unit="section" n="1"/>
+         </div>
+         <div n="14" type="chapter">
+            <p>
+               <milestone unit="section" n="1"/>
 bonus, 1 sed utilis et optimus imperator, nam exstat epistula eius ad generum suum iam imperatoris huiusmodi:
 <milestone unit="section" n="2"/>
-<q>Misera res publica, quae istos divitiarum
+               <q>Misera res publica, quae istos divitiarum
 <milestone unit="section" n="3"/>
 cupidos et divites patitur, misera. Marcus homo sane optimus, qui dum clemens dici cupit,
 <note target="n6.260.2"/>
@@ -517,9 +533,9 @@ reddatur, ego vero istis praesidibus provinciarum— an ego proconsules, an ego 
 <milestone unit="section" n="8"/>
 ut luxurientur, ut divites fiant? audisti, praefectum praetorii nostri philosophi ante triduum quam
 <note n="n6.260.1">So Vielhaber; non modo clemens sed bonus P; non modo c. et b. Peter.</note>
-<note n="n6.260.2">So P; Peter by error attributes clementes to P, and reads, following Petschenig, clementem se.</note>
-<note n="n6.260.3">de clementes P 1; de clementiis P corr. </note>
-<pb n="p.262"/>
+                  <note n="n6.260.2">So P; Peter by error attributes clementes to P, and reads, following Petschenig, clementem se.</note>
+                  <note n="n6.260.3">de clementes P 1; de clementiis P corr. </note>
+                  <pb n="p.262"/>
 fieret mendicum et pauperem, sed subito divitem factum, unde, quaeso, nisi de visceribus rei publicae provincialiumque fortunis? sint sane divites, sint locupletes, aerarium publicum refercient;
 <note target="n6.262.1"/>
 tantum di faveant bonis partibus,
@@ -529,9 +545,10 @@ reddant
 Cassiani rei publicae principatum.</q>
 haec epistula eius indicat, quam severus et quam tristis futurus fuerit imperator.
 <note n="n6.262.1">Thus Petrarch; referient P.</note>
-<note n="n6.262.2">patribus P.</note>
-<note n="n6.262.3">reddant P; reddent Casaubon, Peter. </note>
-</p>
-</div>
-
-</div></body></text></TEI>
+               <note n="n6.262.2">patribus P.</note>
+               <note n="n6.262.3">reddant P; reddent Casaubon, Peter. </note>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
